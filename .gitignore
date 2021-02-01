@@ -1,0 +1,5 @@
+vendor
+resource
+config.json
+generate.php
+swagger-codegen-cli.jar

@@ -1,0 +1,13 @@
+{
+    "accessKey": "ABCDEFGTDAWGIK54GUVE",
+    "secret": "abcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijc",
+    "appId": "amzn1.sellerapps.app.a1b2c3d4-1a2b-34c5-6de7-89fa0b1c23de",
+    "role": "arn:aws:iam::012345678901:role\/role-default",
+    "clientId": "amzn1.application-oa2-client.1a2345b6c78d90e1f23ab4c5d67ef89a",
+    "clientSecret": "a1b2c3d41a2b34c56de789fa0b1c23de1a2345b6c78d90e1f23ab4c5d67ef89a",
+    "refreshToken": "Atzr|abcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaa-abcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMc-iaY",
+    "accessToken": "Atza|IwEBIB-abcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijcabcDEFGHeC9myKhnMrazZJhHTYqMaaBcdEfgHijc-oP-abcDEFGHeC9myKhnMrazZJhHTYqMaa_HeC9m-azZJhHTYqMaaBcdEfgHijc-re-abcDEFGHeC9myKhnMrazZJhHTYq-TYqMaaBcdEfgHijc-abcDEFGHeC9myKhnMrazZJhHTmeru1yw2Dv-16oPlMV2",
+    "marketplace": "A1PA6795UKMFR9",
+    "redirectUri": "https:\/\/example.com\/oauth-callback.php",
+    "expireAt": 1612187725
+}

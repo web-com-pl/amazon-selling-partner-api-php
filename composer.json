@@ -1,0 +1,18 @@
+{
+    "name": "web-com-pl/amazon-selling-partner-api",
+    "description": "Amazon Selling Partner API PHP Client",
+    "version": "1.0",
+    "autoload": {
+        "psr-4": {
+            "Webcom\\Amazon\\Rest\\": "src"
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "^3.171",
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.4",
+        "ramsey/uuid": "^4.1"
+    }
+}
