@@ -3,3 +3,5 @@ resource
 config.json
 generate.php
 swagger-codegen-cli.jar
+openapitools.json
+migrate.php

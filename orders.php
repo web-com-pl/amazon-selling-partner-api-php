@@ -42,11 +42,14 @@ try {
 
     $api = new OrdersV0Api($transportApi, $credentials);
     dump('get orders');
-//    $orders = $api->getOrders(
-//        ['ATVPDKIKX0DER'],
-//        'TEST_CASE_200',
-//    );
-//    dump($orders->getPayload());
+    $orders = $api->getOrders(
+        ['ATVPDKIKX0DER'],
+        'TEST_CASE_200',
+    );
+
+    foreach ($orders->getPayload()->getOrders() as $order) {
+        dump(['$order' => $order]);
+    }
 
     dump($api->getOrder('TEST_CASE_200'));
     dump($api->getOrderItems('TEST_CASE_200'));
