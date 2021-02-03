@@ -12,7 +12,7 @@ session_start();
 
 try {
     // Your config stuff
-    $config = json_decode(file_get_contents(__DIR__ . '/config-example.json'), true);
+    $config = json_decode(file_get_contents(__DIR__ . '/config.json'), true);
 
     $endpoint = EndpointLocator::resolveByMarketplaceId($config['marketplace']);
     $credentials = new CredentialsContainer($endpoint, true);
@@ -21,7 +21,7 @@ try {
     $api = new AuthorizationApi(new AmazonTransportClient(), $credentials);
     $_SESSION['token'] = Uuid::uuid4();
 
-    dump('Authorize app');
+    dump('Authorize app');// $config['redirectUri']
     echo '<a href="' . $api->getOauthUri($config['redirectUri'], $_SESSION['token']) . '">Login via Amazon</a>';
 } catch (ApiException $e) {
     dump($e->getMessage());

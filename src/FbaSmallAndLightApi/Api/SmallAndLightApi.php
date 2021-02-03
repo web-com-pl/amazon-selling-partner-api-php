@@ -387,11 +387,11 @@ class SmallAndLightApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -407,7 +407,7 @@ class SmallAndLightApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'DELETE',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -832,11 +832,11 @@ class SmallAndLightApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -852,7 +852,7 @@ class SmallAndLightApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1277,11 +1277,11 @@ class SmallAndLightApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -1297,7 +1297,7 @@ class SmallAndLightApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1658,7 +1658,7 @@ class SmallAndLightApi
         // for model (json/xml)
         if (isset($body)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
             } else {
                 $httpBody = $body;
             }
@@ -1678,11 +1678,11 @@ class SmallAndLightApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -1698,7 +1698,7 @@ class SmallAndLightApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2123,11 +2123,11 @@ class SmallAndLightApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -2143,7 +2143,7 @@ class SmallAndLightApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),

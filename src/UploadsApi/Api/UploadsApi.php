@@ -561,11 +561,11 @@ class UploadsApi
                 $httpBody = new MultipartStream($multipartContents);
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = \GuzzleHttp\json_encode($formParams);
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
 
@@ -581,7 +581,7 @@ class UploadsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),

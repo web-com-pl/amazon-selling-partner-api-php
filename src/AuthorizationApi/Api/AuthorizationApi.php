@@ -3,11 +3,12 @@
 namespace Webcom\Amazon\Rest\AuthorizationApi\Api;
 
 use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
 use Webcom\Amazon\Rest\AmazonTransportClient;
 use Webcom\Amazon\Rest\AuthorizationApi\ApiException;
 use Webcom\Amazon\Rest\CredentialsContainer;
+
+use function GuzzleHttp\Psr7\build_query;
 
 /**
  * Class AuthorizationClient
@@ -70,7 +71,7 @@ class AuthorizationApi
                 [
                     'Content-Type' => 'application/x-www-form-urlencoded',
                 ],
-                Query::build(
+                build_query(
                     [
                         'grant_type'    => 'authorization_code',
                         'code'          => $authorizationCode,
