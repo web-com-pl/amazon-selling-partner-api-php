@@ -1,4 +1,8 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Web-Com Group
+ */
 
 namespace Webcom\Amazon\Rest;
 
@@ -10,7 +14,7 @@ use Webcom\Amazon\Rest\CredentialsContainer;
 
 /**
  * Class SignHandler
- * @author Łukasz Wątor
+ * @author magik092
  */
 class RequestSigner
 {

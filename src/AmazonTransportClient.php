@@ -1,4 +1,8 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Web-Com Group
+ */
 
 namespace Webcom\Amazon\Rest;
 
@@ -8,7 +12,7 @@ use Psr\Http\Message\RequestInterface;
 
 /**
  * Class AmazonTransportClient
- * @author Łukasz Wątor
+ * @author magik092
  */
 class AmazonTransportClient extends Client
 {

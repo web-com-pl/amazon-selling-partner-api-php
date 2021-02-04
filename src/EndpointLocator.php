@@ -1,10 +1,14 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Web-Com Group
+ */
 
 namespace Webcom\Amazon\Rest;
 
 /**
- * Class AmazonLocalizer
- * @author Łukasz Wątor
+ * Class EndpointLocator
+ * @author magik092
  */
 class EndpointLocator
 {

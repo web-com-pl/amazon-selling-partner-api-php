@@ -1,4 +1,8 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Web-Com Group
+ */
 
 namespace Webcom\Amazon\Rest\AuthorizationApi\Api;
 
@@ -12,7 +16,7 @@ use function GuzzleHttp\Psr7\build_query;
 
 /**
  * Class AuthorizationClient
- * @author Łukasz Wątor
+ * @author magik092
  */
 class AuthorizationApi
 {
@@ -108,7 +112,7 @@ class AuthorizationApi
                 [
                     'Content-Type' => 'application/x-www-form-urlencoded',
                 ],
-                Query::build(
+                build_query(
                     [
                         'grant_type'    => 'refresh_token',
                         'refresh_token' => $this->credentials->getRefreshToken(),

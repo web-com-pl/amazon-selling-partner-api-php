@@ -1,10 +1,14 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Web-Com Group
+ */
 
 namespace Webcom\Amazon\Rest;
 
 /**
  * Class DetailedEndpoint
- * @author Łukasz Wątor
+ * @author magik092
  */
 final class Endpoint
 {
