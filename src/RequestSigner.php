@@ -21,6 +21,7 @@ class RequestSigner
     private StsClient $stsClient;
     private CredentialsContainer $credentials;
     private SignatureV4 $signatureV4;
+    private ?Credentials $signCredentials = null;
 
     public function __construct(CredentialsContainer $credentials)
     {
@@ -37,14 +38,17 @@ class RequestSigner
 
     public final function signRequest(RequestInterface $request): RequestInterface
     {
-        $credentials = $this->stsClient->assumeRole(['RoleArn' => $this->credentials->getRole(), 'RoleSessionName' => 'api-session'])->get('Credentials');
-        $newCredentials = new Credentials(
-            $credentials['AccessKeyId'],
-            $credentials['SecretAccessKey'],
-            $credentials['SessionToken']
-        );
+        if(null === $this->signCredentials) {
+            // Credentials for signature can be common for every request
+            $credentials = $this->stsClient->assumeRole(['RoleArn' => $this->credentials->getRole(), 'RoleSessionName' => 'api-session'])->get('Credentials');
+            $this->signCredentials = new Credentials(
+                $credentials['AccessKeyId'],
+                $credentials['SecretAccessKey'],
+                $credentials['SessionToken']
+            );
+        }
 
-        return $this->signatureV4->signRequest($request, $newCredentials);
+        return $this->signatureV4->signRequest($request, $this->signCredentials);
     }
 
     /**

@@ -17,12 +17,14 @@ use Psr\Http\Message\RequestInterface;
 class AmazonTransportClient extends Client
 {
     private ?RequestSigner $requestSigner = null;
+    private string $userAgent;
 
     /**
      * AmazonTransportClient constructor.
      * @param array $config
+     * @param string $userAgent
      */
-    public function __construct(array $config = [])
+    public function __construct(array $config = [], string $userAgent = 'ErpBox.pl/1.0')
     {
         $handlerStack = HandlerStack::create();
         $handlerStack->push(
@@ -38,6 +40,7 @@ class AmazonTransportClient extends Client
                 'handler' => $handlerStack,
             ]
         );
+        $this->userAgent = $userAgent;
         parent::__construct($config);
     }
 
@@ -68,7 +71,7 @@ class AmazonTransportClient extends Client
     private function signRequest(RequestInterface $request, array $options, callable $handler)
     {
         if ($this->requestSigner) {
-            $request = $request->withHeader('user-agent', 'ErpBox.pl/1.0 (Language=PHP/' . PHP_VERSION . ')');
+            $request = $request->withHeader('user-agent', $this->userAgent . ' (Language=PHP/' . PHP_VERSION . ')');
             // if isn't authorization request, attach access token
             if ($this->requestSigner->getCredentials()->getAccessToken() && $request->getUri()->getHost() !== 'api.amazon.com' && substr(
                     $request->getUri()->getPath(),
