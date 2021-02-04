@@ -11,8 +11,8 @@ use Webcom\Amazon\Rest\EndpointLocator;
 
 include_once __DIR__ . '/vendor/autoload.php';
 
-// Your config stuff
-$config = json_decode(file_get_contents(__DIR__ . '/config-example.json'), true);
+// Your config stuff (get example from config-example.json)
+$config = json_decode(file_get_contents(__DIR__ . '/config.json'), true);
 
 // resolve endpoint via marketplace ID
 $endpoint = EndpointLocator::resolveByMarketplaceId($config['marketplace']);
@@ -35,7 +35,7 @@ try {
         $config['expireAt'] = time() + $api->exchangeRefreshToken();
         $config['accessToken'] = $credentials->getAccessToken();
         $config['refreshToken'] = $credentials->getRefreshToken();
-        file_put_contents(__DIR__ . '/config-example.json', json_encode($config, JSON_PRETTY_PRINT));
+        file_put_contents(__DIR__ . '/config.json', json_encode($config, JSON_PRETTY_PRINT));
     }
 
     $transportApi->setRequestSigner(new RequestSigner($credentials));
@@ -56,7 +56,6 @@ try {
     dump($api->getOrderItemsBuyerInfo('TEST_CASE_200'));
     dump($api->getOrderAddress('TEST_CASE_200'));
     dump($api->getOrderBuyerInfo('TEST_CASE_200'));
-//    dump($api->getOrder('test')->getPayload());
 } catch (ApiException $e) {
     dump($e, $e->getResponseBody());
 } catch (GuzzleException $e) {

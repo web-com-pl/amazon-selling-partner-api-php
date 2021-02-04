@@ -26,8 +26,8 @@ if ($_GET['state'] != $_SESSION['token']) {
 }
 
 try {
-    // Your config stuff
-    $config = json_decode(file_get_contents(__DIR__ . '/config-example.json'), true);
+    // Your config stuff (get example from config-example.json)
+    $config = json_decode(file_get_contents(__DIR__ . '/config.json'), true);
 
     $endpoint = EndpointLocator::resolveByMarketplaceId($config['marketplace']);
     $credentials = new CredentialsContainer($endpoint, true);
@@ -42,7 +42,7 @@ try {
     $config['expireAt'] = time() + $api->exchangeAuthorizationCodeForRefreshToken($_GET['spapi_oauth_code']);
     $config['accessToken'] = $credentials->getAccessToken();
     $config['refreshToken'] = $credentials->getRefreshToken();
-    file_put_contents(__DIR__ . '/config-example.json', json_encode($config, JSON_PRETTY_PRINT));
+    file_put_contents(__DIR__ . '/config.json', json_encode($config, JSON_PRETTY_PRINT));
     dump($config);
 
 } catch (ApiException $e) {
