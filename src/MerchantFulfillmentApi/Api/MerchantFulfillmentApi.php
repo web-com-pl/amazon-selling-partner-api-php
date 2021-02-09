@@ -118,30 +118,30 @@ class MerchantFulfillmentApi
     /**
      * Operation cancelShipment
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse
      */
-    public function cancelShipment($shipment_id)
+    public function cancelShipment($shipmentId)
     {
-        list($response) = $this->cancelShipmentWithHttpInfo($shipment_id);
+        list($response) = $this->cancelShipmentWithHttpInfo($shipmentId);
         return $response;
     }
 
     /**
      * Operation cancelShipmentWithHttpInfo
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelShipmentWithHttpInfo($shipment_id)
+    public function cancelShipmentWithHttpInfo($shipmentId)
     {
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $request = $this->cancelShipmentRequest($shipmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -361,14 +361,14 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsync($shipment_id)
+    public function cancelShipmentAsync($shipmentId)
     {
-        return $this->cancelShipmentAsyncWithHttpInfo($shipment_id)
+        return $this->cancelShipmentAsyncWithHttpInfo($shipmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -381,15 +381,15 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsyncWithHttpInfo($shipment_id)
+    public function cancelShipmentAsyncWithHttpInfo($shipmentId)
     {
         $returnType = '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse';
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $request = $this->cancelShipmentRequest($shipmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -428,21 +428,21 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'cancelShipment'
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cancelShipmentRequest($shipment_id)
+    public function cancelShipmentRequest($shipmentId)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling cancelShipment'
+                'Missing the required parameter $shipmentId when calling cancelShipment'
             );
         }
-        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipment_id)) {
-            throw new \InvalidArgumentException("invalid value for \"shipment_id\" when calling MerchantFulfillmentApi.cancelShipment, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
+        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipmentId)) {
+            throw new \InvalidArgumentException("invalid value for \"shipmentId\" when calling MerchantFulfillmentApi.cancelShipment, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
         }
 
 
@@ -456,10 +456,10 @@ class MerchantFulfillmentApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
@@ -525,30 +525,30 @@ class MerchantFulfillmentApi
     /**
      * Operation cancelShipmentOld
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse
      */
-    public function cancelShipmentOld($shipment_id)
+    public function cancelShipmentOld($shipmentId)
     {
-        list($response) = $this->cancelShipmentOldWithHttpInfo($shipment_id);
+        list($response) = $this->cancelShipmentOldWithHttpInfo($shipmentId);
         return $response;
     }
 
     /**
      * Operation cancelShipmentOldWithHttpInfo
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelShipmentOldWithHttpInfo($shipment_id)
+    public function cancelShipmentOldWithHttpInfo($shipmentId)
     {
-        $request = $this->cancelShipmentOldRequest($shipment_id);
+        $request = $this->cancelShipmentOldRequest($shipmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -768,14 +768,14 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentOldAsync($shipment_id)
+    public function cancelShipmentOldAsync($shipmentId)
     {
-        return $this->cancelShipmentOldAsyncWithHttpInfo($shipment_id)
+        return $this->cancelShipmentOldAsyncWithHttpInfo($shipmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -788,15 +788,15 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentOldAsyncWithHttpInfo($shipment_id)
+    public function cancelShipmentOldAsyncWithHttpInfo($shipmentId)
     {
         $returnType = '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CancelShipmentResponse';
-        $request = $this->cancelShipmentOldRequest($shipment_id);
+        $request = $this->cancelShipmentOldRequest($shipmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -835,21 +835,21 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'cancelShipmentOld'
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment to cancel. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment to cancel. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cancelShipmentOldRequest($shipment_id)
+    public function cancelShipmentOldRequest($shipmentId)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling cancelShipmentOld'
+                'Missing the required parameter $shipmentId when calling cancelShipmentOld'
             );
         }
-        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipment_id)) {
-            throw new \InvalidArgumentException("invalid value for \"shipment_id\" when calling MerchantFulfillmentApi.cancelShipmentOld, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
+        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipmentId)) {
+            throw new \InvalidArgumentException("invalid value for \"shipmentId\" when calling MerchantFulfillmentApi.cancelShipmentOld, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
         }
 
 
@@ -863,10 +863,10 @@ class MerchantFulfillmentApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
@@ -2937,30 +2937,30 @@ class MerchantFulfillmentApi
     /**
      * Operation getShipment
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse
      */
-    public function getShipment($shipment_id)
+    public function getShipment($shipmentId)
     {
-        list($response) = $this->getShipmentWithHttpInfo($shipment_id);
+        list($response) = $this->getShipmentWithHttpInfo($shipmentId);
         return $response;
     }
 
     /**
      * Operation getShipmentWithHttpInfo
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment. (required)
      *
      * @throws \Webcom\Amazon\Rest\MerchantFulfillmentApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getShipmentWithHttpInfo($shipment_id)
+    public function getShipmentWithHttpInfo($shipmentId)
     {
-        $request = $this->getShipmentRequest($shipment_id);
+        $request = $this->getShipmentRequest($shipmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3180,14 +3180,14 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getShipmentAsync($shipment_id)
+    public function getShipmentAsync($shipmentId)
     {
-        return $this->getShipmentAsyncWithHttpInfo($shipment_id)
+        return $this->getShipmentAsyncWithHttpInfo($shipmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3200,15 +3200,15 @@ class MerchantFulfillmentApi
      *
      * 
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getShipmentAsyncWithHttpInfo($shipment_id)
+    public function getShipmentAsyncWithHttpInfo($shipmentId)
     {
         $returnType = '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\GetShipmentResponse';
-        $request = $this->getShipmentRequest($shipment_id);
+        $request = $this->getShipmentRequest($shipmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3247,21 +3247,21 @@ class MerchantFulfillmentApi
     /**
      * Create request for operation 'getShipment'
      *
-     * @param  string $shipment_id The Amazon-defined shipment identifier for the shipment. (required)
+     * @param  string $shipmentId The Amazon-defined shipment identifier for the shipment. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getShipmentRequest($shipment_id)
+    public function getShipmentRequest($shipmentId)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling getShipment'
+                'Missing the required parameter $shipmentId when calling getShipment'
             );
         }
-        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipment_id)) {
-            throw new \InvalidArgumentException("invalid value for \"shipment_id\" when calling MerchantFulfillmentApi.getShipment, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
+        if (!preg_match("/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/", $shipmentId)) {
+            throw new \InvalidArgumentException("invalid value for \"shipmentId\" when calling MerchantFulfillmentApi.getShipment, must conform to the pattern /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/.");
         }
 
 
@@ -3275,10 +3275,10 @@ class MerchantFulfillmentApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }

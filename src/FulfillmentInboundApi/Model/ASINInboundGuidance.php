@@ -62,9 +62,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asin' => 'string',
-        'inbound_guidance' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundGuidance',
-        'guidance_reason_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GuidanceReason[]'
+        'aSIN' => 'string',
+        'inboundGuidance' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundGuidance',
+        'guidanceReasonList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GuidanceReason[]'
     ];
 
     /**
@@ -75,9 +75,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'asin' => null,
-        'inbound_guidance' => null,
-        'guidance_reason_list' => null
+        'aSIN' => null,
+        'inboundGuidance' => null,
+        'guidanceReasonList' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'asin' => 'ASIN',
-        'inbound_guidance' => 'InboundGuidance',
-        'guidance_reason_list' => 'GuidanceReasonList'
+        'aSIN' => 'ASIN',
+        'inboundGuidance' => 'InboundGuidance',
+        'guidanceReasonList' => 'GuidanceReasonList'
     ];
 
     /**
@@ -118,9 +118,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'asin' => 'setAsin',
-        'inbound_guidance' => 'setInboundGuidance',
-        'guidance_reason_list' => 'setGuidanceReasonList'
+        'aSIN' => 'setASIN',
+        'inboundGuidance' => 'setInboundGuidance',
+        'guidanceReasonList' => 'setGuidanceReasonList'
     ];
 
     /**
@@ -129,9 +129,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'asin' => 'getAsin',
-        'inbound_guidance' => 'getInboundGuidance',
-        'guidance_reason_list' => 'getGuidanceReasonList'
+        'aSIN' => 'getASIN',
+        'inboundGuidance' => 'getInboundGuidance',
+        'guidanceReasonList' => 'getGuidanceReasonList'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['inbound_guidance'] = $data['inbound_guidance'] ?? null;
-        $this->container['guidance_reason_list'] = $data['guidance_reason_list'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['inboundGuidance'] = $data['inboundGuidance'] ?? null;
+        $this->container['guidanceReasonList'] = $data['guidanceReasonList'] ?? null;
     }
 
     /**
@@ -208,11 +208,11 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['asin'] === null) {
-            $invalidProperties[] = "'asin' can't be null";
+        if ($this->container['aSIN'] === null) {
+            $invalidProperties[] = "'aSIN' can't be null";
         }
-        if ($this->container['inbound_guidance'] === null) {
-            $invalidProperties[] = "'inbound_guidance' can't be null";
+        if ($this->container['inboundGuidance'] === null) {
+            $invalidProperties[] = "'inboundGuidance' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +230,73 @@ class ASINInboundGuidance implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets inbound_guidance
+     * Gets inboundGuidance
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundGuidance
      */
     public function getInboundGuidance()
     {
-        return $this->container['inbound_guidance'];
+        return $this->container['inboundGuidance'];
     }
 
     /**
-     * Sets inbound_guidance
+     * Sets inboundGuidance
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundGuidance $inbound_guidance inbound_guidance
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundGuidance $inboundGuidance inboundGuidance
      *
      * @return self
      */
-    public function setInboundGuidance($inbound_guidance)
+    public function setInboundGuidance($inboundGuidance)
     {
-        $this->container['inbound_guidance'] = $inbound_guidance;
+        $this->container['inboundGuidance'] = $inboundGuidance;
 
         return $this;
     }
 
     /**
-     * Gets guidance_reason_list
+     * Gets guidanceReasonList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GuidanceReason[]|null
      */
     public function getGuidanceReasonList()
     {
-        return $this->container['guidance_reason_list'];
+        return $this->container['guidanceReasonList'];
     }
 
     /**
-     * Sets guidance_reason_list
+     * Sets guidanceReasonList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GuidanceReason[]|null $guidance_reason_list A list of inbound guidance reason information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GuidanceReason[]|null $guidanceReasonList A list of inbound guidance reason information.
      *
      * @return self
      */
-    public function setGuidanceReasonList($guidance_reason_list)
+    public function setGuidanceReasonList($guidanceReasonList)
     {
-        $this->container['guidance_reason_list'] = $guidance_reason_list;
+        $this->container['guidanceReasonList'] = $guidanceReasonList;
 
         return $this;
     }

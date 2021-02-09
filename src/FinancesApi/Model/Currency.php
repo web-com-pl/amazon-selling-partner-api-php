@@ -62,8 +62,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency_code' => 'string',
-        'currency_amount' => 'float'
+        'currencyCode' => 'string',
+        'currencyAmount' => 'float'
     ];
 
     /**
@@ -74,8 +74,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'currency_code' => null,
-        'currency_amount' => null
+        'currencyCode' => null,
+        'currencyAmount' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'currency_code' => 'CurrencyCode',
-        'currency_amount' => 'CurrencyAmount'
+        'currencyCode' => 'CurrencyCode',
+        'currencyAmount' => 'CurrencyAmount'
     ];
 
     /**
@@ -115,8 +115,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'currency_code' => 'setCurrencyCode',
-        'currency_amount' => 'setCurrencyAmount'
+        'currencyCode' => 'setCurrencyCode',
+        'currencyAmount' => 'setCurrencyAmount'
     ];
 
     /**
@@ -125,8 +125,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'currency_code' => 'getCurrencyCode',
-        'currency_amount' => 'getCurrencyAmount'
+        'currencyCode' => 'getCurrencyCode',
+        'currencyAmount' => 'getCurrencyAmount'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['currency_code'] = $data['currency_code'] ?? null;
-        $this->container['currency_amount'] = $data['currency_amount'] ?? null;
+        $this->container['currencyCode'] = $data['currencyCode'] ?? null;
+        $this->container['currencyAmount'] = $data['currencyAmount'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      *
      * @return string|null
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
+     * Sets currencyCode
      *
-     * @param string|null $currency_code The three-digit currency code in ISO 4217 format.
+     * @param string|null $currencyCode The three-digit currency code in ISO 4217 format.
      *
      * @return self
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }
 
     /**
-     * Gets currency_amount
+     * Gets currencyAmount
      *
      * @return float|null
      */
     public function getCurrencyAmount()
     {
-        return $this->container['currency_amount'];
+        return $this->container['currencyAmount'];
     }
 
     /**
-     * Sets currency_amount
+     * Sets currencyAmount
      *
-     * @param float|null $currency_amount currency_amount
+     * @param float|null $currencyAmount currencyAmount
      *
      * @return self
      */
-    public function setCurrencyAmount($currency_amount)
+    public function setCurrencyAmount($currencyAmount)
     {
-        $this->container['currency_amount'] = $currency_amount;
+        $this->container['currencyAmount'] = $currencyAmount;
 
         return $this;
     }

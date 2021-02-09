@@ -62,14 +62,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transaction_type' => 'string',
-        'posted_date' => '\DateTime',
-        'net_co_transaction_id' => 'string',
-        'swap_reason' => 'string',
-        'asin' => 'string',
-        'marketplace_id' => 'string',
-        'tax_exclusive_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'transactionType' => 'string',
+        'postedDate' => '\DateTime',
+        'netCoTransactionID' => 'string',
+        'swapReason' => 'string',
+        'aSIN' => 'string',
+        'marketplaceId' => 'string',
+        'taxExclusiveAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -80,14 +80,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transaction_type' => null,
-        'posted_date' => 'date-time',
-        'net_co_transaction_id' => null,
-        'swap_reason' => null,
-        'asin' => null,
-        'marketplace_id' => null,
-        'tax_exclusive_amount' => null,
-        'tax_amount' => null
+        'transactionType' => null,
+        'postedDate' => 'date-time',
+        'netCoTransactionID' => null,
+        'swapReason' => null,
+        'aSIN' => null,
+        'marketplaceId' => null,
+        'taxExclusiveAmount' => null,
+        'taxAmount' => null
     ];
 
     /**
@@ -117,14 +117,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'transaction_type' => 'TransactionType',
-        'posted_date' => 'PostedDate',
-        'net_co_transaction_id' => 'NetCoTransactionID',
-        'swap_reason' => 'SwapReason',
-        'asin' => 'ASIN',
-        'marketplace_id' => 'MarketplaceId',
-        'tax_exclusive_amount' => 'TaxExclusiveAmount',
-        'tax_amount' => 'TaxAmount'
+        'transactionType' => 'TransactionType',
+        'postedDate' => 'PostedDate',
+        'netCoTransactionID' => 'NetCoTransactionID',
+        'swapReason' => 'SwapReason',
+        'aSIN' => 'ASIN',
+        'marketplaceId' => 'MarketplaceId',
+        'taxExclusiveAmount' => 'TaxExclusiveAmount',
+        'taxAmount' => 'TaxAmount'
     ];
 
     /**
@@ -133,14 +133,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'transaction_type' => 'setTransactionType',
-        'posted_date' => 'setPostedDate',
-        'net_co_transaction_id' => 'setNetCoTransactionId',
-        'swap_reason' => 'setSwapReason',
-        'asin' => 'setAsin',
-        'marketplace_id' => 'setMarketplaceId',
-        'tax_exclusive_amount' => 'setTaxExclusiveAmount',
-        'tax_amount' => 'setTaxAmount'
+        'transactionType' => 'setTransactionType',
+        'postedDate' => 'setPostedDate',
+        'netCoTransactionID' => 'setNetCoTransactionID',
+        'swapReason' => 'setSwapReason',
+        'aSIN' => 'setASIN',
+        'marketplaceId' => 'setMarketplaceId',
+        'taxExclusiveAmount' => 'setTaxExclusiveAmount',
+        'taxAmount' => 'setTaxAmount'
     ];
 
     /**
@@ -149,14 +149,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'transaction_type' => 'getTransactionType',
-        'posted_date' => 'getPostedDate',
-        'net_co_transaction_id' => 'getNetCoTransactionId',
-        'swap_reason' => 'getSwapReason',
-        'asin' => 'getAsin',
-        'marketplace_id' => 'getMarketplaceId',
-        'tax_exclusive_amount' => 'getTaxExclusiveAmount',
-        'tax_amount' => 'getTaxAmount'
+        'transactionType' => 'getTransactionType',
+        'postedDate' => 'getPostedDate',
+        'netCoTransactionID' => 'getNetCoTransactionID',
+        'swapReason' => 'getSwapReason',
+        'aSIN' => 'getASIN',
+        'marketplaceId' => 'getMarketplaceId',
+        'taxExclusiveAmount' => 'getTaxExclusiveAmount',
+        'taxAmount' => 'getTaxAmount'
     ];
 
     /**
@@ -219,14 +219,14 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
      */
     public function __construct(array $data = null)
     {
-        $this->container['transaction_type'] = $data['transaction_type'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['net_co_transaction_id'] = $data['net_co_transaction_id'] ?? null;
-        $this->container['swap_reason'] = $data['swap_reason'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['tax_exclusive_amount'] = $data['tax_exclusive_amount'] ?? null;
-        $this->container['tax_amount'] = $data['tax_amount'] ?? null;
+        $this->container['transactionType'] = $data['transactionType'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['netCoTransactionID'] = $data['netCoTransactionID'] ?? null;
+        $this->container['swapReason'] = $data['swapReason'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['taxExclusiveAmount'] = $data['taxExclusiveAmount'] ?? null;
+        $this->container['taxAmount'] = $data['taxAmount'] ?? null;
     }
 
     /**
@@ -254,193 +254,193 @@ class NetworkComminglingTransactionEvent implements ModelInterface, ArrayAccess,
 
 
     /**
-     * Gets transaction_type
+     * Gets transactionType
      *
      * @return string|null
      */
     public function getTransactionType()
     {
-        return $this->container['transaction_type'];
+        return $this->container['transactionType'];
     }
 
     /**
-     * Sets transaction_type
+     * Sets transactionType
      *
-     * @param string|null $transaction_type The type of network item swap.  Possible values:  * NetCo - A Fulfillment by Amazon inventory pooling transaction. Available only in the India marketplace.  * ComminglingVAT - A commingling VAT transaction. Available only in the UK, Spain, France, Germany, and Italy marketplaces.
+     * @param string|null $transactionType The type of network item swap.  Possible values:  * NetCo - A Fulfillment by Amazon inventory pooling transaction. Available only in the India marketplace.  * ComminglingVAT - A commingling VAT transaction. Available only in the UK, Spain, France, Germany, and Italy marketplaces.
      *
      * @return self
      */
-    public function setTransactionType($transaction_type)
+    public function setTransactionType($transactionType)
     {
-        $this->container['transaction_type'] = $transaction_type;
+        $this->container['transactionType'] = $transactionType;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets net_co_transaction_id
+     * Gets netCoTransactionID
      *
      * @return string|null
      */
-    public function getNetCoTransactionId()
+    public function getNetCoTransactionID()
     {
-        return $this->container['net_co_transaction_id'];
+        return $this->container['netCoTransactionID'];
     }
 
     /**
-     * Sets net_co_transaction_id
+     * Sets netCoTransactionID
      *
-     * @param string|null $net_co_transaction_id The identifier for the network item swap.
+     * @param string|null $netCoTransactionID The identifier for the network item swap.
      *
      * @return self
      */
-    public function setNetCoTransactionId($net_co_transaction_id)
+    public function setNetCoTransactionID($netCoTransactionID)
     {
-        $this->container['net_co_transaction_id'] = $net_co_transaction_id;
+        $this->container['netCoTransactionID'] = $netCoTransactionID;
 
         return $this;
     }
 
     /**
-     * Gets swap_reason
+     * Gets swapReason
      *
      * @return string|null
      */
     public function getSwapReason()
     {
-        return $this->container['swap_reason'];
+        return $this->container['swapReason'];
     }
 
     /**
-     * Sets swap_reason
+     * Sets swapReason
      *
-     * @param string|null $swap_reason The reason for the network item swap.
+     * @param string|null $swapReason The reason for the network item swap.
      *
      * @return self
      */
-    public function setSwapReason($swap_reason)
+    public function setSwapReason($swapReason)
     {
-        $this->container['swap_reason'] = $swap_reason;
+        $this->container['swapReason'] = $swapReason;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the swapped item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the swapped item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The marketplace in which the event took place.
+     * @param string|null $marketplaceId The marketplace in which the event took place.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets tax_exclusive_amount
+     * Gets taxExclusiveAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxExclusiveAmount()
     {
-        return $this->container['tax_exclusive_amount'];
+        return $this->container['taxExclusiveAmount'];
     }
 
     /**
-     * Sets tax_exclusive_amount
+     * Sets taxExclusiveAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_exclusive_amount tax_exclusive_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxExclusiveAmount taxExclusiveAmount
      *
      * @return self
      */
-    public function setTaxExclusiveAmount($tax_exclusive_amount)
+    public function setTaxExclusiveAmount($taxExclusiveAmount)
     {
-        $this->container['tax_exclusive_amount'] = $tax_exclusive_amount;
+        $this->container['taxExclusiveAmount'] = $taxExclusiveAmount;
 
         return $this;
     }
 
     /**
-     * Gets tax_amount
+     * Gets taxAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxAmount()
     {
-        return $this->container['tax_amount'];
+        return $this->container['taxAmount'];
     }
 
     /**
-     * Sets tax_amount
+     * Sets taxAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_amount tax_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxAmount taxAmount
      *
      * @return self
      */
-    public function setTaxAmount($tax_amount)
+    public function setTaxAmount($taxAmount)
     {
-        $this->container['tax_amount'] = $tax_amount;
+        $this->container['taxAmount'] = $taxAmount;
 
         return $this;
     }

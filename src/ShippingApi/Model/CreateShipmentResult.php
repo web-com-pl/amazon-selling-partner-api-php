@@ -62,8 +62,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'eligible_rates' => '\Webcom\Amazon\Rest\ShippingApi\Model\Rate[]'
+        'shipmentId' => 'string',
+        'eligibleRates' => '\Webcom\Amazon\Rest\ShippingApi\Model\Rate[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'eligible_rates' => null
+        'shipmentId' => null,
+        'eligibleRates' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'shipmentId',
-        'eligible_rates' => 'eligibleRates'
+        'shipmentId' => 'shipmentId',
+        'eligibleRates' => 'eligibleRates'
     ];
 
     /**
@@ -115,8 +115,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'eligible_rates' => 'setEligibleRates'
+        'shipmentId' => 'setShipmentId',
+        'eligibleRates' => 'setEligibleRates'
     ];
 
     /**
@@ -125,8 +125,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'eligible_rates' => 'getEligibleRates'
+        'shipmentId' => 'getShipmentId',
+        'eligibleRates' => 'getEligibleRates'
     ];
 
     /**
@@ -189,8 +189,8 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['eligible_rates'] = $data['eligible_rates'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['eligibleRates'] = $data['eligibleRates'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if ($this->container['eligible_rates'] === null) {
-            $invalidProperties[] = "'eligible_rates' can't be null";
+        if ($this->container['eligibleRates'] === null) {
+            $invalidProperties[] = "'eligibleRates' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class CreateShipmentResult implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id The unique shipment identifier.
+     * @param string $shipmentId The unique shipment identifier.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets eligible_rates
+     * Gets eligibleRates
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Rate[]
      */
     public function getEligibleRates()
     {
-        return $this->container['eligible_rates'];
+        return $this->container['eligibleRates'];
     }
 
     /**
-     * Sets eligible_rates
+     * Sets eligibleRates
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Rate[] $eligible_rates A list of all the available rates that can be used to send the shipment.
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Rate[] $eligibleRates A list of all the available rates that can be used to send the shipment.
      *
      * @return self
      */
-    public function setEligibleRates($eligible_rates)
+    public function setEligibleRates($eligibleRates)
     {
-        $this->container['eligible_rates'] = $eligible_rates;
+        $this->container['eligibleRates'] = $eligibleRates;
 
         return $this;
     }

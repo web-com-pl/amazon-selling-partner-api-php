@@ -62,16 +62,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'rental_event_type' => 'string',
-        'extension_length' => 'int',
-        'posted_date' => '\DateTime',
-        'rental_charge_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'rental_fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'marketplace_name' => 'string',
-        'rental_initial_value' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'rental_reimbursement' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'rental_tax_withheld_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]'
+        'amazonOrderId' => 'string',
+        'rentalEventType' => 'string',
+        'extensionLength' => 'int',
+        'postedDate' => '\DateTime',
+        'rentalChargeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'rentalFeeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'marketplaceName' => 'string',
+        'rentalInitialValue' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'rentalReimbursement' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'rentalTaxWithheldList' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]'
     ];
 
     /**
@@ -82,16 +82,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'rental_event_type' => null,
-        'extension_length' => 'int32',
-        'posted_date' => 'date-time',
-        'rental_charge_list' => null,
-        'rental_fee_list' => null,
-        'marketplace_name' => null,
-        'rental_initial_value' => null,
-        'rental_reimbursement' => null,
-        'rental_tax_withheld_list' => null
+        'amazonOrderId' => null,
+        'rentalEventType' => null,
+        'extensionLength' => 'int32',
+        'postedDate' => 'date-time',
+        'rentalChargeList' => null,
+        'rentalFeeList' => null,
+        'marketplaceName' => null,
+        'rentalInitialValue' => null,
+        'rentalReimbursement' => null,
+        'rentalTaxWithheldList' => null
     ];
 
     /**
@@ -121,16 +121,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'rental_event_type' => 'RentalEventType',
-        'extension_length' => 'ExtensionLength',
-        'posted_date' => 'PostedDate',
-        'rental_charge_list' => 'RentalChargeList',
-        'rental_fee_list' => 'RentalFeeList',
-        'marketplace_name' => 'MarketplaceName',
-        'rental_initial_value' => 'RentalInitialValue',
-        'rental_reimbursement' => 'RentalReimbursement',
-        'rental_tax_withheld_list' => 'RentalTaxWithheldList'
+        'amazonOrderId' => 'AmazonOrderId',
+        'rentalEventType' => 'RentalEventType',
+        'extensionLength' => 'ExtensionLength',
+        'postedDate' => 'PostedDate',
+        'rentalChargeList' => 'RentalChargeList',
+        'rentalFeeList' => 'RentalFeeList',
+        'marketplaceName' => 'MarketplaceName',
+        'rentalInitialValue' => 'RentalInitialValue',
+        'rentalReimbursement' => 'RentalReimbursement',
+        'rentalTaxWithheldList' => 'RentalTaxWithheldList'
     ];
 
     /**
@@ -139,16 +139,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'rental_event_type' => 'setRentalEventType',
-        'extension_length' => 'setExtensionLength',
-        'posted_date' => 'setPostedDate',
-        'rental_charge_list' => 'setRentalChargeList',
-        'rental_fee_list' => 'setRentalFeeList',
-        'marketplace_name' => 'setMarketplaceName',
-        'rental_initial_value' => 'setRentalInitialValue',
-        'rental_reimbursement' => 'setRentalReimbursement',
-        'rental_tax_withheld_list' => 'setRentalTaxWithheldList'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'rentalEventType' => 'setRentalEventType',
+        'extensionLength' => 'setExtensionLength',
+        'postedDate' => 'setPostedDate',
+        'rentalChargeList' => 'setRentalChargeList',
+        'rentalFeeList' => 'setRentalFeeList',
+        'marketplaceName' => 'setMarketplaceName',
+        'rentalInitialValue' => 'setRentalInitialValue',
+        'rentalReimbursement' => 'setRentalReimbursement',
+        'rentalTaxWithheldList' => 'setRentalTaxWithheldList'
     ];
 
     /**
@@ -157,16 +157,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'rental_event_type' => 'getRentalEventType',
-        'extension_length' => 'getExtensionLength',
-        'posted_date' => 'getPostedDate',
-        'rental_charge_list' => 'getRentalChargeList',
-        'rental_fee_list' => 'getRentalFeeList',
-        'marketplace_name' => 'getMarketplaceName',
-        'rental_initial_value' => 'getRentalInitialValue',
-        'rental_reimbursement' => 'getRentalReimbursement',
-        'rental_tax_withheld_list' => 'getRentalTaxWithheldList'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'rentalEventType' => 'getRentalEventType',
+        'extensionLength' => 'getExtensionLength',
+        'postedDate' => 'getPostedDate',
+        'rentalChargeList' => 'getRentalChargeList',
+        'rentalFeeList' => 'getRentalFeeList',
+        'marketplaceName' => 'getMarketplaceName',
+        'rentalInitialValue' => 'getRentalInitialValue',
+        'rentalReimbursement' => 'getRentalReimbursement',
+        'rentalTaxWithheldList' => 'getRentalTaxWithheldList'
     ];
 
     /**
@@ -229,16 +229,16 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['rental_event_type'] = $data['rental_event_type'] ?? null;
-        $this->container['extension_length'] = $data['extension_length'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['rental_charge_list'] = $data['rental_charge_list'] ?? null;
-        $this->container['rental_fee_list'] = $data['rental_fee_list'] ?? null;
-        $this->container['marketplace_name'] = $data['marketplace_name'] ?? null;
-        $this->container['rental_initial_value'] = $data['rental_initial_value'] ?? null;
-        $this->container['rental_reimbursement'] = $data['rental_reimbursement'] ?? null;
-        $this->container['rental_tax_withheld_list'] = $data['rental_tax_withheld_list'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['rentalEventType'] = $data['rentalEventType'] ?? null;
+        $this->container['extensionLength'] = $data['extensionLength'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['rentalChargeList'] = $data['rentalChargeList'] ?? null;
+        $this->container['rentalFeeList'] = $data['rentalFeeList'] ?? null;
+        $this->container['marketplaceName'] = $data['marketplaceName'] ?? null;
+        $this->container['rentalInitialValue'] = $data['rentalInitialValue'] ?? null;
+        $this->container['rentalReimbursement'] = $data['rentalReimbursement'] ?? null;
+        $this->container['rentalTaxWithheldList'] = $data['rentalTaxWithheldList'] ?? null;
     }
 
     /**
@@ -266,241 +266,241 @@ class RentalTransactionEvent implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets rental_event_type
+     * Gets rentalEventType
      *
      * @return string|null
      */
     public function getRentalEventType()
     {
-        return $this->container['rental_event_type'];
+        return $this->container['rentalEventType'];
     }
 
     /**
-     * Sets rental_event_type
+     * Sets rentalEventType
      *
-     * @param string|null $rental_event_type The type of rental event.  Possible values:  * RentalCustomerPayment-Buyout - Transaction type that represents when the customer wants to buy out a rented item.  * RentalCustomerPayment-Extension - Transaction type that represents when the customer wants to extend the rental period.  * RentalCustomerRefund-Buyout - Transaction type that represents when the customer requests a refund for the buyout of the rented item.  * RentalCustomerRefund-Extension - Transaction type that represents when the customer requests a refund over the extension on the rented item.  * RentalHandlingFee - Transaction type that represents the fee that Amazon charges sellers who rent through Amazon.  * RentalChargeFailureReimbursement - Transaction type that represents when Amazon sends money to the seller to compensate for a failed charge.  * RentalLostItemReimbursement - Transaction type that represents when Amazon sends money to the seller to compensate for a lost item.
+     * @param string|null $rentalEventType The type of rental event.  Possible values:  * RentalCustomerPayment-Buyout - Transaction type that represents when the customer wants to buy out a rented item.  * RentalCustomerPayment-Extension - Transaction type that represents when the customer wants to extend the rental period.  * RentalCustomerRefund-Buyout - Transaction type that represents when the customer requests a refund for the buyout of the rented item.  * RentalCustomerRefund-Extension - Transaction type that represents when the customer requests a refund over the extension on the rented item.  * RentalHandlingFee - Transaction type that represents the fee that Amazon charges sellers who rent through Amazon.  * RentalChargeFailureReimbursement - Transaction type that represents when Amazon sends money to the seller to compensate for a failed charge.  * RentalLostItemReimbursement - Transaction type that represents when Amazon sends money to the seller to compensate for a lost item.
      *
      * @return self
      */
-    public function setRentalEventType($rental_event_type)
+    public function setRentalEventType($rentalEventType)
     {
-        $this->container['rental_event_type'] = $rental_event_type;
+        $this->container['rentalEventType'] = $rentalEventType;
 
         return $this;
     }
 
     /**
-     * Gets extension_length
+     * Gets extensionLength
      *
      * @return int|null
      */
     public function getExtensionLength()
     {
-        return $this->container['extension_length'];
+        return $this->container['extensionLength'];
     }
 
     /**
-     * Sets extension_length
+     * Sets extensionLength
      *
-     * @param int|null $extension_length The number of days that the buyer extended an already rented item. This value is only returned for RentalCustomerPayment-Extension and RentalCustomerRefund-Extension events.
+     * @param int|null $extensionLength The number of days that the buyer extended an already rented item. This value is only returned for RentalCustomerPayment-Extension and RentalCustomerRefund-Extension events.
      *
      * @return self
      */
-    public function setExtensionLength($extension_length)
+    public function setExtensionLength($extensionLength)
     {
-        $this->container['extension_length'] = $extension_length;
+        $this->container['extensionLength'] = $extensionLength;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets rental_charge_list
+     * Gets rentalChargeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getRentalChargeList()
     {
-        return $this->container['rental_charge_list'];
+        return $this->container['rentalChargeList'];
     }
 
     /**
-     * Sets rental_charge_list
+     * Sets rentalChargeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $rental_charge_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $rentalChargeList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setRentalChargeList($rental_charge_list)
+    public function setRentalChargeList($rentalChargeList)
     {
-        $this->container['rental_charge_list'] = $rental_charge_list;
+        $this->container['rentalChargeList'] = $rentalChargeList;
 
         return $this;
     }
 
     /**
-     * Gets rental_fee_list
+     * Gets rentalFeeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getRentalFeeList()
     {
-        return $this->container['rental_fee_list'];
+        return $this->container['rentalFeeList'];
     }
 
     /**
-     * Sets rental_fee_list
+     * Sets rentalFeeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $rental_fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $rentalFeeList A list of fee component information.
      *
      * @return self
      */
-    public function setRentalFeeList($rental_fee_list)
+    public function setRentalFeeList($rentalFeeList)
     {
-        $this->container['rental_fee_list'] = $rental_fee_list;
+        $this->container['rentalFeeList'] = $rentalFeeList;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_name
+     * Gets marketplaceName
      *
      * @return string|null
      */
     public function getMarketplaceName()
     {
-        return $this->container['marketplace_name'];
+        return $this->container['marketplaceName'];
     }
 
     /**
-     * Sets marketplace_name
+     * Sets marketplaceName
      *
-     * @param string|null $marketplace_name The name of the marketplace.
+     * @param string|null $marketplaceName The name of the marketplace.
      *
      * @return self
      */
-    public function setMarketplaceName($marketplace_name)
+    public function setMarketplaceName($marketplaceName)
     {
-        $this->container['marketplace_name'] = $marketplace_name;
+        $this->container['marketplaceName'] = $marketplaceName;
 
         return $this;
     }
 
     /**
-     * Gets rental_initial_value
+     * Gets rentalInitialValue
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getRentalInitialValue()
     {
-        return $this->container['rental_initial_value'];
+        return $this->container['rentalInitialValue'];
     }
 
     /**
-     * Sets rental_initial_value
+     * Sets rentalInitialValue
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $rental_initial_value rental_initial_value
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $rentalInitialValue rentalInitialValue
      *
      * @return self
      */
-    public function setRentalInitialValue($rental_initial_value)
+    public function setRentalInitialValue($rentalInitialValue)
     {
-        $this->container['rental_initial_value'] = $rental_initial_value;
+        $this->container['rentalInitialValue'] = $rentalInitialValue;
 
         return $this;
     }
 
     /**
-     * Gets rental_reimbursement
+     * Gets rentalReimbursement
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getRentalReimbursement()
     {
-        return $this->container['rental_reimbursement'];
+        return $this->container['rentalReimbursement'];
     }
 
     /**
-     * Sets rental_reimbursement
+     * Sets rentalReimbursement
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $rental_reimbursement rental_reimbursement
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $rentalReimbursement rentalReimbursement
      *
      * @return self
      */
-    public function setRentalReimbursement($rental_reimbursement)
+    public function setRentalReimbursement($rentalReimbursement)
     {
-        $this->container['rental_reimbursement'] = $rental_reimbursement;
+        $this->container['rentalReimbursement'] = $rentalReimbursement;
 
         return $this;
     }
 
     /**
-     * Gets rental_tax_withheld_list
+     * Gets rentalTaxWithheldList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null
      */
     public function getRentalTaxWithheldList()
     {
-        return $this->container['rental_tax_withheld_list'];
+        return $this->container['rentalTaxWithheldList'];
     }
 
     /**
-     * Sets rental_tax_withheld_list
+     * Sets rentalTaxWithheldList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $rental_tax_withheld_list A list of information about taxes withheld.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $rentalTaxWithheldList A list of information about taxes withheld.
      *
      * @return self
      */
-    public function setRentalTaxWithheldList($rental_tax_withheld_list)
+    public function setRentalTaxWithheldList($rentalTaxWithheldList)
     {
-        $this->container['rental_tax_withheld_list'] = $rental_tax_withheld_list;
+        $this->container['rentalTaxWithheldList'] = $rentalTaxWithheldList;
 
         return $this;
     }

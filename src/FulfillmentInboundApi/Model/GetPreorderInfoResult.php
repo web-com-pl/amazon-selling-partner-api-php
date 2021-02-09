@@ -61,10 +61,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_contains_preorderable_items' => 'bool',
-        'shipment_confirmed_for_preorder' => 'bool',
-        'need_by_date' => '\DateTime',
-        'confirmed_fulfillable_date' => '\DateTime'
+        'shipmentContainsPreorderableItems' => 'bool',
+        'shipmentConfirmedForPreorder' => 'bool',
+        'needByDate' => '\DateTime',
+        'confirmedFulfillableDate' => '\DateTime'
     ];
 
     /**
@@ -75,10 +75,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_contains_preorderable_items' => null,
-        'shipment_confirmed_for_preorder' => null,
-        'need_by_date' => 'date',
-        'confirmed_fulfillable_date' => 'date'
+        'shipmentContainsPreorderableItems' => null,
+        'shipmentConfirmedForPreorder' => null,
+        'needByDate' => 'date',
+        'confirmedFulfillableDate' => 'date'
     ];
 
     /**
@@ -108,10 +108,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_contains_preorderable_items' => 'ShipmentContainsPreorderableItems',
-        'shipment_confirmed_for_preorder' => 'ShipmentConfirmedForPreorder',
-        'need_by_date' => 'NeedByDate',
-        'confirmed_fulfillable_date' => 'ConfirmedFulfillableDate'
+        'shipmentContainsPreorderableItems' => 'ShipmentContainsPreorderableItems',
+        'shipmentConfirmedForPreorder' => 'ShipmentConfirmedForPreorder',
+        'needByDate' => 'NeedByDate',
+        'confirmedFulfillableDate' => 'ConfirmedFulfillableDate'
     ];
 
     /**
@@ -120,10 +120,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'shipment_contains_preorderable_items' => 'setShipmentContainsPreorderableItems',
-        'shipment_confirmed_for_preorder' => 'setShipmentConfirmedForPreorder',
-        'need_by_date' => 'setNeedByDate',
-        'confirmed_fulfillable_date' => 'setConfirmedFulfillableDate'
+        'shipmentContainsPreorderableItems' => 'setShipmentContainsPreorderableItems',
+        'shipmentConfirmedForPreorder' => 'setShipmentConfirmedForPreorder',
+        'needByDate' => 'setNeedByDate',
+        'confirmedFulfillableDate' => 'setConfirmedFulfillableDate'
     ];
 
     /**
@@ -132,10 +132,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'shipment_contains_preorderable_items' => 'getShipmentContainsPreorderableItems',
-        'shipment_confirmed_for_preorder' => 'getShipmentConfirmedForPreorder',
-        'need_by_date' => 'getNeedByDate',
-        'confirmed_fulfillable_date' => 'getConfirmedFulfillableDate'
+        'shipmentContainsPreorderableItems' => 'getShipmentContainsPreorderableItems',
+        'shipmentConfirmedForPreorder' => 'getShipmentConfirmedForPreorder',
+        'needByDate' => 'getNeedByDate',
+        'confirmedFulfillableDate' => 'getConfirmedFulfillableDate'
     ];
 
     /**
@@ -198,10 +198,10 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_contains_preorderable_items'] = $data['shipment_contains_preorderable_items'] ?? null;
-        $this->container['shipment_confirmed_for_preorder'] = $data['shipment_confirmed_for_preorder'] ?? null;
-        $this->container['need_by_date'] = $data['need_by_date'] ?? null;
-        $this->container['confirmed_fulfillable_date'] = $data['confirmed_fulfillable_date'] ?? null;
+        $this->container['shipmentContainsPreorderableItems'] = $data['shipmentContainsPreorderableItems'] ?? null;
+        $this->container['shipmentConfirmedForPreorder'] = $data['shipmentConfirmedForPreorder'] ?? null;
+        $this->container['needByDate'] = $data['needByDate'] ?? null;
+        $this->container['confirmedFulfillableDate'] = $data['confirmedFulfillableDate'] ?? null;
     }
 
     /**
@@ -229,97 +229,97 @@ class GetPreorderInfoResult implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets shipment_contains_preorderable_items
+     * Gets shipmentContainsPreorderableItems
      *
      * @return bool|null
      */
     public function getShipmentContainsPreorderableItems()
     {
-        return $this->container['shipment_contains_preorderable_items'];
+        return $this->container['shipmentContainsPreorderableItems'];
     }
 
     /**
-     * Sets shipment_contains_preorderable_items
+     * Sets shipmentContainsPreorderableItems
      *
-     * @param bool|null $shipment_contains_preorderable_items Indicates whether the shipment contains items that have been enabled for pre-order. For more information about enabling items for pre-order, see the Seller Central Help.
+     * @param bool|null $shipmentContainsPreorderableItems Indicates whether the shipment contains items that have been enabled for pre-order. For more information about enabling items for pre-order, see the Seller Central Help.
      *
      * @return self
      */
-    public function setShipmentContainsPreorderableItems($shipment_contains_preorderable_items)
+    public function setShipmentContainsPreorderableItems($shipmentContainsPreorderableItems)
     {
-        $this->container['shipment_contains_preorderable_items'] = $shipment_contains_preorderable_items;
+        $this->container['shipmentContainsPreorderableItems'] = $shipmentContainsPreorderableItems;
 
         return $this;
     }
 
     /**
-     * Gets shipment_confirmed_for_preorder
+     * Gets shipmentConfirmedForPreorder
      *
      * @return bool|null
      */
     public function getShipmentConfirmedForPreorder()
     {
-        return $this->container['shipment_confirmed_for_preorder'];
+        return $this->container['shipmentConfirmedForPreorder'];
     }
 
     /**
-     * Sets shipment_confirmed_for_preorder
+     * Sets shipmentConfirmedForPreorder
      *
-     * @param bool|null $shipment_confirmed_for_preorder Indicates whether this shipment has been confirmed for pre-order.
+     * @param bool|null $shipmentConfirmedForPreorder Indicates whether this shipment has been confirmed for pre-order.
      *
      * @return self
      */
-    public function setShipmentConfirmedForPreorder($shipment_confirmed_for_preorder)
+    public function setShipmentConfirmedForPreorder($shipmentConfirmedForPreorder)
     {
-        $this->container['shipment_confirmed_for_preorder'] = $shipment_confirmed_for_preorder;
+        $this->container['shipmentConfirmedForPreorder'] = $shipmentConfirmedForPreorder;
 
         return $this;
     }
 
     /**
-     * Gets need_by_date
+     * Gets needByDate
      *
      * @return \DateTime|null
      */
     public function getNeedByDate()
     {
-        return $this->container['need_by_date'];
+        return $this->container['needByDate'];
     }
 
     /**
-     * Sets need_by_date
+     * Sets needByDate
      *
-     * @param \DateTime|null $need_by_date need_by_date
+     * @param \DateTime|null $needByDate needByDate
      *
      * @return self
      */
-    public function setNeedByDate($need_by_date)
+    public function setNeedByDate($needByDate)
     {
-        $this->container['need_by_date'] = $need_by_date;
+        $this->container['needByDate'] = $needByDate;
 
         return $this;
     }
 
     /**
-     * Gets confirmed_fulfillable_date
+     * Gets confirmedFulfillableDate
      *
      * @return \DateTime|null
      */
     public function getConfirmedFulfillableDate()
     {
-        return $this->container['confirmed_fulfillable_date'];
+        return $this->container['confirmedFulfillableDate'];
     }
 
     /**
-     * Sets confirmed_fulfillable_date
+     * Sets confirmedFulfillableDate
      *
-     * @param \DateTime|null $confirmed_fulfillable_date confirmed_fulfillable_date
+     * @param \DateTime|null $confirmedFulfillableDate confirmedFulfillableDate
      *
      * @return self
      */
-    public function setConfirmedFulfillableDate($confirmed_fulfillable_date)
+    public function setConfirmedFulfillableDate($confirmedFulfillableDate)
     {
-        $this->container['confirmed_fulfillable_date'] = $confirmed_fulfillable_date;
+        $this->container['confirmedFulfillableDate'] = $confirmedFulfillableDate;
 
         return $this;
     }

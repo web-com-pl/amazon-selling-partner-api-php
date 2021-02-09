@@ -62,12 +62,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'enrollment_id' => 'string',
-        'parent_asin' => 'string',
-        'fee_component' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent',
-        'charge_component' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent',
-        'total_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'enrollmentId' => 'string',
+        'parentASIN' => 'string',
+        'feeComponent' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent',
+        'chargeComponent' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent',
+        'totalAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -78,12 +78,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'enrollment_id' => null,
-        'parent_asin' => null,
-        'fee_component' => null,
-        'charge_component' => null,
-        'total_amount' => null
+        'postedDate' => 'date-time',
+        'enrollmentId' => null,
+        'parentASIN' => null,
+        'feeComponent' => null,
+        'chargeComponent' => null,
+        'totalAmount' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'enrollment_id' => 'EnrollmentId',
-        'parent_asin' => 'ParentASIN',
-        'fee_component' => 'FeeComponent',
-        'charge_component' => 'ChargeComponent',
-        'total_amount' => 'TotalAmount'
+        'postedDate' => 'PostedDate',
+        'enrollmentId' => 'EnrollmentId',
+        'parentASIN' => 'ParentASIN',
+        'feeComponent' => 'FeeComponent',
+        'chargeComponent' => 'ChargeComponent',
+        'totalAmount' => 'TotalAmount'
     ];
 
     /**
@@ -127,12 +127,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'enrollment_id' => 'setEnrollmentId',
-        'parent_asin' => 'setParentAsin',
-        'fee_component' => 'setFeeComponent',
-        'charge_component' => 'setChargeComponent',
-        'total_amount' => 'setTotalAmount'
+        'postedDate' => 'setPostedDate',
+        'enrollmentId' => 'setEnrollmentId',
+        'parentASIN' => 'setParentASIN',
+        'feeComponent' => 'setFeeComponent',
+        'chargeComponent' => 'setChargeComponent',
+        'totalAmount' => 'setTotalAmount'
     ];
 
     /**
@@ -141,12 +141,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'enrollment_id' => 'getEnrollmentId',
-        'parent_asin' => 'getParentAsin',
-        'fee_component' => 'getFeeComponent',
-        'charge_component' => 'getChargeComponent',
-        'total_amount' => 'getTotalAmount'
+        'postedDate' => 'getPostedDate',
+        'enrollmentId' => 'getEnrollmentId',
+        'parentASIN' => 'getParentASIN',
+        'feeComponent' => 'getFeeComponent',
+        'chargeComponent' => 'getChargeComponent',
+        'totalAmount' => 'getTotalAmount'
     ];
 
     /**
@@ -209,12 +209,12 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['enrollment_id'] = $data['enrollment_id'] ?? null;
-        $this->container['parent_asin'] = $data['parent_asin'] ?? null;
-        $this->container['fee_component'] = $data['fee_component'] ?? null;
-        $this->container['charge_component'] = $data['charge_component'] ?? null;
-        $this->container['total_amount'] = $data['total_amount'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['enrollmentId'] = $data['enrollmentId'] ?? null;
+        $this->container['parentASIN'] = $data['parentASIN'] ?? null;
+        $this->container['feeComponent'] = $data['feeComponent'] ?? null;
+        $this->container['chargeComponent'] = $data['chargeComponent'] ?? null;
+        $this->container['totalAmount'] = $data['totalAmount'] ?? null;
     }
 
     /**
@@ -242,145 +242,145 @@ class SellerReviewEnrollmentPaymentEvent implements ModelInterface, ArrayAccess,
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets enrollment_id
+     * Gets enrollmentId
      *
      * @return string|null
      */
     public function getEnrollmentId()
     {
-        return $this->container['enrollment_id'];
+        return $this->container['enrollmentId'];
     }
 
     /**
-     * Sets enrollment_id
+     * Sets enrollmentId
      *
-     * @param string|null $enrollment_id An enrollment identifier.
+     * @param string|null $enrollmentId An enrollment identifier.
      *
      * @return self
      */
-    public function setEnrollmentId($enrollment_id)
+    public function setEnrollmentId($enrollmentId)
     {
-        $this->container['enrollment_id'] = $enrollment_id;
+        $this->container['enrollmentId'] = $enrollmentId;
 
         return $this;
     }
 
     /**
-     * Gets parent_asin
+     * Gets parentASIN
      *
      * @return string|null
      */
-    public function getParentAsin()
+    public function getParentASIN()
     {
-        return $this->container['parent_asin'];
+        return $this->container['parentASIN'];
     }
 
     /**
-     * Sets parent_asin
+     * Sets parentASIN
      *
-     * @param string|null $parent_asin The Amazon Standard Identification Number (ASIN) of the item that was enrolled in the Early Reviewer Program.
+     * @param string|null $parentASIN The Amazon Standard Identification Number (ASIN) of the item that was enrolled in the Early Reviewer Program.
      *
      * @return self
      */
-    public function setParentAsin($parent_asin)
+    public function setParentASIN($parentASIN)
     {
-        $this->container['parent_asin'] = $parent_asin;
+        $this->container['parentASIN'] = $parentASIN;
 
         return $this;
     }
 
     /**
-     * Gets fee_component
+     * Gets feeComponent
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null
      */
     public function getFeeComponent()
     {
-        return $this->container['fee_component'];
+        return $this->container['feeComponent'];
     }
 
     /**
-     * Sets fee_component
+     * Sets feeComponent
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null $fee_component fee_component
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null $feeComponent feeComponent
      *
      * @return self
      */
-    public function setFeeComponent($fee_component)
+    public function setFeeComponent($feeComponent)
     {
-        $this->container['fee_component'] = $fee_component;
+        $this->container['feeComponent'] = $feeComponent;
 
         return $this;
     }
 
     /**
-     * Gets charge_component
+     * Gets chargeComponent
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null
      */
     public function getChargeComponent()
     {
-        return $this->container['charge_component'];
+        return $this->container['chargeComponent'];
     }
 
     /**
-     * Sets charge_component
+     * Sets chargeComponent
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null $charge_component charge_component
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null $chargeComponent chargeComponent
      *
      * @return self
      */
-    public function setChargeComponent($charge_component)
+    public function setChargeComponent($chargeComponent)
     {
-        $this->container['charge_component'] = $charge_component;
+        $this->container['chargeComponent'] = $chargeComponent;
 
         return $this;
     }
 
     /**
-     * Gets total_amount
+     * Gets totalAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTotalAmount()
     {
-        return $this->container['total_amount'];
+        return $this->container['totalAmount'];
     }
 
     /**
-     * Sets total_amount
+     * Sets totalAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $total_amount total_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $totalAmount totalAmount
      *
      * @return self
      */
-    public function setTotalAmount($total_amount)
+    public function setTotalAmount($totalAmount)
     {
-        $this->container['total_amount'] = $total_amount;
+        $this->container['totalAmount'] = $totalAmount;
 
         return $this;
     }

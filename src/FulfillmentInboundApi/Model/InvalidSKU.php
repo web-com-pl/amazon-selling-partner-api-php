@@ -61,8 +61,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'error_reason' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason'
+        'sellerSKU' => 'string',
+        'errorReason' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason'
     ];
 
     /**
@@ -73,8 +73,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'error_reason' => null
+        'sellerSKU' => null,
+        'errorReason' => null
     ];
 
     /**
@@ -104,8 +104,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'SellerSKU',
-        'error_reason' => 'ErrorReason'
+        'sellerSKU' => 'SellerSKU',
+        'errorReason' => 'ErrorReason'
     ];
 
     /**
@@ -114,8 +114,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'error_reason' => 'setErrorReason'
+        'sellerSKU' => 'setSellerSKU',
+        'errorReason' => 'setErrorReason'
     ];
 
     /**
@@ -124,8 +124,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'error_reason' => 'getErrorReason'
+        'sellerSKU' => 'getSellerSKU',
+        'errorReason' => 'getErrorReason'
     ];
 
     /**
@@ -188,8 +188,8 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['error_reason'] = $data['error_reason'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['errorReason'] = $data['errorReason'] ?? null;
     }
 
     /**
@@ -217,49 +217,49 @@ class InvalidSKU implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller SKU of the item.
+     * @param string|null $sellerSKU The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets error_reason
+     * Gets errorReason
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null
      */
     public function getErrorReason()
     {
-        return $this->container['error_reason'];
+        return $this->container['errorReason'];
     }
 
     /**
-     * Sets error_reason
+     * Sets errorReason
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null $error_reason error_reason
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null $errorReason errorReason
      *
      * @return self
      */
-    public function setErrorReason($error_reason)
+    public function setErrorReason($errorReason)
     {
-        $this->container['error_reason'] = $error_reason;
+        $this->container['errorReason'] = $errorReason;
 
         return $this;
     }

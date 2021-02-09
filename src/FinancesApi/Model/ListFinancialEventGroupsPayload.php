@@ -62,8 +62,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'next_token' => 'string',
-        'financial_event_group_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FinancialEventGroup[]'
+        'nextToken' => 'string',
+        'financialEventGroupList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FinancialEventGroup[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'next_token' => null,
-        'financial_event_group_list' => null
+        'nextToken' => null,
+        'financialEventGroupList' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_token' => 'NextToken',
-        'financial_event_group_list' => 'FinancialEventGroupList'
+        'nextToken' => 'NextToken',
+        'financialEventGroupList' => 'FinancialEventGroupList'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'next_token' => 'setNextToken',
-        'financial_event_group_list' => 'setFinancialEventGroupList'
+        'nextToken' => 'setNextToken',
+        'financialEventGroupList' => 'setFinancialEventGroupList'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'next_token' => 'getNextToken',
-        'financial_event_group_list' => 'getFinancialEventGroupList'
+        'nextToken' => 'getNextToken',
+        'financialEventGroupList' => 'getFinancialEventGroupList'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_token'] = $data['next_token'] ?? null;
-        $this->container['financial_event_group_list'] = $data['financial_event_group_list'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
+        $this->container['financialEventGroupList'] = $data['financialEventGroupList'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ListFinancialEventGroupsPayload implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }
 
     /**
-     * Gets financial_event_group_list
+     * Gets financialEventGroupList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEventGroup[]|null
      */
     public function getFinancialEventGroupList()
     {
-        return $this->container['financial_event_group_list'];
+        return $this->container['financialEventGroupList'];
     }
 
     /**
-     * Sets financial_event_group_list
+     * Sets financialEventGroupList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEventGroup[]|null $financial_event_group_list A list of financial event group information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEventGroup[]|null $financialEventGroupList A list of financial event group information.
      *
      * @return self
      */
-    public function setFinancialEventGroupList($financial_event_group_list)
+    public function setFinancialEventGroupList($financialEventGroupList)
     {
-        $this->container['financial_event_group_list'] = $financial_event_group_list;
+        $this->container['financialEventGroupList'] = $financialEventGroupList;
 
         return $this;
     }

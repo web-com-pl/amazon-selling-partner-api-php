@@ -62,7 +62,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label_specification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
+        'labelSpecification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
     ];
 
     /**
@@ -73,7 +73,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'label_specification' => null
+        'labelSpecification' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'label_specification' => 'labelSpecification'
+        'labelSpecification' => 'labelSpecification'
     ];
 
     /**
@@ -112,7 +112,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'label_specification' => 'setLabelSpecification'
+        'labelSpecification' => 'setLabelSpecification'
     ];
 
     /**
@@ -121,7 +121,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'label_specification' => 'getLabelSpecification'
+        'labelSpecification' => 'getLabelSpecification'
     ];
 
     /**
@@ -184,7 +184,7 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(array $data = null)
     {
-        $this->container['label_specification'] = $data['label_specification'] ?? null;
+        $this->container['labelSpecification'] = $data['labelSpecification'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['label_specification'] === null) {
-            $invalidProperties[] = "'label_specification' can't be null";
+        if ($this->container['labelSpecification'] === null) {
+            $invalidProperties[] = "'labelSpecification' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class RetrieveShippingLabelRequest implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets label_specification
+     * Gets labelSpecification
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification
      */
     public function getLabelSpecification()
     {
-        return $this->container['label_specification'];
+        return $this->container['labelSpecification'];
     }
 
     /**
-     * Sets label_specification
+     * Sets labelSpecification
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $label_specification label_specification
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $labelSpecification labelSpecification
      *
      * @return self
      */
-    public function setLabelSpecification($label_specification)
+    public function setLabelSpecification($labelSpecification)
     {
-        $this->container['label_specification'] = $label_specification;
+        $this->container['labelSpecification'] = $labelSpecification;
 
         return $this;
     }

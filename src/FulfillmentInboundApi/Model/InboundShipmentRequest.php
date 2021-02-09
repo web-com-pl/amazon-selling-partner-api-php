@@ -62,9 +62,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'inbound_shipment_header' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentHeader',
-        'inbound_shipment_items' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]',
-        'marketplace_id' => 'string'
+        'inboundShipmentHeader' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentHeader',
+        'inboundShipmentItems' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]',
+        'marketplaceId' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'inbound_shipment_header' => null,
-        'inbound_shipment_items' => null,
-        'marketplace_id' => null
+        'inboundShipmentHeader' => null,
+        'inboundShipmentItems' => null,
+        'marketplaceId' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'inbound_shipment_header' => 'InboundShipmentHeader',
-        'inbound_shipment_items' => 'InboundShipmentItems',
-        'marketplace_id' => 'MarketplaceId'
+        'inboundShipmentHeader' => 'InboundShipmentHeader',
+        'inboundShipmentItems' => 'InboundShipmentItems',
+        'marketplaceId' => 'MarketplaceId'
     ];
 
     /**
@@ -118,9 +118,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'inbound_shipment_header' => 'setInboundShipmentHeader',
-        'inbound_shipment_items' => 'setInboundShipmentItems',
-        'marketplace_id' => 'setMarketplaceId'
+        'inboundShipmentHeader' => 'setInboundShipmentHeader',
+        'inboundShipmentItems' => 'setInboundShipmentItems',
+        'marketplaceId' => 'setMarketplaceId'
     ];
 
     /**
@@ -129,9 +129,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'inbound_shipment_header' => 'getInboundShipmentHeader',
-        'inbound_shipment_items' => 'getInboundShipmentItems',
-        'marketplace_id' => 'getMarketplaceId'
+        'inboundShipmentHeader' => 'getInboundShipmentHeader',
+        'inboundShipmentItems' => 'getInboundShipmentItems',
+        'marketplaceId' => 'getMarketplaceId'
     ];
 
     /**
@@ -194,9 +194,9 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['inbound_shipment_header'] = $data['inbound_shipment_header'] ?? null;
-        $this->container['inbound_shipment_items'] = $data['inbound_shipment_items'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
+        $this->container['inboundShipmentHeader'] = $data['inboundShipmentHeader'] ?? null;
+        $this->container['inboundShipmentItems'] = $data['inboundShipmentItems'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['inbound_shipment_header'] === null) {
-            $invalidProperties[] = "'inbound_shipment_header' can't be null";
+        if ($this->container['inboundShipmentHeader'] === null) {
+            $invalidProperties[] = "'inboundShipmentHeader' can't be null";
         }
-        if ($this->container['inbound_shipment_items'] === null) {
-            $invalidProperties[] = "'inbound_shipment_items' can't be null";
+        if ($this->container['inboundShipmentItems'] === null) {
+            $invalidProperties[] = "'inboundShipmentItems' can't be null";
         }
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class InboundShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets inbound_shipment_header
+     * Gets inboundShipmentHeader
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentHeader
      */
     public function getInboundShipmentHeader()
     {
-        return $this->container['inbound_shipment_header'];
+        return $this->container['inboundShipmentHeader'];
     }
 
     /**
-     * Sets inbound_shipment_header
+     * Sets inboundShipmentHeader
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentHeader $inbound_shipment_header inbound_shipment_header
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentHeader $inboundShipmentHeader inboundShipmentHeader
      *
      * @return self
      */
-    public function setInboundShipmentHeader($inbound_shipment_header)
+    public function setInboundShipmentHeader($inboundShipmentHeader)
     {
-        $this->container['inbound_shipment_header'] = $inbound_shipment_header;
+        $this->container['inboundShipmentHeader'] = $inboundShipmentHeader;
 
         return $this;
     }
 
     /**
-     * Gets inbound_shipment_items
+     * Gets inboundShipmentItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]
      */
     public function getInboundShipmentItems()
     {
-        return $this->container['inbound_shipment_items'];
+        return $this->container['inboundShipmentItems'];
     }
 
     /**
-     * Sets inbound_shipment_items
+     * Sets inboundShipmentItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[] $inbound_shipment_items A list of inbound shipment item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[] $inboundShipmentItems A list of inbound shipment item information.
      *
      * @return self
      */
-    public function setInboundShipmentItems($inbound_shipment_items)
+    public function setInboundShipmentItems($inboundShipmentItems)
     {
-        $this->container['inbound_shipment_items'] = $inbound_shipment_items;
+        $this->container['inboundShipmentItems'] = $inboundShipmentItems;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id A marketplace identifier. Specifies the marketplace where the product would be stored.
+     * @param string $marketplaceId A marketplace identifier. Specifies the marketplace where the product would be stored.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }

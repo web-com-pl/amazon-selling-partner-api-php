@@ -62,7 +62,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fulfillment_supply_source_id' => 'string'
+        'fulfillmentSupplySourceId' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fulfillment_supply_source_id' => null
+        'fulfillmentSupplySourceId' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'fulfillment_supply_source_id' => 'FulfillmentSupplySourceId'
+        'fulfillmentSupplySourceId' => 'FulfillmentSupplySourceId'
     ];
 
     /**
@@ -112,7 +112,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'fulfillment_supply_source_id' => 'setFulfillmentSupplySourceId'
+        'fulfillmentSupplySourceId' => 'setFulfillmentSupplySourceId'
     ];
 
     /**
@@ -121,7 +121,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'fulfillment_supply_source_id' => 'getFulfillmentSupplySourceId'
+        'fulfillmentSupplySourceId' => 'getFulfillmentSupplySourceId'
     ];
 
     /**
@@ -184,7 +184,7 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['fulfillment_supply_source_id'] = $data['fulfillment_supply_source_id'] ?? null;
+        $this->container['fulfillmentSupplySourceId'] = $data['fulfillmentSupplySourceId'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class FulfillmentInstruction implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets fulfillment_supply_source_id
+     * Gets fulfillmentSupplySourceId
      *
      * @return string|null
      */
     public function getFulfillmentSupplySourceId()
     {
-        return $this->container['fulfillment_supply_source_id'];
+        return $this->container['fulfillmentSupplySourceId'];
     }
 
     /**
-     * Sets fulfillment_supply_source_id
+     * Sets fulfillmentSupplySourceId
      *
-     * @param string|null $fulfillment_supply_source_id Denotes the recommended sourceId where the order should be fulfilled from.
+     * @param string|null $fulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from.
      *
      * @return self
      */
-    public function setFulfillmentSupplySourceId($fulfillment_supply_source_id)
+    public function setFulfillmentSupplySourceId($fulfillmentSupplySourceId)
     {
-        $this->container['fulfillment_supply_source_id'] = $fulfillment_supply_source_id;
+        $this->container['fulfillmentSupplySourceId'] = $fulfillmentSupplySourceId;
 
         return $this;
     }

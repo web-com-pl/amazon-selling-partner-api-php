@@ -61,7 +61,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'inbound_shipment_plans' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlan[]'
+        'inboundShipmentPlans' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlan[]'
     ];
 
     /**
@@ -72,7 +72,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'inbound_shipment_plans' => null
+        'inboundShipmentPlans' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'inbound_shipment_plans' => 'InboundShipmentPlans'
+        'inboundShipmentPlans' => 'InboundShipmentPlans'
     ];
 
     /**
@@ -111,7 +111,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'inbound_shipment_plans' => 'setInboundShipmentPlans'
+        'inboundShipmentPlans' => 'setInboundShipmentPlans'
     ];
 
     /**
@@ -120,7 +120,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'inbound_shipment_plans' => 'getInboundShipmentPlans'
+        'inboundShipmentPlans' => 'getInboundShipmentPlans'
     ];
 
     /**
@@ -183,7 +183,7 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['inbound_shipment_plans'] = $data['inbound_shipment_plans'] ?? null;
+        $this->container['inboundShipmentPlans'] = $data['inboundShipmentPlans'] ?? null;
     }
 
     /**
@@ -211,25 +211,25 @@ class CreateInboundShipmentPlanResult implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets inbound_shipment_plans
+     * Gets inboundShipmentPlans
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlan[]|null
      */
     public function getInboundShipmentPlans()
     {
-        return $this->container['inbound_shipment_plans'];
+        return $this->container['inboundShipmentPlans'];
     }
 
     /**
-     * Sets inbound_shipment_plans
+     * Sets inboundShipmentPlans
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlan[]|null $inbound_shipment_plans A list of inbound shipment plan information
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlan[]|null $inboundShipmentPlans A list of inbound shipment plan information
      *
      * @return self
      */
-    public function setInboundShipmentPlans($inbound_shipment_plans)
+    public function setInboundShipmentPlans($inboundShipmentPlans)
     {
-        $this->container['inbound_shipment_plans'] = $inbound_shipment_plans;
+        $this->container['inboundShipmentPlans'] = $inboundShipmentPlans;
 
         return $this;
     }

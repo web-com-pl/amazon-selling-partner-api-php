@@ -61,7 +61,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product_category_id' => 'string',
+        'productCategoryId' => 'string',
         'rank' => 'int'
     ];
 
@@ -73,7 +73,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'product_category_id' => null,
+        'productCategoryId' => null,
         'rank' => 'int32'
     ];
 
@@ -104,7 +104,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_category_id' => 'ProductCategoryId',
+        'productCategoryId' => 'ProductCategoryId',
         'rank' => 'Rank'
     ];
 
@@ -114,7 +114,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'product_category_id' => 'setProductCategoryId',
+        'productCategoryId' => 'setProductCategoryId',
         'rank' => 'setRank'
     ];
 
@@ -124,7 +124,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'product_category_id' => 'getProductCategoryId',
+        'productCategoryId' => 'getProductCategoryId',
         'rank' => 'getRank'
     ];
 
@@ -188,7 +188,7 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_category_id'] = $data['product_category_id'] ?? null;
+        $this->container['productCategoryId'] = $data['productCategoryId'] ?? null;
         $this->container['rank'] = $data['rank'] ?? null;
     }
 
@@ -201,8 +201,8 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['product_category_id'] === null) {
-            $invalidProperties[] = "'product_category_id' can't be null";
+        if ($this->container['productCategoryId'] === null) {
+            $invalidProperties[] = "'productCategoryId' can't be null";
         }
         if ($this->container['rank'] === null) {
             $invalidProperties[] = "'rank' can't be null";
@@ -223,25 +223,25 @@ class SalesRankType implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets product_category_id
+     * Gets productCategoryId
      *
      * @return string
      */
     public function getProductCategoryId()
     {
-        return $this->container['product_category_id'];
+        return $this->container['productCategoryId'];
     }
 
     /**
-     * Sets product_category_id
+     * Sets productCategoryId
      *
-     * @param string $product_category_id Identifies the item category from which the sales rank is taken.
+     * @param string $productCategoryId Identifies the item category from which the sales rank is taken.
      *
      * @return self
      */
-    public function setProductCategoryId($product_category_id)
+    public function setProductCategoryId($productCategoryId)
     {
-        $this->container['product_category_id'] = $product_category_id;
+        $this->container['productCategoryId'] = $productCategoryId;
 
         return $this;
     }

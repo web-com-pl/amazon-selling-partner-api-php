@@ -62,7 +62,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_experience_option' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption',
+        'deliveryExperienceOption' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption',
         'charge' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount'
     ];
 
@@ -74,7 +74,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'delivery_experience_option' => null,
+        'deliveryExperienceOption' => null,
         'charge' => null
     ];
 
@@ -105,7 +105,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_experience_option' => 'DeliveryExperienceOption',
+        'deliveryExperienceOption' => 'DeliveryExperienceOption',
         'charge' => 'Charge'
     ];
 
@@ -115,7 +115,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'delivery_experience_option' => 'setDeliveryExperienceOption',
+        'deliveryExperienceOption' => 'setDeliveryExperienceOption',
         'charge' => 'setCharge'
     ];
 
@@ -125,7 +125,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'delivery_experience_option' => 'getDeliveryExperienceOption',
+        'deliveryExperienceOption' => 'getDeliveryExperienceOption',
         'charge' => 'getCharge'
     ];
 
@@ -189,7 +189,7 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_experience_option'] = $data['delivery_experience_option'] ?? null;
+        $this->container['deliveryExperienceOption'] = $data['deliveryExperienceOption'] ?? null;
         $this->container['charge'] = $data['charge'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
-        if ($this->container['delivery_experience_option'] === null) {
-            $invalidProperties[] = "'delivery_experience_option' can't be null";
+        if ($this->container['deliveryExperienceOption'] === null) {
+            $invalidProperties[] = "'deliveryExperienceOption' can't be null";
         }
         if ($this->container['charge'] === null) {
             $invalidProperties[] = "'charge' can't be null";
@@ -224,25 +224,25 @@ class AvailableDeliveryExperienceOption implements ModelInterface, ArrayAccess, 
 
 
     /**
-     * Gets delivery_experience_option
+     * Gets deliveryExperienceOption
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption
      */
     public function getDeliveryExperienceOption()
     {
-        return $this->container['delivery_experience_option'];
+        return $this->container['deliveryExperienceOption'];
     }
 
     /**
-     * Sets delivery_experience_option
+     * Sets deliveryExperienceOption
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption $delivery_experience_option delivery_experience_option
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption $deliveryExperienceOption deliveryExperienceOption
      *
      * @return self
      */
-    public function setDeliveryExperienceOption($delivery_experience_option)
+    public function setDeliveryExperienceOption($deliveryExperienceOption)
     {
-        $this->container['delivery_experience_option'] = $delivery_experience_option;
+        $this->container['deliveryExperienceOption'] = $deliveryExperienceOption;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'payload_version' => 'string',
-        'destination_id' => 'string'
+        'payloadVersion' => 'string',
+        'destinationId' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'payload_version' => null,
-        'destination_id' => null
+        'payloadVersion' => null,
+        'destinationId' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload_version' => 'payloadVersion',
-        'destination_id' => 'destinationId'
+        'payloadVersion' => 'payloadVersion',
+        'destinationId' => 'destinationId'
     ];
 
     /**
@@ -115,8 +115,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'payload_version' => 'setPayloadVersion',
-        'destination_id' => 'setDestinationId'
+        'payloadVersion' => 'setPayloadVersion',
+        'destinationId' => 'setDestinationId'
     ];
 
     /**
@@ -125,8 +125,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'payload_version' => 'getPayloadVersion',
-        'destination_id' => 'getDestinationId'
+        'payloadVersion' => 'getPayloadVersion',
+        'destinationId' => 'getDestinationId'
     ];
 
     /**
@@ -189,8 +189,8 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['payload_version'] = $data['payload_version'] ?? null;
-        $this->container['destination_id'] = $data['destination_id'] ?? null;
+        $this->container['payloadVersion'] = $data['payloadVersion'] ?? null;
+        $this->container['destinationId'] = $data['destinationId'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets payload_version
+     * Gets payloadVersion
      *
      * @return string|null
      */
     public function getPayloadVersion()
     {
-        return $this->container['payload_version'];
+        return $this->container['payloadVersion'];
     }
 
     /**
-     * Sets payload_version
+     * Sets payloadVersion
      *
-     * @param string|null $payload_version The version of the payload object to be used in the notification.
+     * @param string|null $payloadVersion The version of the payload object to be used in the notification.
      *
      * @return self
      */
-    public function setPayloadVersion($payload_version)
+    public function setPayloadVersion($payloadVersion)
     {
-        $this->container['payload_version'] = $payload_version;
+        $this->container['payloadVersion'] = $payloadVersion;
 
         return $this;
     }
 
     /**
-     * Gets destination_id
+     * Gets destinationId
      *
      * @return string|null
      */
     public function getDestinationId()
     {
-        return $this->container['destination_id'];
+        return $this->container['destinationId'];
     }
 
     /**
-     * Sets destination_id
+     * Sets destinationId
      *
-     * @param string|null $destination_id The identifier for the destination where notifications will be delivered.
+     * @param string|null $destinationId The identifier for the destination where notifications will be delivered.
      *
      * @return self
      */
-    public function setDestinationId($destination_id)
+    public function setDestinationId($destinationId)
     {
-        $this->container['destination_id'] = $destination_id;
+        $this->container['destinationId'] = $destinationId;
 
         return $this;
     }

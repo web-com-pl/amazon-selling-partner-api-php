@@ -62,11 +62,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_name' => 'string',
-        'shipping_service_name' => 'string',
-        'shipping_service_id' => 'string',
-        'rejection_reason_code' => 'string',
-        'rejection_reason_message' => 'string'
+        'carrierName' => 'string',
+        'shippingServiceName' => 'string',
+        'shippingServiceId' => 'string',
+        'rejectionReasonCode' => 'string',
+        'rejectionReasonMessage' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_name' => null,
-        'shipping_service_name' => null,
-        'shipping_service_id' => null,
-        'rejection_reason_code' => null,
-        'rejection_reason_message' => null
+        'carrierName' => null,
+        'shippingServiceName' => null,
+        'shippingServiceId' => null,
+        'rejectionReasonCode' => null,
+        'rejectionReasonMessage' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_name' => 'CarrierName',
-        'shipping_service_name' => 'ShippingServiceName',
-        'shipping_service_id' => 'ShippingServiceId',
-        'rejection_reason_code' => 'RejectionReasonCode',
-        'rejection_reason_message' => 'RejectionReasonMessage'
+        'carrierName' => 'CarrierName',
+        'shippingServiceName' => 'ShippingServiceName',
+        'shippingServiceId' => 'ShippingServiceId',
+        'rejectionReasonCode' => 'RejectionReasonCode',
+        'rejectionReasonMessage' => 'RejectionReasonMessage'
     ];
 
     /**
@@ -124,11 +124,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'carrier_name' => 'setCarrierName',
-        'shipping_service_name' => 'setShippingServiceName',
-        'shipping_service_id' => 'setShippingServiceId',
-        'rejection_reason_code' => 'setRejectionReasonCode',
-        'rejection_reason_message' => 'setRejectionReasonMessage'
+        'carrierName' => 'setCarrierName',
+        'shippingServiceName' => 'setShippingServiceName',
+        'shippingServiceId' => 'setShippingServiceId',
+        'rejectionReasonCode' => 'setRejectionReasonCode',
+        'rejectionReasonMessage' => 'setRejectionReasonMessage'
     ];
 
     /**
@@ -137,11 +137,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'carrier_name' => 'getCarrierName',
-        'shipping_service_name' => 'getShippingServiceName',
-        'shipping_service_id' => 'getShippingServiceId',
-        'rejection_reason_code' => 'getRejectionReasonCode',
-        'rejection_reason_message' => 'getRejectionReasonMessage'
+        'carrierName' => 'getCarrierName',
+        'shippingServiceName' => 'getShippingServiceName',
+        'shippingServiceId' => 'getShippingServiceId',
+        'rejectionReasonCode' => 'getRejectionReasonCode',
+        'rejectionReasonMessage' => 'getRejectionReasonMessage'
     ];
 
     /**
@@ -204,11 +204,11 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
-        $this->container['shipping_service_name'] = $data['shipping_service_name'] ?? null;
-        $this->container['shipping_service_id'] = $data['shipping_service_id'] ?? null;
-        $this->container['rejection_reason_code'] = $data['rejection_reason_code'] ?? null;
-        $this->container['rejection_reason_message'] = $data['rejection_reason_message'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
+        $this->container['shippingServiceName'] = $data['shippingServiceName'] ?? null;
+        $this->container['shippingServiceId'] = $data['shippingServiceId'] ?? null;
+        $this->container['rejectionReasonCode'] = $data['rejectionReasonCode'] ?? null;
+        $this->container['rejectionReasonMessage'] = $data['rejectionReasonMessage'] ?? null;
     }
 
     /**
@@ -220,17 +220,17 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
-        if ($this->container['shipping_service_name'] === null) {
-            $invalidProperties[] = "'shipping_service_name' can't be null";
+        if ($this->container['shippingServiceName'] === null) {
+            $invalidProperties[] = "'shippingServiceName' can't be null";
         }
-        if ($this->container['shipping_service_id'] === null) {
-            $invalidProperties[] = "'shipping_service_id' can't be null";
+        if ($this->container['shippingServiceId'] === null) {
+            $invalidProperties[] = "'shippingServiceId' can't be null";
         }
-        if ($this->container['rejection_reason_code'] === null) {
-            $invalidProperties[] = "'rejection_reason_code' can't be null";
+        if ($this->container['rejectionReasonCode'] === null) {
+            $invalidProperties[] = "'rejectionReasonCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,121 +248,121 @@ class RejectedShippingService implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The rejected shipping carrier name. e.g. USPS
+     * @param string $carrierName The rejected shipping carrier name. e.g. USPS
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_name
+     * Gets shippingServiceName
      *
      * @return string
      */
     public function getShippingServiceName()
     {
-        return $this->container['shipping_service_name'];
+        return $this->container['shippingServiceName'];
     }
 
     /**
-     * Sets shipping_service_name
+     * Sets shippingServiceName
      *
-     * @param string $shipping_service_name The rejected shipping service localized name. e.g. FedEx Standard Overnight
+     * @param string $shippingServiceName The rejected shipping service localized name. e.g. FedEx Standard Overnight
      *
      * @return self
      */
-    public function setShippingServiceName($shipping_service_name)
+    public function setShippingServiceName($shippingServiceName)
     {
-        $this->container['shipping_service_name'] = $shipping_service_name;
+        $this->container['shippingServiceName'] = $shippingServiceName;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_id
+     * Gets shippingServiceId
      *
      * @return string
      */
     public function getShippingServiceId()
     {
-        return $this->container['shipping_service_id'];
+        return $this->container['shippingServiceId'];
     }
 
     /**
-     * Sets shipping_service_id
+     * Sets shippingServiceId
      *
-     * @param string $shipping_service_id An Amazon-defined shipping service identifier.
+     * @param string $shippingServiceId An Amazon-defined shipping service identifier.
      *
      * @return self
      */
-    public function setShippingServiceId($shipping_service_id)
+    public function setShippingServiceId($shippingServiceId)
     {
-        $this->container['shipping_service_id'] = $shipping_service_id;
+        $this->container['shippingServiceId'] = $shippingServiceId;
 
         return $this;
     }
 
     /**
-     * Gets rejection_reason_code
+     * Gets rejectionReasonCode
      *
      * @return string
      */
     public function getRejectionReasonCode()
     {
-        return $this->container['rejection_reason_code'];
+        return $this->container['rejectionReasonCode'];
     }
 
     /**
-     * Sets rejection_reason_code
+     * Sets rejectionReasonCode
      *
-     * @param string $rejection_reason_code A reason code meant to be consumed programatically. e.g. CARRIER_CANNOT_SHIP_TO_POBOX
+     * @param string $rejectionReasonCode A reason code meant to be consumed programatically. e.g. CARRIER_CANNOT_SHIP_TO_POBOX
      *
      * @return self
      */
-    public function setRejectionReasonCode($rejection_reason_code)
+    public function setRejectionReasonCode($rejectionReasonCode)
     {
-        $this->container['rejection_reason_code'] = $rejection_reason_code;
+        $this->container['rejectionReasonCode'] = $rejectionReasonCode;
 
         return $this;
     }
 
     /**
-     * Gets rejection_reason_message
+     * Gets rejectionReasonMessage
      *
      * @return string|null
      */
     public function getRejectionReasonMessage()
     {
-        return $this->container['rejection_reason_message'];
+        return $this->container['rejectionReasonMessage'];
     }
 
     /**
-     * Sets rejection_reason_message
+     * Sets rejectionReasonMessage
      *
-     * @param string|null $rejection_reason_message A localized human readable description of the rejected reason.
+     * @param string|null $rejectionReasonMessage A localized human readable description of the rejected reason.
      *
      * @return self
      */
-    public function setRejectionReasonMessage($rejection_reason_message)
+    public function setRejectionReasonMessage($rejectionReasonMessage)
     {
-        $this->container['rejection_reason_message'] = $rejection_reason_message;
+        $this->container['rejectionReasonMessage'] = $rejectionReasonMessage;
 
         return $this;
     }

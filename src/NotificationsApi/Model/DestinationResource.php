@@ -63,7 +63,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'sqs' => '\Webcom\Amazon\Rest\NotificationsApi\Model\SqsResource',
-        'event_bridge' => '\Webcom\Amazon\Rest\NotificationsApi\Model\EventBridgeResource'
+        'eventBridge' => '\Webcom\Amazon\Rest\NotificationsApi\Model\EventBridgeResource'
     ];
 
     /**
@@ -75,7 +75,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'sqs' => null,
-        'event_bridge' => null
+        'eventBridge' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'sqs' => 'sqs',
-        'event_bridge' => 'eventBridge'
+        'eventBridge' => 'eventBridge'
     ];
 
     /**
@@ -116,7 +116,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'sqs' => 'setSqs',
-        'event_bridge' => 'setEventBridge'
+        'eventBridge' => 'setEventBridge'
     ];
 
     /**
@@ -126,7 +126,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'sqs' => 'getSqs',
-        'event_bridge' => 'getEventBridge'
+        'eventBridge' => 'getEventBridge'
     ];
 
     /**
@@ -190,7 +190,7 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(array $data = null)
     {
         $this->container['sqs'] = $data['sqs'] ?? null;
-        $this->container['event_bridge'] = $data['event_bridge'] ?? null;
+        $this->container['eventBridge'] = $data['eventBridge'] ?? null;
     }
 
     /**
@@ -242,25 +242,25 @@ class DestinationResource implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets event_bridge
+     * Gets eventBridge
      *
      * @return \Webcom\Amazon\Rest\NotificationsApi\Model\EventBridgeResource|null
      */
     public function getEventBridge()
     {
-        return $this->container['event_bridge'];
+        return $this->container['eventBridge'];
     }
 
     /**
-     * Sets event_bridge
+     * Sets eventBridge
      *
-     * @param \Webcom\Amazon\Rest\NotificationsApi\Model\EventBridgeResource|null $event_bridge event_bridge
+     * @param \Webcom\Amazon\Rest\NotificationsApi\Model\EventBridgeResource|null $eventBridge eventBridge
      *
      * @return self
      */
-    public function setEventBridge($event_bridge)
+    public function setEventBridge($eventBridge)
     {
-        $this->container['event_bridge'] = $event_bridge;
+        $this->container['eventBridge'] = $eventBridge;
 
         return $this;
     }

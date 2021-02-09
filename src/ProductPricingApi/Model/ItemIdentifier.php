@@ -62,10 +62,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'asin' => 'string',
-        'seller_sku' => 'string',
-        'item_condition' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\ConditionType'
+        'marketplaceId' => 'string',
+        'aSIN' => 'string',
+        'sellerSKU' => 'string',
+        'itemCondition' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\ConditionType'
     ];
 
     /**
@@ -76,10 +76,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'asin' => null,
-        'seller_sku' => null,
-        'item_condition' => null
+        'marketplaceId' => null,
+        'aSIN' => null,
+        'sellerSKU' => null,
+        'itemCondition' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'MarketplaceId',
-        'asin' => 'ASIN',
-        'seller_sku' => 'SellerSKU',
-        'item_condition' => 'ItemCondition'
+        'marketplaceId' => 'MarketplaceId',
+        'aSIN' => 'ASIN',
+        'sellerSKU' => 'SellerSKU',
+        'itemCondition' => 'ItemCondition'
     ];
 
     /**
@@ -121,10 +121,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'asin' => 'setAsin',
-        'seller_sku' => 'setSellerSku',
-        'item_condition' => 'setItemCondition'
+        'marketplaceId' => 'setMarketplaceId',
+        'aSIN' => 'setASIN',
+        'sellerSKU' => 'setSellerSKU',
+        'itemCondition' => 'setItemCondition'
     ];
 
     /**
@@ -133,10 +133,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'asin' => 'getAsin',
-        'seller_sku' => 'getSellerSku',
-        'item_condition' => 'getItemCondition'
+        'marketplaceId' => 'getMarketplaceId',
+        'aSIN' => 'getASIN',
+        'sellerSKU' => 'getSellerSKU',
+        'itemCondition' => 'getItemCondition'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['item_condition'] = $data['item_condition'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['itemCondition'] = $data['itemCondition'] ?? null;
     }
 
     /**
@@ -214,11 +214,11 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['item_condition'] === null) {
-            $invalidProperties[] = "'item_condition' can't be null";
+        if ($this->container['itemCondition'] === null) {
+            $invalidProperties[] = "'itemCondition' can't be null";
         }
         return $invalidProperties;
     }
@@ -236,97 +236,97 @@ class ItemIdentifier implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id A marketplace identifier. Specifies the marketplace from which prices are returned.
+     * @param string $marketplaceId A marketplace identifier. Specifies the marketplace from which prices are returned.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller stock keeping unit (SKU) of the item.
+     * @param string|null $sellerSKU The seller stock keeping unit (SKU) of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets item_condition
+     * Gets itemCondition
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\ConditionType
      */
     public function getItemCondition()
     {
-        return $this->container['item_condition'];
+        return $this->container['itemCondition'];
     }
 
     /**
-     * Sets item_condition
+     * Sets itemCondition
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\ConditionType $item_condition item_condition
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\ConditionType $itemCondition itemCondition
      *
      * @return self
      */
-    public function setItemCondition($item_condition)
+    public function setItemCondition($itemCondition)
     {
-        $this->container['item_condition'] = $item_condition;
+        $this->container['itemCondition'] = $itemCondition;
 
         return $this;
     }

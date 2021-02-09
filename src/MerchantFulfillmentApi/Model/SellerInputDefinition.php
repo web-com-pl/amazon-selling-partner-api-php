@@ -62,13 +62,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_required' => 'bool',
-        'data_type' => 'string',
+        'isRequired' => 'bool',
+        'dataType' => 'string',
         'constraints' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Constraint[]',
-        'input_display_text' => 'string',
-        'input_target' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\InputTargetType',
-        'stored_value' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput',
-        'restricted_set_values' => 'string[]'
+        'inputDisplayText' => 'string',
+        'inputTarget' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\InputTargetType',
+        'storedValue' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput',
+        'restrictedSetValues' => 'string[]'
     ];
 
     /**
@@ -79,13 +79,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_required' => null,
-        'data_type' => null,
+        'isRequired' => null,
+        'dataType' => null,
         'constraints' => null,
-        'input_display_text' => null,
-        'input_target' => null,
-        'stored_value' => null,
-        'restricted_set_values' => null
+        'inputDisplayText' => null,
+        'inputTarget' => null,
+        'storedValue' => null,
+        'restrictedSetValues' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_required' => 'IsRequired',
-        'data_type' => 'DataType',
+        'isRequired' => 'IsRequired',
+        'dataType' => 'DataType',
         'constraints' => 'Constraints',
-        'input_display_text' => 'InputDisplayText',
-        'input_target' => 'InputTarget',
-        'stored_value' => 'StoredValue',
-        'restricted_set_values' => 'RestrictedSetValues'
+        'inputDisplayText' => 'InputDisplayText',
+        'inputTarget' => 'InputTarget',
+        'storedValue' => 'StoredValue',
+        'restrictedSetValues' => 'RestrictedSetValues'
     ];
 
     /**
@@ -130,13 +130,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'is_required' => 'setIsRequired',
-        'data_type' => 'setDataType',
+        'isRequired' => 'setIsRequired',
+        'dataType' => 'setDataType',
         'constraints' => 'setConstraints',
-        'input_display_text' => 'setInputDisplayText',
-        'input_target' => 'setInputTarget',
-        'stored_value' => 'setStoredValue',
-        'restricted_set_values' => 'setRestrictedSetValues'
+        'inputDisplayText' => 'setInputDisplayText',
+        'inputTarget' => 'setInputTarget',
+        'storedValue' => 'setStoredValue',
+        'restrictedSetValues' => 'setRestrictedSetValues'
     ];
 
     /**
@@ -145,13 +145,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'is_required' => 'getIsRequired',
-        'data_type' => 'getDataType',
+        'isRequired' => 'getIsRequired',
+        'dataType' => 'getDataType',
         'constraints' => 'getConstraints',
-        'input_display_text' => 'getInputDisplayText',
-        'input_target' => 'getInputTarget',
-        'stored_value' => 'getStoredValue',
-        'restricted_set_values' => 'getRestrictedSetValues'
+        'inputDisplayText' => 'getInputDisplayText',
+        'inputTarget' => 'getInputTarget',
+        'storedValue' => 'getStoredValue',
+        'restrictedSetValues' => 'getRestrictedSetValues'
     ];
 
     /**
@@ -214,13 +214,13 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_required'] = $data['is_required'] ?? null;
-        $this->container['data_type'] = $data['data_type'] ?? null;
+        $this->container['isRequired'] = $data['isRequired'] ?? null;
+        $this->container['dataType'] = $data['dataType'] ?? null;
         $this->container['constraints'] = $data['constraints'] ?? null;
-        $this->container['input_display_text'] = $data['input_display_text'] ?? null;
-        $this->container['input_target'] = $data['input_target'] ?? null;
-        $this->container['stored_value'] = $data['stored_value'] ?? null;
-        $this->container['restricted_set_values'] = $data['restricted_set_values'] ?? null;
+        $this->container['inputDisplayText'] = $data['inputDisplayText'] ?? null;
+        $this->container['inputTarget'] = $data['inputTarget'] ?? null;
+        $this->container['storedValue'] = $data['storedValue'] ?? null;
+        $this->container['restrictedSetValues'] = $data['restrictedSetValues'] ?? null;
     }
 
     /**
@@ -232,20 +232,20 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['is_required'] === null) {
-            $invalidProperties[] = "'is_required' can't be null";
+        if ($this->container['isRequired'] === null) {
+            $invalidProperties[] = "'isRequired' can't be null";
         }
-        if ($this->container['data_type'] === null) {
-            $invalidProperties[] = "'data_type' can't be null";
+        if ($this->container['dataType'] === null) {
+            $invalidProperties[] = "'dataType' can't be null";
         }
         if ($this->container['constraints'] === null) {
             $invalidProperties[] = "'constraints' can't be null";
         }
-        if ($this->container['input_display_text'] === null) {
-            $invalidProperties[] = "'input_display_text' can't be null";
+        if ($this->container['inputDisplayText'] === null) {
+            $invalidProperties[] = "'inputDisplayText' can't be null";
         }
-        if ($this->container['stored_value'] === null) {
-            $invalidProperties[] = "'stored_value' can't be null";
+        if ($this->container['storedValue'] === null) {
+            $invalidProperties[] = "'storedValue' can't be null";
         }
         return $invalidProperties;
     }
@@ -263,49 +263,49 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets is_required
+     * Gets isRequired
      *
      * @return bool
      */
     public function getIsRequired()
     {
-        return $this->container['is_required'];
+        return $this->container['isRequired'];
     }
 
     /**
-     * Sets is_required
+     * Sets isRequired
      *
-     * @param bool $is_required When true, the additional input field is required.
+     * @param bool $isRequired When true, the additional input field is required.
      *
      * @return self
      */
-    public function setIsRequired($is_required)
+    public function setIsRequired($isRequired)
     {
-        $this->container['is_required'] = $is_required;
+        $this->container['isRequired'] = $isRequired;
 
         return $this;
     }
 
     /**
-     * Gets data_type
+     * Gets dataType
      *
      * @return string
      */
     public function getDataType()
     {
-        return $this->container['data_type'];
+        return $this->container['dataType'];
     }
 
     /**
-     * Sets data_type
+     * Sets dataType
      *
-     * @param string $data_type The data type of the additional input field.
+     * @param string $dataType The data type of the additional input field.
      *
      * @return self
      */
-    public function setDataType($data_type)
+    public function setDataType($dataType)
     {
-        $this->container['data_type'] = $data_type;
+        $this->container['dataType'] = $dataType;
 
         return $this;
     }
@@ -335,97 +335,97 @@ class SellerInputDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets input_display_text
+     * Gets inputDisplayText
      *
      * @return string
      */
     public function getInputDisplayText()
     {
-        return $this->container['input_display_text'];
+        return $this->container['inputDisplayText'];
     }
 
     /**
-     * Sets input_display_text
+     * Sets inputDisplayText
      *
-     * @param string $input_display_text The display text for the additional input field.
+     * @param string $inputDisplayText The display text for the additional input field.
      *
      * @return self
      */
-    public function setInputDisplayText($input_display_text)
+    public function setInputDisplayText($inputDisplayText)
     {
-        $this->container['input_display_text'] = $input_display_text;
+        $this->container['inputDisplayText'] = $inputDisplayText;
 
         return $this;
     }
 
     /**
-     * Gets input_target
+     * Gets inputTarget
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\InputTargetType|null
      */
     public function getInputTarget()
     {
-        return $this->container['input_target'];
+        return $this->container['inputTarget'];
     }
 
     /**
-     * Sets input_target
+     * Sets inputTarget
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\InputTargetType|null $input_target input_target
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\InputTargetType|null $inputTarget inputTarget
      *
      * @return self
      */
-    public function setInputTarget($input_target)
+    public function setInputTarget($inputTarget)
     {
-        $this->container['input_target'] = $input_target;
+        $this->container['inputTarget'] = $inputTarget;
 
         return $this;
     }
 
     /**
-     * Gets stored_value
+     * Gets storedValue
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput
      */
     public function getStoredValue()
     {
-        return $this->container['stored_value'];
+        return $this->container['storedValue'];
     }
 
     /**
-     * Sets stored_value
+     * Sets storedValue
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput $stored_value stored_value
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput $storedValue storedValue
      *
      * @return self
      */
-    public function setStoredValue($stored_value)
+    public function setStoredValue($storedValue)
     {
-        $this->container['stored_value'] = $stored_value;
+        $this->container['storedValue'] = $storedValue;
 
         return $this;
     }
 
     /**
-     * Gets restricted_set_values
+     * Gets restrictedSetValues
      *
      * @return string[]|null
      */
     public function getRestrictedSetValues()
     {
-        return $this->container['restricted_set_values'];
+        return $this->container['restrictedSetValues'];
     }
 
     /**
-     * Sets restricted_set_values
+     * Sets restrictedSetValues
      *
-     * @param string[]|null $restricted_set_values The set of fixed values in an additional seller input.
+     * @param string[]|null $restrictedSetValues The set of fixed values in an additional seller input.
      *
      * @return self
      */
-    public function setRestrictedSetValues($restricted_set_values)
+    public function setRestrictedSetValues($restrictedSetValues)
     {
-        $this->container['restricted_set_values'] = $restricted_set_values;
+        $this->container['restrictedSetValues'] = $restrictedSetValues;
 
         return $this;
     }

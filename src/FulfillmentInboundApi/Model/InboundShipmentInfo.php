@@ -62,16 +62,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'shipment_name' => 'string',
-        'ship_from_address' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
-        'destination_fulfillment_center_id' => 'string',
-        'shipment_status' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus',
-        'label_prep_type' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType',
-        'are_cases_required' => 'bool',
-        'confirmed_need_by_date' => '\DateTime',
-        'box_contents_source' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsSource',
-        'estimated_box_contents_fee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails'
+        'shipmentId' => 'string',
+        'shipmentName' => 'string',
+        'shipFromAddress' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
+        'destinationFulfillmentCenterId' => 'string',
+        'shipmentStatus' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus',
+        'labelPrepType' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType',
+        'areCasesRequired' => 'bool',
+        'confirmedNeedByDate' => '\DateTime',
+        'boxContentsSource' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsSource',
+        'estimatedBoxContentsFee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails'
     ];
 
     /**
@@ -82,16 +82,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'shipment_name' => null,
-        'ship_from_address' => null,
-        'destination_fulfillment_center_id' => null,
-        'shipment_status' => null,
-        'label_prep_type' => null,
-        'are_cases_required' => null,
-        'confirmed_need_by_date' => 'date',
-        'box_contents_source' => null,
-        'estimated_box_contents_fee' => null
+        'shipmentId' => null,
+        'shipmentName' => null,
+        'shipFromAddress' => null,
+        'destinationFulfillmentCenterId' => null,
+        'shipmentStatus' => null,
+        'labelPrepType' => null,
+        'areCasesRequired' => null,
+        'confirmedNeedByDate' => 'date',
+        'boxContentsSource' => null,
+        'estimatedBoxContentsFee' => null
     ];
 
     /**
@@ -121,16 +121,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'ShipmentId',
-        'shipment_name' => 'ShipmentName',
-        'ship_from_address' => 'ShipFromAddress',
-        'destination_fulfillment_center_id' => 'DestinationFulfillmentCenterId',
-        'shipment_status' => 'ShipmentStatus',
-        'label_prep_type' => 'LabelPrepType',
-        'are_cases_required' => 'AreCasesRequired',
-        'confirmed_need_by_date' => 'ConfirmedNeedByDate',
-        'box_contents_source' => 'BoxContentsSource',
-        'estimated_box_contents_fee' => 'EstimatedBoxContentsFee'
+        'shipmentId' => 'ShipmentId',
+        'shipmentName' => 'ShipmentName',
+        'shipFromAddress' => 'ShipFromAddress',
+        'destinationFulfillmentCenterId' => 'DestinationFulfillmentCenterId',
+        'shipmentStatus' => 'ShipmentStatus',
+        'labelPrepType' => 'LabelPrepType',
+        'areCasesRequired' => 'AreCasesRequired',
+        'confirmedNeedByDate' => 'ConfirmedNeedByDate',
+        'boxContentsSource' => 'BoxContentsSource',
+        'estimatedBoxContentsFee' => 'EstimatedBoxContentsFee'
     ];
 
     /**
@@ -139,16 +139,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'shipment_name' => 'setShipmentName',
-        'ship_from_address' => 'setShipFromAddress',
-        'destination_fulfillment_center_id' => 'setDestinationFulfillmentCenterId',
-        'shipment_status' => 'setShipmentStatus',
-        'label_prep_type' => 'setLabelPrepType',
-        'are_cases_required' => 'setAreCasesRequired',
-        'confirmed_need_by_date' => 'setConfirmedNeedByDate',
-        'box_contents_source' => 'setBoxContentsSource',
-        'estimated_box_contents_fee' => 'setEstimatedBoxContentsFee'
+        'shipmentId' => 'setShipmentId',
+        'shipmentName' => 'setShipmentName',
+        'shipFromAddress' => 'setShipFromAddress',
+        'destinationFulfillmentCenterId' => 'setDestinationFulfillmentCenterId',
+        'shipmentStatus' => 'setShipmentStatus',
+        'labelPrepType' => 'setLabelPrepType',
+        'areCasesRequired' => 'setAreCasesRequired',
+        'confirmedNeedByDate' => 'setConfirmedNeedByDate',
+        'boxContentsSource' => 'setBoxContentsSource',
+        'estimatedBoxContentsFee' => 'setEstimatedBoxContentsFee'
     ];
 
     /**
@@ -157,16 +157,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'shipment_name' => 'getShipmentName',
-        'ship_from_address' => 'getShipFromAddress',
-        'destination_fulfillment_center_id' => 'getDestinationFulfillmentCenterId',
-        'shipment_status' => 'getShipmentStatus',
-        'label_prep_type' => 'getLabelPrepType',
-        'are_cases_required' => 'getAreCasesRequired',
-        'confirmed_need_by_date' => 'getConfirmedNeedByDate',
-        'box_contents_source' => 'getBoxContentsSource',
-        'estimated_box_contents_fee' => 'getEstimatedBoxContentsFee'
+        'shipmentId' => 'getShipmentId',
+        'shipmentName' => 'getShipmentName',
+        'shipFromAddress' => 'getShipFromAddress',
+        'destinationFulfillmentCenterId' => 'getDestinationFulfillmentCenterId',
+        'shipmentStatus' => 'getShipmentStatus',
+        'labelPrepType' => 'getLabelPrepType',
+        'areCasesRequired' => 'getAreCasesRequired',
+        'confirmedNeedByDate' => 'getConfirmedNeedByDate',
+        'boxContentsSource' => 'getBoxContentsSource',
+        'estimatedBoxContentsFee' => 'getEstimatedBoxContentsFee'
     ];
 
     /**
@@ -229,16 +229,16 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['shipment_name'] = $data['shipment_name'] ?? null;
-        $this->container['ship_from_address'] = $data['ship_from_address'] ?? null;
-        $this->container['destination_fulfillment_center_id'] = $data['destination_fulfillment_center_id'] ?? null;
-        $this->container['shipment_status'] = $data['shipment_status'] ?? null;
-        $this->container['label_prep_type'] = $data['label_prep_type'] ?? null;
-        $this->container['are_cases_required'] = $data['are_cases_required'] ?? null;
-        $this->container['confirmed_need_by_date'] = $data['confirmed_need_by_date'] ?? null;
-        $this->container['box_contents_source'] = $data['box_contents_source'] ?? null;
-        $this->container['estimated_box_contents_fee'] = $data['estimated_box_contents_fee'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['shipmentName'] = $data['shipmentName'] ?? null;
+        $this->container['shipFromAddress'] = $data['shipFromAddress'] ?? null;
+        $this->container['destinationFulfillmentCenterId'] = $data['destinationFulfillmentCenterId'] ?? null;
+        $this->container['shipmentStatus'] = $data['shipmentStatus'] ?? null;
+        $this->container['labelPrepType'] = $data['labelPrepType'] ?? null;
+        $this->container['areCasesRequired'] = $data['areCasesRequired'] ?? null;
+        $this->container['confirmedNeedByDate'] = $data['confirmedNeedByDate'] ?? null;
+        $this->container['boxContentsSource'] = $data['boxContentsSource'] ?? null;
+        $this->container['estimatedBoxContentsFee'] = $data['estimatedBoxContentsFee'] ?? null;
     }
 
     /**
@@ -250,11 +250,11 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['ship_from_address'] === null) {
-            $invalidProperties[] = "'ship_from_address' can't be null";
+        if ($this->container['shipFromAddress'] === null) {
+            $invalidProperties[] = "'shipFromAddress' can't be null";
         }
-        if ($this->container['are_cases_required'] === null) {
-            $invalidProperties[] = "'are_cases_required' can't be null";
+        if ($this->container['areCasesRequired'] === null) {
+            $invalidProperties[] = "'areCasesRequired' can't be null";
         }
         return $invalidProperties;
     }
@@ -272,241 +272,241 @@ class InboundShipmentInfo implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string|null
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string|null $shipment_id The shipment identifier submitted in the request.
+     * @param string|null $shipmentId The shipment identifier submitted in the request.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets shipment_name
+     * Gets shipmentName
      *
      * @return string|null
      */
     public function getShipmentName()
     {
-        return $this->container['shipment_name'];
+        return $this->container['shipmentName'];
     }
 
     /**
-     * Sets shipment_name
+     * Sets shipmentName
      *
-     * @param string|null $shipment_name The name for the inbound shipment.
+     * @param string|null $shipmentName The name for the inbound shipment.
      *
      * @return self
      */
-    public function setShipmentName($shipment_name)
+    public function setShipmentName($shipmentName)
     {
-        $this->container['shipment_name'] = $shipment_name;
+        $this->container['shipmentName'] = $shipmentName;
 
         return $this;
     }
 
     /**
-     * Gets ship_from_address
+     * Gets shipFromAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address
      */
     public function getShipFromAddress()
     {
-        return $this->container['ship_from_address'];
+        return $this->container['shipFromAddress'];
     }
 
     /**
-     * Sets ship_from_address
+     * Sets shipFromAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $ship_from_address ship_from_address
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $shipFromAddress shipFromAddress
      *
      * @return self
      */
-    public function setShipFromAddress($ship_from_address)
+    public function setShipFromAddress($shipFromAddress)
     {
-        $this->container['ship_from_address'] = $ship_from_address;
+        $this->container['shipFromAddress'] = $shipFromAddress;
 
         return $this;
     }
 
     /**
-     * Gets destination_fulfillment_center_id
+     * Gets destinationFulfillmentCenterId
      *
      * @return string|null
      */
     public function getDestinationFulfillmentCenterId()
     {
-        return $this->container['destination_fulfillment_center_id'];
+        return $this->container['destinationFulfillmentCenterId'];
     }
 
     /**
-     * Sets destination_fulfillment_center_id
+     * Sets destinationFulfillmentCenterId
      *
-     * @param string|null $destination_fulfillment_center_id An Amazon fulfillment center identifier created by Amazon.
+     * @param string|null $destinationFulfillmentCenterId An Amazon fulfillment center identifier created by Amazon.
      *
      * @return self
      */
-    public function setDestinationFulfillmentCenterId($destination_fulfillment_center_id)
+    public function setDestinationFulfillmentCenterId($destinationFulfillmentCenterId)
     {
-        $this->container['destination_fulfillment_center_id'] = $destination_fulfillment_center_id;
+        $this->container['destinationFulfillmentCenterId'] = $destinationFulfillmentCenterId;
 
         return $this;
     }
 
     /**
-     * Gets shipment_status
+     * Gets shipmentStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus|null
      */
     public function getShipmentStatus()
     {
-        return $this->container['shipment_status'];
+        return $this->container['shipmentStatus'];
     }
 
     /**
-     * Sets shipment_status
+     * Sets shipmentStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus|null $shipment_status shipment_status
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus|null $shipmentStatus shipmentStatus
      *
      * @return self
      */
-    public function setShipmentStatus($shipment_status)
+    public function setShipmentStatus($shipmentStatus)
     {
-        $this->container['shipment_status'] = $shipment_status;
+        $this->container['shipmentStatus'] = $shipmentStatus;
 
         return $this;
     }
 
     /**
-     * Gets label_prep_type
+     * Gets labelPrepType
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType|null
      */
     public function getLabelPrepType()
     {
-        return $this->container['label_prep_type'];
+        return $this->container['labelPrepType'];
     }
 
     /**
-     * Sets label_prep_type
+     * Sets labelPrepType
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType|null $label_prep_type label_prep_type
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType|null $labelPrepType labelPrepType
      *
      * @return self
      */
-    public function setLabelPrepType($label_prep_type)
+    public function setLabelPrepType($labelPrepType)
     {
-        $this->container['label_prep_type'] = $label_prep_type;
+        $this->container['labelPrepType'] = $labelPrepType;
 
         return $this;
     }
 
     /**
-     * Gets are_cases_required
+     * Gets areCasesRequired
      *
      * @return bool
      */
     public function getAreCasesRequired()
     {
-        return $this->container['are_cases_required'];
+        return $this->container['areCasesRequired'];
     }
 
     /**
-     * Sets are_cases_required
+     * Sets areCasesRequired
      *
-     * @param bool $are_cases_required Indicates whether or not an inbound shipment contains case-packed boxes. When AreCasesRequired = true for an inbound shipment, all items in the inbound shipment must be case packed.
+     * @param bool $areCasesRequired Indicates whether or not an inbound shipment contains case-packed boxes. When AreCasesRequired = true for an inbound shipment, all items in the inbound shipment must be case packed.
      *
      * @return self
      */
-    public function setAreCasesRequired($are_cases_required)
+    public function setAreCasesRequired($areCasesRequired)
     {
-        $this->container['are_cases_required'] = $are_cases_required;
+        $this->container['areCasesRequired'] = $areCasesRequired;
 
         return $this;
     }
 
     /**
-     * Gets confirmed_need_by_date
+     * Gets confirmedNeedByDate
      *
      * @return \DateTime|null
      */
     public function getConfirmedNeedByDate()
     {
-        return $this->container['confirmed_need_by_date'];
+        return $this->container['confirmedNeedByDate'];
     }
 
     /**
-     * Sets confirmed_need_by_date
+     * Sets confirmedNeedByDate
      *
-     * @param \DateTime|null $confirmed_need_by_date confirmed_need_by_date
+     * @param \DateTime|null $confirmedNeedByDate confirmedNeedByDate
      *
      * @return self
      */
-    public function setConfirmedNeedByDate($confirmed_need_by_date)
+    public function setConfirmedNeedByDate($confirmedNeedByDate)
     {
-        $this->container['confirmed_need_by_date'] = $confirmed_need_by_date;
+        $this->container['confirmedNeedByDate'] = $confirmedNeedByDate;
 
         return $this;
     }
 
     /**
-     * Gets box_contents_source
+     * Gets boxContentsSource
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsSource|null
      */
     public function getBoxContentsSource()
     {
-        return $this->container['box_contents_source'];
+        return $this->container['boxContentsSource'];
     }
 
     /**
-     * Sets box_contents_source
+     * Sets boxContentsSource
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsSource|null $box_contents_source box_contents_source
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsSource|null $boxContentsSource boxContentsSource
      *
      * @return self
      */
-    public function setBoxContentsSource($box_contents_source)
+    public function setBoxContentsSource($boxContentsSource)
     {
-        $this->container['box_contents_source'] = $box_contents_source;
+        $this->container['boxContentsSource'] = $boxContentsSource;
 
         return $this;
     }
 
     /**
-     * Gets estimated_box_contents_fee
+     * Gets estimatedBoxContentsFee
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null
      */
     public function getEstimatedBoxContentsFee()
     {
-        return $this->container['estimated_box_contents_fee'];
+        return $this->container['estimatedBoxContentsFee'];
     }
 
     /**
-     * Sets estimated_box_contents_fee
+     * Sets estimatedBoxContentsFee
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null $estimated_box_contents_fee estimated_box_contents_fee
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null $estimatedBoxContentsFee estimatedBoxContentsFee
      *
      * @return self
      */
-    public function setEstimatedBoxContentsFee($estimated_box_contents_fee)
+    public function setEstimatedBoxContentsFee($estimatedBoxContentsFee)
     {
-        $this->container['estimated_box_contents_fee'] = $estimated_box_contents_fee;
+        $this->container['estimatedBoxContentsFee'] = $estimatedBoxContentsFee;
 
         return $this;
     }

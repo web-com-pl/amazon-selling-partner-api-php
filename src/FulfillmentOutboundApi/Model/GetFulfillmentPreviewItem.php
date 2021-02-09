@@ -62,10 +62,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
+        'sellerSku' => 'string',
         'quantity' => 'int',
-        'per_unit_declared_value' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'seller_fulfillment_order_item_id' => 'string'
+        'perUnitDeclaredValue' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'sellerFulfillmentOrderItemId' => 'string'
     ];
 
     /**
@@ -76,10 +76,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
+        'sellerSku' => null,
         'quantity' => 'int32',
-        'per_unit_declared_value' => null,
-        'seller_fulfillment_order_item_id' => null
+        'perUnitDeclaredValue' => null,
+        'sellerFulfillmentOrderItemId' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
+        'sellerSku' => 'sellerSku',
         'quantity' => 'quantity',
-        'per_unit_declared_value' => 'perUnitDeclaredValue',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId'
+        'perUnitDeclaredValue' => 'perUnitDeclaredValue',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId'
     ];
 
     /**
@@ -121,10 +121,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
+        'sellerSku' => 'setSellerSku',
         'quantity' => 'setQuantity',
-        'per_unit_declared_value' => 'setPerUnitDeclaredValue',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId'
+        'perUnitDeclaredValue' => 'setPerUnitDeclaredValue',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId'
     ];
 
     /**
@@ -133,10 +133,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
+        'sellerSku' => 'getSellerSku',
         'quantity' => 'getQuantity',
-        'per_unit_declared_value' => 'getPerUnitDeclaredValue',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId'
+        'perUnitDeclaredValue' => 'getPerUnitDeclaredValue',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId'
     ];
 
     /**
@@ -199,10 +199,10 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['per_unit_declared_value'] = $data['per_unit_declared_value'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
+        $this->container['perUnitDeclaredValue'] = $data['perUnitDeclaredValue'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
     }
 
     /**
@@ -214,21 +214,21 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSku'] === null) {
+            $invalidProperties[] = "'sellerSku' can't be null";
         }
-        if ((mb_strlen($this->container['seller_sku']) > 50)) {
-            $invalidProperties[] = "invalid value for 'seller_sku', the character length must be smaller than or equal to 50.";
+        if ((mb_strlen($this->container['sellerSku']) > 50)) {
+            $invalidProperties[] = "invalid value for 'sellerSku', the character length must be smaller than or equal to 50.";
         }
 
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ((mb_strlen($this->container['seller_fulfillment_order_item_id']) > 50)) {
-            $invalidProperties[] = "invalid value for 'seller_fulfillment_order_item_id', the character length must be smaller than or equal to 50.";
+        if ((mb_strlen($this->container['sellerFulfillmentOrderItemId']) > 50)) {
+            $invalidProperties[] = "invalid value for 'sellerFulfillmentOrderItemId', the character length must be smaller than or equal to 50.";
         }
 
         return $invalidProperties;
@@ -247,29 +247,29 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        if ((mb_strlen($seller_sku) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $seller_sku when calling GetFulfillmentPreviewItem., must be smaller than or equal to 50.');
+        if ((mb_strlen($sellerSku) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $sellerSku when calling GetFulfillmentPreviewItem., must be smaller than or equal to 50.');
         }
 
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
@@ -299,53 +299,53 @@ class GetFulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets per_unit_declared_value
+     * Gets perUnitDeclaredValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitDeclaredValue()
     {
-        return $this->container['per_unit_declared_value'];
+        return $this->container['perUnitDeclaredValue'];
     }
 
     /**
-     * Sets per_unit_declared_value
+     * Sets perUnitDeclaredValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_declared_value per_unit_declared_value
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitDeclaredValue perUnitDeclaredValue
      *
      * @return self
      */
-    public function setPerUnitDeclaredValue($per_unit_declared_value)
+    public function setPerUnitDeclaredValue($perUnitDeclaredValue)
     {
-        $this->container['per_unit_declared_value'] = $per_unit_declared_value;
+        $this->container['perUnitDeclaredValue'] = $perUnitDeclaredValue;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id A fulfillment order item identifier that the seller creates to track items in the fulfillment preview.
+     * @param string $sellerFulfillmentOrderItemId A fulfillment order item identifier that the seller creates to track items in the fulfillment preview.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        if ((mb_strlen($seller_fulfillment_order_item_id) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $seller_fulfillment_order_item_id when calling GetFulfillmentPreviewItem., must be smaller than or equal to 50.');
+        if ((mb_strlen($sellerFulfillmentOrderItemId) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $sellerFulfillmentOrderItemId when calling GetFulfillmentPreviewItem., must be smaller than or equal to 50.');
         }
 
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }

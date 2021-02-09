@@ -62,8 +62,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fee_type' => 'string',
-        'fee_charge' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType'
+        'feeType' => 'string',
+        'feeCharge' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType'
     ];
 
     /**
@@ -74,8 +74,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fee_type' => null,
-        'fee_charge' => null
+        'feeType' => null,
+        'feeCharge' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'fee_type' => 'feeType',
-        'fee_charge' => 'feeCharge'
+        'feeType' => 'feeType',
+        'feeCharge' => 'feeCharge'
     ];
 
     /**
@@ -115,8 +115,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'fee_type' => 'setFeeType',
-        'fee_charge' => 'setFeeCharge'
+        'feeType' => 'setFeeType',
+        'feeCharge' => 'setFeeCharge'
     ];
 
     /**
@@ -125,8 +125,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'fee_type' => 'getFeeType',
-        'fee_charge' => 'getFeeCharge'
+        'feeType' => 'getFeeType',
+        'feeCharge' => 'getFeeCharge'
     ];
 
     /**
@@ -208,8 +208,8 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['fee_type'] = $data['fee_type'] ?? null;
-        $this->container['fee_charge'] = $data['fee_charge'] ?? null;
+        $this->container['feeType'] = $data['feeType'] ?? null;
+        $this->container['feeCharge'] = $data['feeCharge'] ?? null;
     }
 
     /**
@@ -221,20 +221,20 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['fee_type'] === null) {
-            $invalidProperties[] = "'fee_type' can't be null";
+        if ($this->container['feeType'] === null) {
+            $invalidProperties[] = "'feeType' can't be null";
         }
         $allowedValues = $this->getFeeTypeAllowableValues();
-        if (!is_null($this->container['fee_type']) && !in_array($this->container['fee_type'], $allowedValues, true)) {
+        if (!is_null($this->container['feeType']) && !in_array($this->container['feeType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'fee_type', must be one of '%s'",
-                $this->container['fee_type'],
+                "invalid value '%s' for 'feeType', must be one of '%s'",
+                $this->container['feeType'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['fee_charge'] === null) {
-            $invalidProperties[] = "'fee_charge' can't be null";
+        if ($this->container['feeCharge'] === null) {
+            $invalidProperties[] = "'feeCharge' can't be null";
         }
         return $invalidProperties;
     }
@@ -252,59 +252,59 @@ class FeeLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets fee_type
+     * Gets feeType
      *
      * @return string
      */
     public function getFeeType()
     {
-        return $this->container['fee_type'];
+        return $this->container['feeType'];
     }
 
     /**
-     * Sets fee_type
+     * Sets feeType
      *
-     * @param string $fee_type The type of fee charged to the seller.
+     * @param string $feeType The type of fee charged to the seller.
      *
      * @return self
      */
-    public function setFeeType($fee_type)
+    public function setFeeType($feeType)
     {
         $allowedValues = $this->getFeeTypeAllowableValues();
-        if (!in_array($fee_type, $allowedValues, true)) {
+        if (!in_array($feeType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'fee_type', must be one of '%s'",
-                    $fee_type,
+                    "Invalid value '%s' for 'feeType', must be one of '%s'",
+                    $feeType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['fee_type'] = $fee_type;
+        $this->container['feeType'] = $feeType;
 
         return $this;
     }
 
     /**
-     * Gets fee_charge
+     * Gets feeCharge
      *
      * @return \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType
      */
     public function getFeeCharge()
     {
-        return $this->container['fee_charge'];
+        return $this->container['feeCharge'];
     }
 
     /**
-     * Sets fee_charge
+     * Sets feeCharge
      *
-     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType $fee_charge fee_charge
+     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType $feeCharge feeCharge
      *
      * @return self
      */
-    public function setFeeCharge($fee_charge)
+    public function setFeeCharge($feeCharge)
     {
-        $this->container['fee_charge'] = $fee_charge;
+        $this->container['feeCharge'] = $feeCharge;
 
         return $this;
     }

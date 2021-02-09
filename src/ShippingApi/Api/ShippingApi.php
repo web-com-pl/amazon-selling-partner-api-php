@@ -118,30 +118,30 @@ class ShippingApi
     /**
      * Operation cancelShipment
      *
-     * @param  string $shipment_id shipment_id (required)
+     * @param  string $shipmentId shipmentId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse
      */
-    public function cancelShipment($shipment_id)
+    public function cancelShipment($shipmentId)
     {
-        list($response) = $this->cancelShipmentWithHttpInfo($shipment_id);
+        list($response) = $this->cancelShipmentWithHttpInfo($shipmentId);
         return $response;
     }
 
     /**
      * Operation cancelShipmentWithHttpInfo
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelShipmentWithHttpInfo($shipment_id)
+    public function cancelShipmentWithHttpInfo($shipmentId)
     {
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $request = $this->cancelShipmentRequest($shipmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -361,14 +361,14 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsync($shipment_id)
+    public function cancelShipmentAsync($shipmentId)
     {
-        return $this->cancelShipmentAsyncWithHttpInfo($shipment_id)
+        return $this->cancelShipmentAsyncWithHttpInfo($shipmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -381,15 +381,15 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelShipmentAsyncWithHttpInfo($shipment_id)
+    public function cancelShipmentAsyncWithHttpInfo($shipmentId)
     {
         $returnType = '\Webcom\Amazon\Rest\ShippingApi\Model\CancelShipmentResponse';
-        $request = $this->cancelShipmentRequest($shipment_id);
+        $request = $this->cancelShipmentRequest($shipmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -428,17 +428,17 @@ class ShippingApi
     /**
      * Create request for operation 'cancelShipment'
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cancelShipmentRequest($shipment_id)
+    public function cancelShipmentRequest($shipmentId)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling cancelShipment'
+                'Missing the required parameter $shipmentId when calling cancelShipment'
             );
         }
 
@@ -452,10 +452,10 @@ class ShippingApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
@@ -1707,30 +1707,30 @@ class ShippingApi
     /**
      * Operation getShipment
      *
-     * @param  string $shipment_id shipment_id (required)
+     * @param  string $shipmentId shipmentId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse
      */
-    public function getShipment($shipment_id)
+    public function getShipment($shipmentId)
     {
-        list($response) = $this->getShipmentWithHttpInfo($shipment_id);
+        list($response) = $this->getShipmentWithHttpInfo($shipmentId);
         return $response;
     }
 
     /**
      * Operation getShipmentWithHttpInfo
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getShipmentWithHttpInfo($shipment_id)
+    public function getShipmentWithHttpInfo($shipmentId)
     {
-        $request = $this->getShipmentRequest($shipment_id);
+        $request = $this->getShipmentRequest($shipmentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1950,14 +1950,14 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getShipmentAsync($shipment_id)
+    public function getShipmentAsync($shipmentId)
     {
-        return $this->getShipmentAsyncWithHttpInfo($shipment_id)
+        return $this->getShipmentAsyncWithHttpInfo($shipmentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1970,15 +1970,15 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getShipmentAsyncWithHttpInfo($shipment_id)
+    public function getShipmentAsyncWithHttpInfo($shipmentId)
     {
         $returnType = '\Webcom\Amazon\Rest\ShippingApi\Model\GetShipmentResponse';
-        $request = $this->getShipmentRequest($shipment_id);
+        $request = $this->getShipmentRequest($shipmentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2017,17 +2017,17 @@ class ShippingApi
     /**
      * Create request for operation 'getShipment'
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getShipmentRequest($shipment_id)
+    public function getShipmentRequest($shipmentId)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling getShipment'
+                'Missing the required parameter $shipmentId when calling getShipment'
             );
         }
 
@@ -2041,10 +2041,10 @@ class ShippingApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
@@ -2110,30 +2110,30 @@ class ShippingApi
     /**
      * Operation getTrackingInformation
      *
-     * @param  string $tracking_id tracking_id (required)
+     * @param  string $trackingId trackingId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse
      */
-    public function getTrackingInformation($tracking_id)
+    public function getTrackingInformation($trackingId)
     {
-        list($response) = $this->getTrackingInformationWithHttpInfo($tracking_id);
+        list($response) = $this->getTrackingInformationWithHttpInfo($trackingId);
         return $response;
     }
 
     /**
      * Operation getTrackingInformationWithHttpInfo
      *
-     * @param  string $tracking_id (required)
+     * @param  string $trackingId (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse|\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTrackingInformationWithHttpInfo($tracking_id)
+    public function getTrackingInformationWithHttpInfo($trackingId)
     {
-        $request = $this->getTrackingInformationRequest($tracking_id);
+        $request = $this->getTrackingInformationRequest($trackingId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2353,14 +2353,14 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $tracking_id (required)
+     * @param  string $trackingId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingInformationAsync($tracking_id)
+    public function getTrackingInformationAsync($trackingId)
     {
-        return $this->getTrackingInformationAsyncWithHttpInfo($tracking_id)
+        return $this->getTrackingInformationAsyncWithHttpInfo($trackingId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2373,15 +2373,15 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $tracking_id (required)
+     * @param  string $trackingId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingInformationAsyncWithHttpInfo($tracking_id)
+    public function getTrackingInformationAsyncWithHttpInfo($trackingId)
     {
         $returnType = '\Webcom\Amazon\Rest\ShippingApi\Model\GetTrackingInformationResponse';
-        $request = $this->getTrackingInformationRequest($tracking_id);
+        $request = $this->getTrackingInformationRequest($trackingId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2420,17 +2420,17 @@ class ShippingApi
     /**
      * Create request for operation 'getTrackingInformation'
      *
-     * @param  string $tracking_id (required)
+     * @param  string $trackingId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getTrackingInformationRequest($tracking_id)
+    public function getTrackingInformationRequest($trackingId)
     {
-        // verify the required parameter 'tracking_id' is set
-        if ($tracking_id === null || (is_array($tracking_id) && count($tracking_id) === 0)) {
+        // verify the required parameter 'trackingId' is set
+        if ($trackingId === null || (is_array($trackingId) && count($trackingId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $tracking_id when calling getTrackingInformation'
+                'Missing the required parameter $trackingId when calling getTrackingInformation'
             );
         }
 
@@ -2444,10 +2444,10 @@ class ShippingApi
 
 
         // path params
-        if ($tracking_id !== null) {
+        if ($trackingId !== null) {
             $resourcePath = str_replace(
                 '{' . 'trackingId' . '}',
-                ObjectSerializer::toPathValue($tracking_id),
+                ObjectSerializer::toPathValue($trackingId),
                 $resourcePath
             );
         }
@@ -2513,32 +2513,32 @@ class ShippingApi
     /**
      * Operation purchaseLabels
      *
-     * @param  string $shipment_id shipment_id (required)
+     * @param  string $shipmentId shipmentId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse
      */
-    public function purchaseLabels($shipment_id, $body)
+    public function purchaseLabels($shipmentId, $body)
     {
-        list($response) = $this->purchaseLabelsWithHttpInfo($shipment_id, $body);
+        list($response) = $this->purchaseLabelsWithHttpInfo($shipmentId, $body);
         return $response;
     }
 
     /**
      * Operation purchaseLabelsWithHttpInfo
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse|\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purchaseLabelsWithHttpInfo($shipment_id, $body)
+    public function purchaseLabelsWithHttpInfo($shipmentId, $body)
     {
-        $request = $this->purchaseLabelsRequest($shipment_id, $body);
+        $request = $this->purchaseLabelsRequest($shipmentId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2758,15 +2758,15 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseLabelsAsync($shipment_id, $body)
+    public function purchaseLabelsAsync($shipmentId, $body)
     {
-        return $this->purchaseLabelsAsyncWithHttpInfo($shipment_id, $body)
+        return $this->purchaseLabelsAsyncWithHttpInfo($shipmentId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2779,16 +2779,16 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function purchaseLabelsAsyncWithHttpInfo($shipment_id, $body)
+    public function purchaseLabelsAsyncWithHttpInfo($shipmentId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsResponse';
-        $request = $this->purchaseLabelsRequest($shipment_id, $body);
+        $request = $this->purchaseLabelsRequest($shipmentId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2827,18 +2827,18 @@ class ShippingApi
     /**
      * Create request for operation 'purchaseLabels'
      *
-     * @param  string $shipment_id (required)
+     * @param  string $shipmentId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\PurchaseLabelsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function purchaseLabelsRequest($shipment_id, $body)
+    public function purchaseLabelsRequest($shipmentId, $body)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling purchaseLabels'
+                'Missing the required parameter $shipmentId when calling purchaseLabels'
             );
         }
         // verify the required parameter 'body' is set
@@ -2858,10 +2858,10 @@ class ShippingApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
@@ -3334,34 +3334,34 @@ class ShippingApi
     /**
      * Operation retrieveShippingLabel
      *
-     * @param  string $shipment_id shipment_id (required)
-     * @param  string $tracking_id tracking_id (required)
+     * @param  string $shipmentId shipmentId (required)
+     * @param  string $trackingId trackingId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse
      */
-    public function retrieveShippingLabel($shipment_id, $tracking_id, $body)
+    public function retrieveShippingLabel($shipmentId, $trackingId, $body)
     {
-        list($response) = $this->retrieveShippingLabelWithHttpInfo($shipment_id, $tracking_id, $body);
+        list($response) = $this->retrieveShippingLabelWithHttpInfo($shipmentId, $trackingId, $body);
         return $response;
     }
 
     /**
      * Operation retrieveShippingLabelWithHttpInfo
      *
-     * @param  string $shipment_id (required)
-     * @param  string $tracking_id (required)
+     * @param  string $shipmentId (required)
+     * @param  string $trackingId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\ShippingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse|\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveShippingLabelWithHttpInfo($shipment_id, $tracking_id, $body)
+    public function retrieveShippingLabelWithHttpInfo($shipmentId, $trackingId, $body)
     {
-        $request = $this->retrieveShippingLabelRequest($shipment_id, $tracking_id, $body);
+        $request = $this->retrieveShippingLabelRequest($shipmentId, $trackingId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3581,16 +3581,16 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
-     * @param  string $tracking_id (required)
+     * @param  string $shipmentId (required)
+     * @param  string $trackingId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function retrieveShippingLabelAsync($shipment_id, $tracking_id, $body)
+    public function retrieveShippingLabelAsync($shipmentId, $trackingId, $body)
     {
-        return $this->retrieveShippingLabelAsyncWithHttpInfo($shipment_id, $tracking_id, $body)
+        return $this->retrieveShippingLabelAsyncWithHttpInfo($shipmentId, $trackingId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3603,17 +3603,17 @@ class ShippingApi
      *
      * 
      *
-     * @param  string $shipment_id (required)
-     * @param  string $tracking_id (required)
+     * @param  string $shipmentId (required)
+     * @param  string $trackingId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function retrieveShippingLabelAsyncWithHttpInfo($shipment_id, $tracking_id, $body)
+    public function retrieveShippingLabelAsyncWithHttpInfo($shipmentId, $trackingId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelResponse';
-        $request = $this->retrieveShippingLabelRequest($shipment_id, $tracking_id, $body);
+        $request = $this->retrieveShippingLabelRequest($shipmentId, $trackingId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3652,25 +3652,25 @@ class ShippingApi
     /**
      * Create request for operation 'retrieveShippingLabel'
      *
-     * @param  string $shipment_id (required)
-     * @param  string $tracking_id (required)
+     * @param  string $shipmentId (required)
+     * @param  string $trackingId (required)
      * @param  \Webcom\Amazon\Rest\ShippingApi\Model\RetrieveShippingLabelRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function retrieveShippingLabelRequest($shipment_id, $tracking_id, $body)
+    public function retrieveShippingLabelRequest($shipmentId, $trackingId, $body)
     {
-        // verify the required parameter 'shipment_id' is set
-        if ($shipment_id === null || (is_array($shipment_id) && count($shipment_id) === 0)) {
+        // verify the required parameter 'shipmentId' is set
+        if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_id when calling retrieveShippingLabel'
+                'Missing the required parameter $shipmentId when calling retrieveShippingLabel'
             );
         }
-        // verify the required parameter 'tracking_id' is set
-        if ($tracking_id === null || (is_array($tracking_id) && count($tracking_id) === 0)) {
+        // verify the required parameter 'trackingId' is set
+        if ($trackingId === null || (is_array($trackingId) && count($trackingId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $tracking_id when calling retrieveShippingLabel'
+                'Missing the required parameter $trackingId when calling retrieveShippingLabel'
             );
         }
         // verify the required parameter 'body' is set
@@ -3690,18 +3690,18 @@ class ShippingApi
 
 
         // path params
-        if ($shipment_id !== null) {
+        if ($shipmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentId' . '}',
-                ObjectSerializer::toPathValue($shipment_id),
+                ObjectSerializer::toPathValue($shipmentId),
                 $resourcePath
             );
         }
         // path params
-        if ($tracking_id !== null) {
+        if ($trackingId !== null) {
             $resourcePath = str_replace(
                 '{' . 'trackingId' . '}',
-                ObjectSerializer::toPathValue($tracking_id),
+                ObjectSerializer::toPathValue($trackingId),
                 $resourcePath
             );
         }

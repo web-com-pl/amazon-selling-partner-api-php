@@ -62,8 +62,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'package_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageInput[]',
-        'carrier_name' => 'string'
+        'packageList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageInput[]',
+        'carrierName' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'package_list' => null,
-        'carrier_name' => null
+        'packageList' => null,
+        'carrierName' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'package_list' => 'PackageList',
-        'carrier_name' => 'CarrierName'
+        'packageList' => 'PackageList',
+        'carrierName' => 'CarrierName'
     ];
 
     /**
@@ -115,8 +115,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'package_list' => 'setPackageList',
-        'carrier_name' => 'setCarrierName'
+        'packageList' => 'setPackageList',
+        'carrierName' => 'setCarrierName'
     ];
 
     /**
@@ -125,8 +125,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'package_list' => 'getPackageList',
-        'carrier_name' => 'getCarrierName'
+        'packageList' => 'getPackageList',
+        'carrierName' => 'getCarrierName'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['package_list'] = $data['package_list'] ?? null;
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
+        $this->container['packageList'] = $data['packageList'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class PartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets package_list
+     * Gets packageList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageInput[]|null
      */
     public function getPackageList()
     {
-        return $this->container['package_list'];
+        return $this->container['packageList'];
     }
 
     /**
-     * Sets package_list
+     * Sets packageList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageInput[]|null $package_list A list of dimensions and weight information for packages.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageInput[]|null $packageList A list of dimensions and weight information for packages.
      *
      * @return self
      */
-    public function setPackageList($package_list)
+    public function setPackageList($packageList)
     {
-        $this->container['package_list'] = $package_list;
+        $this->container['packageList'] = $packageList;
 
         return $this;
     }
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string|null
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string|null $carrier_name The Amazon-partnered carrier to use for the inbound shipment.
+     * @param string|null $carrierName The Amazon-partnered carrier to use for the inbound shipment.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }

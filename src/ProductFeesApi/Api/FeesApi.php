@@ -538,32 +538,32 @@ class FeesApi
     /**
      * Operation getMyFeesEstimateForSKU
      *
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      * @param  \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductFeesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse
      */
-    public function getMyFeesEstimateForSKU($seller_sku, $body)
+    public function getMyFeesEstimateForSKU($sellerSKU, $body)
     {
-        list($response) = $this->getMyFeesEstimateForSKUWithHttpInfo($seller_sku, $body);
+        list($response) = $this->getMyFeesEstimateForSKUWithHttpInfo($sellerSKU, $body);
         return $response;
     }
 
     /**
      * Operation getMyFeesEstimateForSKUWithHttpInfo
      *
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      * @param  \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductFeesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse|\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMyFeesEstimateForSKUWithHttpInfo($seller_sku, $body)
+    public function getMyFeesEstimateForSKUWithHttpInfo($sellerSKU, $body)
     {
-        $request = $this->getMyFeesEstimateForSKURequest($seller_sku, $body);
+        $request = $this->getMyFeesEstimateForSKURequest($sellerSKU, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -783,15 +783,15 @@ class FeesApi
      *
      * 
      *
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      * @param  \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMyFeesEstimateForSKUAsync($seller_sku, $body)
+    public function getMyFeesEstimateForSKUAsync($sellerSKU, $body)
     {
-        return $this->getMyFeesEstimateForSKUAsyncWithHttpInfo($seller_sku, $body)
+        return $this->getMyFeesEstimateForSKUAsyncWithHttpInfo($sellerSKU, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -804,16 +804,16 @@ class FeesApi
      *
      * 
      *
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      * @param  \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMyFeesEstimateForSKUAsyncWithHttpInfo($seller_sku, $body)
+    public function getMyFeesEstimateForSKUAsyncWithHttpInfo($sellerSKU, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateResponse';
-        $request = $this->getMyFeesEstimateForSKURequest($seller_sku, $body);
+        $request = $this->getMyFeesEstimateForSKURequest($sellerSKU, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -852,18 +852,18 @@ class FeesApi
     /**
      * Create request for operation 'getMyFeesEstimateForSKU'
      *
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      * @param  \Webcom\Amazon\Rest\ProductFeesApi\Model\GetMyFeesEstimateRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMyFeesEstimateForSKURequest($seller_sku, $body)
+    public function getMyFeesEstimateForSKURequest($sellerSKU, $body)
     {
-        // verify the required parameter 'seller_sku' is set
-        if ($seller_sku === null || (is_array($seller_sku) && count($seller_sku) === 0)) {
+        // verify the required parameter 'sellerSKU' is set
+        if ($sellerSKU === null || (is_array($sellerSKU) && count($sellerSKU) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_sku when calling getMyFeesEstimateForSKU'
+                'Missing the required parameter $sellerSKU when calling getMyFeesEstimateForSKU'
             );
         }
         // verify the required parameter 'body' is set
@@ -883,10 +883,10 @@ class FeesApi
 
 
         // path params
-        if ($seller_sku !== null) {
+        if ($sellerSKU !== null) {
             $resourcePath = str_replace(
                 '{' . 'SellerSKU' . '}',
-                ObjectSerializer::toPathValue($seller_sku),
+                ObjectSerializer::toPathValue($sellerSKU),
                 $resourcePath
             );
         }

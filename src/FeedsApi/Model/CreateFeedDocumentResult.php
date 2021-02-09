@@ -62,9 +62,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'feed_document_id' => 'string',
+        'feedDocumentId' => 'string',
         'url' => 'string',
-        'encryption_details' => '\Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails'
+        'encryptionDetails' => '\Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails'
     ];
 
     /**
@@ -75,9 +75,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'feed_document_id' => null,
+        'feedDocumentId' => null,
         'url' => null,
-        'encryption_details' => null
+        'encryptionDetails' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_document_id' => 'feedDocumentId',
+        'feedDocumentId' => 'feedDocumentId',
         'url' => 'url',
-        'encryption_details' => 'encryptionDetails'
+        'encryptionDetails' => 'encryptionDetails'
     ];
 
     /**
@@ -118,9 +118,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'feed_document_id' => 'setFeedDocumentId',
+        'feedDocumentId' => 'setFeedDocumentId',
         'url' => 'setUrl',
-        'encryption_details' => 'setEncryptionDetails'
+        'encryptionDetails' => 'setEncryptionDetails'
     ];
 
     /**
@@ -129,9 +129,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'feed_document_id' => 'getFeedDocumentId',
+        'feedDocumentId' => 'getFeedDocumentId',
         'url' => 'getUrl',
-        'encryption_details' => 'getEncryptionDetails'
+        'encryptionDetails' => 'getEncryptionDetails'
     ];
 
     /**
@@ -194,9 +194,9 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['feed_document_id'] = $data['feed_document_id'] ?? null;
+        $this->container['feedDocumentId'] = $data['feedDocumentId'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
-        $this->container['encryption_details'] = $data['encryption_details'] ?? null;
+        $this->container['encryptionDetails'] = $data['encryptionDetails'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['feed_document_id'] === null) {
-            $invalidProperties[] = "'feed_document_id' can't be null";
+        if ($this->container['feedDocumentId'] === null) {
+            $invalidProperties[] = "'feedDocumentId' can't be null";
         }
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
-        if ($this->container['encryption_details'] === null) {
-            $invalidProperties[] = "'encryption_details' can't be null";
+        if ($this->container['encryptionDetails'] === null) {
+            $invalidProperties[] = "'encryptionDetails' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,25 +233,25 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets feed_document_id
+     * Gets feedDocumentId
      *
      * @return string
      */
     public function getFeedDocumentId()
     {
-        return $this->container['feed_document_id'];
+        return $this->container['feedDocumentId'];
     }
 
     /**
-     * Sets feed_document_id
+     * Sets feedDocumentId
      *
-     * @param string $feed_document_id The identifier of the feed document.
+     * @param string $feedDocumentId The identifier of the feed document.
      *
      * @return self
      */
-    public function setFeedDocumentId($feed_document_id)
+    public function setFeedDocumentId($feedDocumentId)
     {
-        $this->container['feed_document_id'] = $feed_document_id;
+        $this->container['feedDocumentId'] = $feedDocumentId;
 
         return $this;
     }
@@ -281,25 +281,25 @@ class CreateFeedDocumentResult implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets encryption_details
+     * Gets encryptionDetails
      *
      * @return \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails
      */
     public function getEncryptionDetails()
     {
-        return $this->container['encryption_details'];
+        return $this->container['encryptionDetails'];
     }
 
     /**
-     * Sets encryption_details
+     * Sets encryptionDetails
      *
-     * @param \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails $encryption_details encryption_details
+     * @param \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails $encryptionDetails encryptionDetails
      *
      * @return self
      */
-    public function setEncryptionDetails($encryption_details)
+    public function setEncryptionDetails($encryptionDetails)
     {
-        $this->container['encryption_details'] = $encryption_details;
+        $this->container['encryptionDetails'] = $encryptionDetails;
 
         return $this;
     }

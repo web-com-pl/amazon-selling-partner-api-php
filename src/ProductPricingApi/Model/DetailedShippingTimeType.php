@@ -62,10 +62,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'minimum_hours' => 'int',
-        'maximum_hours' => 'int',
-        'available_date' => 'float',
-        'availability_type' => 'string'
+        'minimumHours' => 'int',
+        'maximumHours' => 'int',
+        'availableDate' => 'float',
+        'availabilityType' => 'string'
     ];
 
     /**
@@ -76,10 +76,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'minimum_hours' => 'int64',
-        'maximum_hours' => 'int64',
-        'available_date' => null,
-        'availability_type' => null
+        'minimumHours' => 'int64',
+        'maximumHours' => 'int64',
+        'availableDate' => null,
+        'availabilityType' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'minimum_hours' => 'minimumHours',
-        'maximum_hours' => 'maximumHours',
-        'available_date' => 'availableDate',
-        'availability_type' => 'availabilityType'
+        'minimumHours' => 'minimumHours',
+        'maximumHours' => 'maximumHours',
+        'availableDate' => 'availableDate',
+        'availabilityType' => 'availabilityType'
     ];
 
     /**
@@ -121,10 +121,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'minimum_hours' => 'setMinimumHours',
-        'maximum_hours' => 'setMaximumHours',
-        'available_date' => 'setAvailableDate',
-        'availability_type' => 'setAvailabilityType'
+        'minimumHours' => 'setMinimumHours',
+        'maximumHours' => 'setMaximumHours',
+        'availableDate' => 'setAvailableDate',
+        'availabilityType' => 'setAvailabilityType'
     ];
 
     /**
@@ -133,10 +133,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'minimum_hours' => 'getMinimumHours',
-        'maximum_hours' => 'getMaximumHours',
-        'available_date' => 'getAvailableDate',
-        'availability_type' => 'getAvailabilityType'
+        'minimumHours' => 'getMinimumHours',
+        'maximumHours' => 'getMaximumHours',
+        'availableDate' => 'getAvailableDate',
+        'availabilityType' => 'getAvailabilityType'
     ];
 
     /**
@@ -216,10 +216,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['minimum_hours'] = $data['minimum_hours'] ?? null;
-        $this->container['maximum_hours'] = $data['maximum_hours'] ?? null;
-        $this->container['available_date'] = $data['available_date'] ?? null;
-        $this->container['availability_type'] = $data['availability_type'] ?? null;
+        $this->container['minimumHours'] = $data['minimumHours'] ?? null;
+        $this->container['maximumHours'] = $data['maximumHours'] ?? null;
+        $this->container['availableDate'] = $data['availableDate'] ?? null;
+        $this->container['availabilityType'] = $data['availabilityType'] ?? null;
     }
 
     /**
@@ -232,10 +232,10 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
         $invalidProperties = [];
 
         $allowedValues = $this->getAvailabilityTypeAllowableValues();
-        if (!is_null($this->container['availability_type']) && !in_array($this->container['availability_type'], $allowedValues, true)) {
+        if (!is_null($this->container['availabilityType']) && !in_array($this->container['availabilityType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'availability_type', must be one of '%s'",
-                $this->container['availability_type'],
+                "invalid value '%s' for 'availabilityType', must be one of '%s'",
+                $this->container['availabilityType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -256,107 +256,107 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets minimum_hours
+     * Gets minimumHours
      *
      * @return int|null
      */
     public function getMinimumHours()
     {
-        return $this->container['minimum_hours'];
+        return $this->container['minimumHours'];
     }
 
     /**
-     * Sets minimum_hours
+     * Sets minimumHours
      *
-     * @param int|null $minimum_hours The minimum time, in hours, that the item will likely be shipped after the order has been placed.
+     * @param int|null $minimumHours The minimum time, in hours, that the item will likely be shipped after the order has been placed.
      *
      * @return self
      */
-    public function setMinimumHours($minimum_hours)
+    public function setMinimumHours($minimumHours)
     {
-        $this->container['minimum_hours'] = $minimum_hours;
+        $this->container['minimumHours'] = $minimumHours;
 
         return $this;
     }
 
     /**
-     * Gets maximum_hours
+     * Gets maximumHours
      *
      * @return int|null
      */
     public function getMaximumHours()
     {
-        return $this->container['maximum_hours'];
+        return $this->container['maximumHours'];
     }
 
     /**
-     * Sets maximum_hours
+     * Sets maximumHours
      *
-     * @param int|null $maximum_hours The maximum time, in hours, that the item will likely be shipped after the order has been placed.
+     * @param int|null $maximumHours The maximum time, in hours, that the item will likely be shipped after the order has been placed.
      *
      * @return self
      */
-    public function setMaximumHours($maximum_hours)
+    public function setMaximumHours($maximumHours)
     {
-        $this->container['maximum_hours'] = $maximum_hours;
+        $this->container['maximumHours'] = $maximumHours;
 
         return $this;
     }
 
     /**
-     * Gets available_date
+     * Gets availableDate
      *
      * @return float|null
      */
     public function getAvailableDate()
     {
-        return $this->container['available_date'];
+        return $this->container['availableDate'];
     }
 
     /**
-     * Sets available_date
+     * Sets availableDate
      *
-     * @param float|null $available_date The date when the item will be available for shipping. Only displayed for items that are not currently available for shipping.
+     * @param float|null $availableDate The date when the item will be available for shipping. Only displayed for items that are not currently available for shipping.
      *
      * @return self
      */
-    public function setAvailableDate($available_date)
+    public function setAvailableDate($availableDate)
     {
-        $this->container['available_date'] = $available_date;
+        $this->container['availableDate'] = $availableDate;
 
         return $this;
     }
 
     /**
-     * Gets availability_type
+     * Gets availabilityType
      *
      * @return string|null
      */
     public function getAvailabilityType()
     {
-        return $this->container['availability_type'];
+        return $this->container['availabilityType'];
     }
 
     /**
-     * Sets availability_type
+     * Sets availabilityType
      *
-     * @param string|null $availability_type Indicates whether the item is available for shipping now, or on a known or an unknown date in the future. If known, the availableDate property indicates the date that the item will be available for shipping. Possible values: NOW, FUTURE_WITHOUT_DATE, FUTURE_WITH_DATE.
+     * @param string|null $availabilityType Indicates whether the item is available for shipping now, or on a known or an unknown date in the future. If known, the availableDate property indicates the date that the item will be available for shipping. Possible values: NOW, FUTURE_WITHOUT_DATE, FUTURE_WITH_DATE.
      *
      * @return self
      */
-    public function setAvailabilityType($availability_type)
+    public function setAvailabilityType($availabilityType)
     {
         $allowedValues = $this->getAvailabilityTypeAllowableValues();
-        if (!is_null($availability_type) && !in_array($availability_type, $allowedValues, true)) {
+        if (!is_null($availabilityType) && !in_array($availabilityType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'availability_type', must be one of '%s'",
-                    $availability_type,
+                    "Invalid value '%s' for 'availabilityType', must be one of '%s'",
+                    $availabilityType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['availability_type'] = $availability_type;
+        $this->container['availabilityType'] = $availabilityType;
 
         return $this;
     }

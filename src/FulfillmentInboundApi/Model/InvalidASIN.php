@@ -61,8 +61,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asin' => 'string',
-        'error_reason' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason'
+        'aSIN' => 'string',
+        'errorReason' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason'
     ];
 
     /**
@@ -73,8 +73,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'asin' => null,
-        'error_reason' => null
+        'aSIN' => null,
+        'errorReason' => null
     ];
 
     /**
@@ -104,8 +104,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'asin' => 'ASIN',
-        'error_reason' => 'ErrorReason'
+        'aSIN' => 'ASIN',
+        'errorReason' => 'ErrorReason'
     ];
 
     /**
@@ -114,8 +114,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'asin' => 'setAsin',
-        'error_reason' => 'setErrorReason'
+        'aSIN' => 'setASIN',
+        'errorReason' => 'setErrorReason'
     ];
 
     /**
@@ -124,8 +124,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'asin' => 'getAsin',
-        'error_reason' => 'getErrorReason'
+        'aSIN' => 'getASIN',
+        'errorReason' => 'getErrorReason'
     ];
 
     /**
@@ -188,8 +188,8 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['error_reason'] = $data['error_reason'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['errorReason'] = $data['errorReason'] ?? null;
     }
 
     /**
@@ -217,49 +217,49 @@ class InvalidASIN implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets error_reason
+     * Gets errorReason
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null
      */
     public function getErrorReason()
     {
-        return $this->container['error_reason'];
+        return $this->container['errorReason'];
     }
 
     /**
-     * Sets error_reason
+     * Sets errorReason
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null $error_reason error_reason
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ErrorReason|null $errorReason errorReason
      *
      * @return self
      */
-    public function setErrorReason($error_reason)
+    public function setErrorReason($errorReason)
     {
-        $this->container['error_reason'] = $error_reason;
+        $this->container['errorReason'] = $errorReason;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_name' => 'string'
+        'carrierName' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_name' => null
+        'carrierName' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_name' => 'CarrierName'
+        'carrierName' => 'CarrierName'
     ];
 
     /**
@@ -112,7 +112,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'carrier_name' => 'setCarrierName'
+        'carrierName' => 'setCarrierName'
     ];
 
     /**
@@ -121,7 +121,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'carrier_name' => 'getCarrierName'
+        'carrierName' => 'getCarrierName'
     ];
 
     /**
@@ -184,7 +184,7 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class TemporarilyUnavailableCarrier implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The name of the carrier.
+     * @param string $carrierName The name of the carrier.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }

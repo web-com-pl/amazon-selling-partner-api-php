@@ -62,9 +62,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipping_service_id' => 'string',
-        'ship_from_address' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
-        'order_id' => 'string'
+        'shippingServiceId' => 'string',
+        'shipFromAddress' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
+        'orderId' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipping_service_id' => null,
-        'ship_from_address' => null,
-        'order_id' => null
+        'shippingServiceId' => null,
+        'shipFromAddress' => null,
+        'orderId' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipping_service_id' => 'ShippingServiceId',
-        'ship_from_address' => 'ShipFromAddress',
-        'order_id' => 'OrderId'
+        'shippingServiceId' => 'ShippingServiceId',
+        'shipFromAddress' => 'ShipFromAddress',
+        'orderId' => 'OrderId'
     ];
 
     /**
@@ -118,9 +118,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'shipping_service_id' => 'setShippingServiceId',
-        'ship_from_address' => 'setShipFromAddress',
-        'order_id' => 'setOrderId'
+        'shippingServiceId' => 'setShippingServiceId',
+        'shipFromAddress' => 'setShipFromAddress',
+        'orderId' => 'setOrderId'
     ];
 
     /**
@@ -129,9 +129,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'shipping_service_id' => 'getShippingServiceId',
-        'ship_from_address' => 'getShipFromAddress',
-        'order_id' => 'getOrderId'
+        'shippingServiceId' => 'getShippingServiceId',
+        'shipFromAddress' => 'getShipFromAddress',
+        'orderId' => 'getOrderId'
     ];
 
     /**
@@ -194,9 +194,9 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipping_service_id'] = $data['shipping_service_id'] ?? null;
-        $this->container['ship_from_address'] = $data['ship_from_address'] ?? null;
-        $this->container['order_id'] = $data['order_id'] ?? null;
+        $this->container['shippingServiceId'] = $data['shippingServiceId'] ?? null;
+        $this->container['shipFromAddress'] = $data['shipFromAddress'] ?? null;
+        $this->container['orderId'] = $data['orderId'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['shipping_service_id'] === null) {
-            $invalidProperties[] = "'shipping_service_id' can't be null";
+        if ($this->container['shippingServiceId'] === null) {
+            $invalidProperties[] = "'shippingServiceId' can't be null";
         }
-        if ($this->container['ship_from_address'] === null) {
-            $invalidProperties[] = "'ship_from_address' can't be null";
+        if ($this->container['shipFromAddress'] === null) {
+            $invalidProperties[] = "'shipFromAddress' can't be null";
         }
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
+        if ($this->container['orderId'] === null) {
+            $invalidProperties[] = "'orderId' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class GetAdditionalSellerInputsRequest implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets shipping_service_id
+     * Gets shippingServiceId
      *
      * @return string
      */
     public function getShippingServiceId()
     {
-        return $this->container['shipping_service_id'];
+        return $this->container['shippingServiceId'];
     }
 
     /**
-     * Sets shipping_service_id
+     * Sets shippingServiceId
      *
-     * @param string $shipping_service_id An Amazon-defined shipping service identifier.
+     * @param string $shippingServiceId An Amazon-defined shipping service identifier.
      *
      * @return self
      */
-    public function setShippingServiceId($shipping_service_id)
+    public function setShippingServiceId($shippingServiceId)
     {
-        $this->container['shipping_service_id'] = $shipping_service_id;
+        $this->container['shippingServiceId'] = $shippingServiceId;
 
         return $this;
     }
 
     /**
-     * Gets ship_from_address
+     * Gets shipFromAddress
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address
      */
     public function getShipFromAddress()
     {
-        return $this->container['ship_from_address'];
+        return $this->container['shipFromAddress'];
     }
 
     /**
-     * Sets ship_from_address
+     * Sets shipFromAddress
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address $ship_from_address ship_from_address
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address $shipFromAddress shipFromAddress
      *
      * @return self
      */
-    public function setShipFromAddress($ship_from_address)
+    public function setShipFromAddress($shipFromAddress)
     {
-        $this->container['ship_from_address'] = $ship_from_address;
+        $this->container['shipFromAddress'] = $shipFromAddress;
 
         return $this;
     }
 
     /**
-     * Gets order_id
+     * Gets orderId
      *
      * @return string
      */
     public function getOrderId()
     {
-        return $this->container['order_id'];
+        return $this->container['orderId'];
     }
 
     /**
-     * Sets order_id
+     * Sets orderId
      *
-     * @param string $order_id An Amazon-defined order identifier, in 3-7-7 format. <br>**Pattern** : `[0-9A-Z]{3}-[0-9]{7}-[0-9]{7}`.
+     * @param string $orderId An Amazon-defined order identifier, in 3-7-7 format. <br>**Pattern** : `[0-9A-Z]{3}-[0-9]{7}-[0-9]{7}`.
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setOrderId($orderId)
     {
-        $this->container['order_id'] = $order_id;
+        $this->container['orderId'] = $orderId;
 
         return $this;
     }

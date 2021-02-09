@@ -62,10 +62,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'feature_name' => 'string',
-        'next_token' => 'string',
-        'feature_skus' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku[]'
+        'marketplaceId' => 'string',
+        'featureName' => 'string',
+        'nextToken' => 'string',
+        'featureSkus' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'feature_name' => null,
-        'next_token' => null,
-        'feature_skus' => null
+        'marketplaceId' => null,
+        'featureName' => null,
+        'nextToken' => null,
+        'featureSkus' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
-        'feature_name' => 'featureName',
-        'next_token' => 'nextToken',
-        'feature_skus' => 'featureSkus'
+        'marketplaceId' => 'marketplaceId',
+        'featureName' => 'featureName',
+        'nextToken' => 'nextToken',
+        'featureSkus' => 'featureSkus'
     ];
 
     /**
@@ -121,10 +121,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'feature_name' => 'setFeatureName',
-        'next_token' => 'setNextToken',
-        'feature_skus' => 'setFeatureSkus'
+        'marketplaceId' => 'setMarketplaceId',
+        'featureName' => 'setFeatureName',
+        'nextToken' => 'setNextToken',
+        'featureSkus' => 'setFeatureSkus'
     ];
 
     /**
@@ -133,10 +133,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'feature_name' => 'getFeatureName',
-        'next_token' => 'getNextToken',
-        'feature_skus' => 'getFeatureSkus'
+        'marketplaceId' => 'getMarketplaceId',
+        'featureName' => 'getFeatureName',
+        'nextToken' => 'getNextToken',
+        'featureSkus' => 'getFeatureSkus'
     ];
 
     /**
@@ -199,10 +199,10 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['feature_name'] = $data['feature_name'] ?? null;
-        $this->container['next_token'] = $data['next_token'] ?? null;
-        $this->container['feature_skus'] = $data['feature_skus'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['featureName'] = $data['featureName'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
+        $this->container['featureSkus'] = $data['featureSkus'] ?? null;
     }
 
     /**
@@ -214,11 +214,11 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['feature_name'] === null) {
-            $invalidProperties[] = "'feature_name' can't be null";
+        if ($this->container['featureName'] === null) {
+            $invalidProperties[] = "'featureName' can't be null";
         }
         return $invalidProperties;
     }
@@ -236,97 +236,97 @@ class GetFeatureInventoryResult implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id The requested marketplace.
+     * @param string $marketplaceId The requested marketplace.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets feature_name
+     * Gets featureName
      *
      * @return string
      */
     public function getFeatureName()
     {
-        return $this->container['feature_name'];
+        return $this->container['featureName'];
     }
 
     /**
-     * Sets feature_name
+     * Sets featureName
      *
-     * @param string $feature_name The name of the feature.
+     * @param string $featureName The name of the feature.
      *
      * @return self
      */
-    public function setFeatureName($feature_name)
+    public function setFeatureName($featureName)
     {
-        $this->container['feature_name'] = $feature_name;
+        $this->container['featureName'] = $featureName;
 
         return $this;
     }
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }
 
     /**
-     * Gets feature_skus
+     * Gets featureSkus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku[]|null
      */
     public function getFeatureSkus()
     {
-        return $this->container['feature_skus'];
+        return $this->container['featureSkus'];
     }
 
     /**
-     * Sets feature_skus
+     * Sets featureSkus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku[]|null $feature_skus An array of SKUs eligible for this feature and the quantity available.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku[]|null $featureSkus An array of SKUs eligible for this feature and the quantity available.
      *
      * @return self
      */
-    public function setFeatureSkus($feature_skus)
+    public function setFeatureSkus($featureSkus)
     {
-        $this->container['feature_skus'] = $feature_skus;
+        $this->container['featureSkus'] = $featureSkus;
 
         return $this;
     }

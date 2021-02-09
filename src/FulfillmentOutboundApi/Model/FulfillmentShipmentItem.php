@@ -62,11 +62,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
+        'sellerSku' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
         'quantity' => 'int',
-        'package_number' => 'int',
-        'serial_number' => 'string'
+        'packageNumber' => 'int',
+        'serialNumber' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'seller_fulfillment_order_item_id' => null,
+        'sellerSku' => null,
+        'sellerFulfillmentOrderItemId' => null,
         'quantity' => 'int32',
-        'package_number' => 'int32',
-        'serial_number' => null
+        'packageNumber' => 'int32',
+        'serialNumber' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
+        'sellerSku' => 'sellerSku',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
         'quantity' => 'quantity',
-        'package_number' => 'packageNumber',
-        'serial_number' => 'serialNumber'
+        'packageNumber' => 'packageNumber',
+        'serialNumber' => 'serialNumber'
     ];
 
     /**
@@ -124,11 +124,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
+        'sellerSku' => 'setSellerSku',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
         'quantity' => 'setQuantity',
-        'package_number' => 'setPackageNumber',
-        'serial_number' => 'setSerialNumber'
+        'packageNumber' => 'setPackageNumber',
+        'serialNumber' => 'setSerialNumber'
     ];
 
     /**
@@ -137,11 +137,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
+        'sellerSku' => 'getSellerSku',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
         'quantity' => 'getQuantity',
-        'package_number' => 'getPackageNumber',
-        'serial_number' => 'getSerialNumber'
+        'packageNumber' => 'getPackageNumber',
+        'serialNumber' => 'getSerialNumber'
     ];
 
     /**
@@ -204,11 +204,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['package_number'] = $data['package_number'] ?? null;
-        $this->container['serial_number'] = $data['serial_number'] ?? null;
+        $this->container['packageNumber'] = $data['packageNumber'] ?? null;
+        $this->container['serialNumber'] = $data['serialNumber'] ?? null;
     }
 
     /**
@@ -220,11 +220,11 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSku'] === null) {
+            $invalidProperties[] = "'sellerSku' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
@@ -245,49 +245,49 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id The fulfillment order item identifier that the seller created and submitted with a call to the createFulfillmentOrder operation.
+     * @param string $sellerFulfillmentOrderItemId The fulfillment order item identifier that the seller created and submitted with a call to the createFulfillmentOrder operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
@@ -317,49 +317,49 @@ class FulfillmentShipmentItem implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets package_number
+     * Gets packageNumber
      *
      * @return int|null
      */
     public function getPackageNumber()
     {
-        return $this->container['package_number'];
+        return $this->container['packageNumber'];
     }
 
     /**
-     * Sets package_number
+     * Sets packageNumber
      *
-     * @param int|null $package_number An identifier for the package that contains the item quantity.
+     * @param int|null $packageNumber An identifier for the package that contains the item quantity.
      *
      * @return self
      */
-    public function setPackageNumber($package_number)
+    public function setPackageNumber($packageNumber)
     {
-        $this->container['package_number'] = $package_number;
+        $this->container['packageNumber'] = $packageNumber;
 
         return $this;
     }
 
     /**
-     * Gets serial_number
+     * Gets serialNumber
      *
      * @return string|null
      */
     public function getSerialNumber()
     {
-        return $this->container['serial_number'];
+        return $this->container['serialNumber'];
     }
 
     /**
-     * Sets serial_number
+     * Sets serialNumber
      *
-     * @param string|null $serial_number The serial number of the shipped item.
+     * @param string|null $serialNumber The serial number of the shipped item.
      *
      * @return self
      */
-    public function setSerialNumber($serial_number)
+    public function setSerialNumber($serialNumber)
     {
-        $this->container['serial_number'] = $serial_number;
+        $this->container['serialNumber'] = $serialNumber;
 
         return $this;
     }

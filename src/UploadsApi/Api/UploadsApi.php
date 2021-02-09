@@ -118,36 +118,36 @@ class UploadsApi
     /**
      * Operation createUploadDestinationForResource
      *
-     * @param  string[] $marketplace_ids A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
-     * @param  string $content_md5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
+     * @param  string[] $marketplaceIds A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
+     * @param  string $contentMD5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
      * @param  string $resource The URL of the resource for the upload destination that you are creating. For example, to create an upload destination for a Buyer-Seller Messaging message, the {resource} would be /messaging and the path would be  /uploads/v1/uploadDestinations/messaging (required)
-     * @param  string $content_type The content type of the file to be uploaded. (optional)
+     * @param  string $contentType The content type of the file to be uploaded. (optional)
      *
      * @throws \Webcom\Amazon\Rest\UploadsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse
      */
-    public function createUploadDestinationForResource($marketplace_ids, $content_md5, $resource, $content_type = null)
+    public function createUploadDestinationForResource($marketplaceIds, $contentMD5, $resource, $contentType = null)
     {
-        list($response) = $this->createUploadDestinationForResourceWithHttpInfo($marketplace_ids, $content_md5, $resource, $content_type);
+        list($response) = $this->createUploadDestinationForResourceWithHttpInfo($marketplaceIds, $contentMD5, $resource, $contentType);
         return $response;
     }
 
     /**
      * Operation createUploadDestinationForResourceWithHttpInfo
      *
-     * @param  string[] $marketplace_ids A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
-     * @param  string $content_md5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
+     * @param  string[] $marketplaceIds A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
+     * @param  string $contentMD5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
      * @param  string $resource The URL of the resource for the upload destination that you are creating. For example, to create an upload destination for a Buyer-Seller Messaging message, the {resource} would be /messaging and the path would be  /uploads/v1/uploadDestinations/messaging (required)
-     * @param  string $content_type The content type of the file to be uploaded. (optional)
+     * @param  string $contentType The content type of the file to be uploaded. (optional)
      *
      * @throws \Webcom\Amazon\Rest\UploadsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse|\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUploadDestinationForResourceWithHttpInfo($marketplace_ids, $content_md5, $resource, $content_type = null)
+    public function createUploadDestinationForResourceWithHttpInfo($marketplaceIds, $contentMD5, $resource, $contentType = null)
     {
-        $request = $this->createUploadDestinationForResourceRequest($marketplace_ids, $content_md5, $resource, $content_type);
+        $request = $this->createUploadDestinationForResourceRequest($marketplaceIds, $contentMD5, $resource, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -387,17 +387,17 @@ class UploadsApi
      *
      * 
      *
-     * @param  string[] $marketplace_ids A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
-     * @param  string $content_md5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
+     * @param  string[] $marketplaceIds A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
+     * @param  string $contentMD5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
      * @param  string $resource The URL of the resource for the upload destination that you are creating. For example, to create an upload destination for a Buyer-Seller Messaging message, the {resource} would be /messaging and the path would be  /uploads/v1/uploadDestinations/messaging (required)
-     * @param  string $content_type The content type of the file to be uploaded. (optional)
+     * @param  string $contentType The content type of the file to be uploaded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUploadDestinationForResourceAsync($marketplace_ids, $content_md5, $resource, $content_type = null)
+    public function createUploadDestinationForResourceAsync($marketplaceIds, $contentMD5, $resource, $contentType = null)
     {
-        return $this->createUploadDestinationForResourceAsyncWithHttpInfo($marketplace_ids, $content_md5, $resource, $content_type)
+        return $this->createUploadDestinationForResourceAsyncWithHttpInfo($marketplaceIds, $contentMD5, $resource, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -410,18 +410,18 @@ class UploadsApi
      *
      * 
      *
-     * @param  string[] $marketplace_ids A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
-     * @param  string $content_md5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
+     * @param  string[] $marketplaceIds A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
+     * @param  string $contentMD5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
      * @param  string $resource The URL of the resource for the upload destination that you are creating. For example, to create an upload destination for a Buyer-Seller Messaging message, the {resource} would be /messaging and the path would be  /uploads/v1/uploadDestinations/messaging (required)
-     * @param  string $content_type The content type of the file to be uploaded. (optional)
+     * @param  string $contentType The content type of the file to be uploaded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUploadDestinationForResourceAsyncWithHttpInfo($marketplace_ids, $content_md5, $resource, $content_type = null)
+    public function createUploadDestinationForResourceAsyncWithHttpInfo($marketplaceIds, $contentMD5, $resource, $contentType = null)
     {
         $returnType = '\Webcom\Amazon\Rest\UploadsApi\Model\CreateUploadDestinationResponse';
-        $request = $this->createUploadDestinationForResourceRequest($marketplace_ids, $content_md5, $resource, $content_type);
+        $request = $this->createUploadDestinationForResourceRequest($marketplaceIds, $contentMD5, $resource, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -460,30 +460,30 @@ class UploadsApi
     /**
      * Create request for operation 'createUploadDestinationForResource'
      *
-     * @param  string[] $marketplace_ids A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
-     * @param  string $content_md5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
+     * @param  string[] $marketplaceIds A list of marketplace identifiers. This specifies the marketplaces where the upload will be available. Only one marketplace can be specified. (required)
+     * @param  string $contentMD5 An MD5 hash of the content to be submitted to the upload destination. This value is used to determine if the data has been corrupted or tampered with during transit. (required)
      * @param  string $resource The URL of the resource for the upload destination that you are creating. For example, to create an upload destination for a Buyer-Seller Messaging message, the {resource} would be /messaging and the path would be  /uploads/v1/uploadDestinations/messaging (required)
-     * @param  string $content_type The content type of the file to be uploaded. (optional)
+     * @param  string $contentType The content type of the file to be uploaded. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUploadDestinationForResourceRequest($marketplace_ids, $content_md5, $resource, $content_type = null)
+    public function createUploadDestinationForResourceRequest($marketplaceIds, $contentMD5, $resource, $contentType = null)
     {
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createUploadDestinationForResource'
+                'Missing the required parameter $marketplaceIds when calling createUploadDestinationForResource'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling UploadsApi.createUploadDestinationForResource, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling UploadsApi.createUploadDestinationForResource, number of items must be less than or equal to 1.');
         }
 
-        // verify the required parameter 'content_md5' is set
-        if ($content_md5 === null || (is_array($content_md5) && count($content_md5) === 0)) {
+        // verify the required parameter 'contentMD5' is set
+        if ($contentMD5 === null || (is_array($contentMD5) && count($contentMD5) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $content_md5 when calling createUploadDestinationForResource'
+                'Missing the required parameter $contentMD5 when calling createUploadDestinationForResource'
             );
         }
         // verify the required parameter 'resource' is set
@@ -501,25 +501,25 @@ class UploadsApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
-        }
-        // query params
-        if (is_array($content_md5)) {
-            $content_md5 = ObjectSerializer::serializeCollection($content_md5, '', true);
-        }
-        if ($content_md5 !== null) {
-            $queryParams['contentMD5'] = $content_md5;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
         // query params
-        if (is_array($content_type)) {
-            $content_type = ObjectSerializer::serializeCollection($content_type, '', true);
+        if (is_array($contentMD5)) {
+            $contentMD5 = ObjectSerializer::serializeCollection($contentMD5, '', true);
         }
-        if ($content_type !== null) {
-            $queryParams['contentType'] = $content_type;
+        if ($contentMD5 !== null) {
+            $queryParams['contentMD5'] = $contentMD5;
+        }
+        // query params
+        if (is_array($contentType)) {
+            $contentType = ObjectSerializer::serializeCollection($contentType, '', true);
+        }
+        if ($contentType !== null) {
+            $queryParams['contentType'] = $contentType;
         }
 
 

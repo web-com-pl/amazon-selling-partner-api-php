@@ -62,9 +62,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'feature_name' => 'string',
-        'feature_description' => 'string',
-        'seller_eligible' => 'bool'
+        'featureName' => 'string',
+        'featureDescription' => 'string',
+        'sellerEligible' => 'bool'
     ];
 
     /**
@@ -75,9 +75,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'feature_name' => null,
-        'feature_description' => null,
-        'seller_eligible' => null
+        'featureName' => null,
+        'featureDescription' => null,
+        'sellerEligible' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'feature_name' => 'featureName',
-        'feature_description' => 'featureDescription',
-        'seller_eligible' => 'sellerEligible'
+        'featureName' => 'featureName',
+        'featureDescription' => 'featureDescription',
+        'sellerEligible' => 'sellerEligible'
     ];
 
     /**
@@ -118,9 +118,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'feature_name' => 'setFeatureName',
-        'feature_description' => 'setFeatureDescription',
-        'seller_eligible' => 'setSellerEligible'
+        'featureName' => 'setFeatureName',
+        'featureDescription' => 'setFeatureDescription',
+        'sellerEligible' => 'setSellerEligible'
     ];
 
     /**
@@ -129,9 +129,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'feature_name' => 'getFeatureName',
-        'feature_description' => 'getFeatureDescription',
-        'seller_eligible' => 'getSellerEligible'
+        'featureName' => 'getFeatureName',
+        'featureDescription' => 'getFeatureDescription',
+        'sellerEligible' => 'getSellerEligible'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['feature_name'] = $data['feature_name'] ?? null;
-        $this->container['feature_description'] = $data['feature_description'] ?? null;
-        $this->container['seller_eligible'] = $data['seller_eligible'] ?? null;
+        $this->container['featureName'] = $data['featureName'] ?? null;
+        $this->container['featureDescription'] = $data['featureDescription'] ?? null;
+        $this->container['sellerEligible'] = $data['sellerEligible'] ?? null;
     }
 
     /**
@@ -208,11 +208,11 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['feature_name'] === null) {
-            $invalidProperties[] = "'feature_name' can't be null";
+        if ($this->container['featureName'] === null) {
+            $invalidProperties[] = "'featureName' can't be null";
         }
-        if ($this->container['feature_description'] === null) {
-            $invalidProperties[] = "'feature_description' can't be null";
+        if ($this->container['featureDescription'] === null) {
+            $invalidProperties[] = "'featureDescription' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +230,73 @@ class Feature implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets feature_name
+     * Gets featureName
      *
      * @return string
      */
     public function getFeatureName()
     {
-        return $this->container['feature_name'];
+        return $this->container['featureName'];
     }
 
     /**
-     * Sets feature_name
+     * Sets featureName
      *
-     * @param string $feature_name The feature name.
+     * @param string $featureName The feature name.
      *
      * @return self
      */
-    public function setFeatureName($feature_name)
+    public function setFeatureName($featureName)
     {
-        $this->container['feature_name'] = $feature_name;
+        $this->container['featureName'] = $featureName;
 
         return $this;
     }
 
     /**
-     * Gets feature_description
+     * Gets featureDescription
      *
      * @return string
      */
     public function getFeatureDescription()
     {
-        return $this->container['feature_description'];
+        return $this->container['featureDescription'];
     }
 
     /**
-     * Sets feature_description
+     * Sets featureDescription
      *
-     * @param string $feature_description The feature description.
+     * @param string $featureDescription The feature description.
      *
      * @return self
      */
-    public function setFeatureDescription($feature_description)
+    public function setFeatureDescription($featureDescription)
     {
-        $this->container['feature_description'] = $feature_description;
+        $this->container['featureDescription'] = $featureDescription;
 
         return $this;
     }
 
     /**
-     * Gets seller_eligible
+     * Gets sellerEligible
      *
      * @return bool|null
      */
     public function getSellerEligible()
     {
-        return $this->container['seller_eligible'];
+        return $this->container['sellerEligible'];
     }
 
     /**
-     * Sets seller_eligible
+     * Sets sellerEligible
      *
-     * @param bool|null $seller_eligible When true, indicates that the seller is eligible to use the feature.
+     * @param bool|null $sellerEligible When true, indicates that the seller is eligible to use the feature.
      *
      * @return self
      */
-    public function setSellerEligible($seller_eligible)
+    public function setSellerEligible($sellerEligible)
     {
-        $this->container['seller_eligible'] = $seller_eligible;
+        $this->container['sellerEligible'] = $sellerEligible;
 
         return $this;
     }

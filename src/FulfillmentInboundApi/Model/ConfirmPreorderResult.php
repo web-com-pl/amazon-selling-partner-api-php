@@ -61,8 +61,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'confirmed_need_by_date' => '\DateTime',
-        'confirmed_fulfillable_date' => '\DateTime'
+        'confirmedNeedByDate' => '\DateTime',
+        'confirmedFulfillableDate' => '\DateTime'
     ];
 
     /**
@@ -73,8 +73,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'confirmed_need_by_date' => 'date',
-        'confirmed_fulfillable_date' => 'date'
+        'confirmedNeedByDate' => 'date',
+        'confirmedFulfillableDate' => 'date'
     ];
 
     /**
@@ -104,8 +104,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'confirmed_need_by_date' => 'ConfirmedNeedByDate',
-        'confirmed_fulfillable_date' => 'ConfirmedFulfillableDate'
+        'confirmedNeedByDate' => 'ConfirmedNeedByDate',
+        'confirmedFulfillableDate' => 'ConfirmedFulfillableDate'
     ];
 
     /**
@@ -114,8 +114,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'confirmed_need_by_date' => 'setConfirmedNeedByDate',
-        'confirmed_fulfillable_date' => 'setConfirmedFulfillableDate'
+        'confirmedNeedByDate' => 'setConfirmedNeedByDate',
+        'confirmedFulfillableDate' => 'setConfirmedFulfillableDate'
     ];
 
     /**
@@ -124,8 +124,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'confirmed_need_by_date' => 'getConfirmedNeedByDate',
-        'confirmed_fulfillable_date' => 'getConfirmedFulfillableDate'
+        'confirmedNeedByDate' => 'getConfirmedNeedByDate',
+        'confirmedFulfillableDate' => 'getConfirmedFulfillableDate'
     ];
 
     /**
@@ -188,8 +188,8 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['confirmed_need_by_date'] = $data['confirmed_need_by_date'] ?? null;
-        $this->container['confirmed_fulfillable_date'] = $data['confirmed_fulfillable_date'] ?? null;
+        $this->container['confirmedNeedByDate'] = $data['confirmedNeedByDate'] ?? null;
+        $this->container['confirmedFulfillableDate'] = $data['confirmedFulfillableDate'] ?? null;
     }
 
     /**
@@ -217,49 +217,49 @@ class ConfirmPreorderResult implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets confirmed_need_by_date
+     * Gets confirmedNeedByDate
      *
      * @return \DateTime|null
      */
     public function getConfirmedNeedByDate()
     {
-        return $this->container['confirmed_need_by_date'];
+        return $this->container['confirmedNeedByDate'];
     }
 
     /**
-     * Sets confirmed_need_by_date
+     * Sets confirmedNeedByDate
      *
-     * @param \DateTime|null $confirmed_need_by_date confirmed_need_by_date
+     * @param \DateTime|null $confirmedNeedByDate confirmedNeedByDate
      *
      * @return self
      */
-    public function setConfirmedNeedByDate($confirmed_need_by_date)
+    public function setConfirmedNeedByDate($confirmedNeedByDate)
     {
-        $this->container['confirmed_need_by_date'] = $confirmed_need_by_date;
+        $this->container['confirmedNeedByDate'] = $confirmedNeedByDate;
 
         return $this;
     }
 
     /**
-     * Gets confirmed_fulfillable_date
+     * Gets confirmedFulfillableDate
      *
      * @return \DateTime|null
      */
     public function getConfirmedFulfillableDate()
     {
-        return $this->container['confirmed_fulfillable_date'];
+        return $this->container['confirmedFulfillableDate'];
     }
 
     /**
-     * Sets confirmed_fulfillable_date
+     * Sets confirmedFulfillableDate
      *
-     * @param \DateTime|null $confirmed_fulfillable_date confirmed_fulfillable_date
+     * @param \DateTime|null $confirmedFulfillableDate confirmedFulfillableDate
      *
      * @return self
      */
-    public function setConfirmedFulfillableDate($confirmed_fulfillable_date)
+    public function setConfirmedFulfillableDate($confirmedFulfillableDate)
     {
-        $this->container['confirmed_fulfillable_date'] = $confirmed_fulfillable_date;
+        $this->container['confirmedFulfillableDate'] = $confirmedFulfillableDate;
 
         return $this;
     }

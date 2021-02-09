@@ -63,15 +63,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'address_line1' => 'string',
-        'address_line2' => 'string',
-        'address_line3' => 'string',
-        'district_or_county' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressLine3' => 'string',
+        'districtOrCounty' => 'string',
         'email' => 'string',
         'city' => 'string',
-        'state_or_province_code' => 'string',
-        'postal_code' => 'string',
-        'country_code' => 'string',
+        'stateOrProvinceCode' => 'string',
+        'postalCode' => 'string',
+        'countryCode' => 'string',
         'phone' => 'string'
     ];
 
@@ -84,15 +84,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'address_line1' => null,
-        'address_line2' => null,
-        'address_line3' => null,
-        'district_or_county' => null,
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'addressLine3' => null,
+        'districtOrCounty' => null,
         'email' => null,
         'city' => null,
-        'state_or_province_code' => null,
-        'postal_code' => null,
-        'country_code' => null,
+        'stateOrProvinceCode' => null,
+        'postalCode' => null,
+        'countryCode' => null,
         'phone' => null
     ];
 
@@ -124,15 +124,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'name' => 'Name',
-        'address_line1' => 'AddressLine1',
-        'address_line2' => 'AddressLine2',
-        'address_line3' => 'AddressLine3',
-        'district_or_county' => 'DistrictOrCounty',
+        'addressLine1' => 'AddressLine1',
+        'addressLine2' => 'AddressLine2',
+        'addressLine3' => 'AddressLine3',
+        'districtOrCounty' => 'DistrictOrCounty',
         'email' => 'Email',
         'city' => 'City',
-        'state_or_province_code' => 'StateOrProvinceCode',
-        'postal_code' => 'PostalCode',
-        'country_code' => 'CountryCode',
+        'stateOrProvinceCode' => 'StateOrProvinceCode',
+        'postalCode' => 'PostalCode',
+        'countryCode' => 'CountryCode',
         'phone' => 'Phone'
     ];
 
@@ -143,15 +143,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'name' => 'setName',
-        'address_line1' => 'setAddressLine1',
-        'address_line2' => 'setAddressLine2',
-        'address_line3' => 'setAddressLine3',
-        'district_or_county' => 'setDistrictOrCounty',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressLine3' => 'setAddressLine3',
+        'districtOrCounty' => 'setDistrictOrCounty',
         'email' => 'setEmail',
         'city' => 'setCity',
-        'state_or_province_code' => 'setStateOrProvinceCode',
-        'postal_code' => 'setPostalCode',
-        'country_code' => 'setCountryCode',
+        'stateOrProvinceCode' => 'setStateOrProvinceCode',
+        'postalCode' => 'setPostalCode',
+        'countryCode' => 'setCountryCode',
         'phone' => 'setPhone'
     ];
 
@@ -162,15 +162,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'name' => 'getName',
-        'address_line1' => 'getAddressLine1',
-        'address_line2' => 'getAddressLine2',
-        'address_line3' => 'getAddressLine3',
-        'district_or_county' => 'getDistrictOrCounty',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressLine3' => 'getAddressLine3',
+        'districtOrCounty' => 'getDistrictOrCounty',
         'email' => 'getEmail',
         'city' => 'getCity',
-        'state_or_province_code' => 'getStateOrProvinceCode',
-        'postal_code' => 'getPostalCode',
-        'country_code' => 'getCountryCode',
+        'stateOrProvinceCode' => 'getStateOrProvinceCode',
+        'postalCode' => 'getPostalCode',
+        'countryCode' => 'getCountryCode',
         'phone' => 'getPhone'
     ];
 
@@ -235,15 +235,15 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['address_line1'] = $data['address_line1'] ?? null;
-        $this->container['address_line2'] = $data['address_line2'] ?? null;
-        $this->container['address_line3'] = $data['address_line3'] ?? null;
-        $this->container['district_or_county'] = $data['district_or_county'] ?? null;
+        $this->container['addressLine1'] = $data['addressLine1'] ?? null;
+        $this->container['addressLine2'] = $data['addressLine2'] ?? null;
+        $this->container['addressLine3'] = $data['addressLine3'] ?? null;
+        $this->container['districtOrCounty'] = $data['districtOrCounty'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
         $this->container['city'] = $data['city'] ?? null;
-        $this->container['state_or_province_code'] = $data['state_or_province_code'] ?? null;
-        $this->container['postal_code'] = $data['postal_code'] ?? null;
-        $this->container['country_code'] = $data['country_code'] ?? null;
+        $this->container['stateOrProvinceCode'] = $data['stateOrProvinceCode'] ?? null;
+        $this->container['postalCode'] = $data['postalCode'] ?? null;
+        $this->container['countryCode'] = $data['countryCode'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
     }
 
@@ -263,19 +263,19 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 30.";
         }
 
-        if ($this->container['address_line1'] === null) {
-            $invalidProperties[] = "'address_line1' can't be null";
+        if ($this->container['addressLine1'] === null) {
+            $invalidProperties[] = "'addressLine1' can't be null";
         }
-        if ((mb_strlen($this->container['address_line1']) > 180)) {
-            $invalidProperties[] = "invalid value for 'address_line1', the character length must be smaller than or equal to 180.";
-        }
-
-        if (!is_null($this->container['address_line2']) && (mb_strlen($this->container['address_line2']) > 60)) {
-            $invalidProperties[] = "invalid value for 'address_line2', the character length must be smaller than or equal to 60.";
+        if ((mb_strlen($this->container['addressLine1']) > 180)) {
+            $invalidProperties[] = "invalid value for 'addressLine1', the character length must be smaller than or equal to 180.";
         }
 
-        if (!is_null($this->container['address_line3']) && (mb_strlen($this->container['address_line3']) > 60)) {
-            $invalidProperties[] = "invalid value for 'address_line3', the character length must be smaller than or equal to 60.";
+        if (!is_null($this->container['addressLine2']) && (mb_strlen($this->container['addressLine2']) > 60)) {
+            $invalidProperties[] = "invalid value for 'addressLine2', the character length must be smaller than or equal to 60.";
+        }
+
+        if (!is_null($this->container['addressLine3']) && (mb_strlen($this->container['addressLine3']) > 60)) {
+            $invalidProperties[] = "invalid value for 'addressLine3', the character length must be smaller than or equal to 60.";
         }
 
         if ($this->container['email'] === null) {
@@ -288,19 +288,19 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'city', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['state_or_province_code']) && (mb_strlen($this->container['state_or_province_code']) > 30)) {
-            $invalidProperties[] = "invalid value for 'state_or_province_code', the character length must be smaller than or equal to 30.";
+        if (!is_null($this->container['stateOrProvinceCode']) && (mb_strlen($this->container['stateOrProvinceCode']) > 30)) {
+            $invalidProperties[] = "invalid value for 'stateOrProvinceCode', the character length must be smaller than or equal to 30.";
         }
 
-        if ($this->container['postal_code'] === null) {
-            $invalidProperties[] = "'postal_code' can't be null";
+        if ($this->container['postalCode'] === null) {
+            $invalidProperties[] = "'postalCode' can't be null";
         }
-        if ((mb_strlen($this->container['postal_code']) > 30)) {
-            $invalidProperties[] = "invalid value for 'postal_code', the character length must be smaller than or equal to 30.";
+        if ((mb_strlen($this->container['postalCode']) > 30)) {
+            $invalidProperties[] = "invalid value for 'postalCode', the character length must be smaller than or equal to 30.";
         }
 
-        if ($this->container['country_code'] === null) {
-            $invalidProperties[] = "'country_code' can't be null";
+        if ($this->container['countryCode'] === null) {
+            $invalidProperties[] = "'countryCode' can't be null";
         }
         if ($this->container['phone'] === null) {
             $invalidProperties[] = "'phone' can't be null";
@@ -353,109 +353,109 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address_line1
+     * Gets addressLine1
      *
      * @return string
      */
     public function getAddressLine1()
     {
-        return $this->container['address_line1'];
+        return $this->container['addressLine1'];
     }
 
     /**
-     * Sets address_line1
+     * Sets addressLine1
      *
-     * @param string $address_line1 The street address information.
+     * @param string $addressLine1 The street address information.
      *
      * @return self
      */
-    public function setAddressLine1($address_line1)
+    public function setAddressLine1($addressLine1)
     {
-        if ((mb_strlen($address_line1) > 180)) {
-            throw new \InvalidArgumentException('invalid length for $address_line1 when calling Address., must be smaller than or equal to 180.');
+        if ((mb_strlen($addressLine1) > 180)) {
+            throw new \InvalidArgumentException('invalid length for $addressLine1 when calling Address., must be smaller than or equal to 180.');
         }
 
-        $this->container['address_line1'] = $address_line1;
+        $this->container['addressLine1'] = $addressLine1;
 
         return $this;
     }
 
     /**
-     * Gets address_line2
+     * Gets addressLine2
      *
      * @return string|null
      */
     public function getAddressLine2()
     {
-        return $this->container['address_line2'];
+        return $this->container['addressLine2'];
     }
 
     /**
-     * Sets address_line2
+     * Sets addressLine2
      *
-     * @param string|null $address_line2 Additional street address information.
+     * @param string|null $addressLine2 Additional street address information.
      *
      * @return self
      */
-    public function setAddressLine2($address_line2)
+    public function setAddressLine2($addressLine2)
     {
-        if (!is_null($address_line2) && (mb_strlen($address_line2) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $address_line2 when calling Address., must be smaller than or equal to 60.');
+        if (!is_null($addressLine2) && (mb_strlen($addressLine2) > 60)) {
+            throw new \InvalidArgumentException('invalid length for $addressLine2 when calling Address., must be smaller than or equal to 60.');
         }
 
-        $this->container['address_line2'] = $address_line2;
+        $this->container['addressLine2'] = $addressLine2;
 
         return $this;
     }
 
     /**
-     * Gets address_line3
+     * Gets addressLine3
      *
      * @return string|null
      */
     public function getAddressLine3()
     {
-        return $this->container['address_line3'];
+        return $this->container['addressLine3'];
     }
 
     /**
-     * Sets address_line3
+     * Sets addressLine3
      *
-     * @param string|null $address_line3 Additional street address information.
+     * @param string|null $addressLine3 Additional street address information.
      *
      * @return self
      */
-    public function setAddressLine3($address_line3)
+    public function setAddressLine3($addressLine3)
     {
-        if (!is_null($address_line3) && (mb_strlen($address_line3) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $address_line3 when calling Address., must be smaller than or equal to 60.');
+        if (!is_null($addressLine3) && (mb_strlen($addressLine3) > 60)) {
+            throw new \InvalidArgumentException('invalid length for $addressLine3 when calling Address., must be smaller than or equal to 60.');
         }
 
-        $this->container['address_line3'] = $address_line3;
+        $this->container['addressLine3'] = $addressLine3;
 
         return $this;
     }
 
     /**
-     * Gets district_or_county
+     * Gets districtOrCounty
      *
      * @return string|null
      */
     public function getDistrictOrCounty()
     {
-        return $this->container['district_or_county'];
+        return $this->container['districtOrCounty'];
     }
 
     /**
-     * Sets district_or_county
+     * Sets districtOrCounty
      *
-     * @param string|null $district_or_county The district or county.
+     * @param string|null $districtOrCounty The district or county.
      *
      * @return self
      */
-    public function setDistrictOrCounty($district_or_county)
+    public function setDistrictOrCounty($districtOrCounty)
     {
-        $this->container['district_or_county'] = $district_or_county;
+        $this->container['districtOrCounty'] = $districtOrCounty;
 
         return $this;
     }
@@ -513,81 +513,81 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets state_or_province_code
+     * Gets stateOrProvinceCode
      *
      * @return string|null
      */
     public function getStateOrProvinceCode()
     {
-        return $this->container['state_or_province_code'];
+        return $this->container['stateOrProvinceCode'];
     }
 
     /**
-     * Sets state_or_province_code
+     * Sets stateOrProvinceCode
      *
-     * @param string|null $state_or_province_code The state or province code.
+     * @param string|null $stateOrProvinceCode The state or province code.
      *
      * @return self
      */
-    public function setStateOrProvinceCode($state_or_province_code)
+    public function setStateOrProvinceCode($stateOrProvinceCode)
     {
-        if (!is_null($state_or_province_code) && (mb_strlen($state_or_province_code) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $state_or_province_code when calling Address., must be smaller than or equal to 30.');
+        if (!is_null($stateOrProvinceCode) && (mb_strlen($stateOrProvinceCode) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $stateOrProvinceCode when calling Address., must be smaller than or equal to 30.');
         }
 
-        $this->container['state_or_province_code'] = $state_or_province_code;
+        $this->container['stateOrProvinceCode'] = $stateOrProvinceCode;
 
         return $this;
     }
 
     /**
-     * Gets postal_code
+     * Gets postalCode
      *
      * @return string
      */
     public function getPostalCode()
     {
-        return $this->container['postal_code'];
+        return $this->container['postalCode'];
     }
 
     /**
-     * Sets postal_code
+     * Sets postalCode
      *
-     * @param string $postal_code The zip code or postal code.
+     * @param string $postalCode The zip code or postal code.
      *
      * @return self
      */
-    public function setPostalCode($postal_code)
+    public function setPostalCode($postalCode)
     {
-        if ((mb_strlen($postal_code) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $postal_code when calling Address., must be smaller than or equal to 30.');
+        if ((mb_strlen($postalCode) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $postalCode when calling Address., must be smaller than or equal to 30.');
         }
 
-        $this->container['postal_code'] = $postal_code;
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string $country_code The country code. A two-character country code, in ISO 3166-1 alpha-2 format.
+     * @param string $countryCode The country code. A two-character country code, in ISO 3166-1 alpha-2 format.
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }

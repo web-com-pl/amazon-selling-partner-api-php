@@ -62,9 +62,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_name' => 'string',
-        'tracking_id' => 'string',
-        'package_status' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PackageStatus'
+        'carrierName' => 'string',
+        'trackingId' => 'string',
+        'packageStatus' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PackageStatus'
     ];
 
     /**
@@ -75,9 +75,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_name' => null,
-        'tracking_id' => null,
-        'package_status' => null
+        'carrierName' => null,
+        'trackingId' => null,
+        'packageStatus' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_name' => 'CarrierName',
-        'tracking_id' => 'TrackingId',
-        'package_status' => 'PackageStatus'
+        'carrierName' => 'CarrierName',
+        'trackingId' => 'TrackingId',
+        'packageStatus' => 'PackageStatus'
     ];
 
     /**
@@ -118,9 +118,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'carrier_name' => 'setCarrierName',
-        'tracking_id' => 'setTrackingId',
-        'package_status' => 'setPackageStatus'
+        'carrierName' => 'setCarrierName',
+        'trackingId' => 'setTrackingId',
+        'packageStatus' => 'setPackageStatus'
     ];
 
     /**
@@ -129,9 +129,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'carrier_name' => 'getCarrierName',
-        'tracking_id' => 'getTrackingId',
-        'package_status' => 'getPackageStatus'
+        'carrierName' => 'getCarrierName',
+        'trackingId' => 'getTrackingId',
+        'packageStatus' => 'getPackageStatus'
     ];
 
     /**
@@ -194,9 +194,9 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
-        $this->container['tracking_id'] = $data['tracking_id'] ?? null;
-        $this->container['package_status'] = $data['package_status'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
+        $this->container['trackingId'] = $data['trackingId'] ?? null;
+        $this->container['packageStatus'] = $data['packageStatus'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
-        if ($this->container['tracking_id'] === null) {
-            $invalidProperties[] = "'tracking_id' can't be null";
+        if ($this->container['trackingId'] === null) {
+            $invalidProperties[] = "'trackingId' can't be null";
         }
-        if ($this->container['package_status'] === null) {
-            $invalidProperties[] = "'package_status' can't be null";
+        if ($this->container['packageStatus'] === null) {
+            $invalidProperties[] = "'packageStatus' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class NonPartneredSmallParcelPackageOutput implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The carrier that you are using for the inbound shipment.
+     * @param string $carrierName The carrier that you are using for the inbound shipment.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }
 
     /**
-     * Gets tracking_id
+     * Gets trackingId
      *
      * @return string
      */
     public function getTrackingId()
     {
-        return $this->container['tracking_id'];
+        return $this->container['trackingId'];
     }
 
     /**
-     * Sets tracking_id
+     * Sets trackingId
      *
-     * @param string $tracking_id The tracking number of the package, provided by the carrier.
+     * @param string $trackingId The tracking number of the package, provided by the carrier.
      *
      * @return self
      */
-    public function setTrackingId($tracking_id)
+    public function setTrackingId($trackingId)
     {
-        $this->container['tracking_id'] = $tracking_id;
+        $this->container['trackingId'] = $trackingId;
 
         return $this;
     }
 
     /**
-     * Gets package_status
+     * Gets packageStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PackageStatus
      */
     public function getPackageStatus()
     {
-        return $this->container['package_status'];
+        return $this->container['packageStatus'];
     }
 
     /**
-     * Sets package_status
+     * Sets packageStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PackageStatus $package_status package_status
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PackageStatus $packageStatus packageStatus
      *
      * @return self
      */
-    public function setPackageStatus($package_status)
+    public function setPackageStatus($packageStatus)
     {
-        $this->container['package_status'] = $package_status;
+        $this->container['packageStatus'] = $packageStatus;
 
         return $this;
     }

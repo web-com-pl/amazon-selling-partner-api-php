@@ -62,16 +62,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
+        'sellerSku' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
         'quantity' => 'int',
-        'gift_message' => 'string',
-        'displayable_comment' => 'string',
-        'fulfillment_network_sku' => 'string',
-        'order_item_disposition' => 'string',
-        'per_unit_declared_value' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'per_unit_price' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'per_unit_tax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
+        'giftMessage' => 'string',
+        'displayableComment' => 'string',
+        'fulfillmentNetworkSku' => 'string',
+        'orderItemDisposition' => 'string',
+        'perUnitDeclaredValue' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'perUnitPrice' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'perUnitTax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
     ];
 
     /**
@@ -82,16 +82,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'seller_fulfillment_order_item_id' => null,
+        'sellerSku' => null,
+        'sellerFulfillmentOrderItemId' => null,
         'quantity' => 'int32',
-        'gift_message' => null,
-        'displayable_comment' => null,
-        'fulfillment_network_sku' => null,
-        'order_item_disposition' => null,
-        'per_unit_declared_value' => null,
-        'per_unit_price' => null,
-        'per_unit_tax' => null
+        'giftMessage' => null,
+        'displayableComment' => null,
+        'fulfillmentNetworkSku' => null,
+        'orderItemDisposition' => null,
+        'perUnitDeclaredValue' => null,
+        'perUnitPrice' => null,
+        'perUnitTax' => null
     ];
 
     /**
@@ -121,16 +121,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
+        'sellerSku' => 'sellerSku',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
         'quantity' => 'quantity',
-        'gift_message' => 'giftMessage',
-        'displayable_comment' => 'displayableComment',
-        'fulfillment_network_sku' => 'fulfillmentNetworkSku',
-        'order_item_disposition' => 'orderItemDisposition',
-        'per_unit_declared_value' => 'perUnitDeclaredValue',
-        'per_unit_price' => 'perUnitPrice',
-        'per_unit_tax' => 'perUnitTax'
+        'giftMessage' => 'giftMessage',
+        'displayableComment' => 'displayableComment',
+        'fulfillmentNetworkSku' => 'fulfillmentNetworkSku',
+        'orderItemDisposition' => 'orderItemDisposition',
+        'perUnitDeclaredValue' => 'perUnitDeclaredValue',
+        'perUnitPrice' => 'perUnitPrice',
+        'perUnitTax' => 'perUnitTax'
     ];
 
     /**
@@ -139,16 +139,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
+        'sellerSku' => 'setSellerSku',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
         'quantity' => 'setQuantity',
-        'gift_message' => 'setGiftMessage',
-        'displayable_comment' => 'setDisplayableComment',
-        'fulfillment_network_sku' => 'setFulfillmentNetworkSku',
-        'order_item_disposition' => 'setOrderItemDisposition',
-        'per_unit_declared_value' => 'setPerUnitDeclaredValue',
-        'per_unit_price' => 'setPerUnitPrice',
-        'per_unit_tax' => 'setPerUnitTax'
+        'giftMessage' => 'setGiftMessage',
+        'displayableComment' => 'setDisplayableComment',
+        'fulfillmentNetworkSku' => 'setFulfillmentNetworkSku',
+        'orderItemDisposition' => 'setOrderItemDisposition',
+        'perUnitDeclaredValue' => 'setPerUnitDeclaredValue',
+        'perUnitPrice' => 'setPerUnitPrice',
+        'perUnitTax' => 'setPerUnitTax'
     ];
 
     /**
@@ -157,16 +157,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
+        'sellerSku' => 'getSellerSku',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
         'quantity' => 'getQuantity',
-        'gift_message' => 'getGiftMessage',
-        'displayable_comment' => 'getDisplayableComment',
-        'fulfillment_network_sku' => 'getFulfillmentNetworkSku',
-        'order_item_disposition' => 'getOrderItemDisposition',
-        'per_unit_declared_value' => 'getPerUnitDeclaredValue',
-        'per_unit_price' => 'getPerUnitPrice',
-        'per_unit_tax' => 'getPerUnitTax'
+        'giftMessage' => 'getGiftMessage',
+        'displayableComment' => 'getDisplayableComment',
+        'fulfillmentNetworkSku' => 'getFulfillmentNetworkSku',
+        'orderItemDisposition' => 'getOrderItemDisposition',
+        'perUnitDeclaredValue' => 'getPerUnitDeclaredValue',
+        'perUnitPrice' => 'getPerUnitPrice',
+        'perUnitTax' => 'getPerUnitTax'
     ];
 
     /**
@@ -229,16 +229,16 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['gift_message'] = $data['gift_message'] ?? null;
-        $this->container['displayable_comment'] = $data['displayable_comment'] ?? null;
-        $this->container['fulfillment_network_sku'] = $data['fulfillment_network_sku'] ?? null;
-        $this->container['order_item_disposition'] = $data['order_item_disposition'] ?? null;
-        $this->container['per_unit_declared_value'] = $data['per_unit_declared_value'] ?? null;
-        $this->container['per_unit_price'] = $data['per_unit_price'] ?? null;
-        $this->container['per_unit_tax'] = $data['per_unit_tax'] ?? null;
+        $this->container['giftMessage'] = $data['giftMessage'] ?? null;
+        $this->container['displayableComment'] = $data['displayableComment'] ?? null;
+        $this->container['fulfillmentNetworkSku'] = $data['fulfillmentNetworkSku'] ?? null;
+        $this->container['orderItemDisposition'] = $data['orderItemDisposition'] ?? null;
+        $this->container['perUnitDeclaredValue'] = $data['perUnitDeclaredValue'] ?? null;
+        $this->container['perUnitPrice'] = $data['perUnitPrice'] ?? null;
+        $this->container['perUnitTax'] = $data['perUnitTax'] ?? null;
     }
 
     /**
@@ -250,22 +250,22 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ((mb_strlen($this->container['seller_fulfillment_order_item_id']) > 50)) {
-            $invalidProperties[] = "invalid value for 'seller_fulfillment_order_item_id', the character length must be smaller than or equal to 50.";
+        if ((mb_strlen($this->container['sellerFulfillmentOrderItemId']) > 50)) {
+            $invalidProperties[] = "invalid value for 'sellerFulfillmentOrderItemId', the character length must be smaller than or equal to 50.";
         }
 
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if (!is_null($this->container['gift_message']) && (mb_strlen($this->container['gift_message']) > 512)) {
-            $invalidProperties[] = "invalid value for 'gift_message', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['giftMessage']) && (mb_strlen($this->container['giftMessage']) > 512)) {
+            $invalidProperties[] = "invalid value for 'giftMessage', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['displayable_comment']) && (mb_strlen($this->container['displayable_comment']) > 250)) {
-            $invalidProperties[] = "invalid value for 'displayable_comment', the character length must be smaller than or equal to 250.";
+        if (!is_null($this->container['displayableComment']) && (mb_strlen($this->container['displayableComment']) > 250)) {
+            $invalidProperties[] = "invalid value for 'displayableComment', the character length must be smaller than or equal to 250.";
         }
 
         return $invalidProperties;
@@ -284,53 +284,53 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string|null
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string|null $seller_sku The seller SKU of the item.
+     * @param string|null $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id Identifies the fulfillment order item to update. Created with a previous call to the createFulfillmentOrder operation.
+     * @param string $sellerFulfillmentOrderItemId Identifies the fulfillment order item to update. Created with a previous call to the createFulfillmentOrder operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        if ((mb_strlen($seller_fulfillment_order_item_id) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $seller_fulfillment_order_item_id when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 50.');
+        if ((mb_strlen($sellerFulfillmentOrderItemId) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $sellerFulfillmentOrderItemId when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 50.');
         }
 
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
@@ -360,177 +360,177 @@ class UpdateFulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets gift_message
+     * Gets giftMessage
      *
      * @return string|null
      */
     public function getGiftMessage()
     {
-        return $this->container['gift_message'];
+        return $this->container['giftMessage'];
     }
 
     /**
-     * Sets gift_message
+     * Sets giftMessage
      *
-     * @param string|null $gift_message A message to the gift recipient, if applicable.
+     * @param string|null $giftMessage A message to the gift recipient, if applicable.
      *
      * @return self
      */
-    public function setGiftMessage($gift_message)
+    public function setGiftMessage($giftMessage)
     {
-        if (!is_null($gift_message) && (mb_strlen($gift_message) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $gift_message when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 512.');
+        if (!is_null($giftMessage) && (mb_strlen($giftMessage) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $giftMessage when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 512.');
         }
 
-        $this->container['gift_message'] = $gift_message;
+        $this->container['giftMessage'] = $giftMessage;
 
         return $this;
     }
 
     /**
-     * Gets displayable_comment
+     * Gets displayableComment
      *
      * @return string|null
      */
     public function getDisplayableComment()
     {
-        return $this->container['displayable_comment'];
+        return $this->container['displayableComment'];
     }
 
     /**
-     * Sets displayable_comment
+     * Sets displayableComment
      *
-     * @param string|null $displayable_comment Item-specific text that displays in recipient-facing materials such as the outbound shipment packing slip.
+     * @param string|null $displayableComment Item-specific text that displays in recipient-facing materials such as the outbound shipment packing slip.
      *
      * @return self
      */
-    public function setDisplayableComment($displayable_comment)
+    public function setDisplayableComment($displayableComment)
     {
-        if (!is_null($displayable_comment) && (mb_strlen($displayable_comment) > 250)) {
-            throw new \InvalidArgumentException('invalid length for $displayable_comment when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 250.');
+        if (!is_null($displayableComment) && (mb_strlen($displayableComment) > 250)) {
+            throw new \InvalidArgumentException('invalid length for $displayableComment when calling UpdateFulfillmentOrderItem., must be smaller than or equal to 250.');
         }
 
-        $this->container['displayable_comment'] = $displayable_comment;
+        $this->container['displayableComment'] = $displayableComment;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_network_sku
+     * Gets fulfillmentNetworkSku
      *
      * @return string|null
      */
     public function getFulfillmentNetworkSku()
     {
-        return $this->container['fulfillment_network_sku'];
+        return $this->container['fulfillmentNetworkSku'];
     }
 
     /**
-     * Sets fulfillment_network_sku
+     * Sets fulfillmentNetworkSku
      *
-     * @param string|null $fulfillment_network_sku Amazon's fulfillment network SKU of the item.
+     * @param string|null $fulfillmentNetworkSku Amazon's fulfillment network SKU of the item.
      *
      * @return self
      */
-    public function setFulfillmentNetworkSku($fulfillment_network_sku)
+    public function setFulfillmentNetworkSku($fulfillmentNetworkSku)
     {
-        $this->container['fulfillment_network_sku'] = $fulfillment_network_sku;
+        $this->container['fulfillmentNetworkSku'] = $fulfillmentNetworkSku;
 
         return $this;
     }
 
     /**
-     * Gets order_item_disposition
+     * Gets orderItemDisposition
      *
      * @return string|null
      */
     public function getOrderItemDisposition()
     {
-        return $this->container['order_item_disposition'];
+        return $this->container['orderItemDisposition'];
     }
 
     /**
-     * Sets order_item_disposition
+     * Sets orderItemDisposition
      *
-     * @param string|null $order_item_disposition Indicates whether the item is sellable or unsellable.
+     * @param string|null $orderItemDisposition Indicates whether the item is sellable or unsellable.
      *
      * @return self
      */
-    public function setOrderItemDisposition($order_item_disposition)
+    public function setOrderItemDisposition($orderItemDisposition)
     {
-        $this->container['order_item_disposition'] = $order_item_disposition;
+        $this->container['orderItemDisposition'] = $orderItemDisposition;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_declared_value
+     * Gets perUnitDeclaredValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitDeclaredValue()
     {
-        return $this->container['per_unit_declared_value'];
+        return $this->container['perUnitDeclaredValue'];
     }
 
     /**
-     * Sets per_unit_declared_value
+     * Sets perUnitDeclaredValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_declared_value per_unit_declared_value
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitDeclaredValue perUnitDeclaredValue
      *
      * @return self
      */
-    public function setPerUnitDeclaredValue($per_unit_declared_value)
+    public function setPerUnitDeclaredValue($perUnitDeclaredValue)
     {
-        $this->container['per_unit_declared_value'] = $per_unit_declared_value;
+        $this->container['perUnitDeclaredValue'] = $perUnitDeclaredValue;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_price
+     * Gets perUnitPrice
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitPrice()
     {
-        return $this->container['per_unit_price'];
+        return $this->container['perUnitPrice'];
     }
 
     /**
-     * Sets per_unit_price
+     * Sets perUnitPrice
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_price per_unit_price
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitPrice perUnitPrice
      *
      * @return self
      */
-    public function setPerUnitPrice($per_unit_price)
+    public function setPerUnitPrice($perUnitPrice)
     {
-        $this->container['per_unit_price'] = $per_unit_price;
+        $this->container['perUnitPrice'] = $perUnitPrice;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_tax
+     * Gets perUnitTax
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitTax()
     {
-        return $this->container['per_unit_tax'];
+        return $this->container['perUnitTax'];
     }
 
     /**
-     * Sets per_unit_tax
+     * Sets perUnitTax
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_tax per_unit_tax
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitTax perUnitTax
      *
      * @return self
      */
-    public function setPerUnitTax($per_unit_tax)
+    public function setPerUnitTax($perUnitTax)
     {
-        $this->container['per_unit_tax'] = $per_unit_tax;
+        $this->container['perUnitTax'] = $perUnitTax;
 
         return $this;
     }

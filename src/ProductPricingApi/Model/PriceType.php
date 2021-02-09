@@ -61,8 +61,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'landed_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'listing_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'landedPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'listingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'shipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'points' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\Points'
     ];
@@ -75,8 +75,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'landed_price' => null,
-        'listing_price' => null,
+        'landedPrice' => null,
+        'listingPrice' => null,
         'shipping' => null,
         'points' => null
     ];
@@ -108,8 +108,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'landed_price' => 'LandedPrice',
-        'listing_price' => 'ListingPrice',
+        'landedPrice' => 'LandedPrice',
+        'listingPrice' => 'ListingPrice',
         'shipping' => 'Shipping',
         'points' => 'Points'
     ];
@@ -120,8 +120,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'landed_price' => 'setLandedPrice',
-        'listing_price' => 'setListingPrice',
+        'landedPrice' => 'setLandedPrice',
+        'listingPrice' => 'setListingPrice',
         'shipping' => 'setShipping',
         'points' => 'setPoints'
     ];
@@ -132,8 +132,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'landed_price' => 'getLandedPrice',
-        'listing_price' => 'getListingPrice',
+        'landedPrice' => 'getLandedPrice',
+        'listingPrice' => 'getListingPrice',
         'shipping' => 'getShipping',
         'points' => 'getPoints'
     ];
@@ -198,8 +198,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['landed_price'] = $data['landed_price'] ?? null;
-        $this->container['listing_price'] = $data['listing_price'] ?? null;
+        $this->container['landedPrice'] = $data['landedPrice'] ?? null;
+        $this->container['listingPrice'] = $data['listingPrice'] ?? null;
         $this->container['shipping'] = $data['shipping'] ?? null;
         $this->container['points'] = $data['points'] ?? null;
     }
@@ -213,8 +213,8 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['listing_price'] === null) {
-            $invalidProperties[] = "'listing_price' can't be null";
+        if ($this->container['listingPrice'] === null) {
+            $invalidProperties[] = "'listingPrice' can't be null";
         }
         return $invalidProperties;
     }
@@ -232,49 +232,49 @@ class PriceType implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets landed_price
+     * Gets landedPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
      */
     public function getLandedPrice()
     {
-        return $this->container['landed_price'];
+        return $this->container['landedPrice'];
     }
 
     /**
-     * Sets landed_price
+     * Sets landedPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $landed_price landed_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $landedPrice landedPrice
      *
      * @return self
      */
-    public function setLandedPrice($landed_price)
+    public function setLandedPrice($landedPrice)
     {
-        $this->container['landed_price'] = $landed_price;
+        $this->container['landedPrice'] = $landedPrice;
 
         return $this;
     }
 
     /**
-     * Gets listing_price
+     * Gets listingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType
      */
     public function getListingPrice()
     {
-        return $this->container['listing_price'];
+        return $this->container['listingPrice'];
     }
 
     /**
-     * Sets listing_price
+     * Sets listingPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listing_price listing_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listingPrice listingPrice
      *
      * @return self
      */
-    public function setListingPrice($listing_price)
+    public function setListingPrice($listingPrice)
     {
-        $this->container['listing_price'] = $listing_price;
+        $this->container['listingPrice'] = $listingPrice;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'direct_payment_type' => 'string',
-        'direct_payment_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'directPaymentType' => 'string',
+        'directPaymentAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -74,8 +74,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'direct_payment_type' => null,
-        'direct_payment_amount' => null
+        'directPaymentType' => null,
+        'directPaymentAmount' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'direct_payment_type' => 'DirectPaymentType',
-        'direct_payment_amount' => 'DirectPaymentAmount'
+        'directPaymentType' => 'DirectPaymentType',
+        'directPaymentAmount' => 'DirectPaymentAmount'
     ];
 
     /**
@@ -115,8 +115,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'direct_payment_type' => 'setDirectPaymentType',
-        'direct_payment_amount' => 'setDirectPaymentAmount'
+        'directPaymentType' => 'setDirectPaymentType',
+        'directPaymentAmount' => 'setDirectPaymentAmount'
     ];
 
     /**
@@ -125,8 +125,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'direct_payment_type' => 'getDirectPaymentType',
-        'direct_payment_amount' => 'getDirectPaymentAmount'
+        'directPaymentType' => 'getDirectPaymentType',
+        'directPaymentAmount' => 'getDirectPaymentAmount'
     ];
 
     /**
@@ -189,8 +189,8 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['direct_payment_type'] = $data['direct_payment_type'] ?? null;
-        $this->container['direct_payment_amount'] = $data['direct_payment_amount'] ?? null;
+        $this->container['directPaymentType'] = $data['directPaymentType'] ?? null;
+        $this->container['directPaymentAmount'] = $data['directPaymentAmount'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class DirectPayment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets direct_payment_type
+     * Gets directPaymentType
      *
      * @return string|null
      */
     public function getDirectPaymentType()
     {
-        return $this->container['direct_payment_type'];
+        return $this->container['directPaymentType'];
     }
 
     /**
-     * Sets direct_payment_type
+     * Sets directPaymentType
      *
-     * @param string|null $direct_payment_type The type of payment.  Possible values:  * StoredValueCardRevenue - The amount that is deducted from the seller's account because the seller received money through a stored value card.  * StoredValueCardRefund - The amount that Amazon returns to the seller if the order that is bought using a stored value card is refunded.  * PrivateLabelCreditCardRevenue - The amount that is deducted from the seller's account because the seller received money through a private label credit card offered by Amazon.  * PrivateLabelCreditCardRefund - The amount that Amazon returns to the seller if the order that is bought using a private label credit card offered by Amazon is refunded.  * CollectOnDeliveryRevenue - The COD amount that the seller collected directly from the buyer.  * CollectOnDeliveryRefund - The amount that Amazon refunds to the buyer if an order paid for by COD is refunded.
+     * @param string|null $directPaymentType The type of payment.  Possible values:  * StoredValueCardRevenue - The amount that is deducted from the seller's account because the seller received money through a stored value card.  * StoredValueCardRefund - The amount that Amazon returns to the seller if the order that is bought using a stored value card is refunded.  * PrivateLabelCreditCardRevenue - The amount that is deducted from the seller's account because the seller received money through a private label credit card offered by Amazon.  * PrivateLabelCreditCardRefund - The amount that Amazon returns to the seller if the order that is bought using a private label credit card offered by Amazon is refunded.  * CollectOnDeliveryRevenue - The COD amount that the seller collected directly from the buyer.  * CollectOnDeliveryRefund - The amount that Amazon refunds to the buyer if an order paid for by COD is refunded.
      *
      * @return self
      */
-    public function setDirectPaymentType($direct_payment_type)
+    public function setDirectPaymentType($directPaymentType)
     {
-        $this->container['direct_payment_type'] = $direct_payment_type;
+        $this->container['directPaymentType'] = $directPaymentType;
 
         return $this;
     }
 
     /**
-     * Gets direct_payment_amount
+     * Gets directPaymentAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getDirectPaymentAmount()
     {
-        return $this->container['direct_payment_amount'];
+        return $this->container['directPaymentAmount'];
     }
 
     /**
-     * Sets direct_payment_amount
+     * Sets directPaymentAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $direct_payment_amount direct_payment_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $directPaymentAmount directPaymentAmount
      *
      * @return self
      */
-    public function setDirectPaymentAmount($direct_payment_amount)
+    public function setDirectPaymentAmount($directPaymentAmount)
     {
-        $this->container['direct_payment_amount'] = $direct_payment_amount;
+        $this->container['directPaymentAmount'] = $directPaymentAmount;
 
         return $this;
     }

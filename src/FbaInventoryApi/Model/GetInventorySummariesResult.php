@@ -63,7 +63,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'granularity' => '\Webcom\Amazon\Rest\FbaInventoryApi\Model\Granularity',
-        'inventory_summaries' => '\Webcom\Amazon\Rest\FbaInventoryApi\Model\InventorySummary[]'
+        'inventorySummaries' => '\Webcom\Amazon\Rest\FbaInventoryApi\Model\InventorySummary[]'
     ];
 
     /**
@@ -75,7 +75,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'granularity' => null,
-        'inventory_summaries' => null
+        'inventorySummaries' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'granularity' => 'granularity',
-        'inventory_summaries' => 'inventorySummaries'
+        'inventorySummaries' => 'inventorySummaries'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'granularity' => 'setGranularity',
-        'inventory_summaries' => 'setInventorySummaries'
+        'inventorySummaries' => 'setInventorySummaries'
     ];
 
     /**
@@ -126,7 +126,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'granularity' => 'getGranularity',
-        'inventory_summaries' => 'getInventorySummaries'
+        'inventorySummaries' => 'getInventorySummaries'
     ];
 
     /**
@@ -190,7 +190,7 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(array $data = null)
     {
         $this->container['granularity'] = $data['granularity'] ?? null;
-        $this->container['inventory_summaries'] = $data['inventory_summaries'] ?? null;
+        $this->container['inventorySummaries'] = $data['inventorySummaries'] ?? null;
     }
 
     /**
@@ -205,8 +205,8 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['granularity'] === null) {
             $invalidProperties[] = "'granularity' can't be null";
         }
-        if ($this->container['inventory_summaries'] === null) {
-            $invalidProperties[] = "'inventory_summaries' can't be null";
+        if ($this->container['inventorySummaries'] === null) {
+            $invalidProperties[] = "'inventorySummaries' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,25 +248,25 @@ class GetInventorySummariesResult implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets inventory_summaries
+     * Gets inventorySummaries
      *
      * @return \Webcom\Amazon\Rest\FbaInventoryApi\Model\InventorySummary[]
      */
     public function getInventorySummaries()
     {
-        return $this->container['inventory_summaries'];
+        return $this->container['inventorySummaries'];
     }
 
     /**
-     * Sets inventory_summaries
+     * Sets inventorySummaries
      *
-     * @param \Webcom\Amazon\Rest\FbaInventoryApi\Model\InventorySummary[] $inventory_summaries A list of inventory summaries.
+     * @param \Webcom\Amazon\Rest\FbaInventoryApi\Model\InventorySummary[] $inventorySummaries A list of inventory summaries.
      *
      * @return self
      */
-    public function setInventorySummaries($inventory_summaries)
+    public function setInventorySummaries($inventorySummaries)
     {
-        $this->container['inventory_summaries'] = $inventory_summaries;
+        $this->container['inventorySummaries'] = $inventorySummaries;
 
         return $this;
     }

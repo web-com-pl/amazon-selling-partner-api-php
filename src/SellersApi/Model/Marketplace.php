@@ -64,10 +64,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'country_code' => 'string',
-        'default_currency_code' => 'string',
-        'default_language_code' => 'string',
-        'domain_name' => 'string'
+        'countryCode' => 'string',
+        'defaultCurrencyCode' => 'string',
+        'defaultLanguageCode' => 'string',
+        'domainName' => 'string'
     ];
 
     /**
@@ -80,10 +80,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'country_code' => null,
-        'default_currency_code' => null,
-        'default_language_code' => null,
-        'domain_name' => null
+        'countryCode' => null,
+        'defaultCurrencyCode' => null,
+        'defaultLanguageCode' => null,
+        'domainName' => null
     ];
 
     /**
@@ -115,10 +115,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'country_code' => 'countryCode',
-        'default_currency_code' => 'defaultCurrencyCode',
-        'default_language_code' => 'defaultLanguageCode',
-        'domain_name' => 'domainName'
+        'countryCode' => 'countryCode',
+        'defaultCurrencyCode' => 'defaultCurrencyCode',
+        'defaultLanguageCode' => 'defaultLanguageCode',
+        'domainName' => 'domainName'
     ];
 
     /**
@@ -129,10 +129,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'country_code' => 'setCountryCode',
-        'default_currency_code' => 'setDefaultCurrencyCode',
-        'default_language_code' => 'setDefaultLanguageCode',
-        'domain_name' => 'setDomainName'
+        'countryCode' => 'setCountryCode',
+        'defaultCurrencyCode' => 'setDefaultCurrencyCode',
+        'defaultLanguageCode' => 'setDefaultLanguageCode',
+        'domainName' => 'setDomainName'
     ];
 
     /**
@@ -143,10 +143,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'country_code' => 'getCountryCode',
-        'default_currency_code' => 'getDefaultCurrencyCode',
-        'default_language_code' => 'getDefaultLanguageCode',
-        'domain_name' => 'getDomainName'
+        'countryCode' => 'getCountryCode',
+        'defaultCurrencyCode' => 'getDefaultCurrencyCode',
+        'defaultLanguageCode' => 'getDefaultLanguageCode',
+        'domainName' => 'getDomainName'
     ];
 
     /**
@@ -211,10 +211,10 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['country_code'] = $data['country_code'] ?? null;
-        $this->container['default_currency_code'] = $data['default_currency_code'] ?? null;
-        $this->container['default_language_code'] = $data['default_language_code'] ?? null;
-        $this->container['domain_name'] = $data['domain_name'] ?? null;
+        $this->container['countryCode'] = $data['countryCode'] ?? null;
+        $this->container['defaultCurrencyCode'] = $data['defaultCurrencyCode'] ?? null;
+        $this->container['defaultLanguageCode'] = $data['defaultLanguageCode'] ?? null;
+        $this->container['domainName'] = $data['domainName'] ?? null;
     }
 
     /**
@@ -232,21 +232,21 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['country_code'] === null) {
-            $invalidProperties[] = "'country_code' can't be null";
+        if ($this->container['countryCode'] === null) {
+            $invalidProperties[] = "'countryCode' can't be null";
         }
-        if (!preg_match("/^([A-Z]{2})$/", $this->container['country_code'])) {
-            $invalidProperties[] = "invalid value for 'country_code', must be conform to the pattern /^([A-Z]{2})$/.";
+        if (!preg_match("/^([A-Z]{2})$/", $this->container['countryCode'])) {
+            $invalidProperties[] = "invalid value for 'countryCode', must be conform to the pattern /^([A-Z]{2})$/.";
         }
 
-        if ($this->container['default_currency_code'] === null) {
-            $invalidProperties[] = "'default_currency_code' can't be null";
+        if ($this->container['defaultCurrencyCode'] === null) {
+            $invalidProperties[] = "'defaultCurrencyCode' can't be null";
         }
-        if ($this->container['default_language_code'] === null) {
-            $invalidProperties[] = "'default_language_code' can't be null";
+        if ($this->container['defaultLanguageCode'] === null) {
+            $invalidProperties[] = "'defaultLanguageCode' can't be null";
         }
-        if ($this->container['domain_name'] === null) {
-            $invalidProperties[] = "'domain_name' can't be null";
+        if ($this->container['domainName'] === null) {
+            $invalidProperties[] = "'domainName' can't be null";
         }
         return $invalidProperties;
     }
@@ -312,102 +312,102 @@ class Marketplace implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string $country_code The ISO 3166-1 alpha-2 format country code of the marketplace.
+     * @param string $countryCode The ISO 3166-1 alpha-2 format country code of the marketplace.
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
 
-        if ((!preg_match("/^([A-Z]{2})$/", $country_code))) {
-            throw new \InvalidArgumentException("invalid value for $country_code when calling Marketplace., must conform to the pattern /^([A-Z]{2})$/.");
+        if ((!preg_match("/^([A-Z]{2})$/", $countryCode))) {
+            throw new \InvalidArgumentException("invalid value for $countryCode when calling Marketplace., must conform to the pattern /^([A-Z]{2})$/.");
         }
 
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }
 
     /**
-     * Gets default_currency_code
+     * Gets defaultCurrencyCode
      *
      * @return string
      */
     public function getDefaultCurrencyCode()
     {
-        return $this->container['default_currency_code'];
+        return $this->container['defaultCurrencyCode'];
     }
 
     /**
-     * Sets default_currency_code
+     * Sets defaultCurrencyCode
      *
-     * @param string $default_currency_code The ISO 4217 format currency code of the marketplace.
+     * @param string $defaultCurrencyCode The ISO 4217 format currency code of the marketplace.
      *
      * @return self
      */
-    public function setDefaultCurrencyCode($default_currency_code)
+    public function setDefaultCurrencyCode($defaultCurrencyCode)
     {
-        $this->container['default_currency_code'] = $default_currency_code;
+        $this->container['defaultCurrencyCode'] = $defaultCurrencyCode;
 
         return $this;
     }
 
     /**
-     * Gets default_language_code
+     * Gets defaultLanguageCode
      *
      * @return string
      */
     public function getDefaultLanguageCode()
     {
-        return $this->container['default_language_code'];
+        return $this->container['defaultLanguageCode'];
     }
 
     /**
-     * Sets default_language_code
+     * Sets defaultLanguageCode
      *
-     * @param string $default_language_code The ISO 639-1 format language code of the marketplace.
+     * @param string $defaultLanguageCode The ISO 639-1 format language code of the marketplace.
      *
      * @return self
      */
-    public function setDefaultLanguageCode($default_language_code)
+    public function setDefaultLanguageCode($defaultLanguageCode)
     {
-        $this->container['default_language_code'] = $default_language_code;
+        $this->container['defaultLanguageCode'] = $defaultLanguageCode;
 
         return $this;
     }
 
     /**
-     * Gets domain_name
+     * Gets domainName
      *
      * @return string
      */
     public function getDomainName()
     {
-        return $this->container['domain_name'];
+        return $this->container['domainName'];
     }
 
     /**
-     * Sets domain_name
+     * Sets domainName
      *
-     * @param string $domain_name The domain name of the marketplace.
+     * @param string $domainName The domain name of the marketplace.
      *
      * @return self
      */
-    public function setDomainName($domain_name)
+    public function setDomainName($domainName)
     {
-        $this->container['domain_name'] = $domain_name;
+        $this->container['domainName'] = $domainName;
 
         return $this;
     }

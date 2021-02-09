@@ -62,7 +62,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'technician_id' => 'string',
+        'technicianId' => 'string',
         'name' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'technician_id' => null,
+        'technicianId' => null,
         'name' => null
     ];
 
@@ -105,7 +105,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'technician_id' => 'technicianId',
+        'technicianId' => 'technicianId',
         'name' => 'name'
     ];
 
@@ -115,7 +115,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'technician_id' => 'setTechnicianId',
+        'technicianId' => 'setTechnicianId',
         'name' => 'setName'
     ];
 
@@ -125,7 +125,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'technician_id' => 'getTechnicianId',
+        'technicianId' => 'getTechnicianId',
         'name' => 'getName'
     ];
 
@@ -189,7 +189,7 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['technician_id'] = $data['technician_id'] ?? null;
+        $this->container['technicianId'] = $data['technicianId'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
     }
 
@@ -202,12 +202,12 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['technician_id']) && (mb_strlen($this->container['technician_id']) > 50)) {
-            $invalidProperties[] = "invalid value for 'technician_id', the character length must be smaller than or equal to 50.";
+        if (!is_null($this->container['technicianId']) && (mb_strlen($this->container['technicianId']) > 50)) {
+            $invalidProperties[] = "invalid value for 'technicianId', the character length must be smaller than or equal to 50.";
         }
 
-        if (!is_null($this->container['technician_id']) && (mb_strlen($this->container['technician_id']) < 1)) {
-            $invalidProperties[] = "invalid value for 'technician_id', the character length must be bigger than or equal to 1.";
+        if (!is_null($this->container['technicianId']) && (mb_strlen($this->container['technicianId']) < 1)) {
+            $invalidProperties[] = "invalid value for 'technicianId', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -226,32 +226,32 @@ class Technician implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets technician_id
+     * Gets technicianId
      *
      * @return string|null
      */
     public function getTechnicianId()
     {
-        return $this->container['technician_id'];
+        return $this->container['technicianId'];
     }
 
     /**
-     * Sets technician_id
+     * Sets technicianId
      *
-     * @param string|null $technician_id The technician identifier.
+     * @param string|null $technicianId The technician identifier.
      *
      * @return self
      */
-    public function setTechnicianId($technician_id)
+    public function setTechnicianId($technicianId)
     {
-        if (!is_null($technician_id) && (mb_strlen($technician_id) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $technician_id when calling Technician., must be smaller than or equal to 50.');
+        if (!is_null($technicianId) && (mb_strlen($technicianId) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $technicianId when calling Technician., must be smaller than or equal to 50.');
         }
-        if (!is_null($technician_id) && (mb_strlen($technician_id) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $technician_id when calling Technician., must be bigger than or equal to 1.');
+        if (!is_null($technicianId) && (mb_strlen($technicianId) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $technicianId when calling Technician., must be bigger than or equal to 1.');
         }
 
-        $this->container['technician_id'] = $technician_id;
+        $this->container['technicianId'] = $technicianId;
 
         return $this;
     }

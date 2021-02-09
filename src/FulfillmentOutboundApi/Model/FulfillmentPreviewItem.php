@@ -62,11 +62,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
+        'sellerSku' => 'string',
         'quantity' => 'int',
-        'seller_fulfillment_order_item_id' => 'string',
-        'estimated_shipping_weight' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight',
-        'shipping_weight_calculation_method' => 'string'
+        'sellerFulfillmentOrderItemId' => 'string',
+        'estimatedShippingWeight' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight',
+        'shippingWeightCalculationMethod' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
+        'sellerSku' => null,
         'quantity' => 'int32',
-        'seller_fulfillment_order_item_id' => null,
-        'estimated_shipping_weight' => null,
-        'shipping_weight_calculation_method' => null
+        'sellerFulfillmentOrderItemId' => null,
+        'estimatedShippingWeight' => null,
+        'shippingWeightCalculationMethod' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
+        'sellerSku' => 'sellerSku',
         'quantity' => 'quantity',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
-        'estimated_shipping_weight' => 'estimatedShippingWeight',
-        'shipping_weight_calculation_method' => 'shippingWeightCalculationMethod'
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
+        'estimatedShippingWeight' => 'estimatedShippingWeight',
+        'shippingWeightCalculationMethod' => 'shippingWeightCalculationMethod'
     ];
 
     /**
@@ -124,11 +124,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
+        'sellerSku' => 'setSellerSku',
         'quantity' => 'setQuantity',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
-        'estimated_shipping_weight' => 'setEstimatedShippingWeight',
-        'shipping_weight_calculation_method' => 'setShippingWeightCalculationMethod'
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
+        'estimatedShippingWeight' => 'setEstimatedShippingWeight',
+        'shippingWeightCalculationMethod' => 'setShippingWeightCalculationMethod'
     ];
 
     /**
@@ -137,11 +137,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
+        'sellerSku' => 'getSellerSku',
         'quantity' => 'getQuantity',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
-        'estimated_shipping_weight' => 'getEstimatedShippingWeight',
-        'shipping_weight_calculation_method' => 'getShippingWeightCalculationMethod'
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
+        'estimatedShippingWeight' => 'getEstimatedShippingWeight',
+        'shippingWeightCalculationMethod' => 'getShippingWeightCalculationMethod'
     ];
 
     /**
@@ -219,11 +219,11 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
-        $this->container['estimated_shipping_weight'] = $data['estimated_shipping_weight'] ?? null;
-        $this->container['shipping_weight_calculation_method'] = $data['shipping_weight_calculation_method'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
+        $this->container['estimatedShippingWeight'] = $data['estimatedShippingWeight'] ?? null;
+        $this->container['shippingWeightCalculationMethod'] = $data['shippingWeightCalculationMethod'] ?? null;
     }
 
     /**
@@ -235,20 +235,20 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSku'] === null) {
+            $invalidProperties[] = "'sellerSku' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
         $allowedValues = $this->getShippingWeightCalculationMethodAllowableValues();
-        if (!is_null($this->container['shipping_weight_calculation_method']) && !in_array($this->container['shipping_weight_calculation_method'], $allowedValues, true)) {
+        if (!is_null($this->container['shippingWeightCalculationMethod']) && !in_array($this->container['shippingWeightCalculationMethod'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'shipping_weight_calculation_method', must be one of '%s'",
-                $this->container['shipping_weight_calculation_method'],
+                "invalid value '%s' for 'shippingWeightCalculationMethod', must be one of '%s'",
+                $this->container['shippingWeightCalculationMethod'],
                 implode("', '", $allowedValues)
             );
         }
@@ -269,25 +269,25 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
@@ -317,83 +317,83 @@ class FulfillmentPreviewItem implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id A fulfillment order item identifier that the seller created with a call to the createFulfillmentOrder operation.
+     * @param string $sellerFulfillmentOrderItemId A fulfillment order item identifier that the seller created with a call to the createFulfillmentOrder operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
 
     /**
-     * Gets estimated_shipping_weight
+     * Gets estimatedShippingWeight
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null
      */
     public function getEstimatedShippingWeight()
     {
-        return $this->container['estimated_shipping_weight'];
+        return $this->container['estimatedShippingWeight'];
     }
 
     /**
-     * Sets estimated_shipping_weight
+     * Sets estimatedShippingWeight
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null $estimated_shipping_weight estimated_shipping_weight
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null $estimatedShippingWeight estimatedShippingWeight
      *
      * @return self
      */
-    public function setEstimatedShippingWeight($estimated_shipping_weight)
+    public function setEstimatedShippingWeight($estimatedShippingWeight)
     {
-        $this->container['estimated_shipping_weight'] = $estimated_shipping_weight;
+        $this->container['estimatedShippingWeight'] = $estimatedShippingWeight;
 
         return $this;
     }
 
     /**
-     * Gets shipping_weight_calculation_method
+     * Gets shippingWeightCalculationMethod
      *
      * @return string|null
      */
     public function getShippingWeightCalculationMethod()
     {
-        return $this->container['shipping_weight_calculation_method'];
+        return $this->container['shippingWeightCalculationMethod'];
     }
 
     /**
-     * Sets shipping_weight_calculation_method
+     * Sets shippingWeightCalculationMethod
      *
-     * @param string|null $shipping_weight_calculation_method The method used to calculate the estimated shipping weight.
+     * @param string|null $shippingWeightCalculationMethod The method used to calculate the estimated shipping weight.
      *
      * @return self
      */
-    public function setShippingWeightCalculationMethod($shipping_weight_calculation_method)
+    public function setShippingWeightCalculationMethod($shippingWeightCalculationMethod)
     {
         $allowedValues = $this->getShippingWeightCalculationMethodAllowableValues();
-        if (!is_null($shipping_weight_calculation_method) && !in_array($shipping_weight_calculation_method, $allowedValues, true)) {
+        if (!is_null($shippingWeightCalculationMethod) && !in_array($shippingWeightCalculationMethod, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'shipping_weight_calculation_method', must be one of '%s'",
-                    $shipping_weight_calculation_method,
+                    "Invalid value '%s' for 'shippingWeightCalculationMethod', must be one of '%s'",
+                    $shippingWeightCalculationMethod,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['shipping_weight_calculation_method'] = $shipping_weight_calculation_method;
+        $this->container['shippingWeightCalculationMethod'] = $shippingWeightCalculationMethod;
 
         return $this;
     }

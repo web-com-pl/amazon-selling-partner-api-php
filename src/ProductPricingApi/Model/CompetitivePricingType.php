@@ -62,9 +62,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'competitive_prices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePriceType[]',
-        'number_of_offer_listings' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferListingCountType[]',
-        'trade_in_value' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType'
+        'competitivePrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePriceType[]',
+        'numberOfOfferListings' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferListingCountType[]',
+        'tradeInValue' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType'
     ];
 
     /**
@@ -75,9 +75,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'competitive_prices' => null,
-        'number_of_offer_listings' => null,
-        'trade_in_value' => null
+        'competitivePrices' => null,
+        'numberOfOfferListings' => null,
+        'tradeInValue' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'competitive_prices' => 'CompetitivePrices',
-        'number_of_offer_listings' => 'NumberOfOfferListings',
-        'trade_in_value' => 'TradeInValue'
+        'competitivePrices' => 'CompetitivePrices',
+        'numberOfOfferListings' => 'NumberOfOfferListings',
+        'tradeInValue' => 'TradeInValue'
     ];
 
     /**
@@ -118,9 +118,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'competitive_prices' => 'setCompetitivePrices',
-        'number_of_offer_listings' => 'setNumberOfOfferListings',
-        'trade_in_value' => 'setTradeInValue'
+        'competitivePrices' => 'setCompetitivePrices',
+        'numberOfOfferListings' => 'setNumberOfOfferListings',
+        'tradeInValue' => 'setTradeInValue'
     ];
 
     /**
@@ -129,9 +129,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'competitive_prices' => 'getCompetitivePrices',
-        'number_of_offer_listings' => 'getNumberOfOfferListings',
-        'trade_in_value' => 'getTradeInValue'
+        'competitivePrices' => 'getCompetitivePrices',
+        'numberOfOfferListings' => 'getNumberOfOfferListings',
+        'tradeInValue' => 'getTradeInValue'
     ];
 
     /**
@@ -194,9 +194,9 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['competitive_prices'] = $data['competitive_prices'] ?? null;
-        $this->container['number_of_offer_listings'] = $data['number_of_offer_listings'] ?? null;
-        $this->container['trade_in_value'] = $data['trade_in_value'] ?? null;
+        $this->container['competitivePrices'] = $data['competitivePrices'] ?? null;
+        $this->container['numberOfOfferListings'] = $data['numberOfOfferListings'] ?? null;
+        $this->container['tradeInValue'] = $data['tradeInValue'] ?? null;
     }
 
     /**
@@ -208,11 +208,11 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['competitive_prices'] === null) {
-            $invalidProperties[] = "'competitive_prices' can't be null";
+        if ($this->container['competitivePrices'] === null) {
+            $invalidProperties[] = "'competitivePrices' can't be null";
         }
-        if ($this->container['number_of_offer_listings'] === null) {
-            $invalidProperties[] = "'number_of_offer_listings' can't be null";
+        if ($this->container['numberOfOfferListings'] === null) {
+            $invalidProperties[] = "'numberOfOfferListings' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +230,73 @@ class CompetitivePricingType implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets competitive_prices
+     * Gets competitivePrices
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePriceType[]
      */
     public function getCompetitivePrices()
     {
-        return $this->container['competitive_prices'];
+        return $this->container['competitivePrices'];
     }
 
     /**
-     * Sets competitive_prices
+     * Sets competitivePrices
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePriceType[] $competitive_prices A list of competitive pricing information.
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePriceType[] $competitivePrices A list of competitive pricing information.
      *
      * @return self
      */
-    public function setCompetitivePrices($competitive_prices)
+    public function setCompetitivePrices($competitivePrices)
     {
-        $this->container['competitive_prices'] = $competitive_prices;
+        $this->container['competitivePrices'] = $competitivePrices;
 
         return $this;
     }
 
     /**
-     * Gets number_of_offer_listings
+     * Gets numberOfOfferListings
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferListingCountType[]
      */
     public function getNumberOfOfferListings()
     {
-        return $this->container['number_of_offer_listings'];
+        return $this->container['numberOfOfferListings'];
     }
 
     /**
-     * Sets number_of_offer_listings
+     * Sets numberOfOfferListings
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferListingCountType[] $number_of_offer_listings The number of active offer listings for the item that was submitted. The listing count is returned by condition, one for each listing condition value that is returned.
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferListingCountType[] $numberOfOfferListings The number of active offer listings for the item that was submitted. The listing count is returned by condition, one for each listing condition value that is returned.
      *
      * @return self
      */
-    public function setNumberOfOfferListings($number_of_offer_listings)
+    public function setNumberOfOfferListings($numberOfOfferListings)
     {
-        $this->container['number_of_offer_listings'] = $number_of_offer_listings;
+        $this->container['numberOfOfferListings'] = $numberOfOfferListings;
 
         return $this;
     }
 
     /**
-     * Gets trade_in_value
+     * Gets tradeInValue
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
      */
     public function getTradeInValue()
     {
-        return $this->container['trade_in_value'];
+        return $this->container['tradeInValue'];
     }
 
     /**
-     * Sets trade_in_value
+     * Sets tradeInValue
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $trade_in_value trade_in_value
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $tradeInValue tradeInValue
      *
      * @return self
      */
-    public function setTradeInValue($trade_in_value)
+    public function setTradeInValue($tradeInValue)
     {
-        $this->container['trade_in_value'] = $trade_in_value;
+        $this->container['tradeInValue'] = $tradeInValue;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'package_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageOutput[]',
-        'partnered_estimate' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate'
+        'packageList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageOutput[]',
+        'partneredEstimate' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate'
     ];
 
     /**
@@ -74,8 +74,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'package_list' => null,
-        'partnered_estimate' => null
+        'packageList' => null,
+        'partneredEstimate' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'package_list' => 'PackageList',
-        'partnered_estimate' => 'PartneredEstimate'
+        'packageList' => 'PackageList',
+        'partneredEstimate' => 'PartneredEstimate'
     ];
 
     /**
@@ -115,8 +115,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'package_list' => 'setPackageList',
-        'partnered_estimate' => 'setPartneredEstimate'
+        'packageList' => 'setPackageList',
+        'partneredEstimate' => 'setPartneredEstimate'
     ];
 
     /**
@@ -125,8 +125,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'package_list' => 'getPackageList',
-        'partnered_estimate' => 'getPartneredEstimate'
+        'packageList' => 'getPackageList',
+        'partneredEstimate' => 'getPartneredEstimate'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
-        $this->container['package_list'] = $data['package_list'] ?? null;
-        $this->container['partnered_estimate'] = $data['partnered_estimate'] ?? null;
+        $this->container['packageList'] = $data['packageList'] ?? null;
+        $this->container['partneredEstimate'] = $data['partneredEstimate'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['package_list'] === null) {
-            $invalidProperties[] = "'package_list' can't be null";
+        if ($this->container['packageList'] === null) {
+            $invalidProperties[] = "'packageList' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,49 +221,49 @@ class PartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets package_list
+     * Gets packageList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageOutput[]
      */
     public function getPackageList()
     {
-        return $this->container['package_list'];
+        return $this->container['packageList'];
     }
 
     /**
-     * Sets package_list
+     * Sets packageList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageOutput[] $package_list A list of packages, including shipping information from the Amazon-partnered carrier.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelPackageOutput[] $packageList A list of packages, including shipping information from the Amazon-partnered carrier.
      *
      * @return self
      */
-    public function setPackageList($package_list)
+    public function setPackageList($packageList)
     {
-        $this->container['package_list'] = $package_list;
+        $this->container['packageList'] = $packageList;
 
         return $this;
     }
 
     /**
-     * Gets partnered_estimate
+     * Gets partneredEstimate
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null
      */
     public function getPartneredEstimate()
     {
-        return $this->container['partnered_estimate'];
+        return $this->container['partneredEstimate'];
     }
 
     /**
-     * Sets partnered_estimate
+     * Sets partneredEstimate
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null $partnered_estimate partnered_estimate
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null $partneredEstimate partneredEstimate
      *
      * @return self
      */
-    public function setPartneredEstimate($partnered_estimate)
+    public function setPartneredEstimate($partneredEstimate)
     {
-        $this->container['partnered_estimate'] = $partnered_estimate;
+        $this->container['partneredEstimate'] = $partneredEstimate;
 
         return $this;
     }

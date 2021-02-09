@@ -62,16 +62,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'provider_transaction_type' => 'string',
-        'seller_order_id' => 'string',
-        'marketplace_id' => 'string',
-        'marketplace_country_code' => 'string',
-        'seller_id' => 'string',
-        'seller_store_name' => 'string',
-        'provider_id' => 'string',
-        'provider_store_name' => 'string',
-        'transaction_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'transaction_creation_date' => '\DateTime'
+        'providerTransactionType' => 'string',
+        'sellerOrderId' => 'string',
+        'marketplaceId' => 'string',
+        'marketplaceCountryCode' => 'string',
+        'sellerId' => 'string',
+        'sellerStoreName' => 'string',
+        'providerId' => 'string',
+        'providerStoreName' => 'string',
+        'transactionAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'transactionCreationDate' => '\DateTime'
     ];
 
     /**
@@ -82,16 +82,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'provider_transaction_type' => null,
-        'seller_order_id' => null,
-        'marketplace_id' => null,
-        'marketplace_country_code' => null,
-        'seller_id' => null,
-        'seller_store_name' => null,
-        'provider_id' => null,
-        'provider_store_name' => null,
-        'transaction_amount' => null,
-        'transaction_creation_date' => 'date-time'
+        'providerTransactionType' => null,
+        'sellerOrderId' => null,
+        'marketplaceId' => null,
+        'marketplaceCountryCode' => null,
+        'sellerId' => null,
+        'sellerStoreName' => null,
+        'providerId' => null,
+        'providerStoreName' => null,
+        'transactionAmount' => null,
+        'transactionCreationDate' => 'date-time'
     ];
 
     /**
@@ -121,16 +121,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'provider_transaction_type' => 'ProviderTransactionType',
-        'seller_order_id' => 'SellerOrderId',
-        'marketplace_id' => 'MarketplaceId',
-        'marketplace_country_code' => 'MarketplaceCountryCode',
-        'seller_id' => 'SellerId',
-        'seller_store_name' => 'SellerStoreName',
-        'provider_id' => 'ProviderId',
-        'provider_store_name' => 'ProviderStoreName',
-        'transaction_amount' => 'TransactionAmount',
-        'transaction_creation_date' => 'TransactionCreationDate'
+        'providerTransactionType' => 'ProviderTransactionType',
+        'sellerOrderId' => 'SellerOrderId',
+        'marketplaceId' => 'MarketplaceId',
+        'marketplaceCountryCode' => 'MarketplaceCountryCode',
+        'sellerId' => 'SellerId',
+        'sellerStoreName' => 'SellerStoreName',
+        'providerId' => 'ProviderId',
+        'providerStoreName' => 'ProviderStoreName',
+        'transactionAmount' => 'TransactionAmount',
+        'transactionCreationDate' => 'TransactionCreationDate'
     ];
 
     /**
@@ -139,16 +139,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'provider_transaction_type' => 'setProviderTransactionType',
-        'seller_order_id' => 'setSellerOrderId',
-        'marketplace_id' => 'setMarketplaceId',
-        'marketplace_country_code' => 'setMarketplaceCountryCode',
-        'seller_id' => 'setSellerId',
-        'seller_store_name' => 'setSellerStoreName',
-        'provider_id' => 'setProviderId',
-        'provider_store_name' => 'setProviderStoreName',
-        'transaction_amount' => 'setTransactionAmount',
-        'transaction_creation_date' => 'setTransactionCreationDate'
+        'providerTransactionType' => 'setProviderTransactionType',
+        'sellerOrderId' => 'setSellerOrderId',
+        'marketplaceId' => 'setMarketplaceId',
+        'marketplaceCountryCode' => 'setMarketplaceCountryCode',
+        'sellerId' => 'setSellerId',
+        'sellerStoreName' => 'setSellerStoreName',
+        'providerId' => 'setProviderId',
+        'providerStoreName' => 'setProviderStoreName',
+        'transactionAmount' => 'setTransactionAmount',
+        'transactionCreationDate' => 'setTransactionCreationDate'
     ];
 
     /**
@@ -157,16 +157,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'provider_transaction_type' => 'getProviderTransactionType',
-        'seller_order_id' => 'getSellerOrderId',
-        'marketplace_id' => 'getMarketplaceId',
-        'marketplace_country_code' => 'getMarketplaceCountryCode',
-        'seller_id' => 'getSellerId',
-        'seller_store_name' => 'getSellerStoreName',
-        'provider_id' => 'getProviderId',
-        'provider_store_name' => 'getProviderStoreName',
-        'transaction_amount' => 'getTransactionAmount',
-        'transaction_creation_date' => 'getTransactionCreationDate'
+        'providerTransactionType' => 'getProviderTransactionType',
+        'sellerOrderId' => 'getSellerOrderId',
+        'marketplaceId' => 'getMarketplaceId',
+        'marketplaceCountryCode' => 'getMarketplaceCountryCode',
+        'sellerId' => 'getSellerId',
+        'sellerStoreName' => 'getSellerStoreName',
+        'providerId' => 'getProviderId',
+        'providerStoreName' => 'getProviderStoreName',
+        'transactionAmount' => 'getTransactionAmount',
+        'transactionCreationDate' => 'getTransactionCreationDate'
     ];
 
     /**
@@ -229,16 +229,16 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
-        $this->container['provider_transaction_type'] = $data['provider_transaction_type'] ?? null;
-        $this->container['seller_order_id'] = $data['seller_order_id'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['marketplace_country_code'] = $data['marketplace_country_code'] ?? null;
-        $this->container['seller_id'] = $data['seller_id'] ?? null;
-        $this->container['seller_store_name'] = $data['seller_store_name'] ?? null;
-        $this->container['provider_id'] = $data['provider_id'] ?? null;
-        $this->container['provider_store_name'] = $data['provider_store_name'] ?? null;
-        $this->container['transaction_amount'] = $data['transaction_amount'] ?? null;
-        $this->container['transaction_creation_date'] = $data['transaction_creation_date'] ?? null;
+        $this->container['providerTransactionType'] = $data['providerTransactionType'] ?? null;
+        $this->container['sellerOrderId'] = $data['sellerOrderId'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['marketplaceCountryCode'] = $data['marketplaceCountryCode'] ?? null;
+        $this->container['sellerId'] = $data['sellerId'] ?? null;
+        $this->container['sellerStoreName'] = $data['sellerStoreName'] ?? null;
+        $this->container['providerId'] = $data['providerId'] ?? null;
+        $this->container['providerStoreName'] = $data['providerStoreName'] ?? null;
+        $this->container['transactionAmount'] = $data['transactionAmount'] ?? null;
+        $this->container['transactionCreationDate'] = $data['transactionCreationDate'] ?? null;
     }
 
     /**
@@ -266,241 +266,241 @@ class SolutionProviderCreditEvent implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets provider_transaction_type
+     * Gets providerTransactionType
      *
      * @return string|null
      */
     public function getProviderTransactionType()
     {
-        return $this->container['provider_transaction_type'];
+        return $this->container['providerTransactionType'];
     }
 
     /**
-     * Sets provider_transaction_type
+     * Sets providerTransactionType
      *
-     * @param string|null $provider_transaction_type The transaction type.
+     * @param string|null $providerTransactionType The transaction type.
      *
      * @return self
      */
-    public function setProviderTransactionType($provider_transaction_type)
+    public function setProviderTransactionType($providerTransactionType)
     {
-        $this->container['provider_transaction_type'] = $provider_transaction_type;
+        $this->container['providerTransactionType'] = $providerTransactionType;
 
         return $this;
     }
 
     /**
-     * Gets seller_order_id
+     * Gets sellerOrderId
      *
      * @return string|null
      */
     public function getSellerOrderId()
     {
-        return $this->container['seller_order_id'];
+        return $this->container['sellerOrderId'];
     }
 
     /**
-     * Sets seller_order_id
+     * Sets sellerOrderId
      *
-     * @param string|null $seller_order_id A seller-defined identifier for an order.
+     * @param string|null $sellerOrderId A seller-defined identifier for an order.
      *
      * @return self
      */
-    public function setSellerOrderId($seller_order_id)
+    public function setSellerOrderId($sellerOrderId)
     {
-        $this->container['seller_order_id'] = $seller_order_id;
+        $this->container['sellerOrderId'] = $sellerOrderId;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The identifier of the marketplace where the order was placed.
+     * @param string|null $marketplaceId The identifier of the marketplace where the order was placed.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_country_code
+     * Gets marketplaceCountryCode
      *
      * @return string|null
      */
     public function getMarketplaceCountryCode()
     {
-        return $this->container['marketplace_country_code'];
+        return $this->container['marketplaceCountryCode'];
     }
 
     /**
-     * Sets marketplace_country_code
+     * Sets marketplaceCountryCode
      *
-     * @param string|null $marketplace_country_code The two-letter country code of the country associated with the marketplace where the order was placed.
+     * @param string|null $marketplaceCountryCode The two-letter country code of the country associated with the marketplace where the order was placed.
      *
      * @return self
      */
-    public function setMarketplaceCountryCode($marketplace_country_code)
+    public function setMarketplaceCountryCode($marketplaceCountryCode)
     {
-        $this->container['marketplace_country_code'] = $marketplace_country_code;
+        $this->container['marketplaceCountryCode'] = $marketplaceCountryCode;
 
         return $this;
     }
 
     /**
-     * Gets seller_id
+     * Gets sellerId
      *
      * @return string|null
      */
     public function getSellerId()
     {
-        return $this->container['seller_id'];
+        return $this->container['sellerId'];
     }
 
     /**
-     * Sets seller_id
+     * Sets sellerId
      *
-     * @param string|null $seller_id The Amazon-defined identifier of the seller.
+     * @param string|null $sellerId The Amazon-defined identifier of the seller.
      *
      * @return self
      */
-    public function setSellerId($seller_id)
+    public function setSellerId($sellerId)
     {
-        $this->container['seller_id'] = $seller_id;
+        $this->container['sellerId'] = $sellerId;
 
         return $this;
     }
 
     /**
-     * Gets seller_store_name
+     * Gets sellerStoreName
      *
      * @return string|null
      */
     public function getSellerStoreName()
     {
-        return $this->container['seller_store_name'];
+        return $this->container['sellerStoreName'];
     }
 
     /**
-     * Sets seller_store_name
+     * Sets sellerStoreName
      *
-     * @param string|null $seller_store_name The store name where the payment event occurred.
+     * @param string|null $sellerStoreName The store name where the payment event occurred.
      *
      * @return self
      */
-    public function setSellerStoreName($seller_store_name)
+    public function setSellerStoreName($sellerStoreName)
     {
-        $this->container['seller_store_name'] = $seller_store_name;
+        $this->container['sellerStoreName'] = $sellerStoreName;
 
         return $this;
     }
 
     /**
-     * Gets provider_id
+     * Gets providerId
      *
      * @return string|null
      */
     public function getProviderId()
     {
-        return $this->container['provider_id'];
+        return $this->container['providerId'];
     }
 
     /**
-     * Sets provider_id
+     * Sets providerId
      *
-     * @param string|null $provider_id The Amazon-defined identifier of the solution provider.
+     * @param string|null $providerId The Amazon-defined identifier of the solution provider.
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function setProviderId($providerId)
     {
-        $this->container['provider_id'] = $provider_id;
+        $this->container['providerId'] = $providerId;
 
         return $this;
     }
 
     /**
-     * Gets provider_store_name
+     * Gets providerStoreName
      *
      * @return string|null
      */
     public function getProviderStoreName()
     {
-        return $this->container['provider_store_name'];
+        return $this->container['providerStoreName'];
     }
 
     /**
-     * Sets provider_store_name
+     * Sets providerStoreName
      *
-     * @param string|null $provider_store_name The store name where the payment event occurred.
+     * @param string|null $providerStoreName The store name where the payment event occurred.
      *
      * @return self
      */
-    public function setProviderStoreName($provider_store_name)
+    public function setProviderStoreName($providerStoreName)
     {
-        $this->container['provider_store_name'] = $provider_store_name;
+        $this->container['providerStoreName'] = $providerStoreName;
 
         return $this;
     }
 
     /**
-     * Gets transaction_amount
+     * Gets transactionAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTransactionAmount()
     {
-        return $this->container['transaction_amount'];
+        return $this->container['transactionAmount'];
     }
 
     /**
-     * Sets transaction_amount
+     * Sets transactionAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $transaction_amount transaction_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $transactionAmount transactionAmount
      *
      * @return self
      */
-    public function setTransactionAmount($transaction_amount)
+    public function setTransactionAmount($transactionAmount)
     {
-        $this->container['transaction_amount'] = $transaction_amount;
+        $this->container['transactionAmount'] = $transactionAmount;
 
         return $this;
     }
 
     /**
-     * Gets transaction_creation_date
+     * Gets transactionCreationDate
      *
      * @return \DateTime|null
      */
     public function getTransactionCreationDate()
     {
-        return $this->container['transaction_creation_date'];
+        return $this->container['transactionCreationDate'];
     }
 
     /**
-     * Sets transaction_creation_date
+     * Sets transactionCreationDate
      *
-     * @param \DateTime|null $transaction_creation_date transaction_creation_date
+     * @param \DateTime|null $transactionCreationDate transactionCreationDate
      *
      * @return self
      */
-    public function setTransactionCreationDate($transaction_creation_date)
+    public function setTransactionCreationDate($transactionCreationDate)
     {
-        $this->container['transaction_creation_date'] = $transaction_creation_date;
+        $this->container['transactionCreationDate'] = $transactionCreationDate;
 
         return $this;
     }

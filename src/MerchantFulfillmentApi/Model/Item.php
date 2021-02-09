@@ -62,12 +62,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'order_item_id' => 'string',
+        'orderItemId' => 'string',
         'quantity' => 'int',
-        'item_weight' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight',
-        'item_description' => 'string',
-        'transparency_code_list' => 'string[]',
-        'item_level_seller_inputs_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]'
+        'itemWeight' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight',
+        'itemDescription' => 'string',
+        'transparencyCodeList' => 'string[]',
+        'itemLevelSellerInputsList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]'
     ];
 
     /**
@@ -78,12 +78,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'order_item_id' => null,
+        'orderItemId' => null,
         'quantity' => 'int32',
-        'item_weight' => null,
-        'item_description' => null,
-        'transparency_code_list' => null,
-        'item_level_seller_inputs_list' => null
+        'itemWeight' => null,
+        'itemDescription' => null,
+        'transparencyCodeList' => null,
+        'itemLevelSellerInputsList' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_item_id' => 'OrderItemId',
+        'orderItemId' => 'OrderItemId',
         'quantity' => 'Quantity',
-        'item_weight' => 'ItemWeight',
-        'item_description' => 'ItemDescription',
-        'transparency_code_list' => 'TransparencyCodeList',
-        'item_level_seller_inputs_list' => 'ItemLevelSellerInputsList'
+        'itemWeight' => 'ItemWeight',
+        'itemDescription' => 'ItemDescription',
+        'transparencyCodeList' => 'TransparencyCodeList',
+        'itemLevelSellerInputsList' => 'ItemLevelSellerInputsList'
     ];
 
     /**
@@ -127,12 +127,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'order_item_id' => 'setOrderItemId',
+        'orderItemId' => 'setOrderItemId',
         'quantity' => 'setQuantity',
-        'item_weight' => 'setItemWeight',
-        'item_description' => 'setItemDescription',
-        'transparency_code_list' => 'setTransparencyCodeList',
-        'item_level_seller_inputs_list' => 'setItemLevelSellerInputsList'
+        'itemWeight' => 'setItemWeight',
+        'itemDescription' => 'setItemDescription',
+        'transparencyCodeList' => 'setTransparencyCodeList',
+        'itemLevelSellerInputsList' => 'setItemLevelSellerInputsList'
     ];
 
     /**
@@ -141,12 +141,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'order_item_id' => 'getOrderItemId',
+        'orderItemId' => 'getOrderItemId',
         'quantity' => 'getQuantity',
-        'item_weight' => 'getItemWeight',
-        'item_description' => 'getItemDescription',
-        'transparency_code_list' => 'getTransparencyCodeList',
-        'item_level_seller_inputs_list' => 'getItemLevelSellerInputsList'
+        'itemWeight' => 'getItemWeight',
+        'itemDescription' => 'getItemDescription',
+        'transparencyCodeList' => 'getTransparencyCodeList',
+        'itemLevelSellerInputsList' => 'getItemLevelSellerInputsList'
     ];
 
     /**
@@ -209,12 +209,12 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_item_id'] = $data['order_item_id'] ?? null;
+        $this->container['orderItemId'] = $data['orderItemId'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['item_weight'] = $data['item_weight'] ?? null;
-        $this->container['item_description'] = $data['item_description'] ?? null;
-        $this->container['transparency_code_list'] = $data['transparency_code_list'] ?? null;
-        $this->container['item_level_seller_inputs_list'] = $data['item_level_seller_inputs_list'] ?? null;
+        $this->container['itemWeight'] = $data['itemWeight'] ?? null;
+        $this->container['itemDescription'] = $data['itemDescription'] ?? null;
+        $this->container['transparencyCodeList'] = $data['transparencyCodeList'] ?? null;
+        $this->container['itemLevelSellerInputsList'] = $data['itemLevelSellerInputsList'] ?? null;
     }
 
     /**
@@ -226,8 +226,8 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['order_item_id'] === null) {
-            $invalidProperties[] = "'order_item_id' can't be null";
+        if ($this->container['orderItemId'] === null) {
+            $invalidProperties[] = "'orderItemId' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
@@ -248,25 +248,25 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets order_item_id
+     * Gets orderItemId
      *
      * @return string
      */
     public function getOrderItemId()
     {
-        return $this->container['order_item_id'];
+        return $this->container['orderItemId'];
     }
 
     /**
-     * Sets order_item_id
+     * Sets orderItemId
      *
-     * @param string $order_item_id An Amazon-defined identifier for an individual item in an order.
+     * @param string $orderItemId An Amazon-defined identifier for an individual item in an order.
      *
      * @return self
      */
-    public function setOrderItemId($order_item_id)
+    public function setOrderItemId($orderItemId)
     {
-        $this->container['order_item_id'] = $order_item_id;
+        $this->container['orderItemId'] = $orderItemId;
 
         return $this;
     }
@@ -296,97 +296,97 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets item_weight
+     * Gets itemWeight
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null
      */
     public function getItemWeight()
     {
-        return $this->container['item_weight'];
+        return $this->container['itemWeight'];
     }
 
     /**
-     * Sets item_weight
+     * Sets itemWeight
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null $item_weight item_weight
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null $itemWeight itemWeight
      *
      * @return self
      */
-    public function setItemWeight($item_weight)
+    public function setItemWeight($itemWeight)
     {
-        $this->container['item_weight'] = $item_weight;
+        $this->container['itemWeight'] = $itemWeight;
 
         return $this;
     }
 
     /**
-     * Gets item_description
+     * Gets itemDescription
      *
      * @return string|null
      */
     public function getItemDescription()
     {
-        return $this->container['item_description'];
+        return $this->container['itemDescription'];
     }
 
     /**
-     * Sets item_description
+     * Sets itemDescription
      *
-     * @param string|null $item_description The description of the item.
+     * @param string|null $itemDescription The description of the item.
      *
      * @return self
      */
-    public function setItemDescription($item_description)
+    public function setItemDescription($itemDescription)
     {
-        $this->container['item_description'] = $item_description;
+        $this->container['itemDescription'] = $itemDescription;
 
         return $this;
     }
 
     /**
-     * Gets transparency_code_list
+     * Gets transparencyCodeList
      *
      * @return string[]|null
      */
     public function getTransparencyCodeList()
     {
-        return $this->container['transparency_code_list'];
+        return $this->container['transparencyCodeList'];
     }
 
     /**
-     * Sets transparency_code_list
+     * Sets transparencyCodeList
      *
-     * @param string[]|null $transparency_code_list A list of transparency codes.
+     * @param string[]|null $transparencyCodeList A list of transparency codes.
      *
      * @return self
      */
-    public function setTransparencyCodeList($transparency_code_list)
+    public function setTransparencyCodeList($transparencyCodeList)
     {
-        $this->container['transparency_code_list'] = $transparency_code_list;
+        $this->container['transparencyCodeList'] = $transparencyCodeList;
 
         return $this;
     }
 
     /**
-     * Gets item_level_seller_inputs_list
+     * Gets itemLevelSellerInputsList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null
      */
     public function getItemLevelSellerInputsList()
     {
-        return $this->container['item_level_seller_inputs_list'];
+        return $this->container['itemLevelSellerInputsList'];
     }
 
     /**
-     * Sets item_level_seller_inputs_list
+     * Sets itemLevelSellerInputsList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null $item_level_seller_inputs_list A list of additional seller input pairs required to purchase shipping.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null $itemLevelSellerInputsList A list of additional seller input pairs required to purchase shipping.
      *
      * @return self
      */
-    public function setItemLevelSellerInputsList($item_level_seller_inputs_list)
+    public function setItemLevelSellerInputsList($itemLevelSellerInputsList)
     {
-        $this->container['item_level_seller_inputs_list'] = $item_level_seller_inputs_list;
+        $this->container['itemLevelSellerInputsList'] = $itemLevelSellerInputsList;
 
         return $this;
     }

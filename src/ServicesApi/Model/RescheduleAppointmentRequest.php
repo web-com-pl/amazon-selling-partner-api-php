@@ -62,8 +62,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appointment_time' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput',
-        'reschedule_reason_code' => 'string'
+        'appointmentTime' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput',
+        'rescheduleReasonCode' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appointment_time' => null,
-        'reschedule_reason_code' => null
+        'appointmentTime' => null,
+        'rescheduleReasonCode' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'appointment_time' => 'appointmentTime',
-        'reschedule_reason_code' => 'rescheduleReasonCode'
+        'appointmentTime' => 'appointmentTime',
+        'rescheduleReasonCode' => 'rescheduleReasonCode'
     ];
 
     /**
@@ -115,8 +115,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'appointment_time' => 'setAppointmentTime',
-        'reschedule_reason_code' => 'setRescheduleReasonCode'
+        'appointmentTime' => 'setAppointmentTime',
+        'rescheduleReasonCode' => 'setRescheduleReasonCode'
     ];
 
     /**
@@ -125,8 +125,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'appointment_time' => 'getAppointmentTime',
-        'reschedule_reason_code' => 'getRescheduleReasonCode'
+        'appointmentTime' => 'getAppointmentTime',
+        'rescheduleReasonCode' => 'getRescheduleReasonCode'
     ];
 
     /**
@@ -189,8 +189,8 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(array $data = null)
     {
-        $this->container['appointment_time'] = $data['appointment_time'] ?? null;
-        $this->container['reschedule_reason_code'] = $data['reschedule_reason_code'] ?? null;
+        $this->container['appointmentTime'] = $data['appointmentTime'] ?? null;
+        $this->container['rescheduleReasonCode'] = $data['rescheduleReasonCode'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['appointment_time'] === null) {
-            $invalidProperties[] = "'appointment_time' can't be null";
+        if ($this->container['appointmentTime'] === null) {
+            $invalidProperties[] = "'appointmentTime' can't be null";
         }
-        if ($this->container['reschedule_reason_code'] === null) {
-            $invalidProperties[] = "'reschedule_reason_code' can't be null";
+        if ($this->container['rescheduleReasonCode'] === null) {
+            $invalidProperties[] = "'rescheduleReasonCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class RescheduleAppointmentRequest implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets appointment_time
+     * Gets appointmentTime
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput
      */
     public function getAppointmentTime()
     {
-        return $this->container['appointment_time'];
+        return $this->container['appointmentTime'];
     }
 
     /**
-     * Sets appointment_time
+     * Sets appointmentTime
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput $appointment_time appointment_time
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput $appointmentTime appointmentTime
      *
      * @return self
      */
-    public function setAppointmentTime($appointment_time)
+    public function setAppointmentTime($appointmentTime)
     {
-        $this->container['appointment_time'] = $appointment_time;
+        $this->container['appointmentTime'] = $appointmentTime;
 
         return $this;
     }
 
     /**
-     * Gets reschedule_reason_code
+     * Gets rescheduleReasonCode
      *
      * @return string
      */
     public function getRescheduleReasonCode()
     {
-        return $this->container['reschedule_reason_code'];
+        return $this->container['rescheduleReasonCode'];
     }
 
     /**
-     * Sets reschedule_reason_code
+     * Sets rescheduleReasonCode
      *
-     * @param string $reschedule_reason_code Appointment reschedule reason code.
+     * @param string $rescheduleReasonCode Appointment reschedule reason code.
      *
      * @return self
      */
-    public function setRescheduleReasonCode($reschedule_reason_code)
+    public function setRescheduleReasonCode($rescheduleReasonCode)
     {
-        $this->container['reschedule_reason_code'] = $reschedule_reason_code;
+        $this->container['rescheduleReasonCode'] = $rescheduleReasonCode;
 
         return $this;
     }

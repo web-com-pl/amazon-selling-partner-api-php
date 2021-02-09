@@ -64,8 +64,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'asin' => 'string',
         'price' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType',
-        'fee_breakdown' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]',
-        'total_fees' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType',
+        'feeBreakdown' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]',
+        'totalFees' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType',
         'errors' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\ErrorList'
     ];
 
@@ -79,8 +79,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'asin' => null,
         'price' => null,
-        'fee_breakdown' => null,
-        'total_fees' => null,
+        'feeBreakdown' => null,
+        'totalFees' => null,
         'errors' => null
     ];
 
@@ -113,8 +113,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'asin' => 'asin',
         'price' => 'price',
-        'fee_breakdown' => 'feeBreakdown',
-        'total_fees' => 'totalFees',
+        'feeBreakdown' => 'feeBreakdown',
+        'totalFees' => 'totalFees',
         'errors' => 'errors'
     ];
 
@@ -126,8 +126,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'asin' => 'setAsin',
         'price' => 'setPrice',
-        'fee_breakdown' => 'setFeeBreakdown',
-        'total_fees' => 'setTotalFees',
+        'feeBreakdown' => 'setFeeBreakdown',
+        'totalFees' => 'setTotalFees',
         'errors' => 'setErrors'
     ];
 
@@ -139,8 +139,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'asin' => 'getAsin',
         'price' => 'getPrice',
-        'fee_breakdown' => 'getFeeBreakdown',
-        'total_fees' => 'getTotalFees',
+        'feeBreakdown' => 'getFeeBreakdown',
+        'totalFees' => 'getTotalFees',
         'errors' => 'getErrors'
     ];
 
@@ -206,8 +206,8 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['asin'] = $data['asin'] ?? null;
         $this->container['price'] = $data['price'] ?? null;
-        $this->container['fee_breakdown'] = $data['fee_breakdown'] ?? null;
-        $this->container['total_fees'] = $data['total_fees'] ?? null;
+        $this->container['feeBreakdown'] = $data['feeBreakdown'] ?? null;
+        $this->container['totalFees'] = $data['totalFees'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
 
@@ -284,49 +284,49 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets fee_breakdown
+     * Gets feeBreakdown
      *
      * @return \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]|null
      */
     public function getFeeBreakdown()
     {
-        return $this->container['fee_breakdown'];
+        return $this->container['feeBreakdown'];
     }
 
     /**
-     * Sets fee_breakdown
+     * Sets feeBreakdown
      *
-     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]|null $fee_breakdown A list of the Small and Light fees for the item.
+     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]|null $feeBreakdown A list of the Small and Light fees for the item.
      *
      * @return self
      */
-    public function setFeeBreakdown($fee_breakdown)
+    public function setFeeBreakdown($feeBreakdown)
     {
-        $this->container['fee_breakdown'] = $fee_breakdown;
+        $this->container['feeBreakdown'] = $feeBreakdown;
 
         return $this;
     }
 
     /**
-     * Gets total_fees
+     * Gets totalFees
      *
      * @return \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType|null
      */
     public function getTotalFees()
     {
-        return $this->container['total_fees'];
+        return $this->container['totalFees'];
     }
 
     /**
-     * Sets total_fees
+     * Sets totalFees
      *
-     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType|null $total_fees total_fees
+     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType|null $totalFees totalFees
      *
      * @return self
      */
-    public function setTotalFees($total_fees)
+    public function setTotalFees($totalFees)
     {
-        $this->container['total_fees'] = $total_fees;
+        $this->container['totalFees'] = $totalFees;
 
         return $this;
     }

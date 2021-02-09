@@ -62,12 +62,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'earliest_ship_date' => '\DateTime',
-        'latest_ship_date' => '\DateTime',
-        'earliest_arrival_date' => '\DateTime',
-        'latest_arrival_date' => '\DateTime',
-        'shipping_notes' => 'string[]',
-        'fulfillment_preview_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewItem[]'
+        'earliestShipDate' => '\DateTime',
+        'latestShipDate' => '\DateTime',
+        'earliestArrivalDate' => '\DateTime',
+        'latestArrivalDate' => '\DateTime',
+        'shippingNotes' => 'string[]',
+        'fulfillmentPreviewItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewItem[]'
     ];
 
     /**
@@ -78,12 +78,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'earliest_ship_date' => 'date-time',
-        'latest_ship_date' => 'date-time',
-        'earliest_arrival_date' => 'date-time',
-        'latest_arrival_date' => 'date-time',
-        'shipping_notes' => null,
-        'fulfillment_preview_items' => null
+        'earliestShipDate' => 'date-time',
+        'latestShipDate' => 'date-time',
+        'earliestArrivalDate' => 'date-time',
+        'latestArrivalDate' => 'date-time',
+        'shippingNotes' => null,
+        'fulfillmentPreviewItems' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'earliest_ship_date' => 'earliestShipDate',
-        'latest_ship_date' => 'latestShipDate',
-        'earliest_arrival_date' => 'earliestArrivalDate',
-        'latest_arrival_date' => 'latestArrivalDate',
-        'shipping_notes' => 'shippingNotes',
-        'fulfillment_preview_items' => 'fulfillmentPreviewItems'
+        'earliestShipDate' => 'earliestShipDate',
+        'latestShipDate' => 'latestShipDate',
+        'earliestArrivalDate' => 'earliestArrivalDate',
+        'latestArrivalDate' => 'latestArrivalDate',
+        'shippingNotes' => 'shippingNotes',
+        'fulfillmentPreviewItems' => 'fulfillmentPreviewItems'
     ];
 
     /**
@@ -127,12 +127,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'earliest_ship_date' => 'setEarliestShipDate',
-        'latest_ship_date' => 'setLatestShipDate',
-        'earliest_arrival_date' => 'setEarliestArrivalDate',
-        'latest_arrival_date' => 'setLatestArrivalDate',
-        'shipping_notes' => 'setShippingNotes',
-        'fulfillment_preview_items' => 'setFulfillmentPreviewItems'
+        'earliestShipDate' => 'setEarliestShipDate',
+        'latestShipDate' => 'setLatestShipDate',
+        'earliestArrivalDate' => 'setEarliestArrivalDate',
+        'latestArrivalDate' => 'setLatestArrivalDate',
+        'shippingNotes' => 'setShippingNotes',
+        'fulfillmentPreviewItems' => 'setFulfillmentPreviewItems'
     ];
 
     /**
@@ -141,12 +141,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'earliest_ship_date' => 'getEarliestShipDate',
-        'latest_ship_date' => 'getLatestShipDate',
-        'earliest_arrival_date' => 'getEarliestArrivalDate',
-        'latest_arrival_date' => 'getLatestArrivalDate',
-        'shipping_notes' => 'getShippingNotes',
-        'fulfillment_preview_items' => 'getFulfillmentPreviewItems'
+        'earliestShipDate' => 'getEarliestShipDate',
+        'latestShipDate' => 'getLatestShipDate',
+        'earliestArrivalDate' => 'getEarliestArrivalDate',
+        'latestArrivalDate' => 'getLatestArrivalDate',
+        'shippingNotes' => 'getShippingNotes',
+        'fulfillmentPreviewItems' => 'getFulfillmentPreviewItems'
     ];
 
     /**
@@ -209,12 +209,12 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['earliest_ship_date'] = $data['earliest_ship_date'] ?? null;
-        $this->container['latest_ship_date'] = $data['latest_ship_date'] ?? null;
-        $this->container['earliest_arrival_date'] = $data['earliest_arrival_date'] ?? null;
-        $this->container['latest_arrival_date'] = $data['latest_arrival_date'] ?? null;
-        $this->container['shipping_notes'] = $data['shipping_notes'] ?? null;
-        $this->container['fulfillment_preview_items'] = $data['fulfillment_preview_items'] ?? null;
+        $this->container['earliestShipDate'] = $data['earliestShipDate'] ?? null;
+        $this->container['latestShipDate'] = $data['latestShipDate'] ?? null;
+        $this->container['earliestArrivalDate'] = $data['earliestArrivalDate'] ?? null;
+        $this->container['latestArrivalDate'] = $data['latestArrivalDate'] ?? null;
+        $this->container['shippingNotes'] = $data['shippingNotes'] ?? null;
+        $this->container['fulfillmentPreviewItems'] = $data['fulfillmentPreviewItems'] ?? null;
     }
 
     /**
@@ -226,8 +226,8 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['fulfillment_preview_items'] === null) {
-            $invalidProperties[] = "'fulfillment_preview_items' can't be null";
+        if ($this->container['fulfillmentPreviewItems'] === null) {
+            $invalidProperties[] = "'fulfillmentPreviewItems' can't be null";
         }
         return $invalidProperties;
     }
@@ -245,145 +245,145 @@ class FulfillmentPreviewShipment implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets earliest_ship_date
+     * Gets earliestShipDate
      *
      * @return \DateTime|null
      */
     public function getEarliestShipDate()
     {
-        return $this->container['earliest_ship_date'];
+        return $this->container['earliestShipDate'];
     }
 
     /**
-     * Sets earliest_ship_date
+     * Sets earliestShipDate
      *
-     * @param \DateTime|null $earliest_ship_date earliest_ship_date
+     * @param \DateTime|null $earliestShipDate earliestShipDate
      *
      * @return self
      */
-    public function setEarliestShipDate($earliest_ship_date)
+    public function setEarliestShipDate($earliestShipDate)
     {
-        $this->container['earliest_ship_date'] = $earliest_ship_date;
+        $this->container['earliestShipDate'] = $earliestShipDate;
 
         return $this;
     }
 
     /**
-     * Gets latest_ship_date
+     * Gets latestShipDate
      *
      * @return \DateTime|null
      */
     public function getLatestShipDate()
     {
-        return $this->container['latest_ship_date'];
+        return $this->container['latestShipDate'];
     }
 
     /**
-     * Sets latest_ship_date
+     * Sets latestShipDate
      *
-     * @param \DateTime|null $latest_ship_date latest_ship_date
+     * @param \DateTime|null $latestShipDate latestShipDate
      *
      * @return self
      */
-    public function setLatestShipDate($latest_ship_date)
+    public function setLatestShipDate($latestShipDate)
     {
-        $this->container['latest_ship_date'] = $latest_ship_date;
+        $this->container['latestShipDate'] = $latestShipDate;
 
         return $this;
     }
 
     /**
-     * Gets earliest_arrival_date
+     * Gets earliestArrivalDate
      *
      * @return \DateTime|null
      */
     public function getEarliestArrivalDate()
     {
-        return $this->container['earliest_arrival_date'];
+        return $this->container['earliestArrivalDate'];
     }
 
     /**
-     * Sets earliest_arrival_date
+     * Sets earliestArrivalDate
      *
-     * @param \DateTime|null $earliest_arrival_date earliest_arrival_date
+     * @param \DateTime|null $earliestArrivalDate earliestArrivalDate
      *
      * @return self
      */
-    public function setEarliestArrivalDate($earliest_arrival_date)
+    public function setEarliestArrivalDate($earliestArrivalDate)
     {
-        $this->container['earliest_arrival_date'] = $earliest_arrival_date;
+        $this->container['earliestArrivalDate'] = $earliestArrivalDate;
 
         return $this;
     }
 
     /**
-     * Gets latest_arrival_date
+     * Gets latestArrivalDate
      *
      * @return \DateTime|null
      */
     public function getLatestArrivalDate()
     {
-        return $this->container['latest_arrival_date'];
+        return $this->container['latestArrivalDate'];
     }
 
     /**
-     * Sets latest_arrival_date
+     * Sets latestArrivalDate
      *
-     * @param \DateTime|null $latest_arrival_date latest_arrival_date
+     * @param \DateTime|null $latestArrivalDate latestArrivalDate
      *
      * @return self
      */
-    public function setLatestArrivalDate($latest_arrival_date)
+    public function setLatestArrivalDate($latestArrivalDate)
     {
-        $this->container['latest_arrival_date'] = $latest_arrival_date;
+        $this->container['latestArrivalDate'] = $latestArrivalDate;
 
         return $this;
     }
 
     /**
-     * Gets shipping_notes
+     * Gets shippingNotes
      *
      * @return string[]|null
      */
     public function getShippingNotes()
     {
-        return $this->container['shipping_notes'];
+        return $this->container['shippingNotes'];
     }
 
     /**
-     * Sets shipping_notes
+     * Sets shippingNotes
      *
-     * @param string[]|null $shipping_notes Provides additional insight into the shipment timeline when exact delivery dates are not able to be precomputed.
+     * @param string[]|null $shippingNotes Provides additional insight into the shipment timeline when exact delivery dates are not able to be precomputed.
      *
      * @return self
      */
-    public function setShippingNotes($shipping_notes)
+    public function setShippingNotes($shippingNotes)
     {
-        $this->container['shipping_notes'] = $shipping_notes;
+        $this->container['shippingNotes'] = $shippingNotes;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_preview_items
+     * Gets fulfillmentPreviewItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewItem[]
      */
     public function getFulfillmentPreviewItems()
     {
-        return $this->container['fulfillment_preview_items'];
+        return $this->container['fulfillmentPreviewItems'];
     }
 
     /**
-     * Sets fulfillment_preview_items
+     * Sets fulfillmentPreviewItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewItem[] $fulfillment_preview_items An array of fulfillment preview item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewItem[] $fulfillmentPreviewItems An array of fulfillment preview item information.
      *
      * @return self
      */
-    public function setFulfillmentPreviewItems($fulfillment_preview_items)
+    public function setFulfillmentPreviewItems($fulfillmentPreviewItems)
     {
-        $this->container['fulfillment_preview_items'] = $fulfillment_preview_items;
+        $this->container['fulfillmentPreviewItems'] = $fulfillmentPreviewItems;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fulfillment_previews' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreview[]'
+        'fulfillmentPreviews' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreview[]'
     ];
 
     /**
@@ -73,7 +73,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fulfillment_previews' => null
+        'fulfillmentPreviews' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'fulfillment_previews' => 'fulfillmentPreviews'
+        'fulfillmentPreviews' => 'fulfillmentPreviews'
     ];
 
     /**
@@ -112,7 +112,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'fulfillment_previews' => 'setFulfillmentPreviews'
+        'fulfillmentPreviews' => 'setFulfillmentPreviews'
     ];
 
     /**
@@ -121,7 +121,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'fulfillment_previews' => 'getFulfillmentPreviews'
+        'fulfillmentPreviews' => 'getFulfillmentPreviews'
     ];
 
     /**
@@ -184,7 +184,7 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
-        $this->container['fulfillment_previews'] = $data['fulfillment_previews'] ?? null;
+        $this->container['fulfillmentPreviews'] = $data['fulfillmentPreviews'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class GetFulfillmentPreviewResult implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets fulfillment_previews
+     * Gets fulfillmentPreviews
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreview[]|null
      */
     public function getFulfillmentPreviews()
     {
-        return $this->container['fulfillment_previews'];
+        return $this->container['fulfillmentPreviews'];
     }
 
     /**
-     * Sets fulfillment_previews
+     * Sets fulfillmentPreviews
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreview[]|null $fulfillment_previews An array of fulfillment preview information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreview[]|null $fulfillmentPreviews An array of fulfillment preview information.
      *
      * @return self
      */
-    public function setFulfillmentPreviews($fulfillment_previews)
+    public function setFulfillmentPreviews($fulfillmentPreviews)
     {
-        $this->container['fulfillment_previews'] = $fulfillment_previews;
+        $this->container['fulfillmentPreviews'] = $fulfillmentPreviews;
 
         return $this;
     }

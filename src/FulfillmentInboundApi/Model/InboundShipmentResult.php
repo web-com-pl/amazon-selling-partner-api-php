@@ -61,7 +61,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string'
+        'shipmentId' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null
+        'shipmentId' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'ShipmentId'
+        'shipmentId' => 'ShipmentId'
     ];
 
     /**
@@ -111,7 +111,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId'
+        'shipmentId' => 'setShipmentId'
     ];
 
     /**
@@ -120,7 +120,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId'
+        'shipmentId' => 'getShipmentId'
     ];
 
     /**
@@ -183,7 +183,7 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
     }
 
     /**
@@ -195,8 +195,8 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
         return $invalidProperties;
     }
@@ -214,25 +214,25 @@ class InboundShipmentResult implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id The shipment identifier submitted in the request.
+     * @param string $shipmentId The shipment identifier submitted in the request.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }

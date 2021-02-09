@@ -62,10 +62,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
+        'sellerSku' => 'string',
         'quantity' => 'int',
-        'seller_fulfillment_order_item_id' => 'string',
-        'item_unfulfillable_reasons' => 'string[]'
+        'sellerFulfillmentOrderItemId' => 'string',
+        'itemUnfulfillableReasons' => 'string[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
+        'sellerSku' => null,
         'quantity' => 'int32',
-        'seller_fulfillment_order_item_id' => null,
-        'item_unfulfillable_reasons' => null
+        'sellerFulfillmentOrderItemId' => null,
+        'itemUnfulfillableReasons' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
+        'sellerSku' => 'sellerSku',
         'quantity' => 'quantity',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
-        'item_unfulfillable_reasons' => 'itemUnfulfillableReasons'
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
+        'itemUnfulfillableReasons' => 'itemUnfulfillableReasons'
     ];
 
     /**
@@ -121,10 +121,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
+        'sellerSku' => 'setSellerSku',
         'quantity' => 'setQuantity',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
-        'item_unfulfillable_reasons' => 'setItemUnfulfillableReasons'
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
+        'itemUnfulfillableReasons' => 'setItemUnfulfillableReasons'
     ];
 
     /**
@@ -133,10 +133,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
+        'sellerSku' => 'getSellerSku',
         'quantity' => 'getQuantity',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
-        'item_unfulfillable_reasons' => 'getItemUnfulfillableReasons'
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
+        'itemUnfulfillableReasons' => 'getItemUnfulfillableReasons'
     ];
 
     /**
@@ -199,10 +199,10 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
-        $this->container['item_unfulfillable_reasons'] = $data['item_unfulfillable_reasons'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
+        $this->container['itemUnfulfillableReasons'] = $data['itemUnfulfillableReasons'] ?? null;
     }
 
     /**
@@ -214,21 +214,21 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSku'] === null) {
+            $invalidProperties[] = "'sellerSku' can't be null";
         }
-        if ((mb_strlen($this->container['seller_sku']) > 50)) {
-            $invalidProperties[] = "invalid value for 'seller_sku', the character length must be smaller than or equal to 50.";
+        if ((mb_strlen($this->container['sellerSku']) > 50)) {
+            $invalidProperties[] = "invalid value for 'sellerSku', the character length must be smaller than or equal to 50.";
         }
 
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ((mb_strlen($this->container['seller_fulfillment_order_item_id']) > 50)) {
-            $invalidProperties[] = "invalid value for 'seller_fulfillment_order_item_id', the character length must be smaller than or equal to 50.";
+        if ((mb_strlen($this->container['sellerFulfillmentOrderItemId']) > 50)) {
+            $invalidProperties[] = "invalid value for 'sellerFulfillmentOrderItemId', the character length must be smaller than or equal to 50.";
         }
 
         return $invalidProperties;
@@ -247,29 +247,29 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        if ((mb_strlen($seller_sku) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $seller_sku when calling UnfulfillablePreviewItem., must be smaller than or equal to 50.');
+        if ((mb_strlen($sellerSku) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $sellerSku when calling UnfulfillablePreviewItem., must be smaller than or equal to 50.');
         }
 
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
@@ -299,53 +299,53 @@ class UnfulfillablePreviewItem implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id A fulfillment order item identifier created with a call to the getFulfillmentPreview operation.
+     * @param string $sellerFulfillmentOrderItemId A fulfillment order item identifier created with a call to the getFulfillmentPreview operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        if ((mb_strlen($seller_fulfillment_order_item_id) > 50)) {
-            throw new \InvalidArgumentException('invalid length for $seller_fulfillment_order_item_id when calling UnfulfillablePreviewItem., must be smaller than or equal to 50.');
+        if ((mb_strlen($sellerFulfillmentOrderItemId) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $sellerFulfillmentOrderItemId when calling UnfulfillablePreviewItem., must be smaller than or equal to 50.');
         }
 
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
 
     /**
-     * Gets item_unfulfillable_reasons
+     * Gets itemUnfulfillableReasons
      *
      * @return string[]|null
      */
     public function getItemUnfulfillableReasons()
     {
-        return $this->container['item_unfulfillable_reasons'];
+        return $this->container['itemUnfulfillableReasons'];
     }
 
     /**
-     * Sets item_unfulfillable_reasons
+     * Sets itemUnfulfillableReasons
      *
-     * @param string[]|null $item_unfulfillable_reasons item_unfulfillable_reasons
+     * @param string[]|null $itemUnfulfillableReasons itemUnfulfillableReasons
      *
      * @return self
      */
-    public function setItemUnfulfillableReasons($item_unfulfillable_reasons)
+    public function setItemUnfulfillableReasons($itemUnfulfillableReasons)
     {
-        $this->container['item_unfulfillable_reasons'] = $item_unfulfillable_reasons;
+        $this->container['itemUnfulfillableReasons'] = $itemUnfulfillableReasons;
 
         return $this;
     }

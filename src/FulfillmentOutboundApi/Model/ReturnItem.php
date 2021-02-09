@@ -62,17 +62,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_return_item_id' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
-        'amazon_shipment_id' => 'string',
-        'seller_return_reason_code' => 'string',
-        'return_comment' => 'string',
-        'amazon_return_reason_code' => 'string',
+        'sellerReturnItemId' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
+        'amazonShipmentId' => 'string',
+        'sellerReturnReasonCode' => 'string',
+        'returnComment' => 'string',
+        'amazonReturnReasonCode' => 'string',
         'status' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentReturnItemStatus',
-        'status_changed_date' => '\DateTime',
-        'return_authorization_id' => 'string',
-        'return_received_condition' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItemDisposition',
-        'fulfillment_center_id' => 'string'
+        'statusChangedDate' => '\DateTime',
+        'returnAuthorizationId' => 'string',
+        'returnReceivedCondition' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItemDisposition',
+        'fulfillmentCenterId' => 'string'
     ];
 
     /**
@@ -83,17 +83,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_return_item_id' => null,
-        'seller_fulfillment_order_item_id' => null,
-        'amazon_shipment_id' => null,
-        'seller_return_reason_code' => null,
-        'return_comment' => null,
-        'amazon_return_reason_code' => null,
+        'sellerReturnItemId' => null,
+        'sellerFulfillmentOrderItemId' => null,
+        'amazonShipmentId' => null,
+        'sellerReturnReasonCode' => null,
+        'returnComment' => null,
+        'amazonReturnReasonCode' => null,
         'status' => null,
-        'status_changed_date' => 'date-time',
-        'return_authorization_id' => null,
-        'return_received_condition' => null,
-        'fulfillment_center_id' => null
+        'statusChangedDate' => 'date-time',
+        'returnAuthorizationId' => null,
+        'returnReceivedCondition' => null,
+        'fulfillmentCenterId' => null
     ];
 
     /**
@@ -123,17 +123,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_return_item_id' => 'sellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'amazonShipmentId',
-        'seller_return_reason_code' => 'sellerReturnReasonCode',
-        'return_comment' => 'returnComment',
-        'amazon_return_reason_code' => 'amazonReturnReasonCode',
+        'sellerReturnItemId' => 'sellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'amazonShipmentId',
+        'sellerReturnReasonCode' => 'sellerReturnReasonCode',
+        'returnComment' => 'returnComment',
+        'amazonReturnReasonCode' => 'amazonReturnReasonCode',
         'status' => 'status',
-        'status_changed_date' => 'statusChangedDate',
-        'return_authorization_id' => 'returnAuthorizationId',
-        'return_received_condition' => 'returnReceivedCondition',
-        'fulfillment_center_id' => 'fulfillmentCenterId'
+        'statusChangedDate' => 'statusChangedDate',
+        'returnAuthorizationId' => 'returnAuthorizationId',
+        'returnReceivedCondition' => 'returnReceivedCondition',
+        'fulfillmentCenterId' => 'fulfillmentCenterId'
     ];
 
     /**
@@ -142,17 +142,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_return_item_id' => 'setSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'setAmazonShipmentId',
-        'seller_return_reason_code' => 'setSellerReturnReasonCode',
-        'return_comment' => 'setReturnComment',
-        'amazon_return_reason_code' => 'setAmazonReturnReasonCode',
+        'sellerReturnItemId' => 'setSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'setAmazonShipmentId',
+        'sellerReturnReasonCode' => 'setSellerReturnReasonCode',
+        'returnComment' => 'setReturnComment',
+        'amazonReturnReasonCode' => 'setAmazonReturnReasonCode',
         'status' => 'setStatus',
-        'status_changed_date' => 'setStatusChangedDate',
-        'return_authorization_id' => 'setReturnAuthorizationId',
-        'return_received_condition' => 'setReturnReceivedCondition',
-        'fulfillment_center_id' => 'setFulfillmentCenterId'
+        'statusChangedDate' => 'setStatusChangedDate',
+        'returnAuthorizationId' => 'setReturnAuthorizationId',
+        'returnReceivedCondition' => 'setReturnReceivedCondition',
+        'fulfillmentCenterId' => 'setFulfillmentCenterId'
     ];
 
     /**
@@ -161,17 +161,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_return_item_id' => 'getSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'getAmazonShipmentId',
-        'seller_return_reason_code' => 'getSellerReturnReasonCode',
-        'return_comment' => 'getReturnComment',
-        'amazon_return_reason_code' => 'getAmazonReturnReasonCode',
+        'sellerReturnItemId' => 'getSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'getAmazonShipmentId',
+        'sellerReturnReasonCode' => 'getSellerReturnReasonCode',
+        'returnComment' => 'getReturnComment',
+        'amazonReturnReasonCode' => 'getAmazonReturnReasonCode',
         'status' => 'getStatus',
-        'status_changed_date' => 'getStatusChangedDate',
-        'return_authorization_id' => 'getReturnAuthorizationId',
-        'return_received_condition' => 'getReturnReceivedCondition',
-        'fulfillment_center_id' => 'getFulfillmentCenterId'
+        'statusChangedDate' => 'getStatusChangedDate',
+        'returnAuthorizationId' => 'getReturnAuthorizationId',
+        'returnReceivedCondition' => 'getReturnReceivedCondition',
+        'fulfillmentCenterId' => 'getFulfillmentCenterId'
     ];
 
     /**
@@ -234,17 +234,17 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_return_item_id'] = $data['seller_return_item_id'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
-        $this->container['amazon_shipment_id'] = $data['amazon_shipment_id'] ?? null;
-        $this->container['seller_return_reason_code'] = $data['seller_return_reason_code'] ?? null;
-        $this->container['return_comment'] = $data['return_comment'] ?? null;
-        $this->container['amazon_return_reason_code'] = $data['amazon_return_reason_code'] ?? null;
+        $this->container['sellerReturnItemId'] = $data['sellerReturnItemId'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
+        $this->container['amazonShipmentId'] = $data['amazonShipmentId'] ?? null;
+        $this->container['sellerReturnReasonCode'] = $data['sellerReturnReasonCode'] ?? null;
+        $this->container['returnComment'] = $data['returnComment'] ?? null;
+        $this->container['amazonReturnReasonCode'] = $data['amazonReturnReasonCode'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
-        $this->container['status_changed_date'] = $data['status_changed_date'] ?? null;
-        $this->container['return_authorization_id'] = $data['return_authorization_id'] ?? null;
-        $this->container['return_received_condition'] = $data['return_received_condition'] ?? null;
-        $this->container['fulfillment_center_id'] = $data['fulfillment_center_id'] ?? null;
+        $this->container['statusChangedDate'] = $data['statusChangedDate'] ?? null;
+        $this->container['returnAuthorizationId'] = $data['returnAuthorizationId'] ?? null;
+        $this->container['returnReceivedCondition'] = $data['returnReceivedCondition'] ?? null;
+        $this->container['fulfillmentCenterId'] = $data['fulfillmentCenterId'] ?? null;
     }
 
     /**
@@ -256,23 +256,23 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_return_item_id'] === null) {
-            $invalidProperties[] = "'seller_return_item_id' can't be null";
+        if ($this->container['sellerReturnItemId'] === null) {
+            $invalidProperties[] = "'sellerReturnItemId' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ($this->container['amazon_shipment_id'] === null) {
-            $invalidProperties[] = "'amazon_shipment_id' can't be null";
+        if ($this->container['amazonShipmentId'] === null) {
+            $invalidProperties[] = "'amazonShipmentId' can't be null";
         }
-        if ($this->container['seller_return_reason_code'] === null) {
-            $invalidProperties[] = "'seller_return_reason_code' can't be null";
+        if ($this->container['sellerReturnReasonCode'] === null) {
+            $invalidProperties[] = "'sellerReturnReasonCode' can't be null";
         }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['status_changed_date'] === null) {
-            $invalidProperties[] = "'status_changed_date' can't be null";
+        if ($this->container['statusChangedDate'] === null) {
+            $invalidProperties[] = "'statusChangedDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -290,145 +290,145 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_return_item_id
+     * Gets sellerReturnItemId
      *
      * @return string
      */
     public function getSellerReturnItemId()
     {
-        return $this->container['seller_return_item_id'];
+        return $this->container['sellerReturnItemId'];
     }
 
     /**
-     * Sets seller_return_item_id
+     * Sets sellerReturnItemId
      *
-     * @param string $seller_return_item_id An identifier assigned by the seller to the return item.
+     * @param string $sellerReturnItemId An identifier assigned by the seller to the return item.
      *
      * @return self
      */
-    public function setSellerReturnItemId($seller_return_item_id)
+    public function setSellerReturnItemId($sellerReturnItemId)
     {
-        $this->container['seller_return_item_id'] = $seller_return_item_id;
+        $this->container['sellerReturnItemId'] = $sellerReturnItemId;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id The identifier assigned to the item by the seller when the fulfillment order was created.
+     * @param string $sellerFulfillmentOrderItemId The identifier assigned to the item by the seller when the fulfillment order was created.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
 
     /**
-     * Gets amazon_shipment_id
+     * Gets amazonShipmentId
      *
      * @return string
      */
     public function getAmazonShipmentId()
     {
-        return $this->container['amazon_shipment_id'];
+        return $this->container['amazonShipmentId'];
     }
 
     /**
-     * Sets amazon_shipment_id
+     * Sets amazonShipmentId
      *
-     * @param string $amazon_shipment_id The identifier for the shipment that is associated with the return item.
+     * @param string $amazonShipmentId The identifier for the shipment that is associated with the return item.
      *
      * @return self
      */
-    public function setAmazonShipmentId($amazon_shipment_id)
+    public function setAmazonShipmentId($amazonShipmentId)
     {
-        $this->container['amazon_shipment_id'] = $amazon_shipment_id;
+        $this->container['amazonShipmentId'] = $amazonShipmentId;
 
         return $this;
     }
 
     /**
-     * Gets seller_return_reason_code
+     * Gets sellerReturnReasonCode
      *
      * @return string
      */
     public function getSellerReturnReasonCode()
     {
-        return $this->container['seller_return_reason_code'];
+        return $this->container['sellerReturnReasonCode'];
     }
 
     /**
-     * Sets seller_return_reason_code
+     * Sets sellerReturnReasonCode
      *
-     * @param string $seller_return_reason_code The return reason code assigned to the return item by the seller.
+     * @param string $sellerReturnReasonCode The return reason code assigned to the return item by the seller.
      *
      * @return self
      */
-    public function setSellerReturnReasonCode($seller_return_reason_code)
+    public function setSellerReturnReasonCode($sellerReturnReasonCode)
     {
-        $this->container['seller_return_reason_code'] = $seller_return_reason_code;
+        $this->container['sellerReturnReasonCode'] = $sellerReturnReasonCode;
 
         return $this;
     }
 
     /**
-     * Gets return_comment
+     * Gets returnComment
      *
      * @return string|null
      */
     public function getReturnComment()
     {
-        return $this->container['return_comment'];
+        return $this->container['returnComment'];
     }
 
     /**
-     * Sets return_comment
+     * Sets returnComment
      *
-     * @param string|null $return_comment An optional comment about the return item.
+     * @param string|null $returnComment An optional comment about the return item.
      *
      * @return self
      */
-    public function setReturnComment($return_comment)
+    public function setReturnComment($returnComment)
     {
-        $this->container['return_comment'] = $return_comment;
+        $this->container['returnComment'] = $returnComment;
 
         return $this;
     }
 
     /**
-     * Gets amazon_return_reason_code
+     * Gets amazonReturnReasonCode
      *
      * @return string|null
      */
     public function getAmazonReturnReasonCode()
     {
-        return $this->container['amazon_return_reason_code'];
+        return $this->container['amazonReturnReasonCode'];
     }
 
     /**
-     * Sets amazon_return_reason_code
+     * Sets amazonReturnReasonCode
      *
-     * @param string|null $amazon_return_reason_code The return reason code that the Amazon fulfillment center assigned to the return item.
+     * @param string|null $amazonReturnReasonCode The return reason code that the Amazon fulfillment center assigned to the return item.
      *
      * @return self
      */
-    public function setAmazonReturnReasonCode($amazon_return_reason_code)
+    public function setAmazonReturnReasonCode($amazonReturnReasonCode)
     {
-        $this->container['amazon_return_reason_code'] = $amazon_return_reason_code;
+        $this->container['amazonReturnReasonCode'] = $amazonReturnReasonCode;
 
         return $this;
     }
@@ -458,97 +458,97 @@ class ReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets status_changed_date
+     * Gets statusChangedDate
      *
      * @return \DateTime
      */
     public function getStatusChangedDate()
     {
-        return $this->container['status_changed_date'];
+        return $this->container['statusChangedDate'];
     }
 
     /**
-     * Sets status_changed_date
+     * Sets statusChangedDate
      *
-     * @param \DateTime $status_changed_date status_changed_date
+     * @param \DateTime $statusChangedDate statusChangedDate
      *
      * @return self
      */
-    public function setStatusChangedDate($status_changed_date)
+    public function setStatusChangedDate($statusChangedDate)
     {
-        $this->container['status_changed_date'] = $status_changed_date;
+        $this->container['statusChangedDate'] = $statusChangedDate;
 
         return $this;
     }
 
     /**
-     * Gets return_authorization_id
+     * Gets returnAuthorizationId
      *
      * @return string|null
      */
     public function getReturnAuthorizationId()
     {
-        return $this->container['return_authorization_id'];
+        return $this->container['returnAuthorizationId'];
     }
 
     /**
-     * Sets return_authorization_id
+     * Sets returnAuthorizationId
      *
-     * @param string|null $return_authorization_id Identifies the return authorization used to return this item. See ReturnAuthorization.
+     * @param string|null $returnAuthorizationId Identifies the return authorization used to return this item. See ReturnAuthorization.
      *
      * @return self
      */
-    public function setReturnAuthorizationId($return_authorization_id)
+    public function setReturnAuthorizationId($returnAuthorizationId)
     {
-        $this->container['return_authorization_id'] = $return_authorization_id;
+        $this->container['returnAuthorizationId'] = $returnAuthorizationId;
 
         return $this;
     }
 
     /**
-     * Gets return_received_condition
+     * Gets returnReceivedCondition
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItemDisposition|null
      */
     public function getReturnReceivedCondition()
     {
-        return $this->container['return_received_condition'];
+        return $this->container['returnReceivedCondition'];
     }
 
     /**
-     * Sets return_received_condition
+     * Sets returnReceivedCondition
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItemDisposition|null $return_received_condition return_received_condition
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItemDisposition|null $returnReceivedCondition returnReceivedCondition
      *
      * @return self
      */
-    public function setReturnReceivedCondition($return_received_condition)
+    public function setReturnReceivedCondition($returnReceivedCondition)
     {
-        $this->container['return_received_condition'] = $return_received_condition;
+        $this->container['returnReceivedCondition'] = $returnReceivedCondition;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_center_id
+     * Gets fulfillmentCenterId
      *
      * @return string|null
      */
     public function getFulfillmentCenterId()
     {
-        return $this->container['fulfillment_center_id'];
+        return $this->container['fulfillmentCenterId'];
     }
 
     /**
-     * Sets fulfillment_center_id
+     * Sets fulfillmentCenterId
      *
-     * @param string|null $fulfillment_center_id The identifier for the Amazon fulfillment center that processed the return item.
+     * @param string|null $fulfillmentCenterId The identifier for the Amazon fulfillment center that processed the return item.
      *
      * @return self
      */
-    public function setFulfillmentCenterId($fulfillment_center_id)
+    public function setFulfillmentCenterId($fulfillmentCenterId)
     {
-        $this->container['fulfillment_center_id'] = $fulfillment_center_id;
+        $this->container['fulfillmentCenterId'] = $fulfillmentCenterId;
 
         return $this;
     }

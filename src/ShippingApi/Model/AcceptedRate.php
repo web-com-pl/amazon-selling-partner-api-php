@@ -62,9 +62,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_charge' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
-        'billed_weight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
-        'service_type' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
+        'totalCharge' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
+        'billedWeight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
+        'serviceType' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
         'promise' => '\Webcom\Amazon\Rest\ShippingApi\Model\ShippingPromiseSet'
     ];
 
@@ -76,9 +76,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_charge' => null,
-        'billed_weight' => null,
-        'service_type' => null,
+        'totalCharge' => null,
+        'billedWeight' => null,
+        'serviceType' => null,
         'promise' => null
     ];
 
@@ -109,9 +109,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_charge' => 'totalCharge',
-        'billed_weight' => 'billedWeight',
-        'service_type' => 'serviceType',
+        'totalCharge' => 'totalCharge',
+        'billedWeight' => 'billedWeight',
+        'serviceType' => 'serviceType',
         'promise' => 'promise'
     ];
 
@@ -121,9 +121,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_charge' => 'setTotalCharge',
-        'billed_weight' => 'setBilledWeight',
-        'service_type' => 'setServiceType',
+        'totalCharge' => 'setTotalCharge',
+        'billedWeight' => 'setBilledWeight',
+        'serviceType' => 'setServiceType',
         'promise' => 'setPromise'
     ];
 
@@ -133,9 +133,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_charge' => 'getTotalCharge',
-        'billed_weight' => 'getBilledWeight',
-        'service_type' => 'getServiceType',
+        'totalCharge' => 'getTotalCharge',
+        'billedWeight' => 'getBilledWeight',
+        'serviceType' => 'getServiceType',
         'promise' => 'getPromise'
     ];
 
@@ -199,9 +199,9 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_charge'] = $data['total_charge'] ?? null;
-        $this->container['billed_weight'] = $data['billed_weight'] ?? null;
-        $this->container['service_type'] = $data['service_type'] ?? null;
+        $this->container['totalCharge'] = $data['totalCharge'] ?? null;
+        $this->container['billedWeight'] = $data['billedWeight'] ?? null;
+        $this->container['serviceType'] = $data['serviceType'] ?? null;
         $this->container['promise'] = $data['promise'] ?? null;
     }
 
@@ -230,73 +230,73 @@ class AcceptedRate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_charge
+     * Gets totalCharge
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Currency|null
      */
     public function getTotalCharge()
     {
-        return $this->container['total_charge'];
+        return $this->container['totalCharge'];
     }
 
     /**
-     * Sets total_charge
+     * Sets totalCharge
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency|null $total_charge total_charge
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency|null $totalCharge totalCharge
      *
      * @return self
      */
-    public function setTotalCharge($total_charge)
+    public function setTotalCharge($totalCharge)
     {
-        $this->container['total_charge'] = $total_charge;
+        $this->container['totalCharge'] = $totalCharge;
 
         return $this;
     }
 
     /**
-     * Gets billed_weight
+     * Gets billedWeight
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Weight|null
      */
     public function getBilledWeight()
     {
-        return $this->container['billed_weight'];
+        return $this->container['billedWeight'];
     }
 
     /**
-     * Sets billed_weight
+     * Sets billedWeight
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight|null $billed_weight billed_weight
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight|null $billedWeight billedWeight
      *
      * @return self
      */
-    public function setBilledWeight($billed_weight)
+    public function setBilledWeight($billedWeight)
     {
-        $this->container['billed_weight'] = $billed_weight;
+        $this->container['billedWeight'] = $billedWeight;
 
         return $this;
     }
 
     /**
-     * Gets service_type
+     * Gets serviceType
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType|null
      */
     public function getServiceType()
     {
-        return $this->container['service_type'];
+        return $this->container['serviceType'];
     }
 
     /**
-     * Sets service_type
+     * Sets serviceType
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType|null $service_type service_type
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType|null $serviceType serviceType
      *
      * @return self
      */
-    public function setServiceType($service_type)
+    public function setServiceType($serviceType)
     {
-        $this->container['service_type'] = $service_type;
+        $this->container['serviceType'] = $serviceType;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'shipping_address' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address'
+        'amazonOrderId' => 'string',
+        'shippingAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address'
     ];
 
     /**
@@ -74,8 +74,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'shipping_address' => null
+        'amazonOrderId' => null,
+        'shippingAddress' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'shipping_address' => 'ShippingAddress'
+        'amazonOrderId' => 'AmazonOrderId',
+        'shippingAddress' => 'ShippingAddress'
     ];
 
     /**
@@ -115,8 +115,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'shipping_address' => 'setShippingAddress'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'shippingAddress' => 'setShippingAddress'
     ];
 
     /**
@@ -125,8 +125,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'shipping_address' => 'getShippingAddress'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'shippingAddress' => 'getShippingAddress'
     ];
 
     /**
@@ -189,8 +189,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['shipping_address'] = $data['shipping_address'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['shippingAddress'] = $data['shippingAddress'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['amazon_order_id'] === null) {
-            $invalidProperties[] = "'amazon_order_id' can't be null";
+        if ($this->container['amazonOrderId'] === null) {
+            $invalidProperties[] = "'amazonOrderId' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,49 +221,49 @@ class OrderAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string $amazon_order_id An Amazon-defined order identifier, in 3-7-7 format.
+     * @param string $amazonOrderId An Amazon-defined order identifier, in 3-7-7 format.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets shipping_address
+     * Gets shippingAddress
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\Address|null
      */
     public function getShippingAddress()
     {
-        return $this->container['shipping_address'];
+        return $this->container['shippingAddress'];
     }
 
     /**
-     * Sets shipping_address
+     * Sets shippingAddress
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $shipping_address shipping_address
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $shippingAddress shippingAddress
      *
      * @return self
      */
-    public function setShippingAddress($shipping_address)
+    public function setShippingAddress($shippingAddress)
     {
-        $this->container['shipping_address'] = $shipping_address;
+        $this->container['shippingAddress'] = $shippingAddress;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_time_zone' => 'string',
-        'delivery_windows' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow[]'
+        'deliveryTimeZone' => 'string',
+        'deliveryWindows' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'delivery_time_zone' => null,
-        'delivery_windows' => null
+        'deliveryTimeZone' => null,
+        'deliveryWindows' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_time_zone' => 'deliveryTimeZone',
-        'delivery_windows' => 'deliveryWindows'
+        'deliveryTimeZone' => 'deliveryTimeZone',
+        'deliveryWindows' => 'deliveryWindows'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'delivery_time_zone' => 'setDeliveryTimeZone',
-        'delivery_windows' => 'setDeliveryWindows'
+        'deliveryTimeZone' => 'setDeliveryTimeZone',
+        'deliveryWindows' => 'setDeliveryWindows'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'delivery_time_zone' => 'getDeliveryTimeZone',
-        'delivery_windows' => 'getDeliveryWindows'
+        'deliveryTimeZone' => 'getDeliveryTimeZone',
+        'deliveryWindows' => 'getDeliveryWindows'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_time_zone'] = $data['delivery_time_zone'] ?? null;
-        $this->container['delivery_windows'] = $data['delivery_windows'] ?? null;
+        $this->container['deliveryTimeZone'] = $data['deliveryTimeZone'] ?? null;
+        $this->container['deliveryWindows'] = $data['deliveryWindows'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['delivery_time_zone'] === null) {
-            $invalidProperties[] = "'delivery_time_zone' can't be null";
+        if ($this->container['deliveryTimeZone'] === null) {
+            $invalidProperties[] = "'deliveryTimeZone' can't be null";
         }
-        if ($this->container['delivery_windows'] === null) {
-            $invalidProperties[] = "'delivery_windows' can't be null";
+        if ($this->container['deliveryWindows'] === null) {
+            $invalidProperties[] = "'deliveryWindows' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class ScheduledDeliveryInfo implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets delivery_time_zone
+     * Gets deliveryTimeZone
      *
      * @return string
      */
     public function getDeliveryTimeZone()
     {
-        return $this->container['delivery_time_zone'];
+        return $this->container['deliveryTimeZone'];
     }
 
     /**
-     * Sets delivery_time_zone
+     * Sets deliveryTimeZone
      *
-     * @param string $delivery_time_zone The time zone of the destination address for the fulfillment order preview. Must be an IANA time zone name. Example: Asia/Tokyo.
+     * @param string $deliveryTimeZone The time zone of the destination address for the fulfillment order preview. Must be an IANA time zone name. Example: Asia/Tokyo.
      *
      * @return self
      */
-    public function setDeliveryTimeZone($delivery_time_zone)
+    public function setDeliveryTimeZone($deliveryTimeZone)
     {
-        $this->container['delivery_time_zone'] = $delivery_time_zone;
+        $this->container['deliveryTimeZone'] = $deliveryTimeZone;
 
         return $this;
     }
 
     /**
-     * Gets delivery_windows
+     * Gets deliveryWindows
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow[]
      */
     public function getDeliveryWindows()
     {
-        return $this->container['delivery_windows'];
+        return $this->container['deliveryWindows'];
     }
 
     /**
-     * Sets delivery_windows
+     * Sets deliveryWindows
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow[] $delivery_windows An array of delivery windows.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow[] $deliveryWindows An array of delivery windows.
      *
      * @return self
      */
-    public function setDeliveryWindows($delivery_windows)
+    public function setDeliveryWindows($deliveryWindows)
     {
-        $this->container['delivery_windows'] = $delivery_windows;
+        $this->container['deliveryWindows'] = $deliveryWindows;
 
         return $this;
     }

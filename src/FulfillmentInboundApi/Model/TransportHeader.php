@@ -62,10 +62,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_id' => 'string',
-        'shipment_id' => 'string',
-        'is_partnered' => 'bool',
-        'shipment_type' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType'
+        'sellerId' => 'string',
+        'shipmentId' => 'string',
+        'isPartnered' => 'bool',
+        'shipmentType' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType'
     ];
 
     /**
@@ -76,10 +76,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_id' => null,
-        'shipment_id' => null,
-        'is_partnered' => null,
-        'shipment_type' => null
+        'sellerId' => null,
+        'shipmentId' => null,
+        'isPartnered' => null,
+        'shipmentType' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_id' => 'SellerId',
-        'shipment_id' => 'ShipmentId',
-        'is_partnered' => 'IsPartnered',
-        'shipment_type' => 'ShipmentType'
+        'sellerId' => 'SellerId',
+        'shipmentId' => 'ShipmentId',
+        'isPartnered' => 'IsPartnered',
+        'shipmentType' => 'ShipmentType'
     ];
 
     /**
@@ -121,10 +121,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_id' => 'setSellerId',
-        'shipment_id' => 'setShipmentId',
-        'is_partnered' => 'setIsPartnered',
-        'shipment_type' => 'setShipmentType'
+        'sellerId' => 'setSellerId',
+        'shipmentId' => 'setShipmentId',
+        'isPartnered' => 'setIsPartnered',
+        'shipmentType' => 'setShipmentType'
     ];
 
     /**
@@ -133,10 +133,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_id' => 'getSellerId',
-        'shipment_id' => 'getShipmentId',
-        'is_partnered' => 'getIsPartnered',
-        'shipment_type' => 'getShipmentType'
+        'sellerId' => 'getSellerId',
+        'shipmentId' => 'getShipmentId',
+        'isPartnered' => 'getIsPartnered',
+        'shipmentType' => 'getShipmentType'
     ];
 
     /**
@@ -199,10 +199,10 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_id'] = $data['seller_id'] ?? null;
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['is_partnered'] = $data['is_partnered'] ?? null;
-        $this->container['shipment_type'] = $data['shipment_type'] ?? null;
+        $this->container['sellerId'] = $data['sellerId'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['isPartnered'] = $data['isPartnered'] ?? null;
+        $this->container['shipmentType'] = $data['shipmentType'] ?? null;
     }
 
     /**
@@ -214,17 +214,17 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_id'] === null) {
-            $invalidProperties[] = "'seller_id' can't be null";
+        if ($this->container['sellerId'] === null) {
+            $invalidProperties[] = "'sellerId' can't be null";
         }
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if ($this->container['is_partnered'] === null) {
-            $invalidProperties[] = "'is_partnered' can't be null";
+        if ($this->container['isPartnered'] === null) {
+            $invalidProperties[] = "'isPartnered' can't be null";
         }
-        if ($this->container['shipment_type'] === null) {
-            $invalidProperties[] = "'shipment_type' can't be null";
+        if ($this->container['shipmentType'] === null) {
+            $invalidProperties[] = "'shipmentType' can't be null";
         }
         return $invalidProperties;
     }
@@ -242,97 +242,97 @@ class TransportHeader implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_id
+     * Gets sellerId
      *
      * @return string
      */
     public function getSellerId()
     {
-        return $this->container['seller_id'];
+        return $this->container['sellerId'];
     }
 
     /**
-     * Sets seller_id
+     * Sets sellerId
      *
-     * @param string $seller_id The Amazon seller identifier.
+     * @param string $sellerId The Amazon seller identifier.
      *
      * @return self
      */
-    public function setSellerId($seller_id)
+    public function setSellerId($sellerId)
     {
-        $this->container['seller_id'] = $seller_id;
+        $this->container['sellerId'] = $sellerId;
 
         return $this;
     }
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation.
+     * @param string $shipmentId A shipment identifier originally returned by the createInboundShipmentPlan operation.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets is_partnered
+     * Gets isPartnered
      *
      * @return bool
      */
     public function getIsPartnered()
     {
-        return $this->container['is_partnered'];
+        return $this->container['isPartnered'];
     }
 
     /**
-     * Sets is_partnered
+     * Sets isPartnered
      *
-     * @param bool $is_partnered Indicates whether a putTransportDetails request is for a partnered carrier.  Possible values:  * true – Request is for an Amazon-partnered carrier.  * false – Request is for a non-Amazon-partnered carrier.
+     * @param bool $isPartnered Indicates whether a putTransportDetails request is for a partnered carrier.  Possible values:  * true – Request is for an Amazon-partnered carrier.  * false – Request is for a non-Amazon-partnered carrier.
      *
      * @return self
      */
-    public function setIsPartnered($is_partnered)
+    public function setIsPartnered($isPartnered)
     {
-        $this->container['is_partnered'] = $is_partnered;
+        $this->container['isPartnered'] = $isPartnered;
 
         return $this;
     }
 
     /**
-     * Gets shipment_type
+     * Gets shipmentType
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType
      */
     public function getShipmentType()
     {
-        return $this->container['shipment_type'];
+        return $this->container['shipmentType'];
     }
 
     /**
-     * Sets shipment_type
+     * Sets shipmentType
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType $shipment_type shipment_type
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType $shipmentType shipmentType
      *
      * @return self
      */
-    public function setShipmentType($shipment_type)
+    public function setShipmentType($shipmentType)
     {
-        $this->container['shipment_type'] = $shipment_type;
+        $this->container['shipmentType'] = $shipmentType;
 
         return $this;
     }

@@ -61,12 +61,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'buying_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType',
-        'regular_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'fulfillment_channel' => 'string',
-        'item_condition' => 'string',
-        'item_sub_condition' => 'string',
-        'seller_sku' => 'string'
+        'buyingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType',
+        'regularPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'fulfillmentChannel' => 'string',
+        'itemCondition' => 'string',
+        'itemSubCondition' => 'string',
+        'sellerSKU' => 'string'
     ];
 
     /**
@@ -77,12 +77,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'buying_price' => null,
-        'regular_price' => null,
-        'fulfillment_channel' => null,
-        'item_condition' => null,
-        'item_sub_condition' => null,
-        'seller_sku' => null
+        'buyingPrice' => null,
+        'regularPrice' => null,
+        'fulfillmentChannel' => null,
+        'itemCondition' => null,
+        'itemSubCondition' => null,
+        'sellerSKU' => null
     ];
 
     /**
@@ -112,12 +112,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'buying_price' => 'BuyingPrice',
-        'regular_price' => 'RegularPrice',
-        'fulfillment_channel' => 'FulfillmentChannel',
-        'item_condition' => 'ItemCondition',
-        'item_sub_condition' => 'ItemSubCondition',
-        'seller_sku' => 'SellerSKU'
+        'buyingPrice' => 'BuyingPrice',
+        'regularPrice' => 'RegularPrice',
+        'fulfillmentChannel' => 'FulfillmentChannel',
+        'itemCondition' => 'ItemCondition',
+        'itemSubCondition' => 'ItemSubCondition',
+        'sellerSKU' => 'SellerSKU'
     ];
 
     /**
@@ -126,12 +126,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'buying_price' => 'setBuyingPrice',
-        'regular_price' => 'setRegularPrice',
-        'fulfillment_channel' => 'setFulfillmentChannel',
-        'item_condition' => 'setItemCondition',
-        'item_sub_condition' => 'setItemSubCondition',
-        'seller_sku' => 'setSellerSku'
+        'buyingPrice' => 'setBuyingPrice',
+        'regularPrice' => 'setRegularPrice',
+        'fulfillmentChannel' => 'setFulfillmentChannel',
+        'itemCondition' => 'setItemCondition',
+        'itemSubCondition' => 'setItemSubCondition',
+        'sellerSKU' => 'setSellerSKU'
     ];
 
     /**
@@ -140,12 +140,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'buying_price' => 'getBuyingPrice',
-        'regular_price' => 'getRegularPrice',
-        'fulfillment_channel' => 'getFulfillmentChannel',
-        'item_condition' => 'getItemCondition',
-        'item_sub_condition' => 'getItemSubCondition',
-        'seller_sku' => 'getSellerSku'
+        'buyingPrice' => 'getBuyingPrice',
+        'regularPrice' => 'getRegularPrice',
+        'fulfillmentChannel' => 'getFulfillmentChannel',
+        'itemCondition' => 'getItemCondition',
+        'itemSubCondition' => 'getItemSubCondition',
+        'sellerSKU' => 'getSellerSKU'
     ];
 
     /**
@@ -208,12 +208,12 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['buying_price'] = $data['buying_price'] ?? null;
-        $this->container['regular_price'] = $data['regular_price'] ?? null;
-        $this->container['fulfillment_channel'] = $data['fulfillment_channel'] ?? null;
-        $this->container['item_condition'] = $data['item_condition'] ?? null;
-        $this->container['item_sub_condition'] = $data['item_sub_condition'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
+        $this->container['buyingPrice'] = $data['buyingPrice'] ?? null;
+        $this->container['regularPrice'] = $data['regularPrice'] ?? null;
+        $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['itemCondition'] = $data['itemCondition'] ?? null;
+        $this->container['itemSubCondition'] = $data['itemSubCondition'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
     }
 
     /**
@@ -225,23 +225,23 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['buying_price'] === null) {
-            $invalidProperties[] = "'buying_price' can't be null";
+        if ($this->container['buyingPrice'] === null) {
+            $invalidProperties[] = "'buyingPrice' can't be null";
         }
-        if ($this->container['regular_price'] === null) {
-            $invalidProperties[] = "'regular_price' can't be null";
+        if ($this->container['regularPrice'] === null) {
+            $invalidProperties[] = "'regularPrice' can't be null";
         }
-        if ($this->container['fulfillment_channel'] === null) {
-            $invalidProperties[] = "'fulfillment_channel' can't be null";
+        if ($this->container['fulfillmentChannel'] === null) {
+            $invalidProperties[] = "'fulfillmentChannel' can't be null";
         }
-        if ($this->container['item_condition'] === null) {
-            $invalidProperties[] = "'item_condition' can't be null";
+        if ($this->container['itemCondition'] === null) {
+            $invalidProperties[] = "'itemCondition' can't be null";
         }
-        if ($this->container['item_sub_condition'] === null) {
-            $invalidProperties[] = "'item_sub_condition' can't be null";
+        if ($this->container['itemSubCondition'] === null) {
+            $invalidProperties[] = "'itemSubCondition' can't be null";
         }
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSKU'] === null) {
+            $invalidProperties[] = "'sellerSKU' can't be null";
         }
         return $invalidProperties;
     }
@@ -259,145 +259,145 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets buying_price
+     * Gets buyingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType
      */
     public function getBuyingPrice()
     {
-        return $this->container['buying_price'];
+        return $this->container['buyingPrice'];
     }
 
     /**
-     * Sets buying_price
+     * Sets buyingPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType $buying_price buying_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType $buyingPrice buyingPrice
      *
      * @return self
      */
-    public function setBuyingPrice($buying_price)
+    public function setBuyingPrice($buyingPrice)
     {
-        $this->container['buying_price'] = $buying_price;
+        $this->container['buyingPrice'] = $buyingPrice;
 
         return $this;
     }
 
     /**
-     * Gets regular_price
+     * Gets regularPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType
      */
     public function getRegularPrice()
     {
-        return $this->container['regular_price'];
+        return $this->container['regularPrice'];
     }
 
     /**
-     * Sets regular_price
+     * Sets regularPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $regular_price regular_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $regularPrice regularPrice
      *
      * @return self
      */
-    public function setRegularPrice($regular_price)
+    public function setRegularPrice($regularPrice)
     {
-        $this->container['regular_price'] = $regular_price;
+        $this->container['regularPrice'] = $regularPrice;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_channel
+     * Gets fulfillmentChannel
      *
      * @return string
      */
     public function getFulfillmentChannel()
     {
-        return $this->container['fulfillment_channel'];
+        return $this->container['fulfillmentChannel'];
     }
 
     /**
-     * Sets fulfillment_channel
+     * Sets fulfillmentChannel
      *
-     * @param string $fulfillment_channel The fulfillment channel for the offer listing. Possible values:  * Amazon - Fulfilled by Amazon. * Merchant - Fulfilled by the seller.
+     * @param string $fulfillmentChannel The fulfillment channel for the offer listing. Possible values:  * Amazon - Fulfilled by Amazon. * Merchant - Fulfilled by the seller.
      *
      * @return self
      */
-    public function setFulfillmentChannel($fulfillment_channel)
+    public function setFulfillmentChannel($fulfillmentChannel)
     {
-        $this->container['fulfillment_channel'] = $fulfillment_channel;
+        $this->container['fulfillmentChannel'] = $fulfillmentChannel;
 
         return $this;
     }
 
     /**
-     * Gets item_condition
+     * Gets itemCondition
      *
      * @return string
      */
     public function getItemCondition()
     {
-        return $this->container['item_condition'];
+        return $this->container['itemCondition'];
     }
 
     /**
-     * Sets item_condition
+     * Sets itemCondition
      *
-     * @param string $item_condition The item condition for the offer listing. Possible values: New, Used, Collectible, Refurbished, or Club.
+     * @param string $itemCondition The item condition for the offer listing. Possible values: New, Used, Collectible, Refurbished, or Club.
      *
      * @return self
      */
-    public function setItemCondition($item_condition)
+    public function setItemCondition($itemCondition)
     {
-        $this->container['item_condition'] = $item_condition;
+        $this->container['itemCondition'] = $itemCondition;
 
         return $this;
     }
 
     /**
-     * Gets item_sub_condition
+     * Gets itemSubCondition
      *
      * @return string
      */
     public function getItemSubCondition()
     {
-        return $this->container['item_sub_condition'];
+        return $this->container['itemSubCondition'];
     }
 
     /**
-     * Sets item_sub_condition
+     * Sets itemSubCondition
      *
-     * @param string $item_sub_condition The item subcondition for the offer listing. Possible values: New, Mint, Very Good, Good, Acceptable, Poor, Club, OEM, Warranty, Refurbished Warranty, Refurbished, Open Box, or Other.
+     * @param string $itemSubCondition The item subcondition for the offer listing. Possible values: New, Mint, Very Good, Good, Acceptable, Poor, Club, OEM, Warranty, Refurbished Warranty, Refurbished, Open Box, or Other.
      *
      * @return self
      */
-    public function setItemSubCondition($item_sub_condition)
+    public function setItemSubCondition($itemSubCondition)
     {
-        $this->container['item_sub_condition'] = $item_sub_condition;
+        $this->container['itemSubCondition'] = $itemSubCondition;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string $seller_sku The seller stock keeping unit (SKU) of the item.
+     * @param string $sellerSKU The seller stock keeping unit (SKU) of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }

@@ -62,14 +62,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'coupon_id' => 'string',
-        'seller_coupon_description' => 'string',
-        'clip_or_redemption_count' => 'int',
-        'payment_event_id' => 'string',
-        'fee_component' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent',
-        'charge_component' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent',
-        'total_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'couponId' => 'string',
+        'sellerCouponDescription' => 'string',
+        'clipOrRedemptionCount' => 'int',
+        'paymentEventId' => 'string',
+        'feeComponent' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent',
+        'chargeComponent' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent',
+        'totalAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -80,14 +80,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'coupon_id' => null,
-        'seller_coupon_description' => null,
-        'clip_or_redemption_count' => 'int64',
-        'payment_event_id' => null,
-        'fee_component' => null,
-        'charge_component' => null,
-        'total_amount' => null
+        'postedDate' => 'date-time',
+        'couponId' => null,
+        'sellerCouponDescription' => null,
+        'clipOrRedemptionCount' => 'int64',
+        'paymentEventId' => null,
+        'feeComponent' => null,
+        'chargeComponent' => null,
+        'totalAmount' => null
     ];
 
     /**
@@ -117,14 +117,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'coupon_id' => 'CouponId',
-        'seller_coupon_description' => 'SellerCouponDescription',
-        'clip_or_redemption_count' => 'ClipOrRedemptionCount',
-        'payment_event_id' => 'PaymentEventId',
-        'fee_component' => 'FeeComponent',
-        'charge_component' => 'ChargeComponent',
-        'total_amount' => 'TotalAmount'
+        'postedDate' => 'PostedDate',
+        'couponId' => 'CouponId',
+        'sellerCouponDescription' => 'SellerCouponDescription',
+        'clipOrRedemptionCount' => 'ClipOrRedemptionCount',
+        'paymentEventId' => 'PaymentEventId',
+        'feeComponent' => 'FeeComponent',
+        'chargeComponent' => 'ChargeComponent',
+        'totalAmount' => 'TotalAmount'
     ];
 
     /**
@@ -133,14 +133,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'coupon_id' => 'setCouponId',
-        'seller_coupon_description' => 'setSellerCouponDescription',
-        'clip_or_redemption_count' => 'setClipOrRedemptionCount',
-        'payment_event_id' => 'setPaymentEventId',
-        'fee_component' => 'setFeeComponent',
-        'charge_component' => 'setChargeComponent',
-        'total_amount' => 'setTotalAmount'
+        'postedDate' => 'setPostedDate',
+        'couponId' => 'setCouponId',
+        'sellerCouponDescription' => 'setSellerCouponDescription',
+        'clipOrRedemptionCount' => 'setClipOrRedemptionCount',
+        'paymentEventId' => 'setPaymentEventId',
+        'feeComponent' => 'setFeeComponent',
+        'chargeComponent' => 'setChargeComponent',
+        'totalAmount' => 'setTotalAmount'
     ];
 
     /**
@@ -149,14 +149,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'coupon_id' => 'getCouponId',
-        'seller_coupon_description' => 'getSellerCouponDescription',
-        'clip_or_redemption_count' => 'getClipOrRedemptionCount',
-        'payment_event_id' => 'getPaymentEventId',
-        'fee_component' => 'getFeeComponent',
-        'charge_component' => 'getChargeComponent',
-        'total_amount' => 'getTotalAmount'
+        'postedDate' => 'getPostedDate',
+        'couponId' => 'getCouponId',
+        'sellerCouponDescription' => 'getSellerCouponDescription',
+        'clipOrRedemptionCount' => 'getClipOrRedemptionCount',
+        'paymentEventId' => 'getPaymentEventId',
+        'feeComponent' => 'getFeeComponent',
+        'chargeComponent' => 'getChargeComponent',
+        'totalAmount' => 'getTotalAmount'
     ];
 
     /**
@@ -219,14 +219,14 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['coupon_id'] = $data['coupon_id'] ?? null;
-        $this->container['seller_coupon_description'] = $data['seller_coupon_description'] ?? null;
-        $this->container['clip_or_redemption_count'] = $data['clip_or_redemption_count'] ?? null;
-        $this->container['payment_event_id'] = $data['payment_event_id'] ?? null;
-        $this->container['fee_component'] = $data['fee_component'] ?? null;
-        $this->container['charge_component'] = $data['charge_component'] ?? null;
-        $this->container['total_amount'] = $data['total_amount'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['couponId'] = $data['couponId'] ?? null;
+        $this->container['sellerCouponDescription'] = $data['sellerCouponDescription'] ?? null;
+        $this->container['clipOrRedemptionCount'] = $data['clipOrRedemptionCount'] ?? null;
+        $this->container['paymentEventId'] = $data['paymentEventId'] ?? null;
+        $this->container['feeComponent'] = $data['feeComponent'] ?? null;
+        $this->container['chargeComponent'] = $data['chargeComponent'] ?? null;
+        $this->container['totalAmount'] = $data['totalAmount'] ?? null;
     }
 
     /**
@@ -254,193 +254,193 @@ class CouponPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets coupon_id
+     * Gets couponId
      *
      * @return string|null
      */
     public function getCouponId()
     {
-        return $this->container['coupon_id'];
+        return $this->container['couponId'];
     }
 
     /**
-     * Sets coupon_id
+     * Sets couponId
      *
-     * @param string|null $coupon_id A coupon identifier.
+     * @param string|null $couponId A coupon identifier.
      *
      * @return self
      */
-    public function setCouponId($coupon_id)
+    public function setCouponId($couponId)
     {
-        $this->container['coupon_id'] = $coupon_id;
+        $this->container['couponId'] = $couponId;
 
         return $this;
     }
 
     /**
-     * Gets seller_coupon_description
+     * Gets sellerCouponDescription
      *
      * @return string|null
      */
     public function getSellerCouponDescription()
     {
-        return $this->container['seller_coupon_description'];
+        return $this->container['sellerCouponDescription'];
     }
 
     /**
-     * Sets seller_coupon_description
+     * Sets sellerCouponDescription
      *
-     * @param string|null $seller_coupon_description The description provided by the seller when they created the coupon.
+     * @param string|null $sellerCouponDescription The description provided by the seller when they created the coupon.
      *
      * @return self
      */
-    public function setSellerCouponDescription($seller_coupon_description)
+    public function setSellerCouponDescription($sellerCouponDescription)
     {
-        $this->container['seller_coupon_description'] = $seller_coupon_description;
+        $this->container['sellerCouponDescription'] = $sellerCouponDescription;
 
         return $this;
     }
 
     /**
-     * Gets clip_or_redemption_count
+     * Gets clipOrRedemptionCount
      *
      * @return int|null
      */
     public function getClipOrRedemptionCount()
     {
-        return $this->container['clip_or_redemption_count'];
+        return $this->container['clipOrRedemptionCount'];
     }
 
     /**
-     * Sets clip_or_redemption_count
+     * Sets clipOrRedemptionCount
      *
-     * @param int|null $clip_or_redemption_count The number of coupon clips or redemptions.
+     * @param int|null $clipOrRedemptionCount The number of coupon clips or redemptions.
      *
      * @return self
      */
-    public function setClipOrRedemptionCount($clip_or_redemption_count)
+    public function setClipOrRedemptionCount($clipOrRedemptionCount)
     {
-        $this->container['clip_or_redemption_count'] = $clip_or_redemption_count;
+        $this->container['clipOrRedemptionCount'] = $clipOrRedemptionCount;
 
         return $this;
     }
 
     /**
-     * Gets payment_event_id
+     * Gets paymentEventId
      *
      * @return string|null
      */
     public function getPaymentEventId()
     {
-        return $this->container['payment_event_id'];
+        return $this->container['paymentEventId'];
     }
 
     /**
-     * Sets payment_event_id
+     * Sets paymentEventId
      *
-     * @param string|null $payment_event_id A payment event identifier.
+     * @param string|null $paymentEventId A payment event identifier.
      *
      * @return self
      */
-    public function setPaymentEventId($payment_event_id)
+    public function setPaymentEventId($paymentEventId)
     {
-        $this->container['payment_event_id'] = $payment_event_id;
+        $this->container['paymentEventId'] = $paymentEventId;
 
         return $this;
     }
 
     /**
-     * Gets fee_component
+     * Gets feeComponent
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null
      */
     public function getFeeComponent()
     {
-        return $this->container['fee_component'];
+        return $this->container['feeComponent'];
     }
 
     /**
-     * Sets fee_component
+     * Sets feeComponent
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null $fee_component fee_component
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent|null $feeComponent feeComponent
      *
      * @return self
      */
-    public function setFeeComponent($fee_component)
+    public function setFeeComponent($feeComponent)
     {
-        $this->container['fee_component'] = $fee_component;
+        $this->container['feeComponent'] = $feeComponent;
 
         return $this;
     }
 
     /**
-     * Gets charge_component
+     * Gets chargeComponent
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null
      */
     public function getChargeComponent()
     {
-        return $this->container['charge_component'];
+        return $this->container['chargeComponent'];
     }
 
     /**
-     * Sets charge_component
+     * Sets chargeComponent
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null $charge_component charge_component
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent|null $chargeComponent chargeComponent
      *
      * @return self
      */
-    public function setChargeComponent($charge_component)
+    public function setChargeComponent($chargeComponent)
     {
-        $this->container['charge_component'] = $charge_component;
+        $this->container['chargeComponent'] = $chargeComponent;
 
         return $this;
     }
 
     /**
-     * Gets total_amount
+     * Gets totalAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTotalAmount()
     {
-        return $this->container['total_amount'];
+        return $this->container['totalAmount'];
     }
 
     /**
-     * Sets total_amount
+     * Sets totalAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $total_amount total_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $totalAmount totalAmount
      *
      * @return self
      */
-    public function setTotalAmount($total_amount)
+    public function setTotalAmount($totalAmount)
     {
-        $this->container['total_amount'] = $total_amount;
+        $this->container['totalAmount'] = $totalAmount;
 
         return $this;
     }

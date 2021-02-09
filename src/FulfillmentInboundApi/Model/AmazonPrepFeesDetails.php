@@ -62,8 +62,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'prep_instruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction',
-        'fee_per_unit' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
+        'prepInstruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction',
+        'feePerUnit' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
     ];
 
     /**
@@ -74,8 +74,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'prep_instruction' => null,
-        'fee_per_unit' => null
+        'prepInstruction' => null,
+        'feePerUnit' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'prep_instruction' => 'PrepInstruction',
-        'fee_per_unit' => 'FeePerUnit'
+        'prepInstruction' => 'PrepInstruction',
+        'feePerUnit' => 'FeePerUnit'
     ];
 
     /**
@@ -115,8 +115,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'prep_instruction' => 'setPrepInstruction',
-        'fee_per_unit' => 'setFeePerUnit'
+        'prepInstruction' => 'setPrepInstruction',
+        'feePerUnit' => 'setFeePerUnit'
     ];
 
     /**
@@ -125,8 +125,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'prep_instruction' => 'getPrepInstruction',
-        'fee_per_unit' => 'getFeePerUnit'
+        'prepInstruction' => 'getPrepInstruction',
+        'feePerUnit' => 'getFeePerUnit'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['prep_instruction'] = $data['prep_instruction'] ?? null;
-        $this->container['fee_per_unit'] = $data['fee_per_unit'] ?? null;
+        $this->container['prepInstruction'] = $data['prepInstruction'] ?? null;
+        $this->container['feePerUnit'] = $data['feePerUnit'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class AmazonPrepFeesDetails implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets prep_instruction
+     * Gets prepInstruction
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction|null
      */
     public function getPrepInstruction()
     {
-        return $this->container['prep_instruction'];
+        return $this->container['prepInstruction'];
     }
 
     /**
-     * Sets prep_instruction
+     * Sets prepInstruction
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction|null $prep_instruction prep_instruction
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction|null $prepInstruction prepInstruction
      *
      * @return self
      */
-    public function setPrepInstruction($prep_instruction)
+    public function setPrepInstruction($prepInstruction)
     {
-        $this->container['prep_instruction'] = $prep_instruction;
+        $this->container['prepInstruction'] = $prepInstruction;
 
         return $this;
     }
 
     /**
-     * Gets fee_per_unit
+     * Gets feePerUnit
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getFeePerUnit()
     {
-        return $this->container['fee_per_unit'];
+        return $this->container['feePerUnit'];
     }
 
     /**
-     * Sets fee_per_unit
+     * Sets feePerUnit
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $fee_per_unit fee_per_unit
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $feePerUnit feePerUnit
      *
      * @return self
      */
-    public function setFeePerUnit($fee_per_unit)
+    public function setFeePerUnit($feePerUnit)
     {
-        $this->container['fee_per_unit'] = $fee_per_unit;
+        $this->container['feePerUnit'] = $feePerUnit;
 
         return $this;
     }

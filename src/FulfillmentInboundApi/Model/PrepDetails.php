@@ -62,8 +62,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'prep_instruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction',
-        'prep_owner' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepOwner'
+        'prepInstruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction',
+        'prepOwner' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepOwner'
     ];
 
     /**
@@ -74,8 +74,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'prep_instruction' => null,
-        'prep_owner' => null
+        'prepInstruction' => null,
+        'prepOwner' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'prep_instruction' => 'PrepInstruction',
-        'prep_owner' => 'PrepOwner'
+        'prepInstruction' => 'PrepInstruction',
+        'prepOwner' => 'PrepOwner'
     ];
 
     /**
@@ -115,8 +115,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'prep_instruction' => 'setPrepInstruction',
-        'prep_owner' => 'setPrepOwner'
+        'prepInstruction' => 'setPrepInstruction',
+        'prepOwner' => 'setPrepOwner'
     ];
 
     /**
@@ -125,8 +125,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'prep_instruction' => 'getPrepInstruction',
-        'prep_owner' => 'getPrepOwner'
+        'prepInstruction' => 'getPrepInstruction',
+        'prepOwner' => 'getPrepOwner'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['prep_instruction'] = $data['prep_instruction'] ?? null;
-        $this->container['prep_owner'] = $data['prep_owner'] ?? null;
+        $this->container['prepInstruction'] = $data['prepInstruction'] ?? null;
+        $this->container['prepOwner'] = $data['prepOwner'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['prep_instruction'] === null) {
-            $invalidProperties[] = "'prep_instruction' can't be null";
+        if ($this->container['prepInstruction'] === null) {
+            $invalidProperties[] = "'prepInstruction' can't be null";
         }
-        if ($this->container['prep_owner'] === null) {
-            $invalidProperties[] = "'prep_owner' can't be null";
+        if ($this->container['prepOwner'] === null) {
+            $invalidProperties[] = "'prepOwner' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class PrepDetails implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets prep_instruction
+     * Gets prepInstruction
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction
      */
     public function getPrepInstruction()
     {
-        return $this->container['prep_instruction'];
+        return $this->container['prepInstruction'];
     }
 
     /**
-     * Sets prep_instruction
+     * Sets prepInstruction
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction $prep_instruction prep_instruction
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction $prepInstruction prepInstruction
      *
      * @return self
      */
-    public function setPrepInstruction($prep_instruction)
+    public function setPrepInstruction($prepInstruction)
     {
-        $this->container['prep_instruction'] = $prep_instruction;
+        $this->container['prepInstruction'] = $prepInstruction;
 
         return $this;
     }
 
     /**
-     * Gets prep_owner
+     * Gets prepOwner
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepOwner
      */
     public function getPrepOwner()
     {
-        return $this->container['prep_owner'];
+        return $this->container['prepOwner'];
     }
 
     /**
-     * Sets prep_owner
+     * Sets prepOwner
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepOwner $prep_owner prep_owner
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepOwner $prepOwner prepOwner
      *
      * @return self
      */
-    public function setPrepOwner($prep_owner)
+    public function setPrepOwner($prepOwner)
     {
-        $this->container['prep_owner'] = $prep_owner;
+        $this->container['prepOwner'] = $prepOwner;
 
         return $this;
     }

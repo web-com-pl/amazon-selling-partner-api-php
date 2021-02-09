@@ -62,9 +62,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_return_item_id' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
-        'invalid_item_reason' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReason'
+        'sellerReturnItemId' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
+        'invalidItemReason' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReason'
     ];
 
     /**
@@ -75,9 +75,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_return_item_id' => null,
-        'seller_fulfillment_order_item_id' => null,
-        'invalid_item_reason' => null
+        'sellerReturnItemId' => null,
+        'sellerFulfillmentOrderItemId' => null,
+        'invalidItemReason' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_return_item_id' => 'sellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
-        'invalid_item_reason' => 'invalidItemReason'
+        'sellerReturnItemId' => 'sellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
+        'invalidItemReason' => 'invalidItemReason'
     ];
 
     /**
@@ -118,9 +118,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'seller_return_item_id' => 'setSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
-        'invalid_item_reason' => 'setInvalidItemReason'
+        'sellerReturnItemId' => 'setSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
+        'invalidItemReason' => 'setInvalidItemReason'
     ];
 
     /**
@@ -129,9 +129,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'seller_return_item_id' => 'getSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
-        'invalid_item_reason' => 'getInvalidItemReason'
+        'sellerReturnItemId' => 'getSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
+        'invalidItemReason' => 'getInvalidItemReason'
     ];
 
     /**
@@ -194,9 +194,9 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_return_item_id'] = $data['seller_return_item_id'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
-        $this->container['invalid_item_reason'] = $data['invalid_item_reason'] ?? null;
+        $this->container['sellerReturnItemId'] = $data['sellerReturnItemId'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
+        $this->container['invalidItemReason'] = $data['invalidItemReason'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_return_item_id'] === null) {
-            $invalidProperties[] = "'seller_return_item_id' can't be null";
+        if ($this->container['sellerReturnItemId'] === null) {
+            $invalidProperties[] = "'sellerReturnItemId' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ($this->container['invalid_item_reason'] === null) {
-            $invalidProperties[] = "'invalid_item_reason' can't be null";
+        if ($this->container['invalidItemReason'] === null) {
+            $invalidProperties[] = "'invalidItemReason' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class InvalidReturnItem implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets seller_return_item_id
+     * Gets sellerReturnItemId
      *
      * @return string
      */
     public function getSellerReturnItemId()
     {
-        return $this->container['seller_return_item_id'];
+        return $this->container['sellerReturnItemId'];
     }
 
     /**
-     * Sets seller_return_item_id
+     * Sets sellerReturnItemId
      *
-     * @param string $seller_return_item_id An identifier assigned by the seller to the return item.
+     * @param string $sellerReturnItemId An identifier assigned by the seller to the return item.
      *
      * @return self
      */
-    public function setSellerReturnItemId($seller_return_item_id)
+    public function setSellerReturnItemId($sellerReturnItemId)
     {
-        $this->container['seller_return_item_id'] = $seller_return_item_id;
+        $this->container['sellerReturnItemId'] = $sellerReturnItemId;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id The identifier assigned to the item by the seller when the fulfillment order was created.
+     * @param string $sellerFulfillmentOrderItemId The identifier assigned to the item by the seller when the fulfillment order was created.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
 
     /**
-     * Gets invalid_item_reason
+     * Gets invalidItemReason
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReason
      */
     public function getInvalidItemReason()
     {
-        return $this->container['invalid_item_reason'];
+        return $this->container['invalidItemReason'];
     }
 
     /**
-     * Sets invalid_item_reason
+     * Sets invalidItemReason
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReason $invalid_item_reason invalid_item_reason
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReason $invalidItemReason invalidItemReason
      *
      * @return self
      */
-    public function setInvalidItemReason($invalid_item_reason)
+    public function setInvalidItemReason($invalidItemReason)
     {
-        $this->container['invalid_item_reason'] = $invalid_item_reason;
+        $this->container['invalidItemReason'] = $invalidItemReason;
 
         return $this;
     }

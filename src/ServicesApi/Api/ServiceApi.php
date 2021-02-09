@@ -118,32 +118,32 @@ class ServiceApi
     /**
      * Operation addAppointmentForServiceJobByServiceJobId
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\AddAppointmentRequest $body Add appointment operation input details. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse
      */
-    public function addAppointmentForServiceJobByServiceJobId($service_job_id, $body)
+    public function addAppointmentForServiceJobByServiceJobId($serviceJobId, $body)
     {
-        list($response) = $this->addAppointmentForServiceJobByServiceJobIdWithHttpInfo($service_job_id, $body);
+        list($response) = $this->addAppointmentForServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $body);
         return $response;
     }
 
     /**
      * Operation addAppointmentForServiceJobByServiceJobIdWithHttpInfo
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\AddAppointmentRequest $body Add appointment operation input details. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addAppointmentForServiceJobByServiceJobIdWithHttpInfo($service_job_id, $body)
+    public function addAppointmentForServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $body)
     {
-        $request = $this->addAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $body);
+        $request = $this->addAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -403,15 +403,15 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\AddAppointmentRequest $body Add appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAppointmentForServiceJobByServiceJobIdAsync($service_job_id, $body)
+    public function addAppointmentForServiceJobByServiceJobIdAsync($serviceJobId, $body)
     {
-        return $this->addAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $body)
+        return $this->addAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -424,16 +424,16 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\AddAppointmentRequest $body Add appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $body)
+    public function addAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse';
-        $request = $this->addAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $body);
+        $request = $this->addAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -472,25 +472,25 @@ class ServiceApi
     /**
      * Create request for operation 'addAppointmentForServiceJobByServiceJobId'
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\AddAppointmentRequest $body Add appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $body)
+    public function addAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $body)
     {
-        // verify the required parameter 'service_job_id' is set
-        if ($service_job_id === null || (is_array($service_job_id) && count($service_job_id) === 0)) {
+        // verify the required parameter 'serviceJobId' is set
+        if ($serviceJobId === null || (is_array($serviceJobId) && count($serviceJobId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_job_id when calling addAppointmentForServiceJobByServiceJobId'
+                'Missing the required parameter $serviceJobId when calling addAppointmentForServiceJobByServiceJobId'
             );
         }
-        if (strlen($service_job_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.addAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($serviceJobId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.addAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($service_job_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.addAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($serviceJobId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.addAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -510,10 +510,10 @@ class ServiceApi
 
 
         // path params
-        if ($service_job_id !== null) {
+        if ($serviceJobId !== null) {
             $resourcePath = str_replace(
                 '{' . 'serviceJobId' . '}',
-                ObjectSerializer::toPathValue($service_job_id),
+                ObjectSerializer::toPathValue($serviceJobId),
                 $resourcePath
             );
         }
@@ -585,32 +585,32 @@ class ServiceApi
     /**
      * Operation cancelServiceJobByServiceJobId
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $cancellationReasonCode A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse
      */
-    public function cancelServiceJobByServiceJobId($service_job_id, $cancellation_reason_code)
+    public function cancelServiceJobByServiceJobId($serviceJobId, $cancellationReasonCode)
     {
-        list($response) = $this->cancelServiceJobByServiceJobIdWithHttpInfo($service_job_id, $cancellation_reason_code);
+        list($response) = $this->cancelServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $cancellationReasonCode);
         return $response;
     }
 
     /**
      * Operation cancelServiceJobByServiceJobIdWithHttpInfo
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $cancellationReasonCode A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelServiceJobByServiceJobIdWithHttpInfo($service_job_id, $cancellation_reason_code)
+    public function cancelServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $cancellationReasonCode)
     {
-        $request = $this->cancelServiceJobByServiceJobIdRequest($service_job_id, $cancellation_reason_code);
+        $request = $this->cancelServiceJobByServiceJobIdRequest($serviceJobId, $cancellationReasonCode);
 
         try {
             $options = $this->createHttpClientOption();
@@ -870,15 +870,15 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $cancellationReasonCode A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelServiceJobByServiceJobIdAsync($service_job_id, $cancellation_reason_code)
+    public function cancelServiceJobByServiceJobIdAsync($serviceJobId, $cancellationReasonCode)
     {
-        return $this->cancelServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $cancellation_reason_code)
+        return $this->cancelServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $cancellationReasonCode)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -891,16 +891,16 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $cancellationReasonCode A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $cancellation_reason_code)
+    public function cancelServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $cancellationReasonCode)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\CancelServiceJobByServiceJobIdResponse';
-        $request = $this->cancelServiceJobByServiceJobIdRequest($service_job_id, $cancellation_reason_code);
+        $request = $this->cancelServiceJobByServiceJobIdRequest($serviceJobId, $cancellationReasonCode);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -939,41 +939,41 @@ class ServiceApi
     /**
      * Create request for operation 'cancelServiceJobByServiceJobId'
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $cancellation_reason_code A cancel reason code that specifies the reason for cancelling a service job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $cancellationReasonCode A cancel reason code that specifies the reason for cancelling a service job. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cancelServiceJobByServiceJobIdRequest($service_job_id, $cancellation_reason_code)
+    public function cancelServiceJobByServiceJobIdRequest($serviceJobId, $cancellationReasonCode)
     {
-        // verify the required parameter 'service_job_id' is set
-        if ($service_job_id === null || (is_array($service_job_id) && count($service_job_id) === 0)) {
+        // verify the required parameter 'serviceJobId' is set
+        if ($serviceJobId === null || (is_array($serviceJobId) && count($serviceJobId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_job_id when calling cancelServiceJobByServiceJobId'
+                'Missing the required parameter $serviceJobId when calling cancelServiceJobByServiceJobId'
             );
         }
-        if (strlen($service_job_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.cancelServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($serviceJobId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.cancelServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($service_job_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.cancelServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($serviceJobId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.cancelServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'cancellation_reason_code' is set
-        if ($cancellation_reason_code === null || (is_array($cancellation_reason_code) && count($cancellation_reason_code) === 0)) {
+        // verify the required parameter 'cancellationReasonCode' is set
+        if ($cancellationReasonCode === null || (is_array($cancellationReasonCode) && count($cancellationReasonCode) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $cancellation_reason_code when calling cancelServiceJobByServiceJobId'
+                'Missing the required parameter $cancellationReasonCode when calling cancelServiceJobByServiceJobId'
             );
         }
-        if (strlen($cancellation_reason_code) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$cancellation_reason_code" when calling ServiceApi.cancelServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($cancellationReasonCode) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$cancellationReasonCode" when calling ServiceApi.cancelServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($cancellation_reason_code) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$cancellation_reason_code" when calling ServiceApi.cancelServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($cancellationReasonCode) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$cancellationReasonCode" when calling ServiceApi.cancelServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
-        if (!preg_match("/^[A-Z0-9_]*$/", $cancellation_reason_code)) {
-            throw new \InvalidArgumentException("invalid value for \"cancellation_reason_code\" when calling ServiceApi.cancelServiceJobByServiceJobId, must conform to the pattern /^[A-Z0-9_]*$/.");
+        if (!preg_match("/^[A-Z0-9_]*$/", $cancellationReasonCode)) {
+            throw new \InvalidArgumentException("invalid value for \"cancellationReasonCode\" when calling ServiceApi.cancelServiceJobByServiceJobId, must conform to the pattern /^[A-Z0-9_]*$/.");
         }
 
 
@@ -985,19 +985,19 @@ class ServiceApi
         $multipart = false;
 
         // query params
-        if (is_array($cancellation_reason_code)) {
-            $cancellation_reason_code = ObjectSerializer::serializeCollection($cancellation_reason_code, '', true);
+        if (is_array($cancellationReasonCode)) {
+            $cancellationReasonCode = ObjectSerializer::serializeCollection($cancellationReasonCode, '', true);
         }
-        if ($cancellation_reason_code !== null) {
-            $queryParams['cancellationReasonCode'] = $cancellation_reason_code;
+        if ($cancellationReasonCode !== null) {
+            $queryParams['cancellationReasonCode'] = $cancellationReasonCode;
         }
 
 
         // path params
-        if ($service_job_id !== null) {
+        if ($serviceJobId !== null) {
             $resourcePath = str_replace(
                 '{' . 'serviceJobId' . '}',
-                ObjectSerializer::toPathValue($service_job_id),
+                ObjectSerializer::toPathValue($serviceJobId),
                 $resourcePath
             );
         }
@@ -1063,30 +1063,30 @@ class ServiceApi
     /**
      * Operation completeServiceJobByServiceJobId
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse
      */
-    public function completeServiceJobByServiceJobId($service_job_id)
+    public function completeServiceJobByServiceJobId($serviceJobId)
     {
-        list($response) = $this->completeServiceJobByServiceJobIdWithHttpInfo($service_job_id);
+        list($response) = $this->completeServiceJobByServiceJobIdWithHttpInfo($serviceJobId);
         return $response;
     }
 
     /**
      * Operation completeServiceJobByServiceJobIdWithHttpInfo
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function completeServiceJobByServiceJobIdWithHttpInfo($service_job_id)
+    public function completeServiceJobByServiceJobIdWithHttpInfo($serviceJobId)
     {
-        $request = $this->completeServiceJobByServiceJobIdRequest($service_job_id);
+        $request = $this->completeServiceJobByServiceJobIdRequest($serviceJobId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1346,14 +1346,14 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function completeServiceJobByServiceJobIdAsync($service_job_id)
+    public function completeServiceJobByServiceJobIdAsync($serviceJobId)
     {
-        return $this->completeServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id)
+        return $this->completeServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1366,15 +1366,15 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function completeServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id)
+    public function completeServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\CompleteServiceJobByServiceJobIdResponse';
-        $request = $this->completeServiceJobByServiceJobIdRequest($service_job_id);
+        $request = $this->completeServiceJobByServiceJobIdRequest($serviceJobId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1413,24 +1413,24 @@ class ServiceApi
     /**
      * Create request for operation 'completeServiceJobByServiceJobId'
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function completeServiceJobByServiceJobIdRequest($service_job_id)
+    public function completeServiceJobByServiceJobIdRequest($serviceJobId)
     {
-        // verify the required parameter 'service_job_id' is set
-        if ($service_job_id === null || (is_array($service_job_id) && count($service_job_id) === 0)) {
+        // verify the required parameter 'serviceJobId' is set
+        if ($serviceJobId === null || (is_array($serviceJobId) && count($serviceJobId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_job_id when calling completeServiceJobByServiceJobId'
+                'Missing the required parameter $serviceJobId when calling completeServiceJobByServiceJobId'
             );
         }
-        if (strlen($service_job_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.completeServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($serviceJobId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.completeServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($service_job_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.completeServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($serviceJobId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.completeServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
 
@@ -1444,10 +1444,10 @@ class ServiceApi
 
 
         // path params
-        if ($service_job_id !== null) {
+        if ($serviceJobId !== null) {
             $resourcePath = str_replace(
                 '{' . 'serviceJobId' . '}',
-                ObjectSerializer::toPathValue($service_job_id),
+                ObjectSerializer::toPathValue($serviceJobId),
                 $resourcePath
             );
         }
@@ -1513,30 +1513,30 @@ class ServiceApi
     /**
      * Operation getServiceJobByServiceJobId
      *
-     * @param  string $service_job_id A service job identifier. (required)
+     * @param  string $serviceJobId A service job identifier. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse
      */
-    public function getServiceJobByServiceJobId($service_job_id)
+    public function getServiceJobByServiceJobId($serviceJobId)
     {
-        list($response) = $this->getServiceJobByServiceJobIdWithHttpInfo($service_job_id);
+        list($response) = $this->getServiceJobByServiceJobIdWithHttpInfo($serviceJobId);
         return $response;
     }
 
     /**
      * Operation getServiceJobByServiceJobIdWithHttpInfo
      *
-     * @param  string $service_job_id A service job identifier. (required)
+     * @param  string $serviceJobId A service job identifier. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServiceJobByServiceJobIdWithHttpInfo($service_job_id)
+    public function getServiceJobByServiceJobIdWithHttpInfo($serviceJobId)
     {
-        $request = $this->getServiceJobByServiceJobIdRequest($service_job_id);
+        $request = $this->getServiceJobByServiceJobIdRequest($serviceJobId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1796,14 +1796,14 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id A service job identifier. (required)
+     * @param  string $serviceJobId A service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceJobByServiceJobIdAsync($service_job_id)
+    public function getServiceJobByServiceJobIdAsync($serviceJobId)
     {
-        return $this->getServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id)
+        return $this->getServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1816,15 +1816,15 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id A service job identifier. (required)
+     * @param  string $serviceJobId A service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id)
+    public function getServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobByServiceJobIdResponse';
-        $request = $this->getServiceJobByServiceJobIdRequest($service_job_id);
+        $request = $this->getServiceJobByServiceJobIdRequest($serviceJobId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1863,24 +1863,24 @@ class ServiceApi
     /**
      * Create request for operation 'getServiceJobByServiceJobId'
      *
-     * @param  string $service_job_id A service job identifier. (required)
+     * @param  string $serviceJobId A service job identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getServiceJobByServiceJobIdRequest($service_job_id)
+    public function getServiceJobByServiceJobIdRequest($serviceJobId)
     {
-        // verify the required parameter 'service_job_id' is set
-        if ($service_job_id === null || (is_array($service_job_id) && count($service_job_id) === 0)) {
+        // verify the required parameter 'serviceJobId' is set
+        if ($serviceJobId === null || (is_array($serviceJobId) && count($serviceJobId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_job_id when calling getServiceJobByServiceJobId'
+                'Missing the required parameter $serviceJobId when calling getServiceJobByServiceJobId'
             );
         }
-        if (strlen($service_job_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.getServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($serviceJobId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.getServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($service_job_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.getServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($serviceJobId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.getServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
 
@@ -1894,10 +1894,10 @@ class ServiceApi
 
 
         // path params
-        if ($service_job_id !== null) {
+        if ($serviceJobId !== null) {
             $resourcePath = str_replace(
                 '{' . 'serviceJobId' . '}',
-                ObjectSerializer::toPathValue($service_job_id),
+                ObjectSerializer::toPathValue($serviceJobId),
                 $resourcePath
             );
         }
@@ -1963,54 +1963,54 @@ class ServiceApi
     /**
      * Operation getServiceJobs
      *
-     * @param  string[] $marketplace_ids Used to select jobs that were placed in the specified marketplaces. (required)
-     * @param  string[] $service_order_ids List of service order ids for the query you want to perform.Max values supported 20. (optional)
-     * @param  string[] $service_job_status A list of one or more job status by which to filter the list of jobs. (optional)
-     * @param  string $page_token String returned in the response of your previous request. (optional)
-     * @param  int $page_size A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
-     * @param  string $sort_field Sort fields on which you want to sort the output. (optional)
-     * @param  string $sort_order Sort order for the query you want to perform. (optional)
-     * @param  string $created_after A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $created_before A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $last_updated_before A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
-     * @param  string $schedule_end_date A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string[] $marketplaceIds Used to select jobs that were placed in the specified marketplaces. (required)
+     * @param  string[] $serviceOrderIds List of service order ids for the query you want to perform.Max values supported 20. (optional)
+     * @param  string[] $serviceJobStatus A list of one or more job status by which to filter the list of jobs. (optional)
+     * @param  string $pageToken String returned in the response of your previous request. (optional)
+     * @param  int $pageSize A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
+     * @param  string $sortField Sort fields on which you want to sort the output. (optional)
+     * @param  string $sortOrder Sort order for the query you want to perform. (optional)
+     * @param  string $createdAfter A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $createdBefore A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $scheduleStartDate A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string $scheduleEndDate A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse
      */
-    public function getServiceJobs($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = 20, $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
+    public function getServiceJobs($marketplaceIds, $serviceOrderIds = null, $serviceJobStatus = null, $pageToken = null, $pageSize = 20, $sortField = null, $sortOrder = null, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $scheduleStartDate = null, $scheduleEndDate = null)
     {
-        list($response) = $this->getServiceJobsWithHttpInfo($marketplace_ids, $service_order_ids, $service_job_status, $page_token, $page_size, $sort_field, $sort_order, $created_after, $created_before, $last_updated_after, $last_updated_before, $schedule_start_date, $schedule_end_date);
+        list($response) = $this->getServiceJobsWithHttpInfo($marketplaceIds, $serviceOrderIds, $serviceJobStatus, $pageToken, $pageSize, $sortField, $sortOrder, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $scheduleStartDate, $scheduleEndDate);
         return $response;
     }
 
     /**
      * Operation getServiceJobsWithHttpInfo
      *
-     * @param  string[] $marketplace_ids Used to select jobs that were placed in the specified marketplaces. (required)
-     * @param  string[] $service_order_ids List of service order ids for the query you want to perform.Max values supported 20. (optional)
-     * @param  string[] $service_job_status A list of one or more job status by which to filter the list of jobs. (optional)
-     * @param  string $page_token String returned in the response of your previous request. (optional)
-     * @param  int $page_size A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
-     * @param  string $sort_field Sort fields on which you want to sort the output. (optional)
-     * @param  string $sort_order Sort order for the query you want to perform. (optional)
-     * @param  string $created_after A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $created_before A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $last_updated_before A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
-     * @param  string $schedule_end_date A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string[] $marketplaceIds Used to select jobs that were placed in the specified marketplaces. (required)
+     * @param  string[] $serviceOrderIds List of service order ids for the query you want to perform.Max values supported 20. (optional)
+     * @param  string[] $serviceJobStatus A list of one or more job status by which to filter the list of jobs. (optional)
+     * @param  string $pageToken String returned in the response of your previous request. (optional)
+     * @param  int $pageSize A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
+     * @param  string $sortField Sort fields on which you want to sort the output. (optional)
+     * @param  string $sortOrder Sort order for the query you want to perform. (optional)
+     * @param  string $createdAfter A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $createdBefore A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $scheduleStartDate A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string $scheduleEndDate A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse|\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServiceJobsWithHttpInfo($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = 20, $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
+    public function getServiceJobsWithHttpInfo($marketplaceIds, $serviceOrderIds = null, $serviceJobStatus = null, $pageToken = null, $pageSize = 20, $sortField = null, $sortOrder = null, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $scheduleStartDate = null, $scheduleEndDate = null)
     {
-        $request = $this->getServiceJobsRequest($marketplace_ids, $service_order_ids, $service_job_status, $page_token, $page_size, $sort_field, $sort_order, $created_after, $created_before, $last_updated_after, $last_updated_before, $schedule_start_date, $schedule_end_date);
+        $request = $this->getServiceJobsRequest($marketplaceIds, $serviceOrderIds, $serviceJobStatus, $pageToken, $pageSize, $sortField, $sortOrder, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $scheduleStartDate, $scheduleEndDate);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2250,26 +2250,26 @@ class ServiceApi
      *
      * 
      *
-     * @param  string[] $marketplace_ids Used to select jobs that were placed in the specified marketplaces. (required)
-     * @param  string[] $service_order_ids List of service order ids for the query you want to perform.Max values supported 20. (optional)
-     * @param  string[] $service_job_status A list of one or more job status by which to filter the list of jobs. (optional)
-     * @param  string $page_token String returned in the response of your previous request. (optional)
-     * @param  int $page_size A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
-     * @param  string $sort_field Sort fields on which you want to sort the output. (optional)
-     * @param  string $sort_order Sort order for the query you want to perform. (optional)
-     * @param  string $created_after A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $created_before A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $last_updated_before A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
-     * @param  string $schedule_end_date A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string[] $marketplaceIds Used to select jobs that were placed in the specified marketplaces. (required)
+     * @param  string[] $serviceOrderIds List of service order ids for the query you want to perform.Max values supported 20. (optional)
+     * @param  string[] $serviceJobStatus A list of one or more job status by which to filter the list of jobs. (optional)
+     * @param  string $pageToken String returned in the response of your previous request. (optional)
+     * @param  int $pageSize A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
+     * @param  string $sortField Sort fields on which you want to sort the output. (optional)
+     * @param  string $sortOrder Sort order for the query you want to perform. (optional)
+     * @param  string $createdAfter A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $createdBefore A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $scheduleStartDate A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string $scheduleEndDate A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceJobsAsync($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = 20, $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
+    public function getServiceJobsAsync($marketplaceIds, $serviceOrderIds = null, $serviceJobStatus = null, $pageToken = null, $pageSize = 20, $sortField = null, $sortOrder = null, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $scheduleStartDate = null, $scheduleEndDate = null)
     {
-        return $this->getServiceJobsAsyncWithHttpInfo($marketplace_ids, $service_order_ids, $service_job_status, $page_token, $page_size, $sort_field, $sort_order, $created_after, $created_before, $last_updated_after, $last_updated_before, $schedule_start_date, $schedule_end_date)
+        return $this->getServiceJobsAsyncWithHttpInfo($marketplaceIds, $serviceOrderIds, $serviceJobStatus, $pageToken, $pageSize, $sortField, $sortOrder, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $scheduleStartDate, $scheduleEndDate)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2282,27 +2282,27 @@ class ServiceApi
      *
      * 
      *
-     * @param  string[] $marketplace_ids Used to select jobs that were placed in the specified marketplaces. (required)
-     * @param  string[] $service_order_ids List of service order ids for the query you want to perform.Max values supported 20. (optional)
-     * @param  string[] $service_job_status A list of one or more job status by which to filter the list of jobs. (optional)
-     * @param  string $page_token String returned in the response of your previous request. (optional)
-     * @param  int $page_size A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
-     * @param  string $sort_field Sort fields on which you want to sort the output. (optional)
-     * @param  string $sort_order Sort order for the query you want to perform. (optional)
-     * @param  string $created_after A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $created_before A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $last_updated_before A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
-     * @param  string $schedule_end_date A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string[] $marketplaceIds Used to select jobs that were placed in the specified marketplaces. (required)
+     * @param  string[] $serviceOrderIds List of service order ids for the query you want to perform.Max values supported 20. (optional)
+     * @param  string[] $serviceJobStatus A list of one or more job status by which to filter the list of jobs. (optional)
+     * @param  string $pageToken String returned in the response of your previous request. (optional)
+     * @param  int $pageSize A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
+     * @param  string $sortField Sort fields on which you want to sort the output. (optional)
+     * @param  string $sortOrder Sort order for the query you want to perform. (optional)
+     * @param  string $createdAfter A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $createdBefore A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $scheduleStartDate A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string $scheduleEndDate A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceJobsAsyncWithHttpInfo($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = 20, $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
+    public function getServiceJobsAsyncWithHttpInfo($marketplaceIds, $serviceOrderIds = null, $serviceJobStatus = null, $pageToken = null, $pageSize = 20, $sortField = null, $sortOrder = null, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $scheduleStartDate = null, $scheduleEndDate = null)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\GetServiceJobsResponse';
-        $request = $this->getServiceJobsRequest($marketplace_ids, $service_order_ids, $service_job_status, $page_token, $page_size, $sort_field, $sort_order, $created_after, $created_before, $last_updated_after, $last_updated_before, $schedule_start_date, $schedule_end_date);
+        $request = $this->getServiceJobsRequest($marketplaceIds, $serviceOrderIds, $serviceJobStatus, $pageToken, $pageSize, $sortField, $sortOrder, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $scheduleStartDate, $scheduleEndDate);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2341,47 +2341,47 @@ class ServiceApi
     /**
      * Create request for operation 'getServiceJobs'
      *
-     * @param  string[] $marketplace_ids Used to select jobs that were placed in the specified marketplaces. (required)
-     * @param  string[] $service_order_ids List of service order ids for the query you want to perform.Max values supported 20. (optional)
-     * @param  string[] $service_job_status A list of one or more job status by which to filter the list of jobs. (optional)
-     * @param  string $page_token String returned in the response of your previous request. (optional)
-     * @param  int $page_size A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
-     * @param  string $sort_field Sort fields on which you want to sort the output. (optional)
-     * @param  string $sort_order Sort order for the query you want to perform. (optional)
-     * @param  string $created_after A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $created_before A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
-     * @param  string $last_updated_before A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
-     * @param  string $schedule_start_date A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
-     * @param  string $schedule_end_date A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string[] $marketplaceIds Used to select jobs that were placed in the specified marketplaces. (required)
+     * @param  string[] $serviceOrderIds List of service order ids for the query you want to perform.Max values supported 20. (optional)
+     * @param  string[] $serviceJobStatus A list of one or more job status by which to filter the list of jobs. (optional)
+     * @param  string $pageToken String returned in the response of your previous request. (optional)
+     * @param  int $pageSize A non-negative integer that indicates the maximum number of jobs to return in the list, Value must be 1 - 20. Default 20. (optional, default to 20)
+     * @param  string $sortField Sort fields on which you want to sort the output. (optional)
+     * @param  string $sortOrder Sort order for the query you want to perform. (optional)
+     * @param  string $createdAfter A date used for selecting jobs created after (or at) a specified time must be in ISO 8601 format. Required if LastUpdatedAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $createdBefore A date used for selecting jobs created before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting jobs updated after (or at) a specified time must be in ISO 8601 format. Required if createdAfter is not specified.Specifying both CreatedAfter and LastUpdatedAfter returns an error. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting jobs updated before (or at) a specified time must be in ISO 8601 format. (optional)
+     * @param  string $scheduleStartDate A date used for filtering jobs schedule after (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
+     * @param  string $scheduleEndDate A date used for filtering jobs schedule before (or at) a specified time must be in ISO 8601 format. schedule end date should not be earlier than schedule start date. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getServiceJobsRequest($marketplace_ids, $service_order_ids = null, $service_job_status = null, $page_token = null, $page_size = 20, $sort_field = null, $sort_order = null, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $schedule_start_date = null, $schedule_end_date = null)
+    public function getServiceJobsRequest($marketplaceIds, $serviceOrderIds = null, $serviceJobStatus = null, $pageToken = null, $pageSize = 20, $sortField = null, $sortOrder = null, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $scheduleStartDate = null, $scheduleEndDate = null)
     {
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling getServiceJobs'
+                'Missing the required parameter $marketplaceIds when calling getServiceJobs'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling ServiceApi.getServiceJobs, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling ServiceApi.getServiceJobs, number of items must be less than or equal to 1.');
         }
 
-        if ($service_order_ids !== null && count($service_order_ids) > 20) {
-            throw new \InvalidArgumentException('invalid value for "$service_order_ids" when calling ServiceApi.getServiceJobs, number of items must be less than or equal to 20.');
+        if ($serviceOrderIds !== null && count($serviceOrderIds) > 20) {
+            throw new \InvalidArgumentException('invalid value for "$serviceOrderIds" when calling ServiceApi.getServiceJobs, number of items must be less than or equal to 20.');
         }
-        if ($service_order_ids !== null && count($service_order_ids) < 1) {
-            throw new \InvalidArgumentException('invalid value for "$service_order_ids" when calling ServiceApi.getServiceJobs, number of items must be greater than or equal to 1.');
+        if ($serviceOrderIds !== null && count($serviceOrderIds) < 1) {
+            throw new \InvalidArgumentException('invalid value for "$serviceOrderIds" when calling ServiceApi.getServiceJobs, number of items must be greater than or equal to 1.');
         }
 
-        if ($page_size !== null && $page_size > 20) {
-            throw new \InvalidArgumentException('invalid value for "$page_size" when calling ServiceApi.getServiceJobs, must be smaller than or equal to 20.');
+        if ($pageSize !== null && $pageSize > 20) {
+            throw new \InvalidArgumentException('invalid value for "$pageSize" when calling ServiceApi.getServiceJobs, must be smaller than or equal to 20.');
         }
-        if ($page_size !== null && $page_size < 1) {
-            throw new \InvalidArgumentException('invalid value for "$page_size" when calling ServiceApi.getServiceJobs, must be bigger than or equal to 1.');
+        if ($pageSize !== null && $pageSize < 1) {
+            throw new \InvalidArgumentException('invalid value for "$pageSize" when calling ServiceApi.getServiceJobs, must be bigger than or equal to 1.');
         }
 
 
@@ -2393,95 +2393,95 @@ class ServiceApi
         $multipart = false;
 
         // query params
-        if (is_array($service_order_ids)) {
-            $service_order_ids = ObjectSerializer::serializeCollection($service_order_ids, 'form', true);
+        if (is_array($serviceOrderIds)) {
+            $serviceOrderIds = ObjectSerializer::serializeCollection($serviceOrderIds, 'form', true);
         }
-        if ($service_order_ids !== null) {
-            $queryParams['serviceOrderIds'] = $service_order_ids;
-        }
-        // query params
-        if (is_array($service_job_status)) {
-            $service_job_status = ObjectSerializer::serializeCollection($service_job_status, 'form', true);
-        }
-        if ($service_job_status !== null) {
-            $queryParams['serviceJobStatus'] = $service_job_status;
+        if ($serviceOrderIds !== null) {
+            $queryParams['serviceOrderIds'] = $serviceOrderIds;
         }
         // query params
-        if (is_array($page_token)) {
-            $page_token = ObjectSerializer::serializeCollection($page_token, '', true);
+        if (is_array($serviceJobStatus)) {
+            $serviceJobStatus = ObjectSerializer::serializeCollection($serviceJobStatus, 'form', true);
         }
-        if ($page_token !== null) {
-            $queryParams['pageToken'] = $page_token;
-        }
-        // query params
-        if (is_array($page_size)) {
-            $page_size = ObjectSerializer::serializeCollection($page_size, '', true);
-        }
-        if ($page_size !== null) {
-            $queryParams['pageSize'] = $page_size;
+        if ($serviceJobStatus !== null) {
+            $queryParams['serviceJobStatus'] = $serviceJobStatus;
         }
         // query params
-        if (is_array($sort_field)) {
-            $sort_field = ObjectSerializer::serializeCollection($sort_field, '', true);
+        if (is_array($pageToken)) {
+            $pageToken = ObjectSerializer::serializeCollection($pageToken, '', true);
         }
-        if ($sort_field !== null) {
-            $queryParams['sortField'] = $sort_field;
-        }
-        // query params
-        if (is_array($sort_order)) {
-            $sort_order = ObjectSerializer::serializeCollection($sort_order, '', true);
-        }
-        if ($sort_order !== null) {
-            $queryParams['sortOrder'] = $sort_order;
+        if ($pageToken !== null) {
+            $queryParams['pageToken'] = $pageToken;
         }
         // query params
-        if (is_array($created_after)) {
-            $created_after = ObjectSerializer::serializeCollection($created_after, '', true);
+        if (is_array($pageSize)) {
+            $pageSize = ObjectSerializer::serializeCollection($pageSize, '', true);
         }
-        if ($created_after !== null) {
-            $queryParams['createdAfter'] = $created_after;
-        }
-        // query params
-        if (is_array($created_before)) {
-            $created_before = ObjectSerializer::serializeCollection($created_before, '', true);
-        }
-        if ($created_before !== null) {
-            $queryParams['createdBefore'] = $created_before;
+        if ($pageSize !== null) {
+            $queryParams['pageSize'] = $pageSize;
         }
         // query params
-        if (is_array($last_updated_after)) {
-            $last_updated_after = ObjectSerializer::serializeCollection($last_updated_after, '', true);
+        if (is_array($sortField)) {
+            $sortField = ObjectSerializer::serializeCollection($sortField, '', true);
         }
-        if ($last_updated_after !== null) {
-            $queryParams['lastUpdatedAfter'] = $last_updated_after;
-        }
-        // query params
-        if (is_array($last_updated_before)) {
-            $last_updated_before = ObjectSerializer::serializeCollection($last_updated_before, '', true);
-        }
-        if ($last_updated_before !== null) {
-            $queryParams['lastUpdatedBefore'] = $last_updated_before;
+        if ($sortField !== null) {
+            $queryParams['sortField'] = $sortField;
         }
         // query params
-        if (is_array($schedule_start_date)) {
-            $schedule_start_date = ObjectSerializer::serializeCollection($schedule_start_date, '', true);
+        if (is_array($sortOrder)) {
+            $sortOrder = ObjectSerializer::serializeCollection($sortOrder, '', true);
         }
-        if ($schedule_start_date !== null) {
-            $queryParams['scheduleStartDate'] = $schedule_start_date;
-        }
-        // query params
-        if (is_array($schedule_end_date)) {
-            $schedule_end_date = ObjectSerializer::serializeCollection($schedule_end_date, '', true);
-        }
-        if ($schedule_end_date !== null) {
-            $queryParams['scheduleEndDate'] = $schedule_end_date;
+        if ($sortOrder !== null) {
+            $queryParams['sortOrder'] = $sortOrder;
         }
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($createdAfter)) {
+            $createdAfter = ObjectSerializer::serializeCollection($createdAfter, '', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($createdAfter !== null) {
+            $queryParams['createdAfter'] = $createdAfter;
+        }
+        // query params
+        if (is_array($createdBefore)) {
+            $createdBefore = ObjectSerializer::serializeCollection($createdBefore, '', true);
+        }
+        if ($createdBefore !== null) {
+            $queryParams['createdBefore'] = $createdBefore;
+        }
+        // query params
+        if (is_array($lastUpdatedAfter)) {
+            $lastUpdatedAfter = ObjectSerializer::serializeCollection($lastUpdatedAfter, '', true);
+        }
+        if ($lastUpdatedAfter !== null) {
+            $queryParams['lastUpdatedAfter'] = $lastUpdatedAfter;
+        }
+        // query params
+        if (is_array($lastUpdatedBefore)) {
+            $lastUpdatedBefore = ObjectSerializer::serializeCollection($lastUpdatedBefore, '', true);
+        }
+        if ($lastUpdatedBefore !== null) {
+            $queryParams['lastUpdatedBefore'] = $lastUpdatedBefore;
+        }
+        // query params
+        if (is_array($scheduleStartDate)) {
+            $scheduleStartDate = ObjectSerializer::serializeCollection($scheduleStartDate, '', true);
+        }
+        if ($scheduleStartDate !== null) {
+            $queryParams['scheduleStartDate'] = $scheduleStartDate;
+        }
+        // query params
+        if (is_array($scheduleEndDate)) {
+            $scheduleEndDate = ObjectSerializer::serializeCollection($scheduleEndDate, '', true);
+        }
+        if ($scheduleEndDate !== null) {
+            $queryParams['scheduleEndDate'] = $scheduleEndDate;
+        }
+        // query params
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
+        }
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
@@ -2547,34 +2547,34 @@ class ServiceApi
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobId
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $appointment_id An existing appointment identifier for the Service Job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $appointmentId An existing appointment identifier for the Service Job. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\RescheduleAppointmentRequest $body Reschedule appointment operation input details. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse
      */
-    public function rescheduleAppointmentForServiceJobByServiceJobId($service_job_id, $appointment_id, $body)
+    public function rescheduleAppointmentForServiceJobByServiceJobId($serviceJobId, $appointmentId, $body)
     {
-        list($response) = $this->rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo($service_job_id, $appointment_id, $body);
+        list($response) = $this->rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $appointmentId, $body);
         return $response;
     }
 
     /**
      * Operation rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $appointment_id An existing appointment identifier for the Service Job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $appointmentId An existing appointment identifier for the Service Job. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\RescheduleAppointmentRequest $body Reschedule appointment operation input details. (required)
      *
      * @throws \Webcom\Amazon\Rest\ServicesApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse|\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo($service_job_id, $appointment_id, $body)
+    public function rescheduleAppointmentForServiceJobByServiceJobIdWithHttpInfo($serviceJobId, $appointmentId, $body)
     {
-        $request = $this->rescheduleAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $appointment_id, $body);
+        $request = $this->rescheduleAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $appointmentId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2834,16 +2834,16 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $appointment_id An existing appointment identifier for the Service Job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $appointmentId An existing appointment identifier for the Service Job. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\RescheduleAppointmentRequest $body Reschedule appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rescheduleAppointmentForServiceJobByServiceJobIdAsync($service_job_id, $appointment_id, $body)
+    public function rescheduleAppointmentForServiceJobByServiceJobIdAsync($serviceJobId, $appointmentId, $body)
     {
-        return $this->rescheduleAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $appointment_id, $body)
+        return $this->rescheduleAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $appointmentId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2856,17 +2856,17 @@ class ServiceApi
      *
      * 
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $appointment_id An existing appointment identifier for the Service Job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $appointmentId An existing appointment identifier for the Service Job. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\RescheduleAppointmentRequest $body Reschedule appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rescheduleAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($service_job_id, $appointment_id, $body)
+    public function rescheduleAppointmentForServiceJobByServiceJobIdAsyncWithHttpInfo($serviceJobId, $appointmentId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\ServicesApi\Model\SetAppointmentResponse';
-        $request = $this->rescheduleAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $appointment_id, $body);
+        $request = $this->rescheduleAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $appointmentId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2905,39 +2905,39 @@ class ServiceApi
     /**
      * Create request for operation 'rescheduleAppointmentForServiceJobByServiceJobId'
      *
-     * @param  string $service_job_id An Amazon defined service job identifier. (required)
-     * @param  string $appointment_id An existing appointment identifier for the Service Job. (required)
+     * @param  string $serviceJobId An Amazon defined service job identifier. (required)
+     * @param  string $appointmentId An existing appointment identifier for the Service Job. (required)
      * @param  \Webcom\Amazon\Rest\ServicesApi\Model\RescheduleAppointmentRequest $body Reschedule appointment operation input details. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rescheduleAppointmentForServiceJobByServiceJobIdRequest($service_job_id, $appointment_id, $body)
+    public function rescheduleAppointmentForServiceJobByServiceJobIdRequest($serviceJobId, $appointmentId, $body)
     {
-        // verify the required parameter 'service_job_id' is set
-        if ($service_job_id === null || (is_array($service_job_id) && count($service_job_id) === 0)) {
+        // verify the required parameter 'serviceJobId' is set
+        if ($serviceJobId === null || (is_array($serviceJobId) && count($serviceJobId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_job_id when calling rescheduleAppointmentForServiceJobByServiceJobId'
+                'Missing the required parameter $serviceJobId when calling rescheduleAppointmentForServiceJobByServiceJobId'
             );
         }
-        if (strlen($service_job_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($serviceJobId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($service_job_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$service_job_id" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($serviceJobId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$serviceJobId" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'appointment_id' is set
-        if ($appointment_id === null || (is_array($appointment_id) && count($appointment_id) === 0)) {
+        // verify the required parameter 'appointmentId' is set
+        if ($appointmentId === null || (is_array($appointmentId) && count($appointmentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $appointment_id when calling rescheduleAppointmentForServiceJobByServiceJobId'
+                'Missing the required parameter $appointmentId when calling rescheduleAppointmentForServiceJobByServiceJobId'
             );
         }
-        if (strlen($appointment_id) > 100) {
-            throw new \InvalidArgumentException('invalid length for "$appointment_id" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
+        if (strlen($appointmentId) > 100) {
+            throw new \InvalidArgumentException('invalid length for "$appointmentId" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be smaller than or equal to 100.');
         }
-        if (strlen($appointment_id) < 1) {
-            throw new \InvalidArgumentException('invalid length for "$appointment_id" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
+        if (strlen($appointmentId) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$appointmentId" when calling ServiceApi.rescheduleAppointmentForServiceJobByServiceJobId, must be bigger than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -2957,18 +2957,18 @@ class ServiceApi
 
 
         // path params
-        if ($service_job_id !== null) {
+        if ($serviceJobId !== null) {
             $resourcePath = str_replace(
                 '{' . 'serviceJobId' . '}',
-                ObjectSerializer::toPathValue($service_job_id),
+                ObjectSerializer::toPathValue($serviceJobId),
                 $resourcePath
             );
         }
         // path params
-        if ($appointment_id !== null) {
+        if ($appointmentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'appointmentId' . '}',
-                ObjectSerializer::toPathValue($appointment_id),
+                ObjectSerializer::toPathValue($appointmentId),
                 $resourcePath
             );
         }

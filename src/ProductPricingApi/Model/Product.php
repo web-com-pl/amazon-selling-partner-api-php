@@ -63,10 +63,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'identifiers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\IdentifierType',
-        'attribute_sets' => 'object[]',
+        'attributeSets' => 'object[]',
         'relationships' => 'object[]',
-        'competitive_pricing' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePricingType',
-        'sales_rankings' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]',
+        'competitivePricing' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePricingType',
+        'salesRankings' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]',
         'offers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferType[]'
     ];
 
@@ -79,10 +79,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'identifiers' => null,
-        'attribute_sets' => null,
+        'attributeSets' => null,
         'relationships' => null,
-        'competitive_pricing' => null,
-        'sales_rankings' => null,
+        'competitivePricing' => null,
+        'salesRankings' => null,
         'offers' => null
     ];
 
@@ -114,10 +114,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'identifiers' => 'Identifiers',
-        'attribute_sets' => 'AttributeSets',
+        'attributeSets' => 'AttributeSets',
         'relationships' => 'Relationships',
-        'competitive_pricing' => 'CompetitivePricing',
-        'sales_rankings' => 'SalesRankings',
+        'competitivePricing' => 'CompetitivePricing',
+        'salesRankings' => 'SalesRankings',
         'offers' => 'Offers'
     ];
 
@@ -128,10 +128,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'identifiers' => 'setIdentifiers',
-        'attribute_sets' => 'setAttributeSets',
+        'attributeSets' => 'setAttributeSets',
         'relationships' => 'setRelationships',
-        'competitive_pricing' => 'setCompetitivePricing',
-        'sales_rankings' => 'setSalesRankings',
+        'competitivePricing' => 'setCompetitivePricing',
+        'salesRankings' => 'setSalesRankings',
         'offers' => 'setOffers'
     ];
 
@@ -142,10 +142,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'identifiers' => 'getIdentifiers',
-        'attribute_sets' => 'getAttributeSets',
+        'attributeSets' => 'getAttributeSets',
         'relationships' => 'getRelationships',
-        'competitive_pricing' => 'getCompetitivePricing',
-        'sales_rankings' => 'getSalesRankings',
+        'competitivePricing' => 'getCompetitivePricing',
+        'salesRankings' => 'getSalesRankings',
         'offers' => 'getOffers'
     ];
 
@@ -210,10 +210,10 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['identifiers'] = $data['identifiers'] ?? null;
-        $this->container['attribute_sets'] = $data['attribute_sets'] ?? null;
+        $this->container['attributeSets'] = $data['attributeSets'] ?? null;
         $this->container['relationships'] = $data['relationships'] ?? null;
-        $this->container['competitive_pricing'] = $data['competitive_pricing'] ?? null;
-        $this->container['sales_rankings'] = $data['sales_rankings'] ?? null;
+        $this->container['competitivePricing'] = $data['competitivePricing'] ?? null;
+        $this->container['salesRankings'] = $data['salesRankings'] ?? null;
         $this->container['offers'] = $data['offers'] ?? null;
     }
 
@@ -269,25 +269,25 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets attribute_sets
+     * Gets attributeSets
      *
      * @return object[]|null
      */
     public function getAttributeSets()
     {
-        return $this->container['attribute_sets'];
+        return $this->container['attributeSets'];
     }
 
     /**
-     * Sets attribute_sets
+     * Sets attributeSets
      *
-     * @param object[]|null $attribute_sets A list of product attributes if they are applicable to the product that is returned.
+     * @param object[]|null $attributeSets A list of product attributes if they are applicable to the product that is returned.
      *
      * @return self
      */
-    public function setAttributeSets($attribute_sets)
+    public function setAttributeSets($attributeSets)
     {
-        $this->container['attribute_sets'] = $attribute_sets;
+        $this->container['attributeSets'] = $attributeSets;
 
         return $this;
     }
@@ -317,49 +317,49 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets competitive_pricing
+     * Gets competitivePricing
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePricingType|null
      */
     public function getCompetitivePricing()
     {
-        return $this->container['competitive_pricing'];
+        return $this->container['competitivePricing'];
     }
 
     /**
-     * Sets competitive_pricing
+     * Sets competitivePricing
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePricingType|null $competitive_pricing competitive_pricing
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\CompetitivePricingType|null $competitivePricing competitivePricing
      *
      * @return self
      */
-    public function setCompetitivePricing($competitive_pricing)
+    public function setCompetitivePricing($competitivePricing)
     {
-        $this->container['competitive_pricing'] = $competitive_pricing;
+        $this->container['competitivePricing'] = $competitivePricing;
 
         return $this;
     }
 
     /**
-     * Gets sales_rankings
+     * Gets salesRankings
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]|null
      */
     public function getSalesRankings()
     {
-        return $this->container['sales_rankings'];
+        return $this->container['salesRankings'];
     }
 
     /**
-     * Sets sales_rankings
+     * Sets salesRankings
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]|null $sales_rankings A list of sales rank information for the item, by category.
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]|null $salesRankings A list of sales rank information for the item, by category.
      *
      * @return self
      */
-    public function setSalesRankings($sales_rankings)
+    public function setSalesRankings($salesRankings)
     {
-        $this->container['sales_rankings'] = $sales_rankings;
+        $this->container['salesRankings'] = $salesRankings;
 
         return $this;
     }

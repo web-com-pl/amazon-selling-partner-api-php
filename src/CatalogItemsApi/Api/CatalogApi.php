@@ -118,32 +118,32 @@ class CatalogApi
     /**
      * Operation getCatalogItem
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse
      */
-    public function getCatalogItem($marketplace_id, $asin)
+    public function getCatalogItem($marketplaceId, $asin)
     {
-        list($response) = $this->getCatalogItemWithHttpInfo($marketplace_id, $asin);
+        list($response) = $this->getCatalogItemWithHttpInfo($marketplaceId, $asin);
         return $response;
     }
 
     /**
      * Operation getCatalogItemWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCatalogItemWithHttpInfo($marketplace_id, $asin)
+    public function getCatalogItemWithHttpInfo($marketplaceId, $asin)
     {
-        $request = $this->getCatalogItemRequest($marketplace_id, $asin);
+        $request = $this->getCatalogItemRequest($marketplaceId, $asin);
 
         try {
             $options = $this->createHttpClientOption();
@@ -363,15 +363,15 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCatalogItemAsync($marketplace_id, $asin)
+    public function getCatalogItemAsync($marketplaceId, $asin)
     {
-        return $this->getCatalogItemAsyncWithHttpInfo($marketplace_id, $asin)
+        return $this->getCatalogItemAsyncWithHttpInfo($marketplaceId, $asin)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -384,16 +384,16 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCatalogItemAsyncWithHttpInfo($marketplace_id, $asin)
+    public function getCatalogItemAsyncWithHttpInfo($marketplaceId, $asin)
     {
         $returnType = '\Webcom\Amazon\Rest\CatalogItemsApi\Model\GetCatalogItemResponse';
-        $request = $this->getCatalogItemRequest($marketplace_id, $asin);
+        $request = $this->getCatalogItemRequest($marketplaceId, $asin);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -432,18 +432,18 @@ class CatalogApi
     /**
      * Create request for operation 'getCatalogItem'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCatalogItemRequest($marketplace_id, $asin)
+    public function getCatalogItemRequest($marketplaceId, $asin)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getCatalogItem'
+                'Missing the required parameter $marketplaceId when calling getCatalogItem'
             );
         }
         // verify the required parameter 'asin' is set
@@ -461,11 +461,11 @@ class CatalogApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
 
 
@@ -539,34 +539,34 @@ class CatalogApi
     /**
      * Operation listCatalogCategories
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
-     * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (optional)
-     * @param  string $seller_sku Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $aSIN The Amazon Standard Identification Number (ASIN) of the item. (optional)
+     * @param  string $sellerSKU Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse
      */
-    public function listCatalogCategories($marketplace_id, $asin = null, $seller_sku = null)
+    public function listCatalogCategories($marketplaceId, $aSIN = null, $sellerSKU = null)
     {
-        list($response) = $this->listCatalogCategoriesWithHttpInfo($marketplace_id, $asin, $seller_sku);
+        list($response) = $this->listCatalogCategoriesWithHttpInfo($marketplaceId, $aSIN, $sellerSKU);
         return $response;
     }
 
     /**
      * Operation listCatalogCategoriesWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
-     * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (optional)
-     * @param  string $seller_sku Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $aSIN The Amazon Standard Identification Number (ASIN) of the item. (optional)
+     * @param  string $sellerSKU Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCatalogCategoriesWithHttpInfo($marketplace_id, $asin = null, $seller_sku = null)
+    public function listCatalogCategoriesWithHttpInfo($marketplaceId, $aSIN = null, $sellerSKU = null)
     {
-        $request = $this->listCatalogCategoriesRequest($marketplace_id, $asin, $seller_sku);
+        $request = $this->listCatalogCategoriesRequest($marketplaceId, $aSIN, $sellerSKU);
 
         try {
             $options = $this->createHttpClientOption();
@@ -786,16 +786,16 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
-     * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (optional)
-     * @param  string $seller_sku Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $aSIN The Amazon Standard Identification Number (ASIN) of the item. (optional)
+     * @param  string $sellerSKU Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCatalogCategoriesAsync($marketplace_id, $asin = null, $seller_sku = null)
+    public function listCatalogCategoriesAsync($marketplaceId, $aSIN = null, $sellerSKU = null)
     {
-        return $this->listCatalogCategoriesAsyncWithHttpInfo($marketplace_id, $asin, $seller_sku)
+        return $this->listCatalogCategoriesAsyncWithHttpInfo($marketplaceId, $aSIN, $sellerSKU)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -808,17 +808,17 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
-     * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (optional)
-     * @param  string $seller_sku Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $aSIN The Amazon Standard Identification Number (ASIN) of the item. (optional)
+     * @param  string $sellerSKU Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCatalogCategoriesAsyncWithHttpInfo($marketplace_id, $asin = null, $seller_sku = null)
+    public function listCatalogCategoriesAsyncWithHttpInfo($marketplaceId, $aSIN = null, $sellerSKU = null)
     {
         $returnType = '\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogCategoriesResponse';
-        $request = $this->listCatalogCategoriesRequest($marketplace_id, $asin, $seller_sku);
+        $request = $this->listCatalogCategoriesRequest($marketplaceId, $aSIN, $sellerSKU);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -857,19 +857,19 @@ class CatalogApi
     /**
      * Create request for operation 'listCatalogCategories'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for the item. (required)
-     * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (optional)
-     * @param  string $seller_sku Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for the item. (required)
+     * @param  string $aSIN The Amazon Standard Identification Number (ASIN) of the item. (optional)
+     * @param  string $sellerSKU Used to identify items in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listCatalogCategoriesRequest($marketplace_id, $asin = null, $seller_sku = null)
+    public function listCatalogCategoriesRequest($marketplaceId, $aSIN = null, $sellerSKU = null)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling listCatalogCategories'
+                'Missing the required parameter $marketplaceId when calling listCatalogCategories'
             );
         }
 
@@ -881,25 +881,25 @@ class CatalogApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
-        }
-        // query params
-        if (is_array($asin)) {
-            $asin = ObjectSerializer::serializeCollection($asin, '', true);
-        }
-        if ($asin !== null) {
-            $queryParams['ASIN'] = $asin;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
-        if (is_array($seller_sku)) {
-            $seller_sku = ObjectSerializer::serializeCollection($seller_sku, '', true);
+        if (is_array($aSIN)) {
+            $aSIN = ObjectSerializer::serializeCollection($aSIN, '', true);
         }
-        if ($seller_sku !== null) {
-            $queryParams['SellerSKU'] = $seller_sku;
+        if ($aSIN !== null) {
+            $queryParams['ASIN'] = $aSIN;
+        }
+        // query params
+        if (is_array($sellerSKU)) {
+            $sellerSKU = ObjectSerializer::serializeCollection($sellerSKU, '', true);
+        }
+        if ($sellerSKU !== null) {
+            $queryParams['SellerSKU'] = $sellerSKU;
         }
 
 
@@ -965,44 +965,44 @@ class CatalogApi
     /**
      * Operation listCatalogItems
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which items are returned. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which items are returned. (required)
      * @param  string $query Keyword(s) to use to search for items in the catalog. Example: &#39;harry potter books&#39;. (optional)
-     * @param  string $query_context_id An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
-     * @param  string $upc A 12-digit bar code used for retail packaging. (optional)
-     * @param  string $ean A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
-     * @param  string $isbn The unique commercial book identifier used to identify books internationally. (optional)
-     * @param  string $jan A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
+     * @param  string $queryContextId An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $uPC A 12-digit bar code used for retail packaging. (optional)
+     * @param  string $eAN A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
+     * @param  string $iSBN The unique commercial book identifier used to identify books internationally. (optional)
+     * @param  string $jAN A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse
      */
-    public function listCatalogItems($marketplace_id, $query = null, $query_context_id = null, $seller_sku = null, $upc = null, $ean = null, $isbn = null, $jan = null)
+    public function listCatalogItems($marketplaceId, $query = null, $queryContextId = null, $sellerSKU = null, $uPC = null, $eAN = null, $iSBN = null, $jAN = null)
     {
-        list($response) = $this->listCatalogItemsWithHttpInfo($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+        list($response) = $this->listCatalogItemsWithHttpInfo($marketplaceId, $query, $queryContextId, $sellerSKU, $uPC, $eAN, $iSBN, $jAN);
         return $response;
     }
 
     /**
      * Operation listCatalogItemsWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which items are returned. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which items are returned. (required)
      * @param  string $query Keyword(s) to use to search for items in the catalog. Example: &#39;harry potter books&#39;. (optional)
-     * @param  string $query_context_id An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
-     * @param  string $upc A 12-digit bar code used for retail packaging. (optional)
-     * @param  string $ean A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
-     * @param  string $isbn The unique commercial book identifier used to identify books internationally. (optional)
-     * @param  string $jan A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
+     * @param  string $queryContextId An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $uPC A 12-digit bar code used for retail packaging. (optional)
+     * @param  string $eAN A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
+     * @param  string $iSBN The unique commercial book identifier used to identify books internationally. (optional)
+     * @param  string $jAN A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
      *
      * @throws \Webcom\Amazon\Rest\CatalogItemsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse|\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCatalogItemsWithHttpInfo($marketplace_id, $query = null, $query_context_id = null, $seller_sku = null, $upc = null, $ean = null, $isbn = null, $jan = null)
+    public function listCatalogItemsWithHttpInfo($marketplaceId, $query = null, $queryContextId = null, $sellerSKU = null, $uPC = null, $eAN = null, $iSBN = null, $jAN = null)
     {
-        $request = $this->listCatalogItemsRequest($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+        $request = $this->listCatalogItemsRequest($marketplaceId, $query, $queryContextId, $sellerSKU, $uPC, $eAN, $iSBN, $jAN);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1222,21 +1222,21 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which items are returned. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which items are returned. (required)
      * @param  string $query Keyword(s) to use to search for items in the catalog. Example: &#39;harry potter books&#39;. (optional)
-     * @param  string $query_context_id An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
-     * @param  string $upc A 12-digit bar code used for retail packaging. (optional)
-     * @param  string $ean A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
-     * @param  string $isbn The unique commercial book identifier used to identify books internationally. (optional)
-     * @param  string $jan A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
+     * @param  string $queryContextId An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $uPC A 12-digit bar code used for retail packaging. (optional)
+     * @param  string $eAN A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
+     * @param  string $iSBN The unique commercial book identifier used to identify books internationally. (optional)
+     * @param  string $jAN A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCatalogItemsAsync($marketplace_id, $query = null, $query_context_id = null, $seller_sku = null, $upc = null, $ean = null, $isbn = null, $jan = null)
+    public function listCatalogItemsAsync($marketplaceId, $query = null, $queryContextId = null, $sellerSKU = null, $uPC = null, $eAN = null, $iSBN = null, $jAN = null)
     {
-        return $this->listCatalogItemsAsyncWithHttpInfo($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan)
+        return $this->listCatalogItemsAsyncWithHttpInfo($marketplaceId, $query, $queryContextId, $sellerSKU, $uPC, $eAN, $iSBN, $jAN)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1249,22 +1249,22 @@ class CatalogApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which items are returned. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which items are returned. (required)
      * @param  string $query Keyword(s) to use to search for items in the catalog. Example: &#39;harry potter books&#39;. (optional)
-     * @param  string $query_context_id An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
-     * @param  string $upc A 12-digit bar code used for retail packaging. (optional)
-     * @param  string $ean A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
-     * @param  string $isbn The unique commercial book identifier used to identify books internationally. (optional)
-     * @param  string $jan A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
+     * @param  string $queryContextId An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $uPC A 12-digit bar code used for retail packaging. (optional)
+     * @param  string $eAN A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
+     * @param  string $iSBN The unique commercial book identifier used to identify books internationally. (optional)
+     * @param  string $jAN A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCatalogItemsAsyncWithHttpInfo($marketplace_id, $query = null, $query_context_id = null, $seller_sku = null, $upc = null, $ean = null, $isbn = null, $jan = null)
+    public function listCatalogItemsAsyncWithHttpInfo($marketplaceId, $query = null, $queryContextId = null, $sellerSKU = null, $uPC = null, $eAN = null, $iSBN = null, $jAN = null)
     {
         $returnType = '\Webcom\Amazon\Rest\CatalogItemsApi\Model\ListCatalogItemsResponse';
-        $request = $this->listCatalogItemsRequest($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+        $request = $this->listCatalogItemsRequest($marketplaceId, $query, $queryContextId, $sellerSKU, $uPC, $eAN, $iSBN, $jAN);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1303,24 +1303,24 @@ class CatalogApi
     /**
      * Create request for operation 'listCatalogItems'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which items are returned. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which items are returned. (required)
      * @param  string $query Keyword(s) to use to search for items in the catalog. Example: &#39;harry potter books&#39;. (optional)
-     * @param  string $query_context_id An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
-     * @param  string $upc A 12-digit bar code used for retail packaging. (optional)
-     * @param  string $ean A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
-     * @param  string $isbn The unique commercial book identifier used to identify books internationally. (optional)
-     * @param  string $jan A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
+     * @param  string $queryContextId An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items. (optional)
+     * @param  string $sellerSKU Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (optional)
+     * @param  string $uPC A 12-digit bar code used for retail packaging. (optional)
+     * @param  string $eAN A European article number that uniquely identifies the catalog item, manufacturer, and its attributes. (optional)
+     * @param  string $iSBN The unique commercial book identifier used to identify books internationally. (optional)
+     * @param  string $jAN A Japanese article number that uniquely identifies the product, manufacturer, and its attributes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listCatalogItemsRequest($marketplace_id, $query = null, $query_context_id = null, $seller_sku = null, $upc = null, $ean = null, $isbn = null, $jan = null)
+    public function listCatalogItemsRequest($marketplaceId, $query = null, $queryContextId = null, $sellerSKU = null, $uPC = null, $eAN = null, $iSBN = null, $jAN = null)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling listCatalogItems'
+                'Missing the required parameter $marketplaceId when calling listCatalogItems'
             );
         }
 
@@ -1332,11 +1332,11 @@ class CatalogApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
         if (is_array($query)) {
@@ -1346,46 +1346,46 @@ class CatalogApi
             $queryParams['Query'] = $query;
         }
         // query params
-        if (is_array($query_context_id)) {
-            $query_context_id = ObjectSerializer::serializeCollection($query_context_id, '', true);
+        if (is_array($queryContextId)) {
+            $queryContextId = ObjectSerializer::serializeCollection($queryContextId, '', true);
         }
-        if ($query_context_id !== null) {
-            $queryParams['QueryContextId'] = $query_context_id;
-        }
-        // query params
-        if (is_array($seller_sku)) {
-            $seller_sku = ObjectSerializer::serializeCollection($seller_sku, '', true);
-        }
-        if ($seller_sku !== null) {
-            $queryParams['SellerSKU'] = $seller_sku;
+        if ($queryContextId !== null) {
+            $queryParams['QueryContextId'] = $queryContextId;
         }
         // query params
-        if (is_array($upc)) {
-            $upc = ObjectSerializer::serializeCollection($upc, '', true);
+        if (is_array($sellerSKU)) {
+            $sellerSKU = ObjectSerializer::serializeCollection($sellerSKU, '', true);
         }
-        if ($upc !== null) {
-            $queryParams['UPC'] = $upc;
-        }
-        // query params
-        if (is_array($ean)) {
-            $ean = ObjectSerializer::serializeCollection($ean, '', true);
-        }
-        if ($ean !== null) {
-            $queryParams['EAN'] = $ean;
+        if ($sellerSKU !== null) {
+            $queryParams['SellerSKU'] = $sellerSKU;
         }
         // query params
-        if (is_array($isbn)) {
-            $isbn = ObjectSerializer::serializeCollection($isbn, '', true);
+        if (is_array($uPC)) {
+            $uPC = ObjectSerializer::serializeCollection($uPC, '', true);
         }
-        if ($isbn !== null) {
-            $queryParams['ISBN'] = $isbn;
+        if ($uPC !== null) {
+            $queryParams['UPC'] = $uPC;
         }
         // query params
-        if (is_array($jan)) {
-            $jan = ObjectSerializer::serializeCollection($jan, '', true);
+        if (is_array($eAN)) {
+            $eAN = ObjectSerializer::serializeCollection($eAN, '', true);
         }
-        if ($jan !== null) {
-            $queryParams['JAN'] = $jan;
+        if ($eAN !== null) {
+            $queryParams['EAN'] = $eAN;
+        }
+        // query params
+        if (is_array($iSBN)) {
+            $iSBN = ObjectSerializer::serializeCollection($iSBN, '', true);
+        }
+        if ($iSBN !== null) {
+            $queryParams['ISBN'] = $iSBN;
+        }
+        // query params
+        if (is_array($jAN)) {
+            $jAN = ObjectSerializer::serializeCollection($jAN, '', true);
+        }
+        if ($jAN !== null) {
+            $queryParams['JAN'] = $jAN;
         }
 
 

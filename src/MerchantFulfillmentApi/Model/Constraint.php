@@ -62,8 +62,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'validation_reg_ex' => 'string',
-        'validation_string' => 'string'
+        'validationRegEx' => 'string',
+        'validationString' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'validation_reg_ex' => null,
-        'validation_string' => null
+        'validationRegEx' => null,
+        'validationString' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'validation_reg_ex' => 'ValidationRegEx',
-        'validation_string' => 'ValidationString'
+        'validationRegEx' => 'ValidationRegEx',
+        'validationString' => 'ValidationString'
     ];
 
     /**
@@ -115,8 +115,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'validation_reg_ex' => 'setValidationRegEx',
-        'validation_string' => 'setValidationString'
+        'validationRegEx' => 'setValidationRegEx',
+        'validationString' => 'setValidationString'
     ];
 
     /**
@@ -125,8 +125,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'validation_reg_ex' => 'getValidationRegEx',
-        'validation_string' => 'getValidationString'
+        'validationRegEx' => 'getValidationRegEx',
+        'validationString' => 'getValidationString'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['validation_reg_ex'] = $data['validation_reg_ex'] ?? null;
-        $this->container['validation_string'] = $data['validation_string'] ?? null;
+        $this->container['validationRegEx'] = $data['validationRegEx'] ?? null;
+        $this->container['validationString'] = $data['validationString'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['validation_string'] === null) {
-            $invalidProperties[] = "'validation_string' can't be null";
+        if ($this->container['validationString'] === null) {
+            $invalidProperties[] = "'validationString' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,49 +221,49 @@ class Constraint implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets validation_reg_ex
+     * Gets validationRegEx
      *
      * @return string|null
      */
     public function getValidationRegEx()
     {
-        return $this->container['validation_reg_ex'];
+        return $this->container['validationRegEx'];
     }
 
     /**
-     * Sets validation_reg_ex
+     * Sets validationRegEx
      *
-     * @param string|null $validation_reg_ex A regular expression.
+     * @param string|null $validationRegEx A regular expression.
      *
      * @return self
      */
-    public function setValidationRegEx($validation_reg_ex)
+    public function setValidationRegEx($validationRegEx)
     {
-        $this->container['validation_reg_ex'] = $validation_reg_ex;
+        $this->container['validationRegEx'] = $validationRegEx;
 
         return $this;
     }
 
     /**
-     * Gets validation_string
+     * Gets validationString
      *
      * @return string
      */
     public function getValidationString()
     {
-        return $this->container['validation_string'];
+        return $this->container['validationString'];
     }
 
     /**
-     * Sets validation_string
+     * Sets validationString
      *
-     * @param string $validation_string A validation string.
+     * @param string $validationString A validation string.
      *
      * @return self
      */
-    public function setValidationString($validation_string)
+    public function setValidationString($validationString)
     {
-        $this->container['validation_string'] = $validation_string;
+        $this->container['validationString'] = $validationString;
 
         return $this;
     }

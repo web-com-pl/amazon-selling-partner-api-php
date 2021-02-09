@@ -62,10 +62,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event_date' => '\DateTime',
-        'event_address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress',
-        'event_code' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\EventCode',
-        'event_description' => 'string'
+        'eventDate' => '\DateTime',
+        'eventAddress' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress',
+        'eventCode' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\EventCode',
+        'eventDescription' => 'string'
     ];
 
     /**
@@ -76,10 +76,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'event_date' => 'date-time',
-        'event_address' => null,
-        'event_code' => null,
-        'event_description' => null
+        'eventDate' => 'date-time',
+        'eventAddress' => null,
+        'eventCode' => null,
+        'eventDescription' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_date' => 'eventDate',
-        'event_address' => 'eventAddress',
-        'event_code' => 'eventCode',
-        'event_description' => 'eventDescription'
+        'eventDate' => 'eventDate',
+        'eventAddress' => 'eventAddress',
+        'eventCode' => 'eventCode',
+        'eventDescription' => 'eventDescription'
     ];
 
     /**
@@ -121,10 +121,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'event_date' => 'setEventDate',
-        'event_address' => 'setEventAddress',
-        'event_code' => 'setEventCode',
-        'event_description' => 'setEventDescription'
+        'eventDate' => 'setEventDate',
+        'eventAddress' => 'setEventAddress',
+        'eventCode' => 'setEventCode',
+        'eventDescription' => 'setEventDescription'
     ];
 
     /**
@@ -133,10 +133,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'event_date' => 'getEventDate',
-        'event_address' => 'getEventAddress',
-        'event_code' => 'getEventCode',
-        'event_description' => 'getEventDescription'
+        'eventDate' => 'getEventDate',
+        'eventAddress' => 'getEventAddress',
+        'eventCode' => 'getEventCode',
+        'eventDescription' => 'getEventDescription'
     ];
 
     /**
@@ -199,10 +199,10 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_date'] = $data['event_date'] ?? null;
-        $this->container['event_address'] = $data['event_address'] ?? null;
-        $this->container['event_code'] = $data['event_code'] ?? null;
-        $this->container['event_description'] = $data['event_description'] ?? null;
+        $this->container['eventDate'] = $data['eventDate'] ?? null;
+        $this->container['eventAddress'] = $data['eventAddress'] ?? null;
+        $this->container['eventCode'] = $data['eventCode'] ?? null;
+        $this->container['eventDescription'] = $data['eventDescription'] ?? null;
     }
 
     /**
@@ -214,17 +214,17 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['event_date'] === null) {
-            $invalidProperties[] = "'event_date' can't be null";
+        if ($this->container['eventDate'] === null) {
+            $invalidProperties[] = "'eventDate' can't be null";
         }
-        if ($this->container['event_address'] === null) {
-            $invalidProperties[] = "'event_address' can't be null";
+        if ($this->container['eventAddress'] === null) {
+            $invalidProperties[] = "'eventAddress' can't be null";
         }
-        if ($this->container['event_code'] === null) {
-            $invalidProperties[] = "'event_code' can't be null";
+        if ($this->container['eventCode'] === null) {
+            $invalidProperties[] = "'eventCode' can't be null";
         }
-        if ($this->container['event_description'] === null) {
-            $invalidProperties[] = "'event_description' can't be null";
+        if ($this->container['eventDescription'] === null) {
+            $invalidProperties[] = "'eventDescription' can't be null";
         }
         return $invalidProperties;
     }
@@ -242,97 +242,97 @@ class TrackingEvent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets event_date
+     * Gets eventDate
      *
      * @return \DateTime
      */
     public function getEventDate()
     {
-        return $this->container['event_date'];
+        return $this->container['eventDate'];
     }
 
     /**
-     * Sets event_date
+     * Sets eventDate
      *
-     * @param \DateTime $event_date event_date
+     * @param \DateTime $eventDate eventDate
      *
      * @return self
      */
-    public function setEventDate($event_date)
+    public function setEventDate($eventDate)
     {
-        $this->container['event_date'] = $event_date;
+        $this->container['eventDate'] = $eventDate;
 
         return $this;
     }
 
     /**
-     * Gets event_address
+     * Gets eventAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress
      */
     public function getEventAddress()
     {
-        return $this->container['event_address'];
+        return $this->container['eventAddress'];
     }
 
     /**
-     * Sets event_address
+     * Sets eventAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress $event_address event_address
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress $eventAddress eventAddress
      *
      * @return self
      */
-    public function setEventAddress($event_address)
+    public function setEventAddress($eventAddress)
     {
-        $this->container['event_address'] = $event_address;
+        $this->container['eventAddress'] = $eventAddress;
 
         return $this;
     }
 
     /**
-     * Gets event_code
+     * Gets eventCode
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\EventCode
      */
     public function getEventCode()
     {
-        return $this->container['event_code'];
+        return $this->container['eventCode'];
     }
 
     /**
-     * Sets event_code
+     * Sets eventCode
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\EventCode $event_code event_code
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\EventCode $eventCode eventCode
      *
      * @return self
      */
-    public function setEventCode($event_code)
+    public function setEventCode($eventCode)
     {
-        $this->container['event_code'] = $event_code;
+        $this->container['eventCode'] = $eventCode;
 
         return $this;
     }
 
     /**
-     * Gets event_description
+     * Gets eventDescription
      *
      * @return string
      */
     public function getEventDescription()
     {
-        return $this->container['event_description'];
+        return $this->container['eventDescription'];
     }
 
     /**
-     * Sets event_description
+     * Sets eventDescription
      *
-     * @param string $event_description A description for the corresponding event code.
+     * @param string $eventDescription A description for the corresponding event code.
      *
      * @return self
      */
-    public function setEventDescription($event_description)
+    public function setEventDescription($eventDescription)
     {
-        $this->container['event_description'] = $event_description;
+        $this->container['eventDescription'] = $eventDescription;
 
         return $this;
     }

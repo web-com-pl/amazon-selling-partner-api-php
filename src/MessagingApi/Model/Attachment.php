@@ -62,8 +62,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'upload_destination_id' => 'string',
-        'file_name' => 'string'
+        'uploadDestinationId' => 'string',
+        'fileName' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'upload_destination_id' => null,
-        'file_name' => null
+        'uploadDestinationId' => null,
+        'fileName' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'upload_destination_id' => 'uploadDestinationId',
-        'file_name' => 'fileName'
+        'uploadDestinationId' => 'uploadDestinationId',
+        'fileName' => 'fileName'
     ];
 
     /**
@@ -115,8 +115,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'upload_destination_id' => 'setUploadDestinationId',
-        'file_name' => 'setFileName'
+        'uploadDestinationId' => 'setUploadDestinationId',
+        'fileName' => 'setFileName'
     ];
 
     /**
@@ -125,8 +125,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'upload_destination_id' => 'getUploadDestinationId',
-        'file_name' => 'getFileName'
+        'uploadDestinationId' => 'getUploadDestinationId',
+        'fileName' => 'getFileName'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['upload_destination_id'] = $data['upload_destination_id'] ?? null;
-        $this->container['file_name'] = $data['file_name'] ?? null;
+        $this->container['uploadDestinationId'] = $data['uploadDestinationId'] ?? null;
+        $this->container['fileName'] = $data['fileName'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['upload_destination_id'] === null) {
-            $invalidProperties[] = "'upload_destination_id' can't be null";
+        if ($this->container['uploadDestinationId'] === null) {
+            $invalidProperties[] = "'uploadDestinationId' can't be null";
         }
-        if ($this->container['file_name'] === null) {
-            $invalidProperties[] = "'file_name' can't be null";
+        if ($this->container['fileName'] === null) {
+            $invalidProperties[] = "'fileName' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class Attachment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets upload_destination_id
+     * Gets uploadDestinationId
      *
      * @return string
      */
     public function getUploadDestinationId()
     {
-        return $this->container['upload_destination_id'];
+        return $this->container['uploadDestinationId'];
     }
 
     /**
-     * Sets upload_destination_id
+     * Sets uploadDestinationId
      *
-     * @param string $upload_destination_id The identifier of the upload destination. Get this value by calling the createUploadDestination operation of the Uploads API.
+     * @param string $uploadDestinationId The identifier of the upload destination. Get this value by calling the createUploadDestination operation of the Uploads API.
      *
      * @return self
      */
-    public function setUploadDestinationId($upload_destination_id)
+    public function setUploadDestinationId($uploadDestinationId)
     {
-        $this->container['upload_destination_id'] = $upload_destination_id;
+        $this->container['uploadDestinationId'] = $uploadDestinationId;
 
         return $this;
     }
 
     /**
-     * Gets file_name
+     * Gets fileName
      *
      * @return string
      */
     public function getFileName()
     {
-        return $this->container['file_name'];
+        return $this->container['fileName'];
     }
 
     /**
-     * Sets file_name
+     * Sets fileName
      *
-     * @param string $file_name The name of the file, including the extension. This is the file name that will appear in the message. This does not need to match the file name of the file that you uploaded.
+     * @param string $fileName The name of the file, including the extension. This is the file name that will appear in the message. This does not need to match the file name of the file that you uploaded.
      *
      * @return self
      */
-    public function setFileName($file_name)
+    public function setFileName($fileName)
     {
-        $this->container['file_name'] = $file_name;
+        $this->container['fileName'] = $fileName;
 
         return $this;
     }

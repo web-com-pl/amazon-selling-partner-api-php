@@ -120,15 +120,15 @@ class FbaInboundApi
      *
      * @param  string $asin The ASIN of the item for which you want an eligibility preview. (required)
      * @param  string $program The program that you want to check eligibility against. (required)
-     * @param  string[] $marketplace_ids The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
+     * @param  string[] $marketplaceIds The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FbaInboundEligibilityApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse
      */
-    public function getItemEligibilityPreview($asin, $program, $marketplace_ids = null)
+    public function getItemEligibilityPreview($asin, $program, $marketplaceIds = null)
     {
-        list($response) = $this->getItemEligibilityPreviewWithHttpInfo($asin, $program, $marketplace_ids);
+        list($response) = $this->getItemEligibilityPreviewWithHttpInfo($asin, $program, $marketplaceIds);
         return $response;
     }
 
@@ -137,15 +137,15 @@ class FbaInboundApi
      *
      * @param  string $asin The ASIN of the item for which you want an eligibility preview. (required)
      * @param  string $program The program that you want to check eligibility against. (required)
-     * @param  string[] $marketplace_ids The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
+     * @param  string[] $marketplaceIds The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FbaInboundEligibilityApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse|\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getItemEligibilityPreviewWithHttpInfo($asin, $program, $marketplace_ids = null)
+    public function getItemEligibilityPreviewWithHttpInfo($asin, $program, $marketplaceIds = null)
     {
-        $request = $this->getItemEligibilityPreviewRequest($asin, $program, $marketplace_ids);
+        $request = $this->getItemEligibilityPreviewRequest($asin, $program, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -367,14 +367,14 @@ class FbaInboundApi
      *
      * @param  string $asin The ASIN of the item for which you want an eligibility preview. (required)
      * @param  string $program The program that you want to check eligibility against. (required)
-     * @param  string[] $marketplace_ids The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
+     * @param  string[] $marketplaceIds The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemEligibilityPreviewAsync($asin, $program, $marketplace_ids = null)
+    public function getItemEligibilityPreviewAsync($asin, $program, $marketplaceIds = null)
     {
-        return $this->getItemEligibilityPreviewAsyncWithHttpInfo($asin, $program, $marketplace_ids)
+        return $this->getItemEligibilityPreviewAsyncWithHttpInfo($asin, $program, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -389,15 +389,15 @@ class FbaInboundApi
      *
      * @param  string $asin The ASIN of the item for which you want an eligibility preview. (required)
      * @param  string $program The program that you want to check eligibility against. (required)
-     * @param  string[] $marketplace_ids The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
+     * @param  string[] $marketplaceIds The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemEligibilityPreviewAsyncWithHttpInfo($asin, $program, $marketplace_ids = null)
+    public function getItemEligibilityPreviewAsyncWithHttpInfo($asin, $program, $marketplaceIds = null)
     {
         $returnType = '\Webcom\Amazon\Rest\FbaInboundEligibilityApi\Model\GetItemEligibilityPreviewResponse';
-        $request = $this->getItemEligibilityPreviewRequest($asin, $program, $marketplace_ids);
+        $request = $this->getItemEligibilityPreviewRequest($asin, $program, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -438,12 +438,12 @@ class FbaInboundApi
      *
      * @param  string $asin The ASIN of the item for which you want an eligibility preview. (required)
      * @param  string $program The program that you want to check eligibility against. (required)
-     * @param  string[] $marketplace_ids The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
+     * @param  string[] $marketplaceIds The identifier for the marketplace in which you want to determine eligibility. Required only when program&#x3D;INBOUND. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getItemEligibilityPreviewRequest($asin, $program, $marketplace_ids = null)
+    public function getItemEligibilityPreviewRequest($asin, $program, $marketplaceIds = null)
     {
         // verify the required parameter 'asin' is set
         if ($asin === null || (is_array($asin) && count($asin) === 0)) {
@@ -457,8 +457,8 @@ class FbaInboundApi
                 'Missing the required parameter $program when calling getItemEligibilityPreview'
             );
         }
-        if ($marketplace_ids !== null && count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling FbaInboundApi.getItemEligibilityPreview, number of items must be less than or equal to 1.');
+        if ($marketplaceIds !== null && count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling FbaInboundApi.getItemEligibilityPreview, number of items must be less than or equal to 1.');
         }
 
 
@@ -470,11 +470,11 @@ class FbaInboundApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
         // query params
         if (is_array($asin)) {

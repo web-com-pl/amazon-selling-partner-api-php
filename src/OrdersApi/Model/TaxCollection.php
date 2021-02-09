@@ -63,7 +63,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'model' => 'string',
-        'responsible_party' => 'string'
+        'responsibleParty' => 'string'
     ];
 
     /**
@@ -75,7 +75,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'model' => null,
-        'responsible_party' => null
+        'responsibleParty' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'model' => 'Model',
-        'responsible_party' => 'ResponsibleParty'
+        'responsibleParty' => 'ResponsibleParty'
     ];
 
     /**
@@ -116,7 +116,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'model' => 'setModel',
-        'responsible_party' => 'setResponsibleParty'
+        'responsibleParty' => 'setResponsibleParty'
     ];
 
     /**
@@ -126,7 +126,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'model' => 'getModel',
-        'responsible_party' => 'getResponsibleParty'
+        'responsibleParty' => 'getResponsibleParty'
     ];
 
     /**
@@ -216,7 +216,7 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['model'] = $data['model'] ?? null;
-        $this->container['responsible_party'] = $data['responsible_party'] ?? null;
+        $this->container['responsibleParty'] = $data['responsibleParty'] ?? null;
     }
 
     /**
@@ -238,10 +238,10 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $allowedValues = $this->getResponsiblePartyAllowableValues();
-        if (!is_null($this->container['responsible_party']) && !in_array($this->container['responsible_party'], $allowedValues, true)) {
+        if (!is_null($this->container['responsibleParty']) && !in_array($this->container['responsibleParty'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'responsible_party', must be one of '%s'",
-                $this->container['responsible_party'],
+                "invalid value '%s' for 'responsibleParty', must be one of '%s'",
+                $this->container['responsibleParty'],
                 implode("', '", $allowedValues)
             );
         }
@@ -296,35 +296,35 @@ class TaxCollection implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets responsible_party
+     * Gets responsibleParty
      *
      * @return string|null
      */
     public function getResponsibleParty()
     {
-        return $this->container['responsible_party'];
+        return $this->container['responsibleParty'];
     }
 
     /**
-     * Sets responsible_party
+     * Sets responsibleParty
      *
-     * @param string|null $responsible_party The party responsible for withholding the taxes and remitting them to the taxing authority.
+     * @param string|null $responsibleParty The party responsible for withholding the taxes and remitting them to the taxing authority.
      *
      * @return self
      */
-    public function setResponsibleParty($responsible_party)
+    public function setResponsibleParty($responsibleParty)
     {
         $allowedValues = $this->getResponsiblePartyAllowableValues();
-        if (!is_null($responsible_party) && !in_array($responsible_party, $allowedValues, true)) {
+        if (!is_null($responsibleParty) && !in_array($responsibleParty, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'responsible_party', must be one of '%s'",
-                    $responsible_party,
+                    "Invalid value '%s' for 'responsibleParty', must be one of '%s'",
+                    $responsibleParty,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['responsible_party'] = $responsible_party;
+        $this->container['responsibleParty'] = $responsibleParty;
 
         return $this;
     }

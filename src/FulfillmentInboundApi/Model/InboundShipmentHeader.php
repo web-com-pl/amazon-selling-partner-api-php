@@ -62,13 +62,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_name' => 'string',
-        'ship_from_address' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
-        'destination_fulfillment_center_id' => 'string',
-        'are_cases_required' => 'bool',
-        'shipment_status' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus',
-        'label_prep_preference' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference',
-        'intended_box_contents_source' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\IntendedBoxContentsSource'
+        'shipmentName' => 'string',
+        'shipFromAddress' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
+        'destinationFulfillmentCenterId' => 'string',
+        'areCasesRequired' => 'bool',
+        'shipmentStatus' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus',
+        'labelPrepPreference' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference',
+        'intendedBoxContentsSource' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\IntendedBoxContentsSource'
     ];
 
     /**
@@ -79,13 +79,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_name' => null,
-        'ship_from_address' => null,
-        'destination_fulfillment_center_id' => null,
-        'are_cases_required' => null,
-        'shipment_status' => null,
-        'label_prep_preference' => null,
-        'intended_box_contents_source' => null
+        'shipmentName' => null,
+        'shipFromAddress' => null,
+        'destinationFulfillmentCenterId' => null,
+        'areCasesRequired' => null,
+        'shipmentStatus' => null,
+        'labelPrepPreference' => null,
+        'intendedBoxContentsSource' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_name' => 'ShipmentName',
-        'ship_from_address' => 'ShipFromAddress',
-        'destination_fulfillment_center_id' => 'DestinationFulfillmentCenterId',
-        'are_cases_required' => 'AreCasesRequired',
-        'shipment_status' => 'ShipmentStatus',
-        'label_prep_preference' => 'LabelPrepPreference',
-        'intended_box_contents_source' => 'IntendedBoxContentsSource'
+        'shipmentName' => 'ShipmentName',
+        'shipFromAddress' => 'ShipFromAddress',
+        'destinationFulfillmentCenterId' => 'DestinationFulfillmentCenterId',
+        'areCasesRequired' => 'AreCasesRequired',
+        'shipmentStatus' => 'ShipmentStatus',
+        'labelPrepPreference' => 'LabelPrepPreference',
+        'intendedBoxContentsSource' => 'IntendedBoxContentsSource'
     ];
 
     /**
@@ -130,13 +130,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'shipment_name' => 'setShipmentName',
-        'ship_from_address' => 'setShipFromAddress',
-        'destination_fulfillment_center_id' => 'setDestinationFulfillmentCenterId',
-        'are_cases_required' => 'setAreCasesRequired',
-        'shipment_status' => 'setShipmentStatus',
-        'label_prep_preference' => 'setLabelPrepPreference',
-        'intended_box_contents_source' => 'setIntendedBoxContentsSource'
+        'shipmentName' => 'setShipmentName',
+        'shipFromAddress' => 'setShipFromAddress',
+        'destinationFulfillmentCenterId' => 'setDestinationFulfillmentCenterId',
+        'areCasesRequired' => 'setAreCasesRequired',
+        'shipmentStatus' => 'setShipmentStatus',
+        'labelPrepPreference' => 'setLabelPrepPreference',
+        'intendedBoxContentsSource' => 'setIntendedBoxContentsSource'
     ];
 
     /**
@@ -145,13 +145,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'shipment_name' => 'getShipmentName',
-        'ship_from_address' => 'getShipFromAddress',
-        'destination_fulfillment_center_id' => 'getDestinationFulfillmentCenterId',
-        'are_cases_required' => 'getAreCasesRequired',
-        'shipment_status' => 'getShipmentStatus',
-        'label_prep_preference' => 'getLabelPrepPreference',
-        'intended_box_contents_source' => 'getIntendedBoxContentsSource'
+        'shipmentName' => 'getShipmentName',
+        'shipFromAddress' => 'getShipFromAddress',
+        'destinationFulfillmentCenterId' => 'getDestinationFulfillmentCenterId',
+        'areCasesRequired' => 'getAreCasesRequired',
+        'shipmentStatus' => 'getShipmentStatus',
+        'labelPrepPreference' => 'getLabelPrepPreference',
+        'intendedBoxContentsSource' => 'getIntendedBoxContentsSource'
     ];
 
     /**
@@ -214,13 +214,13 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_name'] = $data['shipment_name'] ?? null;
-        $this->container['ship_from_address'] = $data['ship_from_address'] ?? null;
-        $this->container['destination_fulfillment_center_id'] = $data['destination_fulfillment_center_id'] ?? null;
-        $this->container['are_cases_required'] = $data['are_cases_required'] ?? null;
-        $this->container['shipment_status'] = $data['shipment_status'] ?? null;
-        $this->container['label_prep_preference'] = $data['label_prep_preference'] ?? null;
-        $this->container['intended_box_contents_source'] = $data['intended_box_contents_source'] ?? null;
+        $this->container['shipmentName'] = $data['shipmentName'] ?? null;
+        $this->container['shipFromAddress'] = $data['shipFromAddress'] ?? null;
+        $this->container['destinationFulfillmentCenterId'] = $data['destinationFulfillmentCenterId'] ?? null;
+        $this->container['areCasesRequired'] = $data['areCasesRequired'] ?? null;
+        $this->container['shipmentStatus'] = $data['shipmentStatus'] ?? null;
+        $this->container['labelPrepPreference'] = $data['labelPrepPreference'] ?? null;
+        $this->container['intendedBoxContentsSource'] = $data['intendedBoxContentsSource'] ?? null;
     }
 
     /**
@@ -232,20 +232,20 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_name'] === null) {
-            $invalidProperties[] = "'shipment_name' can't be null";
+        if ($this->container['shipmentName'] === null) {
+            $invalidProperties[] = "'shipmentName' can't be null";
         }
-        if ($this->container['ship_from_address'] === null) {
-            $invalidProperties[] = "'ship_from_address' can't be null";
+        if ($this->container['shipFromAddress'] === null) {
+            $invalidProperties[] = "'shipFromAddress' can't be null";
         }
-        if ($this->container['destination_fulfillment_center_id'] === null) {
-            $invalidProperties[] = "'destination_fulfillment_center_id' can't be null";
+        if ($this->container['destinationFulfillmentCenterId'] === null) {
+            $invalidProperties[] = "'destinationFulfillmentCenterId' can't be null";
         }
-        if ($this->container['shipment_status'] === null) {
-            $invalidProperties[] = "'shipment_status' can't be null";
+        if ($this->container['shipmentStatus'] === null) {
+            $invalidProperties[] = "'shipmentStatus' can't be null";
         }
-        if ($this->container['label_prep_preference'] === null) {
-            $invalidProperties[] = "'label_prep_preference' can't be null";
+        if ($this->container['labelPrepPreference'] === null) {
+            $invalidProperties[] = "'labelPrepPreference' can't be null";
         }
         return $invalidProperties;
     }
@@ -263,169 +263,169 @@ class InboundShipmentHeader implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets shipment_name
+     * Gets shipmentName
      *
      * @return string
      */
     public function getShipmentName()
     {
-        return $this->container['shipment_name'];
+        return $this->container['shipmentName'];
     }
 
     /**
-     * Sets shipment_name
+     * Sets shipmentName
      *
-     * @param string $shipment_name The name for the shipment. Use a naming convention that helps distinguish between shipments over time, such as the date the shipment was created.
+     * @param string $shipmentName The name for the shipment. Use a naming convention that helps distinguish between shipments over time, such as the date the shipment was created.
      *
      * @return self
      */
-    public function setShipmentName($shipment_name)
+    public function setShipmentName($shipmentName)
     {
-        $this->container['shipment_name'] = $shipment_name;
+        $this->container['shipmentName'] = $shipmentName;
 
         return $this;
     }
 
     /**
-     * Gets ship_from_address
+     * Gets shipFromAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address
      */
     public function getShipFromAddress()
     {
-        return $this->container['ship_from_address'];
+        return $this->container['shipFromAddress'];
     }
 
     /**
-     * Sets ship_from_address
+     * Sets shipFromAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $ship_from_address ship_from_address
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $shipFromAddress shipFromAddress
      *
      * @return self
      */
-    public function setShipFromAddress($ship_from_address)
+    public function setShipFromAddress($shipFromAddress)
     {
-        $this->container['ship_from_address'] = $ship_from_address;
+        $this->container['shipFromAddress'] = $shipFromAddress;
 
         return $this;
     }
 
     /**
-     * Gets destination_fulfillment_center_id
+     * Gets destinationFulfillmentCenterId
      *
      * @return string
      */
     public function getDestinationFulfillmentCenterId()
     {
-        return $this->container['destination_fulfillment_center_id'];
+        return $this->container['destinationFulfillmentCenterId'];
     }
 
     /**
-     * Sets destination_fulfillment_center_id
+     * Sets destinationFulfillmentCenterId
      *
-     * @param string $destination_fulfillment_center_id The identifier for the fulfillment center to which the shipment will be shipped. Get this value from the InboundShipmentPlan object in the response returned by the createInboundShipmentPlan operation.
+     * @param string $destinationFulfillmentCenterId The identifier for the fulfillment center to which the shipment will be shipped. Get this value from the InboundShipmentPlan object in the response returned by the createInboundShipmentPlan operation.
      *
      * @return self
      */
-    public function setDestinationFulfillmentCenterId($destination_fulfillment_center_id)
+    public function setDestinationFulfillmentCenterId($destinationFulfillmentCenterId)
     {
-        $this->container['destination_fulfillment_center_id'] = $destination_fulfillment_center_id;
+        $this->container['destinationFulfillmentCenterId'] = $destinationFulfillmentCenterId;
 
         return $this;
     }
 
     /**
-     * Gets are_cases_required
+     * Gets areCasesRequired
      *
      * @return bool|null
      */
     public function getAreCasesRequired()
     {
-        return $this->container['are_cases_required'];
+        return $this->container['areCasesRequired'];
     }
 
     /**
-     * Sets are_cases_required
+     * Sets areCasesRequired
      *
-     * @param bool|null $are_cases_required Indicates whether or not an inbound shipment contains case-packed boxes. Note: A shipment must contain either all case-packed boxes or all individually packed boxes.  Possible values:  true - All boxes in the shipment must be case packed.  false - All boxes in the shipment must be individually packed.  Note: If AreCasesRequired = true for an inbound shipment, then the value of QuantityInCase must be greater than zero for every item in the shipment. Otherwise the service returns an error.
+     * @param bool|null $areCasesRequired Indicates whether or not an inbound shipment contains case-packed boxes. Note: A shipment must contain either all case-packed boxes or all individually packed boxes.  Possible values:  true - All boxes in the shipment must be case packed.  false - All boxes in the shipment must be individually packed.  Note: If AreCasesRequired = true for an inbound shipment, then the value of QuantityInCase must be greater than zero for every item in the shipment. Otherwise the service returns an error.
      *
      * @return self
      */
-    public function setAreCasesRequired($are_cases_required)
+    public function setAreCasesRequired($areCasesRequired)
     {
-        $this->container['are_cases_required'] = $are_cases_required;
+        $this->container['areCasesRequired'] = $areCasesRequired;
 
         return $this;
     }
 
     /**
-     * Gets shipment_status
+     * Gets shipmentStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus
      */
     public function getShipmentStatus()
     {
-        return $this->container['shipment_status'];
+        return $this->container['shipmentStatus'];
     }
 
     /**
-     * Sets shipment_status
+     * Sets shipmentStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus $shipment_status shipment_status
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentStatus $shipmentStatus shipmentStatus
      *
      * @return self
      */
-    public function setShipmentStatus($shipment_status)
+    public function setShipmentStatus($shipmentStatus)
     {
-        $this->container['shipment_status'] = $shipment_status;
+        $this->container['shipmentStatus'] = $shipmentStatus;
 
         return $this;
     }
 
     /**
-     * Gets label_prep_preference
+     * Gets labelPrepPreference
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference
      */
     public function getLabelPrepPreference()
     {
-        return $this->container['label_prep_preference'];
+        return $this->container['labelPrepPreference'];
     }
 
     /**
-     * Sets label_prep_preference
+     * Sets labelPrepPreference
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference $label_prep_preference label_prep_preference
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference $labelPrepPreference labelPrepPreference
      *
      * @return self
      */
-    public function setLabelPrepPreference($label_prep_preference)
+    public function setLabelPrepPreference($labelPrepPreference)
     {
-        $this->container['label_prep_preference'] = $label_prep_preference;
+        $this->container['labelPrepPreference'] = $labelPrepPreference;
 
         return $this;
     }
 
     /**
-     * Gets intended_box_contents_source
+     * Gets intendedBoxContentsSource
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\IntendedBoxContentsSource|null
      */
     public function getIntendedBoxContentsSource()
     {
-        return $this->container['intended_box_contents_source'];
+        return $this->container['intendedBoxContentsSource'];
     }
 
     /**
-     * Sets intended_box_contents_source
+     * Sets intendedBoxContentsSource
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\IntendedBoxContentsSource|null $intended_box_contents_source intended_box_contents_source
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\IntendedBoxContentsSource|null $intendedBoxContentsSource intendedBoxContentsSource
      *
      * @return self
      */
-    public function setIntendedBoxContentsSource($intended_box_contents_source)
+    public function setIntendedBoxContentsSource($intendedBoxContentsSource)
     {
-        $this->container['intended_box_contents_source'] = $intended_box_contents_source;
+        $this->container['intendedBoxContentsSource'] = $intendedBoxContentsSource;
 
         return $this;
     }

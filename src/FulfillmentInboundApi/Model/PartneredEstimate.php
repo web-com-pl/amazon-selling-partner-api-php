@@ -63,8 +63,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'amount' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
-        'confirm_deadline' => '\DateTime',
-        'void_deadline' => '\DateTime'
+        'confirmDeadline' => '\DateTime',
+        'voidDeadline' => '\DateTime'
     ];
 
     /**
@@ -76,8 +76,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'amount' => null,
-        'confirm_deadline' => 'date-time',
-        'void_deadline' => 'date-time'
+        'confirmDeadline' => 'date-time',
+        'voidDeadline' => 'date-time'
     ];
 
     /**
@@ -108,8 +108,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'amount' => 'Amount',
-        'confirm_deadline' => 'ConfirmDeadline',
-        'void_deadline' => 'VoidDeadline'
+        'confirmDeadline' => 'ConfirmDeadline',
+        'voidDeadline' => 'VoidDeadline'
     ];
 
     /**
@@ -119,8 +119,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'amount' => 'setAmount',
-        'confirm_deadline' => 'setConfirmDeadline',
-        'void_deadline' => 'setVoidDeadline'
+        'confirmDeadline' => 'setConfirmDeadline',
+        'voidDeadline' => 'setVoidDeadline'
     ];
 
     /**
@@ -130,8 +130,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'amount' => 'getAmount',
-        'confirm_deadline' => 'getConfirmDeadline',
-        'void_deadline' => 'getVoidDeadline'
+        'confirmDeadline' => 'getConfirmDeadline',
+        'voidDeadline' => 'getVoidDeadline'
     ];
 
     /**
@@ -195,8 +195,8 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(array $data = null)
     {
         $this->container['amount'] = $data['amount'] ?? null;
-        $this->container['confirm_deadline'] = $data['confirm_deadline'] ?? null;
-        $this->container['void_deadline'] = $data['void_deadline'] ?? null;
+        $this->container['confirmDeadline'] = $data['confirmDeadline'] ?? null;
+        $this->container['voidDeadline'] = $data['voidDeadline'] ?? null;
     }
 
     /**
@@ -251,49 +251,49 @@ class PartneredEstimate implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets confirm_deadline
+     * Gets confirmDeadline
      *
      * @return \DateTime|null
      */
     public function getConfirmDeadline()
     {
-        return $this->container['confirm_deadline'];
+        return $this->container['confirmDeadline'];
     }
 
     /**
-     * Sets confirm_deadline
+     * Sets confirmDeadline
      *
-     * @param \DateTime|null $confirm_deadline confirm_deadline
+     * @param \DateTime|null $confirmDeadline confirmDeadline
      *
      * @return self
      */
-    public function setConfirmDeadline($confirm_deadline)
+    public function setConfirmDeadline($confirmDeadline)
     {
-        $this->container['confirm_deadline'] = $confirm_deadline;
+        $this->container['confirmDeadline'] = $confirmDeadline;
 
         return $this;
     }
 
     /**
-     * Gets void_deadline
+     * Gets voidDeadline
      *
      * @return \DateTime|null
      */
     public function getVoidDeadline()
     {
-        return $this->container['void_deadline'];
+        return $this->container['voidDeadline'];
     }
 
     /**
-     * Sets void_deadline
+     * Sets voidDeadline
      *
-     * @param \DateTime|null $void_deadline void_deadline
+     * @param \DateTime|null $voidDeadline voidDeadline
      *
      * @return self
      */
-    public function setVoidDeadline($void_deadline)
+    public function setVoidDeadline($voidDeadline)
     {
-        $this->container['void_deadline'] = $void_deadline;
+        $this->container['voidDeadline'] = $voidDeadline;
 
         return $this;
     }

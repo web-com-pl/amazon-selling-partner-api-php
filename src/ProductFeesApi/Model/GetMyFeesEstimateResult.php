@@ -62,7 +62,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fees_estimate_result' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateResult'
+        'feesEstimateResult' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateResult'
     ];
 
     /**
@@ -73,7 +73,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fees_estimate_result' => null
+        'feesEstimateResult' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'fees_estimate_result' => 'FeesEstimateResult'
+        'feesEstimateResult' => 'FeesEstimateResult'
     ];
 
     /**
@@ -112,7 +112,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'fees_estimate_result' => 'setFeesEstimateResult'
+        'feesEstimateResult' => 'setFeesEstimateResult'
     ];
 
     /**
@@ -121,7 +121,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'fees_estimate_result' => 'getFeesEstimateResult'
+        'feesEstimateResult' => 'getFeesEstimateResult'
     ];
 
     /**
@@ -184,7 +184,7 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['fees_estimate_result'] = $data['fees_estimate_result'] ?? null;
+        $this->container['feesEstimateResult'] = $data['feesEstimateResult'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class GetMyFeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets fees_estimate_result
+     * Gets feesEstimateResult
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateResult|null
      */
     public function getFeesEstimateResult()
     {
-        return $this->container['fees_estimate_result'];
+        return $this->container['feesEstimateResult'];
     }
 
     /**
-     * Sets fees_estimate_result
+     * Sets feesEstimateResult
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateResult|null $fees_estimate_result fees_estimate_result
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateResult|null $feesEstimateResult feesEstimateResult
      *
      * @return self
      */
-    public function setFeesEstimateResult($fees_estimate_result)
+    public function setFeesEstimateResult($feesEstimateResult)
     {
-        $this->container['fees_estimate_result'] = $fees_estimate_result;
+        $this->container['feesEstimateResult'] = $feesEstimateResult;
 
         return $this;
     }

@@ -66,7 +66,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'width' => 'double',
         'height' => 'double',
         'unit' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\UnitOfLength',
-        'predefined_package_dimensions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PredefinedPackageDimensions'
+        'predefinedPackageDimensions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PredefinedPackageDimensions'
     ];
 
     /**
@@ -81,7 +81,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'width' => 'double',
         'height' => 'double',
         'unit' => null,
-        'predefined_package_dimensions' => null
+        'predefinedPackageDimensions' => null
     ];
 
     /**
@@ -115,7 +115,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'width' => 'Width',
         'height' => 'Height',
         'unit' => 'Unit',
-        'predefined_package_dimensions' => 'PredefinedPackageDimensions'
+        'predefinedPackageDimensions' => 'PredefinedPackageDimensions'
     ];
 
     /**
@@ -128,7 +128,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'width' => 'setWidth',
         'height' => 'setHeight',
         'unit' => 'setUnit',
-        'predefined_package_dimensions' => 'setPredefinedPackageDimensions'
+        'predefinedPackageDimensions' => 'setPredefinedPackageDimensions'
     ];
 
     /**
@@ -141,7 +141,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         'width' => 'getWidth',
         'height' => 'getHeight',
         'unit' => 'getUnit',
-        'predefined_package_dimensions' => 'getPredefinedPackageDimensions'
+        'predefinedPackageDimensions' => 'getPredefinedPackageDimensions'
     ];
 
     /**
@@ -208,7 +208,7 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['width'] = $data['width'] ?? null;
         $this->container['height'] = $data['height'] ?? null;
         $this->container['unit'] = $data['unit'] ?? null;
-        $this->container['predefined_package_dimensions'] = $data['predefined_package_dimensions'] ?? null;
+        $this->container['predefinedPackageDimensions'] = $data['predefinedPackageDimensions'] ?? null;
     }
 
     /**
@@ -332,25 +332,25 @@ class PackageDimensions implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets predefined_package_dimensions
+     * Gets predefinedPackageDimensions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PredefinedPackageDimensions|null
      */
     public function getPredefinedPackageDimensions()
     {
-        return $this->container['predefined_package_dimensions'];
+        return $this->container['predefinedPackageDimensions'];
     }
 
     /**
-     * Sets predefined_package_dimensions
+     * Sets predefinedPackageDimensions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PredefinedPackageDimensions|null $predefined_package_dimensions predefined_package_dimensions
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PredefinedPackageDimensions|null $predefinedPackageDimensions predefinedPackageDimensions
      *
      * @return self
      */
-    public function setPredefinedPackageDimensions($predefined_package_dimensions)
+    public function setPredefinedPackageDimensions($predefinedPackageDimensions)
     {
-        $this->container['predefined_package_dimensions'] = $predefined_package_dimensions;
+        $this->container['predefinedPackageDimensions'] = $predefinedPackageDimensions;
 
         return $this;
     }

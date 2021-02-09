@@ -62,9 +62,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'time_of_fees_estimation' => '\DateTime',
-        'total_fees_estimate' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
-        'fee_detail_list' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeeDetail[]'
+        'timeOfFeesEstimation' => '\DateTime',
+        'totalFeesEstimate' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
+        'feeDetailList' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeeDetail[]'
     ];
 
     /**
@@ -75,9 +75,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'time_of_fees_estimation' => 'date-time',
-        'total_fees_estimate' => null,
-        'fee_detail_list' => null
+        'timeOfFeesEstimation' => 'date-time',
+        'totalFeesEstimate' => null,
+        'feeDetailList' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'time_of_fees_estimation' => 'TimeOfFeesEstimation',
-        'total_fees_estimate' => 'TotalFeesEstimate',
-        'fee_detail_list' => 'FeeDetailList'
+        'timeOfFeesEstimation' => 'TimeOfFeesEstimation',
+        'totalFeesEstimate' => 'TotalFeesEstimate',
+        'feeDetailList' => 'FeeDetailList'
     ];
 
     /**
@@ -118,9 +118,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'time_of_fees_estimation' => 'setTimeOfFeesEstimation',
-        'total_fees_estimate' => 'setTotalFeesEstimate',
-        'fee_detail_list' => 'setFeeDetailList'
+        'timeOfFeesEstimation' => 'setTimeOfFeesEstimation',
+        'totalFeesEstimate' => 'setTotalFeesEstimate',
+        'feeDetailList' => 'setFeeDetailList'
     ];
 
     /**
@@ -129,9 +129,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'time_of_fees_estimation' => 'getTimeOfFeesEstimation',
-        'total_fees_estimate' => 'getTotalFeesEstimate',
-        'fee_detail_list' => 'getFeeDetailList'
+        'timeOfFeesEstimation' => 'getTimeOfFeesEstimation',
+        'totalFeesEstimate' => 'getTotalFeesEstimate',
+        'feeDetailList' => 'getFeeDetailList'
     ];
 
     /**
@@ -194,9 +194,9 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['time_of_fees_estimation'] = $data['time_of_fees_estimation'] ?? null;
-        $this->container['total_fees_estimate'] = $data['total_fees_estimate'] ?? null;
-        $this->container['fee_detail_list'] = $data['fee_detail_list'] ?? null;
+        $this->container['timeOfFeesEstimation'] = $data['timeOfFeesEstimation'] ?? null;
+        $this->container['totalFeesEstimate'] = $data['totalFeesEstimate'] ?? null;
+        $this->container['feeDetailList'] = $data['feeDetailList'] ?? null;
     }
 
     /**
@@ -208,8 +208,8 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['time_of_fees_estimation'] === null) {
-            $invalidProperties[] = "'time_of_fees_estimation' can't be null";
+        if ($this->container['timeOfFeesEstimation'] === null) {
+            $invalidProperties[] = "'timeOfFeesEstimation' can't be null";
         }
         return $invalidProperties;
     }
@@ -227,73 +227,73 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets time_of_fees_estimation
+     * Gets timeOfFeesEstimation
      *
      * @return \DateTime
      */
     public function getTimeOfFeesEstimation()
     {
-        return $this->container['time_of_fees_estimation'];
+        return $this->container['timeOfFeesEstimation'];
     }
 
     /**
-     * Sets time_of_fees_estimation
+     * Sets timeOfFeesEstimation
      *
-     * @param \DateTime $time_of_fees_estimation The time for which the fees were estimated. This defaults to the time the request is made.
+     * @param \DateTime $timeOfFeesEstimation The time for which the fees were estimated. This defaults to the time the request is made.
      *
      * @return self
      */
-    public function setTimeOfFeesEstimation($time_of_fees_estimation)
+    public function setTimeOfFeesEstimation($timeOfFeesEstimation)
     {
-        $this->container['time_of_fees_estimation'] = $time_of_fees_estimation;
+        $this->container['timeOfFeesEstimation'] = $timeOfFeesEstimation;
 
         return $this;
     }
 
     /**
-     * Gets total_fees_estimate
+     * Gets totalFeesEstimate
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null
      */
     public function getTotalFeesEstimate()
     {
-        return $this->container['total_fees_estimate'];
+        return $this->container['totalFeesEstimate'];
     }
 
     /**
-     * Sets total_fees_estimate
+     * Sets totalFeesEstimate
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $total_fees_estimate total_fees_estimate
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $totalFeesEstimate totalFeesEstimate
      *
      * @return self
      */
-    public function setTotalFeesEstimate($total_fees_estimate)
+    public function setTotalFeesEstimate($totalFeesEstimate)
     {
-        $this->container['total_fees_estimate'] = $total_fees_estimate;
+        $this->container['totalFeesEstimate'] = $totalFeesEstimate;
 
         return $this;
     }
 
     /**
-     * Gets fee_detail_list
+     * Gets feeDetailList
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\FeeDetail[]|null
      */
     public function getFeeDetailList()
     {
-        return $this->container['fee_detail_list'];
+        return $this->container['feeDetailList'];
     }
 
     /**
-     * Sets fee_detail_list
+     * Sets feeDetailList
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeeDetail[]|null $fee_detail_list A list of other fees that contribute to a given fee.
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeeDetail[]|null $feeDetailList A list of other fees that contribute to a given fee.
      *
      * @return self
      */
-    public function setFeeDetailList($fee_detail_list)
+    public function setFeeDetailList($feeDetailList)
     {
-        $this->container['fee_detail_list'] = $fee_detail_list;
+        $this->container['feeDetailList'] = $feeDetailList;
 
         return $this;
     }

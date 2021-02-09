@@ -61,10 +61,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sku_inbound_guidance_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUInboundGuidance[]',
-        'invalid_sku_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]',
-        'asin_inbound_guidance_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINInboundGuidance[]',
-        'invalid_asin_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]'
+        'sKUInboundGuidanceList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUInboundGuidance[]',
+        'invalidSKUList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]',
+        'aSINInboundGuidanceList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINInboundGuidance[]',
+        'invalidASINList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'sku_inbound_guidance_list' => null,
-        'invalid_sku_list' => null,
-        'asin_inbound_guidance_list' => null,
-        'invalid_asin_list' => null
+        'sKUInboundGuidanceList' => null,
+        'invalidSKUList' => null,
+        'aSINInboundGuidanceList' => null,
+        'invalidASINList' => null
     ];
 
     /**
@@ -108,10 +108,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'sku_inbound_guidance_list' => 'SKUInboundGuidanceList',
-        'invalid_sku_list' => 'InvalidSKUList',
-        'asin_inbound_guidance_list' => 'ASINInboundGuidanceList',
-        'invalid_asin_list' => 'InvalidASINList'
+        'sKUInboundGuidanceList' => 'SKUInboundGuidanceList',
+        'invalidSKUList' => 'InvalidSKUList',
+        'aSINInboundGuidanceList' => 'ASINInboundGuidanceList',
+        'invalidASINList' => 'InvalidASINList'
     ];
 
     /**
@@ -120,10 +120,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'sku_inbound_guidance_list' => 'setSkuInboundGuidanceList',
-        'invalid_sku_list' => 'setInvalidSkuList',
-        'asin_inbound_guidance_list' => 'setAsinInboundGuidanceList',
-        'invalid_asin_list' => 'setInvalidAsinList'
+        'sKUInboundGuidanceList' => 'setSKUInboundGuidanceList',
+        'invalidSKUList' => 'setInvalidSKUList',
+        'aSINInboundGuidanceList' => 'setASINInboundGuidanceList',
+        'invalidASINList' => 'setInvalidASINList'
     ];
 
     /**
@@ -132,10 +132,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'sku_inbound_guidance_list' => 'getSkuInboundGuidanceList',
-        'invalid_sku_list' => 'getInvalidSkuList',
-        'asin_inbound_guidance_list' => 'getAsinInboundGuidanceList',
-        'invalid_asin_list' => 'getInvalidAsinList'
+        'sKUInboundGuidanceList' => 'getSKUInboundGuidanceList',
+        'invalidSKUList' => 'getInvalidSKUList',
+        'aSINInboundGuidanceList' => 'getASINInboundGuidanceList',
+        'invalidASINList' => 'getInvalidASINList'
     ];
 
     /**
@@ -198,10 +198,10 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['sku_inbound_guidance_list'] = $data['sku_inbound_guidance_list'] ?? null;
-        $this->container['invalid_sku_list'] = $data['invalid_sku_list'] ?? null;
-        $this->container['asin_inbound_guidance_list'] = $data['asin_inbound_guidance_list'] ?? null;
-        $this->container['invalid_asin_list'] = $data['invalid_asin_list'] ?? null;
+        $this->container['sKUInboundGuidanceList'] = $data['sKUInboundGuidanceList'] ?? null;
+        $this->container['invalidSKUList'] = $data['invalidSKUList'] ?? null;
+        $this->container['aSINInboundGuidanceList'] = $data['aSINInboundGuidanceList'] ?? null;
+        $this->container['invalidASINList'] = $data['invalidASINList'] ?? null;
     }
 
     /**
@@ -229,97 +229,97 @@ class GetInboundGuidanceResult implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets sku_inbound_guidance_list
+     * Gets sKUInboundGuidanceList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUInboundGuidance[]|null
      */
-    public function getSkuInboundGuidanceList()
+    public function getSKUInboundGuidanceList()
     {
-        return $this->container['sku_inbound_guidance_list'];
+        return $this->container['sKUInboundGuidanceList'];
     }
 
     /**
-     * Sets sku_inbound_guidance_list
+     * Sets sKUInboundGuidanceList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUInboundGuidance[]|null $sku_inbound_guidance_list A list of SKU inbound guidance information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUInboundGuidance[]|null $sKUInboundGuidanceList A list of SKU inbound guidance information.
      *
      * @return self
      */
-    public function setSkuInboundGuidanceList($sku_inbound_guidance_list)
+    public function setSKUInboundGuidanceList($sKUInboundGuidanceList)
     {
-        $this->container['sku_inbound_guidance_list'] = $sku_inbound_guidance_list;
+        $this->container['sKUInboundGuidanceList'] = $sKUInboundGuidanceList;
 
         return $this;
     }
 
     /**
-     * Gets invalid_sku_list
+     * Gets invalidSKUList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null
      */
-    public function getInvalidSkuList()
+    public function getInvalidSKUList()
     {
-        return $this->container['invalid_sku_list'];
+        return $this->container['invalidSKUList'];
     }
 
     /**
-     * Sets invalid_sku_list
+     * Sets invalidSKUList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null $invalid_sku_list A list of invalid SKU values and the reason they are invalid.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null $invalidSKUList A list of invalid SKU values and the reason they are invalid.
      *
      * @return self
      */
-    public function setInvalidSkuList($invalid_sku_list)
+    public function setInvalidSKUList($invalidSKUList)
     {
-        $this->container['invalid_sku_list'] = $invalid_sku_list;
+        $this->container['invalidSKUList'] = $invalidSKUList;
 
         return $this;
     }
 
     /**
-     * Gets asin_inbound_guidance_list
+     * Gets aSINInboundGuidanceList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINInboundGuidance[]|null
      */
-    public function getAsinInboundGuidanceList()
+    public function getASINInboundGuidanceList()
     {
-        return $this->container['asin_inbound_guidance_list'];
+        return $this->container['aSINInboundGuidanceList'];
     }
 
     /**
-     * Sets asin_inbound_guidance_list
+     * Sets aSINInboundGuidanceList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINInboundGuidance[]|null $asin_inbound_guidance_list A list of ASINs and their associated inbound guidance.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINInboundGuidance[]|null $aSINInboundGuidanceList A list of ASINs and their associated inbound guidance.
      *
      * @return self
      */
-    public function setAsinInboundGuidanceList($asin_inbound_guidance_list)
+    public function setASINInboundGuidanceList($aSINInboundGuidanceList)
     {
-        $this->container['asin_inbound_guidance_list'] = $asin_inbound_guidance_list;
+        $this->container['aSINInboundGuidanceList'] = $aSINInboundGuidanceList;
 
         return $this;
     }
 
     /**
-     * Gets invalid_asin_list
+     * Gets invalidASINList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null
      */
-    public function getInvalidAsinList()
+    public function getInvalidASINList()
     {
-        return $this->container['invalid_asin_list'];
+        return $this->container['invalidASINList'];
     }
 
     /**
-     * Sets invalid_asin_list
+     * Sets invalidASINList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null $invalid_asin_list A list of invalid ASIN values and the reasons they are invalid.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null $invalidASINList A list of invalid ASIN values and the reasons they are invalid.
      *
      * @return self
      */
-    public function setInvalidAsinList($invalid_asin_list)
+    public function setInvalidASINList($invalidASINList)
     {
-        $this->container['invalid_asin_list'] = $invalid_asin_list;
+        $this->container['invalidASINList'] = $invalidASINList;
 
         return $this;
     }

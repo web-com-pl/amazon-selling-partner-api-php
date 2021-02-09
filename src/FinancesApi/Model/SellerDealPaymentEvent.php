@@ -62,14 +62,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'deal_id' => 'string',
-        'deal_description' => 'string',
-        'event_type' => 'string',
-        'fee_type' => 'string',
-        'fee_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'total_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'dealId' => 'string',
+        'dealDescription' => 'string',
+        'eventType' => 'string',
+        'feeType' => 'string',
+        'feeAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'totalAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -80,14 +80,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'deal_id' => null,
-        'deal_description' => null,
-        'event_type' => null,
-        'fee_type' => null,
-        'fee_amount' => null,
-        'tax_amount' => null,
-        'total_amount' => null
+        'postedDate' => 'date-time',
+        'dealId' => null,
+        'dealDescription' => null,
+        'eventType' => null,
+        'feeType' => null,
+        'feeAmount' => null,
+        'taxAmount' => null,
+        'totalAmount' => null
     ];
 
     /**
@@ -117,14 +117,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'postedDate',
-        'deal_id' => 'dealId',
-        'deal_description' => 'dealDescription',
-        'event_type' => 'eventType',
-        'fee_type' => 'feeType',
-        'fee_amount' => 'feeAmount',
-        'tax_amount' => 'taxAmount',
-        'total_amount' => 'totalAmount'
+        'postedDate' => 'postedDate',
+        'dealId' => 'dealId',
+        'dealDescription' => 'dealDescription',
+        'eventType' => 'eventType',
+        'feeType' => 'feeType',
+        'feeAmount' => 'feeAmount',
+        'taxAmount' => 'taxAmount',
+        'totalAmount' => 'totalAmount'
     ];
 
     /**
@@ -133,14 +133,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'deal_id' => 'setDealId',
-        'deal_description' => 'setDealDescription',
-        'event_type' => 'setEventType',
-        'fee_type' => 'setFeeType',
-        'fee_amount' => 'setFeeAmount',
-        'tax_amount' => 'setTaxAmount',
-        'total_amount' => 'setTotalAmount'
+        'postedDate' => 'setPostedDate',
+        'dealId' => 'setDealId',
+        'dealDescription' => 'setDealDescription',
+        'eventType' => 'setEventType',
+        'feeType' => 'setFeeType',
+        'feeAmount' => 'setFeeAmount',
+        'taxAmount' => 'setTaxAmount',
+        'totalAmount' => 'setTotalAmount'
     ];
 
     /**
@@ -149,14 +149,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'deal_id' => 'getDealId',
-        'deal_description' => 'getDealDescription',
-        'event_type' => 'getEventType',
-        'fee_type' => 'getFeeType',
-        'fee_amount' => 'getFeeAmount',
-        'tax_amount' => 'getTaxAmount',
-        'total_amount' => 'getTotalAmount'
+        'postedDate' => 'getPostedDate',
+        'dealId' => 'getDealId',
+        'dealDescription' => 'getDealDescription',
+        'eventType' => 'getEventType',
+        'feeType' => 'getFeeType',
+        'feeAmount' => 'getFeeAmount',
+        'taxAmount' => 'getTaxAmount',
+        'totalAmount' => 'getTotalAmount'
     ];
 
     /**
@@ -219,14 +219,14 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['deal_id'] = $data['deal_id'] ?? null;
-        $this->container['deal_description'] = $data['deal_description'] ?? null;
-        $this->container['event_type'] = $data['event_type'] ?? null;
-        $this->container['fee_type'] = $data['fee_type'] ?? null;
-        $this->container['fee_amount'] = $data['fee_amount'] ?? null;
-        $this->container['tax_amount'] = $data['tax_amount'] ?? null;
-        $this->container['total_amount'] = $data['total_amount'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['dealId'] = $data['dealId'] ?? null;
+        $this->container['dealDescription'] = $data['dealDescription'] ?? null;
+        $this->container['eventType'] = $data['eventType'] ?? null;
+        $this->container['feeType'] = $data['feeType'] ?? null;
+        $this->container['feeAmount'] = $data['feeAmount'] ?? null;
+        $this->container['taxAmount'] = $data['taxAmount'] ?? null;
+        $this->container['totalAmount'] = $data['totalAmount'] ?? null;
     }
 
     /**
@@ -254,193 +254,193 @@ class SellerDealPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets deal_id
+     * Gets dealId
      *
      * @return string|null
      */
     public function getDealId()
     {
-        return $this->container['deal_id'];
+        return $this->container['dealId'];
     }
 
     /**
-     * Sets deal_id
+     * Sets dealId
      *
-     * @param string|null $deal_id The unique identifier of the deal.
+     * @param string|null $dealId The unique identifier of the deal.
      *
      * @return self
      */
-    public function setDealId($deal_id)
+    public function setDealId($dealId)
     {
-        $this->container['deal_id'] = $deal_id;
+        $this->container['dealId'] = $dealId;
 
         return $this;
     }
 
     /**
-     * Gets deal_description
+     * Gets dealDescription
      *
      * @return string|null
      */
     public function getDealDescription()
     {
-        return $this->container['deal_description'];
+        return $this->container['dealDescription'];
     }
 
     /**
-     * Sets deal_description
+     * Sets dealDescription
      *
-     * @param string|null $deal_description The internal description of the deal.
+     * @param string|null $dealDescription The internal description of the deal.
      *
      * @return self
      */
-    public function setDealDescription($deal_description)
+    public function setDealDescription($dealDescription)
     {
-        $this->container['deal_description'] = $deal_description;
+        $this->container['dealDescription'] = $dealDescription;
 
         return $this;
     }
 
     /**
-     * Gets event_type
+     * Gets eventType
      *
      * @return string|null
      */
     public function getEventType()
     {
-        return $this->container['event_type'];
+        return $this->container['eventType'];
     }
 
     /**
-     * Sets event_type
+     * Sets eventType
      *
-     * @param string|null $event_type The type of event: SellerDealComplete.
+     * @param string|null $eventType The type of event: SellerDealComplete.
      *
      * @return self
      */
-    public function setEventType($event_type)
+    public function setEventType($eventType)
     {
-        $this->container['event_type'] = $event_type;
+        $this->container['eventType'] = $eventType;
 
         return $this;
     }
 
     /**
-     * Gets fee_type
+     * Gets feeType
      *
      * @return string|null
      */
     public function getFeeType()
     {
-        return $this->container['fee_type'];
+        return $this->container['feeType'];
     }
 
     /**
-     * Sets fee_type
+     * Sets feeType
      *
-     * @param string|null $fee_type The type of fee: RunLightningDealFee.
+     * @param string|null $feeType The type of fee: RunLightningDealFee.
      *
      * @return self
      */
-    public function setFeeType($fee_type)
+    public function setFeeType($feeType)
     {
-        $this->container['fee_type'] = $fee_type;
+        $this->container['feeType'] = $feeType;
 
         return $this;
     }
 
     /**
-     * Gets fee_amount
+     * Gets feeAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getFeeAmount()
     {
-        return $this->container['fee_amount'];
+        return $this->container['feeAmount'];
     }
 
     /**
-     * Sets fee_amount
+     * Sets feeAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $fee_amount fee_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $feeAmount feeAmount
      *
      * @return self
      */
-    public function setFeeAmount($fee_amount)
+    public function setFeeAmount($feeAmount)
     {
-        $this->container['fee_amount'] = $fee_amount;
+        $this->container['feeAmount'] = $feeAmount;
 
         return $this;
     }
 
     /**
-     * Gets tax_amount
+     * Gets taxAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxAmount()
     {
-        return $this->container['tax_amount'];
+        return $this->container['taxAmount'];
     }
 
     /**
-     * Sets tax_amount
+     * Sets taxAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_amount tax_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxAmount taxAmount
      *
      * @return self
      */
-    public function setTaxAmount($tax_amount)
+    public function setTaxAmount($taxAmount)
     {
-        $this->container['tax_amount'] = $tax_amount;
+        $this->container['taxAmount'] = $taxAmount;
 
         return $this;
     }
 
     /**
-     * Gets total_amount
+     * Gets totalAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTotalAmount()
     {
-        return $this->container['total_amount'];
+        return $this->container['totalAmount'];
     }
 
     /**
-     * Sets total_amount
+     * Sets totalAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $total_amount total_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $totalAmount totalAmount
      *
      * @return self
      */
-    public function setTotalAmount($total_amount)
+    public function setTotalAmount($totalAmount)
     {
-        $this->container['total_amount'] = $total_amount;
+        $this->container['totalAmount'] = $totalAmount;
 
         return $this;
     }

@@ -62,16 +62,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_order_id' => 'string',
-        'transaction_posted_date' => '\DateTime',
-        'business_object_type' => 'string',
-        'sales_channel' => 'string',
+        'sellerOrderId' => 'string',
+        'transactionPostedDate' => '\DateTime',
+        'businessObjectType' => 'string',
+        'salesChannel' => 'string',
         'charge' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent',
-        'fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'payment_amount_type' => 'string',
-        'amount_description' => 'string',
-        'fulfillment_channel' => 'string',
-        'store_name' => 'string'
+        'feeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'paymentAmountType' => 'string',
+        'amountDescription' => 'string',
+        'fulfillmentChannel' => 'string',
+        'storeName' => 'string'
     ];
 
     /**
@@ -82,16 +82,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_order_id' => null,
-        'transaction_posted_date' => 'date-time',
-        'business_object_type' => null,
-        'sales_channel' => null,
+        'sellerOrderId' => null,
+        'transactionPostedDate' => 'date-time',
+        'businessObjectType' => null,
+        'salesChannel' => null,
         'charge' => null,
-        'fee_list' => null,
-        'payment_amount_type' => null,
-        'amount_description' => null,
-        'fulfillment_channel' => null,
-        'store_name' => null
+        'feeList' => null,
+        'paymentAmountType' => null,
+        'amountDescription' => null,
+        'fulfillmentChannel' => null,
+        'storeName' => null
     ];
 
     /**
@@ -121,16 +121,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_order_id' => 'SellerOrderId',
-        'transaction_posted_date' => 'TransactionPostedDate',
-        'business_object_type' => 'BusinessObjectType',
-        'sales_channel' => 'SalesChannel',
+        'sellerOrderId' => 'SellerOrderId',
+        'transactionPostedDate' => 'TransactionPostedDate',
+        'businessObjectType' => 'BusinessObjectType',
+        'salesChannel' => 'SalesChannel',
         'charge' => 'Charge',
-        'fee_list' => 'FeeList',
-        'payment_amount_type' => 'PaymentAmountType',
-        'amount_description' => 'AmountDescription',
-        'fulfillment_channel' => 'FulfillmentChannel',
-        'store_name' => 'StoreName'
+        'feeList' => 'FeeList',
+        'paymentAmountType' => 'PaymentAmountType',
+        'amountDescription' => 'AmountDescription',
+        'fulfillmentChannel' => 'FulfillmentChannel',
+        'storeName' => 'StoreName'
     ];
 
     /**
@@ -139,16 +139,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'seller_order_id' => 'setSellerOrderId',
-        'transaction_posted_date' => 'setTransactionPostedDate',
-        'business_object_type' => 'setBusinessObjectType',
-        'sales_channel' => 'setSalesChannel',
+        'sellerOrderId' => 'setSellerOrderId',
+        'transactionPostedDate' => 'setTransactionPostedDate',
+        'businessObjectType' => 'setBusinessObjectType',
+        'salesChannel' => 'setSalesChannel',
         'charge' => 'setCharge',
-        'fee_list' => 'setFeeList',
-        'payment_amount_type' => 'setPaymentAmountType',
-        'amount_description' => 'setAmountDescription',
-        'fulfillment_channel' => 'setFulfillmentChannel',
-        'store_name' => 'setStoreName'
+        'feeList' => 'setFeeList',
+        'paymentAmountType' => 'setPaymentAmountType',
+        'amountDescription' => 'setAmountDescription',
+        'fulfillmentChannel' => 'setFulfillmentChannel',
+        'storeName' => 'setStoreName'
     ];
 
     /**
@@ -157,16 +157,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'seller_order_id' => 'getSellerOrderId',
-        'transaction_posted_date' => 'getTransactionPostedDate',
-        'business_object_type' => 'getBusinessObjectType',
-        'sales_channel' => 'getSalesChannel',
+        'sellerOrderId' => 'getSellerOrderId',
+        'transactionPostedDate' => 'getTransactionPostedDate',
+        'businessObjectType' => 'getBusinessObjectType',
+        'salesChannel' => 'getSalesChannel',
         'charge' => 'getCharge',
-        'fee_list' => 'getFeeList',
-        'payment_amount_type' => 'getPaymentAmountType',
-        'amount_description' => 'getAmountDescription',
-        'fulfillment_channel' => 'getFulfillmentChannel',
-        'store_name' => 'getStoreName'
+        'feeList' => 'getFeeList',
+        'paymentAmountType' => 'getPaymentAmountType',
+        'amountDescription' => 'getAmountDescription',
+        'fulfillmentChannel' => 'getFulfillmentChannel',
+        'storeName' => 'getStoreName'
     ];
 
     /**
@@ -229,16 +229,16 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_order_id'] = $data['seller_order_id'] ?? null;
-        $this->container['transaction_posted_date'] = $data['transaction_posted_date'] ?? null;
-        $this->container['business_object_type'] = $data['business_object_type'] ?? null;
-        $this->container['sales_channel'] = $data['sales_channel'] ?? null;
+        $this->container['sellerOrderId'] = $data['sellerOrderId'] ?? null;
+        $this->container['transactionPostedDate'] = $data['transactionPostedDate'] ?? null;
+        $this->container['businessObjectType'] = $data['businessObjectType'] ?? null;
+        $this->container['salesChannel'] = $data['salesChannel'] ?? null;
         $this->container['charge'] = $data['charge'] ?? null;
-        $this->container['fee_list'] = $data['fee_list'] ?? null;
-        $this->container['payment_amount_type'] = $data['payment_amount_type'] ?? null;
-        $this->container['amount_description'] = $data['amount_description'] ?? null;
-        $this->container['fulfillment_channel'] = $data['fulfillment_channel'] ?? null;
-        $this->container['store_name'] = $data['store_name'] ?? null;
+        $this->container['feeList'] = $data['feeList'] ?? null;
+        $this->container['paymentAmountType'] = $data['paymentAmountType'] ?? null;
+        $this->container['amountDescription'] = $data['amountDescription'] ?? null;
+        $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['storeName'] = $data['storeName'] ?? null;
     }
 
     /**
@@ -266,97 +266,97 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets seller_order_id
+     * Gets sellerOrderId
      *
      * @return string|null
      */
     public function getSellerOrderId()
     {
-        return $this->container['seller_order_id'];
+        return $this->container['sellerOrderId'];
     }
 
     /**
-     * Sets seller_order_id
+     * Sets sellerOrderId
      *
-     * @param string|null $seller_order_id An order identifier that is specified by the seller.
+     * @param string|null $sellerOrderId An order identifier that is specified by the seller.
      *
      * @return self
      */
-    public function setSellerOrderId($seller_order_id)
+    public function setSellerOrderId($sellerOrderId)
     {
-        $this->container['seller_order_id'] = $seller_order_id;
+        $this->container['sellerOrderId'] = $sellerOrderId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_posted_date
+     * Gets transactionPostedDate
      *
      * @return \DateTime|null
      */
     public function getTransactionPostedDate()
     {
-        return $this->container['transaction_posted_date'];
+        return $this->container['transactionPostedDate'];
     }
 
     /**
-     * Sets transaction_posted_date
+     * Sets transactionPostedDate
      *
-     * @param \DateTime|null $transaction_posted_date transaction_posted_date
+     * @param \DateTime|null $transactionPostedDate transactionPostedDate
      *
      * @return self
      */
-    public function setTransactionPostedDate($transaction_posted_date)
+    public function setTransactionPostedDate($transactionPostedDate)
     {
-        $this->container['transaction_posted_date'] = $transaction_posted_date;
+        $this->container['transactionPostedDate'] = $transactionPostedDate;
 
         return $this;
     }
 
     /**
-     * Gets business_object_type
+     * Gets businessObjectType
      *
      * @return string|null
      */
     public function getBusinessObjectType()
     {
-        return $this->container['business_object_type'];
+        return $this->container['businessObjectType'];
     }
 
     /**
-     * Sets business_object_type
+     * Sets businessObjectType
      *
-     * @param string|null $business_object_type The type of business object.
+     * @param string|null $businessObjectType The type of business object.
      *
      * @return self
      */
-    public function setBusinessObjectType($business_object_type)
+    public function setBusinessObjectType($businessObjectType)
     {
-        $this->container['business_object_type'] = $business_object_type;
+        $this->container['businessObjectType'] = $businessObjectType;
 
         return $this;
     }
 
     /**
-     * Gets sales_channel
+     * Gets salesChannel
      *
      * @return string|null
      */
     public function getSalesChannel()
     {
-        return $this->container['sales_channel'];
+        return $this->container['salesChannel'];
     }
 
     /**
-     * Sets sales_channel
+     * Sets salesChannel
      *
-     * @param string|null $sales_channel The sales channel for the transaction.
+     * @param string|null $salesChannel The sales channel for the transaction.
      *
      * @return self
      */
-    public function setSalesChannel($sales_channel)
+    public function setSalesChannel($salesChannel)
     {
-        $this->container['sales_channel'] = $sales_channel;
+        $this->container['salesChannel'] = $salesChannel;
 
         return $this;
     }
@@ -386,121 +386,121 @@ class PayWithAmazonEvent implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets fee_list
+     * Gets feeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getFeeList()
     {
-        return $this->container['fee_list'];
+        return $this->container['feeList'];
     }
 
     /**
-     * Sets fee_list
+     * Sets feeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $feeList A list of fee component information.
      *
      * @return self
      */
-    public function setFeeList($fee_list)
+    public function setFeeList($feeList)
     {
-        $this->container['fee_list'] = $fee_list;
+        $this->container['feeList'] = $feeList;
 
         return $this;
     }
 
     /**
-     * Gets payment_amount_type
+     * Gets paymentAmountType
      *
      * @return string|null
      */
     public function getPaymentAmountType()
     {
-        return $this->container['payment_amount_type'];
+        return $this->container['paymentAmountType'];
     }
 
     /**
-     * Sets payment_amount_type
+     * Sets paymentAmountType
      *
-     * @param string|null $payment_amount_type The type of payment.  Possible values:  * Sales
+     * @param string|null $paymentAmountType The type of payment.  Possible values:  * Sales
      *
      * @return self
      */
-    public function setPaymentAmountType($payment_amount_type)
+    public function setPaymentAmountType($paymentAmountType)
     {
-        $this->container['payment_amount_type'] = $payment_amount_type;
+        $this->container['paymentAmountType'] = $paymentAmountType;
 
         return $this;
     }
 
     /**
-     * Gets amount_description
+     * Gets amountDescription
      *
      * @return string|null
      */
     public function getAmountDescription()
     {
-        return $this->container['amount_description'];
+        return $this->container['amountDescription'];
     }
 
     /**
-     * Sets amount_description
+     * Sets amountDescription
      *
-     * @param string|null $amount_description A short description of this payment event.
+     * @param string|null $amountDescription A short description of this payment event.
      *
      * @return self
      */
-    public function setAmountDescription($amount_description)
+    public function setAmountDescription($amountDescription)
     {
-        $this->container['amount_description'] = $amount_description;
+        $this->container['amountDescription'] = $amountDescription;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_channel
+     * Gets fulfillmentChannel
      *
      * @return string|null
      */
     public function getFulfillmentChannel()
     {
-        return $this->container['fulfillment_channel'];
+        return $this->container['fulfillmentChannel'];
     }
 
     /**
-     * Sets fulfillment_channel
+     * Sets fulfillmentChannel
      *
-     * @param string|null $fulfillment_channel The fulfillment channel.  Possible values:  * AFN - Amazon Fulfillment Network (Fulfillment by Amazon)  * MFN - Merchant Fulfillment Network (self-fulfilled)
+     * @param string|null $fulfillmentChannel The fulfillment channel.  Possible values:  * AFN - Amazon Fulfillment Network (Fulfillment by Amazon)  * MFN - Merchant Fulfillment Network (self-fulfilled)
      *
      * @return self
      */
-    public function setFulfillmentChannel($fulfillment_channel)
+    public function setFulfillmentChannel($fulfillmentChannel)
     {
-        $this->container['fulfillment_channel'] = $fulfillment_channel;
+        $this->container['fulfillmentChannel'] = $fulfillmentChannel;
 
         return $this;
     }
 
     /**
-     * Gets store_name
+     * Gets storeName
      *
      * @return string|null
      */
     public function getStoreName()
     {
-        return $this->container['store_name'];
+        return $this->container['storeName'];
     }
 
     /**
-     * Sets store_name
+     * Sets storeName
      *
-     * @param string|null $store_name The store name where the event occurred.
+     * @param string|null $storeName The store name where the event occurred.
      *
      * @return self
      */
-    public function setStoreName($store_name)
+    public function setStoreName($storeName)
     {
-        $this->container['store_name'] = $store_name;
+        $this->container['storeName'] = $storeName;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fee_type' => 'string',
-        'fee_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'feeType' => 'string',
+        'feeAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -74,8 +74,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fee_type' => null,
-        'fee_amount' => null
+        'feeType' => null,
+        'feeAmount' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'fee_type' => 'FeeType',
-        'fee_amount' => 'FeeAmount'
+        'feeType' => 'FeeType',
+        'feeAmount' => 'FeeAmount'
     ];
 
     /**
@@ -115,8 +115,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'fee_type' => 'setFeeType',
-        'fee_amount' => 'setFeeAmount'
+        'feeType' => 'setFeeType',
+        'feeAmount' => 'setFeeAmount'
     ];
 
     /**
@@ -125,8 +125,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'fee_type' => 'getFeeType',
-        'fee_amount' => 'getFeeAmount'
+        'feeType' => 'getFeeType',
+        'feeAmount' => 'getFeeAmount'
     ];
 
     /**
@@ -189,8 +189,8 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['fee_type'] = $data['fee_type'] ?? null;
-        $this->container['fee_amount'] = $data['fee_amount'] ?? null;
+        $this->container['feeType'] = $data['feeType'] ?? null;
+        $this->container['feeAmount'] = $data['feeAmount'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class FeeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets fee_type
+     * Gets feeType
      *
      * @return string|null
      */
     public function getFeeType()
     {
-        return $this->container['fee_type'];
+        return $this->container['feeType'];
     }
 
     /**
-     * Sets fee_type
+     * Sets feeType
      *
-     * @param string|null $fee_type The type of fee. For more information about Selling on Amazon fees, see [Selling on Amazon Fee Schedule](https://sellercentral.amazon.com/gp/help/200336920) on Seller Central. For more information about Fulfillment by Amazon fees, see [FBA features, services and fees](https://sellercentral.amazon.com/gp/help/201074400) on Seller Central.
+     * @param string|null $feeType The type of fee. For more information about Selling on Amazon fees, see [Selling on Amazon Fee Schedule](https://sellercentral.amazon.com/gp/help/200336920) on Seller Central. For more information about Fulfillment by Amazon fees, see [FBA features, services and fees](https://sellercentral.amazon.com/gp/help/201074400) on Seller Central.
      *
      * @return self
      */
-    public function setFeeType($fee_type)
+    public function setFeeType($feeType)
     {
-        $this->container['fee_type'] = $fee_type;
+        $this->container['feeType'] = $feeType;
 
         return $this;
     }
 
     /**
-     * Gets fee_amount
+     * Gets feeAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getFeeAmount()
     {
-        return $this->container['fee_amount'];
+        return $this->container['feeAmount'];
     }
 
     /**
-     * Sets fee_amount
+     * Sets feeAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $fee_amount fee_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $feeAmount feeAmount
      *
      * @return self
      */
-    public function setFeeAmount($fee_amount)
+    public function setFeeAmount($feeAmount)
     {
-        $this->container['fee_amount'] = $fee_amount;
+        $this->container['feeAmount'] = $feeAmount;
 
         return $this;
     }

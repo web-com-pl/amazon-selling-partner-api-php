@@ -62,7 +62,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'service_rates' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate[]'
+        'serviceRates' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate[]'
     ];
 
     /**
@@ -73,7 +73,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'service_rates' => null
+        'serviceRates' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'service_rates' => 'serviceRates'
+        'serviceRates' => 'serviceRates'
     ];
 
     /**
@@ -112,7 +112,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'service_rates' => 'setServiceRates'
+        'serviceRates' => 'setServiceRates'
     ];
 
     /**
@@ -121,7 +121,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'service_rates' => 'getServiceRates'
+        'serviceRates' => 'getServiceRates'
     ];
 
     /**
@@ -184,7 +184,7 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['service_rates'] = $data['service_rates'] ?? null;
+        $this->container['serviceRates'] = $data['serviceRates'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['service_rates'] === null) {
-            $invalidProperties[] = "'service_rates' can't be null";
+        if ($this->container['serviceRates'] === null) {
+            $invalidProperties[] = "'serviceRates' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class GetRatesResult implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets service_rates
+     * Gets serviceRates
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate[]
      */
     public function getServiceRates()
     {
-        return $this->container['service_rates'];
+        return $this->container['serviceRates'];
     }
 
     /**
-     * Sets service_rates
+     * Sets serviceRates
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate[] $service_rates A list of service rates.
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate[] $serviceRates A list of service rates.
      *
      * @return self
      */
-    public function setServiceRates($service_rates)
+    public function setServiceRates($serviceRates)
     {
-        $this->container['service_rates'] = $service_rates;
+        $this->container['serviceRates'] = $serviceRates;
 
         return $this;
     }

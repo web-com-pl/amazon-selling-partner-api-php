@@ -62,8 +62,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rate_id' => 'string',
-        'label_specification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
+        'rateId' => 'string',
+        'labelSpecification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
     ];
 
     /**
@@ -74,8 +74,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'rate_id' => null,
-        'label_specification' => null
+        'rateId' => null,
+        'labelSpecification' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'rate_id' => 'rateId',
-        'label_specification' => 'labelSpecification'
+        'rateId' => 'rateId',
+        'labelSpecification' => 'labelSpecification'
     ];
 
     /**
@@ -115,8 +115,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'rate_id' => 'setRateId',
-        'label_specification' => 'setLabelSpecification'
+        'rateId' => 'setRateId',
+        'labelSpecification' => 'setLabelSpecification'
     ];
 
     /**
@@ -125,8 +125,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'rate_id' => 'getRateId',
-        'label_specification' => 'getLabelSpecification'
+        'rateId' => 'getRateId',
+        'labelSpecification' => 'getLabelSpecification'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['rate_id'] = $data['rate_id'] ?? null;
-        $this->container['label_specification'] = $data['label_specification'] ?? null;
+        $this->container['rateId'] = $data['rateId'] ?? null;
+        $this->container['labelSpecification'] = $data['labelSpecification'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['rate_id'] === null) {
-            $invalidProperties[] = "'rate_id' can't be null";
+        if ($this->container['rateId'] === null) {
+            $invalidProperties[] = "'rateId' can't be null";
         }
-        if ($this->container['label_specification'] === null) {
-            $invalidProperties[] = "'label_specification' can't be null";
+        if ($this->container['labelSpecification'] === null) {
+            $invalidProperties[] = "'labelSpecification' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class PurchaseLabelsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets rate_id
+     * Gets rateId
      *
      * @return string
      */
     public function getRateId()
     {
-        return $this->container['rate_id'];
+        return $this->container['rateId'];
     }
 
     /**
-     * Sets rate_id
+     * Sets rateId
      *
-     * @param string $rate_id An identifier for the rating.
+     * @param string $rateId An identifier for the rating.
      *
      * @return self
      */
-    public function setRateId($rate_id)
+    public function setRateId($rateId)
     {
-        $this->container['rate_id'] = $rate_id;
+        $this->container['rateId'] = $rateId;
 
         return $this;
     }
 
     /**
-     * Gets label_specification
+     * Gets labelSpecification
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification
      */
     public function getLabelSpecification()
     {
-        return $this->container['label_specification'];
+        return $this->container['labelSpecification'];
     }
 
     /**
-     * Sets label_specification
+     * Sets labelSpecification
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $label_specification label_specification
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $labelSpecification labelSpecification
      *
      * @return self
      */
-    public function setLabelSpecification($label_specification)
+    public function setLabelSpecification($labelSpecification)
     {
-        $this->container['label_specification'] = $label_specification;
+        $this->container['labelSpecification'] = $labelSpecification;
 
         return $this;
     }

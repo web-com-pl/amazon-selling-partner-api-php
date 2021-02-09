@@ -62,10 +62,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipping_service_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingService[]',
-        'rejected_shipping_service_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\RejectedShippingService[]',
-        'temporarily_unavailable_carrier_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TemporarilyUnavailableCarrier[]',
-        'terms_and_conditions_not_accepted_carrier_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TermsAndConditionsNotAcceptedCarrier[]'
+        'shippingServiceList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingService[]',
+        'rejectedShippingServiceList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\RejectedShippingService[]',
+        'temporarilyUnavailableCarrierList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TemporarilyUnavailableCarrier[]',
+        'termsAndConditionsNotAcceptedCarrierList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TermsAndConditionsNotAcceptedCarrier[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipping_service_list' => null,
-        'rejected_shipping_service_list' => null,
-        'temporarily_unavailable_carrier_list' => null,
-        'terms_and_conditions_not_accepted_carrier_list' => null
+        'shippingServiceList' => null,
+        'rejectedShippingServiceList' => null,
+        'temporarilyUnavailableCarrierList' => null,
+        'termsAndConditionsNotAcceptedCarrierList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipping_service_list' => 'ShippingServiceList',
-        'rejected_shipping_service_list' => 'RejectedShippingServiceList',
-        'temporarily_unavailable_carrier_list' => 'TemporarilyUnavailableCarrierList',
-        'terms_and_conditions_not_accepted_carrier_list' => 'TermsAndConditionsNotAcceptedCarrierList'
+        'shippingServiceList' => 'ShippingServiceList',
+        'rejectedShippingServiceList' => 'RejectedShippingServiceList',
+        'temporarilyUnavailableCarrierList' => 'TemporarilyUnavailableCarrierList',
+        'termsAndConditionsNotAcceptedCarrierList' => 'TermsAndConditionsNotAcceptedCarrierList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'shipping_service_list' => 'setShippingServiceList',
-        'rejected_shipping_service_list' => 'setRejectedShippingServiceList',
-        'temporarily_unavailable_carrier_list' => 'setTemporarilyUnavailableCarrierList',
-        'terms_and_conditions_not_accepted_carrier_list' => 'setTermsAndConditionsNotAcceptedCarrierList'
+        'shippingServiceList' => 'setShippingServiceList',
+        'rejectedShippingServiceList' => 'setRejectedShippingServiceList',
+        'temporarilyUnavailableCarrierList' => 'setTemporarilyUnavailableCarrierList',
+        'termsAndConditionsNotAcceptedCarrierList' => 'setTermsAndConditionsNotAcceptedCarrierList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'shipping_service_list' => 'getShippingServiceList',
-        'rejected_shipping_service_list' => 'getRejectedShippingServiceList',
-        'temporarily_unavailable_carrier_list' => 'getTemporarilyUnavailableCarrierList',
-        'terms_and_conditions_not_accepted_carrier_list' => 'getTermsAndConditionsNotAcceptedCarrierList'
+        'shippingServiceList' => 'getShippingServiceList',
+        'rejectedShippingServiceList' => 'getRejectedShippingServiceList',
+        'temporarilyUnavailableCarrierList' => 'getTemporarilyUnavailableCarrierList',
+        'termsAndConditionsNotAcceptedCarrierList' => 'getTermsAndConditionsNotAcceptedCarrierList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipping_service_list'] = $data['shipping_service_list'] ?? null;
-        $this->container['rejected_shipping_service_list'] = $data['rejected_shipping_service_list'] ?? null;
-        $this->container['temporarily_unavailable_carrier_list'] = $data['temporarily_unavailable_carrier_list'] ?? null;
-        $this->container['terms_and_conditions_not_accepted_carrier_list'] = $data['terms_and_conditions_not_accepted_carrier_list'] ?? null;
+        $this->container['shippingServiceList'] = $data['shippingServiceList'] ?? null;
+        $this->container['rejectedShippingServiceList'] = $data['rejectedShippingServiceList'] ?? null;
+        $this->container['temporarilyUnavailableCarrierList'] = $data['temporarilyUnavailableCarrierList'] ?? null;
+        $this->container['termsAndConditionsNotAcceptedCarrierList'] = $data['termsAndConditionsNotAcceptedCarrierList'] ?? null;
     }
 
     /**
@@ -214,8 +214,8 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
-        if ($this->container['shipping_service_list'] === null) {
-            $invalidProperties[] = "'shipping_service_list' can't be null";
+        if ($this->container['shippingServiceList'] === null) {
+            $invalidProperties[] = "'shippingServiceList' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,97 +233,97 @@ class GetEligibleShipmentServicesResult implements ModelInterface, ArrayAccess, 
 
 
     /**
-     * Gets shipping_service_list
+     * Gets shippingServiceList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingService[]
      */
     public function getShippingServiceList()
     {
-        return $this->container['shipping_service_list'];
+        return $this->container['shippingServiceList'];
     }
 
     /**
-     * Sets shipping_service_list
+     * Sets shippingServiceList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingService[] $shipping_service_list A list of shipping services offers.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingService[] $shippingServiceList A list of shipping services offers.
      *
      * @return self
      */
-    public function setShippingServiceList($shipping_service_list)
+    public function setShippingServiceList($shippingServiceList)
     {
-        $this->container['shipping_service_list'] = $shipping_service_list;
+        $this->container['shippingServiceList'] = $shippingServiceList;
 
         return $this;
     }
 
     /**
-     * Gets rejected_shipping_service_list
+     * Gets rejectedShippingServiceList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\RejectedShippingService[]|null
      */
     public function getRejectedShippingServiceList()
     {
-        return $this->container['rejected_shipping_service_list'];
+        return $this->container['rejectedShippingServiceList'];
     }
 
     /**
-     * Sets rejected_shipping_service_list
+     * Sets rejectedShippingServiceList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\RejectedShippingService[]|null $rejected_shipping_service_list List of services that were for some reason unavailable for this request
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\RejectedShippingService[]|null $rejectedShippingServiceList List of services that were for some reason unavailable for this request
      *
      * @return self
      */
-    public function setRejectedShippingServiceList($rejected_shipping_service_list)
+    public function setRejectedShippingServiceList($rejectedShippingServiceList)
     {
-        $this->container['rejected_shipping_service_list'] = $rejected_shipping_service_list;
+        $this->container['rejectedShippingServiceList'] = $rejectedShippingServiceList;
 
         return $this;
     }
 
     /**
-     * Gets temporarily_unavailable_carrier_list
+     * Gets temporarilyUnavailableCarrierList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TemporarilyUnavailableCarrier[]|null
      */
     public function getTemporarilyUnavailableCarrierList()
     {
-        return $this->container['temporarily_unavailable_carrier_list'];
+        return $this->container['temporarilyUnavailableCarrierList'];
     }
 
     /**
-     * Sets temporarily_unavailable_carrier_list
+     * Sets temporarilyUnavailableCarrierList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TemporarilyUnavailableCarrier[]|null $temporarily_unavailable_carrier_list A list of temporarily unavailable carriers.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TemporarilyUnavailableCarrier[]|null $temporarilyUnavailableCarrierList A list of temporarily unavailable carriers.
      *
      * @return self
      */
-    public function setTemporarilyUnavailableCarrierList($temporarily_unavailable_carrier_list)
+    public function setTemporarilyUnavailableCarrierList($temporarilyUnavailableCarrierList)
     {
-        $this->container['temporarily_unavailable_carrier_list'] = $temporarily_unavailable_carrier_list;
+        $this->container['temporarilyUnavailableCarrierList'] = $temporarilyUnavailableCarrierList;
 
         return $this;
     }
 
     /**
-     * Gets terms_and_conditions_not_accepted_carrier_list
+     * Gets termsAndConditionsNotAcceptedCarrierList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TermsAndConditionsNotAcceptedCarrier[]|null
      */
     public function getTermsAndConditionsNotAcceptedCarrierList()
     {
-        return $this->container['terms_and_conditions_not_accepted_carrier_list'];
+        return $this->container['termsAndConditionsNotAcceptedCarrierList'];
     }
 
     /**
-     * Sets terms_and_conditions_not_accepted_carrier_list
+     * Sets termsAndConditionsNotAcceptedCarrierList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TermsAndConditionsNotAcceptedCarrier[]|null $terms_and_conditions_not_accepted_carrier_list List of carriers whose terms and conditions were not accepted by the seller.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\TermsAndConditionsNotAcceptedCarrier[]|null $termsAndConditionsNotAcceptedCarrierList List of carriers whose terms and conditions were not accepted by the seller.
      *
      * @return self
      */
-    public function setTermsAndConditionsNotAcceptedCarrierList($terms_and_conditions_not_accepted_carrier_list)
+    public function setTermsAndConditionsNotAcceptedCarrierList($termsAndConditionsNotAcceptedCarrierList)
     {
-        $this->container['terms_and_conditions_not_accepted_carrier_list'] = $terms_and_conditions_not_accepted_carrier_list;
+        $this->container['termsAndConditionsNotAcceptedCarrierList'] = $termsAndConditionsNotAcceptedCarrierList;
 
         return $this;
     }

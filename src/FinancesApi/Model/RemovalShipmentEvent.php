@@ -62,10 +62,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'order_id' => 'string',
-        'transaction_type' => 'string',
-        'removal_shipment_item_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\RemovalShipmentItem[]'
+        'postedDate' => '\DateTime',
+        'orderId' => 'string',
+        'transactionType' => 'string',
+        'removalShipmentItemList' => '\Webcom\Amazon\Rest\FinancesApi\Model\RemovalShipmentItem[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'order_id' => null,
-        'transaction_type' => null,
-        'removal_shipment_item_list' => null
+        'postedDate' => 'date-time',
+        'orderId' => null,
+        'transactionType' => null,
+        'removalShipmentItemList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'order_id' => 'OrderId',
-        'transaction_type' => 'TransactionType',
-        'removal_shipment_item_list' => 'RemovalShipmentItemList'
+        'postedDate' => 'PostedDate',
+        'orderId' => 'OrderId',
+        'transactionType' => 'TransactionType',
+        'removalShipmentItemList' => 'RemovalShipmentItemList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'order_id' => 'setOrderId',
-        'transaction_type' => 'setTransactionType',
-        'removal_shipment_item_list' => 'setRemovalShipmentItemList'
+        'postedDate' => 'setPostedDate',
+        'orderId' => 'setOrderId',
+        'transactionType' => 'setTransactionType',
+        'removalShipmentItemList' => 'setRemovalShipmentItemList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'order_id' => 'getOrderId',
-        'transaction_type' => 'getTransactionType',
-        'removal_shipment_item_list' => 'getRemovalShipmentItemList'
+        'postedDate' => 'getPostedDate',
+        'orderId' => 'getOrderId',
+        'transactionType' => 'getTransactionType',
+        'removalShipmentItemList' => 'getRemovalShipmentItemList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['order_id'] = $data['order_id'] ?? null;
-        $this->container['transaction_type'] = $data['transaction_type'] ?? null;
-        $this->container['removal_shipment_item_list'] = $data['removal_shipment_item_list'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['orderId'] = $data['orderId'] ?? null;
+        $this->container['transactionType'] = $data['transactionType'] ?? null;
+        $this->container['removalShipmentItemList'] = $data['removalShipmentItemList'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class RemovalShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets order_id
+     * Gets orderId
      *
      * @return string|null
      */
     public function getOrderId()
     {
-        return $this->container['order_id'];
+        return $this->container['orderId'];
     }
 
     /**
-     * Sets order_id
+     * Sets orderId
      *
-     * @param string|null $order_id The identifier for the removal shipment order.
+     * @param string|null $orderId The identifier for the removal shipment order.
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setOrderId($orderId)
     {
-        $this->container['order_id'] = $order_id;
+        $this->container['orderId'] = $orderId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_type
+     * Gets transactionType
      *
      * @return string|null
      */
     public function getTransactionType()
     {
-        return $this->container['transaction_type'];
+        return $this->container['transactionType'];
     }
 
     /**
-     * Sets transaction_type
+     * Sets transactionType
      *
-     * @param string|null $transaction_type The type of removal order.  Possible values:  * WHOLESALE_LIQUIDATION
+     * @param string|null $transactionType The type of removal order.  Possible values:  * WHOLESALE_LIQUIDATION
      *
      * @return self
      */
-    public function setTransactionType($transaction_type)
+    public function setTransactionType($transactionType)
     {
-        $this->container['transaction_type'] = $transaction_type;
+        $this->container['transactionType'] = $transactionType;
 
         return $this;
     }
 
     /**
-     * Gets removal_shipment_item_list
+     * Gets removalShipmentItemList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\RemovalShipmentItem[]|null
      */
     public function getRemovalShipmentItemList()
     {
-        return $this->container['removal_shipment_item_list'];
+        return $this->container['removalShipmentItemList'];
     }
 
     /**
-     * Sets removal_shipment_item_list
+     * Sets removalShipmentItemList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RemovalShipmentItem[]|null $removal_shipment_item_list A list of information about removal shipment items.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RemovalShipmentItem[]|null $removalShipmentItemList A list of information about removal shipment items.
      *
      * @return self
      */
-    public function setRemovalShipmentItemList($removal_shipment_item_list)
+    public function setRemovalShipmentItemList($removalShipmentItemList)
     {
-        $this->container['removal_shipment_item_list'] = $removal_shipment_item_list;
+        $this->container['removalShipmentItemList'] = $removalShipmentItemList;
 
         return $this;
     }

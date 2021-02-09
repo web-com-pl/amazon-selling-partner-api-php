@@ -62,10 +62,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'recovery_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'original_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'group_begin_date' => '\DateTime',
-        'group_end_date' => '\DateTime'
+        'recoveryAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'originalAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'groupBeginDate' => '\DateTime',
+        'groupEndDate' => '\DateTime'
     ];
 
     /**
@@ -76,10 +76,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'recovery_amount' => null,
-        'original_amount' => null,
-        'group_begin_date' => 'date-time',
-        'group_end_date' => 'date-time'
+        'recoveryAmount' => null,
+        'originalAmount' => null,
+        'groupBeginDate' => 'date-time',
+        'groupEndDate' => 'date-time'
     ];
 
     /**
@@ -109,10 +109,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'recovery_amount' => 'RecoveryAmount',
-        'original_amount' => 'OriginalAmount',
-        'group_begin_date' => 'GroupBeginDate',
-        'group_end_date' => 'GroupEndDate'
+        'recoveryAmount' => 'RecoveryAmount',
+        'originalAmount' => 'OriginalAmount',
+        'groupBeginDate' => 'GroupBeginDate',
+        'groupEndDate' => 'GroupEndDate'
     ];
 
     /**
@@ -121,10 +121,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'recovery_amount' => 'setRecoveryAmount',
-        'original_amount' => 'setOriginalAmount',
-        'group_begin_date' => 'setGroupBeginDate',
-        'group_end_date' => 'setGroupEndDate'
+        'recoveryAmount' => 'setRecoveryAmount',
+        'originalAmount' => 'setOriginalAmount',
+        'groupBeginDate' => 'setGroupBeginDate',
+        'groupEndDate' => 'setGroupEndDate'
     ];
 
     /**
@@ -133,10 +133,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'recovery_amount' => 'getRecoveryAmount',
-        'original_amount' => 'getOriginalAmount',
-        'group_begin_date' => 'getGroupBeginDate',
-        'group_end_date' => 'getGroupEndDate'
+        'recoveryAmount' => 'getRecoveryAmount',
+        'originalAmount' => 'getOriginalAmount',
+        'groupBeginDate' => 'getGroupBeginDate',
+        'groupEndDate' => 'getGroupEndDate'
     ];
 
     /**
@@ -199,10 +199,10 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['recovery_amount'] = $data['recovery_amount'] ?? null;
-        $this->container['original_amount'] = $data['original_amount'] ?? null;
-        $this->container['group_begin_date'] = $data['group_begin_date'] ?? null;
-        $this->container['group_end_date'] = $data['group_end_date'] ?? null;
+        $this->container['recoveryAmount'] = $data['recoveryAmount'] ?? null;
+        $this->container['originalAmount'] = $data['originalAmount'] ?? null;
+        $this->container['groupBeginDate'] = $data['groupBeginDate'] ?? null;
+        $this->container['groupEndDate'] = $data['groupEndDate'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class DebtRecoveryItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets recovery_amount
+     * Gets recoveryAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getRecoveryAmount()
     {
-        return $this->container['recovery_amount'];
+        return $this->container['recoveryAmount'];
     }
 
     /**
-     * Sets recovery_amount
+     * Sets recoveryAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $recovery_amount recovery_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $recoveryAmount recoveryAmount
      *
      * @return self
      */
-    public function setRecoveryAmount($recovery_amount)
+    public function setRecoveryAmount($recoveryAmount)
     {
-        $this->container['recovery_amount'] = $recovery_amount;
+        $this->container['recoveryAmount'] = $recoveryAmount;
 
         return $this;
     }
 
     /**
-     * Gets original_amount
+     * Gets originalAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getOriginalAmount()
     {
-        return $this->container['original_amount'];
+        return $this->container['originalAmount'];
     }
 
     /**
-     * Sets original_amount
+     * Sets originalAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $original_amount original_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $originalAmount originalAmount
      *
      * @return self
      */
-    public function setOriginalAmount($original_amount)
+    public function setOriginalAmount($originalAmount)
     {
-        $this->container['original_amount'] = $original_amount;
+        $this->container['originalAmount'] = $originalAmount;
 
         return $this;
     }
 
     /**
-     * Gets group_begin_date
+     * Gets groupBeginDate
      *
      * @return \DateTime|null
      */
     public function getGroupBeginDate()
     {
-        return $this->container['group_begin_date'];
+        return $this->container['groupBeginDate'];
     }
 
     /**
-     * Sets group_begin_date
+     * Sets groupBeginDate
      *
-     * @param \DateTime|null $group_begin_date group_begin_date
+     * @param \DateTime|null $groupBeginDate groupBeginDate
      *
      * @return self
      */
-    public function setGroupBeginDate($group_begin_date)
+    public function setGroupBeginDate($groupBeginDate)
     {
-        $this->container['group_begin_date'] = $group_begin_date;
+        $this->container['groupBeginDate'] = $groupBeginDate;
 
         return $this;
     }
 
     /**
-     * Gets group_end_date
+     * Gets groupEndDate
      *
      * @return \DateTime|null
      */
     public function getGroupEndDate()
     {
-        return $this->container['group_end_date'];
+        return $this->container['groupEndDate'];
     }
 
     /**
-     * Sets group_end_date
+     * Sets groupEndDate
      *
-     * @param \DateTime|null $group_end_date group_end_date
+     * @param \DateTime|null $groupEndDate groupEndDate
      *
      * @return self
      */
-    public function setGroupEndDate($group_end_date)
+    public function setGroupEndDate($groupEndDate)
     {
-        $this->container['group_end_date'] = $group_end_date;
+        $this->container['groupEndDate'] = $groupEndDate;
 
         return $this;
     }

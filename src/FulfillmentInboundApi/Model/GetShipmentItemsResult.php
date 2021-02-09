@@ -61,8 +61,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_data' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]',
-        'next_token' => 'string'
+        'itemData' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]',
+        'nextToken' => 'string'
     ];
 
     /**
@@ -73,8 +73,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_data' => null,
-        'next_token' => null
+        'itemData' => null,
+        'nextToken' => null
     ];
 
     /**
@@ -104,8 +104,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_data' => 'ItemData',
-        'next_token' => 'NextToken'
+        'itemData' => 'ItemData',
+        'nextToken' => 'NextToken'
     ];
 
     /**
@@ -114,8 +114,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_data' => 'setItemData',
-        'next_token' => 'setNextToken'
+        'itemData' => 'setItemData',
+        'nextToken' => 'setNextToken'
     ];
 
     /**
@@ -124,8 +124,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_data' => 'getItemData',
-        'next_token' => 'getNextToken'
+        'itemData' => 'getItemData',
+        'nextToken' => 'getNextToken'
     ];
 
     /**
@@ -188,8 +188,8 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_data'] = $data['item_data'] ?? null;
-        $this->container['next_token'] = $data['next_token'] ?? null;
+        $this->container['itemData'] = $data['itemData'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
     }
 
     /**
@@ -217,49 +217,49 @@ class GetShipmentItemsResult implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_data
+     * Gets itemData
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]|null
      */
     public function getItemData()
     {
-        return $this->container['item_data'];
+        return $this->container['itemData'];
     }
 
     /**
-     * Sets item_data
+     * Sets itemData
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]|null $item_data A list of inbound shipment item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentItem[]|null $itemData A list of inbound shipment item information.
      *
      * @return self
      */
-    public function setItemData($item_data)
+    public function setItemData($itemData)
     {
-        $this->container['item_data'] = $item_data;
+        $this->container['itemData'] = $itemData;
 
         return $this;
     }
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }

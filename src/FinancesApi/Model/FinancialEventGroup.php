@@ -62,17 +62,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'financial_event_group_id' => 'string',
-        'processing_status' => 'string',
-        'fund_transfer_status' => 'string',
-        'original_total' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'converted_total' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'fund_transfer_date' => '\DateTime',
-        'trace_id' => 'string',
-        'account_tail' => 'string',
-        'beginning_balance' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'financial_event_group_start' => '\DateTime',
-        'financial_event_group_end' => '\DateTime'
+        'financialEventGroupId' => 'string',
+        'processingStatus' => 'string',
+        'fundTransferStatus' => 'string',
+        'originalTotal' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'convertedTotal' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'fundTransferDate' => '\DateTime',
+        'traceId' => 'string',
+        'accountTail' => 'string',
+        'beginningBalance' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'financialEventGroupStart' => '\DateTime',
+        'financialEventGroupEnd' => '\DateTime'
     ];
 
     /**
@@ -83,17 +83,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'financial_event_group_id' => null,
-        'processing_status' => null,
-        'fund_transfer_status' => null,
-        'original_total' => null,
-        'converted_total' => null,
-        'fund_transfer_date' => 'date-time',
-        'trace_id' => null,
-        'account_tail' => null,
-        'beginning_balance' => null,
-        'financial_event_group_start' => 'date-time',
-        'financial_event_group_end' => 'date-time'
+        'financialEventGroupId' => null,
+        'processingStatus' => null,
+        'fundTransferStatus' => null,
+        'originalTotal' => null,
+        'convertedTotal' => null,
+        'fundTransferDate' => 'date-time',
+        'traceId' => null,
+        'accountTail' => null,
+        'beginningBalance' => null,
+        'financialEventGroupStart' => 'date-time',
+        'financialEventGroupEnd' => 'date-time'
     ];
 
     /**
@@ -123,17 +123,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'financial_event_group_id' => 'FinancialEventGroupId',
-        'processing_status' => 'ProcessingStatus',
-        'fund_transfer_status' => 'FundTransferStatus',
-        'original_total' => 'OriginalTotal',
-        'converted_total' => 'ConvertedTotal',
-        'fund_transfer_date' => 'FundTransferDate',
-        'trace_id' => 'TraceId',
-        'account_tail' => 'AccountTail',
-        'beginning_balance' => 'BeginningBalance',
-        'financial_event_group_start' => 'FinancialEventGroupStart',
-        'financial_event_group_end' => 'FinancialEventGroupEnd'
+        'financialEventGroupId' => 'FinancialEventGroupId',
+        'processingStatus' => 'ProcessingStatus',
+        'fundTransferStatus' => 'FundTransferStatus',
+        'originalTotal' => 'OriginalTotal',
+        'convertedTotal' => 'ConvertedTotal',
+        'fundTransferDate' => 'FundTransferDate',
+        'traceId' => 'TraceId',
+        'accountTail' => 'AccountTail',
+        'beginningBalance' => 'BeginningBalance',
+        'financialEventGroupStart' => 'FinancialEventGroupStart',
+        'financialEventGroupEnd' => 'FinancialEventGroupEnd'
     ];
 
     /**
@@ -142,17 +142,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'financial_event_group_id' => 'setFinancialEventGroupId',
-        'processing_status' => 'setProcessingStatus',
-        'fund_transfer_status' => 'setFundTransferStatus',
-        'original_total' => 'setOriginalTotal',
-        'converted_total' => 'setConvertedTotal',
-        'fund_transfer_date' => 'setFundTransferDate',
-        'trace_id' => 'setTraceId',
-        'account_tail' => 'setAccountTail',
-        'beginning_balance' => 'setBeginningBalance',
-        'financial_event_group_start' => 'setFinancialEventGroupStart',
-        'financial_event_group_end' => 'setFinancialEventGroupEnd'
+        'financialEventGroupId' => 'setFinancialEventGroupId',
+        'processingStatus' => 'setProcessingStatus',
+        'fundTransferStatus' => 'setFundTransferStatus',
+        'originalTotal' => 'setOriginalTotal',
+        'convertedTotal' => 'setConvertedTotal',
+        'fundTransferDate' => 'setFundTransferDate',
+        'traceId' => 'setTraceId',
+        'accountTail' => 'setAccountTail',
+        'beginningBalance' => 'setBeginningBalance',
+        'financialEventGroupStart' => 'setFinancialEventGroupStart',
+        'financialEventGroupEnd' => 'setFinancialEventGroupEnd'
     ];
 
     /**
@@ -161,17 +161,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'financial_event_group_id' => 'getFinancialEventGroupId',
-        'processing_status' => 'getProcessingStatus',
-        'fund_transfer_status' => 'getFundTransferStatus',
-        'original_total' => 'getOriginalTotal',
-        'converted_total' => 'getConvertedTotal',
-        'fund_transfer_date' => 'getFundTransferDate',
-        'trace_id' => 'getTraceId',
-        'account_tail' => 'getAccountTail',
-        'beginning_balance' => 'getBeginningBalance',
-        'financial_event_group_start' => 'getFinancialEventGroupStart',
-        'financial_event_group_end' => 'getFinancialEventGroupEnd'
+        'financialEventGroupId' => 'getFinancialEventGroupId',
+        'processingStatus' => 'getProcessingStatus',
+        'fundTransferStatus' => 'getFundTransferStatus',
+        'originalTotal' => 'getOriginalTotal',
+        'convertedTotal' => 'getConvertedTotal',
+        'fundTransferDate' => 'getFundTransferDate',
+        'traceId' => 'getTraceId',
+        'accountTail' => 'getAccountTail',
+        'beginningBalance' => 'getBeginningBalance',
+        'financialEventGroupStart' => 'getFinancialEventGroupStart',
+        'financialEventGroupEnd' => 'getFinancialEventGroupEnd'
     ];
 
     /**
@@ -234,17 +234,17 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['financial_event_group_id'] = $data['financial_event_group_id'] ?? null;
-        $this->container['processing_status'] = $data['processing_status'] ?? null;
-        $this->container['fund_transfer_status'] = $data['fund_transfer_status'] ?? null;
-        $this->container['original_total'] = $data['original_total'] ?? null;
-        $this->container['converted_total'] = $data['converted_total'] ?? null;
-        $this->container['fund_transfer_date'] = $data['fund_transfer_date'] ?? null;
-        $this->container['trace_id'] = $data['trace_id'] ?? null;
-        $this->container['account_tail'] = $data['account_tail'] ?? null;
-        $this->container['beginning_balance'] = $data['beginning_balance'] ?? null;
-        $this->container['financial_event_group_start'] = $data['financial_event_group_start'] ?? null;
-        $this->container['financial_event_group_end'] = $data['financial_event_group_end'] ?? null;
+        $this->container['financialEventGroupId'] = $data['financialEventGroupId'] ?? null;
+        $this->container['processingStatus'] = $data['processingStatus'] ?? null;
+        $this->container['fundTransferStatus'] = $data['fundTransferStatus'] ?? null;
+        $this->container['originalTotal'] = $data['originalTotal'] ?? null;
+        $this->container['convertedTotal'] = $data['convertedTotal'] ?? null;
+        $this->container['fundTransferDate'] = $data['fundTransferDate'] ?? null;
+        $this->container['traceId'] = $data['traceId'] ?? null;
+        $this->container['accountTail'] = $data['accountTail'] ?? null;
+        $this->container['beginningBalance'] = $data['beginningBalance'] ?? null;
+        $this->container['financialEventGroupStart'] = $data['financialEventGroupStart'] ?? null;
+        $this->container['financialEventGroupEnd'] = $data['financialEventGroupEnd'] ?? null;
     }
 
     /**
@@ -272,265 +272,265 @@ class FinancialEventGroup implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets financial_event_group_id
+     * Gets financialEventGroupId
      *
      * @return string|null
      */
     public function getFinancialEventGroupId()
     {
-        return $this->container['financial_event_group_id'];
+        return $this->container['financialEventGroupId'];
     }
 
     /**
-     * Sets financial_event_group_id
+     * Sets financialEventGroupId
      *
-     * @param string|null $financial_event_group_id A unique identifier for the financial event group.
+     * @param string|null $financialEventGroupId A unique identifier for the financial event group.
      *
      * @return self
      */
-    public function setFinancialEventGroupId($financial_event_group_id)
+    public function setFinancialEventGroupId($financialEventGroupId)
     {
-        $this->container['financial_event_group_id'] = $financial_event_group_id;
+        $this->container['financialEventGroupId'] = $financialEventGroupId;
 
         return $this;
     }
 
     /**
-     * Gets processing_status
+     * Gets processingStatus
      *
      * @return string|null
      */
     public function getProcessingStatus()
     {
-        return $this->container['processing_status'];
+        return $this->container['processingStatus'];
     }
 
     /**
-     * Sets processing_status
+     * Sets processingStatus
      *
-     * @param string|null $processing_status The processing status of the financial event group indicates whether the balance of the financial event group is settled.  Possible values:  * Open  * Closed
+     * @param string|null $processingStatus The processing status of the financial event group indicates whether the balance of the financial event group is settled.  Possible values:  * Open  * Closed
      *
      * @return self
      */
-    public function setProcessingStatus($processing_status)
+    public function setProcessingStatus($processingStatus)
     {
-        $this->container['processing_status'] = $processing_status;
+        $this->container['processingStatus'] = $processingStatus;
 
         return $this;
     }
 
     /**
-     * Gets fund_transfer_status
+     * Gets fundTransferStatus
      *
      * @return string|null
      */
     public function getFundTransferStatus()
     {
-        return $this->container['fund_transfer_status'];
+        return $this->container['fundTransferStatus'];
     }
 
     /**
-     * Sets fund_transfer_status
+     * Sets fundTransferStatus
      *
-     * @param string|null $fund_transfer_status The status of the fund transfer.
+     * @param string|null $fundTransferStatus The status of the fund transfer.
      *
      * @return self
      */
-    public function setFundTransferStatus($fund_transfer_status)
+    public function setFundTransferStatus($fundTransferStatus)
     {
-        $this->container['fund_transfer_status'] = $fund_transfer_status;
+        $this->container['fundTransferStatus'] = $fundTransferStatus;
 
         return $this;
     }
 
     /**
-     * Gets original_total
+     * Gets originalTotal
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getOriginalTotal()
     {
-        return $this->container['original_total'];
+        return $this->container['originalTotal'];
     }
 
     /**
-     * Sets original_total
+     * Sets originalTotal
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $original_total original_total
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $originalTotal originalTotal
      *
      * @return self
      */
-    public function setOriginalTotal($original_total)
+    public function setOriginalTotal($originalTotal)
     {
-        $this->container['original_total'] = $original_total;
+        $this->container['originalTotal'] = $originalTotal;
 
         return $this;
     }
 
     /**
-     * Gets converted_total
+     * Gets convertedTotal
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getConvertedTotal()
     {
-        return $this->container['converted_total'];
+        return $this->container['convertedTotal'];
     }
 
     /**
-     * Sets converted_total
+     * Sets convertedTotal
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $converted_total converted_total
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $convertedTotal convertedTotal
      *
      * @return self
      */
-    public function setConvertedTotal($converted_total)
+    public function setConvertedTotal($convertedTotal)
     {
-        $this->container['converted_total'] = $converted_total;
+        $this->container['convertedTotal'] = $convertedTotal;
 
         return $this;
     }
 
     /**
-     * Gets fund_transfer_date
+     * Gets fundTransferDate
      *
      * @return \DateTime|null
      */
     public function getFundTransferDate()
     {
-        return $this->container['fund_transfer_date'];
+        return $this->container['fundTransferDate'];
     }
 
     /**
-     * Sets fund_transfer_date
+     * Sets fundTransferDate
      *
-     * @param \DateTime|null $fund_transfer_date fund_transfer_date
+     * @param \DateTime|null $fundTransferDate fundTransferDate
      *
      * @return self
      */
-    public function setFundTransferDate($fund_transfer_date)
+    public function setFundTransferDate($fundTransferDate)
     {
-        $this->container['fund_transfer_date'] = $fund_transfer_date;
+        $this->container['fundTransferDate'] = $fundTransferDate;
 
         return $this;
     }
 
     /**
-     * Gets trace_id
+     * Gets traceId
      *
      * @return string|null
      */
     public function getTraceId()
     {
-        return $this->container['trace_id'];
+        return $this->container['traceId'];
     }
 
     /**
-     * Sets trace_id
+     * Sets traceId
      *
-     * @param string|null $trace_id The trace identifier used by sellers to look up transactions externally.
+     * @param string|null $traceId The trace identifier used by sellers to look up transactions externally.
      *
      * @return self
      */
-    public function setTraceId($trace_id)
+    public function setTraceId($traceId)
     {
-        $this->container['trace_id'] = $trace_id;
+        $this->container['traceId'] = $traceId;
 
         return $this;
     }
 
     /**
-     * Gets account_tail
+     * Gets accountTail
      *
      * @return string|null
      */
     public function getAccountTail()
     {
-        return $this->container['account_tail'];
+        return $this->container['accountTail'];
     }
 
     /**
-     * Sets account_tail
+     * Sets accountTail
      *
-     * @param string|null $account_tail The account tail of the payment instrument.
+     * @param string|null $accountTail The account tail of the payment instrument.
      *
      * @return self
      */
-    public function setAccountTail($account_tail)
+    public function setAccountTail($accountTail)
     {
-        $this->container['account_tail'] = $account_tail;
+        $this->container['accountTail'] = $accountTail;
 
         return $this;
     }
 
     /**
-     * Gets beginning_balance
+     * Gets beginningBalance
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getBeginningBalance()
     {
-        return $this->container['beginning_balance'];
+        return $this->container['beginningBalance'];
     }
 
     /**
-     * Sets beginning_balance
+     * Sets beginningBalance
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $beginning_balance beginning_balance
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $beginningBalance beginningBalance
      *
      * @return self
      */
-    public function setBeginningBalance($beginning_balance)
+    public function setBeginningBalance($beginningBalance)
     {
-        $this->container['beginning_balance'] = $beginning_balance;
+        $this->container['beginningBalance'] = $beginningBalance;
 
         return $this;
     }
 
     /**
-     * Gets financial_event_group_start
+     * Gets financialEventGroupStart
      *
      * @return \DateTime|null
      */
     public function getFinancialEventGroupStart()
     {
-        return $this->container['financial_event_group_start'];
+        return $this->container['financialEventGroupStart'];
     }
 
     /**
-     * Sets financial_event_group_start
+     * Sets financialEventGroupStart
      *
-     * @param \DateTime|null $financial_event_group_start financial_event_group_start
+     * @param \DateTime|null $financialEventGroupStart financialEventGroupStart
      *
      * @return self
      */
-    public function setFinancialEventGroupStart($financial_event_group_start)
+    public function setFinancialEventGroupStart($financialEventGroupStart)
     {
-        $this->container['financial_event_group_start'] = $financial_event_group_start;
+        $this->container['financialEventGroupStart'] = $financialEventGroupStart;
 
         return $this;
     }
 
     /**
-     * Gets financial_event_group_end
+     * Gets financialEventGroupEnd
      *
      * @return \DateTime|null
      */
     public function getFinancialEventGroupEnd()
     {
-        return $this->container['financial_event_group_end'];
+        return $this->container['financialEventGroupEnd'];
     }
 
     /**
-     * Sets financial_event_group_end
+     * Sets financialEventGroupEnd
      *
-     * @param \DateTime|null $financial_event_group_end financial_event_group_end
+     * @param \DateTime|null $financialEventGroupEnd financialEventGroupEnd
      *
      * @return self
      */
-    public function setFinancialEventGroupEnd($financial_event_group_end)
+    public function setFinancialEventGroupEnd($financialEventGroupEnd)
     {
-        $this->container['financial_event_group_end'] = $financial_event_group_end;
+        $this->container['financialEventGroupEnd'] = $financialEventGroupEnd;
 
         return $this;
     }

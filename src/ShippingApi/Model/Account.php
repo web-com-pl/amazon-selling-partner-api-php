@@ -62,7 +62,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_id' => 'string'
+        'accountId' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'account_id' => null
+        'accountId' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'account_id' => 'accountId'
+        'accountId' => 'accountId'
     ];
 
     /**
@@ -112,7 +112,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'account_id' => 'setAccountId'
+        'accountId' => 'setAccountId'
     ];
 
     /**
@@ -121,7 +121,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'account_id' => 'getAccountId'
+        'accountId' => 'getAccountId'
     ];
 
     /**
@@ -184,7 +184,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['accountId'] = $data['accountId'] ?? null;
     }
 
     /**
@@ -196,11 +196,11 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['account_id'] === null) {
-            $invalidProperties[] = "'account_id' can't be null";
+        if ($this->container['accountId'] === null) {
+            $invalidProperties[] = "'accountId' can't be null";
         }
-        if ((mb_strlen($this->container['account_id']) > 10)) {
-            $invalidProperties[] = "invalid value for 'account_id', the character length must be smaller than or equal to 10.";
+        if ((mb_strlen($this->container['accountId']) > 10)) {
+            $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 10.";
         }
 
         return $invalidProperties;
@@ -219,29 +219,29 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets account_id
+     * Gets accountId
      *
      * @return string
      */
     public function getAccountId()
     {
-        return $this->container['account_id'];
+        return $this->container['accountId'];
     }
 
     /**
-     * Sets account_id
+     * Sets accountId
      *
-     * @param string $account_id This is the Amazon Shipping account id generated during the Amazon Shipping onboarding process.
+     * @param string $accountId This is the Amazon Shipping account id generated during the Amazon Shipping onboarding process.
      *
      * @return self
      */
-    public function setAccountId($account_id)
+    public function setAccountId($accountId)
     {
-        if ((mb_strlen($account_id) > 10)) {
-            throw new \InvalidArgumentException('invalid length for $account_id when calling Account., must be smaller than or equal to 10.');
+        if ((mb_strlen($accountId) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $accountId when calling Account., must be smaller than or equal to 10.');
         }
 
-        $this->container['account_id'] = $account_id;
+        $this->container['accountId'] = $accountId;
 
         return $this;
     }

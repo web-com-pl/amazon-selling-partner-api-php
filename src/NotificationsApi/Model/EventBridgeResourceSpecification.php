@@ -63,7 +63,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPITypes = [
         'region' => 'string',
-        'account_id' => 'string'
+        'accountId' => 'string'
     ];
 
     /**
@@ -75,7 +75,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPIFormats = [
         'region' => null,
-        'account_id' => null
+        'accountId' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
      */
     protected static $attributeMap = [
         'region' => 'region',
-        'account_id' => 'accountId'
+        'accountId' => 'accountId'
     ];
 
     /**
@@ -116,7 +116,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
      */
     protected static $setters = [
         'region' => 'setRegion',
-        'account_id' => 'setAccountId'
+        'accountId' => 'setAccountId'
     ];
 
     /**
@@ -126,7 +126,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
      */
     protected static $getters = [
         'region' => 'getRegion',
-        'account_id' => 'getAccountId'
+        'accountId' => 'getAccountId'
     ];
 
     /**
@@ -190,7 +190,7 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
     public function __construct(array $data = null)
     {
         $this->container['region'] = $data['region'] ?? null;
-        $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['accountId'] = $data['accountId'] ?? null;
     }
 
     /**
@@ -205,8 +205,8 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
-        if ($this->container['account_id'] === null) {
-            $invalidProperties[] = "'account_id' can't be null";
+        if ($this->container['accountId'] === null) {
+            $invalidProperties[] = "'accountId' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,25 +248,25 @@ class EventBridgeResourceSpecification implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets account_id
+     * Gets accountId
      *
      * @return string
      */
     public function getAccountId()
     {
-        return $this->container['account_id'];
+        return $this->container['accountId'];
     }
 
     /**
-     * Sets account_id
+     * Sets accountId
      *
-     * @param string $account_id The identifier for the AWS account that is responsible for charges related to receiving notifications.
+     * @param string $accountId The identifier for the AWS account that is responsible for charges related to receiving notifications.
      *
      * @return self
      */
-    public function setAccountId($account_id)
+    public function setAccountId($accountId)
     {
-        $this->container['account_id'] = $account_id;
+        $this->container['accountId'] = $accountId;
 
         return $this;
     }

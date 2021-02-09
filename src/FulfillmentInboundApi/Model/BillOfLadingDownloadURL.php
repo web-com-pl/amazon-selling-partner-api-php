@@ -61,7 +61,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'download_url' => 'string'
+        'downloadURL' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'download_url' => null
+        'downloadURL' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'download_url' => 'DownloadURL'
+        'downloadURL' => 'DownloadURL'
     ];
 
     /**
@@ -111,7 +111,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'download_url' => 'setDownloadUrl'
+        'downloadURL' => 'setDownloadURL'
     ];
 
     /**
@@ -120,7 +120,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'download_url' => 'getDownloadUrl'
+        'downloadURL' => 'getDownloadURL'
     ];
 
     /**
@@ -183,7 +183,7 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['download_url'] = $data['download_url'] ?? null;
+        $this->container['downloadURL'] = $data['downloadURL'] ?? null;
     }
 
     /**
@@ -211,25 +211,25 @@ class BillOfLadingDownloadURL implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets download_url
+     * Gets downloadURL
      *
      * @return string|null
      */
-    public function getDownloadUrl()
+    public function getDownloadURL()
     {
-        return $this->container['download_url'];
+        return $this->container['downloadURL'];
     }
 
     /**
-     * Sets download_url
+     * Sets downloadURL
      *
-     * @param string|null $download_url URL to download the bill of lading for the package. Note: The URL will only be valid for 15 seconds
+     * @param string|null $downloadURL URL to download the bill of lading for the package. Note: The URL will only be valid for 15 seconds
      *
      * @return self
      */
-    public function setDownloadUrl($download_url)
+    public function setDownloadURL($downloadURL)
     {
-        $this->container['download_url'] = $download_url;
+        $this->container['downloadURL'] = $downloadURL;
 
         return $this;
     }

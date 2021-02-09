@@ -62,9 +62,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_charge' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
-        'billable_weight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
-        'service_type' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
+        'totalCharge' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
+        'billableWeight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
+        'serviceType' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
         'promise' => '\Webcom\Amazon\Rest\ShippingApi\Model\ShippingPromiseSet'
     ];
 
@@ -76,9 +76,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_charge' => null,
-        'billable_weight' => null,
-        'service_type' => null,
+        'totalCharge' => null,
+        'billableWeight' => null,
+        'serviceType' => null,
         'promise' => null
     ];
 
@@ -109,9 +109,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_charge' => 'totalCharge',
-        'billable_weight' => 'billableWeight',
-        'service_type' => 'serviceType',
+        'totalCharge' => 'totalCharge',
+        'billableWeight' => 'billableWeight',
+        'serviceType' => 'serviceType',
         'promise' => 'promise'
     ];
 
@@ -121,9 +121,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_charge' => 'setTotalCharge',
-        'billable_weight' => 'setBillableWeight',
-        'service_type' => 'setServiceType',
+        'totalCharge' => 'setTotalCharge',
+        'billableWeight' => 'setBillableWeight',
+        'serviceType' => 'setServiceType',
         'promise' => 'setPromise'
     ];
 
@@ -133,9 +133,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_charge' => 'getTotalCharge',
-        'billable_weight' => 'getBillableWeight',
-        'service_type' => 'getServiceType',
+        'totalCharge' => 'getTotalCharge',
+        'billableWeight' => 'getBillableWeight',
+        'serviceType' => 'getServiceType',
         'promise' => 'getPromise'
     ];
 
@@ -199,9 +199,9 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_charge'] = $data['total_charge'] ?? null;
-        $this->container['billable_weight'] = $data['billable_weight'] ?? null;
-        $this->container['service_type'] = $data['service_type'] ?? null;
+        $this->container['totalCharge'] = $data['totalCharge'] ?? null;
+        $this->container['billableWeight'] = $data['billableWeight'] ?? null;
+        $this->container['serviceType'] = $data['serviceType'] ?? null;
         $this->container['promise'] = $data['promise'] ?? null;
     }
 
@@ -214,14 +214,14 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['total_charge'] === null) {
-            $invalidProperties[] = "'total_charge' can't be null";
+        if ($this->container['totalCharge'] === null) {
+            $invalidProperties[] = "'totalCharge' can't be null";
         }
-        if ($this->container['billable_weight'] === null) {
-            $invalidProperties[] = "'billable_weight' can't be null";
+        if ($this->container['billableWeight'] === null) {
+            $invalidProperties[] = "'billableWeight' can't be null";
         }
-        if ($this->container['service_type'] === null) {
-            $invalidProperties[] = "'service_type' can't be null";
+        if ($this->container['serviceType'] === null) {
+            $invalidProperties[] = "'serviceType' can't be null";
         }
         if ($this->container['promise'] === null) {
             $invalidProperties[] = "'promise' can't be null";
@@ -242,73 +242,73 @@ class ServiceRate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_charge
+     * Gets totalCharge
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Currency
      */
     public function getTotalCharge()
     {
-        return $this->container['total_charge'];
+        return $this->container['totalCharge'];
     }
 
     /**
-     * Sets total_charge
+     * Sets totalCharge
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency $total_charge total_charge
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency $totalCharge totalCharge
      *
      * @return self
      */
-    public function setTotalCharge($total_charge)
+    public function setTotalCharge($totalCharge)
     {
-        $this->container['total_charge'] = $total_charge;
+        $this->container['totalCharge'] = $totalCharge;
 
         return $this;
     }
 
     /**
-     * Gets billable_weight
+     * Gets billableWeight
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Weight
      */
     public function getBillableWeight()
     {
-        return $this->container['billable_weight'];
+        return $this->container['billableWeight'];
     }
 
     /**
-     * Sets billable_weight
+     * Sets billableWeight
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight $billable_weight billable_weight
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight $billableWeight billableWeight
      *
      * @return self
      */
-    public function setBillableWeight($billable_weight)
+    public function setBillableWeight($billableWeight)
     {
-        $this->container['billable_weight'] = $billable_weight;
+        $this->container['billableWeight'] = $billableWeight;
 
         return $this;
     }
 
     /**
-     * Gets service_type
+     * Gets serviceType
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType
      */
     public function getServiceType()
     {
-        return $this->container['service_type'];
+        return $this->container['serviceType'];
     }
 
     /**
-     * Sets service_type
+     * Sets serviceType
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType $service_type service_type
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType $serviceType serviceType
      *
      * @return self
      */
-    public function setServiceType($service_type)
+    public function setServiceType($serviceType)
     {
-        $this->container['service_type'] = $service_type;
+        $this->container['serviceType'] = $serviceType;
 
         return $this;
     }

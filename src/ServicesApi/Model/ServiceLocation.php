@@ -62,7 +62,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'service_location_type' => 'string',
+        'serviceLocationType' => 'string',
         'address' => '\Webcom\Amazon\Rest\ServicesApi\Model\Address'
     ];
 
@@ -74,7 +74,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'service_location_type' => null,
+        'serviceLocationType' => null,
         'address' => null
     ];
 
@@ -105,7 +105,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'service_location_type' => 'serviceLocationType',
+        'serviceLocationType' => 'serviceLocationType',
         'address' => 'address'
     ];
 
@@ -115,7 +115,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'service_location_type' => 'setServiceLocationType',
+        'serviceLocationType' => 'setServiceLocationType',
         'address' => 'setAddress'
     ];
 
@@ -125,7 +125,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'service_location_type' => 'getServiceLocationType',
+        'serviceLocationType' => 'getServiceLocationType',
         'address' => 'getAddress'
     ];
 
@@ -206,7 +206,7 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['service_location_type'] = $data['service_location_type'] ?? null;
+        $this->container['serviceLocationType'] = $data['serviceLocationType'] ?? null;
         $this->container['address'] = $data['address'] ?? null;
     }
 
@@ -220,10 +220,10 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getServiceLocationTypeAllowableValues();
-        if (!is_null($this->container['service_location_type']) && !in_array($this->container['service_location_type'], $allowedValues, true)) {
+        if (!is_null($this->container['serviceLocationType']) && !in_array($this->container['serviceLocationType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'service_location_type', must be one of '%s'",
-                $this->container['service_location_type'],
+                "invalid value '%s' for 'serviceLocationType', must be one of '%s'",
+                $this->container['serviceLocationType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -244,35 +244,35 @@ class ServiceLocation implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets service_location_type
+     * Gets serviceLocationType
      *
      * @return string|null
      */
     public function getServiceLocationType()
     {
-        return $this->container['service_location_type'];
+        return $this->container['serviceLocationType'];
     }
 
     /**
-     * Sets service_location_type
+     * Sets serviceLocationType
      *
-     * @param string|null $service_location_type The location of the service job.
+     * @param string|null $serviceLocationType The location of the service job.
      *
      * @return self
      */
-    public function setServiceLocationType($service_location_type)
+    public function setServiceLocationType($serviceLocationType)
     {
         $allowedValues = $this->getServiceLocationTypeAllowableValues();
-        if (!is_null($service_location_type) && !in_array($service_location_type, $allowedValues, true)) {
+        if (!is_null($serviceLocationType) && !in_array($serviceLocationType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'service_location_type', must be one of '%s'",
-                    $service_location_type,
+                    "Invalid value '%s' for 'serviceLocationType', must be one of '%s'",
+                    $serviceLocationType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['service_location_type'] = $service_location_type;
+        $this->container['serviceLocationType'] = $serviceLocationType;
 
         return $this;
     }

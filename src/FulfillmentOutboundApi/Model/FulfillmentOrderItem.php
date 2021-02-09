@@ -62,20 +62,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
+        'sellerSku' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
         'quantity' => 'int',
-        'gift_message' => 'string',
-        'displayable_comment' => 'string',
-        'fulfillment_network_sku' => 'string',
-        'order_item_disposition' => 'string',
-        'cancelled_quantity' => 'int',
-        'unfulfillable_quantity' => 'int',
-        'estimated_ship_date' => '\DateTime',
-        'estimated_arrival_date' => '\DateTime',
-        'per_unit_price' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'per_unit_tax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'per_unit_declared_value' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
+        'giftMessage' => 'string',
+        'displayableComment' => 'string',
+        'fulfillmentNetworkSku' => 'string',
+        'orderItemDisposition' => 'string',
+        'cancelledQuantity' => 'int',
+        'unfulfillableQuantity' => 'int',
+        'estimatedShipDate' => '\DateTime',
+        'estimatedArrivalDate' => '\DateTime',
+        'perUnitPrice' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'perUnitTax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'perUnitDeclaredValue' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
     ];
 
     /**
@@ -86,20 +86,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'seller_fulfillment_order_item_id' => null,
+        'sellerSku' => null,
+        'sellerFulfillmentOrderItemId' => null,
         'quantity' => 'int32',
-        'gift_message' => null,
-        'displayable_comment' => null,
-        'fulfillment_network_sku' => null,
-        'order_item_disposition' => null,
-        'cancelled_quantity' => 'int32',
-        'unfulfillable_quantity' => 'int32',
-        'estimated_ship_date' => 'date-time',
-        'estimated_arrival_date' => 'date-time',
-        'per_unit_price' => null,
-        'per_unit_tax' => null,
-        'per_unit_declared_value' => null
+        'giftMessage' => null,
+        'displayableComment' => null,
+        'fulfillmentNetworkSku' => null,
+        'orderItemDisposition' => null,
+        'cancelledQuantity' => 'int32',
+        'unfulfillableQuantity' => 'int32',
+        'estimatedShipDate' => 'date-time',
+        'estimatedArrivalDate' => 'date-time',
+        'perUnitPrice' => null,
+        'perUnitTax' => null,
+        'perUnitDeclaredValue' => null
     ];
 
     /**
@@ -129,20 +129,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
+        'sellerSku' => 'sellerSku',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
         'quantity' => 'quantity',
-        'gift_message' => 'giftMessage',
-        'displayable_comment' => 'displayableComment',
-        'fulfillment_network_sku' => 'fulfillmentNetworkSku',
-        'order_item_disposition' => 'orderItemDisposition',
-        'cancelled_quantity' => 'cancelledQuantity',
-        'unfulfillable_quantity' => 'unfulfillableQuantity',
-        'estimated_ship_date' => 'estimatedShipDate',
-        'estimated_arrival_date' => 'estimatedArrivalDate',
-        'per_unit_price' => 'perUnitPrice',
-        'per_unit_tax' => 'perUnitTax',
-        'per_unit_declared_value' => 'perUnitDeclaredValue'
+        'giftMessage' => 'giftMessage',
+        'displayableComment' => 'displayableComment',
+        'fulfillmentNetworkSku' => 'fulfillmentNetworkSku',
+        'orderItemDisposition' => 'orderItemDisposition',
+        'cancelledQuantity' => 'cancelledQuantity',
+        'unfulfillableQuantity' => 'unfulfillableQuantity',
+        'estimatedShipDate' => 'estimatedShipDate',
+        'estimatedArrivalDate' => 'estimatedArrivalDate',
+        'perUnitPrice' => 'perUnitPrice',
+        'perUnitTax' => 'perUnitTax',
+        'perUnitDeclaredValue' => 'perUnitDeclaredValue'
     ];
 
     /**
@@ -151,20 +151,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
+        'sellerSku' => 'setSellerSku',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
         'quantity' => 'setQuantity',
-        'gift_message' => 'setGiftMessage',
-        'displayable_comment' => 'setDisplayableComment',
-        'fulfillment_network_sku' => 'setFulfillmentNetworkSku',
-        'order_item_disposition' => 'setOrderItemDisposition',
-        'cancelled_quantity' => 'setCancelledQuantity',
-        'unfulfillable_quantity' => 'setUnfulfillableQuantity',
-        'estimated_ship_date' => 'setEstimatedShipDate',
-        'estimated_arrival_date' => 'setEstimatedArrivalDate',
-        'per_unit_price' => 'setPerUnitPrice',
-        'per_unit_tax' => 'setPerUnitTax',
-        'per_unit_declared_value' => 'setPerUnitDeclaredValue'
+        'giftMessage' => 'setGiftMessage',
+        'displayableComment' => 'setDisplayableComment',
+        'fulfillmentNetworkSku' => 'setFulfillmentNetworkSku',
+        'orderItemDisposition' => 'setOrderItemDisposition',
+        'cancelledQuantity' => 'setCancelledQuantity',
+        'unfulfillableQuantity' => 'setUnfulfillableQuantity',
+        'estimatedShipDate' => 'setEstimatedShipDate',
+        'estimatedArrivalDate' => 'setEstimatedArrivalDate',
+        'perUnitPrice' => 'setPerUnitPrice',
+        'perUnitTax' => 'setPerUnitTax',
+        'perUnitDeclaredValue' => 'setPerUnitDeclaredValue'
     ];
 
     /**
@@ -173,20 +173,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
+        'sellerSku' => 'getSellerSku',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
         'quantity' => 'getQuantity',
-        'gift_message' => 'getGiftMessage',
-        'displayable_comment' => 'getDisplayableComment',
-        'fulfillment_network_sku' => 'getFulfillmentNetworkSku',
-        'order_item_disposition' => 'getOrderItemDisposition',
-        'cancelled_quantity' => 'getCancelledQuantity',
-        'unfulfillable_quantity' => 'getUnfulfillableQuantity',
-        'estimated_ship_date' => 'getEstimatedShipDate',
-        'estimated_arrival_date' => 'getEstimatedArrivalDate',
-        'per_unit_price' => 'getPerUnitPrice',
-        'per_unit_tax' => 'getPerUnitTax',
-        'per_unit_declared_value' => 'getPerUnitDeclaredValue'
+        'giftMessage' => 'getGiftMessage',
+        'displayableComment' => 'getDisplayableComment',
+        'fulfillmentNetworkSku' => 'getFulfillmentNetworkSku',
+        'orderItemDisposition' => 'getOrderItemDisposition',
+        'cancelledQuantity' => 'getCancelledQuantity',
+        'unfulfillableQuantity' => 'getUnfulfillableQuantity',
+        'estimatedShipDate' => 'getEstimatedShipDate',
+        'estimatedArrivalDate' => 'getEstimatedArrivalDate',
+        'perUnitPrice' => 'getPerUnitPrice',
+        'perUnitTax' => 'getPerUnitTax',
+        'perUnitDeclaredValue' => 'getPerUnitDeclaredValue'
     ];
 
     /**
@@ -249,20 +249,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['gift_message'] = $data['gift_message'] ?? null;
-        $this->container['displayable_comment'] = $data['displayable_comment'] ?? null;
-        $this->container['fulfillment_network_sku'] = $data['fulfillment_network_sku'] ?? null;
-        $this->container['order_item_disposition'] = $data['order_item_disposition'] ?? null;
-        $this->container['cancelled_quantity'] = $data['cancelled_quantity'] ?? null;
-        $this->container['unfulfillable_quantity'] = $data['unfulfillable_quantity'] ?? null;
-        $this->container['estimated_ship_date'] = $data['estimated_ship_date'] ?? null;
-        $this->container['estimated_arrival_date'] = $data['estimated_arrival_date'] ?? null;
-        $this->container['per_unit_price'] = $data['per_unit_price'] ?? null;
-        $this->container['per_unit_tax'] = $data['per_unit_tax'] ?? null;
-        $this->container['per_unit_declared_value'] = $data['per_unit_declared_value'] ?? null;
+        $this->container['giftMessage'] = $data['giftMessage'] ?? null;
+        $this->container['displayableComment'] = $data['displayableComment'] ?? null;
+        $this->container['fulfillmentNetworkSku'] = $data['fulfillmentNetworkSku'] ?? null;
+        $this->container['orderItemDisposition'] = $data['orderItemDisposition'] ?? null;
+        $this->container['cancelledQuantity'] = $data['cancelledQuantity'] ?? null;
+        $this->container['unfulfillableQuantity'] = $data['unfulfillableQuantity'] ?? null;
+        $this->container['estimatedShipDate'] = $data['estimatedShipDate'] ?? null;
+        $this->container['estimatedArrivalDate'] = $data['estimatedArrivalDate'] ?? null;
+        $this->container['perUnitPrice'] = $data['perUnitPrice'] ?? null;
+        $this->container['perUnitTax'] = $data['perUnitTax'] ?? null;
+        $this->container['perUnitDeclaredValue'] = $data['perUnitDeclaredValue'] ?? null;
     }
 
     /**
@@ -274,20 +274,20 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSku'] === null) {
+            $invalidProperties[] = "'sellerSku' can't be null";
         }
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['cancelled_quantity'] === null) {
-            $invalidProperties[] = "'cancelled_quantity' can't be null";
+        if ($this->container['cancelledQuantity'] === null) {
+            $invalidProperties[] = "'cancelledQuantity' can't be null";
         }
-        if ($this->container['unfulfillable_quantity'] === null) {
-            $invalidProperties[] = "'unfulfillable_quantity' can't be null";
+        if ($this->container['unfulfillableQuantity'] === null) {
+            $invalidProperties[] = "'unfulfillableQuantity' can't be null";
         }
         return $invalidProperties;
     }
@@ -305,49 +305,49 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSku The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id A fulfillment order item identifier submitted with a call to the createFulfillmentOrder operation.
+     * @param string $sellerFulfillmentOrderItemId A fulfillment order item identifier submitted with a call to the createFulfillmentOrder operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
@@ -377,265 +377,265 @@ class FulfillmentOrderItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets gift_message
+     * Gets giftMessage
      *
      * @return string|null
      */
     public function getGiftMessage()
     {
-        return $this->container['gift_message'];
+        return $this->container['giftMessage'];
     }
 
     /**
-     * Sets gift_message
+     * Sets giftMessage
      *
-     * @param string|null $gift_message A message to the gift recipient, if applicable.
+     * @param string|null $giftMessage A message to the gift recipient, if applicable.
      *
      * @return self
      */
-    public function setGiftMessage($gift_message)
+    public function setGiftMessage($giftMessage)
     {
-        $this->container['gift_message'] = $gift_message;
+        $this->container['giftMessage'] = $giftMessage;
 
         return $this;
     }
 
     /**
-     * Gets displayable_comment
+     * Gets displayableComment
      *
      * @return string|null
      */
     public function getDisplayableComment()
     {
-        return $this->container['displayable_comment'];
+        return $this->container['displayableComment'];
     }
 
     /**
-     * Sets displayable_comment
+     * Sets displayableComment
      *
-     * @param string|null $displayable_comment Item-specific text that displays in recipient-facing materials such as the outbound shipment packing slip.
+     * @param string|null $displayableComment Item-specific text that displays in recipient-facing materials such as the outbound shipment packing slip.
      *
      * @return self
      */
-    public function setDisplayableComment($displayable_comment)
+    public function setDisplayableComment($displayableComment)
     {
-        $this->container['displayable_comment'] = $displayable_comment;
+        $this->container['displayableComment'] = $displayableComment;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_network_sku
+     * Gets fulfillmentNetworkSku
      *
      * @return string|null
      */
     public function getFulfillmentNetworkSku()
     {
-        return $this->container['fulfillment_network_sku'];
+        return $this->container['fulfillmentNetworkSku'];
     }
 
     /**
-     * Sets fulfillment_network_sku
+     * Sets fulfillmentNetworkSku
      *
-     * @param string|null $fulfillment_network_sku Amazon's fulfillment network SKU of the item.
+     * @param string|null $fulfillmentNetworkSku Amazon's fulfillment network SKU of the item.
      *
      * @return self
      */
-    public function setFulfillmentNetworkSku($fulfillment_network_sku)
+    public function setFulfillmentNetworkSku($fulfillmentNetworkSku)
     {
-        $this->container['fulfillment_network_sku'] = $fulfillment_network_sku;
+        $this->container['fulfillmentNetworkSku'] = $fulfillmentNetworkSku;
 
         return $this;
     }
 
     /**
-     * Gets order_item_disposition
+     * Gets orderItemDisposition
      *
      * @return string|null
      */
     public function getOrderItemDisposition()
     {
-        return $this->container['order_item_disposition'];
+        return $this->container['orderItemDisposition'];
     }
 
     /**
-     * Sets order_item_disposition
+     * Sets orderItemDisposition
      *
-     * @param string|null $order_item_disposition Indicates whether the item is sellable or unsellable.
+     * @param string|null $orderItemDisposition Indicates whether the item is sellable or unsellable.
      *
      * @return self
      */
-    public function setOrderItemDisposition($order_item_disposition)
+    public function setOrderItemDisposition($orderItemDisposition)
     {
-        $this->container['order_item_disposition'] = $order_item_disposition;
+        $this->container['orderItemDisposition'] = $orderItemDisposition;
 
         return $this;
     }
 
     /**
-     * Gets cancelled_quantity
+     * Gets cancelledQuantity
      *
      * @return int
      */
     public function getCancelledQuantity()
     {
-        return $this->container['cancelled_quantity'];
+        return $this->container['cancelledQuantity'];
     }
 
     /**
-     * Sets cancelled_quantity
+     * Sets cancelledQuantity
      *
-     * @param int $cancelled_quantity The item quantity.
+     * @param int $cancelledQuantity The item quantity.
      *
      * @return self
      */
-    public function setCancelledQuantity($cancelled_quantity)
+    public function setCancelledQuantity($cancelledQuantity)
     {
-        $this->container['cancelled_quantity'] = $cancelled_quantity;
+        $this->container['cancelledQuantity'] = $cancelledQuantity;
 
         return $this;
     }
 
     /**
-     * Gets unfulfillable_quantity
+     * Gets unfulfillableQuantity
      *
      * @return int
      */
     public function getUnfulfillableQuantity()
     {
-        return $this->container['unfulfillable_quantity'];
+        return $this->container['unfulfillableQuantity'];
     }
 
     /**
-     * Sets unfulfillable_quantity
+     * Sets unfulfillableQuantity
      *
-     * @param int $unfulfillable_quantity The item quantity.
+     * @param int $unfulfillableQuantity The item quantity.
      *
      * @return self
      */
-    public function setUnfulfillableQuantity($unfulfillable_quantity)
+    public function setUnfulfillableQuantity($unfulfillableQuantity)
     {
-        $this->container['unfulfillable_quantity'] = $unfulfillable_quantity;
+        $this->container['unfulfillableQuantity'] = $unfulfillableQuantity;
 
         return $this;
     }
 
     /**
-     * Gets estimated_ship_date
+     * Gets estimatedShipDate
      *
      * @return \DateTime|null
      */
     public function getEstimatedShipDate()
     {
-        return $this->container['estimated_ship_date'];
+        return $this->container['estimatedShipDate'];
     }
 
     /**
-     * Sets estimated_ship_date
+     * Sets estimatedShipDate
      *
-     * @param \DateTime|null $estimated_ship_date estimated_ship_date
+     * @param \DateTime|null $estimatedShipDate estimatedShipDate
      *
      * @return self
      */
-    public function setEstimatedShipDate($estimated_ship_date)
+    public function setEstimatedShipDate($estimatedShipDate)
     {
-        $this->container['estimated_ship_date'] = $estimated_ship_date;
+        $this->container['estimatedShipDate'] = $estimatedShipDate;
 
         return $this;
     }
 
     /**
-     * Gets estimated_arrival_date
+     * Gets estimatedArrivalDate
      *
      * @return \DateTime|null
      */
     public function getEstimatedArrivalDate()
     {
-        return $this->container['estimated_arrival_date'];
+        return $this->container['estimatedArrivalDate'];
     }
 
     /**
-     * Sets estimated_arrival_date
+     * Sets estimatedArrivalDate
      *
-     * @param \DateTime|null $estimated_arrival_date estimated_arrival_date
+     * @param \DateTime|null $estimatedArrivalDate estimatedArrivalDate
      *
      * @return self
      */
-    public function setEstimatedArrivalDate($estimated_arrival_date)
+    public function setEstimatedArrivalDate($estimatedArrivalDate)
     {
-        $this->container['estimated_arrival_date'] = $estimated_arrival_date;
+        $this->container['estimatedArrivalDate'] = $estimatedArrivalDate;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_price
+     * Gets perUnitPrice
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitPrice()
     {
-        return $this->container['per_unit_price'];
+        return $this->container['perUnitPrice'];
     }
 
     /**
-     * Sets per_unit_price
+     * Sets perUnitPrice
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_price per_unit_price
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitPrice perUnitPrice
      *
      * @return self
      */
-    public function setPerUnitPrice($per_unit_price)
+    public function setPerUnitPrice($perUnitPrice)
     {
-        $this->container['per_unit_price'] = $per_unit_price;
+        $this->container['perUnitPrice'] = $perUnitPrice;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_tax
+     * Gets perUnitTax
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitTax()
     {
-        return $this->container['per_unit_tax'];
+        return $this->container['perUnitTax'];
     }
 
     /**
-     * Sets per_unit_tax
+     * Sets perUnitTax
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_tax per_unit_tax
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitTax perUnitTax
      *
      * @return self
      */
-    public function setPerUnitTax($per_unit_tax)
+    public function setPerUnitTax($perUnitTax)
     {
-        $this->container['per_unit_tax'] = $per_unit_tax;
+        $this->container['perUnitTax'] = $perUnitTax;
 
         return $this;
     }
 
     /**
-     * Gets per_unit_declared_value
+     * Gets perUnitDeclaredValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getPerUnitDeclaredValue()
     {
-        return $this->container['per_unit_declared_value'];
+        return $this->container['perUnitDeclaredValue'];
     }
 
     /**
-     * Sets per_unit_declared_value
+     * Sets perUnitDeclaredValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $per_unit_declared_value per_unit_declared_value
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $perUnitDeclaredValue perUnitDeclaredValue
      *
      * @return self
      */
-    public function setPerUnitDeclaredValue($per_unit_declared_value)
+    public function setPerUnitDeclaredValue($perUnitDeclaredValue)
     {
-        $this->container['per_unit_declared_value'] = $per_unit_declared_value;
+        $this->container['perUnitDeclaredValue'] = $perUnitDeclaredValue;
 
         return $this;
     }

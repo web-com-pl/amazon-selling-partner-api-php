@@ -63,12 +63,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'contact' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Contact',
-        'box_count' => 'int',
-        'seller_freight_class' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
-        'freight_ready_date' => '\DateTime',
-        'pallet_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]',
-        'total_weight' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight',
-        'seller_declared_value' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
+        'boxCount' => 'int',
+        'sellerFreightClass' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
+        'freightReadyDate' => '\DateTime',
+        'palletList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]',
+        'totalWeight' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight',
+        'sellerDeclaredValue' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
     ];
 
     /**
@@ -80,12 +80,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'contact' => null,
-        'box_count' => 'int64',
-        'seller_freight_class' => null,
-        'freight_ready_date' => 'date',
-        'pallet_list' => null,
-        'total_weight' => null,
-        'seller_declared_value' => null
+        'boxCount' => 'int64',
+        'sellerFreightClass' => null,
+        'freightReadyDate' => 'date',
+        'palletList' => null,
+        'totalWeight' => null,
+        'sellerDeclaredValue' => null
     ];
 
     /**
@@ -116,12 +116,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'contact' => 'Contact',
-        'box_count' => 'BoxCount',
-        'seller_freight_class' => 'SellerFreightClass',
-        'freight_ready_date' => 'FreightReadyDate',
-        'pallet_list' => 'PalletList',
-        'total_weight' => 'TotalWeight',
-        'seller_declared_value' => 'SellerDeclaredValue'
+        'boxCount' => 'BoxCount',
+        'sellerFreightClass' => 'SellerFreightClass',
+        'freightReadyDate' => 'FreightReadyDate',
+        'palletList' => 'PalletList',
+        'totalWeight' => 'TotalWeight',
+        'sellerDeclaredValue' => 'SellerDeclaredValue'
     ];
 
     /**
@@ -131,12 +131,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'contact' => 'setContact',
-        'box_count' => 'setBoxCount',
-        'seller_freight_class' => 'setSellerFreightClass',
-        'freight_ready_date' => 'setFreightReadyDate',
-        'pallet_list' => 'setPalletList',
-        'total_weight' => 'setTotalWeight',
-        'seller_declared_value' => 'setSellerDeclaredValue'
+        'boxCount' => 'setBoxCount',
+        'sellerFreightClass' => 'setSellerFreightClass',
+        'freightReadyDate' => 'setFreightReadyDate',
+        'palletList' => 'setPalletList',
+        'totalWeight' => 'setTotalWeight',
+        'sellerDeclaredValue' => 'setSellerDeclaredValue'
     ];
 
     /**
@@ -146,12 +146,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'contact' => 'getContact',
-        'box_count' => 'getBoxCount',
-        'seller_freight_class' => 'getSellerFreightClass',
-        'freight_ready_date' => 'getFreightReadyDate',
-        'pallet_list' => 'getPalletList',
-        'total_weight' => 'getTotalWeight',
-        'seller_declared_value' => 'getSellerDeclaredValue'
+        'boxCount' => 'getBoxCount',
+        'sellerFreightClass' => 'getSellerFreightClass',
+        'freightReadyDate' => 'getFreightReadyDate',
+        'palletList' => 'getPalletList',
+        'totalWeight' => 'getTotalWeight',
+        'sellerDeclaredValue' => 'getSellerDeclaredValue'
     ];
 
     /**
@@ -215,12 +215,12 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(array $data = null)
     {
         $this->container['contact'] = $data['contact'] ?? null;
-        $this->container['box_count'] = $data['box_count'] ?? null;
-        $this->container['seller_freight_class'] = $data['seller_freight_class'] ?? null;
-        $this->container['freight_ready_date'] = $data['freight_ready_date'] ?? null;
-        $this->container['pallet_list'] = $data['pallet_list'] ?? null;
-        $this->container['total_weight'] = $data['total_weight'] ?? null;
-        $this->container['seller_declared_value'] = $data['seller_declared_value'] ?? null;
+        $this->container['boxCount'] = $data['boxCount'] ?? null;
+        $this->container['sellerFreightClass'] = $data['sellerFreightClass'] ?? null;
+        $this->container['freightReadyDate'] = $data['freightReadyDate'] ?? null;
+        $this->container['palletList'] = $data['palletList'] ?? null;
+        $this->container['totalWeight'] = $data['totalWeight'] ?? null;
+        $this->container['sellerDeclaredValue'] = $data['sellerDeclaredValue'] ?? null;
     }
 
     /**
@@ -272,145 +272,145 @@ class PartneredLtlDataInput implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets box_count
+     * Gets boxCount
      *
      * @return int|null
      */
     public function getBoxCount()
     {
-        return $this->container['box_count'];
+        return $this->container['boxCount'];
     }
 
     /**
-     * Sets box_count
+     * Sets boxCount
      *
-     * @param int|null $box_count box_count
+     * @param int|null $boxCount boxCount
      *
      * @return self
      */
-    public function setBoxCount($box_count)
+    public function setBoxCount($boxCount)
     {
-        $this->container['box_count'] = $box_count;
+        $this->container['boxCount'] = $boxCount;
 
         return $this;
     }
 
     /**
-     * Gets seller_freight_class
+     * Gets sellerFreightClass
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null
      */
     public function getSellerFreightClass()
     {
-        return $this->container['seller_freight_class'];
+        return $this->container['sellerFreightClass'];
     }
 
     /**
-     * Sets seller_freight_class
+     * Sets sellerFreightClass
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null $seller_freight_class seller_freight_class
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null $sellerFreightClass sellerFreightClass
      *
      * @return self
      */
-    public function setSellerFreightClass($seller_freight_class)
+    public function setSellerFreightClass($sellerFreightClass)
     {
-        $this->container['seller_freight_class'] = $seller_freight_class;
+        $this->container['sellerFreightClass'] = $sellerFreightClass;
 
         return $this;
     }
 
     /**
-     * Gets freight_ready_date
+     * Gets freightReadyDate
      *
      * @return \DateTime|null
      */
     public function getFreightReadyDate()
     {
-        return $this->container['freight_ready_date'];
+        return $this->container['freightReadyDate'];
     }
 
     /**
-     * Sets freight_ready_date
+     * Sets freightReadyDate
      *
-     * @param \DateTime|null $freight_ready_date freight_ready_date
+     * @param \DateTime|null $freightReadyDate freightReadyDate
      *
      * @return self
      */
-    public function setFreightReadyDate($freight_ready_date)
+    public function setFreightReadyDate($freightReadyDate)
     {
-        $this->container['freight_ready_date'] = $freight_ready_date;
+        $this->container['freightReadyDate'] = $freightReadyDate;
 
         return $this;
     }
 
     /**
-     * Gets pallet_list
+     * Gets palletList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]|null
      */
     public function getPalletList()
     {
-        return $this->container['pallet_list'];
+        return $this->container['palletList'];
     }
 
     /**
-     * Sets pallet_list
+     * Sets palletList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]|null $pallet_list A list of pallet information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]|null $palletList A list of pallet information.
      *
      * @return self
      */
-    public function setPalletList($pallet_list)
+    public function setPalletList($palletList)
     {
-        $this->container['pallet_list'] = $pallet_list;
+        $this->container['palletList'] = $palletList;
 
         return $this;
     }
 
     /**
-     * Gets total_weight
+     * Gets totalWeight
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight|null
      */
     public function getTotalWeight()
     {
-        return $this->container['total_weight'];
+        return $this->container['totalWeight'];
     }
 
     /**
-     * Sets total_weight
+     * Sets totalWeight
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight|null $total_weight total_weight
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight|null $totalWeight totalWeight
      *
      * @return self
      */
-    public function setTotalWeight($total_weight)
+    public function setTotalWeight($totalWeight)
     {
-        $this->container['total_weight'] = $total_weight;
+        $this->container['totalWeight'] = $totalWeight;
 
         return $this;
     }
 
     /**
-     * Gets seller_declared_value
+     * Gets sellerDeclaredValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getSellerDeclaredValue()
     {
-        return $this->container['seller_declared_value'];
+        return $this->container['sellerDeclaredValue'];
     }
 
     /**
-     * Sets seller_declared_value
+     * Sets sellerDeclaredValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $seller_declared_value seller_declared_value
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $sellerDeclaredValue sellerDeclaredValue
      *
      * @return self
      */
-    public function setSellerDeclaredValue($seller_declared_value)
+    public function setSellerDeclaredValue($sellerDeclaredValue)
     {
-        $this->container['seller_declared_value'] = $seller_declared_value;
+        $this->container['sellerDeclaredValue'] = $sellerDeclaredValue;
 
         return $this;
     }

@@ -62,10 +62,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'include_packing_slip_with_label' => 'bool',
-        'include_complex_shipping_options' => 'bool',
-        'carrier_will_pick_up' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
-        'delivery_experience' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption'
+        'includePackingSlipWithLabel' => 'bool',
+        'includeComplexShippingOptions' => 'bool',
+        'carrierWillPickUp' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
+        'deliveryExperience' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption'
     ];
 
     /**
@@ -76,10 +76,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'include_packing_slip_with_label' => null,
-        'include_complex_shipping_options' => null,
-        'carrier_will_pick_up' => null,
-        'delivery_experience' => null
+        'includePackingSlipWithLabel' => null,
+        'includeComplexShippingOptions' => null,
+        'carrierWillPickUp' => null,
+        'deliveryExperience' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_packing_slip_with_label' => 'IncludePackingSlipWithLabel',
-        'include_complex_shipping_options' => 'IncludeComplexShippingOptions',
-        'carrier_will_pick_up' => 'CarrierWillPickUp',
-        'delivery_experience' => 'DeliveryExperience'
+        'includePackingSlipWithLabel' => 'IncludePackingSlipWithLabel',
+        'includeComplexShippingOptions' => 'IncludeComplexShippingOptions',
+        'carrierWillPickUp' => 'CarrierWillPickUp',
+        'deliveryExperience' => 'DeliveryExperience'
     ];
 
     /**
@@ -121,10 +121,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'include_packing_slip_with_label' => 'setIncludePackingSlipWithLabel',
-        'include_complex_shipping_options' => 'setIncludeComplexShippingOptions',
-        'carrier_will_pick_up' => 'setCarrierWillPickUp',
-        'delivery_experience' => 'setDeliveryExperience'
+        'includePackingSlipWithLabel' => 'setIncludePackingSlipWithLabel',
+        'includeComplexShippingOptions' => 'setIncludeComplexShippingOptions',
+        'carrierWillPickUp' => 'setCarrierWillPickUp',
+        'deliveryExperience' => 'setDeliveryExperience'
     ];
 
     /**
@@ -133,10 +133,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'include_packing_slip_with_label' => 'getIncludePackingSlipWithLabel',
-        'include_complex_shipping_options' => 'getIncludeComplexShippingOptions',
-        'carrier_will_pick_up' => 'getCarrierWillPickUp',
-        'delivery_experience' => 'getDeliveryExperience'
+        'includePackingSlipWithLabel' => 'getIncludePackingSlipWithLabel',
+        'includeComplexShippingOptions' => 'getIncludeComplexShippingOptions',
+        'carrierWillPickUp' => 'getCarrierWillPickUp',
+        'deliveryExperience' => 'getDeliveryExperience'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_packing_slip_with_label'] = $data['include_packing_slip_with_label'] ?? null;
-        $this->container['include_complex_shipping_options'] = $data['include_complex_shipping_options'] ?? null;
-        $this->container['carrier_will_pick_up'] = $data['carrier_will_pick_up'] ?? null;
-        $this->container['delivery_experience'] = $data['delivery_experience'] ?? null;
+        $this->container['includePackingSlipWithLabel'] = $data['includePackingSlipWithLabel'] ?? null;
+        $this->container['includeComplexShippingOptions'] = $data['includeComplexShippingOptions'] ?? null;
+        $this->container['carrierWillPickUp'] = $data['carrierWillPickUp'] ?? null;
+        $this->container['deliveryExperience'] = $data['deliveryExperience'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class ShippingOfferingFilter implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets include_packing_slip_with_label
+     * Gets includePackingSlipWithLabel
      *
      * @return bool|null
      */
     public function getIncludePackingSlipWithLabel()
     {
-        return $this->container['include_packing_slip_with_label'];
+        return $this->container['includePackingSlipWithLabel'];
     }
 
     /**
-     * Sets include_packing_slip_with_label
+     * Sets includePackingSlipWithLabel
      *
-     * @param bool|null $include_packing_slip_with_label When true, include a packing slip with the label.
+     * @param bool|null $includePackingSlipWithLabel When true, include a packing slip with the label.
      *
      * @return self
      */
-    public function setIncludePackingSlipWithLabel($include_packing_slip_with_label)
+    public function setIncludePackingSlipWithLabel($includePackingSlipWithLabel)
     {
-        $this->container['include_packing_slip_with_label'] = $include_packing_slip_with_label;
+        $this->container['includePackingSlipWithLabel'] = $includePackingSlipWithLabel;
 
         return $this;
     }
 
     /**
-     * Gets include_complex_shipping_options
+     * Gets includeComplexShippingOptions
      *
      * @return bool|null
      */
     public function getIncludeComplexShippingOptions()
     {
-        return $this->container['include_complex_shipping_options'];
+        return $this->container['includeComplexShippingOptions'];
     }
 
     /**
-     * Sets include_complex_shipping_options
+     * Sets includeComplexShippingOptions
      *
-     * @param bool|null $include_complex_shipping_options When true, include complex shipping options.
+     * @param bool|null $includeComplexShippingOptions When true, include complex shipping options.
      *
      * @return self
      */
-    public function setIncludeComplexShippingOptions($include_complex_shipping_options)
+    public function setIncludeComplexShippingOptions($includeComplexShippingOptions)
     {
-        $this->container['include_complex_shipping_options'] = $include_complex_shipping_options;
+        $this->container['includeComplexShippingOptions'] = $includeComplexShippingOptions;
 
         return $this;
     }
 
     /**
-     * Gets carrier_will_pick_up
+     * Gets carrierWillPickUp
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null
      */
     public function getCarrierWillPickUp()
     {
-        return $this->container['carrier_will_pick_up'];
+        return $this->container['carrierWillPickUp'];
     }
 
     /**
-     * Sets carrier_will_pick_up
+     * Sets carrierWillPickUp
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null $carrier_will_pick_up carrier_will_pick_up
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null $carrierWillPickUp carrierWillPickUp
      *
      * @return self
      */
-    public function setCarrierWillPickUp($carrier_will_pick_up)
+    public function setCarrierWillPickUp($carrierWillPickUp)
     {
-        $this->container['carrier_will_pick_up'] = $carrier_will_pick_up;
+        $this->container['carrierWillPickUp'] = $carrierWillPickUp;
 
         return $this;
     }
 
     /**
-     * Gets delivery_experience
+     * Gets deliveryExperience
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption|null
      */
     public function getDeliveryExperience()
     {
-        return $this->container['delivery_experience'];
+        return $this->container['deliveryExperience'];
     }
 
     /**
-     * Sets delivery_experience
+     * Sets deliveryExperience
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption|null $delivery_experience delivery_experience
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceOption|null $deliveryExperience deliveryExperience
      *
      * @return self
      */
-    public function setDeliveryExperience($delivery_experience)
+    public function setDeliveryExperience($deliveryExperience)
     {
-        $this->container['delivery_experience'] = $delivery_experience;
+        $this->container['deliveryExperience'] = $deliveryExperience;
 
         return $this;
     }

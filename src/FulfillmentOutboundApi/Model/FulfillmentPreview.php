@@ -62,17 +62,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipping_speed_category' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
-        'scheduled_delivery_info' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ScheduledDeliveryInfo',
-        'is_fulfillable' => 'bool',
-        'is_cod_capable' => 'bool',
-        'estimated_shipping_weight' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight',
-        'estimated_fees' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Fee[]',
-        'fulfillment_preview_shipments' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewShipment[]',
-        'unfulfillable_preview_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UnfulfillablePreviewItem[]',
-        'order_unfulfillable_reasons' => 'string[]',
-        'marketplace_id' => 'string',
-        'feature_constraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
+        'shippingSpeedCategory' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
+        'scheduledDeliveryInfo' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ScheduledDeliveryInfo',
+        'isFulfillable' => 'bool',
+        'isCODCapable' => 'bool',
+        'estimatedShippingWeight' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight',
+        'estimatedFees' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Fee[]',
+        'fulfillmentPreviewShipments' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewShipment[]',
+        'unfulfillablePreviewItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UnfulfillablePreviewItem[]',
+        'orderUnfulfillableReasons' => 'string[]',
+        'marketplaceId' => 'string',
+        'featureConstraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
     ];
 
     /**
@@ -83,17 +83,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipping_speed_category' => null,
-        'scheduled_delivery_info' => null,
-        'is_fulfillable' => null,
-        'is_cod_capable' => null,
-        'estimated_shipping_weight' => null,
-        'estimated_fees' => null,
-        'fulfillment_preview_shipments' => null,
-        'unfulfillable_preview_items' => null,
-        'order_unfulfillable_reasons' => null,
-        'marketplace_id' => null,
-        'feature_constraints' => null
+        'shippingSpeedCategory' => null,
+        'scheduledDeliveryInfo' => null,
+        'isFulfillable' => null,
+        'isCODCapable' => null,
+        'estimatedShippingWeight' => null,
+        'estimatedFees' => null,
+        'fulfillmentPreviewShipments' => null,
+        'unfulfillablePreviewItems' => null,
+        'orderUnfulfillableReasons' => null,
+        'marketplaceId' => null,
+        'featureConstraints' => null
     ];
 
     /**
@@ -123,17 +123,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipping_speed_category' => 'shippingSpeedCategory',
-        'scheduled_delivery_info' => 'scheduledDeliveryInfo',
-        'is_fulfillable' => 'isFulfillable',
-        'is_cod_capable' => 'isCODCapable',
-        'estimated_shipping_weight' => 'estimatedShippingWeight',
-        'estimated_fees' => 'estimatedFees',
-        'fulfillment_preview_shipments' => 'fulfillmentPreviewShipments',
-        'unfulfillable_preview_items' => 'unfulfillablePreviewItems',
-        'order_unfulfillable_reasons' => 'orderUnfulfillableReasons',
-        'marketplace_id' => 'marketplaceId',
-        'feature_constraints' => 'featureConstraints'
+        'shippingSpeedCategory' => 'shippingSpeedCategory',
+        'scheduledDeliveryInfo' => 'scheduledDeliveryInfo',
+        'isFulfillable' => 'isFulfillable',
+        'isCODCapable' => 'isCODCapable',
+        'estimatedShippingWeight' => 'estimatedShippingWeight',
+        'estimatedFees' => 'estimatedFees',
+        'fulfillmentPreviewShipments' => 'fulfillmentPreviewShipments',
+        'unfulfillablePreviewItems' => 'unfulfillablePreviewItems',
+        'orderUnfulfillableReasons' => 'orderUnfulfillableReasons',
+        'marketplaceId' => 'marketplaceId',
+        'featureConstraints' => 'featureConstraints'
     ];
 
     /**
@@ -142,17 +142,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'shipping_speed_category' => 'setShippingSpeedCategory',
-        'scheduled_delivery_info' => 'setScheduledDeliveryInfo',
-        'is_fulfillable' => 'setIsFulfillable',
-        'is_cod_capable' => 'setIsCodCapable',
-        'estimated_shipping_weight' => 'setEstimatedShippingWeight',
-        'estimated_fees' => 'setEstimatedFees',
-        'fulfillment_preview_shipments' => 'setFulfillmentPreviewShipments',
-        'unfulfillable_preview_items' => 'setUnfulfillablePreviewItems',
-        'order_unfulfillable_reasons' => 'setOrderUnfulfillableReasons',
-        'marketplace_id' => 'setMarketplaceId',
-        'feature_constraints' => 'setFeatureConstraints'
+        'shippingSpeedCategory' => 'setShippingSpeedCategory',
+        'scheduledDeliveryInfo' => 'setScheduledDeliveryInfo',
+        'isFulfillable' => 'setIsFulfillable',
+        'isCODCapable' => 'setIsCODCapable',
+        'estimatedShippingWeight' => 'setEstimatedShippingWeight',
+        'estimatedFees' => 'setEstimatedFees',
+        'fulfillmentPreviewShipments' => 'setFulfillmentPreviewShipments',
+        'unfulfillablePreviewItems' => 'setUnfulfillablePreviewItems',
+        'orderUnfulfillableReasons' => 'setOrderUnfulfillableReasons',
+        'marketplaceId' => 'setMarketplaceId',
+        'featureConstraints' => 'setFeatureConstraints'
     ];
 
     /**
@@ -161,17 +161,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'shipping_speed_category' => 'getShippingSpeedCategory',
-        'scheduled_delivery_info' => 'getScheduledDeliveryInfo',
-        'is_fulfillable' => 'getIsFulfillable',
-        'is_cod_capable' => 'getIsCodCapable',
-        'estimated_shipping_weight' => 'getEstimatedShippingWeight',
-        'estimated_fees' => 'getEstimatedFees',
-        'fulfillment_preview_shipments' => 'getFulfillmentPreviewShipments',
-        'unfulfillable_preview_items' => 'getUnfulfillablePreviewItems',
-        'order_unfulfillable_reasons' => 'getOrderUnfulfillableReasons',
-        'marketplace_id' => 'getMarketplaceId',
-        'feature_constraints' => 'getFeatureConstraints'
+        'shippingSpeedCategory' => 'getShippingSpeedCategory',
+        'scheduledDeliveryInfo' => 'getScheduledDeliveryInfo',
+        'isFulfillable' => 'getIsFulfillable',
+        'isCODCapable' => 'getIsCODCapable',
+        'estimatedShippingWeight' => 'getEstimatedShippingWeight',
+        'estimatedFees' => 'getEstimatedFees',
+        'fulfillmentPreviewShipments' => 'getFulfillmentPreviewShipments',
+        'unfulfillablePreviewItems' => 'getUnfulfillablePreviewItems',
+        'orderUnfulfillableReasons' => 'getOrderUnfulfillableReasons',
+        'marketplaceId' => 'getMarketplaceId',
+        'featureConstraints' => 'getFeatureConstraints'
     ];
 
     /**
@@ -234,17 +234,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipping_speed_category'] = $data['shipping_speed_category'] ?? null;
-        $this->container['scheduled_delivery_info'] = $data['scheduled_delivery_info'] ?? null;
-        $this->container['is_fulfillable'] = $data['is_fulfillable'] ?? null;
-        $this->container['is_cod_capable'] = $data['is_cod_capable'] ?? null;
-        $this->container['estimated_shipping_weight'] = $data['estimated_shipping_weight'] ?? null;
-        $this->container['estimated_fees'] = $data['estimated_fees'] ?? null;
-        $this->container['fulfillment_preview_shipments'] = $data['fulfillment_preview_shipments'] ?? null;
-        $this->container['unfulfillable_preview_items'] = $data['unfulfillable_preview_items'] ?? null;
-        $this->container['order_unfulfillable_reasons'] = $data['order_unfulfillable_reasons'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['feature_constraints'] = $data['feature_constraints'] ?? null;
+        $this->container['shippingSpeedCategory'] = $data['shippingSpeedCategory'] ?? null;
+        $this->container['scheduledDeliveryInfo'] = $data['scheduledDeliveryInfo'] ?? null;
+        $this->container['isFulfillable'] = $data['isFulfillable'] ?? null;
+        $this->container['isCODCapable'] = $data['isCODCapable'] ?? null;
+        $this->container['estimatedShippingWeight'] = $data['estimatedShippingWeight'] ?? null;
+        $this->container['estimatedFees'] = $data['estimatedFees'] ?? null;
+        $this->container['fulfillmentPreviewShipments'] = $data['fulfillmentPreviewShipments'] ?? null;
+        $this->container['unfulfillablePreviewItems'] = $data['unfulfillablePreviewItems'] ?? null;
+        $this->container['orderUnfulfillableReasons'] = $data['orderUnfulfillableReasons'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['featureConstraints'] = $data['featureConstraints'] ?? null;
     }
 
     /**
@@ -256,17 +256,17 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['shipping_speed_category'] === null) {
-            $invalidProperties[] = "'shipping_speed_category' can't be null";
+        if ($this->container['shippingSpeedCategory'] === null) {
+            $invalidProperties[] = "'shippingSpeedCategory' can't be null";
         }
-        if ($this->container['is_fulfillable'] === null) {
-            $invalidProperties[] = "'is_fulfillable' can't be null";
+        if ($this->container['isFulfillable'] === null) {
+            $invalidProperties[] = "'isFulfillable' can't be null";
         }
-        if ($this->container['is_cod_capable'] === null) {
-            $invalidProperties[] = "'is_cod_capable' can't be null";
+        if ($this->container['isCODCapable'] === null) {
+            $invalidProperties[] = "'isCODCapable' can't be null";
         }
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -284,265 +284,265 @@ class FulfillmentPreview implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets shipping_speed_category
+     * Gets shippingSpeedCategory
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory
      */
     public function getShippingSpeedCategory()
     {
-        return $this->container['shipping_speed_category'];
+        return $this->container['shippingSpeedCategory'];
     }
 
     /**
-     * Sets shipping_speed_category
+     * Sets shippingSpeedCategory
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory $shipping_speed_category shipping_speed_category
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory $shippingSpeedCategory shippingSpeedCategory
      *
      * @return self
      */
-    public function setShippingSpeedCategory($shipping_speed_category)
+    public function setShippingSpeedCategory($shippingSpeedCategory)
     {
-        $this->container['shipping_speed_category'] = $shipping_speed_category;
+        $this->container['shippingSpeedCategory'] = $shippingSpeedCategory;
 
         return $this;
     }
 
     /**
-     * Gets scheduled_delivery_info
+     * Gets scheduledDeliveryInfo
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ScheduledDeliveryInfo|null
      */
     public function getScheduledDeliveryInfo()
     {
-        return $this->container['scheduled_delivery_info'];
+        return $this->container['scheduledDeliveryInfo'];
     }
 
     /**
-     * Sets scheduled_delivery_info
+     * Sets scheduledDeliveryInfo
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ScheduledDeliveryInfo|null $scheduled_delivery_info scheduled_delivery_info
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ScheduledDeliveryInfo|null $scheduledDeliveryInfo scheduledDeliveryInfo
      *
      * @return self
      */
-    public function setScheduledDeliveryInfo($scheduled_delivery_info)
+    public function setScheduledDeliveryInfo($scheduledDeliveryInfo)
     {
-        $this->container['scheduled_delivery_info'] = $scheduled_delivery_info;
+        $this->container['scheduledDeliveryInfo'] = $scheduledDeliveryInfo;
 
         return $this;
     }
 
     /**
-     * Gets is_fulfillable
+     * Gets isFulfillable
      *
      * @return bool
      */
     public function getIsFulfillable()
     {
-        return $this->container['is_fulfillable'];
+        return $this->container['isFulfillable'];
     }
 
     /**
-     * Sets is_fulfillable
+     * Sets isFulfillable
      *
-     * @param bool $is_fulfillable When true, this fulfillment order preview is fulfillable.
+     * @param bool $isFulfillable When true, this fulfillment order preview is fulfillable.
      *
      * @return self
      */
-    public function setIsFulfillable($is_fulfillable)
+    public function setIsFulfillable($isFulfillable)
     {
-        $this->container['is_fulfillable'] = $is_fulfillable;
+        $this->container['isFulfillable'] = $isFulfillable;
 
         return $this;
     }
 
     /**
-     * Gets is_cod_capable
+     * Gets isCODCapable
      *
      * @return bool
      */
-    public function getIsCodCapable()
+    public function getIsCODCapable()
     {
-        return $this->container['is_cod_capable'];
+        return $this->container['isCODCapable'];
     }
 
     /**
-     * Sets is_cod_capable
+     * Sets isCODCapable
      *
-     * @param bool $is_cod_capable When true, this fulfillment order preview is for COD (Cash On Delivery).
+     * @param bool $isCODCapable When true, this fulfillment order preview is for COD (Cash On Delivery).
      *
      * @return self
      */
-    public function setIsCodCapable($is_cod_capable)
+    public function setIsCODCapable($isCODCapable)
     {
-        $this->container['is_cod_capable'] = $is_cod_capable;
+        $this->container['isCODCapable'] = $isCODCapable;
 
         return $this;
     }
 
     /**
-     * Gets estimated_shipping_weight
+     * Gets estimatedShippingWeight
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null
      */
     public function getEstimatedShippingWeight()
     {
-        return $this->container['estimated_shipping_weight'];
+        return $this->container['estimatedShippingWeight'];
     }
 
     /**
-     * Sets estimated_shipping_weight
+     * Sets estimatedShippingWeight
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null $estimated_shipping_weight estimated_shipping_weight
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Weight|null $estimatedShippingWeight estimatedShippingWeight
      *
      * @return self
      */
-    public function setEstimatedShippingWeight($estimated_shipping_weight)
+    public function setEstimatedShippingWeight($estimatedShippingWeight)
     {
-        $this->container['estimated_shipping_weight'] = $estimated_shipping_weight;
+        $this->container['estimatedShippingWeight'] = $estimatedShippingWeight;
 
         return $this;
     }
 
     /**
-     * Gets estimated_fees
+     * Gets estimatedFees
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Fee[]|null
      */
     public function getEstimatedFees()
     {
-        return $this->container['estimated_fees'];
+        return $this->container['estimatedFees'];
     }
 
     /**
-     * Sets estimated_fees
+     * Sets estimatedFees
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Fee[]|null $estimated_fees An array of fee type and cost pairs.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Fee[]|null $estimatedFees An array of fee type and cost pairs.
      *
      * @return self
      */
-    public function setEstimatedFees($estimated_fees)
+    public function setEstimatedFees($estimatedFees)
     {
-        $this->container['estimated_fees'] = $estimated_fees;
+        $this->container['estimatedFees'] = $estimatedFees;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_preview_shipments
+     * Gets fulfillmentPreviewShipments
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewShipment[]|null
      */
     public function getFulfillmentPreviewShipments()
     {
-        return $this->container['fulfillment_preview_shipments'];
+        return $this->container['fulfillmentPreviewShipments'];
     }
 
     /**
-     * Sets fulfillment_preview_shipments
+     * Sets fulfillmentPreviewShipments
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewShipment[]|null $fulfillment_preview_shipments An array of fulfillment preview shipment information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPreviewShipment[]|null $fulfillmentPreviewShipments An array of fulfillment preview shipment information.
      *
      * @return self
      */
-    public function setFulfillmentPreviewShipments($fulfillment_preview_shipments)
+    public function setFulfillmentPreviewShipments($fulfillmentPreviewShipments)
     {
-        $this->container['fulfillment_preview_shipments'] = $fulfillment_preview_shipments;
+        $this->container['fulfillmentPreviewShipments'] = $fulfillmentPreviewShipments;
 
         return $this;
     }
 
     /**
-     * Gets unfulfillable_preview_items
+     * Gets unfulfillablePreviewItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UnfulfillablePreviewItem[]|null
      */
     public function getUnfulfillablePreviewItems()
     {
-        return $this->container['unfulfillable_preview_items'];
+        return $this->container['unfulfillablePreviewItems'];
     }
 
     /**
-     * Sets unfulfillable_preview_items
+     * Sets unfulfillablePreviewItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UnfulfillablePreviewItem[]|null $unfulfillable_preview_items An array of unfulfillable preview item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UnfulfillablePreviewItem[]|null $unfulfillablePreviewItems An array of unfulfillable preview item information.
      *
      * @return self
      */
-    public function setUnfulfillablePreviewItems($unfulfillable_preview_items)
+    public function setUnfulfillablePreviewItems($unfulfillablePreviewItems)
     {
-        $this->container['unfulfillable_preview_items'] = $unfulfillable_preview_items;
+        $this->container['unfulfillablePreviewItems'] = $unfulfillablePreviewItems;
 
         return $this;
     }
 
     /**
-     * Gets order_unfulfillable_reasons
+     * Gets orderUnfulfillableReasons
      *
      * @return string[]|null
      */
     public function getOrderUnfulfillableReasons()
     {
-        return $this->container['order_unfulfillable_reasons'];
+        return $this->container['orderUnfulfillableReasons'];
     }
 
     /**
-     * Sets order_unfulfillable_reasons
+     * Sets orderUnfulfillableReasons
      *
-     * @param string[]|null $order_unfulfillable_reasons order_unfulfillable_reasons
+     * @param string[]|null $orderUnfulfillableReasons orderUnfulfillableReasons
      *
      * @return self
      */
-    public function setOrderUnfulfillableReasons($order_unfulfillable_reasons)
+    public function setOrderUnfulfillableReasons($orderUnfulfillableReasons)
     {
-        $this->container['order_unfulfillable_reasons'] = $order_unfulfillable_reasons;
+        $this->container['orderUnfulfillableReasons'] = $orderUnfulfillableReasons;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id The marketplace the fulfillment order is placed against.
+     * @param string $marketplaceId The marketplace the fulfillment order is placed against.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets feature_constraints
+     * Gets featureConstraints
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null
      */
     public function getFeatureConstraints()
     {
-        return $this->container['feature_constraints'];
+        return $this->container['featureConstraints'];
     }
 
     /**
-     * Sets feature_constraints
+     * Sets featureConstraints
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $feature_constraints A list of features and their fulfillment policies to apply to the order.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $featureConstraints A list of features and their fulfillment policies to apply to the order.
      *
      * @return self
      */
-    public function setFeatureConstraints($feature_constraints)
+    public function setFeatureConstraints($featureConstraints)
     {
-        $this->container['feature_constraints'] = $feature_constraints;
+        $this->container['featureConstraints'] = $featureConstraints;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'granularity_type' => 'string',
-        'granularity_id' => 'string'
+        'granularityType' => 'string',
+        'granularityId' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'granularity_type' => null,
-        'granularity_id' => null
+        'granularityType' => null,
+        'granularityId' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'granularity_type' => 'granularityType',
-        'granularity_id' => 'granularityId'
+        'granularityType' => 'granularityType',
+        'granularityId' => 'granularityId'
     ];
 
     /**
@@ -115,8 +115,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'granularity_type' => 'setGranularityType',
-        'granularity_id' => 'setGranularityId'
+        'granularityType' => 'setGranularityType',
+        'granularityId' => 'setGranularityId'
     ];
 
     /**
@@ -125,8 +125,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'granularity_type' => 'getGranularityType',
-        'granularity_id' => 'getGranularityId'
+        'granularityType' => 'getGranularityType',
+        'granularityId' => 'getGranularityId'
     ];
 
     /**
@@ -202,8 +202,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['granularity_type'] = $data['granularity_type'] ?? null;
-        $this->container['granularity_id'] = $data['granularity_id'] ?? null;
+        $this->container['granularityType'] = $data['granularityType'] ?? null;
+        $this->container['granularityId'] = $data['granularityId'] ?? null;
     }
 
     /**
@@ -216,10 +216,10 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getGranularityTypeAllowableValues();
-        if (!is_null($this->container['granularity_type']) && !in_array($this->container['granularity_type'], $allowedValues, true)) {
+        if (!is_null($this->container['granularityType']) && !in_array($this->container['granularityType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'granularity_type', must be one of '%s'",
-                $this->container['granularity_type'],
+                "invalid value '%s' for 'granularityType', must be one of '%s'",
+                $this->container['granularityType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -240,59 +240,59 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets granularity_type
+     * Gets granularityType
      *
      * @return string|null
      */
     public function getGranularityType()
     {
-        return $this->container['granularity_type'];
+        return $this->container['granularityType'];
     }
 
     /**
-     * Sets granularity_type
+     * Sets granularityType
      *
-     * @param string|null $granularity_type The granularity type for the inventory aggregation level.
+     * @param string|null $granularityType The granularity type for the inventory aggregation level.
      *
      * @return self
      */
-    public function setGranularityType($granularity_type)
+    public function setGranularityType($granularityType)
     {
         $allowedValues = $this->getGranularityTypeAllowableValues();
-        if (!is_null($granularity_type) && !in_array($granularity_type, $allowedValues, true)) {
+        if (!is_null($granularityType) && !in_array($granularityType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'granularity_type', must be one of '%s'",
-                    $granularity_type,
+                    "Invalid value '%s' for 'granularityType', must be one of '%s'",
+                    $granularityType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['granularity_type'] = $granularity_type;
+        $this->container['granularityType'] = $granularityType;
 
         return $this;
     }
 
     /**
-     * Gets granularity_id
+     * Gets granularityId
      *
      * @return string|null
      */
     public function getGranularityId()
     {
-        return $this->container['granularity_id'];
+        return $this->container['granularityId'];
     }
 
     /**
-     * Sets granularity_id
+     * Sets granularityId
      *
-     * @param string|null $granularity_id The granularity ID for the specified granularity type. When granularityType is Marketplace, specify the marketplaceId.
+     * @param string|null $granularityId The granularity ID for the specified granularity type. When granularityType is Marketplace, specify the marketplaceId.
      *
      * @return self
      */
-    public function setGranularityId($granularity_id)
+    public function setGranularityId($granularityId)
     {
-        $this->container['granularity_id'] = $granularity_id;
+        $this->container['granularityId'] = $granularityId;
 
         return $this;
     }

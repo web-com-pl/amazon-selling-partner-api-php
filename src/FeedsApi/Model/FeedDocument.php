@@ -61,10 +61,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'feed_document_id' => 'string',
+        'feedDocumentId' => 'string',
         'url' => 'string',
-        'encryption_details' => '\Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails',
-        'compression_algorithm' => 'string'
+        'encryptionDetails' => '\Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails',
+        'compressionAlgorithm' => 'string'
     ];
 
     /**
@@ -75,10 +75,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'feed_document_id' => null,
+        'feedDocumentId' => null,
         'url' => null,
-        'encryption_details' => null,
-        'compression_algorithm' => null
+        'encryptionDetails' => null,
+        'compressionAlgorithm' => null
     ];
 
     /**
@@ -108,10 +108,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_document_id' => 'feedDocumentId',
+        'feedDocumentId' => 'feedDocumentId',
         'url' => 'url',
-        'encryption_details' => 'encryptionDetails',
-        'compression_algorithm' => 'compressionAlgorithm'
+        'encryptionDetails' => 'encryptionDetails',
+        'compressionAlgorithm' => 'compressionAlgorithm'
     ];
 
     /**
@@ -120,10 +120,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'feed_document_id' => 'setFeedDocumentId',
+        'feedDocumentId' => 'setFeedDocumentId',
         'url' => 'setUrl',
-        'encryption_details' => 'setEncryptionDetails',
-        'compression_algorithm' => 'setCompressionAlgorithm'
+        'encryptionDetails' => 'setEncryptionDetails',
+        'compressionAlgorithm' => 'setCompressionAlgorithm'
     ];
 
     /**
@@ -132,10 +132,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'feed_document_id' => 'getFeedDocumentId',
+        'feedDocumentId' => 'getFeedDocumentId',
         'url' => 'getUrl',
-        'encryption_details' => 'getEncryptionDetails',
-        'compression_algorithm' => 'getCompressionAlgorithm'
+        'encryptionDetails' => 'getEncryptionDetails',
+        'compressionAlgorithm' => 'getCompressionAlgorithm'
     ];
 
     /**
@@ -211,10 +211,10 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['feed_document_id'] = $data['feed_document_id'] ?? null;
+        $this->container['feedDocumentId'] = $data['feedDocumentId'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
-        $this->container['encryption_details'] = $data['encryption_details'] ?? null;
-        $this->container['compression_algorithm'] = $data['compression_algorithm'] ?? null;
+        $this->container['encryptionDetails'] = $data['encryptionDetails'] ?? null;
+        $this->container['compressionAlgorithm'] = $data['compressionAlgorithm'] ?? null;
     }
 
     /**
@@ -226,20 +226,20 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['feed_document_id'] === null) {
-            $invalidProperties[] = "'feed_document_id' can't be null";
+        if ($this->container['feedDocumentId'] === null) {
+            $invalidProperties[] = "'feedDocumentId' can't be null";
         }
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
-        if ($this->container['encryption_details'] === null) {
-            $invalidProperties[] = "'encryption_details' can't be null";
+        if ($this->container['encryptionDetails'] === null) {
+            $invalidProperties[] = "'encryptionDetails' can't be null";
         }
         $allowedValues = $this->getCompressionAlgorithmAllowableValues();
-        if (!is_null($this->container['compression_algorithm']) && !in_array($this->container['compression_algorithm'], $allowedValues, true)) {
+        if (!is_null($this->container['compressionAlgorithm']) && !in_array($this->container['compressionAlgorithm'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'compression_algorithm', must be one of '%s'",
-                $this->container['compression_algorithm'],
+                "invalid value '%s' for 'compressionAlgorithm', must be one of '%s'",
+                $this->container['compressionAlgorithm'],
                 implode("', '", $allowedValues)
             );
         }
@@ -260,25 +260,25 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets feed_document_id
+     * Gets feedDocumentId
      *
      * @return string
      */
     public function getFeedDocumentId()
     {
-        return $this->container['feed_document_id'];
+        return $this->container['feedDocumentId'];
     }
 
     /**
-     * Sets feed_document_id
+     * Sets feedDocumentId
      *
-     * @param string $feed_document_id The identifier for the feed document. This identifier is unique only in combination with a seller ID.
+     * @param string $feedDocumentId The identifier for the feed document. This identifier is unique only in combination with a seller ID.
      *
      * @return self
      */
-    public function setFeedDocumentId($feed_document_id)
+    public function setFeedDocumentId($feedDocumentId)
     {
-        $this->container['feed_document_id'] = $feed_document_id;
+        $this->container['feedDocumentId'] = $feedDocumentId;
 
         return $this;
     }
@@ -308,59 +308,59 @@ class FeedDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets encryption_details
+     * Gets encryptionDetails
      *
      * @return \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails
      */
     public function getEncryptionDetails()
     {
-        return $this->container['encryption_details'];
+        return $this->container['encryptionDetails'];
     }
 
     /**
-     * Sets encryption_details
+     * Sets encryptionDetails
      *
-     * @param \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails $encryption_details encryption_details
+     * @param \Webcom\Amazon\Rest\FeedsApi\Model\FeedDocumentEncryptionDetails $encryptionDetails encryptionDetails
      *
      * @return self
      */
-    public function setEncryptionDetails($encryption_details)
+    public function setEncryptionDetails($encryptionDetails)
     {
-        $this->container['encryption_details'] = $encryption_details;
+        $this->container['encryptionDetails'] = $encryptionDetails;
 
         return $this;
     }
 
     /**
-     * Gets compression_algorithm
+     * Gets compressionAlgorithm
      *
      * @return string|null
      */
     public function getCompressionAlgorithm()
     {
-        return $this->container['compression_algorithm'];
+        return $this->container['compressionAlgorithm'];
     }
 
     /**
-     * Sets compression_algorithm
+     * Sets compressionAlgorithm
      *
-     * @param string|null $compression_algorithm If present, the feed document contents are compressed using the indicated algorithm.
+     * @param string|null $compressionAlgorithm If present, the feed document contents are compressed using the indicated algorithm.
      *
      * @return self
      */
-    public function setCompressionAlgorithm($compression_algorithm)
+    public function setCompressionAlgorithm($compressionAlgorithm)
     {
         $allowedValues = $this->getCompressionAlgorithmAllowableValues();
-        if (!is_null($compression_algorithm) && !in_array($compression_algorithm, $allowedValues, true)) {
+        if (!is_null($compressionAlgorithm) && !in_array($compressionAlgorithm, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'compression_algorithm', must be one of '%s'",
-                    $compression_algorithm,
+                    "Invalid value '%s' for 'compressionAlgorithm', must be one of '%s'",
+                    $compressionAlgorithm,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['compression_algorithm'] = $compression_algorithm;
+        $this->container['compressionAlgorithm'] = $compressionAlgorithm;
 
         return $this;
     }

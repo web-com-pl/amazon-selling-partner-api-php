@@ -65,7 +65,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'string',
         'message' => 'string',
         'details' => 'string',
-        'error_level' => 'string'
+        'errorLevel' => 'string'
     ];
 
     /**
@@ -79,7 +79,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => null,
         'message' => null,
         'details' => null,
-        'error_level' => null
+        'errorLevel' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'code',
         'message' => 'message',
         'details' => 'details',
-        'error_level' => 'errorLevel'
+        'errorLevel' => 'errorLevel'
     ];
 
     /**
@@ -124,7 +124,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'setCode',
         'message' => 'setMessage',
         'details' => 'setDetails',
-        'error_level' => 'setErrorLevel'
+        'errorLevel' => 'setErrorLevel'
     ];
 
     /**
@@ -136,7 +136,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'getCode',
         'message' => 'getMessage',
         'details' => 'getDetails',
-        'error_level' => 'getErrorLevel'
+        'errorLevel' => 'getErrorLevel'
     ];
 
     /**
@@ -217,7 +217,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['code'] = $data['code'] ?? null;
         $this->container['message'] = $data['message'] ?? null;
         $this->container['details'] = $data['details'] ?? null;
-        $this->container['error_level'] = $data['error_level'] ?? null;
+        $this->container['errorLevel'] = $data['errorLevel'] ?? null;
     }
 
     /**
@@ -236,10 +236,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "'message' can't be null";
         }
         $allowedValues = $this->getErrorLevelAllowableValues();
-        if (!is_null($this->container['error_level']) && !in_array($this->container['error_level'], $allowedValues, true)) {
+        if (!is_null($this->container['errorLevel']) && !in_array($this->container['errorLevel'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'error_level', must be one of '%s'",
-                $this->container['error_level'],
+                "invalid value '%s' for 'errorLevel', must be one of '%s'",
+                $this->container['errorLevel'],
                 implode("', '", $allowedValues)
             );
         }
@@ -332,35 +332,35 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets error_level
+     * Gets errorLevel
      *
      * @return string|null
      */
     public function getErrorLevel()
     {
-        return $this->container['error_level'];
+        return $this->container['errorLevel'];
     }
 
     /**
-     * Sets error_level
+     * Sets errorLevel
      *
-     * @param string|null $error_level The type of error.
+     * @param string|null $errorLevel The type of error.
      *
      * @return self
      */
-    public function setErrorLevel($error_level)
+    public function setErrorLevel($errorLevel)
     {
         $allowedValues = $this->getErrorLevelAllowableValues();
-        if (!is_null($error_level) && !in_array($error_level, $allowedValues, true)) {
+        if (!is_null($errorLevel) && !in_array($errorLevel, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'error_level', must be one of '%s'",
-                    $error_level,
+                    "Invalid value '%s' for 'errorLevel', must be one of '%s'",
+                    $errorLevel,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['error_level'] = $error_level;
+        $this->container['errorLevel'] = $errorLevel;
 
         return $this;
     }

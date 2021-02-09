@@ -62,10 +62,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'buyer_id' => 'string',
+        'buyerId' => 'string',
         'name' => 'string',
         'phone' => 'string',
-        'is_prime_member' => 'bool'
+        'isPrimeMember' => 'bool'
     ];
 
     /**
@@ -76,10 +76,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'buyer_id' => null,
+        'buyerId' => null,
         'name' => null,
         'phone' => null,
-        'is_prime_member' => null
+        'isPrimeMember' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'buyer_id' => 'buyerId',
+        'buyerId' => 'buyerId',
         'name' => 'name',
         'phone' => 'phone',
-        'is_prime_member' => 'isPrimeMember'
+        'isPrimeMember' => 'isPrimeMember'
     ];
 
     /**
@@ -121,10 +121,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'buyer_id' => 'setBuyerId',
+        'buyerId' => 'setBuyerId',
         'name' => 'setName',
         'phone' => 'setPhone',
-        'is_prime_member' => 'setIsPrimeMember'
+        'isPrimeMember' => 'setIsPrimeMember'
     ];
 
     /**
@@ -133,10 +133,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'buyer_id' => 'getBuyerId',
+        'buyerId' => 'getBuyerId',
         'name' => 'getName',
         'phone' => 'getPhone',
-        'is_prime_member' => 'getIsPrimeMember'
+        'isPrimeMember' => 'getIsPrimeMember'
     ];
 
     /**
@@ -199,10 +199,10 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['buyer_id'] = $data['buyer_id'] ?? null;
+        $this->container['buyerId'] = $data['buyerId'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
-        $this->container['is_prime_member'] = $data['is_prime_member'] ?? null;
+        $this->container['isPrimeMember'] = $data['isPrimeMember'] ?? null;
     }
 
     /**
@@ -214,8 +214,8 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['buyer_id']) && !preg_match("/^[A-Z0-9]*$/", $this->container['buyer_id'])) {
-            $invalidProperties[] = "invalid value for 'buyer_id', must be conform to the pattern /^[A-Z0-9]*$/.";
+        if (!is_null($this->container['buyerId']) && !preg_match("/^[A-Z0-9]*$/", $this->container['buyerId'])) {
+            $invalidProperties[] = "invalid value for 'buyerId', must be conform to the pattern /^[A-Z0-9]*$/.";
         }
 
         return $invalidProperties;
@@ -234,30 +234,30 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets buyer_id
+     * Gets buyerId
      *
      * @return string|null
      */
     public function getBuyerId()
     {
-        return $this->container['buyer_id'];
+        return $this->container['buyerId'];
     }
 
     /**
-     * Sets buyer_id
+     * Sets buyerId
      *
-     * @param string|null $buyer_id The identifier of the buyer.
+     * @param string|null $buyerId The identifier of the buyer.
      *
      * @return self
      */
-    public function setBuyerId($buyer_id)
+    public function setBuyerId($buyerId)
     {
 
-        if (!is_null($buyer_id) && (!preg_match("/^[A-Z0-9]*$/", $buyer_id))) {
-            throw new \InvalidArgumentException("invalid value for $buyer_id when calling Buyer., must conform to the pattern /^[A-Z0-9]*$/.");
+        if (!is_null($buyerId) && (!preg_match("/^[A-Z0-9]*$/", $buyerId))) {
+            throw new \InvalidArgumentException("invalid value for $buyerId when calling Buyer., must conform to the pattern /^[A-Z0-9]*$/.");
         }
 
-        $this->container['buyer_id'] = $buyer_id;
+        $this->container['buyerId'] = $buyerId;
 
         return $this;
     }
@@ -311,25 +311,25 @@ class Buyer implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_prime_member
+     * Gets isPrimeMember
      *
      * @return bool|null
      */
     public function getIsPrimeMember()
     {
-        return $this->container['is_prime_member'];
+        return $this->container['isPrimeMember'];
     }
 
     /**
-     * Sets is_prime_member
+     * Sets isPrimeMember
      *
-     * @param bool|null $is_prime_member When true, the service is for an Amazon Prime buyer.
+     * @param bool|null $isPrimeMember When true, the service is for an Amazon Prime buyer.
      *
      * @return self
      */
-    public function setIsPrimeMember($is_prime_member)
+    public function setIsPrimeMember($isPrimeMember)
     {
-        $this->container['is_prime_member'] = $is_prime_member;
+        $this->container['isPrimeMember'] = $isPrimeMember;
 
         return $this;
     }

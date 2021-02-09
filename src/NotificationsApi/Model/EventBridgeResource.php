@@ -64,7 +64,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'name' => 'string',
         'region' => 'string',
-        'account_id' => 'string'
+        'accountId' => 'string'
     ];
 
     /**
@@ -77,7 +77,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'name' => null,
         'region' => null,
-        'account_id' => null
+        'accountId' => null
     ];
 
     /**
@@ -109,7 +109,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $attributeMap = [
         'name' => 'name',
         'region' => 'region',
-        'account_id' => 'accountId'
+        'accountId' => 'accountId'
     ];
 
     /**
@@ -120,7 +120,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $setters = [
         'name' => 'setName',
         'region' => 'setRegion',
-        'account_id' => 'setAccountId'
+        'accountId' => 'setAccountId'
     ];
 
     /**
@@ -131,7 +131,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $getters = [
         'name' => 'getName',
         'region' => 'getRegion',
-        'account_id' => 'getAccountId'
+        'accountId' => 'getAccountId'
     ];
 
     /**
@@ -196,7 +196,7 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $this->container['name'] = $data['name'] ?? null;
         $this->container['region'] = $data['region'] ?? null;
-        $this->container['account_id'] = $data['account_id'] ?? null;
+        $this->container['accountId'] = $data['accountId'] ?? null;
     }
 
     /**
@@ -218,8 +218,8 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
-        if ($this->container['account_id'] === null) {
-            $invalidProperties[] = "'account_id' can't be null";
+        if ($this->container['accountId'] === null) {
+            $invalidProperties[] = "'accountId' can't be null";
         }
         return $invalidProperties;
     }
@@ -289,25 +289,25 @@ class EventBridgeResource implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets account_id
+     * Gets accountId
      *
      * @return string
      */
     public function getAccountId()
     {
-        return $this->container['account_id'];
+        return $this->container['accountId'];
     }
 
     /**
-     * Sets account_id
+     * Sets accountId
      *
-     * @param string $account_id The identifier for the AWS account that is responsible for charges related to receiving notifications.
+     * @param string $accountId The identifier for the AWS account that is responsible for charges related to receiving notifications.
      *
      * @return self
      */
-    public function setAccountId($account_id)
+    public function setAccountId($accountId)
     {
-        $this->container['account_id'] = $account_id;
+        $this->container['accountId'] = $accountId;
 
         return $this;
     }

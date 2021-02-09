@@ -61,9 +61,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'return_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]',
-        'invalid_return_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidReturnItem[]',
-        'return_authorizations' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]'
+        'returnItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]',
+        'invalidReturnItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidReturnItem[]',
+        'returnAuthorizations' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]'
     ];
 
     /**
@@ -74,9 +74,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'return_items' => null,
-        'invalid_return_items' => null,
-        'return_authorizations' => null
+        'returnItems' => null,
+        'invalidReturnItems' => null,
+        'returnAuthorizations' => null
     ];
 
     /**
@@ -106,9 +106,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_items' => 'returnItems',
-        'invalid_return_items' => 'invalidReturnItems',
-        'return_authorizations' => 'returnAuthorizations'
+        'returnItems' => 'returnItems',
+        'invalidReturnItems' => 'invalidReturnItems',
+        'returnAuthorizations' => 'returnAuthorizations'
     ];
 
     /**
@@ -117,9 +117,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'return_items' => 'setReturnItems',
-        'invalid_return_items' => 'setInvalidReturnItems',
-        'return_authorizations' => 'setReturnAuthorizations'
+        'returnItems' => 'setReturnItems',
+        'invalidReturnItems' => 'setInvalidReturnItems',
+        'returnAuthorizations' => 'setReturnAuthorizations'
     ];
 
     /**
@@ -128,9 +128,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'return_items' => 'getReturnItems',
-        'invalid_return_items' => 'getInvalidReturnItems',
-        'return_authorizations' => 'getReturnAuthorizations'
+        'returnItems' => 'getReturnItems',
+        'invalidReturnItems' => 'getInvalidReturnItems',
+        'returnAuthorizations' => 'getReturnAuthorizations'
     ];
 
     /**
@@ -193,9 +193,9 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_items'] = $data['return_items'] ?? null;
-        $this->container['invalid_return_items'] = $data['invalid_return_items'] ?? null;
-        $this->container['return_authorizations'] = $data['return_authorizations'] ?? null;
+        $this->container['returnItems'] = $data['returnItems'] ?? null;
+        $this->container['invalidReturnItems'] = $data['invalidReturnItems'] ?? null;
+        $this->container['returnAuthorizations'] = $data['returnAuthorizations'] ?? null;
     }
 
     /**
@@ -223,73 +223,73 @@ class CreateFulfillmentReturnResult implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets return_items
+     * Gets returnItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]|null
      */
     public function getReturnItems()
     {
-        return $this->container['return_items'];
+        return $this->container['returnItems'];
     }
 
     /**
-     * Sets return_items
+     * Sets returnItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]|null $return_items An array of items that Amazon accepted for return. Returns empty if no items were accepted for return.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]|null $returnItems An array of items that Amazon accepted for return. Returns empty if no items were accepted for return.
      *
      * @return self
      */
-    public function setReturnItems($return_items)
+    public function setReturnItems($returnItems)
     {
-        $this->container['return_items'] = $return_items;
+        $this->container['returnItems'] = $returnItems;
 
         return $this;
     }
 
     /**
-     * Gets invalid_return_items
+     * Gets invalidReturnItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidReturnItem[]|null
      */
     public function getInvalidReturnItems()
     {
-        return $this->container['invalid_return_items'];
+        return $this->container['invalidReturnItems'];
     }
 
     /**
-     * Sets invalid_return_items
+     * Sets invalidReturnItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidReturnItem[]|null $invalid_return_items An array of invalid return item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidReturnItem[]|null $invalidReturnItems An array of invalid return item information.
      *
      * @return self
      */
-    public function setInvalidReturnItems($invalid_return_items)
+    public function setInvalidReturnItems($invalidReturnItems)
     {
-        $this->container['invalid_return_items'] = $invalid_return_items;
+        $this->container['invalidReturnItems'] = $invalidReturnItems;
 
         return $this;
     }
 
     /**
-     * Gets return_authorizations
+     * Gets returnAuthorizations
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]|null
      */
     public function getReturnAuthorizations()
     {
-        return $this->container['return_authorizations'];
+        return $this->container['returnAuthorizations'];
     }
 
     /**
-     * Sets return_authorizations
+     * Sets returnAuthorizations
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]|null $return_authorizations An array of return authorization information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]|null $returnAuthorizations An array of return authorization information.
      *
      * @return self
      */
-    public function setReturnAuthorizations($return_authorizations)
+    public function setReturnAuthorizations($returnAuthorizations)
     {
-        $this->container['return_authorizations'] = $return_authorizations;
+        $this->container['returnAuthorizations'] = $returnAuthorizations;
 
         return $this;
     }

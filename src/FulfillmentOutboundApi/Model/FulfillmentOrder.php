@@ -62,22 +62,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_fulfillment_order_id' => 'string',
-        'marketplace_id' => 'string',
-        'displayable_order_id' => 'string',
-        'displayable_order_date' => '\DateTime',
-        'displayable_order_comment' => 'string',
-        'shipping_speed_category' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
-        'delivery_window' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow',
-        'destination_address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
-        'fulfillment_action' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction',
-        'fulfillment_policy' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy',
-        'cod_settings' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CODSettings',
-        'received_date' => '\DateTime',
-        'fulfillment_order_status' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderStatus',
-        'status_updated_date' => '\DateTime',
-        'notification_emails' => 'string[]',
-        'feature_constraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
+        'sellerFulfillmentOrderId' => 'string',
+        'marketplaceId' => 'string',
+        'displayableOrderId' => 'string',
+        'displayableOrderDate' => '\DateTime',
+        'displayableOrderComment' => 'string',
+        'shippingSpeedCategory' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
+        'deliveryWindow' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow',
+        'destinationAddress' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
+        'fulfillmentAction' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction',
+        'fulfillmentPolicy' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy',
+        'codSettings' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CODSettings',
+        'receivedDate' => '\DateTime',
+        'fulfillmentOrderStatus' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderStatus',
+        'statusUpdatedDate' => '\DateTime',
+        'notificationEmails' => 'string[]',
+        'featureConstraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
     ];
 
     /**
@@ -88,22 +88,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_fulfillment_order_id' => null,
-        'marketplace_id' => null,
-        'displayable_order_id' => null,
-        'displayable_order_date' => 'date-time',
-        'displayable_order_comment' => null,
-        'shipping_speed_category' => null,
-        'delivery_window' => null,
-        'destination_address' => null,
-        'fulfillment_action' => null,
-        'fulfillment_policy' => null,
-        'cod_settings' => null,
-        'received_date' => 'date-time',
-        'fulfillment_order_status' => null,
-        'status_updated_date' => 'date-time',
-        'notification_emails' => null,
-        'feature_constraints' => null
+        'sellerFulfillmentOrderId' => null,
+        'marketplaceId' => null,
+        'displayableOrderId' => null,
+        'displayableOrderDate' => 'date-time',
+        'displayableOrderComment' => null,
+        'shippingSpeedCategory' => null,
+        'deliveryWindow' => null,
+        'destinationAddress' => null,
+        'fulfillmentAction' => null,
+        'fulfillmentPolicy' => null,
+        'codSettings' => null,
+        'receivedDate' => 'date-time',
+        'fulfillmentOrderStatus' => null,
+        'statusUpdatedDate' => 'date-time',
+        'notificationEmails' => null,
+        'featureConstraints' => null
     ];
 
     /**
@@ -133,22 +133,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_fulfillment_order_id' => 'sellerFulfillmentOrderId',
-        'marketplace_id' => 'marketplaceId',
-        'displayable_order_id' => 'displayableOrderId',
-        'displayable_order_date' => 'displayableOrderDate',
-        'displayable_order_comment' => 'displayableOrderComment',
-        'shipping_speed_category' => 'shippingSpeedCategory',
-        'delivery_window' => 'deliveryWindow',
-        'destination_address' => 'destinationAddress',
-        'fulfillment_action' => 'fulfillmentAction',
-        'fulfillment_policy' => 'fulfillmentPolicy',
-        'cod_settings' => 'codSettings',
-        'received_date' => 'receivedDate',
-        'fulfillment_order_status' => 'fulfillmentOrderStatus',
-        'status_updated_date' => 'statusUpdatedDate',
-        'notification_emails' => 'notificationEmails',
-        'feature_constraints' => 'featureConstraints'
+        'sellerFulfillmentOrderId' => 'sellerFulfillmentOrderId',
+        'marketplaceId' => 'marketplaceId',
+        'displayableOrderId' => 'displayableOrderId',
+        'displayableOrderDate' => 'displayableOrderDate',
+        'displayableOrderComment' => 'displayableOrderComment',
+        'shippingSpeedCategory' => 'shippingSpeedCategory',
+        'deliveryWindow' => 'deliveryWindow',
+        'destinationAddress' => 'destinationAddress',
+        'fulfillmentAction' => 'fulfillmentAction',
+        'fulfillmentPolicy' => 'fulfillmentPolicy',
+        'codSettings' => 'codSettings',
+        'receivedDate' => 'receivedDate',
+        'fulfillmentOrderStatus' => 'fulfillmentOrderStatus',
+        'statusUpdatedDate' => 'statusUpdatedDate',
+        'notificationEmails' => 'notificationEmails',
+        'featureConstraints' => 'featureConstraints'
     ];
 
     /**
@@ -157,22 +157,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_fulfillment_order_id' => 'setSellerFulfillmentOrderId',
-        'marketplace_id' => 'setMarketplaceId',
-        'displayable_order_id' => 'setDisplayableOrderId',
-        'displayable_order_date' => 'setDisplayableOrderDate',
-        'displayable_order_comment' => 'setDisplayableOrderComment',
-        'shipping_speed_category' => 'setShippingSpeedCategory',
-        'delivery_window' => 'setDeliveryWindow',
-        'destination_address' => 'setDestinationAddress',
-        'fulfillment_action' => 'setFulfillmentAction',
-        'fulfillment_policy' => 'setFulfillmentPolicy',
-        'cod_settings' => 'setCodSettings',
-        'received_date' => 'setReceivedDate',
-        'fulfillment_order_status' => 'setFulfillmentOrderStatus',
-        'status_updated_date' => 'setStatusUpdatedDate',
-        'notification_emails' => 'setNotificationEmails',
-        'feature_constraints' => 'setFeatureConstraints'
+        'sellerFulfillmentOrderId' => 'setSellerFulfillmentOrderId',
+        'marketplaceId' => 'setMarketplaceId',
+        'displayableOrderId' => 'setDisplayableOrderId',
+        'displayableOrderDate' => 'setDisplayableOrderDate',
+        'displayableOrderComment' => 'setDisplayableOrderComment',
+        'shippingSpeedCategory' => 'setShippingSpeedCategory',
+        'deliveryWindow' => 'setDeliveryWindow',
+        'destinationAddress' => 'setDestinationAddress',
+        'fulfillmentAction' => 'setFulfillmentAction',
+        'fulfillmentPolicy' => 'setFulfillmentPolicy',
+        'codSettings' => 'setCodSettings',
+        'receivedDate' => 'setReceivedDate',
+        'fulfillmentOrderStatus' => 'setFulfillmentOrderStatus',
+        'statusUpdatedDate' => 'setStatusUpdatedDate',
+        'notificationEmails' => 'setNotificationEmails',
+        'featureConstraints' => 'setFeatureConstraints'
     ];
 
     /**
@@ -181,22 +181,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_fulfillment_order_id' => 'getSellerFulfillmentOrderId',
-        'marketplace_id' => 'getMarketplaceId',
-        'displayable_order_id' => 'getDisplayableOrderId',
-        'displayable_order_date' => 'getDisplayableOrderDate',
-        'displayable_order_comment' => 'getDisplayableOrderComment',
-        'shipping_speed_category' => 'getShippingSpeedCategory',
-        'delivery_window' => 'getDeliveryWindow',
-        'destination_address' => 'getDestinationAddress',
-        'fulfillment_action' => 'getFulfillmentAction',
-        'fulfillment_policy' => 'getFulfillmentPolicy',
-        'cod_settings' => 'getCodSettings',
-        'received_date' => 'getReceivedDate',
-        'fulfillment_order_status' => 'getFulfillmentOrderStatus',
-        'status_updated_date' => 'getStatusUpdatedDate',
-        'notification_emails' => 'getNotificationEmails',
-        'feature_constraints' => 'getFeatureConstraints'
+        'sellerFulfillmentOrderId' => 'getSellerFulfillmentOrderId',
+        'marketplaceId' => 'getMarketplaceId',
+        'displayableOrderId' => 'getDisplayableOrderId',
+        'displayableOrderDate' => 'getDisplayableOrderDate',
+        'displayableOrderComment' => 'getDisplayableOrderComment',
+        'shippingSpeedCategory' => 'getShippingSpeedCategory',
+        'deliveryWindow' => 'getDeliveryWindow',
+        'destinationAddress' => 'getDestinationAddress',
+        'fulfillmentAction' => 'getFulfillmentAction',
+        'fulfillmentPolicy' => 'getFulfillmentPolicy',
+        'codSettings' => 'getCodSettings',
+        'receivedDate' => 'getReceivedDate',
+        'fulfillmentOrderStatus' => 'getFulfillmentOrderStatus',
+        'statusUpdatedDate' => 'getStatusUpdatedDate',
+        'notificationEmails' => 'getNotificationEmails',
+        'featureConstraints' => 'getFeatureConstraints'
     ];
 
     /**
@@ -259,22 +259,22 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_fulfillment_order_id'] = $data['seller_fulfillment_order_id'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['displayable_order_id'] = $data['displayable_order_id'] ?? null;
-        $this->container['displayable_order_date'] = $data['displayable_order_date'] ?? null;
-        $this->container['displayable_order_comment'] = $data['displayable_order_comment'] ?? null;
-        $this->container['shipping_speed_category'] = $data['shipping_speed_category'] ?? null;
-        $this->container['delivery_window'] = $data['delivery_window'] ?? null;
-        $this->container['destination_address'] = $data['destination_address'] ?? null;
-        $this->container['fulfillment_action'] = $data['fulfillment_action'] ?? null;
-        $this->container['fulfillment_policy'] = $data['fulfillment_policy'] ?? null;
-        $this->container['cod_settings'] = $data['cod_settings'] ?? null;
-        $this->container['received_date'] = $data['received_date'] ?? null;
-        $this->container['fulfillment_order_status'] = $data['fulfillment_order_status'] ?? null;
-        $this->container['status_updated_date'] = $data['status_updated_date'] ?? null;
-        $this->container['notification_emails'] = $data['notification_emails'] ?? null;
-        $this->container['feature_constraints'] = $data['feature_constraints'] ?? null;
+        $this->container['sellerFulfillmentOrderId'] = $data['sellerFulfillmentOrderId'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['displayableOrderId'] = $data['displayableOrderId'] ?? null;
+        $this->container['displayableOrderDate'] = $data['displayableOrderDate'] ?? null;
+        $this->container['displayableOrderComment'] = $data['displayableOrderComment'] ?? null;
+        $this->container['shippingSpeedCategory'] = $data['shippingSpeedCategory'] ?? null;
+        $this->container['deliveryWindow'] = $data['deliveryWindow'] ?? null;
+        $this->container['destinationAddress'] = $data['destinationAddress'] ?? null;
+        $this->container['fulfillmentAction'] = $data['fulfillmentAction'] ?? null;
+        $this->container['fulfillmentPolicy'] = $data['fulfillmentPolicy'] ?? null;
+        $this->container['codSettings'] = $data['codSettings'] ?? null;
+        $this->container['receivedDate'] = $data['receivedDate'] ?? null;
+        $this->container['fulfillmentOrderStatus'] = $data['fulfillmentOrderStatus'] ?? null;
+        $this->container['statusUpdatedDate'] = $data['statusUpdatedDate'] ?? null;
+        $this->container['notificationEmails'] = $data['notificationEmails'] ?? null;
+        $this->container['featureConstraints'] = $data['featureConstraints'] ?? null;
     }
 
     /**
@@ -286,35 +286,35 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_fulfillment_order_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderId' can't be null";
         }
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['displayable_order_id'] === null) {
-            $invalidProperties[] = "'displayable_order_id' can't be null";
+        if ($this->container['displayableOrderId'] === null) {
+            $invalidProperties[] = "'displayableOrderId' can't be null";
         }
-        if ($this->container['displayable_order_date'] === null) {
-            $invalidProperties[] = "'displayable_order_date' can't be null";
+        if ($this->container['displayableOrderDate'] === null) {
+            $invalidProperties[] = "'displayableOrderDate' can't be null";
         }
-        if ($this->container['displayable_order_comment'] === null) {
-            $invalidProperties[] = "'displayable_order_comment' can't be null";
+        if ($this->container['displayableOrderComment'] === null) {
+            $invalidProperties[] = "'displayableOrderComment' can't be null";
         }
-        if ($this->container['shipping_speed_category'] === null) {
-            $invalidProperties[] = "'shipping_speed_category' can't be null";
+        if ($this->container['shippingSpeedCategory'] === null) {
+            $invalidProperties[] = "'shippingSpeedCategory' can't be null";
         }
-        if ($this->container['destination_address'] === null) {
-            $invalidProperties[] = "'destination_address' can't be null";
+        if ($this->container['destinationAddress'] === null) {
+            $invalidProperties[] = "'destinationAddress' can't be null";
         }
-        if ($this->container['received_date'] === null) {
-            $invalidProperties[] = "'received_date' can't be null";
+        if ($this->container['receivedDate'] === null) {
+            $invalidProperties[] = "'receivedDate' can't be null";
         }
-        if ($this->container['fulfillment_order_status'] === null) {
-            $invalidProperties[] = "'fulfillment_order_status' can't be null";
+        if ($this->container['fulfillmentOrderStatus'] === null) {
+            $invalidProperties[] = "'fulfillmentOrderStatus' can't be null";
         }
-        if ($this->container['status_updated_date'] === null) {
-            $invalidProperties[] = "'status_updated_date' can't be null";
+        if ($this->container['statusUpdatedDate'] === null) {
+            $invalidProperties[] = "'statusUpdatedDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -332,385 +332,385 @@ class FulfillmentOrder implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_fulfillment_order_id
+     * Gets sellerFulfillmentOrderId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderId()
     {
-        return $this->container['seller_fulfillment_order_id'];
+        return $this->container['sellerFulfillmentOrderId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_id
+     * Sets sellerFulfillmentOrderId
      *
-     * @param string $seller_fulfillment_order_id The fulfillment order identifier submitted with the createFulfillmentOrder operation.
+     * @param string $sellerFulfillmentOrderId The fulfillment order identifier submitted with the createFulfillmentOrder operation.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderId($seller_fulfillment_order_id)
+    public function setSellerFulfillmentOrderId($sellerFulfillmentOrderId)
     {
-        $this->container['seller_fulfillment_order_id'] = $seller_fulfillment_order_id;
+        $this->container['sellerFulfillmentOrderId'] = $sellerFulfillmentOrderId;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id The identifier for the marketplace the fulfillment order is placed against.
+     * @param string $marketplaceId The identifier for the marketplace the fulfillment order is placed against.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_id
+     * Gets displayableOrderId
      *
      * @return string
      */
     public function getDisplayableOrderId()
     {
-        return $this->container['displayable_order_id'];
+        return $this->container['displayableOrderId'];
     }
 
     /**
-     * Sets displayable_order_id
+     * Sets displayableOrderId
      *
-     * @param string $displayable_order_id A fulfillment order identifier submitted with the createFulfillmentOrder operation. Displays as the order identifier in recipient-facing materials such as the packing slip.
+     * @param string $displayableOrderId A fulfillment order identifier submitted with the createFulfillmentOrder operation. Displays as the order identifier in recipient-facing materials such as the packing slip.
      *
      * @return self
      */
-    public function setDisplayableOrderId($displayable_order_id)
+    public function setDisplayableOrderId($displayableOrderId)
     {
-        $this->container['displayable_order_id'] = $displayable_order_id;
+        $this->container['displayableOrderId'] = $displayableOrderId;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_date
+     * Gets displayableOrderDate
      *
      * @return \DateTime
      */
     public function getDisplayableOrderDate()
     {
-        return $this->container['displayable_order_date'];
+        return $this->container['displayableOrderDate'];
     }
 
     /**
-     * Sets displayable_order_date
+     * Sets displayableOrderDate
      *
-     * @param \DateTime $displayable_order_date displayable_order_date
+     * @param \DateTime $displayableOrderDate displayableOrderDate
      *
      * @return self
      */
-    public function setDisplayableOrderDate($displayable_order_date)
+    public function setDisplayableOrderDate($displayableOrderDate)
     {
-        $this->container['displayable_order_date'] = $displayable_order_date;
+        $this->container['displayableOrderDate'] = $displayableOrderDate;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_comment
+     * Gets displayableOrderComment
      *
      * @return string
      */
     public function getDisplayableOrderComment()
     {
-        return $this->container['displayable_order_comment'];
+        return $this->container['displayableOrderComment'];
     }
 
     /**
-     * Sets displayable_order_comment
+     * Sets displayableOrderComment
      *
-     * @param string $displayable_order_comment A text block submitted with the createFulfillmentOrder operation. Displays in recipient-facing materials such as the packing slip.
+     * @param string $displayableOrderComment A text block submitted with the createFulfillmentOrder operation. Displays in recipient-facing materials such as the packing slip.
      *
      * @return self
      */
-    public function setDisplayableOrderComment($displayable_order_comment)
+    public function setDisplayableOrderComment($displayableOrderComment)
     {
-        $this->container['displayable_order_comment'] = $displayable_order_comment;
+        $this->container['displayableOrderComment'] = $displayableOrderComment;
 
         return $this;
     }
 
     /**
-     * Gets shipping_speed_category
+     * Gets shippingSpeedCategory
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory
      */
     public function getShippingSpeedCategory()
     {
-        return $this->container['shipping_speed_category'];
+        return $this->container['shippingSpeedCategory'];
     }
 
     /**
-     * Sets shipping_speed_category
+     * Sets shippingSpeedCategory
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory $shipping_speed_category shipping_speed_category
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory $shippingSpeedCategory shippingSpeedCategory
      *
      * @return self
      */
-    public function setShippingSpeedCategory($shipping_speed_category)
+    public function setShippingSpeedCategory($shippingSpeedCategory)
     {
-        $this->container['shipping_speed_category'] = $shipping_speed_category;
+        $this->container['shippingSpeedCategory'] = $shippingSpeedCategory;
 
         return $this;
     }
 
     /**
-     * Gets delivery_window
+     * Gets deliveryWindow
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow|null
      */
     public function getDeliveryWindow()
     {
-        return $this->container['delivery_window'];
+        return $this->container['deliveryWindow'];
     }
 
     /**
-     * Sets delivery_window
+     * Sets deliveryWindow
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow|null $delivery_window delivery_window
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\DeliveryWindow|null $deliveryWindow deliveryWindow
      *
      * @return self
      */
-    public function setDeliveryWindow($delivery_window)
+    public function setDeliveryWindow($deliveryWindow)
     {
-        $this->container['delivery_window'] = $delivery_window;
+        $this->container['deliveryWindow'] = $deliveryWindow;
 
         return $this;
     }
 
     /**
-     * Gets destination_address
+     * Gets destinationAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address
      */
     public function getDestinationAddress()
     {
-        return $this->container['destination_address'];
+        return $this->container['destinationAddress'];
     }
 
     /**
-     * Sets destination_address
+     * Sets destinationAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address $destination_address destination_address
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address $destinationAddress destinationAddress
      *
      * @return self
      */
-    public function setDestinationAddress($destination_address)
+    public function setDestinationAddress($destinationAddress)
     {
-        $this->container['destination_address'] = $destination_address;
+        $this->container['destinationAddress'] = $destinationAddress;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_action
+     * Gets fulfillmentAction
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null
      */
     public function getFulfillmentAction()
     {
-        return $this->container['fulfillment_action'];
+        return $this->container['fulfillmentAction'];
     }
 
     /**
-     * Sets fulfillment_action
+     * Sets fulfillmentAction
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null $fulfillment_action fulfillment_action
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null $fulfillmentAction fulfillmentAction
      *
      * @return self
      */
-    public function setFulfillmentAction($fulfillment_action)
+    public function setFulfillmentAction($fulfillmentAction)
     {
-        $this->container['fulfillment_action'] = $fulfillment_action;
+        $this->container['fulfillmentAction'] = $fulfillmentAction;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_policy
+     * Gets fulfillmentPolicy
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null
      */
     public function getFulfillmentPolicy()
     {
-        return $this->container['fulfillment_policy'];
+        return $this->container['fulfillmentPolicy'];
     }
 
     /**
-     * Sets fulfillment_policy
+     * Sets fulfillmentPolicy
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null $fulfillment_policy fulfillment_policy
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null $fulfillmentPolicy fulfillmentPolicy
      *
      * @return self
      */
-    public function setFulfillmentPolicy($fulfillment_policy)
+    public function setFulfillmentPolicy($fulfillmentPolicy)
     {
-        $this->container['fulfillment_policy'] = $fulfillment_policy;
+        $this->container['fulfillmentPolicy'] = $fulfillmentPolicy;
 
         return $this;
     }
 
     /**
-     * Gets cod_settings
+     * Gets codSettings
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CODSettings|null
      */
     public function getCodSettings()
     {
-        return $this->container['cod_settings'];
+        return $this->container['codSettings'];
     }
 
     /**
-     * Sets cod_settings
+     * Sets codSettings
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CODSettings|null $cod_settings cod_settings
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CODSettings|null $codSettings codSettings
      *
      * @return self
      */
-    public function setCodSettings($cod_settings)
+    public function setCodSettings($codSettings)
     {
-        $this->container['cod_settings'] = $cod_settings;
+        $this->container['codSettings'] = $codSettings;
 
         return $this;
     }
 
     /**
-     * Gets received_date
+     * Gets receivedDate
      *
      * @return \DateTime
      */
     public function getReceivedDate()
     {
-        return $this->container['received_date'];
+        return $this->container['receivedDate'];
     }
 
     /**
-     * Sets received_date
+     * Sets receivedDate
      *
-     * @param \DateTime $received_date received_date
+     * @param \DateTime $receivedDate receivedDate
      *
      * @return self
      */
-    public function setReceivedDate($received_date)
+    public function setReceivedDate($receivedDate)
     {
-        $this->container['received_date'] = $received_date;
+        $this->container['receivedDate'] = $receivedDate;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_order_status
+     * Gets fulfillmentOrderStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderStatus
      */
     public function getFulfillmentOrderStatus()
     {
-        return $this->container['fulfillment_order_status'];
+        return $this->container['fulfillmentOrderStatus'];
     }
 
     /**
-     * Sets fulfillment_order_status
+     * Sets fulfillmentOrderStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderStatus $fulfillment_order_status fulfillment_order_status
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderStatus $fulfillmentOrderStatus fulfillmentOrderStatus
      *
      * @return self
      */
-    public function setFulfillmentOrderStatus($fulfillment_order_status)
+    public function setFulfillmentOrderStatus($fulfillmentOrderStatus)
     {
-        $this->container['fulfillment_order_status'] = $fulfillment_order_status;
+        $this->container['fulfillmentOrderStatus'] = $fulfillmentOrderStatus;
 
         return $this;
     }
 
     /**
-     * Gets status_updated_date
+     * Gets statusUpdatedDate
      *
      * @return \DateTime
      */
     public function getStatusUpdatedDate()
     {
-        return $this->container['status_updated_date'];
+        return $this->container['statusUpdatedDate'];
     }
 
     /**
-     * Sets status_updated_date
+     * Sets statusUpdatedDate
      *
-     * @param \DateTime $status_updated_date status_updated_date
+     * @param \DateTime $statusUpdatedDate statusUpdatedDate
      *
      * @return self
      */
-    public function setStatusUpdatedDate($status_updated_date)
+    public function setStatusUpdatedDate($statusUpdatedDate)
     {
-        $this->container['status_updated_date'] = $status_updated_date;
+        $this->container['statusUpdatedDate'] = $statusUpdatedDate;
 
         return $this;
     }
 
     /**
-     * Gets notification_emails
+     * Gets notificationEmails
      *
      * @return string[]|null
      */
     public function getNotificationEmails()
     {
-        return $this->container['notification_emails'];
+        return $this->container['notificationEmails'];
     }
 
     /**
-     * Sets notification_emails
+     * Sets notificationEmails
      *
-     * @param string[]|null $notification_emails A list of email addresses that the seller provides that are used by Amazon to send ship-complete notifications to recipients on behalf of the seller.
+     * @param string[]|null $notificationEmails A list of email addresses that the seller provides that are used by Amazon to send ship-complete notifications to recipients on behalf of the seller.
      *
      * @return self
      */
-    public function setNotificationEmails($notification_emails)
+    public function setNotificationEmails($notificationEmails)
     {
-        $this->container['notification_emails'] = $notification_emails;
+        $this->container['notificationEmails'] = $notificationEmails;
 
         return $this;
     }
 
     /**
-     * Gets feature_constraints
+     * Gets featureConstraints
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null
      */
     public function getFeatureConstraints()
     {
-        return $this->container['feature_constraints'];
+        return $this->container['featureConstraints'];
     }
 
     /**
-     * Sets feature_constraints
+     * Sets featureConstraints
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $feature_constraints A list of features and their fulfillment policies to apply to the order.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $featureConstraints A list of features and their fulfillment policies to apply to the order.
      *
      * @return self
      */
-    public function setFeatureConstraints($feature_constraints)
+    public function setFeatureConstraints($featureConstraints)
     {
-        $this->container['feature_constraints'] = $feature_constraints;
+        $this->container['featureConstraints'] = $featureConstraints;
 
         return $this;
     }

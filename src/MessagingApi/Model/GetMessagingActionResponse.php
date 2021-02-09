@@ -62,8 +62,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseLinks',
-        '_embedded' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseEmbedded',
+        'links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseLinks',
+        'embedded' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseEmbedded',
         'payload' => '\Webcom\Amazon\Rest\MessagingApi\Model\MessagingAction',
         'errors' => '\Webcom\Amazon\Rest\MessagingApi\Model\Error[]'
     ];
@@ -76,8 +76,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        '_links' => null,
-        '_embedded' => null,
+        'links' => null,
+        'embedded' => null,
         'payload' => null,
         'errors' => null
     ];
@@ -109,8 +109,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        '_links' => '_links',
-        '_embedded' => '_embedded',
+        'links' => '_links',
+        'embedded' => '_embedded',
         'payload' => 'payload',
         'errors' => 'errors'
     ];
@@ -121,8 +121,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        '_links' => 'setLinks',
-        '_embedded' => 'setEmbedded',
+        'links' => 'setLinks',
+        'embedded' => 'setEmbedded',
         'payload' => 'setPayload',
         'errors' => 'setErrors'
     ];
@@ -133,8 +133,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        '_links' => 'getLinks',
-        '_embedded' => 'getEmbedded',
+        'links' => 'getLinks',
+        'embedded' => 'getEmbedded',
         'payload' => 'getPayload',
         'errors' => 'getErrors'
     ];
@@ -199,8 +199,8 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['_links'] = $data['_links'] ?? null;
-        $this->container['_embedded'] = $data['_embedded'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
+        $this->container['embedded'] = $data['embedded'] ?? null;
         $this->container['payload'] = $data['payload'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
@@ -230,49 +230,49 @@ class GetMessagingActionResponse implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets _links
+     * Gets links
      *
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseLinks|null
      */
     public function getLinks()
     {
-        return $this->container['_links'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets _links
+     * Sets links
      *
-     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseLinks|null $_links _links
+     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseLinks|null $links links
      *
      * @return self
      */
-    public function setLinks($_links)
+    public function setLinks($links)
     {
-        $this->container['_links'] = $_links;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets _embedded
+     * Gets embedded
      *
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseEmbedded|null
      */
     public function getEmbedded()
     {
-        return $this->container['_embedded'];
+        return $this->container['embedded'];
     }
 
     /**
-     * Sets _embedded
+     * Sets embedded
      *
-     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseEmbedded|null $_embedded _embedded
+     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionResponseEmbedded|null $embedded embedded
      *
      * @return self
      */
-    public function setEmbedded($_embedded)
+    public function setEmbedded($embedded)
     {
-        $this->container['_embedded'] = $_embedded;
+        $this->container['embedded'] = $embedded;
 
         return $this;
     }

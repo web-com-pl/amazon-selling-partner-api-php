@@ -61,9 +61,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'is_amazon_fulfilled' => 'bool',
-        'price_to_estimate_fees' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\PriceToEstimateFees',
+        'marketplaceId' => 'string',
+        'isAmazonFulfilled' => 'bool',
+        'priceToEstimateFees' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\PriceToEstimateFees',
         'identifier' => 'string'
     ];
 
@@ -75,9 +75,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'is_amazon_fulfilled' => null,
-        'price_to_estimate_fees' => null,
+        'marketplaceId' => null,
+        'isAmazonFulfilled' => null,
+        'priceToEstimateFees' => null,
         'identifier' => null
     ];
 
@@ -108,9 +108,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'MarketplaceId',
-        'is_amazon_fulfilled' => 'IsAmazonFulfilled',
-        'price_to_estimate_fees' => 'PriceToEstimateFees',
+        'marketplaceId' => 'MarketplaceId',
+        'isAmazonFulfilled' => 'IsAmazonFulfilled',
+        'priceToEstimateFees' => 'PriceToEstimateFees',
         'identifier' => 'Identifier'
     ];
 
@@ -120,9 +120,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'is_amazon_fulfilled' => 'setIsAmazonFulfilled',
-        'price_to_estimate_fees' => 'setPriceToEstimateFees',
+        'marketplaceId' => 'setMarketplaceId',
+        'isAmazonFulfilled' => 'setIsAmazonFulfilled',
+        'priceToEstimateFees' => 'setPriceToEstimateFees',
         'identifier' => 'setIdentifier'
     ];
 
@@ -132,9 +132,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'is_amazon_fulfilled' => 'getIsAmazonFulfilled',
-        'price_to_estimate_fees' => 'getPriceToEstimateFees',
+        'marketplaceId' => 'getMarketplaceId',
+        'isAmazonFulfilled' => 'getIsAmazonFulfilled',
+        'priceToEstimateFees' => 'getPriceToEstimateFees',
         'identifier' => 'getIdentifier'
     ];
 
@@ -198,9 +198,9 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['is_amazon_fulfilled'] = $data['is_amazon_fulfilled'] ?? null;
-        $this->container['price_to_estimate_fees'] = $data['price_to_estimate_fees'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['isAmazonFulfilled'] = $data['isAmazonFulfilled'] ?? null;
+        $this->container['priceToEstimateFees'] = $data['priceToEstimateFees'] ?? null;
         $this->container['identifier'] = $data['identifier'] ?? null;
     }
 
@@ -213,11 +213,11 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['price_to_estimate_fees'] === null) {
-            $invalidProperties[] = "'price_to_estimate_fees' can't be null";
+        if ($this->container['priceToEstimateFees'] === null) {
+            $invalidProperties[] = "'priceToEstimateFees' can't be null";
         }
         if ($this->container['identifier'] === null) {
             $invalidProperties[] = "'identifier' can't be null";
@@ -238,73 +238,73 @@ class FeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id A marketplace identifier.
+     * @param string $marketplaceId A marketplace identifier.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets is_amazon_fulfilled
+     * Gets isAmazonFulfilled
      *
      * @return bool|null
      */
     public function getIsAmazonFulfilled()
     {
-        return $this->container['is_amazon_fulfilled'];
+        return $this->container['isAmazonFulfilled'];
     }
 
     /**
-     * Sets is_amazon_fulfilled
+     * Sets isAmazonFulfilled
      *
-     * @param bool|null $is_amazon_fulfilled When true, the offer is fulfilled by Amazon.
+     * @param bool|null $isAmazonFulfilled When true, the offer is fulfilled by Amazon.
      *
      * @return self
      */
-    public function setIsAmazonFulfilled($is_amazon_fulfilled)
+    public function setIsAmazonFulfilled($isAmazonFulfilled)
     {
-        $this->container['is_amazon_fulfilled'] = $is_amazon_fulfilled;
+        $this->container['isAmazonFulfilled'] = $isAmazonFulfilled;
 
         return $this;
     }
 
     /**
-     * Gets price_to_estimate_fees
+     * Gets priceToEstimateFees
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\PriceToEstimateFees
      */
     public function getPriceToEstimateFees()
     {
-        return $this->container['price_to_estimate_fees'];
+        return $this->container['priceToEstimateFees'];
     }
 
     /**
-     * Sets price_to_estimate_fees
+     * Sets priceToEstimateFees
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\PriceToEstimateFees $price_to_estimate_fees price_to_estimate_fees
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\PriceToEstimateFees $priceToEstimateFees priceToEstimateFees
      *
      * @return self
      */
-    public function setPriceToEstimateFees($price_to_estimate_fees)
+    public function setPriceToEstimateFees($priceToEstimateFees)
     {
-        $this->container['price_to_estimate_fees'] = $price_to_estimate_fees;
+        $this->container['priceToEstimateFees'] = $priceToEstimateFees;
 
         return $this;
     }

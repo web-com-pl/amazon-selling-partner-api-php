@@ -62,10 +62,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'fulfillment_network_sku' => 'string',
+        'sellerSKU' => 'string',
+        'fulfillmentNetworkSKU' => 'string',
         'quantity' => 'int',
-        'prep_details_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
+        'prepDetailsList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'fulfillment_network_sku' => null,
+        'sellerSKU' => null,
+        'fulfillmentNetworkSKU' => null,
         'quantity' => 'int32',
-        'prep_details_list' => null
+        'prepDetailsList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'SellerSKU',
-        'fulfillment_network_sku' => 'FulfillmentNetworkSKU',
+        'sellerSKU' => 'SellerSKU',
+        'fulfillmentNetworkSKU' => 'FulfillmentNetworkSKU',
         'quantity' => 'Quantity',
-        'prep_details_list' => 'PrepDetailsList'
+        'prepDetailsList' => 'PrepDetailsList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'fulfillment_network_sku' => 'setFulfillmentNetworkSku',
+        'sellerSKU' => 'setSellerSKU',
+        'fulfillmentNetworkSKU' => 'setFulfillmentNetworkSKU',
         'quantity' => 'setQuantity',
-        'prep_details_list' => 'setPrepDetailsList'
+        'prepDetailsList' => 'setPrepDetailsList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'fulfillment_network_sku' => 'getFulfillmentNetworkSku',
+        'sellerSKU' => 'getSellerSKU',
+        'fulfillmentNetworkSKU' => 'getFulfillmentNetworkSKU',
         'quantity' => 'getQuantity',
-        'prep_details_list' => 'getPrepDetailsList'
+        'prepDetailsList' => 'getPrepDetailsList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['fulfillment_network_sku'] = $data['fulfillment_network_sku'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['fulfillmentNetworkSKU'] = $data['fulfillmentNetworkSKU'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['prep_details_list'] = $data['prep_details_list'] ?? null;
+        $this->container['prepDetailsList'] = $data['prepDetailsList'] ?? null;
     }
 
     /**
@@ -214,11 +214,11 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSKU'] === null) {
+            $invalidProperties[] = "'sellerSKU' can't be null";
         }
-        if ($this->container['fulfillment_network_sku'] === null) {
-            $invalidProperties[] = "'fulfillment_network_sku' can't be null";
+        if ($this->container['fulfillmentNetworkSKU'] === null) {
+            $invalidProperties[] = "'fulfillmentNetworkSKU' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
@@ -239,49 +239,49 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSKU The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_network_sku
+     * Gets fulfillmentNetworkSKU
      *
      * @return string
      */
-    public function getFulfillmentNetworkSku()
+    public function getFulfillmentNetworkSKU()
     {
-        return $this->container['fulfillment_network_sku'];
+        return $this->container['fulfillmentNetworkSKU'];
     }
 
     /**
-     * Sets fulfillment_network_sku
+     * Sets fulfillmentNetworkSKU
      *
-     * @param string $fulfillment_network_sku Amazon's fulfillment network SKU of the item.
+     * @param string $fulfillmentNetworkSKU Amazon's fulfillment network SKU of the item.
      *
      * @return self
      */
-    public function setFulfillmentNetworkSku($fulfillment_network_sku)
+    public function setFulfillmentNetworkSKU($fulfillmentNetworkSKU)
     {
-        $this->container['fulfillment_network_sku'] = $fulfillment_network_sku;
+        $this->container['fulfillmentNetworkSKU'] = $fulfillmentNetworkSKU;
 
         return $this;
     }
@@ -311,25 +311,25 @@ class InboundShipmentPlanItem implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets prep_details_list
+     * Gets prepDetailsList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null
      */
     public function getPrepDetailsList()
     {
-        return $this->container['prep_details_list'];
+        return $this->container['prepDetailsList'];
     }
 
     /**
-     * Sets prep_details_list
+     * Sets prepDetailsList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prep_details_list A list of preparation instructions and who is responsible for that preparation.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prepDetailsList A list of preparation instructions and who is responsible for that preparation.
      *
      * @return self
      */
-    public function setPrepDetailsList($prep_details_list)
+    public function setPrepDetailsList($prepDetailsList)
     {
-        $this->container['prep_details_list'] = $prep_details_list;
+        $this->container['prepDetailsList'] = $prepDetailsList;
 
         return $this;
     }

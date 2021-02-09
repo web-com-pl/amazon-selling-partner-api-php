@@ -62,8 +62,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'seller_sku' => 'string',
+        'marketplaceId' => 'string',
+        'sellerSKU' => 'string',
         'status' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\SmallAndLightEligibilityStatus'
     ];
 
@@ -75,8 +75,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'seller_sku' => null,
+        'marketplaceId' => null,
+        'sellerSKU' => null,
         'status' => null
     ];
 
@@ -107,8 +107,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
-        'seller_sku' => 'sellerSKU',
+        'marketplaceId' => 'marketplaceId',
+        'sellerSKU' => 'sellerSKU',
         'status' => 'status'
     ];
 
@@ -118,8 +118,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'seller_sku' => 'setSellerSku',
+        'marketplaceId' => 'setMarketplaceId',
+        'sellerSKU' => 'setSellerSKU',
         'status' => 'setStatus'
     ];
 
@@ -129,8 +129,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'seller_sku' => 'getSellerSku',
+        'marketplaceId' => 'getMarketplaceId',
+        'sellerSKU' => 'getSellerSKU',
         'status' => 'getStatus'
     ];
 
@@ -194,8 +194,8 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
     }
 
@@ -208,11 +208,11 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSKU'] === null) {
+            $invalidProperties[] = "'sellerSKU' can't be null";
         }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
@@ -233,49 +233,49 @@ class SmallAndLightEligibility implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id A marketplace identifier.
+     * @param string $marketplaceId A marketplace identifier.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+     * @param string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }

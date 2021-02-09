@@ -62,11 +62,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'safet_claim_id' => 'string',
-        'reimbursed_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'reason_code' => 'string',
-        'safet_reimbursement_item_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementItem[]'
+        'postedDate' => '\DateTime',
+        'sAFETClaimId' => 'string',
+        'reimbursedAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'reasonCode' => 'string',
+        'sAFETReimbursementItemList' => '\Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementItem[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'safet_claim_id' => null,
-        'reimbursed_amount' => null,
-        'reason_code' => null,
-        'safet_reimbursement_item_list' => null
+        'postedDate' => 'date-time',
+        'sAFETClaimId' => null,
+        'reimbursedAmount' => null,
+        'reasonCode' => null,
+        'sAFETReimbursementItemList' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'safet_claim_id' => 'SAFETClaimId',
-        'reimbursed_amount' => 'ReimbursedAmount',
-        'reason_code' => 'ReasonCode',
-        'safet_reimbursement_item_list' => 'SAFETReimbursementItemList'
+        'postedDate' => 'PostedDate',
+        'sAFETClaimId' => 'SAFETClaimId',
+        'reimbursedAmount' => 'ReimbursedAmount',
+        'reasonCode' => 'ReasonCode',
+        'sAFETReimbursementItemList' => 'SAFETReimbursementItemList'
     ];
 
     /**
@@ -124,11 +124,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'safet_claim_id' => 'setSafetClaimId',
-        'reimbursed_amount' => 'setReimbursedAmount',
-        'reason_code' => 'setReasonCode',
-        'safet_reimbursement_item_list' => 'setSafetReimbursementItemList'
+        'postedDate' => 'setPostedDate',
+        'sAFETClaimId' => 'setSAFETClaimId',
+        'reimbursedAmount' => 'setReimbursedAmount',
+        'reasonCode' => 'setReasonCode',
+        'sAFETReimbursementItemList' => 'setSAFETReimbursementItemList'
     ];
 
     /**
@@ -137,11 +137,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'safet_claim_id' => 'getSafetClaimId',
-        'reimbursed_amount' => 'getReimbursedAmount',
-        'reason_code' => 'getReasonCode',
-        'safet_reimbursement_item_list' => 'getSafetReimbursementItemList'
+        'postedDate' => 'getPostedDate',
+        'sAFETClaimId' => 'getSAFETClaimId',
+        'reimbursedAmount' => 'getReimbursedAmount',
+        'reasonCode' => 'getReasonCode',
+        'sAFETReimbursementItemList' => 'getSAFETReimbursementItemList'
     ];
 
     /**
@@ -204,11 +204,11 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['safet_claim_id'] = $data['safet_claim_id'] ?? null;
-        $this->container['reimbursed_amount'] = $data['reimbursed_amount'] ?? null;
-        $this->container['reason_code'] = $data['reason_code'] ?? null;
-        $this->container['safet_reimbursement_item_list'] = $data['safet_reimbursement_item_list'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['sAFETClaimId'] = $data['sAFETClaimId'] ?? null;
+        $this->container['reimbursedAmount'] = $data['reimbursedAmount'] ?? null;
+        $this->container['reasonCode'] = $data['reasonCode'] ?? null;
+        $this->container['sAFETReimbursementItemList'] = $data['sAFETReimbursementItemList'] ?? null;
     }
 
     /**
@@ -236,121 +236,121 @@ class SAFETReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets safet_claim_id
+     * Gets sAFETClaimId
      *
      * @return string|null
      */
-    public function getSafetClaimId()
+    public function getSAFETClaimId()
     {
-        return $this->container['safet_claim_id'];
+        return $this->container['sAFETClaimId'];
     }
 
     /**
-     * Sets safet_claim_id
+     * Sets sAFETClaimId
      *
-     * @param string|null $safet_claim_id A SAFE-T claim identifier.
+     * @param string|null $sAFETClaimId A SAFE-T claim identifier.
      *
      * @return self
      */
-    public function setSafetClaimId($safet_claim_id)
+    public function setSAFETClaimId($sAFETClaimId)
     {
-        $this->container['safet_claim_id'] = $safet_claim_id;
+        $this->container['sAFETClaimId'] = $sAFETClaimId;
 
         return $this;
     }
 
     /**
-     * Gets reimbursed_amount
+     * Gets reimbursedAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getReimbursedAmount()
     {
-        return $this->container['reimbursed_amount'];
+        return $this->container['reimbursedAmount'];
     }
 
     /**
-     * Sets reimbursed_amount
+     * Sets reimbursedAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $reimbursed_amount reimbursed_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $reimbursedAmount reimbursedAmount
      *
      * @return self
      */
-    public function setReimbursedAmount($reimbursed_amount)
+    public function setReimbursedAmount($reimbursedAmount)
     {
-        $this->container['reimbursed_amount'] = $reimbursed_amount;
+        $this->container['reimbursedAmount'] = $reimbursedAmount;
 
         return $this;
     }
 
     /**
-     * Gets reason_code
+     * Gets reasonCode
      *
      * @return string|null
      */
     public function getReasonCode()
     {
-        return $this->container['reason_code'];
+        return $this->container['reasonCode'];
     }
 
     /**
-     * Sets reason_code
+     * Sets reasonCode
      *
-     * @param string|null $reason_code Indicates why the seller was reimbursed.
+     * @param string|null $reasonCode Indicates why the seller was reimbursed.
      *
      * @return self
      */
-    public function setReasonCode($reason_code)
+    public function setReasonCode($reasonCode)
     {
-        $this->container['reason_code'] = $reason_code;
+        $this->container['reasonCode'] = $reasonCode;
 
         return $this;
     }
 
     /**
-     * Gets safet_reimbursement_item_list
+     * Gets sAFETReimbursementItemList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementItem[]|null
      */
-    public function getSafetReimbursementItemList()
+    public function getSAFETReimbursementItemList()
     {
-        return $this->container['safet_reimbursement_item_list'];
+        return $this->container['sAFETReimbursementItemList'];
     }
 
     /**
-     * Sets safet_reimbursement_item_list
+     * Sets sAFETReimbursementItemList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementItem[]|null $safet_reimbursement_item_list A list of SAFETReimbursementItems.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementItem[]|null $sAFETReimbursementItemList A list of SAFETReimbursementItems.
      *
      * @return self
      */
-    public function setSafetReimbursementItemList($safet_reimbursement_item_list)
+    public function setSAFETReimbursementItemList($sAFETReimbursementItemList)
     {
-        $this->container['safet_reimbursement_item_list'] = $safet_reimbursement_item_list;
+        $this->container['sAFETReimbursementItemList'] = $sAFETReimbursementItemList;
 
         return $this;
     }

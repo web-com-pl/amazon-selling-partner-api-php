@@ -62,8 +62,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_researching_quantity' => 'int',
-        'researching_quantity_breakdown' => '\Webcom\Amazon\Rest\FbaInventoryApi\Model\ResearchingQuantityEntry[]'
+        'totalResearchingQuantity' => 'int',
+        'researchingQuantityBreakdown' => '\Webcom\Amazon\Rest\FbaInventoryApi\Model\ResearchingQuantityEntry[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_researching_quantity' => null,
-        'researching_quantity_breakdown' => null
+        'totalResearchingQuantity' => null,
+        'researchingQuantityBreakdown' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_researching_quantity' => 'totalResearchingQuantity',
-        'researching_quantity_breakdown' => 'researchingQuantityBreakdown'
+        'totalResearchingQuantity' => 'totalResearchingQuantity',
+        'researchingQuantityBreakdown' => 'researchingQuantityBreakdown'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'total_researching_quantity' => 'setTotalResearchingQuantity',
-        'researching_quantity_breakdown' => 'setResearchingQuantityBreakdown'
+        'totalResearchingQuantity' => 'setTotalResearchingQuantity',
+        'researchingQuantityBreakdown' => 'setResearchingQuantityBreakdown'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'total_researching_quantity' => 'getTotalResearchingQuantity',
-        'researching_quantity_breakdown' => 'getResearchingQuantityBreakdown'
+        'totalResearchingQuantity' => 'getTotalResearchingQuantity',
+        'researchingQuantityBreakdown' => 'getResearchingQuantityBreakdown'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_researching_quantity'] = $data['total_researching_quantity'] ?? null;
-        $this->container['researching_quantity_breakdown'] = $data['researching_quantity_breakdown'] ?? null;
+        $this->container['totalResearchingQuantity'] = $data['totalResearchingQuantity'] ?? null;
+        $this->container['researchingQuantityBreakdown'] = $data['researchingQuantityBreakdown'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ResearchingQuantity implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets total_researching_quantity
+     * Gets totalResearchingQuantity
      *
      * @return int|null
      */
     public function getTotalResearchingQuantity()
     {
-        return $this->container['total_researching_quantity'];
+        return $this->container['totalResearchingQuantity'];
     }
 
     /**
-     * Sets total_researching_quantity
+     * Sets totalResearchingQuantity
      *
-     * @param int|null $total_researching_quantity The total number of units currently being researched in Amazon's fulfillment network.
+     * @param int|null $totalResearchingQuantity The total number of units currently being researched in Amazon's fulfillment network.
      *
      * @return self
      */
-    public function setTotalResearchingQuantity($total_researching_quantity)
+    public function setTotalResearchingQuantity($totalResearchingQuantity)
     {
-        $this->container['total_researching_quantity'] = $total_researching_quantity;
+        $this->container['totalResearchingQuantity'] = $totalResearchingQuantity;
 
         return $this;
     }
 
     /**
-     * Gets researching_quantity_breakdown
+     * Gets researchingQuantityBreakdown
      *
      * @return \Webcom\Amazon\Rest\FbaInventoryApi\Model\ResearchingQuantityEntry[]|null
      */
     public function getResearchingQuantityBreakdown()
     {
-        return $this->container['researching_quantity_breakdown'];
+        return $this->container['researchingQuantityBreakdown'];
     }
 
     /**
-     * Sets researching_quantity_breakdown
+     * Sets researchingQuantityBreakdown
      *
-     * @param \Webcom\Amazon\Rest\FbaInventoryApi\Model\ResearchingQuantityEntry[]|null $researching_quantity_breakdown A list of quantity details for items currently being researched.
+     * @param \Webcom\Amazon\Rest\FbaInventoryApi\Model\ResearchingQuantityEntry[]|null $researchingQuantityBreakdown A list of quantity details for items currently being researched.
      *
      * @return self
      */
-    public function setResearchingQuantityBreakdown($researching_quantity_breakdown)
+    public function setResearchingQuantityBreakdown($researchingQuantityBreakdown)
     {
-        $this->container['researching_quantity_breakdown'] = $researching_quantity_breakdown;
+        $this->container['researchingQuantityBreakdown'] = $researchingQuantityBreakdown;
 
         return $this;
     }

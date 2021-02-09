@@ -62,8 +62,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'next_token' => 'string',
-        'financial_events' => '\Webcom\Amazon\Rest\FinancesApi\Model\FinancialEvents'
+        'nextToken' => 'string',
+        'financialEvents' => '\Webcom\Amazon\Rest\FinancesApi\Model\FinancialEvents'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'next_token' => null,
-        'financial_events' => null
+        'nextToken' => null,
+        'financialEvents' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_token' => 'NextToken',
-        'financial_events' => 'FinancialEvents'
+        'nextToken' => 'NextToken',
+        'financialEvents' => 'FinancialEvents'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'next_token' => 'setNextToken',
-        'financial_events' => 'setFinancialEvents'
+        'nextToken' => 'setNextToken',
+        'financialEvents' => 'setFinancialEvents'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'next_token' => 'getNextToken',
-        'financial_events' => 'getFinancialEvents'
+        'nextToken' => 'getNextToken',
+        'financialEvents' => 'getFinancialEvents'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_token'] = $data['next_token'] ?? null;
-        $this->container['financial_events'] = $data['financial_events'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
+        $this->container['financialEvents'] = $data['financialEvents'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ListFinancialEventsPayload implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }
 
     /**
-     * Gets financial_events
+     * Gets financialEvents
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEvents|null
      */
     public function getFinancialEvents()
     {
-        return $this->container['financial_events'];
+        return $this->container['financialEvents'];
     }
 
     /**
-     * Sets financial_events
+     * Sets financialEvents
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEvents|null $financial_events financial_events
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FinancialEvents|null $financialEvents financialEvents
      *
      * @return self
      */
-    public function setFinancialEvents($financial_events)
+    public function setFinancialEvents($financialEvents)
     {
-        $this->container['financial_events'] = $financial_events;
+        $this->container['financialEvents'] = $financialEvents;
 
         return $this;
     }

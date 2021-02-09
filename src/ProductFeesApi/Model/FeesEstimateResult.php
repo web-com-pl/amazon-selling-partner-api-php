@@ -63,8 +63,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'status' => 'string',
-        'fees_estimate_identifier' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateIdentifier',
-        'fees_estimate' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimate',
+        'feesEstimateIdentifier' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateIdentifier',
+        'feesEstimate' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimate',
         'error' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateError'
     ];
 
@@ -77,8 +77,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'status' => null,
-        'fees_estimate_identifier' => null,
-        'fees_estimate' => null,
+        'feesEstimateIdentifier' => null,
+        'feesEstimate' => null,
         'error' => null
     ];
 
@@ -110,8 +110,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'status' => 'Status',
-        'fees_estimate_identifier' => 'FeesEstimateIdentifier',
-        'fees_estimate' => 'FeesEstimate',
+        'feesEstimateIdentifier' => 'FeesEstimateIdentifier',
+        'feesEstimate' => 'FeesEstimate',
         'error' => 'Error'
     ];
 
@@ -122,8 +122,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'status' => 'setStatus',
-        'fees_estimate_identifier' => 'setFeesEstimateIdentifier',
-        'fees_estimate' => 'setFeesEstimate',
+        'feesEstimateIdentifier' => 'setFeesEstimateIdentifier',
+        'feesEstimate' => 'setFeesEstimate',
         'error' => 'setError'
     ];
 
@@ -134,8 +134,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'status' => 'getStatus',
-        'fees_estimate_identifier' => 'getFeesEstimateIdentifier',
-        'fees_estimate' => 'getFeesEstimate',
+        'feesEstimateIdentifier' => 'getFeesEstimateIdentifier',
+        'feesEstimate' => 'getFeesEstimate',
         'error' => 'getError'
     ];
 
@@ -200,8 +200,8 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(array $data = null)
     {
         $this->container['status'] = $data['status'] ?? null;
-        $this->container['fees_estimate_identifier'] = $data['fees_estimate_identifier'] ?? null;
-        $this->container['fees_estimate'] = $data['fees_estimate'] ?? null;
+        $this->container['feesEstimateIdentifier'] = $data['feesEstimateIdentifier'] ?? null;
+        $this->container['feesEstimate'] = $data['feesEstimate'] ?? null;
         $this->container['error'] = $data['error'] ?? null;
     }
 
@@ -254,49 +254,49 @@ class FeesEstimateResult implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets fees_estimate_identifier
+     * Gets feesEstimateIdentifier
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateIdentifier|null
      */
     public function getFeesEstimateIdentifier()
     {
-        return $this->container['fees_estimate_identifier'];
+        return $this->container['feesEstimateIdentifier'];
     }
 
     /**
-     * Sets fees_estimate_identifier
+     * Sets feesEstimateIdentifier
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateIdentifier|null $fees_estimate_identifier fees_estimate_identifier
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateIdentifier|null $feesEstimateIdentifier feesEstimateIdentifier
      *
      * @return self
      */
-    public function setFeesEstimateIdentifier($fees_estimate_identifier)
+    public function setFeesEstimateIdentifier($feesEstimateIdentifier)
     {
-        $this->container['fees_estimate_identifier'] = $fees_estimate_identifier;
+        $this->container['feesEstimateIdentifier'] = $feesEstimateIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets fees_estimate
+     * Gets feesEstimate
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimate|null
      */
     public function getFeesEstimate()
     {
-        return $this->container['fees_estimate'];
+        return $this->container['feesEstimate'];
     }
 
     /**
-     * Sets fees_estimate
+     * Sets feesEstimate
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimate|null $fees_estimate fees_estimate
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimate|null $feesEstimate feesEstimate
      *
      * @return self
      */
-    public function setFeesEstimate($fees_estimate)
+    public function setFeesEstimate($feesEstimate)
     {
-        $this->container['fees_estimate'] = $fees_estimate;
+        $this->container['feesEstimate'] = $feesEstimate;
 
         return $this;
     }

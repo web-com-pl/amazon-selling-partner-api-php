@@ -62,8 +62,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'status' => 'string',
-        'seller_sku' => 'string',
-        'asin' => 'string',
+        'sellerSKU' => 'string',
+        'aSIN' => 'string',
         'product' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\Product'
     ];
 
@@ -76,8 +76,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'status' => null,
-        'seller_sku' => null,
-        'asin' => null,
+        'sellerSKU' => null,
+        'aSIN' => null,
         'product' => null
     ];
 
@@ -109,8 +109,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'status' => 'status',
-        'seller_sku' => 'SellerSKU',
-        'asin' => 'ASIN',
+        'sellerSKU' => 'SellerSKU',
+        'aSIN' => 'ASIN',
         'product' => 'Product'
     ];
 
@@ -121,8 +121,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'status' => 'setStatus',
-        'seller_sku' => 'setSellerSku',
-        'asin' => 'setAsin',
+        'sellerSKU' => 'setSellerSKU',
+        'aSIN' => 'setASIN',
         'product' => 'setProduct'
     ];
 
@@ -133,8 +133,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'status' => 'getStatus',
-        'seller_sku' => 'getSellerSku',
-        'asin' => 'getAsin',
+        'sellerSKU' => 'getSellerSKU',
+        'aSIN' => 'getASIN',
         'product' => 'getProduct'
     ];
 
@@ -199,8 +199,8 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['status'] = $data['status'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
         $this->container['product'] = $data['product'] ?? null;
     }
 
@@ -256,49 +256,49 @@ class Price implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller stock keeping unit (SKU) of the item.
+     * @param string|null $sellerSKU The seller stock keeping unit (SKU) of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }

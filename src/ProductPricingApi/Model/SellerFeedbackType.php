@@ -62,8 +62,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_positive_feedback_rating' => 'double',
-        'feedback_count' => 'int'
+        'sellerPositiveFeedbackRating' => 'double',
+        'feedbackCount' => 'int'
     ];
 
     /**
@@ -74,8 +74,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_positive_feedback_rating' => 'double',
-        'feedback_count' => 'int64'
+        'sellerPositiveFeedbackRating' => 'double',
+        'feedbackCount' => 'int64'
     ];
 
     /**
@@ -105,8 +105,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_positive_feedback_rating' => 'SellerPositiveFeedbackRating',
-        'feedback_count' => 'FeedbackCount'
+        'sellerPositiveFeedbackRating' => 'SellerPositiveFeedbackRating',
+        'feedbackCount' => 'FeedbackCount'
     ];
 
     /**
@@ -115,8 +115,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'seller_positive_feedback_rating' => 'setSellerPositiveFeedbackRating',
-        'feedback_count' => 'setFeedbackCount'
+        'sellerPositiveFeedbackRating' => 'setSellerPositiveFeedbackRating',
+        'feedbackCount' => 'setFeedbackCount'
     ];
 
     /**
@@ -125,8 +125,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'seller_positive_feedback_rating' => 'getSellerPositiveFeedbackRating',
-        'feedback_count' => 'getFeedbackCount'
+        'sellerPositiveFeedbackRating' => 'getSellerPositiveFeedbackRating',
+        'feedbackCount' => 'getFeedbackCount'
     ];
 
     /**
@@ -189,8 +189,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_positive_feedback_rating'] = $data['seller_positive_feedback_rating'] ?? null;
-        $this->container['feedback_count'] = $data['feedback_count'] ?? null;
+        $this->container['sellerPositiveFeedbackRating'] = $data['sellerPositiveFeedbackRating'] ?? null;
+        $this->container['feedbackCount'] = $data['feedbackCount'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['feedback_count'] === null) {
-            $invalidProperties[] = "'feedback_count' can't be null";
+        if ($this->container['feedbackCount'] === null) {
+            $invalidProperties[] = "'feedbackCount' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,49 +221,49 @@ class SellerFeedbackType implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets seller_positive_feedback_rating
+     * Gets sellerPositiveFeedbackRating
      *
      * @return double|null
      */
     public function getSellerPositiveFeedbackRating()
     {
-        return $this->container['seller_positive_feedback_rating'];
+        return $this->container['sellerPositiveFeedbackRating'];
     }
 
     /**
-     * Sets seller_positive_feedback_rating
+     * Sets sellerPositiveFeedbackRating
      *
-     * @param double|null $seller_positive_feedback_rating The percentage of positive feedback for the seller in the past 365 days.
+     * @param double|null $sellerPositiveFeedbackRating The percentage of positive feedback for the seller in the past 365 days.
      *
      * @return self
      */
-    public function setSellerPositiveFeedbackRating($seller_positive_feedback_rating)
+    public function setSellerPositiveFeedbackRating($sellerPositiveFeedbackRating)
     {
-        $this->container['seller_positive_feedback_rating'] = $seller_positive_feedback_rating;
+        $this->container['sellerPositiveFeedbackRating'] = $sellerPositiveFeedbackRating;
 
         return $this;
     }
 
     /**
-     * Gets feedback_count
+     * Gets feedbackCount
      *
      * @return int
      */
     public function getFeedbackCount()
     {
-        return $this->container['feedback_count'];
+        return $this->container['feedbackCount'];
     }
 
     /**
-     * Sets feedback_count
+     * Sets feedbackCount
      *
-     * @param int $feedback_count The number of ratings received about the seller.
+     * @param int $feedbackCount The number of ratings received about the seller.
      *
      * @return self
      */
-    public function setFeedbackCount($feedback_count)
+    public function setFeedbackCount($feedbackCount)
     {
-        $this->container['feedback_count'] = $feedback_count;
+        $this->container['feedbackCount'] = $feedbackCount;
 
         return $this;
     }

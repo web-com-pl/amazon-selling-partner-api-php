@@ -62,7 +62,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_id' => 'string'
+        'sellerId' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_id' => null
+        'sellerId' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_id' => 'sellerId'
+        'sellerId' => 'sellerId'
     ];
 
     /**
@@ -112,7 +112,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_id' => 'setSellerId'
+        'sellerId' => 'setSellerId'
     ];
 
     /**
@@ -121,7 +121,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_id' => 'getSellerId'
+        'sellerId' => 'getSellerId'
     ];
 
     /**
@@ -184,7 +184,7 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_id'] = $data['seller_id'] ?? null;
+        $this->container['sellerId'] = $data['sellerId'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['seller_id']) && !preg_match("/^[A-Z0-9]*$/", $this->container['seller_id'])) {
-            $invalidProperties[] = "invalid value for 'seller_id', must be conform to the pattern /^[A-Z0-9]*$/.";
+        if (!is_null($this->container['sellerId']) && !preg_match("/^[A-Z0-9]*$/", $this->container['sellerId'])) {
+            $invalidProperties[] = "invalid value for 'sellerId', must be conform to the pattern /^[A-Z0-9]*$/.";
         }
 
         return $invalidProperties;
@@ -216,30 +216,30 @@ class Seller implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_id
+     * Gets sellerId
      *
      * @return string|null
      */
     public function getSellerId()
     {
-        return $this->container['seller_id'];
+        return $this->container['sellerId'];
     }
 
     /**
-     * Sets seller_id
+     * Sets sellerId
      *
-     * @param string|null $seller_id The identifier of the seller of the service job.
+     * @param string|null $sellerId The identifier of the seller of the service job.
      *
      * @return self
      */
-    public function setSellerId($seller_id)
+    public function setSellerId($sellerId)
     {
 
-        if (!is_null($seller_id) && (!preg_match("/^[A-Z0-9]*$/", $seller_id))) {
-            throw new \InvalidArgumentException("invalid value for $seller_id when calling Seller., must conform to the pattern /^[A-Z0-9]*$/.");
+        if (!is_null($sellerId) && (!preg_match("/^[A-Z0-9]*$/", $sellerId))) {
+            throw new \InvalidArgumentException("invalid value for $sellerId when calling Seller., must conform to the pattern /^[A-Z0-9]*$/.");
         }
 
-        $this->container['seller_id'] = $seller_id;
+        $this->container['sellerId'] = $sellerId;
 
         return $this;
     }

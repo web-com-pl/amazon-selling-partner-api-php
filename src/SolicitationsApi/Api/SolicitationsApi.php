@@ -118,32 +118,32 @@ class SolicitationsApi
     /**
      * Operation createProductReviewAndSellerFeedbackSolicitation
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\SolicitationsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse
      */
-    public function createProductReviewAndSellerFeedbackSolicitation($amazon_order_id, $marketplace_ids)
+    public function createProductReviewAndSellerFeedbackSolicitation($amazonOrderId, $marketplaceIds)
     {
-        list($response) = $this->createProductReviewAndSellerFeedbackSolicitationWithHttpInfo($amazon_order_id, $marketplace_ids);
+        list($response) = $this->createProductReviewAndSellerFeedbackSolicitationWithHttpInfo($amazonOrderId, $marketplaceIds);
         return $response;
     }
 
     /**
      * Operation createProductReviewAndSellerFeedbackSolicitationWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\SolicitationsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createProductReviewAndSellerFeedbackSolicitationWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function createProductReviewAndSellerFeedbackSolicitationWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
-        $request = $this->createProductReviewAndSellerFeedbackSolicitationRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->createProductReviewAndSellerFeedbackSolicitationRequest($amazonOrderId, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -383,15 +383,15 @@ class SolicitationsApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductReviewAndSellerFeedbackSolicitationAsync($amazon_order_id, $marketplace_ids)
+    public function createProductReviewAndSellerFeedbackSolicitationAsync($amazonOrderId, $marketplaceIds)
     {
-        return $this->createProductReviewAndSellerFeedbackSolicitationAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+        return $this->createProductReviewAndSellerFeedbackSolicitationAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -404,16 +404,16 @@ class SolicitationsApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createProductReviewAndSellerFeedbackSolicitationAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function createProductReviewAndSellerFeedbackSolicitationAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
         $returnType = '\Webcom\Amazon\Rest\SolicitationsApi\Model\CreateProductReviewAndSellerFeedbackSolicitationResponse';
-        $request = $this->createProductReviewAndSellerFeedbackSolicitationRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->createProductReviewAndSellerFeedbackSolicitationRequest($amazonOrderId, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -452,28 +452,28 @@ class SolicitationsApi
     /**
      * Create request for operation 'createProductReviewAndSellerFeedbackSolicitation'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a solicitation is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createProductReviewAndSellerFeedbackSolicitationRequest($amazon_order_id, $marketplace_ids)
+    public function createProductReviewAndSellerFeedbackSolicitationRequest($amazonOrderId, $marketplaceIds)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createProductReviewAndSellerFeedbackSolicitation'
+                'Missing the required parameter $amazonOrderId when calling createProductReviewAndSellerFeedbackSolicitation'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createProductReviewAndSellerFeedbackSolicitation'
+                'Missing the required parameter $marketplaceIds when calling createProductReviewAndSellerFeedbackSolicitation'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling SolicitationsApi.createProductReviewAndSellerFeedbackSolicitation, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling SolicitationsApi.createProductReviewAndSellerFeedbackSolicitation, number of items must be less than or equal to 1.');
         }
 
 
@@ -485,19 +485,19 @@ class SolicitationsApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -563,32 +563,32 @@ class SolicitationsApi
     /**
      * Operation getSolicitationActionsForOrder
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\SolicitationsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse
      */
-    public function getSolicitationActionsForOrder($amazon_order_id, $marketplace_ids)
+    public function getSolicitationActionsForOrder($amazonOrderId, $marketplaceIds)
     {
-        list($response) = $this->getSolicitationActionsForOrderWithHttpInfo($amazon_order_id, $marketplace_ids);
+        list($response) = $this->getSolicitationActionsForOrderWithHttpInfo($amazonOrderId, $marketplaceIds);
         return $response;
     }
 
     /**
      * Operation getSolicitationActionsForOrderWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\SolicitationsApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse|\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSolicitationActionsForOrderWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getSolicitationActionsForOrderWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
-        $request = $this->getSolicitationActionsForOrderRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getSolicitationActionsForOrderRequest($amazonOrderId, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -828,15 +828,15 @@ class SolicitationsApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSolicitationActionsForOrderAsync($amazon_order_id, $marketplace_ids)
+    public function getSolicitationActionsForOrderAsync($amazonOrderId, $marketplaceIds)
     {
-        return $this->getSolicitationActionsForOrderAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+        return $this->getSolicitationActionsForOrderAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -849,16 +849,16 @@ class SolicitationsApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSolicitationActionsForOrderAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getSolicitationActionsForOrderAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
         $returnType = '\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionsForOrderResponse';
-        $request = $this->getSolicitationActionsForOrderRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getSolicitationActionsForOrderRequest($amazonOrderId, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -897,28 +897,28 @@ class SolicitationsApi
     /**
      * Create request for operation 'getSolicitationActionsForOrder'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available solicitation types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getSolicitationActionsForOrderRequest($amazon_order_id, $marketplace_ids)
+    public function getSolicitationActionsForOrderRequest($amazonOrderId, $marketplaceIds)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling getSolicitationActionsForOrder'
+                'Missing the required parameter $amazonOrderId when calling getSolicitationActionsForOrder'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling getSolicitationActionsForOrder'
+                'Missing the required parameter $marketplaceIds when calling getSolicitationActionsForOrder'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling SolicitationsApi.getSolicitationActionsForOrder, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling SolicitationsApi.getSolicitationActionsForOrder, number of items must be less than or equal to 1.');
         }
 
 
@@ -930,19 +930,19 @@ class SolicitationsApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }

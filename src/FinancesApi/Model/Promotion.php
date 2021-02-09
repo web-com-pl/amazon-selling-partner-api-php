@@ -62,9 +62,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'promotion_type' => 'string',
-        'promotion_id' => 'string',
-        'promotion_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'promotionType' => 'string',
+        'promotionId' => 'string',
+        'promotionAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -75,9 +75,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'promotion_type' => null,
-        'promotion_id' => null,
-        'promotion_amount' => null
+        'promotionType' => null,
+        'promotionId' => null,
+        'promotionAmount' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'promotion_type' => 'PromotionType',
-        'promotion_id' => 'PromotionId',
-        'promotion_amount' => 'PromotionAmount'
+        'promotionType' => 'PromotionType',
+        'promotionId' => 'PromotionId',
+        'promotionAmount' => 'PromotionAmount'
     ];
 
     /**
@@ -118,9 +118,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'promotion_type' => 'setPromotionType',
-        'promotion_id' => 'setPromotionId',
-        'promotion_amount' => 'setPromotionAmount'
+        'promotionType' => 'setPromotionType',
+        'promotionId' => 'setPromotionId',
+        'promotionAmount' => 'setPromotionAmount'
     ];
 
     /**
@@ -129,9 +129,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'promotion_type' => 'getPromotionType',
-        'promotion_id' => 'getPromotionId',
-        'promotion_amount' => 'getPromotionAmount'
+        'promotionType' => 'getPromotionType',
+        'promotionId' => 'getPromotionId',
+        'promotionAmount' => 'getPromotionAmount'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['promotion_type'] = $data['promotion_type'] ?? null;
-        $this->container['promotion_id'] = $data['promotion_id'] ?? null;
-        $this->container['promotion_amount'] = $data['promotion_amount'] ?? null;
+        $this->container['promotionType'] = $data['promotionType'] ?? null;
+        $this->container['promotionId'] = $data['promotionId'] ?? null;
+        $this->container['promotionAmount'] = $data['promotionAmount'] ?? null;
     }
 
     /**
@@ -224,73 +224,73 @@ class Promotion implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets promotion_type
+     * Gets promotionType
      *
      * @return string|null
      */
     public function getPromotionType()
     {
-        return $this->container['promotion_type'];
+        return $this->container['promotionType'];
     }
 
     /**
-     * Sets promotion_type
+     * Sets promotionType
      *
-     * @param string|null $promotion_type The type of promotion.
+     * @param string|null $promotionType The type of promotion.
      *
      * @return self
      */
-    public function setPromotionType($promotion_type)
+    public function setPromotionType($promotionType)
     {
-        $this->container['promotion_type'] = $promotion_type;
+        $this->container['promotionType'] = $promotionType;
 
         return $this;
     }
 
     /**
-     * Gets promotion_id
+     * Gets promotionId
      *
      * @return string|null
      */
     public function getPromotionId()
     {
-        return $this->container['promotion_id'];
+        return $this->container['promotionId'];
     }
 
     /**
-     * Sets promotion_id
+     * Sets promotionId
      *
-     * @param string|null $promotion_id The seller-specified identifier for the promotion.
+     * @param string|null $promotionId The seller-specified identifier for the promotion.
      *
      * @return self
      */
-    public function setPromotionId($promotion_id)
+    public function setPromotionId($promotionId)
     {
-        $this->container['promotion_id'] = $promotion_id;
+        $this->container['promotionId'] = $promotionId;
 
         return $this;
     }
 
     /**
-     * Gets promotion_amount
+     * Gets promotionAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getPromotionAmount()
     {
-        return $this->container['promotion_amount'];
+        return $this->container['promotionAmount'];
     }
 
     /**
-     * Sets promotion_amount
+     * Sets promotionAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $promotion_amount promotion_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $promotionAmount promotionAmount
      *
      * @return self
      */
-    public function setPromotionAmount($promotion_amount)
+    public function setPromotionAmount($promotionAmount)
     {
-        $this->container['promotion_amount'] = $promotion_amount;
+        $this->container['promotionAmount'] = $promotionAmount;
 
         return $this;
     }

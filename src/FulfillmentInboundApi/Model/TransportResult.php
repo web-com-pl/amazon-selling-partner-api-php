@@ -62,9 +62,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transport_status' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportStatus',
-        'error_code' => 'string',
-        'error_description' => 'string'
+        'transportStatus' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportStatus',
+        'errorCode' => 'string',
+        'errorDescription' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transport_status' => null,
-        'error_code' => null,
-        'error_description' => null
+        'transportStatus' => null,
+        'errorCode' => null,
+        'errorDescription' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'transport_status' => 'TransportStatus',
-        'error_code' => 'ErrorCode',
-        'error_description' => 'ErrorDescription'
+        'transportStatus' => 'TransportStatus',
+        'errorCode' => 'ErrorCode',
+        'errorDescription' => 'ErrorDescription'
     ];
 
     /**
@@ -118,9 +118,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'transport_status' => 'setTransportStatus',
-        'error_code' => 'setErrorCode',
-        'error_description' => 'setErrorDescription'
+        'transportStatus' => 'setTransportStatus',
+        'errorCode' => 'setErrorCode',
+        'errorDescription' => 'setErrorDescription'
     ];
 
     /**
@@ -129,9 +129,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'transport_status' => 'getTransportStatus',
-        'error_code' => 'getErrorCode',
-        'error_description' => 'getErrorDescription'
+        'transportStatus' => 'getTransportStatus',
+        'errorCode' => 'getErrorCode',
+        'errorDescription' => 'getErrorDescription'
     ];
 
     /**
@@ -194,9 +194,9 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['transport_status'] = $data['transport_status'] ?? null;
-        $this->container['error_code'] = $data['error_code'] ?? null;
-        $this->container['error_description'] = $data['error_description'] ?? null;
+        $this->container['transportStatus'] = $data['transportStatus'] ?? null;
+        $this->container['errorCode'] = $data['errorCode'] ?? null;
+        $this->container['errorDescription'] = $data['errorDescription'] ?? null;
     }
 
     /**
@@ -208,8 +208,8 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['transport_status'] === null) {
-            $invalidProperties[] = "'transport_status' can't be null";
+        if ($this->container['transportStatus'] === null) {
+            $invalidProperties[] = "'transportStatus' can't be null";
         }
         return $invalidProperties;
     }
@@ -227,73 +227,73 @@ class TransportResult implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets transport_status
+     * Gets transportStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportStatus
      */
     public function getTransportStatus()
     {
-        return $this->container['transport_status'];
+        return $this->container['transportStatus'];
     }
 
     /**
-     * Sets transport_status
+     * Sets transportStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportStatus $transport_status transport_status
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportStatus $transportStatus transportStatus
      *
      * @return self
      */
-    public function setTransportStatus($transport_status)
+    public function setTransportStatus($transportStatus)
     {
-        $this->container['transport_status'] = $transport_status;
+        $this->container['transportStatus'] = $transportStatus;
 
         return $this;
     }
 
     /**
-     * Gets error_code
+     * Gets errorCode
      *
      * @return string|null
      */
     public function getErrorCode()
     {
-        return $this->container['error_code'];
+        return $this->container['errorCode'];
     }
 
     /**
-     * Sets error_code
+     * Sets errorCode
      *
-     * @param string|null $error_code An error code that identifies the type of error that occured.
+     * @param string|null $errorCode An error code that identifies the type of error that occured.
      *
      * @return self
      */
-    public function setErrorCode($error_code)
+    public function setErrorCode($errorCode)
     {
-        $this->container['error_code'] = $error_code;
+        $this->container['errorCode'] = $errorCode;
 
         return $this;
     }
 
     /**
-     * Gets error_description
+     * Gets errorDescription
      *
      * @return string|null
      */
     public function getErrorDescription()
     {
-        return $this->container['error_description'];
+        return $this->container['errorDescription'];
     }
 
     /**
-     * Sets error_description
+     * Sets errorDescription
      *
-     * @param string|null $error_description A message that describes the error condition.
+     * @param string|null $errorDescription A message that describes the error condition.
      *
      * @return self
      */
-    public function setErrorDescription($error_description)
+    public function setErrorDescription($errorDescription)
     {
-        $this->container['error_description'] = $error_description;
+        $this->container['errorDescription'] = $errorDescription;
 
         return $this;
     }

@@ -61,20 +61,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'package_number' => 'int',
-        'tracking_number' => 'string',
-        'customer_tracking_link' => 'string',
-        'carrier_code' => 'string',
-        'carrier_phone_number' => 'string',
-        'carrier_url' => 'string',
-        'ship_date' => '\DateTime',
-        'estimated_arrival_date' => '\DateTime',
-        'ship_to_address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress',
-        'current_status' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CurrentStatus',
-        'current_status_description' => 'string',
-        'signed_for_by' => 'string',
-        'additional_location_info' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\AdditionalLocationInfo',
-        'tracking_events' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingEvent[]'
+        'packageNumber' => 'int',
+        'trackingNumber' => 'string',
+        'customerTrackingLink' => 'string',
+        'carrierCode' => 'string',
+        'carrierPhoneNumber' => 'string',
+        'carrierURL' => 'string',
+        'shipDate' => '\DateTime',
+        'estimatedArrivalDate' => '\DateTime',
+        'shipToAddress' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress',
+        'currentStatus' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CurrentStatus',
+        'currentStatusDescription' => 'string',
+        'signedForBy' => 'string',
+        'additionalLocationInfo' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\AdditionalLocationInfo',
+        'trackingEvents' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingEvent[]'
     ];
 
     /**
@@ -85,20 +85,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'package_number' => 'int32',
-        'tracking_number' => null,
-        'customer_tracking_link' => null,
-        'carrier_code' => null,
-        'carrier_phone_number' => null,
-        'carrier_url' => null,
-        'ship_date' => 'date-time',
-        'estimated_arrival_date' => 'date-time',
-        'ship_to_address' => null,
-        'current_status' => null,
-        'current_status_description' => null,
-        'signed_for_by' => null,
-        'additional_location_info' => null,
-        'tracking_events' => null
+        'packageNumber' => 'int32',
+        'trackingNumber' => null,
+        'customerTrackingLink' => null,
+        'carrierCode' => null,
+        'carrierPhoneNumber' => null,
+        'carrierURL' => null,
+        'shipDate' => 'date-time',
+        'estimatedArrivalDate' => 'date-time',
+        'shipToAddress' => null,
+        'currentStatus' => null,
+        'currentStatusDescription' => null,
+        'signedForBy' => null,
+        'additionalLocationInfo' => null,
+        'trackingEvents' => null
     ];
 
     /**
@@ -128,20 +128,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'package_number' => 'packageNumber',
-        'tracking_number' => 'trackingNumber',
-        'customer_tracking_link' => 'customerTrackingLink',
-        'carrier_code' => 'carrierCode',
-        'carrier_phone_number' => 'carrierPhoneNumber',
-        'carrier_url' => 'carrierURL',
-        'ship_date' => 'shipDate',
-        'estimated_arrival_date' => 'estimatedArrivalDate',
-        'ship_to_address' => 'shipToAddress',
-        'current_status' => 'currentStatus',
-        'current_status_description' => 'currentStatusDescription',
-        'signed_for_by' => 'signedForBy',
-        'additional_location_info' => 'additionalLocationInfo',
-        'tracking_events' => 'trackingEvents'
+        'packageNumber' => 'packageNumber',
+        'trackingNumber' => 'trackingNumber',
+        'customerTrackingLink' => 'customerTrackingLink',
+        'carrierCode' => 'carrierCode',
+        'carrierPhoneNumber' => 'carrierPhoneNumber',
+        'carrierURL' => 'carrierURL',
+        'shipDate' => 'shipDate',
+        'estimatedArrivalDate' => 'estimatedArrivalDate',
+        'shipToAddress' => 'shipToAddress',
+        'currentStatus' => 'currentStatus',
+        'currentStatusDescription' => 'currentStatusDescription',
+        'signedForBy' => 'signedForBy',
+        'additionalLocationInfo' => 'additionalLocationInfo',
+        'trackingEvents' => 'trackingEvents'
     ];
 
     /**
@@ -150,20 +150,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'package_number' => 'setPackageNumber',
-        'tracking_number' => 'setTrackingNumber',
-        'customer_tracking_link' => 'setCustomerTrackingLink',
-        'carrier_code' => 'setCarrierCode',
-        'carrier_phone_number' => 'setCarrierPhoneNumber',
-        'carrier_url' => 'setCarrierUrl',
-        'ship_date' => 'setShipDate',
-        'estimated_arrival_date' => 'setEstimatedArrivalDate',
-        'ship_to_address' => 'setShipToAddress',
-        'current_status' => 'setCurrentStatus',
-        'current_status_description' => 'setCurrentStatusDescription',
-        'signed_for_by' => 'setSignedForBy',
-        'additional_location_info' => 'setAdditionalLocationInfo',
-        'tracking_events' => 'setTrackingEvents'
+        'packageNumber' => 'setPackageNumber',
+        'trackingNumber' => 'setTrackingNumber',
+        'customerTrackingLink' => 'setCustomerTrackingLink',
+        'carrierCode' => 'setCarrierCode',
+        'carrierPhoneNumber' => 'setCarrierPhoneNumber',
+        'carrierURL' => 'setCarrierURL',
+        'shipDate' => 'setShipDate',
+        'estimatedArrivalDate' => 'setEstimatedArrivalDate',
+        'shipToAddress' => 'setShipToAddress',
+        'currentStatus' => 'setCurrentStatus',
+        'currentStatusDescription' => 'setCurrentStatusDescription',
+        'signedForBy' => 'setSignedForBy',
+        'additionalLocationInfo' => 'setAdditionalLocationInfo',
+        'trackingEvents' => 'setTrackingEvents'
     ];
 
     /**
@@ -172,20 +172,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'package_number' => 'getPackageNumber',
-        'tracking_number' => 'getTrackingNumber',
-        'customer_tracking_link' => 'getCustomerTrackingLink',
-        'carrier_code' => 'getCarrierCode',
-        'carrier_phone_number' => 'getCarrierPhoneNumber',
-        'carrier_url' => 'getCarrierUrl',
-        'ship_date' => 'getShipDate',
-        'estimated_arrival_date' => 'getEstimatedArrivalDate',
-        'ship_to_address' => 'getShipToAddress',
-        'current_status' => 'getCurrentStatus',
-        'current_status_description' => 'getCurrentStatusDescription',
-        'signed_for_by' => 'getSignedForBy',
-        'additional_location_info' => 'getAdditionalLocationInfo',
-        'tracking_events' => 'getTrackingEvents'
+        'packageNumber' => 'getPackageNumber',
+        'trackingNumber' => 'getTrackingNumber',
+        'customerTrackingLink' => 'getCustomerTrackingLink',
+        'carrierCode' => 'getCarrierCode',
+        'carrierPhoneNumber' => 'getCarrierPhoneNumber',
+        'carrierURL' => 'getCarrierURL',
+        'shipDate' => 'getShipDate',
+        'estimatedArrivalDate' => 'getEstimatedArrivalDate',
+        'shipToAddress' => 'getShipToAddress',
+        'currentStatus' => 'getCurrentStatus',
+        'currentStatusDescription' => 'getCurrentStatusDescription',
+        'signedForBy' => 'getSignedForBy',
+        'additionalLocationInfo' => 'getAdditionalLocationInfo',
+        'trackingEvents' => 'getTrackingEvents'
     ];
 
     /**
@@ -248,20 +248,20 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['package_number'] = $data['package_number'] ?? null;
-        $this->container['tracking_number'] = $data['tracking_number'] ?? null;
-        $this->container['customer_tracking_link'] = $data['customer_tracking_link'] ?? null;
-        $this->container['carrier_code'] = $data['carrier_code'] ?? null;
-        $this->container['carrier_phone_number'] = $data['carrier_phone_number'] ?? null;
-        $this->container['carrier_url'] = $data['carrier_url'] ?? null;
-        $this->container['ship_date'] = $data['ship_date'] ?? null;
-        $this->container['estimated_arrival_date'] = $data['estimated_arrival_date'] ?? null;
-        $this->container['ship_to_address'] = $data['ship_to_address'] ?? null;
-        $this->container['current_status'] = $data['current_status'] ?? null;
-        $this->container['current_status_description'] = $data['current_status_description'] ?? null;
-        $this->container['signed_for_by'] = $data['signed_for_by'] ?? null;
-        $this->container['additional_location_info'] = $data['additional_location_info'] ?? null;
-        $this->container['tracking_events'] = $data['tracking_events'] ?? null;
+        $this->container['packageNumber'] = $data['packageNumber'] ?? null;
+        $this->container['trackingNumber'] = $data['trackingNumber'] ?? null;
+        $this->container['customerTrackingLink'] = $data['customerTrackingLink'] ?? null;
+        $this->container['carrierCode'] = $data['carrierCode'] ?? null;
+        $this->container['carrierPhoneNumber'] = $data['carrierPhoneNumber'] ?? null;
+        $this->container['carrierURL'] = $data['carrierURL'] ?? null;
+        $this->container['shipDate'] = $data['shipDate'] ?? null;
+        $this->container['estimatedArrivalDate'] = $data['estimatedArrivalDate'] ?? null;
+        $this->container['shipToAddress'] = $data['shipToAddress'] ?? null;
+        $this->container['currentStatus'] = $data['currentStatus'] ?? null;
+        $this->container['currentStatusDescription'] = $data['currentStatusDescription'] ?? null;
+        $this->container['signedForBy'] = $data['signedForBy'] ?? null;
+        $this->container['additionalLocationInfo'] = $data['additionalLocationInfo'] ?? null;
+        $this->container['trackingEvents'] = $data['trackingEvents'] ?? null;
     }
 
     /**
@@ -273,8 +273,8 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['package_number'] === null) {
-            $invalidProperties[] = "'package_number' can't be null";
+        if ($this->container['packageNumber'] === null) {
+            $invalidProperties[] = "'packageNumber' can't be null";
         }
         return $invalidProperties;
     }
@@ -292,337 +292,337 @@ class PackageTrackingDetails implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets package_number
+     * Gets packageNumber
      *
      * @return int
      */
     public function getPackageNumber()
     {
-        return $this->container['package_number'];
+        return $this->container['packageNumber'];
     }
 
     /**
-     * Sets package_number
+     * Sets packageNumber
      *
-     * @param int $package_number The package identifier.
+     * @param int $packageNumber The package identifier.
      *
      * @return self
      */
-    public function setPackageNumber($package_number)
+    public function setPackageNumber($packageNumber)
     {
-        $this->container['package_number'] = $package_number;
+        $this->container['packageNumber'] = $packageNumber;
 
         return $this;
     }
 
     /**
-     * Gets tracking_number
+     * Gets trackingNumber
      *
      * @return string|null
      */
     public function getTrackingNumber()
     {
-        return $this->container['tracking_number'];
+        return $this->container['trackingNumber'];
     }
 
     /**
-     * Sets tracking_number
+     * Sets trackingNumber
      *
-     * @param string|null $tracking_number The tracking number for the package.
+     * @param string|null $trackingNumber The tracking number for the package.
      *
      * @return self
      */
-    public function setTrackingNumber($tracking_number)
+    public function setTrackingNumber($trackingNumber)
     {
-        $this->container['tracking_number'] = $tracking_number;
+        $this->container['trackingNumber'] = $trackingNumber;
 
         return $this;
     }
 
     /**
-     * Gets customer_tracking_link
+     * Gets customerTrackingLink
      *
      * @return string|null
      */
     public function getCustomerTrackingLink()
     {
-        return $this->container['customer_tracking_link'];
+        return $this->container['customerTrackingLink'];
     }
 
     /**
-     * Sets customer_tracking_link
+     * Sets customerTrackingLink
      *
-     * @param string|null $customer_tracking_link Link on swiship.com that allows customers to track the package.
+     * @param string|null $customerTrackingLink Link on swiship.com that allows customers to track the package.
      *
      * @return self
      */
-    public function setCustomerTrackingLink($customer_tracking_link)
+    public function setCustomerTrackingLink($customerTrackingLink)
     {
-        $this->container['customer_tracking_link'] = $customer_tracking_link;
+        $this->container['customerTrackingLink'] = $customerTrackingLink;
 
         return $this;
     }
 
     /**
-     * Gets carrier_code
+     * Gets carrierCode
      *
      * @return string|null
      */
     public function getCarrierCode()
     {
-        return $this->container['carrier_code'];
+        return $this->container['carrierCode'];
     }
 
     /**
-     * Sets carrier_code
+     * Sets carrierCode
      *
-     * @param string|null $carrier_code The name of the carrier.
+     * @param string|null $carrierCode The name of the carrier.
      *
      * @return self
      */
-    public function setCarrierCode($carrier_code)
+    public function setCarrierCode($carrierCode)
     {
-        $this->container['carrier_code'] = $carrier_code;
+        $this->container['carrierCode'] = $carrierCode;
 
         return $this;
     }
 
     /**
-     * Gets carrier_phone_number
+     * Gets carrierPhoneNumber
      *
      * @return string|null
      */
     public function getCarrierPhoneNumber()
     {
-        return $this->container['carrier_phone_number'];
+        return $this->container['carrierPhoneNumber'];
     }
 
     /**
-     * Sets carrier_phone_number
+     * Sets carrierPhoneNumber
      *
-     * @param string|null $carrier_phone_number The phone number of the carrier.
+     * @param string|null $carrierPhoneNumber The phone number of the carrier.
      *
      * @return self
      */
-    public function setCarrierPhoneNumber($carrier_phone_number)
+    public function setCarrierPhoneNumber($carrierPhoneNumber)
     {
-        $this->container['carrier_phone_number'] = $carrier_phone_number;
+        $this->container['carrierPhoneNumber'] = $carrierPhoneNumber;
 
         return $this;
     }
 
     /**
-     * Gets carrier_url
+     * Gets carrierURL
      *
      * @return string|null
      */
-    public function getCarrierUrl()
+    public function getCarrierURL()
     {
-        return $this->container['carrier_url'];
+        return $this->container['carrierURL'];
     }
 
     /**
-     * Sets carrier_url
+     * Sets carrierURL
      *
-     * @param string|null $carrier_url The URL of the carrier’s website.
+     * @param string|null $carrierURL The URL of the carrier’s website.
      *
      * @return self
      */
-    public function setCarrierUrl($carrier_url)
+    public function setCarrierURL($carrierURL)
     {
-        $this->container['carrier_url'] = $carrier_url;
+        $this->container['carrierURL'] = $carrierURL;
 
         return $this;
     }
 
     /**
-     * Gets ship_date
+     * Gets shipDate
      *
      * @return \DateTime|null
      */
     public function getShipDate()
     {
-        return $this->container['ship_date'];
+        return $this->container['shipDate'];
     }
 
     /**
-     * Sets ship_date
+     * Sets shipDate
      *
-     * @param \DateTime|null $ship_date ship_date
+     * @param \DateTime|null $shipDate shipDate
      *
      * @return self
      */
-    public function setShipDate($ship_date)
+    public function setShipDate($shipDate)
     {
-        $this->container['ship_date'] = $ship_date;
+        $this->container['shipDate'] = $shipDate;
 
         return $this;
     }
 
     /**
-     * Gets estimated_arrival_date
+     * Gets estimatedArrivalDate
      *
      * @return \DateTime|null
      */
     public function getEstimatedArrivalDate()
     {
-        return $this->container['estimated_arrival_date'];
+        return $this->container['estimatedArrivalDate'];
     }
 
     /**
-     * Sets estimated_arrival_date
+     * Sets estimatedArrivalDate
      *
-     * @param \DateTime|null $estimated_arrival_date estimated_arrival_date
+     * @param \DateTime|null $estimatedArrivalDate estimatedArrivalDate
      *
      * @return self
      */
-    public function setEstimatedArrivalDate($estimated_arrival_date)
+    public function setEstimatedArrivalDate($estimatedArrivalDate)
     {
-        $this->container['estimated_arrival_date'] = $estimated_arrival_date;
+        $this->container['estimatedArrivalDate'] = $estimatedArrivalDate;
 
         return $this;
     }
 
     /**
-     * Gets ship_to_address
+     * Gets shipToAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress|null
      */
     public function getShipToAddress()
     {
-        return $this->container['ship_to_address'];
+        return $this->container['shipToAddress'];
     }
 
     /**
-     * Sets ship_to_address
+     * Sets shipToAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress|null $ship_to_address ship_to_address
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingAddress|null $shipToAddress shipToAddress
      *
      * @return self
      */
-    public function setShipToAddress($ship_to_address)
+    public function setShipToAddress($shipToAddress)
     {
-        $this->container['ship_to_address'] = $ship_to_address;
+        $this->container['shipToAddress'] = $shipToAddress;
 
         return $this;
     }
 
     /**
-     * Gets current_status
+     * Gets currentStatus
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CurrentStatus|null
      */
     public function getCurrentStatus()
     {
-        return $this->container['current_status'];
+        return $this->container['currentStatus'];
     }
 
     /**
-     * Sets current_status
+     * Sets currentStatus
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CurrentStatus|null $current_status current_status
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CurrentStatus|null $currentStatus currentStatus
      *
      * @return self
      */
-    public function setCurrentStatus($current_status)
+    public function setCurrentStatus($currentStatus)
     {
-        $this->container['current_status'] = $current_status;
+        $this->container['currentStatus'] = $currentStatus;
 
         return $this;
     }
 
     /**
-     * Gets current_status_description
+     * Gets currentStatusDescription
      *
      * @return string|null
      */
     public function getCurrentStatusDescription()
     {
-        return $this->container['current_status_description'];
+        return $this->container['currentStatusDescription'];
     }
 
     /**
-     * Sets current_status_description
+     * Sets currentStatusDescription
      *
-     * @param string|null $current_status_description Description corresponding to the CurrentStatus value.
+     * @param string|null $currentStatusDescription Description corresponding to the CurrentStatus value.
      *
      * @return self
      */
-    public function setCurrentStatusDescription($current_status_description)
+    public function setCurrentStatusDescription($currentStatusDescription)
     {
-        $this->container['current_status_description'] = $current_status_description;
+        $this->container['currentStatusDescription'] = $currentStatusDescription;
 
         return $this;
     }
 
     /**
-     * Gets signed_for_by
+     * Gets signedForBy
      *
      * @return string|null
      */
     public function getSignedForBy()
     {
-        return $this->container['signed_for_by'];
+        return $this->container['signedForBy'];
     }
 
     /**
-     * Sets signed_for_by
+     * Sets signedForBy
      *
-     * @param string|null $signed_for_by The name of the person who signed for the package.
+     * @param string|null $signedForBy The name of the person who signed for the package.
      *
      * @return self
      */
-    public function setSignedForBy($signed_for_by)
+    public function setSignedForBy($signedForBy)
     {
-        $this->container['signed_for_by'] = $signed_for_by;
+        $this->container['signedForBy'] = $signedForBy;
 
         return $this;
     }
 
     /**
-     * Gets additional_location_info
+     * Gets additionalLocationInfo
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\AdditionalLocationInfo|null
      */
     public function getAdditionalLocationInfo()
     {
-        return $this->container['additional_location_info'];
+        return $this->container['additionalLocationInfo'];
     }
 
     /**
-     * Sets additional_location_info
+     * Sets additionalLocationInfo
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\AdditionalLocationInfo|null $additional_location_info additional_location_info
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\AdditionalLocationInfo|null $additionalLocationInfo additionalLocationInfo
      *
      * @return self
      */
-    public function setAdditionalLocationInfo($additional_location_info)
+    public function setAdditionalLocationInfo($additionalLocationInfo)
     {
-        $this->container['additional_location_info'] = $additional_location_info;
+        $this->container['additionalLocationInfo'] = $additionalLocationInfo;
 
         return $this;
     }
 
     /**
-     * Gets tracking_events
+     * Gets trackingEvents
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingEvent[]|null
      */
     public function getTrackingEvents()
     {
-        return $this->container['tracking_events'];
+        return $this->container['trackingEvents'];
     }
 
     /**
-     * Sets tracking_events
+     * Sets trackingEvents
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingEvent[]|null $tracking_events An array of tracking event information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\TrackingEvent[]|null $trackingEvents An array of tracking event information.
      *
      * @return self
      */
-    public function setTrackingEvents($tracking_events)
+    public function setTrackingEvents($trackingEvents)
     {
-        $this->container['tracking_events'] = $tracking_events;
+        $this->container['trackingEvents'] = $trackingEvents;
 
         return $this;
     }

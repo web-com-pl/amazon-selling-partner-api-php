@@ -61,7 +61,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'report_schedule_id' => 'string'
+        'reportScheduleId' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'report_schedule_id' => null
+        'reportScheduleId' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_schedule_id' => 'reportScheduleId'
+        'reportScheduleId' => 'reportScheduleId'
     ];
 
     /**
@@ -111,7 +111,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'report_schedule_id' => 'setReportScheduleId'
+        'reportScheduleId' => 'setReportScheduleId'
     ];
 
     /**
@@ -120,7 +120,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'report_schedule_id' => 'getReportScheduleId'
+        'reportScheduleId' => 'getReportScheduleId'
     ];
 
     /**
@@ -183,7 +183,7 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['report_schedule_id'] = $data['report_schedule_id'] ?? null;
+        $this->container['reportScheduleId'] = $data['reportScheduleId'] ?? null;
     }
 
     /**
@@ -195,8 +195,8 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['report_schedule_id'] === null) {
-            $invalidProperties[] = "'report_schedule_id' can't be null";
+        if ($this->container['reportScheduleId'] === null) {
+            $invalidProperties[] = "'reportScheduleId' can't be null";
         }
         return $invalidProperties;
     }
@@ -214,25 +214,25 @@ class CreateReportScheduleResult implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets report_schedule_id
+     * Gets reportScheduleId
      *
      * @return string
      */
     public function getReportScheduleId()
     {
-        return $this->container['report_schedule_id'];
+        return $this->container['reportScheduleId'];
     }
 
     /**
-     * Sets report_schedule_id
+     * Sets reportScheduleId
      *
-     * @param string $report_schedule_id The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
+     * @param string $reportScheduleId The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
      *
      * @return self
      */
-    public function setReportScheduleId($report_schedule_id)
+    public function setReportScheduleId($reportScheduleId)
     {
-        $this->container['report_schedule_id'] = $report_schedule_id;
+        $this->container['reportScheduleId'] = $reportScheduleId;
 
         return $this;
     }

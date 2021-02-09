@@ -62,7 +62,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fees_estimate_request' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateRequest'
+        'feesEstimateRequest' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateRequest'
     ];
 
     /**
@@ -73,7 +73,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fees_estimate_request' => null
+        'feesEstimateRequest' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'fees_estimate_request' => 'FeesEstimateRequest'
+        'feesEstimateRequest' => 'FeesEstimateRequest'
     ];
 
     /**
@@ -112,7 +112,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'fees_estimate_request' => 'setFeesEstimateRequest'
+        'feesEstimateRequest' => 'setFeesEstimateRequest'
     ];
 
     /**
@@ -121,7 +121,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'fees_estimate_request' => 'getFeesEstimateRequest'
+        'feesEstimateRequest' => 'getFeesEstimateRequest'
     ];
 
     /**
@@ -184,7 +184,7 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['fees_estimate_request'] = $data['fees_estimate_request'] ?? null;
+        $this->container['feesEstimateRequest'] = $data['feesEstimateRequest'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class GetMyFeesEstimateRequest implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets fees_estimate_request
+     * Gets feesEstimateRequest
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateRequest|null
      */
     public function getFeesEstimateRequest()
     {
-        return $this->container['fees_estimate_request'];
+        return $this->container['feesEstimateRequest'];
     }
 
     /**
-     * Sets fees_estimate_request
+     * Sets feesEstimateRequest
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateRequest|null $fees_estimate_request fees_estimate_request
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\FeesEstimateRequest|null $feesEstimateRequest feesEstimateRequest
      *
      * @return self
      */
-    public function setFeesEstimateRequest($fees_estimate_request)
+    public function setFeesEstimateRequest($feesEstimateRequest)
     {
-        $this->container['fees_estimate_request'] = $fees_estimate_request;
+        $this->container['feesEstimateRequest'] = $feesEstimateRequest;
 
         return $this;
     }

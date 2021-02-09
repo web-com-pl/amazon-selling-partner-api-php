@@ -62,8 +62,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_level_fields' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]',
-        'item_level_fields_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ItemLevelFields[]'
+        'shipmentLevelFields' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]',
+        'itemLevelFieldsList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ItemLevelFields[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_level_fields' => null,
-        'item_level_fields_list' => null
+        'shipmentLevelFields' => null,
+        'itemLevelFieldsList' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_level_fields' => 'ShipmentLevelFields',
-        'item_level_fields_list' => 'ItemLevelFieldsList'
+        'shipmentLevelFields' => 'ShipmentLevelFields',
+        'itemLevelFieldsList' => 'ItemLevelFieldsList'
     ];
 
     /**
@@ -115,8 +115,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'shipment_level_fields' => 'setShipmentLevelFields',
-        'item_level_fields_list' => 'setItemLevelFieldsList'
+        'shipmentLevelFields' => 'setShipmentLevelFields',
+        'itemLevelFieldsList' => 'setItemLevelFieldsList'
     ];
 
     /**
@@ -125,8 +125,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'shipment_level_fields' => 'getShipmentLevelFields',
-        'item_level_fields_list' => 'getItemLevelFieldsList'
+        'shipmentLevelFields' => 'getShipmentLevelFields',
+        'itemLevelFieldsList' => 'getItemLevelFieldsList'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_level_fields'] = $data['shipment_level_fields'] ?? null;
-        $this->container['item_level_fields_list'] = $data['item_level_fields_list'] ?? null;
+        $this->container['shipmentLevelFields'] = $data['shipmentLevelFields'] ?? null;
+        $this->container['itemLevelFieldsList'] = $data['itemLevelFieldsList'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class GetAdditionalSellerInputsResult implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets shipment_level_fields
+     * Gets shipmentLevelFields
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]|null
      */
     public function getShipmentLevelFields()
     {
-        return $this->container['shipment_level_fields'];
+        return $this->container['shipmentLevelFields'];
     }
 
     /**
-     * Sets shipment_level_fields
+     * Sets shipmentLevelFields
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]|null $shipment_level_fields A list of additional inputs.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]|null $shipmentLevelFields A list of additional inputs.
      *
      * @return self
      */
-    public function setShipmentLevelFields($shipment_level_fields)
+    public function setShipmentLevelFields($shipmentLevelFields)
     {
-        $this->container['shipment_level_fields'] = $shipment_level_fields;
+        $this->container['shipmentLevelFields'] = $shipmentLevelFields;
 
         return $this;
     }
 
     /**
-     * Gets item_level_fields_list
+     * Gets itemLevelFieldsList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ItemLevelFields[]|null
      */
     public function getItemLevelFieldsList()
     {
-        return $this->container['item_level_fields_list'];
+        return $this->container['itemLevelFieldsList'];
     }
 
     /**
-     * Sets item_level_fields_list
+     * Sets itemLevelFieldsList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ItemLevelFields[]|null $item_level_fields_list A list of item level fields.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ItemLevelFields[]|null $itemLevelFieldsList A list of item level fields.
      *
      * @return self
      */
-    public function setItemLevelFieldsList($item_level_fields_list)
+    public function setItemLevelFieldsList($itemLevelFieldsList)
     {
-        $this->container['item_level_fields_list'] = $item_level_fields_list;
+        $this->container['itemLevelFieldsList'] = $itemLevelFieldsList;
 
         return $this;
     }

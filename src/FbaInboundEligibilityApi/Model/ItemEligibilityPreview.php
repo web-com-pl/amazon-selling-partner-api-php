@@ -63,10 +63,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'asin' => 'string',
-        'marketplace_id' => 'string',
+        'marketplaceId' => 'string',
         'program' => 'string',
-        'is_eligible_for_program' => 'bool',
-        'ineligibility_reason_list' => 'string[]'
+        'isEligibleForProgram' => 'bool',
+        'ineligibilityReasonList' => 'string[]'
     ];
 
     /**
@@ -78,10 +78,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'asin' => null,
-        'marketplace_id' => null,
+        'marketplaceId' => null,
         'program' => null,
-        'is_eligible_for_program' => null,
-        'ineligibility_reason_list' => null
+        'isEligibleForProgram' => null,
+        'ineligibilityReasonList' => null
     ];
 
     /**
@@ -112,10 +112,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'asin' => 'asin',
-        'marketplace_id' => 'marketplaceId',
+        'marketplaceId' => 'marketplaceId',
         'program' => 'program',
-        'is_eligible_for_program' => 'isEligibleForProgram',
-        'ineligibility_reason_list' => 'ineligibilityReasonList'
+        'isEligibleForProgram' => 'isEligibleForProgram',
+        'ineligibilityReasonList' => 'ineligibilityReasonList'
     ];
 
     /**
@@ -125,10 +125,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'asin' => 'setAsin',
-        'marketplace_id' => 'setMarketplaceId',
+        'marketplaceId' => 'setMarketplaceId',
         'program' => 'setProgram',
-        'is_eligible_for_program' => 'setIsEligibleForProgram',
-        'ineligibility_reason_list' => 'setIneligibilityReasonList'
+        'isEligibleForProgram' => 'setIsEligibleForProgram',
+        'ineligibilityReasonList' => 'setIneligibilityReasonList'
     ];
 
     /**
@@ -138,10 +138,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'asin' => 'getAsin',
-        'marketplace_id' => 'getMarketplaceId',
+        'marketplaceId' => 'getMarketplaceId',
         'program' => 'getProgram',
-        'is_eligible_for_program' => 'getIsEligibleForProgram',
-        'ineligibility_reason_list' => 'getIneligibilityReasonList'
+        'isEligibleForProgram' => 'getIsEligibleForProgram',
+        'ineligibilityReasonList' => 'getIneligibilityReasonList'
     ];
 
     /**
@@ -307,10 +307,10 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
         $this->container['program'] = $data['program'] ?? null;
-        $this->container['is_eligible_for_program'] = $data['is_eligible_for_program'] ?? null;
-        $this->container['ineligibility_reason_list'] = $data['ineligibility_reason_list'] ?? null;
+        $this->container['isEligibleForProgram'] = $data['isEligibleForProgram'] ?? null;
+        $this->container['ineligibilityReasonList'] = $data['ineligibilityReasonList'] ?? null;
     }
 
     /**
@@ -337,8 +337,8 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
 
-        if ($this->container['is_eligible_for_program'] === null) {
-            $invalidProperties[] = "'is_eligible_for_program' can't be null";
+        if ($this->container['isEligibleForProgram'] === null) {
+            $invalidProperties[] = "'isEligibleForProgram' can't be null";
         }
         return $invalidProperties;
     }
@@ -380,25 +380,25 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The marketplace for which eligibility was determined.
+     * @param string|null $marketplaceId The marketplace for which eligibility was determined.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
@@ -438,58 +438,58 @@ class ItemEligibilityPreview implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets is_eligible_for_program
+     * Gets isEligibleForProgram
      *
      * @return bool
      */
     public function getIsEligibleForProgram()
     {
-        return $this->container['is_eligible_for_program'];
+        return $this->container['isEligibleForProgram'];
     }
 
     /**
-     * Sets is_eligible_for_program
+     * Sets isEligibleForProgram
      *
-     * @param bool $is_eligible_for_program Indicates if the item is eligible for the program.
+     * @param bool $isEligibleForProgram Indicates if the item is eligible for the program.
      *
      * @return self
      */
-    public function setIsEligibleForProgram($is_eligible_for_program)
+    public function setIsEligibleForProgram($isEligibleForProgram)
     {
-        $this->container['is_eligible_for_program'] = $is_eligible_for_program;
+        $this->container['isEligibleForProgram'] = $isEligibleForProgram;
 
         return $this;
     }
 
     /**
-     * Gets ineligibility_reason_list
+     * Gets ineligibilityReasonList
      *
      * @return string[]|null
      */
     public function getIneligibilityReasonList()
     {
-        return $this->container['ineligibility_reason_list'];
+        return $this->container['ineligibilityReasonList'];
     }
 
     /**
-     * Sets ineligibility_reason_list
+     * Sets ineligibilityReasonList
      *
-     * @param string[]|null $ineligibility_reason_list Potential Ineligibility Reason Codes.
+     * @param string[]|null $ineligibilityReasonList Potential Ineligibility Reason Codes.
      *
      * @return self
      */
-    public function setIneligibilityReasonList($ineligibility_reason_list)
+    public function setIneligibilityReasonList($ineligibilityReasonList)
     {
         $allowedValues = $this->getIneligibilityReasonListAllowableValues();
-        if (!is_null($ineligibility_reason_list) && array_diff($ineligibility_reason_list, $allowedValues)) {
+        if (!is_null($ineligibilityReasonList) && array_diff($ineligibilityReasonList, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'ineligibility_reason_list', must be one of '%s'",
+                    "Invalid value for 'ineligibilityReasonList', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['ineligibility_reason_list'] = $ineligibility_reason_list;
+        $this->container['ineligibilityReasonList'] = $ineligibilityReasonList;
 
         return $this;
     }

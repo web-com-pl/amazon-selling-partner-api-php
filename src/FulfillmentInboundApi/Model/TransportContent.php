@@ -62,9 +62,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transport_header' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportHeader',
-        'transport_details' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailOutput',
-        'transport_result' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult'
+        'transportHeader' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportHeader',
+        'transportDetails' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailOutput',
+        'transportResult' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult'
     ];
 
     /**
@@ -75,9 +75,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transport_header' => null,
-        'transport_details' => null,
-        'transport_result' => null
+        'transportHeader' => null,
+        'transportDetails' => null,
+        'transportResult' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'transport_header' => 'TransportHeader',
-        'transport_details' => 'TransportDetails',
-        'transport_result' => 'TransportResult'
+        'transportHeader' => 'TransportHeader',
+        'transportDetails' => 'TransportDetails',
+        'transportResult' => 'TransportResult'
     ];
 
     /**
@@ -118,9 +118,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'transport_header' => 'setTransportHeader',
-        'transport_details' => 'setTransportDetails',
-        'transport_result' => 'setTransportResult'
+        'transportHeader' => 'setTransportHeader',
+        'transportDetails' => 'setTransportDetails',
+        'transportResult' => 'setTransportResult'
     ];
 
     /**
@@ -129,9 +129,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'transport_header' => 'getTransportHeader',
-        'transport_details' => 'getTransportDetails',
-        'transport_result' => 'getTransportResult'
+        'transportHeader' => 'getTransportHeader',
+        'transportDetails' => 'getTransportDetails',
+        'transportResult' => 'getTransportResult'
     ];
 
     /**
@@ -194,9 +194,9 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['transport_header'] = $data['transport_header'] ?? null;
-        $this->container['transport_details'] = $data['transport_details'] ?? null;
-        $this->container['transport_result'] = $data['transport_result'] ?? null;
+        $this->container['transportHeader'] = $data['transportHeader'] ?? null;
+        $this->container['transportDetails'] = $data['transportDetails'] ?? null;
+        $this->container['transportResult'] = $data['transportResult'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['transport_header'] === null) {
-            $invalidProperties[] = "'transport_header' can't be null";
+        if ($this->container['transportHeader'] === null) {
+            $invalidProperties[] = "'transportHeader' can't be null";
         }
-        if ($this->container['transport_details'] === null) {
-            $invalidProperties[] = "'transport_details' can't be null";
+        if ($this->container['transportDetails'] === null) {
+            $invalidProperties[] = "'transportDetails' can't be null";
         }
-        if ($this->container['transport_result'] === null) {
-            $invalidProperties[] = "'transport_result' can't be null";
+        if ($this->container['transportResult'] === null) {
+            $invalidProperties[] = "'transportResult' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class TransportContent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets transport_header
+     * Gets transportHeader
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportHeader
      */
     public function getTransportHeader()
     {
-        return $this->container['transport_header'];
+        return $this->container['transportHeader'];
     }
 
     /**
-     * Sets transport_header
+     * Sets transportHeader
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportHeader $transport_header transport_header
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportHeader $transportHeader transportHeader
      *
      * @return self
      */
-    public function setTransportHeader($transport_header)
+    public function setTransportHeader($transportHeader)
     {
-        $this->container['transport_header'] = $transport_header;
+        $this->container['transportHeader'] = $transportHeader;
 
         return $this;
     }
 
     /**
-     * Gets transport_details
+     * Gets transportDetails
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailOutput
      */
     public function getTransportDetails()
     {
-        return $this->container['transport_details'];
+        return $this->container['transportDetails'];
     }
 
     /**
-     * Sets transport_details
+     * Sets transportDetails
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailOutput $transport_details transport_details
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailOutput $transportDetails transportDetails
      *
      * @return self
      */
-    public function setTransportDetails($transport_details)
+    public function setTransportDetails($transportDetails)
     {
-        $this->container['transport_details'] = $transport_details;
+        $this->container['transportDetails'] = $transportDetails;
 
         return $this;
     }
 
     /**
-     * Gets transport_result
+     * Gets transportResult
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult
      */
     public function getTransportResult()
     {
-        return $this->container['transport_result'];
+        return $this->container['transportResult'];
     }
 
     /**
-     * Sets transport_result
+     * Sets transportResult
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult $transport_result transport_result
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult $transportResult transportResult
      *
      * @return self
      */
-    public function setTransportResult($transport_result)
+    public function setTransportResult($transportResult)
     {
-        $this->container['transport_result'] = $transport_result;
+        $this->container['transportResult'] = $transportResult;
 
         return $this;
     }

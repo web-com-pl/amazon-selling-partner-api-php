@@ -65,7 +65,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'string',
         'title' => 'string',
         'quantity' => 'int',
-        'required_skills' => 'string[]'
+        'requiredSkills' => 'string[]'
     ];
 
     /**
@@ -79,7 +79,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => null,
         'title' => null,
         'quantity' => null,
-        'required_skills' => null
+        'requiredSkills' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'asin',
         'title' => 'title',
         'quantity' => 'quantity',
-        'required_skills' => 'requiredSkills'
+        'requiredSkills' => 'requiredSkills'
     ];
 
     /**
@@ -124,7 +124,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'setAsin',
         'title' => 'setTitle',
         'quantity' => 'setQuantity',
-        'required_skills' => 'setRequiredSkills'
+        'requiredSkills' => 'setRequiredSkills'
     ];
 
     /**
@@ -136,7 +136,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'getAsin',
         'title' => 'getTitle',
         'quantity' => 'getQuantity',
-        'required_skills' => 'getRequiredSkills'
+        'requiredSkills' => 'getRequiredSkills'
     ];
 
     /**
@@ -202,7 +202,7 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['asin'] = $data['asin'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['required_skills'] = $data['required_skills'] ?? null;
+        $this->container['requiredSkills'] = $data['requiredSkills'] ?? null;
     }
 
     /**
@@ -302,25 +302,25 @@ class ScopeOfWork implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets required_skills
+     * Gets requiredSkills
      *
      * @return string[]|null
      */
     public function getRequiredSkills()
     {
-        return $this->container['required_skills'];
+        return $this->container['requiredSkills'];
     }
 
     /**
-     * Sets required_skills
+     * Sets requiredSkills
      *
-     * @param string[]|null $required_skills A list of skills required to perform the job.
+     * @param string[]|null $requiredSkills A list of skills required to perform the job.
      *
      * @return self
      */
-    public function setRequiredSkills($required_skills)
+    public function setRequiredSkills($requiredSkills)
     {
-        $this->container['required_skills'] = $required_skills;
+        $this->container['requiredSkills'] = $requiredSkills;
 
         return $this;
     }

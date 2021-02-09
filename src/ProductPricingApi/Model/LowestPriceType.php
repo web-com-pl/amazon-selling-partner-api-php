@@ -62,9 +62,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'condition' => 'string',
-        'fulfillment_channel' => 'string',
-        'landed_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'listing_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'fulfillmentChannel' => 'string',
+        'landedPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'listingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'shipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'points' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\Points'
     ];
@@ -78,9 +78,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'condition' => null,
-        'fulfillment_channel' => null,
-        'landed_price' => null,
-        'listing_price' => null,
+        'fulfillmentChannel' => null,
+        'landedPrice' => null,
+        'listingPrice' => null,
         'shipping' => null,
         'points' => null
     ];
@@ -113,9 +113,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'condition' => 'condition',
-        'fulfillment_channel' => 'fulfillmentChannel',
-        'landed_price' => 'LandedPrice',
-        'listing_price' => 'ListingPrice',
+        'fulfillmentChannel' => 'fulfillmentChannel',
+        'landedPrice' => 'LandedPrice',
+        'listingPrice' => 'ListingPrice',
         'shipping' => 'Shipping',
         'points' => 'Points'
     ];
@@ -127,9 +127,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'condition' => 'setCondition',
-        'fulfillment_channel' => 'setFulfillmentChannel',
-        'landed_price' => 'setLandedPrice',
-        'listing_price' => 'setListingPrice',
+        'fulfillmentChannel' => 'setFulfillmentChannel',
+        'landedPrice' => 'setLandedPrice',
+        'listingPrice' => 'setListingPrice',
         'shipping' => 'setShipping',
         'points' => 'setPoints'
     ];
@@ -141,9 +141,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'condition' => 'getCondition',
-        'fulfillment_channel' => 'getFulfillmentChannel',
-        'landed_price' => 'getLandedPrice',
-        'listing_price' => 'getListingPrice',
+        'fulfillmentChannel' => 'getFulfillmentChannel',
+        'landedPrice' => 'getLandedPrice',
+        'listingPrice' => 'getListingPrice',
         'shipping' => 'getShipping',
         'points' => 'getPoints'
     ];
@@ -209,9 +209,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['condition'] = $data['condition'] ?? null;
-        $this->container['fulfillment_channel'] = $data['fulfillment_channel'] ?? null;
-        $this->container['landed_price'] = $data['landed_price'] ?? null;
-        $this->container['listing_price'] = $data['listing_price'] ?? null;
+        $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['landedPrice'] = $data['landedPrice'] ?? null;
+        $this->container['listingPrice'] = $data['listingPrice'] ?? null;
         $this->container['shipping'] = $data['shipping'] ?? null;
         $this->container['points'] = $data['points'] ?? null;
     }
@@ -228,14 +228,14 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
         }
-        if ($this->container['fulfillment_channel'] === null) {
-            $invalidProperties[] = "'fulfillment_channel' can't be null";
+        if ($this->container['fulfillmentChannel'] === null) {
+            $invalidProperties[] = "'fulfillmentChannel' can't be null";
         }
-        if ($this->container['landed_price'] === null) {
-            $invalidProperties[] = "'landed_price' can't be null";
+        if ($this->container['landedPrice'] === null) {
+            $invalidProperties[] = "'landedPrice' can't be null";
         }
-        if ($this->container['listing_price'] === null) {
-            $invalidProperties[] = "'listing_price' can't be null";
+        if ($this->container['listingPrice'] === null) {
+            $invalidProperties[] = "'listingPrice' can't be null";
         }
         if ($this->container['shipping'] === null) {
             $invalidProperties[] = "'shipping' can't be null";
@@ -280,73 +280,73 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets fulfillment_channel
+     * Gets fulfillmentChannel
      *
      * @return string
      */
     public function getFulfillmentChannel()
     {
-        return $this->container['fulfillment_channel'];
+        return $this->container['fulfillmentChannel'];
     }
 
     /**
-     * Sets fulfillment_channel
+     * Sets fulfillmentChannel
      *
-     * @param string $fulfillment_channel Indicates whether the item is fulfilled by Amazon or by the seller.
+     * @param string $fulfillmentChannel Indicates whether the item is fulfilled by Amazon or by the seller.
      *
      * @return self
      */
-    public function setFulfillmentChannel($fulfillment_channel)
+    public function setFulfillmentChannel($fulfillmentChannel)
     {
-        $this->container['fulfillment_channel'] = $fulfillment_channel;
+        $this->container['fulfillmentChannel'] = $fulfillmentChannel;
 
         return $this;
     }
 
     /**
-     * Gets landed_price
+     * Gets landedPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType
      */
     public function getLandedPrice()
     {
-        return $this->container['landed_price'];
+        return $this->container['landedPrice'];
     }
 
     /**
-     * Sets landed_price
+     * Sets landedPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $landed_price landed_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $landedPrice landedPrice
      *
      * @return self
      */
-    public function setLandedPrice($landed_price)
+    public function setLandedPrice($landedPrice)
     {
-        $this->container['landed_price'] = $landed_price;
+        $this->container['landedPrice'] = $landedPrice;
 
         return $this;
     }
 
     /**
-     * Gets listing_price
+     * Gets listingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType
      */
     public function getListingPrice()
     {
-        return $this->container['listing_price'];
+        return $this->container['listingPrice'];
     }
 
     /**
-     * Sets listing_price
+     * Sets listingPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listing_price listing_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listingPrice listingPrice
      *
      * @return self
      */
-    public function setListingPrice($listing_price)
+    public function setListingPrice($listingPrice)
     {
-        $this->container['listing_price'] = $listing_price;
+        $this->container['listingPrice'] = $listingPrice;
 
         return $this;
     }

@@ -118,30 +118,30 @@ class OrdersV0Api
     /**
      * Operation getOrder
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse
      */
-    public function getOrder($order_id)
+    public function getOrder($orderId)
     {
-        list($response) = $this->getOrderWithHttpInfo($order_id);
+        list($response) = $this->getOrderWithHttpInfo($orderId);
         return $response;
     }
 
     /**
      * Operation getOrderWithHttpInfo
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderWithHttpInfo($order_id)
+    public function getOrderWithHttpInfo($orderId)
     {
-        $request = $this->getOrderRequest($order_id);
+        $request = $this->getOrderRequest($orderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -341,14 +341,14 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderAsync($order_id)
+    public function getOrderAsync($orderId)
     {
-        return $this->getOrderAsyncWithHttpInfo($order_id)
+        return $this->getOrderAsyncWithHttpInfo($orderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -361,15 +361,15 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderAsyncWithHttpInfo($order_id)
+    public function getOrderAsyncWithHttpInfo($orderId)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderResponse';
-        $request = $this->getOrderRequest($order_id);
+        $request = $this->getOrderRequest($orderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -408,17 +408,17 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrder'
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrderRequest($order_id)
+    public function getOrderRequest($orderId)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null || (is_array($orderId) && count($orderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getOrder'
+                'Missing the required parameter $orderId when calling getOrder'
             );
         }
 
@@ -432,10 +432,10 @@ class OrdersV0Api
 
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
+                ObjectSerializer::toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -501,30 +501,30 @@ class OrdersV0Api
     /**
      * Operation getOrderAddress
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse
      */
-    public function getOrderAddress($order_id)
+    public function getOrderAddress($orderId)
     {
-        list($response) = $this->getOrderAddressWithHttpInfo($order_id);
+        list($response) = $this->getOrderAddressWithHttpInfo($orderId);
         return $response;
     }
 
     /**
      * Operation getOrderAddressWithHttpInfo
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderAddressWithHttpInfo($order_id)
+    public function getOrderAddressWithHttpInfo($orderId)
     {
-        $request = $this->getOrderAddressRequest($order_id);
+        $request = $this->getOrderAddressRequest($orderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -724,14 +724,14 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderAddressAsync($order_id)
+    public function getOrderAddressAsync($orderId)
     {
-        return $this->getOrderAddressAsyncWithHttpInfo($order_id)
+        return $this->getOrderAddressAsyncWithHttpInfo($orderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -744,15 +744,15 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderAddressAsyncWithHttpInfo($order_id)
+    public function getOrderAddressAsyncWithHttpInfo($orderId)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderAddressResponse';
-        $request = $this->getOrderAddressRequest($order_id);
+        $request = $this->getOrderAddressRequest($orderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -791,17 +791,17 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrderAddress'
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrderAddressRequest($order_id)
+    public function getOrderAddressRequest($orderId)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null || (is_array($orderId) && count($orderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getOrderAddress'
+                'Missing the required parameter $orderId when calling getOrderAddress'
             );
         }
 
@@ -815,10 +815,10 @@ class OrdersV0Api
 
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
+                ObjectSerializer::toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -884,30 +884,30 @@ class OrdersV0Api
     /**
      * Operation getOrderBuyerInfo
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse
      */
-    public function getOrderBuyerInfo($order_id)
+    public function getOrderBuyerInfo($orderId)
     {
-        list($response) = $this->getOrderBuyerInfoWithHttpInfo($order_id);
+        list($response) = $this->getOrderBuyerInfoWithHttpInfo($orderId);
         return $response;
     }
 
     /**
      * Operation getOrderBuyerInfoWithHttpInfo
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderBuyerInfoWithHttpInfo($order_id)
+    public function getOrderBuyerInfoWithHttpInfo($orderId)
     {
-        $request = $this->getOrderBuyerInfoRequest($order_id);
+        $request = $this->getOrderBuyerInfoRequest($orderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1107,14 +1107,14 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderBuyerInfoAsync($order_id)
+    public function getOrderBuyerInfoAsync($orderId)
     {
-        return $this->getOrderBuyerInfoAsyncWithHttpInfo($order_id)
+        return $this->getOrderBuyerInfoAsyncWithHttpInfo($orderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1127,15 +1127,15 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderBuyerInfoAsyncWithHttpInfo($order_id)
+    public function getOrderBuyerInfoAsyncWithHttpInfo($orderId)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderBuyerInfoResponse';
-        $request = $this->getOrderBuyerInfoRequest($order_id);
+        $request = $this->getOrderBuyerInfoRequest($orderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1174,17 +1174,17 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrderBuyerInfo'
      *
-     * @param  string $order_id An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $orderId An orderId is an Amazon-defined order identifier, in 3-7-7 format. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrderBuyerInfoRequest($order_id)
+    public function getOrderBuyerInfoRequest($orderId)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null || (is_array($orderId) && count($orderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getOrderBuyerInfo'
+                'Missing the required parameter $orderId when calling getOrderBuyerInfo'
             );
         }
 
@@ -1198,10 +1198,10 @@ class OrdersV0Api
 
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
+                ObjectSerializer::toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -1267,32 +1267,32 @@ class OrdersV0Api
     /**
      * Operation getOrderItems
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse
      */
-    public function getOrderItems($order_id, $next_token = null)
+    public function getOrderItems($orderId, $nextToken = null)
     {
-        list($response) = $this->getOrderItemsWithHttpInfo($order_id, $next_token);
+        list($response) = $this->getOrderItemsWithHttpInfo($orderId, $nextToken);
         return $response;
     }
 
     /**
      * Operation getOrderItemsWithHttpInfo
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderItemsWithHttpInfo($order_id, $next_token = null)
+    public function getOrderItemsWithHttpInfo($orderId, $nextToken = null)
     {
-        $request = $this->getOrderItemsRequest($order_id, $next_token);
+        $request = $this->getOrderItemsRequest($orderId, $nextToken);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1492,15 +1492,15 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderItemsAsync($order_id, $next_token = null)
+    public function getOrderItemsAsync($orderId, $nextToken = null)
     {
-        return $this->getOrderItemsAsyncWithHttpInfo($order_id, $next_token)
+        return $this->getOrderItemsAsyncWithHttpInfo($orderId, $nextToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1513,16 +1513,16 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderItemsAsyncWithHttpInfo($order_id, $next_token = null)
+    public function getOrderItemsAsyncWithHttpInfo($orderId, $nextToken = null)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsResponse';
-        $request = $this->getOrderItemsRequest($order_id, $next_token);
+        $request = $this->getOrderItemsRequest($orderId, $nextToken);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1561,18 +1561,18 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrderItems'
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrderItemsRequest($order_id, $next_token = null)
+    public function getOrderItemsRequest($orderId, $nextToken = null)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null || (is_array($orderId) && count($orderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getOrderItems'
+                'Missing the required parameter $orderId when calling getOrderItems'
             );
         }
 
@@ -1584,19 +1584,19 @@ class OrdersV0Api
         $multipart = false;
 
         // query params
-        if (is_array($next_token)) {
-            $next_token = ObjectSerializer::serializeCollection($next_token, '', true);
+        if (is_array($nextToken)) {
+            $nextToken = ObjectSerializer::serializeCollection($nextToken, '', true);
         }
-        if ($next_token !== null) {
-            $queryParams['NextToken'] = $next_token;
+        if ($nextToken !== null) {
+            $queryParams['NextToken'] = $nextToken;
         }
 
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
+                ObjectSerializer::toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -1662,32 +1662,32 @@ class OrdersV0Api
     /**
      * Operation getOrderItemsBuyerInfo
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse
      */
-    public function getOrderItemsBuyerInfo($order_id, $next_token = null)
+    public function getOrderItemsBuyerInfo($orderId, $nextToken = null)
     {
-        list($response) = $this->getOrderItemsBuyerInfoWithHttpInfo($order_id, $next_token);
+        list($response) = $this->getOrderItemsBuyerInfoWithHttpInfo($orderId, $nextToken);
         return $response;
     }
 
     /**
      * Operation getOrderItemsBuyerInfoWithHttpInfo
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderItemsBuyerInfoWithHttpInfo($order_id, $next_token = null)
+    public function getOrderItemsBuyerInfoWithHttpInfo($orderId, $nextToken = null)
     {
-        $request = $this->getOrderItemsBuyerInfoRequest($order_id, $next_token);
+        $request = $this->getOrderItemsBuyerInfoRequest($orderId, $nextToken);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1887,15 +1887,15 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderItemsBuyerInfoAsync($order_id, $next_token = null)
+    public function getOrderItemsBuyerInfoAsync($orderId, $nextToken = null)
     {
-        return $this->getOrderItemsBuyerInfoAsyncWithHttpInfo($order_id, $next_token)
+        return $this->getOrderItemsBuyerInfoAsyncWithHttpInfo($orderId, $nextToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1908,16 +1908,16 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderItemsBuyerInfoAsyncWithHttpInfo($order_id, $next_token = null)
+    public function getOrderItemsBuyerInfoAsyncWithHttpInfo($orderId, $nextToken = null)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrderItemsBuyerInfoResponse';
-        $request = $this->getOrderItemsBuyerInfoRequest($order_id, $next_token);
+        $request = $this->getOrderItemsBuyerInfoRequest($orderId, $nextToken);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1956,18 +1956,18 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrderItemsBuyerInfo'
      *
-     * @param  string $order_id An Amazon-defined order identifier, in 3-7-7 format. (required)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
+     * @param  string $orderId An Amazon-defined order identifier, in 3-7-7 format. (required)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrderItemsBuyerInfoRequest($order_id, $next_token = null)
+    public function getOrderItemsBuyerInfoRequest($orderId, $nextToken = null)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null || (is_array($orderId) && count($orderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getOrderItemsBuyerInfo'
+                'Missing the required parameter $orderId when calling getOrderItemsBuyerInfo'
             );
         }
 
@@ -1979,19 +1979,19 @@ class OrdersV0Api
         $multipart = false;
 
         // query params
-        if (is_array($next_token)) {
-            $next_token = ObjectSerializer::serializeCollection($next_token, '', true);
+        if (is_array($nextToken)) {
+            $nextToken = ObjectSerializer::serializeCollection($nextToken, '', true);
         }
-        if ($next_token !== null) {
-            $queryParams['NextToken'] = $next_token;
+        if ($nextToken !== null) {
+            $queryParams['NextToken'] = $nextToken;
         }
 
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
+                ObjectSerializer::toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -2057,56 +2057,56 @@ class OrdersV0Api
     /**
      * Operation getOrders
      *
-     * @param  string[] $marketplace_ids A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
-     * @param  string $created_after A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
-     * @param  string $created_before A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_before A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string[] $order_statuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
-     * @param  string[] $fulfillment_channels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
-     * @param  string[] $payment_methods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
-     * @param  string $buyer_email The email address of a buyer. Used to select orders that contain the specified email address. (optional)
-     * @param  string $seller_order_id An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
-     * @param  int $max_results_per_page A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
-     * @param  string[] $easy_ship_shipment_statuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
-     * @param  string[] $amazon_order_ids A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string[] $marketplaceIds A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
+     * @param  string $createdAfter A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
+     * @param  string $createdBefore A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string[] $orderStatuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
+     * @param  string[] $fulfillmentChannels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
+     * @param  string[] $paymentMethods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
+     * @param  string $buyerEmail The email address of a buyer. Used to select orders that contain the specified email address. (optional)
+     * @param  string $sellerOrderId An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
+     * @param  int $maxResultsPerPage A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
+     * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
+     * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse
      */
-    public function getOrders($marketplace_ids, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $order_statuses = null, $fulfillment_channels = null, $payment_methods = null, $buyer_email = null, $seller_order_id = null, $max_results_per_page = null, $easy_ship_shipment_statuses = null, $next_token = null, $amazon_order_ids = null)
+    public function getOrders($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
     {
-        list($response) = $this->getOrdersWithHttpInfo($marketplace_ids, $created_after, $created_before, $last_updated_after, $last_updated_before, $order_statuses, $fulfillment_channels, $payment_methods, $buyer_email, $seller_order_id, $max_results_per_page, $easy_ship_shipment_statuses, $next_token, $amazon_order_ids);
+        list($response) = $this->getOrdersWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
         return $response;
     }
 
     /**
      * Operation getOrdersWithHttpInfo
      *
-     * @param  string[] $marketplace_ids A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
-     * @param  string $created_after A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
-     * @param  string $created_before A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_before A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string[] $order_statuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
-     * @param  string[] $fulfillment_channels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
-     * @param  string[] $payment_methods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
-     * @param  string $buyer_email The email address of a buyer. Used to select orders that contain the specified email address. (optional)
-     * @param  string $seller_order_id An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
-     * @param  int $max_results_per_page A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
-     * @param  string[] $easy_ship_shipment_statuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
-     * @param  string[] $amazon_order_ids A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string[] $marketplaceIds A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
+     * @param  string $createdAfter A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
+     * @param  string $createdBefore A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string[] $orderStatuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
+     * @param  string[] $fulfillmentChannels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
+     * @param  string[] $paymentMethods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
+     * @param  string $buyerEmail The email address of a buyer. Used to select orders that contain the specified email address. (optional)
+     * @param  string $sellerOrderId An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
+     * @param  int $maxResultsPerPage A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
+     * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
+     * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrdersWithHttpInfo($marketplace_ids, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $order_statuses = null, $fulfillment_channels = null, $payment_methods = null, $buyer_email = null, $seller_order_id = null, $max_results_per_page = null, $easy_ship_shipment_statuses = null, $next_token = null, $amazon_order_ids = null)
+    public function getOrdersWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
     {
-        $request = $this->getOrdersRequest($marketplace_ids, $created_after, $created_before, $last_updated_after, $last_updated_before, $order_statuses, $fulfillment_channels, $payment_methods, $buyer_email, $seller_order_id, $max_results_per_page, $easy_ship_shipment_statuses, $next_token, $amazon_order_ids);
+        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2306,27 +2306,27 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string[] $marketplace_ids A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
-     * @param  string $created_after A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
-     * @param  string $created_before A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_before A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string[] $order_statuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
-     * @param  string[] $fulfillment_channels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
-     * @param  string[] $payment_methods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
-     * @param  string $buyer_email The email address of a buyer. Used to select orders that contain the specified email address. (optional)
-     * @param  string $seller_order_id An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
-     * @param  int $max_results_per_page A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
-     * @param  string[] $easy_ship_shipment_statuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
-     * @param  string[] $amazon_order_ids A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string[] $marketplaceIds A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
+     * @param  string $createdAfter A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
+     * @param  string $createdBefore A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string[] $orderStatuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
+     * @param  string[] $fulfillmentChannels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
+     * @param  string[] $paymentMethods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
+     * @param  string $buyerEmail The email address of a buyer. Used to select orders that contain the specified email address. (optional)
+     * @param  string $sellerOrderId An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
+     * @param  int $maxResultsPerPage A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
+     * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
+     * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersAsync($marketplace_ids, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $order_statuses = null, $fulfillment_channels = null, $payment_methods = null, $buyer_email = null, $seller_order_id = null, $max_results_per_page = null, $easy_ship_shipment_statuses = null, $next_token = null, $amazon_order_ids = null)
+    public function getOrdersAsync($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
     {
-        return $this->getOrdersAsyncWithHttpInfo($marketplace_ids, $created_after, $created_before, $last_updated_after, $last_updated_before, $order_statuses, $fulfillment_channels, $payment_methods, $buyer_email, $seller_order_id, $max_results_per_page, $easy_ship_shipment_statuses, $next_token, $amazon_order_ids)
+        return $this->getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2339,28 +2339,28 @@ class OrdersV0Api
      *
      * 
      *
-     * @param  string[] $marketplace_ids A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
-     * @param  string $created_after A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
-     * @param  string $created_before A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_before A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string[] $order_statuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
-     * @param  string[] $fulfillment_channels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
-     * @param  string[] $payment_methods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
-     * @param  string $buyer_email The email address of a buyer. Used to select orders that contain the specified email address. (optional)
-     * @param  string $seller_order_id An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
-     * @param  int $max_results_per_page A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
-     * @param  string[] $easy_ship_shipment_statuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
-     * @param  string[] $amazon_order_ids A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string[] $marketplaceIds A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
+     * @param  string $createdAfter A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
+     * @param  string $createdBefore A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string[] $orderStatuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
+     * @param  string[] $fulfillmentChannels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
+     * @param  string[] $paymentMethods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
+     * @param  string $buyerEmail The email address of a buyer. Used to select orders that contain the specified email address. (optional)
+     * @param  string $sellerOrderId An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
+     * @param  int $maxResultsPerPage A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
+     * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
+     * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersAsyncWithHttpInfo($marketplace_ids, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $order_statuses = null, $fulfillment_channels = null, $payment_methods = null, $buyer_email = null, $seller_order_id = null, $max_results_per_page = null, $easy_ship_shipment_statuses = null, $next_token = null, $amazon_order_ids = null)
+    public function getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse';
-        $request = $this->getOrdersRequest($marketplace_ids, $created_after, $created_before, $last_updated_after, $last_updated_before, $order_statuses, $fulfillment_channels, $payment_methods, $buyer_email, $seller_order_id, $max_results_per_page, $easy_ship_shipment_statuses, $next_token, $amazon_order_ids);
+        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2399,38 +2399,38 @@ class OrdersV0Api
     /**
      * Create request for operation 'getOrders'
      *
-     * @param  string[] $marketplace_ids A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
-     * @param  string $created_after A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
-     * @param  string $created_before A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_after A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string $last_updated_before A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
-     * @param  string[] $order_statuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
-     * @param  string[] $fulfillment_channels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
-     * @param  string[] $payment_methods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
-     * @param  string $buyer_email The email address of a buyer. Used to select orders that contain the specified email address. (optional)
-     * @param  string $seller_order_id An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
-     * @param  int $max_results_per_page A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
-     * @param  string[] $easy_ship_shipment_statuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
-     * @param  string $next_token A string token returned in the response of your previous request. (optional)
-     * @param  string[] $amazon_order_ids A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string[] $marketplaceIds A list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. (required)
+     * @param  string $createdAfter A date used for selecting orders created after (or at) a specified time. Only orders placed after the specified time are returned. Either the CreatedAfter parameter or the LastUpdatedAfter parameter is required. Both cannot be empty. The date must be in ISO 8601 format. (optional)
+     * @param  string $createdBefore A date used for selecting orders created before (or at) a specified time. Only orders placed before the specified time are returned. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedAfter A date used for selecting orders that were last updated after (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string $lastUpdatedBefore A date used for selecting orders that were last updated before (or at) a specified time. An update is defined as any change in order status, including the creation of a new order. Includes updates made by Amazon and by the seller. The date must be in ISO 8601 format. (optional)
+     * @param  string[] $orderStatuses A list of OrderStatus values used to filter the results. Possible values: PendingAvailability (This status is available for pre-orders only. The order has been placed, payment has not been authorized, and the release date of the item is in the future.); Pending (The order has been placed but payment has not been authorized); Unshipped (Payment has been authorized and the order is ready for shipment, but no items in the order have been shipped); PartiallyShipped (One or more, but not all, items in the order have been shipped); Shipped (All items in the order have been shipped); InvoiceUnconfirmed (All items in the order have been shipped. The seller has not yet given confirmation to Amazon that the invoice has been shipped to the buyer.); Canceled (The order has been canceled); and Unfulfillable (The order cannot be fulfilled. This state applies only to Multi-Channel Fulfillment orders.). (optional)
+     * @param  string[] $fulfillmentChannels A list that indicates how an order was fulfilled. Filters the results by fulfillment channel. Possible values: FBA (Fulfillment by Amazon); SellerFulfilled (Fulfilled by the seller). (optional)
+     * @param  string[] $paymentMethods A list of payment method values. Used to select orders paid using the specified payment methods. Possible values: COD (Cash on delivery); CVS (Convenience store payment); Other (Any payment method other than COD or CVS). (optional)
+     * @param  string $buyerEmail The email address of a buyer. Used to select orders that contain the specified email address. (optional)
+     * @param  string $sellerOrderId An order identifier that is specified by the seller. Used to select only the orders that match the order identifier. If SellerOrderId is specified, then FulfillmentChannels, OrderStatuses, PaymentMethod, LastUpdatedAfter, LastUpdatedBefore, and BuyerEmail cannot be specified. (optional)
+     * @param  int $maxResultsPerPage A number that indicates the maximum number of orders that can be returned per page. Value must be 1 - 100. Default 100. (optional)
+     * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
+     * @param  string $nextToken A string token returned in the response of your previous request. (optional)
+     * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrdersRequest($marketplace_ids, $created_after = null, $created_before = null, $last_updated_after = null, $last_updated_before = null, $order_statuses = null, $fulfillment_channels = null, $payment_methods = null, $buyer_email = null, $seller_order_id = null, $max_results_per_page = null, $easy_ship_shipment_statuses = null, $next_token = null, $amazon_order_ids = null)
+    public function getOrdersRequest($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
     {
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling getOrders'
+                'Missing the required parameter $marketplaceIds when calling getOrders'
             );
         }
-        if (count($marketplace_ids) > 50) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling OrdersV0Api.getOrders, number of items must be less than or equal to 50.');
+        if (count($marketplaceIds) > 50) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling OrdersV0Api.getOrders, number of items must be less than or equal to 50.');
         }
 
-        if ($amazon_order_ids !== null && count($amazon_order_ids) > 50) {
-            throw new \InvalidArgumentException('invalid value for "$amazon_order_ids" when calling OrdersV0Api.getOrders, number of items must be less than or equal to 50.');
+        if ($amazonOrderIds !== null && count($amazonOrderIds) > 50) {
+            throw new \InvalidArgumentException('invalid value for "$amazonOrderIds" when calling OrdersV0Api.getOrders, number of items must be less than or equal to 50.');
         }
 
 
@@ -2442,102 +2442,102 @@ class OrdersV0Api
         $multipart = false;
 
         // query params
-        if (is_array($created_after)) {
-            $created_after = ObjectSerializer::serializeCollection($created_after, '', true);
+        if (is_array($createdAfter)) {
+            $createdAfter = ObjectSerializer::serializeCollection($createdAfter, '', true);
         }
-        if ($created_after !== null) {
-            $queryParams['CreatedAfter'] = $created_after;
-        }
-        // query params
-        if (is_array($created_before)) {
-            $created_before = ObjectSerializer::serializeCollection($created_before, '', true);
-        }
-        if ($created_before !== null) {
-            $queryParams['CreatedBefore'] = $created_before;
+        if ($createdAfter !== null) {
+            $queryParams['CreatedAfter'] = $createdAfter;
         }
         // query params
-        if (is_array($last_updated_after)) {
-            $last_updated_after = ObjectSerializer::serializeCollection($last_updated_after, '', true);
+        if (is_array($createdBefore)) {
+            $createdBefore = ObjectSerializer::serializeCollection($createdBefore, '', true);
         }
-        if ($last_updated_after !== null) {
-            $queryParams['LastUpdatedAfter'] = $last_updated_after;
-        }
-        // query params
-        if (is_array($last_updated_before)) {
-            $last_updated_before = ObjectSerializer::serializeCollection($last_updated_before, '', true);
-        }
-        if ($last_updated_before !== null) {
-            $queryParams['LastUpdatedBefore'] = $last_updated_before;
+        if ($createdBefore !== null) {
+            $queryParams['CreatedBefore'] = $createdBefore;
         }
         // query params
-        if (is_array($order_statuses)) {
-            $order_statuses = ObjectSerializer::serializeCollection($order_statuses, 'form', true);
+        if (is_array($lastUpdatedAfter)) {
+            $lastUpdatedAfter = ObjectSerializer::serializeCollection($lastUpdatedAfter, '', true);
         }
-        if ($order_statuses !== null) {
-            $queryParams['OrderStatuses'] = $order_statuses;
-        }
-        // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
-        }
-        if ($marketplace_ids !== null) {
-            $queryParams['MarketplaceIds'] = $marketplace_ids;
+        if ($lastUpdatedAfter !== null) {
+            $queryParams['LastUpdatedAfter'] = $lastUpdatedAfter;
         }
         // query params
-        if (is_array($fulfillment_channels)) {
-            $fulfillment_channels = ObjectSerializer::serializeCollection($fulfillment_channels, 'form', true);
+        if (is_array($lastUpdatedBefore)) {
+            $lastUpdatedBefore = ObjectSerializer::serializeCollection($lastUpdatedBefore, '', true);
         }
-        if ($fulfillment_channels !== null) {
-            $queryParams['FulfillmentChannels'] = $fulfillment_channels;
-        }
-        // query params
-        if (is_array($payment_methods)) {
-            $payment_methods = ObjectSerializer::serializeCollection($payment_methods, 'form', true);
-        }
-        if ($payment_methods !== null) {
-            $queryParams['PaymentMethods'] = $payment_methods;
+        if ($lastUpdatedBefore !== null) {
+            $queryParams['LastUpdatedBefore'] = $lastUpdatedBefore;
         }
         // query params
-        if (is_array($buyer_email)) {
-            $buyer_email = ObjectSerializer::serializeCollection($buyer_email, '', true);
+        if (is_array($orderStatuses)) {
+            $orderStatuses = ObjectSerializer::serializeCollection($orderStatuses, 'form', true);
         }
-        if ($buyer_email !== null) {
-            $queryParams['BuyerEmail'] = $buyer_email;
-        }
-        // query params
-        if (is_array($seller_order_id)) {
-            $seller_order_id = ObjectSerializer::serializeCollection($seller_order_id, '', true);
-        }
-        if ($seller_order_id !== null) {
-            $queryParams['SellerOrderId'] = $seller_order_id;
+        if ($orderStatuses !== null) {
+            $queryParams['OrderStatuses'] = $orderStatuses;
         }
         // query params
-        if (is_array($max_results_per_page)) {
-            $max_results_per_page = ObjectSerializer::serializeCollection($max_results_per_page, '', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($max_results_per_page !== null) {
-            $queryParams['MaxResultsPerPage'] = $max_results_per_page;
-        }
-        // query params
-        if (is_array($easy_ship_shipment_statuses)) {
-            $easy_ship_shipment_statuses = ObjectSerializer::serializeCollection($easy_ship_shipment_statuses, 'form', true);
-        }
-        if ($easy_ship_shipment_statuses !== null) {
-            $queryParams['EasyShipShipmentStatuses'] = $easy_ship_shipment_statuses;
+        if ($marketplaceIds !== null) {
+            $queryParams['MarketplaceIds'] = $marketplaceIds;
         }
         // query params
-        if (is_array($next_token)) {
-            $next_token = ObjectSerializer::serializeCollection($next_token, '', true);
+        if (is_array($fulfillmentChannels)) {
+            $fulfillmentChannels = ObjectSerializer::serializeCollection($fulfillmentChannels, 'form', true);
         }
-        if ($next_token !== null) {
-            $queryParams['NextToken'] = $next_token;
+        if ($fulfillmentChannels !== null) {
+            $queryParams['FulfillmentChannels'] = $fulfillmentChannels;
         }
         // query params
-        if (is_array($amazon_order_ids)) {
-            $amazon_order_ids = ObjectSerializer::serializeCollection($amazon_order_ids, 'form', true);
+        if (is_array($paymentMethods)) {
+            $paymentMethods = ObjectSerializer::serializeCollection($paymentMethods, 'form', true);
         }
-        if ($amazon_order_ids !== null) {
-            $queryParams['AmazonOrderIds'] = $amazon_order_ids;
+        if ($paymentMethods !== null) {
+            $queryParams['PaymentMethods'] = $paymentMethods;
+        }
+        // query params
+        if (is_array($buyerEmail)) {
+            $buyerEmail = ObjectSerializer::serializeCollection($buyerEmail, '', true);
+        }
+        if ($buyerEmail !== null) {
+            $queryParams['BuyerEmail'] = $buyerEmail;
+        }
+        // query params
+        if (is_array($sellerOrderId)) {
+            $sellerOrderId = ObjectSerializer::serializeCollection($sellerOrderId, '', true);
+        }
+        if ($sellerOrderId !== null) {
+            $queryParams['SellerOrderId'] = $sellerOrderId;
+        }
+        // query params
+        if (is_array($maxResultsPerPage)) {
+            $maxResultsPerPage = ObjectSerializer::serializeCollection($maxResultsPerPage, '', true);
+        }
+        if ($maxResultsPerPage !== null) {
+            $queryParams['MaxResultsPerPage'] = $maxResultsPerPage;
+        }
+        // query params
+        if (is_array($easyShipShipmentStatuses)) {
+            $easyShipShipmentStatuses = ObjectSerializer::serializeCollection($easyShipShipmentStatuses, 'form', true);
+        }
+        if ($easyShipShipmentStatuses !== null) {
+            $queryParams['EasyShipShipmentStatuses'] = $easyShipShipmentStatuses;
+        }
+        // query params
+        if (is_array($nextToken)) {
+            $nextToken = ObjectSerializer::serializeCollection($nextToken, '', true);
+        }
+        if ($nextToken !== null) {
+            $queryParams['NextToken'] = $nextToken;
+        }
+        // query params
+        if (is_array($amazonOrderIds)) {
+            $amazonOrderIds = ObjectSerializer::serializeCollection($amazonOrderIds, 'form', true);
+        }
+        if ($amazonOrderIds !== null) {
+            $queryParams['AmazonOrderIds'] = $amazonOrderIds;
         }
 
 

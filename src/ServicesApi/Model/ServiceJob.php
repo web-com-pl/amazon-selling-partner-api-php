@@ -62,19 +62,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'create_time' => '\DateTime',
-        'service_job_id' => 'string',
-        'service_job_status' => 'string',
-        'scope_of_work' => '\Webcom\Amazon\Rest\ServicesApi\Model\ScopeOfWork',
+        'createTime' => '\DateTime',
+        'serviceJobId' => 'string',
+        'serviceJobStatus' => 'string',
+        'scopeOfWork' => '\Webcom\Amazon\Rest\ServicesApi\Model\ScopeOfWork',
         'seller' => '\Webcom\Amazon\Rest\ServicesApi\Model\Seller',
-        'service_job_provider' => '\Webcom\Amazon\Rest\ServicesApi\Model\ServiceJobProvider',
-        'preferred_appointment_times' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime[]',
+        'serviceJobProvider' => '\Webcom\Amazon\Rest\ServicesApi\Model\ServiceJobProvider',
+        'preferredAppointmentTimes' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime[]',
         'appointments' => '\Webcom\Amazon\Rest\ServicesApi\Model\Appointment[]',
-        'service_order_id' => 'string',
-        'marketplace_id' => 'string',
+        'serviceOrderId' => 'string',
+        'marketplaceId' => 'string',
         'buyer' => '\Webcom\Amazon\Rest\ServicesApi\Model\Buyer',
-        'associated_items' => '\Webcom\Amazon\Rest\ServicesApi\Model\AssociatedItem[]',
-        'service_location' => '\Webcom\Amazon\Rest\ServicesApi\Model\ServiceLocation'
+        'associatedItems' => '\Webcom\Amazon\Rest\ServicesApi\Model\AssociatedItem[]',
+        'serviceLocation' => '\Webcom\Amazon\Rest\ServicesApi\Model\ServiceLocation'
     ];
 
     /**
@@ -85,19 +85,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'create_time' => 'date-time',
-        'service_job_id' => null,
-        'service_job_status' => null,
-        'scope_of_work' => null,
+        'createTime' => 'date-time',
+        'serviceJobId' => null,
+        'serviceJobStatus' => null,
+        'scopeOfWork' => null,
         'seller' => null,
-        'service_job_provider' => null,
-        'preferred_appointment_times' => null,
+        'serviceJobProvider' => null,
+        'preferredAppointmentTimes' => null,
         'appointments' => null,
-        'service_order_id' => null,
-        'marketplace_id' => null,
+        'serviceOrderId' => null,
+        'marketplaceId' => null,
         'buyer' => null,
-        'associated_items' => null,
-        'service_location' => null
+        'associatedItems' => null,
+        'serviceLocation' => null
     ];
 
     /**
@@ -127,19 +127,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'create_time' => 'createTime',
-        'service_job_id' => 'serviceJobId',
-        'service_job_status' => 'serviceJobStatus',
-        'scope_of_work' => 'scopeOfWork',
+        'createTime' => 'createTime',
+        'serviceJobId' => 'serviceJobId',
+        'serviceJobStatus' => 'serviceJobStatus',
+        'scopeOfWork' => 'scopeOfWork',
         'seller' => 'seller',
-        'service_job_provider' => 'serviceJobProvider',
-        'preferred_appointment_times' => 'preferredAppointmentTimes',
+        'serviceJobProvider' => 'serviceJobProvider',
+        'preferredAppointmentTimes' => 'preferredAppointmentTimes',
         'appointments' => 'appointments',
-        'service_order_id' => 'serviceOrderId',
-        'marketplace_id' => 'marketplaceId',
+        'serviceOrderId' => 'serviceOrderId',
+        'marketplaceId' => 'marketplaceId',
         'buyer' => 'buyer',
-        'associated_items' => 'associatedItems',
-        'service_location' => 'serviceLocation'
+        'associatedItems' => 'associatedItems',
+        'serviceLocation' => 'serviceLocation'
     ];
 
     /**
@@ -148,19 +148,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'create_time' => 'setCreateTime',
-        'service_job_id' => 'setServiceJobId',
-        'service_job_status' => 'setServiceJobStatus',
-        'scope_of_work' => 'setScopeOfWork',
+        'createTime' => 'setCreateTime',
+        'serviceJobId' => 'setServiceJobId',
+        'serviceJobStatus' => 'setServiceJobStatus',
+        'scopeOfWork' => 'setScopeOfWork',
         'seller' => 'setSeller',
-        'service_job_provider' => 'setServiceJobProvider',
-        'preferred_appointment_times' => 'setPreferredAppointmentTimes',
+        'serviceJobProvider' => 'setServiceJobProvider',
+        'preferredAppointmentTimes' => 'setPreferredAppointmentTimes',
         'appointments' => 'setAppointments',
-        'service_order_id' => 'setServiceOrderId',
-        'marketplace_id' => 'setMarketplaceId',
+        'serviceOrderId' => 'setServiceOrderId',
+        'marketplaceId' => 'setMarketplaceId',
         'buyer' => 'setBuyer',
-        'associated_items' => 'setAssociatedItems',
-        'service_location' => 'setServiceLocation'
+        'associatedItems' => 'setAssociatedItems',
+        'serviceLocation' => 'setServiceLocation'
     ];
 
     /**
@@ -169,19 +169,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'create_time' => 'getCreateTime',
-        'service_job_id' => 'getServiceJobId',
-        'service_job_status' => 'getServiceJobStatus',
-        'scope_of_work' => 'getScopeOfWork',
+        'createTime' => 'getCreateTime',
+        'serviceJobId' => 'getServiceJobId',
+        'serviceJobStatus' => 'getServiceJobStatus',
+        'scopeOfWork' => 'getScopeOfWork',
         'seller' => 'getSeller',
-        'service_job_provider' => 'getServiceJobProvider',
-        'preferred_appointment_times' => 'getPreferredAppointmentTimes',
+        'serviceJobProvider' => 'getServiceJobProvider',
+        'preferredAppointmentTimes' => 'getPreferredAppointmentTimes',
         'appointments' => 'getAppointments',
-        'service_order_id' => 'getServiceOrderId',
-        'marketplace_id' => 'getMarketplaceId',
+        'serviceOrderId' => 'getServiceOrderId',
+        'marketplaceId' => 'getMarketplaceId',
         'buyer' => 'getBuyer',
-        'associated_items' => 'getAssociatedItems',
-        'service_location' => 'getServiceLocation'
+        'associatedItems' => 'getAssociatedItems',
+        'serviceLocation' => 'getServiceLocation'
     ];
 
     /**
@@ -269,19 +269,19 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['create_time'] = $data['create_time'] ?? null;
-        $this->container['service_job_id'] = $data['service_job_id'] ?? null;
-        $this->container['service_job_status'] = $data['service_job_status'] ?? null;
-        $this->container['scope_of_work'] = $data['scope_of_work'] ?? null;
+        $this->container['createTime'] = $data['createTime'] ?? null;
+        $this->container['serviceJobId'] = $data['serviceJobId'] ?? null;
+        $this->container['serviceJobStatus'] = $data['serviceJobStatus'] ?? null;
+        $this->container['scopeOfWork'] = $data['scopeOfWork'] ?? null;
         $this->container['seller'] = $data['seller'] ?? null;
-        $this->container['service_job_provider'] = $data['service_job_provider'] ?? null;
-        $this->container['preferred_appointment_times'] = $data['preferred_appointment_times'] ?? null;
+        $this->container['serviceJobProvider'] = $data['serviceJobProvider'] ?? null;
+        $this->container['preferredAppointmentTimes'] = $data['preferredAppointmentTimes'] ?? null;
         $this->container['appointments'] = $data['appointments'] ?? null;
-        $this->container['service_order_id'] = $data['service_order_id'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
+        $this->container['serviceOrderId'] = $data['serviceOrderId'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
         $this->container['buyer'] = $data['buyer'] ?? null;
-        $this->container['associated_items'] = $data['associated_items'] ?? null;
-        $this->container['service_location'] = $data['service_location'] ?? null;
+        $this->container['associatedItems'] = $data['associatedItems'] ?? null;
+        $this->container['serviceLocation'] = $data['serviceLocation'] ?? null;
     }
 
     /**
@@ -293,33 +293,33 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['service_job_id']) && (mb_strlen($this->container['service_job_id']) > 100)) {
-            $invalidProperties[] = "invalid value for 'service_job_id', the character length must be smaller than or equal to 100.";
+        if (!is_null($this->container['serviceJobId']) && (mb_strlen($this->container['serviceJobId']) > 100)) {
+            $invalidProperties[] = "invalid value for 'serviceJobId', the character length must be smaller than or equal to 100.";
         }
 
-        if (!is_null($this->container['service_job_id']) && (mb_strlen($this->container['service_job_id']) < 1)) {
-            $invalidProperties[] = "invalid value for 'service_job_id', the character length must be bigger than or equal to 1.";
+        if (!is_null($this->container['serviceJobId']) && (mb_strlen($this->container['serviceJobId']) < 1)) {
+            $invalidProperties[] = "invalid value for 'serviceJobId', the character length must be bigger than or equal to 1.";
         }
 
         $allowedValues = $this->getServiceJobStatusAllowableValues();
-        if (!is_null($this->container['service_job_status']) && !in_array($this->container['service_job_status'], $allowedValues, true)) {
+        if (!is_null($this->container['serviceJobStatus']) && !in_array($this->container['serviceJobStatus'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'service_job_status', must be one of '%s'",
-                $this->container['service_job_status'],
+                "invalid value '%s' for 'serviceJobStatus', must be one of '%s'",
+                $this->container['serviceJobStatus'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if (!is_null($this->container['service_order_id']) && (mb_strlen($this->container['service_order_id']) > 20)) {
-            $invalidProperties[] = "invalid value for 'service_order_id', the character length must be smaller than or equal to 20.";
+        if (!is_null($this->container['serviceOrderId']) && (mb_strlen($this->container['serviceOrderId']) > 20)) {
+            $invalidProperties[] = "invalid value for 'serviceOrderId', the character length must be smaller than or equal to 20.";
         }
 
-        if (!is_null($this->container['service_order_id']) && (mb_strlen($this->container['service_order_id']) < 5)) {
-            $invalidProperties[] = "invalid value for 'service_order_id', the character length must be bigger than or equal to 5.";
+        if (!is_null($this->container['serviceOrderId']) && (mb_strlen($this->container['serviceOrderId']) < 5)) {
+            $invalidProperties[] = "invalid value for 'serviceOrderId', the character length must be bigger than or equal to 5.";
         }
 
-        if (!is_null($this->container['marketplace_id']) && !preg_match("/^[A-Z0-9]*$/", $this->container['marketplace_id'])) {
-            $invalidProperties[] = "invalid value for 'marketplace_id', must be conform to the pattern /^[A-Z0-9]*$/.";
+        if (!is_null($this->container['marketplaceId']) && !preg_match("/^[A-Z0-9]*$/", $this->container['marketplaceId'])) {
+            $invalidProperties[] = "invalid value for 'marketplaceId', must be conform to the pattern /^[A-Z0-9]*$/.";
         }
 
         return $invalidProperties;
@@ -338,114 +338,114 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets create_time
+     * Gets createTime
      *
      * @return \DateTime|null
      */
     public function getCreateTime()
     {
-        return $this->container['create_time'];
+        return $this->container['createTime'];
     }
 
     /**
-     * Sets create_time
+     * Sets createTime
      *
-     * @param \DateTime|null $create_time The date and time of the creation of the job, in ISO 8601 format.
+     * @param \DateTime|null $createTime The date and time of the creation of the job, in ISO 8601 format.
      *
      * @return self
      */
-    public function setCreateTime($create_time)
+    public function setCreateTime($createTime)
     {
-        $this->container['create_time'] = $create_time;
+        $this->container['createTime'] = $createTime;
 
         return $this;
     }
 
     /**
-     * Gets service_job_id
+     * Gets serviceJobId
      *
      * @return string|null
      */
     public function getServiceJobId()
     {
-        return $this->container['service_job_id'];
+        return $this->container['serviceJobId'];
     }
 
     /**
-     * Sets service_job_id
+     * Sets serviceJobId
      *
-     * @param string|null $service_job_id Amazon identifier for the service job.
+     * @param string|null $serviceJobId Amazon identifier for the service job.
      *
      * @return self
      */
-    public function setServiceJobId($service_job_id)
+    public function setServiceJobId($serviceJobId)
     {
-        if (!is_null($service_job_id) && (mb_strlen($service_job_id) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $service_job_id when calling ServiceJob., must be smaller than or equal to 100.');
+        if (!is_null($serviceJobId) && (mb_strlen($serviceJobId) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $serviceJobId when calling ServiceJob., must be smaller than or equal to 100.');
         }
-        if (!is_null($service_job_id) && (mb_strlen($service_job_id) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $service_job_id when calling ServiceJob., must be bigger than or equal to 1.');
+        if (!is_null($serviceJobId) && (mb_strlen($serviceJobId) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $serviceJobId when calling ServiceJob., must be bigger than or equal to 1.');
         }
 
-        $this->container['service_job_id'] = $service_job_id;
+        $this->container['serviceJobId'] = $serviceJobId;
 
         return $this;
     }
 
     /**
-     * Gets service_job_status
+     * Gets serviceJobStatus
      *
      * @return string|null
      */
     public function getServiceJobStatus()
     {
-        return $this->container['service_job_status'];
+        return $this->container['serviceJobStatus'];
     }
 
     /**
-     * Sets service_job_status
+     * Sets serviceJobStatus
      *
-     * @param string|null $service_job_status The status of the service job.
+     * @param string|null $serviceJobStatus The status of the service job.
      *
      * @return self
      */
-    public function setServiceJobStatus($service_job_status)
+    public function setServiceJobStatus($serviceJobStatus)
     {
         $allowedValues = $this->getServiceJobStatusAllowableValues();
-        if (!is_null($service_job_status) && !in_array($service_job_status, $allowedValues, true)) {
+        if (!is_null($serviceJobStatus) && !in_array($serviceJobStatus, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'service_job_status', must be one of '%s'",
-                    $service_job_status,
+                    "Invalid value '%s' for 'serviceJobStatus', must be one of '%s'",
+                    $serviceJobStatus,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['service_job_status'] = $service_job_status;
+        $this->container['serviceJobStatus'] = $serviceJobStatus;
 
         return $this;
     }
 
     /**
-     * Gets scope_of_work
+     * Gets scopeOfWork
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\ScopeOfWork|null
      */
     public function getScopeOfWork()
     {
-        return $this->container['scope_of_work'];
+        return $this->container['scopeOfWork'];
     }
 
     /**
-     * Sets scope_of_work
+     * Sets scopeOfWork
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ScopeOfWork|null $scope_of_work scope_of_work
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ScopeOfWork|null $scopeOfWork scopeOfWork
      *
      * @return self
      */
-    public function setScopeOfWork($scope_of_work)
+    public function setScopeOfWork($scopeOfWork)
     {
-        $this->container['scope_of_work'] = $scope_of_work;
+        $this->container['scopeOfWork'] = $scopeOfWork;
 
         return $this;
     }
@@ -475,49 +475,49 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets service_job_provider
+     * Gets serviceJobProvider
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\ServiceJobProvider|null
      */
     public function getServiceJobProvider()
     {
-        return $this->container['service_job_provider'];
+        return $this->container['serviceJobProvider'];
     }
 
     /**
-     * Sets service_job_provider
+     * Sets serviceJobProvider
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ServiceJobProvider|null $service_job_provider service_job_provider
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ServiceJobProvider|null $serviceJobProvider serviceJobProvider
      *
      * @return self
      */
-    public function setServiceJobProvider($service_job_provider)
+    public function setServiceJobProvider($serviceJobProvider)
     {
-        $this->container['service_job_provider'] = $service_job_provider;
+        $this->container['serviceJobProvider'] = $serviceJobProvider;
 
         return $this;
     }
 
     /**
-     * Gets preferred_appointment_times
+     * Gets preferredAppointmentTimes
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime[]|null
      */
     public function getPreferredAppointmentTimes()
     {
-        return $this->container['preferred_appointment_times'];
+        return $this->container['preferredAppointmentTimes'];
     }
 
     /**
-     * Sets preferred_appointment_times
+     * Sets preferredAppointmentTimes
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime[]|null $preferred_appointment_times A list of appointment windows preferred by the buyer. Included only if the buyer selected appointment windows when creating the order.
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime[]|null $preferredAppointmentTimes A list of appointment windows preferred by the buyer. Included only if the buyer selected appointment windows when creating the order.
      *
      * @return self
      */
-    public function setPreferredAppointmentTimes($preferred_appointment_times)
+    public function setPreferredAppointmentTimes($preferredAppointmentTimes)
     {
-        $this->container['preferred_appointment_times'] = $preferred_appointment_times;
+        $this->container['preferredAppointmentTimes'] = $preferredAppointmentTimes;
 
         return $this;
     }
@@ -547,61 +547,61 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets service_order_id
+     * Gets serviceOrderId
      *
      * @return string|null
      */
     public function getServiceOrderId()
     {
-        return $this->container['service_order_id'];
+        return $this->container['serviceOrderId'];
     }
 
     /**
-     * Sets service_order_id
+     * Sets serviceOrderId
      *
-     * @param string|null $service_order_id The Amazon-defined identifier for an order placed by the buyer, in 3-7-7 format.
+     * @param string|null $serviceOrderId The Amazon-defined identifier for an order placed by the buyer, in 3-7-7 format.
      *
      * @return self
      */
-    public function setServiceOrderId($service_order_id)
+    public function setServiceOrderId($serviceOrderId)
     {
-        if (!is_null($service_order_id) && (mb_strlen($service_order_id) > 20)) {
-            throw new \InvalidArgumentException('invalid length for $service_order_id when calling ServiceJob., must be smaller than or equal to 20.');
+        if (!is_null($serviceOrderId) && (mb_strlen($serviceOrderId) > 20)) {
+            throw new \InvalidArgumentException('invalid length for $serviceOrderId when calling ServiceJob., must be smaller than or equal to 20.');
         }
-        if (!is_null($service_order_id) && (mb_strlen($service_order_id) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $service_order_id when calling ServiceJob., must be bigger than or equal to 5.');
+        if (!is_null($serviceOrderId) && (mb_strlen($serviceOrderId) < 5)) {
+            throw new \InvalidArgumentException('invalid length for $serviceOrderId when calling ServiceJob., must be bigger than or equal to 5.');
         }
 
-        $this->container['service_order_id'] = $service_order_id;
+        $this->container['serviceOrderId'] = $serviceOrderId;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The marketplace identifier.
+     * @param string|null $marketplaceId The marketplace identifier.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
 
-        if (!is_null($marketplace_id) && (!preg_match("/^[A-Z0-9]*$/", $marketplace_id))) {
-            throw new \InvalidArgumentException("invalid value for $marketplace_id when calling ServiceJob., must conform to the pattern /^[A-Z0-9]*$/.");
+        if (!is_null($marketplaceId) && (!preg_match("/^[A-Z0-9]*$/", $marketplaceId))) {
+            throw new \InvalidArgumentException("invalid value for $marketplaceId when calling ServiceJob., must conform to the pattern /^[A-Z0-9]*$/.");
         }
 
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
@@ -631,49 +631,49 @@ class ServiceJob implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets associated_items
+     * Gets associatedItems
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AssociatedItem[]|null
      */
     public function getAssociatedItems()
     {
-        return $this->container['associated_items'];
+        return $this->container['associatedItems'];
     }
 
     /**
-     * Sets associated_items
+     * Sets associatedItems
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AssociatedItem[]|null $associated_items A list of items associated with the service job.
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AssociatedItem[]|null $associatedItems A list of items associated with the service job.
      *
      * @return self
      */
-    public function setAssociatedItems($associated_items)
+    public function setAssociatedItems($associatedItems)
     {
-        $this->container['associated_items'] = $associated_items;
+        $this->container['associatedItems'] = $associatedItems;
 
         return $this;
     }
 
     /**
-     * Gets service_location
+     * Gets serviceLocation
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\ServiceLocation|null
      */
     public function getServiceLocation()
     {
-        return $this->container['service_location'];
+        return $this->container['serviceLocation'];
     }
 
     /**
-     * Sets service_location
+     * Sets serviceLocation
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ServiceLocation|null $service_location service_location
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ServiceLocation|null $serviceLocation serviceLocation
      *
      * @return self
      */
-    public function setServiceLocation($service_location)
+    public function setServiceLocation($serviceLocation)
     {
-        $this->container['service_location'] = $service_location;
+        $this->container['serviceLocation'] = $serviceLocation;
 
         return $this;
     }

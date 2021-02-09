@@ -63,7 +63,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
       */
     protected static $openAPITypes = [
         'standard' => 'string',
-        'initialization_vector' => 'string',
+        'initializationVector' => 'string',
         'key' => 'string'
     ];
 
@@ -76,7 +76,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
       */
     protected static $openAPIFormats = [
         'standard' => null,
-        'initialization_vector' => null,
+        'initializationVector' => null,
         'key' => null
     ];
 
@@ -108,7 +108,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
      */
     protected static $attributeMap = [
         'standard' => 'standard',
-        'initialization_vector' => 'initializationVector',
+        'initializationVector' => 'initializationVector',
         'key' => 'key'
     ];
 
@@ -119,7 +119,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
      */
     protected static $setters = [
         'standard' => 'setStandard',
-        'initialization_vector' => 'setInitializationVector',
+        'initializationVector' => 'setInitializationVector',
         'key' => 'setKey'
     ];
 
@@ -130,7 +130,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
      */
     protected static $getters = [
         'standard' => 'getStandard',
-        'initialization_vector' => 'getInitializationVector',
+        'initializationVector' => 'getInitializationVector',
         'key' => 'getKey'
     ];
 
@@ -208,7 +208,7 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
     public function __construct(array $data = null)
     {
         $this->container['standard'] = $data['standard'] ?? null;
-        $this->container['initialization_vector'] = $data['initialization_vector'] ?? null;
+        $this->container['initializationVector'] = $data['initializationVector'] ?? null;
         $this->container['key'] = $data['key'] ?? null;
     }
 
@@ -233,8 +233,8 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
             );
         }
 
-        if ($this->container['initialization_vector'] === null) {
-            $invalidProperties[] = "'initialization_vector' can't be null";
+        if ($this->container['initializationVector'] === null) {
+            $invalidProperties[] = "'initializationVector' can't be null";
         }
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
@@ -289,25 +289,25 @@ class ReportDocumentEncryptionDetails implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets initialization_vector
+     * Gets initializationVector
      *
      * @return string
      */
     public function getInitializationVector()
     {
-        return $this->container['initialization_vector'];
+        return $this->container['initializationVector'];
     }
 
     /**
-     * Sets initialization_vector
+     * Sets initializationVector
      *
-     * @param string $initialization_vector The vector to decrypt the document contents using Cipher Block Chaining (CBC).
+     * @param string $initializationVector The vector to decrypt the document contents using Cipher Block Chaining (CBC).
      *
      * @return self
      */
-    public function setInitializationVector($initialization_vector)
+    public function setInitializationVector($initializationVector)
     {
-        $this->container['initialization_vector'] = $initialization_vector;
+        $this->container['initializationVector'] = $initializationVector;
 
         return $this;
     }

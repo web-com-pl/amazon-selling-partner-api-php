@@ -62,13 +62,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'retrocharge_event_type' => 'string',
-        'amazon_order_id' => 'string',
-        'posted_date' => '\DateTime',
-        'base_tax' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'shipping_tax' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'marketplace_name' => 'string',
-        'retrocharge_tax_withheld_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]'
+        'retrochargeEventType' => 'string',
+        'amazonOrderId' => 'string',
+        'postedDate' => '\DateTime',
+        'baseTax' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'shippingTax' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'marketplaceName' => 'string',
+        'retrochargeTaxWithheldList' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]'
     ];
 
     /**
@@ -79,13 +79,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'retrocharge_event_type' => null,
-        'amazon_order_id' => null,
-        'posted_date' => 'date-time',
-        'base_tax' => null,
-        'shipping_tax' => null,
-        'marketplace_name' => null,
-        'retrocharge_tax_withheld_list' => null
+        'retrochargeEventType' => null,
+        'amazonOrderId' => null,
+        'postedDate' => 'date-time',
+        'baseTax' => null,
+        'shippingTax' => null,
+        'marketplaceName' => null,
+        'retrochargeTaxWithheldList' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'retrocharge_event_type' => 'RetrochargeEventType',
-        'amazon_order_id' => 'AmazonOrderId',
-        'posted_date' => 'PostedDate',
-        'base_tax' => 'BaseTax',
-        'shipping_tax' => 'ShippingTax',
-        'marketplace_name' => 'MarketplaceName',
-        'retrocharge_tax_withheld_list' => 'RetrochargeTaxWithheldList'
+        'retrochargeEventType' => 'RetrochargeEventType',
+        'amazonOrderId' => 'AmazonOrderId',
+        'postedDate' => 'PostedDate',
+        'baseTax' => 'BaseTax',
+        'shippingTax' => 'ShippingTax',
+        'marketplaceName' => 'MarketplaceName',
+        'retrochargeTaxWithheldList' => 'RetrochargeTaxWithheldList'
     ];
 
     /**
@@ -130,13 +130,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'retrocharge_event_type' => 'setRetrochargeEventType',
-        'amazon_order_id' => 'setAmazonOrderId',
-        'posted_date' => 'setPostedDate',
-        'base_tax' => 'setBaseTax',
-        'shipping_tax' => 'setShippingTax',
-        'marketplace_name' => 'setMarketplaceName',
-        'retrocharge_tax_withheld_list' => 'setRetrochargeTaxWithheldList'
+        'retrochargeEventType' => 'setRetrochargeEventType',
+        'amazonOrderId' => 'setAmazonOrderId',
+        'postedDate' => 'setPostedDate',
+        'baseTax' => 'setBaseTax',
+        'shippingTax' => 'setShippingTax',
+        'marketplaceName' => 'setMarketplaceName',
+        'retrochargeTaxWithheldList' => 'setRetrochargeTaxWithheldList'
     ];
 
     /**
@@ -145,13 +145,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'retrocharge_event_type' => 'getRetrochargeEventType',
-        'amazon_order_id' => 'getAmazonOrderId',
-        'posted_date' => 'getPostedDate',
-        'base_tax' => 'getBaseTax',
-        'shipping_tax' => 'getShippingTax',
-        'marketplace_name' => 'getMarketplaceName',
-        'retrocharge_tax_withheld_list' => 'getRetrochargeTaxWithheldList'
+        'retrochargeEventType' => 'getRetrochargeEventType',
+        'amazonOrderId' => 'getAmazonOrderId',
+        'postedDate' => 'getPostedDate',
+        'baseTax' => 'getBaseTax',
+        'shippingTax' => 'getShippingTax',
+        'marketplaceName' => 'getMarketplaceName',
+        'retrochargeTaxWithheldList' => 'getRetrochargeTaxWithheldList'
     ];
 
     /**
@@ -214,13 +214,13 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['retrocharge_event_type'] = $data['retrocharge_event_type'] ?? null;
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['base_tax'] = $data['base_tax'] ?? null;
-        $this->container['shipping_tax'] = $data['shipping_tax'] ?? null;
-        $this->container['marketplace_name'] = $data['marketplace_name'] ?? null;
-        $this->container['retrocharge_tax_withheld_list'] = $data['retrocharge_tax_withheld_list'] ?? null;
+        $this->container['retrochargeEventType'] = $data['retrochargeEventType'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['baseTax'] = $data['baseTax'] ?? null;
+        $this->container['shippingTax'] = $data['shippingTax'] ?? null;
+        $this->container['marketplaceName'] = $data['marketplaceName'] ?? null;
+        $this->container['retrochargeTaxWithheldList'] = $data['retrochargeTaxWithheldList'] ?? null;
     }
 
     /**
@@ -248,169 +248,169 @@ class RetrochargeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets retrocharge_event_type
+     * Gets retrochargeEventType
      *
      * @return string|null
      */
     public function getRetrochargeEventType()
     {
-        return $this->container['retrocharge_event_type'];
+        return $this->container['retrochargeEventType'];
     }
 
     /**
-     * Sets retrocharge_event_type
+     * Sets retrochargeEventType
      *
-     * @param string|null $retrocharge_event_type The type of event.  Possible values:  * Retrocharge  * RetrochargeReversal
+     * @param string|null $retrochargeEventType The type of event.  Possible values:  * Retrocharge  * RetrochargeReversal
      *
      * @return self
      */
-    public function setRetrochargeEventType($retrocharge_event_type)
+    public function setRetrochargeEventType($retrochargeEventType)
     {
-        $this->container['retrocharge_event_type'] = $retrocharge_event_type;
+        $this->container['retrochargeEventType'] = $retrochargeEventType;
 
         return $this;
     }
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets base_tax
+     * Gets baseTax
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getBaseTax()
     {
-        return $this->container['base_tax'];
+        return $this->container['baseTax'];
     }
 
     /**
-     * Sets base_tax
+     * Sets baseTax
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $base_tax base_tax
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $baseTax baseTax
      *
      * @return self
      */
-    public function setBaseTax($base_tax)
+    public function setBaseTax($baseTax)
     {
-        $this->container['base_tax'] = $base_tax;
+        $this->container['baseTax'] = $baseTax;
 
         return $this;
     }
 
     /**
-     * Gets shipping_tax
+     * Gets shippingTax
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getShippingTax()
     {
-        return $this->container['shipping_tax'];
+        return $this->container['shippingTax'];
     }
 
     /**
-     * Sets shipping_tax
+     * Sets shippingTax
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $shipping_tax shipping_tax
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $shippingTax shippingTax
      *
      * @return self
      */
-    public function setShippingTax($shipping_tax)
+    public function setShippingTax($shippingTax)
     {
-        $this->container['shipping_tax'] = $shipping_tax;
+        $this->container['shippingTax'] = $shippingTax;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_name
+     * Gets marketplaceName
      *
      * @return string|null
      */
     public function getMarketplaceName()
     {
-        return $this->container['marketplace_name'];
+        return $this->container['marketplaceName'];
     }
 
     /**
-     * Sets marketplace_name
+     * Sets marketplaceName
      *
-     * @param string|null $marketplace_name The name of the marketplace where the retrocharge event occurred.
+     * @param string|null $marketplaceName The name of the marketplace where the retrocharge event occurred.
      *
      * @return self
      */
-    public function setMarketplaceName($marketplace_name)
+    public function setMarketplaceName($marketplaceName)
     {
-        $this->container['marketplace_name'] = $marketplace_name;
+        $this->container['marketplaceName'] = $marketplaceName;
 
         return $this;
     }
 
     /**
-     * Gets retrocharge_tax_withheld_list
+     * Gets retrochargeTaxWithheldList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null
      */
     public function getRetrochargeTaxWithheldList()
     {
-        return $this->container['retrocharge_tax_withheld_list'];
+        return $this->container['retrochargeTaxWithheldList'];
     }
 
     /**
-     * Sets retrocharge_tax_withheld_list
+     * Sets retrochargeTaxWithheldList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $retrocharge_tax_withheld_list A list of information about taxes withheld.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $retrochargeTaxWithheldList A list of information about taxes withheld.
      *
      * @return self
      */
-    public function setRetrochargeTaxWithheldList($retrocharge_tax_withheld_list)
+    public function setRetrochargeTaxWithheldList($retrochargeTaxWithheldList)
     {
-        $this->container['retrocharge_tax_withheld_list'] = $retrocharge_tax_withheld_list;
+        $this->container['retrochargeTaxWithheldList'] = $retrochargeTaxWithheldList;
 
         return $this;
     }

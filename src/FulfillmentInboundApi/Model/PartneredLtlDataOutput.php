@@ -63,20 +63,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'contact' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Contact',
-        'box_count' => 'int',
-        'seller_freight_class' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
-        'freight_ready_date' => '\DateTime',
-        'pallet_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]',
-        'total_weight' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight',
-        'seller_declared_value' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
-        'amazon_calculated_value' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
-        'preview_pickup_date' => '\DateTime',
-        'preview_delivery_date' => '\DateTime',
-        'preview_freight_class' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
-        'amazon_reference_id' => 'string',
-        'is_bill_of_lading_available' => 'bool',
-        'partnered_estimate' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate',
-        'carrier_name' => 'string'
+        'boxCount' => 'int',
+        'sellerFreightClass' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
+        'freightReadyDate' => '\DateTime',
+        'palletList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]',
+        'totalWeight' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight',
+        'sellerDeclaredValue' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
+        'amazonCalculatedValue' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
+        'previewPickupDate' => '\DateTime',
+        'previewDeliveryDate' => '\DateTime',
+        'previewFreightClass' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass',
+        'amazonReferenceId' => 'string',
+        'isBillOfLadingAvailable' => 'bool',
+        'partneredEstimate' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate',
+        'carrierName' => 'string'
     ];
 
     /**
@@ -88,20 +88,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'contact' => null,
-        'box_count' => 'int64',
-        'seller_freight_class' => null,
-        'freight_ready_date' => 'date',
-        'pallet_list' => null,
-        'total_weight' => null,
-        'seller_declared_value' => null,
-        'amazon_calculated_value' => null,
-        'preview_pickup_date' => 'date',
-        'preview_delivery_date' => 'date',
-        'preview_freight_class' => null,
-        'amazon_reference_id' => null,
-        'is_bill_of_lading_available' => null,
-        'partnered_estimate' => null,
-        'carrier_name' => null
+        'boxCount' => 'int64',
+        'sellerFreightClass' => null,
+        'freightReadyDate' => 'date',
+        'palletList' => null,
+        'totalWeight' => null,
+        'sellerDeclaredValue' => null,
+        'amazonCalculatedValue' => null,
+        'previewPickupDate' => 'date',
+        'previewDeliveryDate' => 'date',
+        'previewFreightClass' => null,
+        'amazonReferenceId' => null,
+        'isBillOfLadingAvailable' => null,
+        'partneredEstimate' => null,
+        'carrierName' => null
     ];
 
     /**
@@ -132,20 +132,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'contact' => 'Contact',
-        'box_count' => 'BoxCount',
-        'seller_freight_class' => 'SellerFreightClass',
-        'freight_ready_date' => 'FreightReadyDate',
-        'pallet_list' => 'PalletList',
-        'total_weight' => 'TotalWeight',
-        'seller_declared_value' => 'SellerDeclaredValue',
-        'amazon_calculated_value' => 'AmazonCalculatedValue',
-        'preview_pickup_date' => 'PreviewPickupDate',
-        'preview_delivery_date' => 'PreviewDeliveryDate',
-        'preview_freight_class' => 'PreviewFreightClass',
-        'amazon_reference_id' => 'AmazonReferenceId',
-        'is_bill_of_lading_available' => 'IsBillOfLadingAvailable',
-        'partnered_estimate' => 'PartneredEstimate',
-        'carrier_name' => 'CarrierName'
+        'boxCount' => 'BoxCount',
+        'sellerFreightClass' => 'SellerFreightClass',
+        'freightReadyDate' => 'FreightReadyDate',
+        'palletList' => 'PalletList',
+        'totalWeight' => 'TotalWeight',
+        'sellerDeclaredValue' => 'SellerDeclaredValue',
+        'amazonCalculatedValue' => 'AmazonCalculatedValue',
+        'previewPickupDate' => 'PreviewPickupDate',
+        'previewDeliveryDate' => 'PreviewDeliveryDate',
+        'previewFreightClass' => 'PreviewFreightClass',
+        'amazonReferenceId' => 'AmazonReferenceId',
+        'isBillOfLadingAvailable' => 'IsBillOfLadingAvailable',
+        'partneredEstimate' => 'PartneredEstimate',
+        'carrierName' => 'CarrierName'
     ];
 
     /**
@@ -155,20 +155,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'contact' => 'setContact',
-        'box_count' => 'setBoxCount',
-        'seller_freight_class' => 'setSellerFreightClass',
-        'freight_ready_date' => 'setFreightReadyDate',
-        'pallet_list' => 'setPalletList',
-        'total_weight' => 'setTotalWeight',
-        'seller_declared_value' => 'setSellerDeclaredValue',
-        'amazon_calculated_value' => 'setAmazonCalculatedValue',
-        'preview_pickup_date' => 'setPreviewPickupDate',
-        'preview_delivery_date' => 'setPreviewDeliveryDate',
-        'preview_freight_class' => 'setPreviewFreightClass',
-        'amazon_reference_id' => 'setAmazonReferenceId',
-        'is_bill_of_lading_available' => 'setIsBillOfLadingAvailable',
-        'partnered_estimate' => 'setPartneredEstimate',
-        'carrier_name' => 'setCarrierName'
+        'boxCount' => 'setBoxCount',
+        'sellerFreightClass' => 'setSellerFreightClass',
+        'freightReadyDate' => 'setFreightReadyDate',
+        'palletList' => 'setPalletList',
+        'totalWeight' => 'setTotalWeight',
+        'sellerDeclaredValue' => 'setSellerDeclaredValue',
+        'amazonCalculatedValue' => 'setAmazonCalculatedValue',
+        'previewPickupDate' => 'setPreviewPickupDate',
+        'previewDeliveryDate' => 'setPreviewDeliveryDate',
+        'previewFreightClass' => 'setPreviewFreightClass',
+        'amazonReferenceId' => 'setAmazonReferenceId',
+        'isBillOfLadingAvailable' => 'setIsBillOfLadingAvailable',
+        'partneredEstimate' => 'setPartneredEstimate',
+        'carrierName' => 'setCarrierName'
     ];
 
     /**
@@ -178,20 +178,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'contact' => 'getContact',
-        'box_count' => 'getBoxCount',
-        'seller_freight_class' => 'getSellerFreightClass',
-        'freight_ready_date' => 'getFreightReadyDate',
-        'pallet_list' => 'getPalletList',
-        'total_weight' => 'getTotalWeight',
-        'seller_declared_value' => 'getSellerDeclaredValue',
-        'amazon_calculated_value' => 'getAmazonCalculatedValue',
-        'preview_pickup_date' => 'getPreviewPickupDate',
-        'preview_delivery_date' => 'getPreviewDeliveryDate',
-        'preview_freight_class' => 'getPreviewFreightClass',
-        'amazon_reference_id' => 'getAmazonReferenceId',
-        'is_bill_of_lading_available' => 'getIsBillOfLadingAvailable',
-        'partnered_estimate' => 'getPartneredEstimate',
-        'carrier_name' => 'getCarrierName'
+        'boxCount' => 'getBoxCount',
+        'sellerFreightClass' => 'getSellerFreightClass',
+        'freightReadyDate' => 'getFreightReadyDate',
+        'palletList' => 'getPalletList',
+        'totalWeight' => 'getTotalWeight',
+        'sellerDeclaredValue' => 'getSellerDeclaredValue',
+        'amazonCalculatedValue' => 'getAmazonCalculatedValue',
+        'previewPickupDate' => 'getPreviewPickupDate',
+        'previewDeliveryDate' => 'getPreviewDeliveryDate',
+        'previewFreightClass' => 'getPreviewFreightClass',
+        'amazonReferenceId' => 'getAmazonReferenceId',
+        'isBillOfLadingAvailable' => 'getIsBillOfLadingAvailable',
+        'partneredEstimate' => 'getPartneredEstimate',
+        'carrierName' => 'getCarrierName'
     ];
 
     /**
@@ -255,20 +255,20 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->container['contact'] = $data['contact'] ?? null;
-        $this->container['box_count'] = $data['box_count'] ?? null;
-        $this->container['seller_freight_class'] = $data['seller_freight_class'] ?? null;
-        $this->container['freight_ready_date'] = $data['freight_ready_date'] ?? null;
-        $this->container['pallet_list'] = $data['pallet_list'] ?? null;
-        $this->container['total_weight'] = $data['total_weight'] ?? null;
-        $this->container['seller_declared_value'] = $data['seller_declared_value'] ?? null;
-        $this->container['amazon_calculated_value'] = $data['amazon_calculated_value'] ?? null;
-        $this->container['preview_pickup_date'] = $data['preview_pickup_date'] ?? null;
-        $this->container['preview_delivery_date'] = $data['preview_delivery_date'] ?? null;
-        $this->container['preview_freight_class'] = $data['preview_freight_class'] ?? null;
-        $this->container['amazon_reference_id'] = $data['amazon_reference_id'] ?? null;
-        $this->container['is_bill_of_lading_available'] = $data['is_bill_of_lading_available'] ?? null;
-        $this->container['partnered_estimate'] = $data['partnered_estimate'] ?? null;
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
+        $this->container['boxCount'] = $data['boxCount'] ?? null;
+        $this->container['sellerFreightClass'] = $data['sellerFreightClass'] ?? null;
+        $this->container['freightReadyDate'] = $data['freightReadyDate'] ?? null;
+        $this->container['palletList'] = $data['palletList'] ?? null;
+        $this->container['totalWeight'] = $data['totalWeight'] ?? null;
+        $this->container['sellerDeclaredValue'] = $data['sellerDeclaredValue'] ?? null;
+        $this->container['amazonCalculatedValue'] = $data['amazonCalculatedValue'] ?? null;
+        $this->container['previewPickupDate'] = $data['previewPickupDate'] ?? null;
+        $this->container['previewDeliveryDate'] = $data['previewDeliveryDate'] ?? null;
+        $this->container['previewFreightClass'] = $data['previewFreightClass'] ?? null;
+        $this->container['amazonReferenceId'] = $data['amazonReferenceId'] ?? null;
+        $this->container['isBillOfLadingAvailable'] = $data['isBillOfLadingAvailable'] ?? null;
+        $this->container['partneredEstimate'] = $data['partneredEstimate'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
     }
 
     /**
@@ -283,35 +283,35 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['contact'] === null) {
             $invalidProperties[] = "'contact' can't be null";
         }
-        if ($this->container['box_count'] === null) {
-            $invalidProperties[] = "'box_count' can't be null";
+        if ($this->container['boxCount'] === null) {
+            $invalidProperties[] = "'boxCount' can't be null";
         }
-        if ($this->container['freight_ready_date'] === null) {
-            $invalidProperties[] = "'freight_ready_date' can't be null";
+        if ($this->container['freightReadyDate'] === null) {
+            $invalidProperties[] = "'freightReadyDate' can't be null";
         }
-        if ($this->container['pallet_list'] === null) {
-            $invalidProperties[] = "'pallet_list' can't be null";
+        if ($this->container['palletList'] === null) {
+            $invalidProperties[] = "'palletList' can't be null";
         }
-        if ($this->container['total_weight'] === null) {
-            $invalidProperties[] = "'total_weight' can't be null";
+        if ($this->container['totalWeight'] === null) {
+            $invalidProperties[] = "'totalWeight' can't be null";
         }
-        if ($this->container['preview_pickup_date'] === null) {
-            $invalidProperties[] = "'preview_pickup_date' can't be null";
+        if ($this->container['previewPickupDate'] === null) {
+            $invalidProperties[] = "'previewPickupDate' can't be null";
         }
-        if ($this->container['preview_delivery_date'] === null) {
-            $invalidProperties[] = "'preview_delivery_date' can't be null";
+        if ($this->container['previewDeliveryDate'] === null) {
+            $invalidProperties[] = "'previewDeliveryDate' can't be null";
         }
-        if ($this->container['preview_freight_class'] === null) {
-            $invalidProperties[] = "'preview_freight_class' can't be null";
+        if ($this->container['previewFreightClass'] === null) {
+            $invalidProperties[] = "'previewFreightClass' can't be null";
         }
-        if ($this->container['amazon_reference_id'] === null) {
-            $invalidProperties[] = "'amazon_reference_id' can't be null";
+        if ($this->container['amazonReferenceId'] === null) {
+            $invalidProperties[] = "'amazonReferenceId' can't be null";
         }
-        if ($this->container['is_bill_of_lading_available'] === null) {
-            $invalidProperties[] = "'is_bill_of_lading_available' can't be null";
+        if ($this->container['isBillOfLadingAvailable'] === null) {
+            $invalidProperties[] = "'isBillOfLadingAvailable' can't be null";
         }
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
         return $invalidProperties;
     }
@@ -353,337 +353,337 @@ class PartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets box_count
+     * Gets boxCount
      *
      * @return int
      */
     public function getBoxCount()
     {
-        return $this->container['box_count'];
+        return $this->container['boxCount'];
     }
 
     /**
-     * Sets box_count
+     * Sets boxCount
      *
-     * @param int $box_count box_count
+     * @param int $boxCount boxCount
      *
      * @return self
      */
-    public function setBoxCount($box_count)
+    public function setBoxCount($boxCount)
     {
-        $this->container['box_count'] = $box_count;
+        $this->container['boxCount'] = $boxCount;
 
         return $this;
     }
 
     /**
-     * Gets seller_freight_class
+     * Gets sellerFreightClass
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null
      */
     public function getSellerFreightClass()
     {
-        return $this->container['seller_freight_class'];
+        return $this->container['sellerFreightClass'];
     }
 
     /**
-     * Sets seller_freight_class
+     * Sets sellerFreightClass
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null $seller_freight_class seller_freight_class
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass|null $sellerFreightClass sellerFreightClass
      *
      * @return self
      */
-    public function setSellerFreightClass($seller_freight_class)
+    public function setSellerFreightClass($sellerFreightClass)
     {
-        $this->container['seller_freight_class'] = $seller_freight_class;
+        $this->container['sellerFreightClass'] = $sellerFreightClass;
 
         return $this;
     }
 
     /**
-     * Gets freight_ready_date
+     * Gets freightReadyDate
      *
      * @return \DateTime
      */
     public function getFreightReadyDate()
     {
-        return $this->container['freight_ready_date'];
+        return $this->container['freightReadyDate'];
     }
 
     /**
-     * Sets freight_ready_date
+     * Sets freightReadyDate
      *
-     * @param \DateTime $freight_ready_date freight_ready_date
+     * @param \DateTime $freightReadyDate freightReadyDate
      *
      * @return self
      */
-    public function setFreightReadyDate($freight_ready_date)
+    public function setFreightReadyDate($freightReadyDate)
     {
-        $this->container['freight_ready_date'] = $freight_ready_date;
+        $this->container['freightReadyDate'] = $freightReadyDate;
 
         return $this;
     }
 
     /**
-     * Gets pallet_list
+     * Gets palletList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[]
      */
     public function getPalletList()
     {
-        return $this->container['pallet_list'];
+        return $this->container['palletList'];
     }
 
     /**
-     * Sets pallet_list
+     * Sets palletList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[] $pallet_list A list of pallet information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Pallet[] $palletList A list of pallet information.
      *
      * @return self
      */
-    public function setPalletList($pallet_list)
+    public function setPalletList($palletList)
     {
-        $this->container['pallet_list'] = $pallet_list;
+        $this->container['palletList'] = $palletList;
 
         return $this;
     }
 
     /**
-     * Gets total_weight
+     * Gets totalWeight
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight
      */
     public function getTotalWeight()
     {
-        return $this->container['total_weight'];
+        return $this->container['totalWeight'];
     }
 
     /**
-     * Sets total_weight
+     * Sets totalWeight
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight $total_weight total_weight
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight $totalWeight totalWeight
      *
      * @return self
      */
-    public function setTotalWeight($total_weight)
+    public function setTotalWeight($totalWeight)
     {
-        $this->container['total_weight'] = $total_weight;
+        $this->container['totalWeight'] = $totalWeight;
 
         return $this;
     }
 
     /**
-     * Gets seller_declared_value
+     * Gets sellerDeclaredValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getSellerDeclaredValue()
     {
-        return $this->container['seller_declared_value'];
+        return $this->container['sellerDeclaredValue'];
     }
 
     /**
-     * Sets seller_declared_value
+     * Sets sellerDeclaredValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $seller_declared_value seller_declared_value
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $sellerDeclaredValue sellerDeclaredValue
      *
      * @return self
      */
-    public function setSellerDeclaredValue($seller_declared_value)
+    public function setSellerDeclaredValue($sellerDeclaredValue)
     {
-        $this->container['seller_declared_value'] = $seller_declared_value;
+        $this->container['sellerDeclaredValue'] = $sellerDeclaredValue;
 
         return $this;
     }
 
     /**
-     * Gets amazon_calculated_value
+     * Gets amazonCalculatedValue
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getAmazonCalculatedValue()
     {
-        return $this->container['amazon_calculated_value'];
+        return $this->container['amazonCalculatedValue'];
     }
 
     /**
-     * Sets amazon_calculated_value
+     * Sets amazonCalculatedValue
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $amazon_calculated_value amazon_calculated_value
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $amazonCalculatedValue amazonCalculatedValue
      *
      * @return self
      */
-    public function setAmazonCalculatedValue($amazon_calculated_value)
+    public function setAmazonCalculatedValue($amazonCalculatedValue)
     {
-        $this->container['amazon_calculated_value'] = $amazon_calculated_value;
+        $this->container['amazonCalculatedValue'] = $amazonCalculatedValue;
 
         return $this;
     }
 
     /**
-     * Gets preview_pickup_date
+     * Gets previewPickupDate
      *
      * @return \DateTime
      */
     public function getPreviewPickupDate()
     {
-        return $this->container['preview_pickup_date'];
+        return $this->container['previewPickupDate'];
     }
 
     /**
-     * Sets preview_pickup_date
+     * Sets previewPickupDate
      *
-     * @param \DateTime $preview_pickup_date preview_pickup_date
+     * @param \DateTime $previewPickupDate previewPickupDate
      *
      * @return self
      */
-    public function setPreviewPickupDate($preview_pickup_date)
+    public function setPreviewPickupDate($previewPickupDate)
     {
-        $this->container['preview_pickup_date'] = $preview_pickup_date;
+        $this->container['previewPickupDate'] = $previewPickupDate;
 
         return $this;
     }
 
     /**
-     * Gets preview_delivery_date
+     * Gets previewDeliveryDate
      *
      * @return \DateTime
      */
     public function getPreviewDeliveryDate()
     {
-        return $this->container['preview_delivery_date'];
+        return $this->container['previewDeliveryDate'];
     }
 
     /**
-     * Sets preview_delivery_date
+     * Sets previewDeliveryDate
      *
-     * @param \DateTime $preview_delivery_date preview_delivery_date
+     * @param \DateTime $previewDeliveryDate previewDeliveryDate
      *
      * @return self
      */
-    public function setPreviewDeliveryDate($preview_delivery_date)
+    public function setPreviewDeliveryDate($previewDeliveryDate)
     {
-        $this->container['preview_delivery_date'] = $preview_delivery_date;
+        $this->container['previewDeliveryDate'] = $previewDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets preview_freight_class
+     * Gets previewFreightClass
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass
      */
     public function getPreviewFreightClass()
     {
-        return $this->container['preview_freight_class'];
+        return $this->container['previewFreightClass'];
     }
 
     /**
-     * Sets preview_freight_class
+     * Sets previewFreightClass
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass $preview_freight_class preview_freight_class
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SellerFreightClass $previewFreightClass previewFreightClass
      *
      * @return self
      */
-    public function setPreviewFreightClass($preview_freight_class)
+    public function setPreviewFreightClass($previewFreightClass)
     {
-        $this->container['preview_freight_class'] = $preview_freight_class;
+        $this->container['previewFreightClass'] = $previewFreightClass;
 
         return $this;
     }
 
     /**
-     * Gets amazon_reference_id
+     * Gets amazonReferenceId
      *
      * @return string
      */
     public function getAmazonReferenceId()
     {
-        return $this->container['amazon_reference_id'];
+        return $this->container['amazonReferenceId'];
     }
 
     /**
-     * Sets amazon_reference_id
+     * Sets amazonReferenceId
      *
-     * @param string $amazon_reference_id A unique identifier created by Amazon that identifies this Amazon-partnered, Less Than Truckload/Full Truckload (LTL/FTL) shipment.
+     * @param string $amazonReferenceId A unique identifier created by Amazon that identifies this Amazon-partnered, Less Than Truckload/Full Truckload (LTL/FTL) shipment.
      *
      * @return self
      */
-    public function setAmazonReferenceId($amazon_reference_id)
+    public function setAmazonReferenceId($amazonReferenceId)
     {
-        $this->container['amazon_reference_id'] = $amazon_reference_id;
+        $this->container['amazonReferenceId'] = $amazonReferenceId;
 
         return $this;
     }
 
     /**
-     * Gets is_bill_of_lading_available
+     * Gets isBillOfLadingAvailable
      *
      * @return bool
      */
     public function getIsBillOfLadingAvailable()
     {
-        return $this->container['is_bill_of_lading_available'];
+        return $this->container['isBillOfLadingAvailable'];
     }
 
     /**
-     * Sets is_bill_of_lading_available
+     * Sets isBillOfLadingAvailable
      *
-     * @param bool $is_bill_of_lading_available Indicates whether the bill of lading for the shipment is available.
+     * @param bool $isBillOfLadingAvailable Indicates whether the bill of lading for the shipment is available.
      *
      * @return self
      */
-    public function setIsBillOfLadingAvailable($is_bill_of_lading_available)
+    public function setIsBillOfLadingAvailable($isBillOfLadingAvailable)
     {
-        $this->container['is_bill_of_lading_available'] = $is_bill_of_lading_available;
+        $this->container['isBillOfLadingAvailable'] = $isBillOfLadingAvailable;
 
         return $this;
     }
 
     /**
-     * Gets partnered_estimate
+     * Gets partneredEstimate
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null
      */
     public function getPartneredEstimate()
     {
-        return $this->container['partnered_estimate'];
+        return $this->container['partneredEstimate'];
     }
 
     /**
-     * Sets partnered_estimate
+     * Sets partneredEstimate
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null $partnered_estimate partnered_estimate
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredEstimate|null $partneredEstimate partneredEstimate
      *
      * @return self
      */
-    public function setPartneredEstimate($partnered_estimate)
+    public function setPartneredEstimate($partneredEstimate)
     {
-        $this->container['partnered_estimate'] = $partnered_estimate;
+        $this->container['partneredEstimate'] = $partneredEstimate;
 
         return $this;
     }
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The carrier for the inbound shipment.
+     * @param string $carrierName The carrier for the inbound shipment.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label_stream' => 'string',
-        'label_specification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
+        'labelStream' => 'string',
+        'labelSpecification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
     ];
 
     /**
@@ -74,8 +74,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'label_stream' => null,
-        'label_specification' => null
+        'labelStream' => null,
+        'labelSpecification' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'label_stream' => 'labelStream',
-        'label_specification' => 'labelSpecification'
+        'labelStream' => 'labelStream',
+        'labelSpecification' => 'labelSpecification'
     ];
 
     /**
@@ -115,8 +115,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'label_stream' => 'setLabelStream',
-        'label_specification' => 'setLabelSpecification'
+        'labelStream' => 'setLabelStream',
+        'labelSpecification' => 'setLabelSpecification'
     ];
 
     /**
@@ -125,8 +125,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'label_stream' => 'getLabelStream',
-        'label_specification' => 'getLabelSpecification'
+        'labelStream' => 'getLabelStream',
+        'labelSpecification' => 'getLabelSpecification'
     ];
 
     /**
@@ -189,8 +189,8 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
-        $this->container['label_stream'] = $data['label_stream'] ?? null;
-        $this->container['label_specification'] = $data['label_specification'] ?? null;
+        $this->container['labelStream'] = $data['labelStream'] ?? null;
+        $this->container['labelSpecification'] = $data['labelSpecification'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
-        if ($this->container['label_stream'] === null) {
-            $invalidProperties[] = "'label_stream' can't be null";
+        if ($this->container['labelStream'] === null) {
+            $invalidProperties[] = "'labelStream' can't be null";
         }
-        if ($this->container['label_specification'] === null) {
-            $invalidProperties[] = "'label_specification' can't be null";
+        if ($this->container['labelSpecification'] === null) {
+            $invalidProperties[] = "'labelSpecification' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class RetrieveShippingLabelResult implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets label_stream
+     * Gets labelStream
      *
      * @return string
      */
     public function getLabelStream()
     {
-        return $this->container['label_stream'];
+        return $this->container['labelStream'];
     }
 
     /**
-     * Sets label_stream
+     * Sets labelStream
      *
-     * @param string $label_stream Contains binary image data encoded as a base-64 string.
+     * @param string $labelStream Contains binary image data encoded as a base-64 string.
      *
      * @return self
      */
-    public function setLabelStream($label_stream)
+    public function setLabelStream($labelStream)
     {
-        $this->container['label_stream'] = $label_stream;
+        $this->container['labelStream'] = $labelStream;
 
         return $this;
     }
 
     /**
-     * Gets label_specification
+     * Gets labelSpecification
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification
      */
     public function getLabelSpecification()
     {
-        return $this->container['label_specification'];
+        return $this->container['labelSpecification'];
     }
 
     /**
-     * Sets label_specification
+     * Sets labelSpecification
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $label_specification label_specification
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $labelSpecification labelSpecification
      *
      * @return self
      */
-    public function setLabelSpecification($label_specification)
+    public function setLabelSpecification($labelSpecification)
     {
-        $this->container['label_specification'] = $label_specification;
+        $this->container['labelSpecification'] = $labelSpecification;
 
         return $this;
     }

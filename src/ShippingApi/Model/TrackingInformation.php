@@ -62,10 +62,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tracking_id' => 'string',
+        'trackingId' => 'string',
         'summary' => '\Webcom\Amazon\Rest\ShippingApi\Model\TrackingSummary',
-        'promised_delivery_date' => '\DateTime',
-        'event_history' => '\Webcom\Amazon\Rest\ShippingApi\Model\Event[]'
+        'promisedDeliveryDate' => '\DateTime',
+        'eventHistory' => '\Webcom\Amazon\Rest\ShippingApi\Model\Event[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tracking_id' => null,
+        'trackingId' => null,
         'summary' => null,
-        'promised_delivery_date' => 'date-time',
-        'event_history' => null
+        'promisedDeliveryDate' => 'date-time',
+        'eventHistory' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'tracking_id' => 'trackingId',
+        'trackingId' => 'trackingId',
         'summary' => 'summary',
-        'promised_delivery_date' => 'promisedDeliveryDate',
-        'event_history' => 'eventHistory'
+        'promisedDeliveryDate' => 'promisedDeliveryDate',
+        'eventHistory' => 'eventHistory'
     ];
 
     /**
@@ -121,10 +121,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'tracking_id' => 'setTrackingId',
+        'trackingId' => 'setTrackingId',
         'summary' => 'setSummary',
-        'promised_delivery_date' => 'setPromisedDeliveryDate',
-        'event_history' => 'setEventHistory'
+        'promisedDeliveryDate' => 'setPromisedDeliveryDate',
+        'eventHistory' => 'setEventHistory'
     ];
 
     /**
@@ -133,10 +133,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'tracking_id' => 'getTrackingId',
+        'trackingId' => 'getTrackingId',
         'summary' => 'getSummary',
-        'promised_delivery_date' => 'getPromisedDeliveryDate',
-        'event_history' => 'getEventHistory'
+        'promisedDeliveryDate' => 'getPromisedDeliveryDate',
+        'eventHistory' => 'getEventHistory'
     ];
 
     /**
@@ -199,10 +199,10 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['tracking_id'] = $data['tracking_id'] ?? null;
+        $this->container['trackingId'] = $data['trackingId'] ?? null;
         $this->container['summary'] = $data['summary'] ?? null;
-        $this->container['promised_delivery_date'] = $data['promised_delivery_date'] ?? null;
-        $this->container['event_history'] = $data['event_history'] ?? null;
+        $this->container['promisedDeliveryDate'] = $data['promisedDeliveryDate'] ?? null;
+        $this->container['eventHistory'] = $data['eventHistory'] ?? null;
     }
 
     /**
@@ -214,25 +214,25 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['tracking_id'] === null) {
-            $invalidProperties[] = "'tracking_id' can't be null";
+        if ($this->container['trackingId'] === null) {
+            $invalidProperties[] = "'trackingId' can't be null";
         }
-        if ((mb_strlen($this->container['tracking_id']) > 60)) {
-            $invalidProperties[] = "invalid value for 'tracking_id', the character length must be smaller than or equal to 60.";
+        if ((mb_strlen($this->container['trackingId']) > 60)) {
+            $invalidProperties[] = "invalid value for 'trackingId', the character length must be smaller than or equal to 60.";
         }
 
-        if ((mb_strlen($this->container['tracking_id']) < 1)) {
-            $invalidProperties[] = "invalid value for 'tracking_id', the character length must be bigger than or equal to 1.";
+        if ((mb_strlen($this->container['trackingId']) < 1)) {
+            $invalidProperties[] = "invalid value for 'trackingId', the character length must be bigger than or equal to 1.";
         }
 
         if ($this->container['summary'] === null) {
             $invalidProperties[] = "'summary' can't be null";
         }
-        if ($this->container['promised_delivery_date'] === null) {
-            $invalidProperties[] = "'promised_delivery_date' can't be null";
+        if ($this->container['promisedDeliveryDate'] === null) {
+            $invalidProperties[] = "'promisedDeliveryDate' can't be null";
         }
-        if ($this->container['event_history'] === null) {
-            $invalidProperties[] = "'event_history' can't be null";
+        if ($this->container['eventHistory'] === null) {
+            $invalidProperties[] = "'eventHistory' can't be null";
         }
         return $invalidProperties;
     }
@@ -250,32 +250,32 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets tracking_id
+     * Gets trackingId
      *
      * @return string
      */
     public function getTrackingId()
     {
-        return $this->container['tracking_id'];
+        return $this->container['trackingId'];
     }
 
     /**
-     * Sets tracking_id
+     * Sets trackingId
      *
-     * @param string $tracking_id The tracking id generated to each shipment. It contains a series of letters or digits or both.
+     * @param string $trackingId The tracking id generated to each shipment. It contains a series of letters or digits or both.
      *
      * @return self
      */
-    public function setTrackingId($tracking_id)
+    public function setTrackingId($trackingId)
     {
-        if ((mb_strlen($tracking_id) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $tracking_id when calling TrackingInformation., must be smaller than or equal to 60.');
+        if ((mb_strlen($trackingId) > 60)) {
+            throw new \InvalidArgumentException('invalid length for $trackingId when calling TrackingInformation., must be smaller than or equal to 60.');
         }
-        if ((mb_strlen($tracking_id) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $tracking_id when calling TrackingInformation., must be bigger than or equal to 1.');
+        if ((mb_strlen($trackingId) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $trackingId when calling TrackingInformation., must be bigger than or equal to 1.');
         }
 
-        $this->container['tracking_id'] = $tracking_id;
+        $this->container['trackingId'] = $trackingId;
 
         return $this;
     }
@@ -305,49 +305,49 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets promised_delivery_date
+     * Gets promisedDeliveryDate
      *
      * @return \DateTime
      */
     public function getPromisedDeliveryDate()
     {
-        return $this->container['promised_delivery_date'];
+        return $this->container['promisedDeliveryDate'];
     }
 
     /**
-     * Sets promised_delivery_date
+     * Sets promisedDeliveryDate
      *
-     * @param \DateTime $promised_delivery_date The promised delivery date and time of a shipment.
+     * @param \DateTime $promisedDeliveryDate The promised delivery date and time of a shipment.
      *
      * @return self
      */
-    public function setPromisedDeliveryDate($promised_delivery_date)
+    public function setPromisedDeliveryDate($promisedDeliveryDate)
     {
-        $this->container['promised_delivery_date'] = $promised_delivery_date;
+        $this->container['promisedDeliveryDate'] = $promisedDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets event_history
+     * Gets eventHistory
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Event[]
      */
     public function getEventHistory()
     {
-        return $this->container['event_history'];
+        return $this->container['eventHistory'];
     }
 
     /**
-     * Sets event_history
+     * Sets eventHistory
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Event[] $event_history A list of events of a shipment.
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Event[] $eventHistory A list of events of a shipment.
      *
      * @return self
      */
-    public function setEventHistory($event_history)
+    public function setEventHistory($eventHistory)
     {
-        $this->container['event_history'] = $event_history;
+        $this->container['eventHistory'] = $eventHistory;
 
         return $this;
     }

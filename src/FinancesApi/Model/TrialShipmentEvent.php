@@ -62,11 +62,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'financial_event_group_id' => 'string',
-        'posted_date' => '\DateTime',
-        'sku' => 'string',
-        'fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]'
+        'amazonOrderId' => 'string',
+        'financialEventGroupId' => 'string',
+        'postedDate' => '\DateTime',
+        'sKU' => 'string',
+        'feeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'financial_event_group_id' => null,
-        'posted_date' => 'date-time',
-        'sku' => null,
-        'fee_list' => null
+        'amazonOrderId' => null,
+        'financialEventGroupId' => null,
+        'postedDate' => 'date-time',
+        'sKU' => null,
+        'feeList' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'financial_event_group_id' => 'FinancialEventGroupId',
-        'posted_date' => 'PostedDate',
-        'sku' => 'SKU',
-        'fee_list' => 'FeeList'
+        'amazonOrderId' => 'AmazonOrderId',
+        'financialEventGroupId' => 'FinancialEventGroupId',
+        'postedDate' => 'PostedDate',
+        'sKU' => 'SKU',
+        'feeList' => 'FeeList'
     ];
 
     /**
@@ -124,11 +124,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'financial_event_group_id' => 'setFinancialEventGroupId',
-        'posted_date' => 'setPostedDate',
-        'sku' => 'setSku',
-        'fee_list' => 'setFeeList'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'financialEventGroupId' => 'setFinancialEventGroupId',
+        'postedDate' => 'setPostedDate',
+        'sKU' => 'setSKU',
+        'feeList' => 'setFeeList'
     ];
 
     /**
@@ -137,11 +137,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'financial_event_group_id' => 'getFinancialEventGroupId',
-        'posted_date' => 'getPostedDate',
-        'sku' => 'getSku',
-        'fee_list' => 'getFeeList'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'financialEventGroupId' => 'getFinancialEventGroupId',
+        'postedDate' => 'getPostedDate',
+        'sKU' => 'getSKU',
+        'feeList' => 'getFeeList'
     ];
 
     /**
@@ -204,11 +204,11 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['financial_event_group_id'] = $data['financial_event_group_id'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['sku'] = $data['sku'] ?? null;
-        $this->container['fee_list'] = $data['fee_list'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['financialEventGroupId'] = $data['financialEventGroupId'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['sKU'] = $data['sKU'] ?? null;
+        $this->container['feeList'] = $data['feeList'] ?? null;
     }
 
     /**
@@ -236,121 +236,121 @@ class TrialShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets financial_event_group_id
+     * Gets financialEventGroupId
      *
      * @return string|null
      */
     public function getFinancialEventGroupId()
     {
-        return $this->container['financial_event_group_id'];
+        return $this->container['financialEventGroupId'];
     }
 
     /**
-     * Sets financial_event_group_id
+     * Sets financialEventGroupId
      *
-     * @param string|null $financial_event_group_id The identifier of the financial event group.
+     * @param string|null $financialEventGroupId The identifier of the financial event group.
      *
      * @return self
      */
-    public function setFinancialEventGroupId($financial_event_group_id)
+    public function setFinancialEventGroupId($financialEventGroupId)
     {
-        $this->container['financial_event_group_id'] = $financial_event_group_id;
+        $this->container['financialEventGroupId'] = $financialEventGroupId;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets sku
+     * Gets sKU
      *
      * @return string|null
      */
-    public function getSku()
+    public function getSKU()
     {
-        return $this->container['sku'];
+        return $this->container['sKU'];
     }
 
     /**
-     * Sets sku
+     * Sets sKU
      *
-     * @param string|null $sku The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
+     * @param string|null $sKU The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
      *
      * @return self
      */
-    public function setSku($sku)
+    public function setSKU($sKU)
     {
-        $this->container['sku'] = $sku;
+        $this->container['sKU'] = $sKU;
 
         return $this;
     }
 
     /**
-     * Gets fee_list
+     * Gets feeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getFeeList()
     {
-        return $this->container['fee_list'];
+        return $this->container['feeList'];
     }
 
     /**
-     * Sets fee_list
+     * Sets feeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $feeList A list of fee component information.
      *
      * @return self
      */
-    public function setFeeList($fee_list)
+    public function setFeeList($feeList)
     {
-        $this->container['fee_list'] = $fee_list;
+        $this->container['feeList'] = $feeList;
 
         return $this;
     }

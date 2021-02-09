@@ -62,12 +62,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'transaction_type' => 'string',
-        'invoice_id' => 'string',
-        'base_value' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_value' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'transaction_value' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'transactionType' => 'string',
+        'invoiceId' => 'string',
+        'baseValue' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxValue' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'transactionValue' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -78,12 +78,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'transaction_type' => null,
-        'invoice_id' => null,
-        'base_value' => null,
-        'tax_value' => null,
-        'transaction_value' => null
+        'postedDate' => 'date-time',
+        'transactionType' => null,
+        'invoiceId' => null,
+        'baseValue' => null,
+        'taxValue' => null,
+        'transactionValue' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'postedDate',
-        'transaction_type' => 'transactionType',
-        'invoice_id' => 'invoiceId',
-        'base_value' => 'baseValue',
-        'tax_value' => 'taxValue',
-        'transaction_value' => 'transactionValue'
+        'postedDate' => 'postedDate',
+        'transactionType' => 'transactionType',
+        'invoiceId' => 'invoiceId',
+        'baseValue' => 'baseValue',
+        'taxValue' => 'taxValue',
+        'transactionValue' => 'transactionValue'
     ];
 
     /**
@@ -127,12 +127,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'transaction_type' => 'setTransactionType',
-        'invoice_id' => 'setInvoiceId',
-        'base_value' => 'setBaseValue',
-        'tax_value' => 'setTaxValue',
-        'transaction_value' => 'setTransactionValue'
+        'postedDate' => 'setPostedDate',
+        'transactionType' => 'setTransactionType',
+        'invoiceId' => 'setInvoiceId',
+        'baseValue' => 'setBaseValue',
+        'taxValue' => 'setTaxValue',
+        'transactionValue' => 'setTransactionValue'
     ];
 
     /**
@@ -141,12 +141,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'transaction_type' => 'getTransactionType',
-        'invoice_id' => 'getInvoiceId',
-        'base_value' => 'getBaseValue',
-        'tax_value' => 'getTaxValue',
-        'transaction_value' => 'getTransactionValue'
+        'postedDate' => 'getPostedDate',
+        'transactionType' => 'getTransactionType',
+        'invoiceId' => 'getInvoiceId',
+        'baseValue' => 'getBaseValue',
+        'taxValue' => 'getTaxValue',
+        'transactionValue' => 'getTransactionValue'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['transaction_type'] = $data['transaction_type'] ?? null;
-        $this->container['invoice_id'] = $data['invoice_id'] ?? null;
-        $this->container['base_value'] = $data['base_value'] ?? null;
-        $this->container['tax_value'] = $data['tax_value'] ?? null;
-        $this->container['transaction_value'] = $data['transaction_value'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['transactionType'] = $data['transactionType'] ?? null;
+        $this->container['invoiceId'] = $data['invoiceId'] ?? null;
+        $this->container['baseValue'] = $data['baseValue'] ?? null;
+        $this->container['taxValue'] = $data['taxValue'] ?? null;
+        $this->container['transactionValue'] = $data['transactionValue'] ?? null;
     }
 
     /**
@@ -242,145 +242,145 @@ class ProductAdsPaymentEvent implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets transaction_type
+     * Gets transactionType
      *
      * @return string|null
      */
     public function getTransactionType()
     {
-        return $this->container['transaction_type'];
+        return $this->container['transactionType'];
     }
 
     /**
-     * Sets transaction_type
+     * Sets transactionType
      *
-     * @param string|null $transaction_type Indicates if the transaction is for a charge or a refund.  Possible values:  * charge - Charge  * refund - Refund
+     * @param string|null $transactionType Indicates if the transaction is for a charge or a refund.  Possible values:  * charge - Charge  * refund - Refund
      *
      * @return self
      */
-    public function setTransactionType($transaction_type)
+    public function setTransactionType($transactionType)
     {
-        $this->container['transaction_type'] = $transaction_type;
+        $this->container['transactionType'] = $transactionType;
 
         return $this;
     }
 
     /**
-     * Gets invoice_id
+     * Gets invoiceId
      *
      * @return string|null
      */
     public function getInvoiceId()
     {
-        return $this->container['invoice_id'];
+        return $this->container['invoiceId'];
     }
 
     /**
-     * Sets invoice_id
+     * Sets invoiceId
      *
-     * @param string|null $invoice_id Identifier for the invoice that the transaction appears in.
+     * @param string|null $invoiceId Identifier for the invoice that the transaction appears in.
      *
      * @return self
      */
-    public function setInvoiceId($invoice_id)
+    public function setInvoiceId($invoiceId)
     {
-        $this->container['invoice_id'] = $invoice_id;
+        $this->container['invoiceId'] = $invoiceId;
 
         return $this;
     }
 
     /**
-     * Gets base_value
+     * Gets baseValue
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getBaseValue()
     {
-        return $this->container['base_value'];
+        return $this->container['baseValue'];
     }
 
     /**
-     * Sets base_value
+     * Sets baseValue
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $base_value base_value
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $baseValue baseValue
      *
      * @return self
      */
-    public function setBaseValue($base_value)
+    public function setBaseValue($baseValue)
     {
-        $this->container['base_value'] = $base_value;
+        $this->container['baseValue'] = $baseValue;
 
         return $this;
     }
 
     /**
-     * Gets tax_value
+     * Gets taxValue
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxValue()
     {
-        return $this->container['tax_value'];
+        return $this->container['taxValue'];
     }
 
     /**
-     * Sets tax_value
+     * Sets taxValue
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_value tax_value
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxValue taxValue
      *
      * @return self
      */
-    public function setTaxValue($tax_value)
+    public function setTaxValue($taxValue)
     {
-        $this->container['tax_value'] = $tax_value;
+        $this->container['taxValue'] = $taxValue;
 
         return $this;
     }
 
     /**
-     * Gets transaction_value
+     * Gets transactionValue
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTransactionValue()
     {
-        return $this->container['transaction_value'];
+        return $this->container['transactionValue'];
     }
 
     /**
-     * Sets transaction_value
+     * Sets transactionValue
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $transaction_value transaction_value
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $transactionValue transactionValue
      *
      * @return self
      */
-    public function setTransactionValue($transaction_value)
+    public function setTransactionValue($transactionValue)
     {
-        $this->container['transaction_value'] = $transaction_value;
+        $this->container['transactionValue'] = $transactionValue;
 
         return $this;
     }

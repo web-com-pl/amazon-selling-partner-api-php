@@ -62,8 +62,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'loan_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'source_business_event_type' => 'string'
+        'loanAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'sourceBusinessEventType' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'loan_amount' => null,
-        'source_business_event_type' => null
+        'loanAmount' => null,
+        'sourceBusinessEventType' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'loan_amount' => 'LoanAmount',
-        'source_business_event_type' => 'SourceBusinessEventType'
+        'loanAmount' => 'LoanAmount',
+        'sourceBusinessEventType' => 'SourceBusinessEventType'
     ];
 
     /**
@@ -115,8 +115,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'loan_amount' => 'setLoanAmount',
-        'source_business_event_type' => 'setSourceBusinessEventType'
+        'loanAmount' => 'setLoanAmount',
+        'sourceBusinessEventType' => 'setSourceBusinessEventType'
     ];
 
     /**
@@ -125,8 +125,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'loan_amount' => 'getLoanAmount',
-        'source_business_event_type' => 'getSourceBusinessEventType'
+        'loanAmount' => 'getLoanAmount',
+        'sourceBusinessEventType' => 'getSourceBusinessEventType'
     ];
 
     /**
@@ -189,8 +189,8 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['loan_amount'] = $data['loan_amount'] ?? null;
-        $this->container['source_business_event_type'] = $data['source_business_event_type'] ?? null;
+        $this->container['loanAmount'] = $data['loanAmount'] ?? null;
+        $this->container['sourceBusinessEventType'] = $data['sourceBusinessEventType'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class LoanServicingEvent implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets loan_amount
+     * Gets loanAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getLoanAmount()
     {
-        return $this->container['loan_amount'];
+        return $this->container['loanAmount'];
     }
 
     /**
-     * Sets loan_amount
+     * Sets loanAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $loan_amount loan_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $loanAmount loanAmount
      *
      * @return self
      */
-    public function setLoanAmount($loan_amount)
+    public function setLoanAmount($loanAmount)
     {
-        $this->container['loan_amount'] = $loan_amount;
+        $this->container['loanAmount'] = $loanAmount;
 
         return $this;
     }
 
     /**
-     * Gets source_business_event_type
+     * Gets sourceBusinessEventType
      *
      * @return string|null
      */
     public function getSourceBusinessEventType()
     {
-        return $this->container['source_business_event_type'];
+        return $this->container['sourceBusinessEventType'];
     }
 
     /**
-     * Sets source_business_event_type
+     * Sets sourceBusinessEventType
      *
-     * @param string|null $source_business_event_type The type of event.  Possible values:  * LoanAdvance  * LoanPayment  * LoanRefund
+     * @param string|null $sourceBusinessEventType The type of event.  Possible values:  * LoanAdvance  * LoanPayment  * LoanRefund
      *
      * @return self
      */
-    public function setSourceBusinessEventType($source_business_event_type)
+    public function setSourceBusinessEventType($sourceBusinessEventType)
     {
-        $this->container['source_business_event_type'] = $source_business_event_type;
+        $this->container['sourceBusinessEventType'] = $sourceBusinessEventType;
 
         return $this;
     }

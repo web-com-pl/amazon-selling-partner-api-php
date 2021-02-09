@@ -62,8 +62,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'estimated_delivery_date' => '\DateTime',
-        'item_delivery_promise' => '\Webcom\Amazon\Rest\ServicesApi\Model\ItemDeliveryPromise'
+        'estimatedDeliveryDate' => '\DateTime',
+        'itemDeliveryPromise' => '\Webcom\Amazon\Rest\ServicesApi\Model\ItemDeliveryPromise'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'estimated_delivery_date' => 'date-time',
-        'item_delivery_promise' => null
+        'estimatedDeliveryDate' => 'date-time',
+        'itemDeliveryPromise' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'estimated_delivery_date' => 'estimatedDeliveryDate',
-        'item_delivery_promise' => 'itemDeliveryPromise'
+        'estimatedDeliveryDate' => 'estimatedDeliveryDate',
+        'itemDeliveryPromise' => 'itemDeliveryPromise'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'estimated_delivery_date' => 'setEstimatedDeliveryDate',
-        'item_delivery_promise' => 'setItemDeliveryPromise'
+        'estimatedDeliveryDate' => 'setEstimatedDeliveryDate',
+        'itemDeliveryPromise' => 'setItemDeliveryPromise'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'estimated_delivery_date' => 'getEstimatedDeliveryDate',
-        'item_delivery_promise' => 'getItemDeliveryPromise'
+        'estimatedDeliveryDate' => 'getEstimatedDeliveryDate',
+        'itemDeliveryPromise' => 'getItemDeliveryPromise'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['estimated_delivery_date'] = $data['estimated_delivery_date'] ?? null;
-        $this->container['item_delivery_promise'] = $data['item_delivery_promise'] ?? null;
+        $this->container['estimatedDeliveryDate'] = $data['estimatedDeliveryDate'] ?? null;
+        $this->container['itemDeliveryPromise'] = $data['itemDeliveryPromise'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ItemDelivery implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets estimated_delivery_date
+     * Gets estimatedDeliveryDate
      *
      * @return \DateTime|null
      */
     public function getEstimatedDeliveryDate()
     {
-        return $this->container['estimated_delivery_date'];
+        return $this->container['estimatedDeliveryDate'];
     }
 
     /**
-     * Sets estimated_delivery_date
+     * Sets estimatedDeliveryDate
      *
-     * @param \DateTime|null $estimated_delivery_date The date and time of the latest Estimated Delivery Date (EDD) of all the items with an EDD. In ISO 8601 format.
+     * @param \DateTime|null $estimatedDeliveryDate The date and time of the latest Estimated Delivery Date (EDD) of all the items with an EDD. In ISO 8601 format.
      *
      * @return self
      */
-    public function setEstimatedDeliveryDate($estimated_delivery_date)
+    public function setEstimatedDeliveryDate($estimatedDeliveryDate)
     {
-        $this->container['estimated_delivery_date'] = $estimated_delivery_date;
+        $this->container['estimatedDeliveryDate'] = $estimatedDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets item_delivery_promise
+     * Gets itemDeliveryPromise
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\ItemDeliveryPromise|null
      */
     public function getItemDeliveryPromise()
     {
-        return $this->container['item_delivery_promise'];
+        return $this->container['itemDeliveryPromise'];
     }
 
     /**
-     * Sets item_delivery_promise
+     * Sets itemDeliveryPromise
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ItemDeliveryPromise|null $item_delivery_promise item_delivery_promise
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ItemDeliveryPromise|null $itemDeliveryPromise itemDeliveryPromise
      *
      * @return self
      */
-    public function setItemDeliveryPromise($item_delivery_promise)
+    public function setItemDeliveryPromise($itemDeliveryPromise)
     {
-        $this->container['item_delivery_promise'] = $item_delivery_promise;
+        $this->container['itemDeliveryPromise'] = $itemDeliveryPromise;
 
         return $this;
     }

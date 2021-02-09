@@ -62,11 +62,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'fn_sku' => 'string',
+        'sellerSku' => 'string',
+        'fnSku' => 'string',
         'asin' => 'string',
-        'sku_count' => 'float',
-        'overlapping_skus' => 'string[]'
+        'skuCount' => 'float',
+        'overlappingSkus' => 'string[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'fn_sku' => null,
+        'sellerSku' => null,
+        'fnSku' => null,
         'asin' => null,
-        'sku_count' => null,
-        'overlapping_skus' => null
+        'skuCount' => null,
+        'overlappingSkus' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'sellerSku',
-        'fn_sku' => 'fnSku',
+        'sellerSku' => 'sellerSku',
+        'fnSku' => 'fnSku',
         'asin' => 'asin',
-        'sku_count' => 'skuCount',
-        'overlapping_skus' => 'overlappingSkus'
+        'skuCount' => 'skuCount',
+        'overlappingSkus' => 'overlappingSkus'
     ];
 
     /**
@@ -124,11 +124,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'fn_sku' => 'setFnSku',
+        'sellerSku' => 'setSellerSku',
+        'fnSku' => 'setFnSku',
         'asin' => 'setAsin',
-        'sku_count' => 'setSkuCount',
-        'overlapping_skus' => 'setOverlappingSkus'
+        'skuCount' => 'setSkuCount',
+        'overlappingSkus' => 'setOverlappingSkus'
     ];
 
     /**
@@ -137,11 +137,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'fn_sku' => 'getFnSku',
+        'sellerSku' => 'getSellerSku',
+        'fnSku' => 'getFnSku',
         'asin' => 'getAsin',
-        'sku_count' => 'getSkuCount',
-        'overlapping_skus' => 'getOverlappingSkus'
+        'skuCount' => 'getSkuCount',
+        'overlappingSkus' => 'getOverlappingSkus'
     ];
 
     /**
@@ -204,11 +204,11 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['fn_sku'] = $data['fn_sku'] ?? null;
+        $this->container['sellerSku'] = $data['sellerSku'] ?? null;
+        $this->container['fnSku'] = $data['fnSku'] ?? null;
         $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['sku_count'] = $data['sku_count'] ?? null;
-        $this->container['overlapping_skus'] = $data['overlapping_skus'] ?? null;
+        $this->container['skuCount'] = $data['skuCount'] ?? null;
+        $this->container['overlappingSkus'] = $data['overlappingSkus'] ?? null;
     }
 
     /**
@@ -236,49 +236,49 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSku
      *
      * @return string|null
      */
     public function getSellerSku()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSku'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSku
      *
-     * @param string|null $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+     * @param string|null $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSku($sellerSku)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSku'] = $sellerSku;
 
         return $this;
     }
 
     /**
-     * Gets fn_sku
+     * Gets fnSku
      *
      * @return string|null
      */
     public function getFnSku()
     {
-        return $this->container['fn_sku'];
+        return $this->container['fnSku'];
     }
 
     /**
-     * Sets fn_sku
+     * Sets fnSku
      *
-     * @param string|null $fn_sku The unique SKU used by Amazon's fulfillment network.
+     * @param string|null $fnSku The unique SKU used by Amazon's fulfillment network.
      *
      * @return self
      */
-    public function setFnSku($fn_sku)
+    public function setFnSku($fnSku)
     {
-        $this->container['fn_sku'] = $fn_sku;
+        $this->container['fnSku'] = $fnSku;
 
         return $this;
     }
@@ -308,49 +308,49 @@ class FeatureSku implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets sku_count
+     * Gets skuCount
      *
      * @return float|null
      */
     public function getSkuCount()
     {
-        return $this->container['sku_count'];
+        return $this->container['skuCount'];
     }
 
     /**
-     * Sets sku_count
+     * Sets skuCount
      *
-     * @param float|null $sku_count The number of SKUs available for this service.
+     * @param float|null $skuCount The number of SKUs available for this service.
      *
      * @return self
      */
-    public function setSkuCount($sku_count)
+    public function setSkuCount($skuCount)
     {
-        $this->container['sku_count'] = $sku_count;
+        $this->container['skuCount'] = $skuCount;
 
         return $this;
     }
 
     /**
-     * Gets overlapping_skus
+     * Gets overlappingSkus
      *
      * @return string[]|null
      */
     public function getOverlappingSkus()
     {
-        return $this->container['overlapping_skus'];
+        return $this->container['overlappingSkus'];
     }
 
     /**
-     * Sets overlapping_skus
+     * Sets overlappingSkus
      *
-     * @param string[]|null $overlapping_skus Other seller SKUs that are shared across the same inventory.
+     * @param string[]|null $overlappingSkus Other seller SKUs that are shared across the same inventory.
      *
      * @return self
      */
-    public function setOverlappingSkus($overlapping_skus)
+    public function setOverlappingSkus($overlappingSkus)
     {
-        $this->container['overlapping_skus'] = $overlapping_skus;
+        $this->container['overlappingSkus'] = $overlappingSkus;
 
         return $this;
     }

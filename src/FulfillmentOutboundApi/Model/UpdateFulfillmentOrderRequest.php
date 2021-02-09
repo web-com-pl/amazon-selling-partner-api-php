@@ -61,17 +61,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'displayable_order_id' => 'string',
-        'displayable_order_date' => '\DateTime',
-        'displayable_order_comment' => 'string',
-        'shipping_speed_category' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
-        'destination_address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
-        'fulfillment_action' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction',
-        'fulfillment_policy' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy',
-        'ship_from_country_code' => 'string',
-        'notification_emails' => 'string[]',
-        'feature_constraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]',
+        'marketplaceId' => 'string',
+        'displayableOrderId' => 'string',
+        'displayableOrderDate' => '\DateTime',
+        'displayableOrderComment' => 'string',
+        'shippingSpeedCategory' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory',
+        'destinationAddress' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
+        'fulfillmentAction' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction',
+        'fulfillmentPolicy' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy',
+        'shipFromCountryCode' => 'string',
+        'notificationEmails' => 'string[]',
+        'featureConstraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]',
         'items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderItem[]'
     ];
 
@@ -83,17 +83,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'displayable_order_id' => null,
-        'displayable_order_date' => 'date-time',
-        'displayable_order_comment' => null,
-        'shipping_speed_category' => null,
-        'destination_address' => null,
-        'fulfillment_action' => null,
-        'fulfillment_policy' => null,
-        'ship_from_country_code' => null,
-        'notification_emails' => null,
-        'feature_constraints' => null,
+        'marketplaceId' => null,
+        'displayableOrderId' => null,
+        'displayableOrderDate' => 'date-time',
+        'displayableOrderComment' => null,
+        'shippingSpeedCategory' => null,
+        'destinationAddress' => null,
+        'fulfillmentAction' => null,
+        'fulfillmentPolicy' => null,
+        'shipFromCountryCode' => null,
+        'notificationEmails' => null,
+        'featureConstraints' => null,
         'items' => null
     ];
 
@@ -124,17 +124,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
-        'displayable_order_id' => 'displayableOrderId',
-        'displayable_order_date' => 'displayableOrderDate',
-        'displayable_order_comment' => 'displayableOrderComment',
-        'shipping_speed_category' => 'shippingSpeedCategory',
-        'destination_address' => 'destinationAddress',
-        'fulfillment_action' => 'fulfillmentAction',
-        'fulfillment_policy' => 'fulfillmentPolicy',
-        'ship_from_country_code' => 'shipFromCountryCode',
-        'notification_emails' => 'notificationEmails',
-        'feature_constraints' => 'featureConstraints',
+        'marketplaceId' => 'marketplaceId',
+        'displayableOrderId' => 'displayableOrderId',
+        'displayableOrderDate' => 'displayableOrderDate',
+        'displayableOrderComment' => 'displayableOrderComment',
+        'shippingSpeedCategory' => 'shippingSpeedCategory',
+        'destinationAddress' => 'destinationAddress',
+        'fulfillmentAction' => 'fulfillmentAction',
+        'fulfillmentPolicy' => 'fulfillmentPolicy',
+        'shipFromCountryCode' => 'shipFromCountryCode',
+        'notificationEmails' => 'notificationEmails',
+        'featureConstraints' => 'featureConstraints',
         'items' => 'items'
     ];
 
@@ -144,17 +144,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'displayable_order_id' => 'setDisplayableOrderId',
-        'displayable_order_date' => 'setDisplayableOrderDate',
-        'displayable_order_comment' => 'setDisplayableOrderComment',
-        'shipping_speed_category' => 'setShippingSpeedCategory',
-        'destination_address' => 'setDestinationAddress',
-        'fulfillment_action' => 'setFulfillmentAction',
-        'fulfillment_policy' => 'setFulfillmentPolicy',
-        'ship_from_country_code' => 'setShipFromCountryCode',
-        'notification_emails' => 'setNotificationEmails',
-        'feature_constraints' => 'setFeatureConstraints',
+        'marketplaceId' => 'setMarketplaceId',
+        'displayableOrderId' => 'setDisplayableOrderId',
+        'displayableOrderDate' => 'setDisplayableOrderDate',
+        'displayableOrderComment' => 'setDisplayableOrderComment',
+        'shippingSpeedCategory' => 'setShippingSpeedCategory',
+        'destinationAddress' => 'setDestinationAddress',
+        'fulfillmentAction' => 'setFulfillmentAction',
+        'fulfillmentPolicy' => 'setFulfillmentPolicy',
+        'shipFromCountryCode' => 'setShipFromCountryCode',
+        'notificationEmails' => 'setNotificationEmails',
+        'featureConstraints' => 'setFeatureConstraints',
         'items' => 'setItems'
     ];
 
@@ -164,17 +164,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'displayable_order_id' => 'getDisplayableOrderId',
-        'displayable_order_date' => 'getDisplayableOrderDate',
-        'displayable_order_comment' => 'getDisplayableOrderComment',
-        'shipping_speed_category' => 'getShippingSpeedCategory',
-        'destination_address' => 'getDestinationAddress',
-        'fulfillment_action' => 'getFulfillmentAction',
-        'fulfillment_policy' => 'getFulfillmentPolicy',
-        'ship_from_country_code' => 'getShipFromCountryCode',
-        'notification_emails' => 'getNotificationEmails',
-        'feature_constraints' => 'getFeatureConstraints',
+        'marketplaceId' => 'getMarketplaceId',
+        'displayableOrderId' => 'getDisplayableOrderId',
+        'displayableOrderDate' => 'getDisplayableOrderDate',
+        'displayableOrderComment' => 'getDisplayableOrderComment',
+        'shippingSpeedCategory' => 'getShippingSpeedCategory',
+        'destinationAddress' => 'getDestinationAddress',
+        'fulfillmentAction' => 'getFulfillmentAction',
+        'fulfillmentPolicy' => 'getFulfillmentPolicy',
+        'shipFromCountryCode' => 'getShipFromCountryCode',
+        'notificationEmails' => 'getNotificationEmails',
+        'featureConstraints' => 'getFeatureConstraints',
         'items' => 'getItems'
     ];
 
@@ -238,17 +238,17 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['displayable_order_id'] = $data['displayable_order_id'] ?? null;
-        $this->container['displayable_order_date'] = $data['displayable_order_date'] ?? null;
-        $this->container['displayable_order_comment'] = $data['displayable_order_comment'] ?? null;
-        $this->container['shipping_speed_category'] = $data['shipping_speed_category'] ?? null;
-        $this->container['destination_address'] = $data['destination_address'] ?? null;
-        $this->container['fulfillment_action'] = $data['fulfillment_action'] ?? null;
-        $this->container['fulfillment_policy'] = $data['fulfillment_policy'] ?? null;
-        $this->container['ship_from_country_code'] = $data['ship_from_country_code'] ?? null;
-        $this->container['notification_emails'] = $data['notification_emails'] ?? null;
-        $this->container['feature_constraints'] = $data['feature_constraints'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['displayableOrderId'] = $data['displayableOrderId'] ?? null;
+        $this->container['displayableOrderDate'] = $data['displayableOrderDate'] ?? null;
+        $this->container['displayableOrderComment'] = $data['displayableOrderComment'] ?? null;
+        $this->container['shippingSpeedCategory'] = $data['shippingSpeedCategory'] ?? null;
+        $this->container['destinationAddress'] = $data['destinationAddress'] ?? null;
+        $this->container['fulfillmentAction'] = $data['fulfillmentAction'] ?? null;
+        $this->container['fulfillmentPolicy'] = $data['fulfillmentPolicy'] ?? null;
+        $this->container['shipFromCountryCode'] = $data['shipFromCountryCode'] ?? null;
+        $this->container['notificationEmails'] = $data['notificationEmails'] ?? null;
+        $this->container['featureConstraints'] = $data['featureConstraints'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
     }
 
@@ -261,12 +261,12 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['displayable_order_id']) && (mb_strlen($this->container['displayable_order_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'displayable_order_id', the character length must be smaller than or equal to 40.";
+        if (!is_null($this->container['displayableOrderId']) && (mb_strlen($this->container['displayableOrderId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'displayableOrderId', the character length must be smaller than or equal to 40.";
         }
 
-        if (!is_null($this->container['displayable_order_comment']) && (mb_strlen($this->container['displayable_order_comment']) > 1000)) {
-            $invalidProperties[] = "invalid value for 'displayable_order_comment', the character length must be smaller than or equal to 1000.";
+        if (!is_null($this->container['displayableOrderComment']) && (mb_strlen($this->container['displayableOrderComment']) > 1000)) {
+            $invalidProperties[] = "invalid value for 'displayableOrderComment', the character length must be smaller than or equal to 1000.";
         }
 
         return $invalidProperties;
@@ -285,273 +285,273 @@ class UpdateFulfillmentOrderRequest implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The marketplace the fulfillment order is placed against.
+     * @param string|null $marketplaceId The marketplace the fulfillment order is placed against.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_id
+     * Gets displayableOrderId
      *
      * @return string|null
      */
     public function getDisplayableOrderId()
     {
-        return $this->container['displayable_order_id'];
+        return $this->container['displayableOrderId'];
     }
 
     /**
-     * Sets displayable_order_id
+     * Sets displayableOrderId
      *
-     * @param string|null $displayable_order_id A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of DisplayableOrderId should match the order identifier that the seller provides to the recipient. The seller can use the SellerFulfillmentOrderId for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier.
+     * @param string|null $displayableOrderId A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of DisplayableOrderId should match the order identifier that the seller provides to the recipient. The seller can use the SellerFulfillmentOrderId for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier.
      *
      * @return self
      */
-    public function setDisplayableOrderId($displayable_order_id)
+    public function setDisplayableOrderId($displayableOrderId)
     {
-        if (!is_null($displayable_order_id) && (mb_strlen($displayable_order_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $displayable_order_id when calling UpdateFulfillmentOrderRequest., must be smaller than or equal to 40.');
+        if (!is_null($displayableOrderId) && (mb_strlen($displayableOrderId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $displayableOrderId when calling UpdateFulfillmentOrderRequest., must be smaller than or equal to 40.');
         }
 
-        $this->container['displayable_order_id'] = $displayable_order_id;
+        $this->container['displayableOrderId'] = $displayableOrderId;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_date
+     * Gets displayableOrderDate
      *
      * @return \DateTime|null
      */
     public function getDisplayableOrderDate()
     {
-        return $this->container['displayable_order_date'];
+        return $this->container['displayableOrderDate'];
     }
 
     /**
-     * Sets displayable_order_date
+     * Sets displayableOrderDate
      *
-     * @param \DateTime|null $displayable_order_date displayable_order_date
+     * @param \DateTime|null $displayableOrderDate displayableOrderDate
      *
      * @return self
      */
-    public function setDisplayableOrderDate($displayable_order_date)
+    public function setDisplayableOrderDate($displayableOrderDate)
     {
-        $this->container['displayable_order_date'] = $displayable_order_date;
+        $this->container['displayableOrderDate'] = $displayableOrderDate;
 
         return $this;
     }
 
     /**
-     * Gets displayable_order_comment
+     * Gets displayableOrderComment
      *
      * @return string|null
      */
     public function getDisplayableOrderComment()
     {
-        return $this->container['displayable_order_comment'];
+        return $this->container['displayableOrderComment'];
     }
 
     /**
-     * Sets displayable_order_comment
+     * Sets displayableOrderComment
      *
-     * @param string|null $displayable_order_comment Order-specific text that appears in recipient-facing materials such as the outbound shipment packing slip.
+     * @param string|null $displayableOrderComment Order-specific text that appears in recipient-facing materials such as the outbound shipment packing slip.
      *
      * @return self
      */
-    public function setDisplayableOrderComment($displayable_order_comment)
+    public function setDisplayableOrderComment($displayableOrderComment)
     {
-        if (!is_null($displayable_order_comment) && (mb_strlen($displayable_order_comment) > 1000)) {
-            throw new \InvalidArgumentException('invalid length for $displayable_order_comment when calling UpdateFulfillmentOrderRequest., must be smaller than or equal to 1000.');
+        if (!is_null($displayableOrderComment) && (mb_strlen($displayableOrderComment) > 1000)) {
+            throw new \InvalidArgumentException('invalid length for $displayableOrderComment when calling UpdateFulfillmentOrderRequest., must be smaller than or equal to 1000.');
         }
 
-        $this->container['displayable_order_comment'] = $displayable_order_comment;
+        $this->container['displayableOrderComment'] = $displayableOrderComment;
 
         return $this;
     }
 
     /**
-     * Gets shipping_speed_category
+     * Gets shippingSpeedCategory
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory|null
      */
     public function getShippingSpeedCategory()
     {
-        return $this->container['shipping_speed_category'];
+        return $this->container['shippingSpeedCategory'];
     }
 
     /**
-     * Sets shipping_speed_category
+     * Sets shippingSpeedCategory
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory|null $shipping_speed_category shipping_speed_category
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory|null $shippingSpeedCategory shippingSpeedCategory
      *
      * @return self
      */
-    public function setShippingSpeedCategory($shipping_speed_category)
+    public function setShippingSpeedCategory($shippingSpeedCategory)
     {
-        $this->container['shipping_speed_category'] = $shipping_speed_category;
+        $this->container['shippingSpeedCategory'] = $shippingSpeedCategory;
 
         return $this;
     }
 
     /**
-     * Gets destination_address
+     * Gets destinationAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address|null
      */
     public function getDestinationAddress()
     {
-        return $this->container['destination_address'];
+        return $this->container['destinationAddress'];
     }
 
     /**
-     * Sets destination_address
+     * Sets destinationAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address|null $destination_address destination_address
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address|null $destinationAddress destinationAddress
      *
      * @return self
      */
-    public function setDestinationAddress($destination_address)
+    public function setDestinationAddress($destinationAddress)
     {
-        $this->container['destination_address'] = $destination_address;
+        $this->container['destinationAddress'] = $destinationAddress;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_action
+     * Gets fulfillmentAction
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null
      */
     public function getFulfillmentAction()
     {
-        return $this->container['fulfillment_action'];
+        return $this->container['fulfillmentAction'];
     }
 
     /**
-     * Sets fulfillment_action
+     * Sets fulfillmentAction
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null $fulfillment_action fulfillment_action
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentAction|null $fulfillmentAction fulfillmentAction
      *
      * @return self
      */
-    public function setFulfillmentAction($fulfillment_action)
+    public function setFulfillmentAction($fulfillmentAction)
     {
-        $this->container['fulfillment_action'] = $fulfillment_action;
+        $this->container['fulfillmentAction'] = $fulfillmentAction;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_policy
+     * Gets fulfillmentPolicy
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null
      */
     public function getFulfillmentPolicy()
     {
-        return $this->container['fulfillment_policy'];
+        return $this->container['fulfillmentPolicy'];
     }
 
     /**
-     * Sets fulfillment_policy
+     * Sets fulfillmentPolicy
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null $fulfillment_policy fulfillment_policy
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentPolicy|null $fulfillmentPolicy fulfillmentPolicy
      *
      * @return self
      */
-    public function setFulfillmentPolicy($fulfillment_policy)
+    public function setFulfillmentPolicy($fulfillmentPolicy)
     {
-        $this->container['fulfillment_policy'] = $fulfillment_policy;
+        $this->container['fulfillmentPolicy'] = $fulfillmentPolicy;
 
         return $this;
     }
 
     /**
-     * Gets ship_from_country_code
+     * Gets shipFromCountryCode
      *
      * @return string|null
      */
     public function getShipFromCountryCode()
     {
-        return $this->container['ship_from_country_code'];
+        return $this->container['shipFromCountryCode'];
     }
 
     /**
-     * Sets ship_from_country_code
+     * Sets shipFromCountryCode
      *
-     * @param string|null $ship_from_country_code The two-character country code for the country from which the fulfillment order ships. Must be in ISO 3166-1 alpha-2 format.
+     * @param string|null $shipFromCountryCode The two-character country code for the country from which the fulfillment order ships. Must be in ISO 3166-1 alpha-2 format.
      *
      * @return self
      */
-    public function setShipFromCountryCode($ship_from_country_code)
+    public function setShipFromCountryCode($shipFromCountryCode)
     {
-        $this->container['ship_from_country_code'] = $ship_from_country_code;
+        $this->container['shipFromCountryCode'] = $shipFromCountryCode;
 
         return $this;
     }
 
     /**
-     * Gets notification_emails
+     * Gets notificationEmails
      *
      * @return string[]|null
      */
     public function getNotificationEmails()
     {
-        return $this->container['notification_emails'];
+        return $this->container['notificationEmails'];
     }
 
     /**
-     * Sets notification_emails
+     * Sets notificationEmails
      *
-     * @param string[]|null $notification_emails A list of email addresses that the seller provides that are used by Amazon to send ship-complete notifications to recipients on behalf of the seller.
+     * @param string[]|null $notificationEmails A list of email addresses that the seller provides that are used by Amazon to send ship-complete notifications to recipients on behalf of the seller.
      *
      * @return self
      */
-    public function setNotificationEmails($notification_emails)
+    public function setNotificationEmails($notificationEmails)
     {
-        $this->container['notification_emails'] = $notification_emails;
+        $this->container['notificationEmails'] = $notificationEmails;
 
         return $this;
     }
 
     /**
-     * Gets feature_constraints
+     * Gets featureConstraints
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null
      */
     public function getFeatureConstraints()
     {
-        return $this->container['feature_constraints'];
+        return $this->container['featureConstraints'];
     }
 
     /**
-     * Sets feature_constraints
+     * Sets featureConstraints
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $feature_constraints A list of features and their fulfillment policies to apply to the order.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $featureConstraints A list of features and their fulfillment policies to apply to the order.
      *
      * @return self
      */
-    public function setFeatureConstraints($feature_constraints)
+    public function setFeatureConstraints($featureConstraints)
     {
-        $this->container['feature_constraints'] = $feature_constraints;
+        $this->container['featureConstraints'] = $featureConstraints;
 
         return $this;
     }

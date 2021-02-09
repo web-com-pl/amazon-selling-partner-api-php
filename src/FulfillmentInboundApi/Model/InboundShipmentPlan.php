@@ -62,12 +62,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'destination_fulfillment_center_id' => 'string',
-        'ship_to_address' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
-        'label_prep_type' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType',
+        'shipmentId' => 'string',
+        'destinationFulfillmentCenterId' => 'string',
+        'shipToAddress' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
+        'labelPrepType' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType',
         'items' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanItem[]',
-        'estimated_box_contents_fee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails'
+        'estimatedBoxContentsFee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails'
     ];
 
     /**
@@ -78,12 +78,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'destination_fulfillment_center_id' => null,
-        'ship_to_address' => null,
-        'label_prep_type' => null,
+        'shipmentId' => null,
+        'destinationFulfillmentCenterId' => null,
+        'shipToAddress' => null,
+        'labelPrepType' => null,
         'items' => null,
-        'estimated_box_contents_fee' => null
+        'estimatedBoxContentsFee' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'ShipmentId',
-        'destination_fulfillment_center_id' => 'DestinationFulfillmentCenterId',
-        'ship_to_address' => 'ShipToAddress',
-        'label_prep_type' => 'LabelPrepType',
+        'shipmentId' => 'ShipmentId',
+        'destinationFulfillmentCenterId' => 'DestinationFulfillmentCenterId',
+        'shipToAddress' => 'ShipToAddress',
+        'labelPrepType' => 'LabelPrepType',
         'items' => 'Items',
-        'estimated_box_contents_fee' => 'EstimatedBoxContentsFee'
+        'estimatedBoxContentsFee' => 'EstimatedBoxContentsFee'
     ];
 
     /**
@@ -127,12 +127,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'destination_fulfillment_center_id' => 'setDestinationFulfillmentCenterId',
-        'ship_to_address' => 'setShipToAddress',
-        'label_prep_type' => 'setLabelPrepType',
+        'shipmentId' => 'setShipmentId',
+        'destinationFulfillmentCenterId' => 'setDestinationFulfillmentCenterId',
+        'shipToAddress' => 'setShipToAddress',
+        'labelPrepType' => 'setLabelPrepType',
         'items' => 'setItems',
-        'estimated_box_contents_fee' => 'setEstimatedBoxContentsFee'
+        'estimatedBoxContentsFee' => 'setEstimatedBoxContentsFee'
     ];
 
     /**
@@ -141,12 +141,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'destination_fulfillment_center_id' => 'getDestinationFulfillmentCenterId',
-        'ship_to_address' => 'getShipToAddress',
-        'label_prep_type' => 'getLabelPrepType',
+        'shipmentId' => 'getShipmentId',
+        'destinationFulfillmentCenterId' => 'getDestinationFulfillmentCenterId',
+        'shipToAddress' => 'getShipToAddress',
+        'labelPrepType' => 'getLabelPrepType',
         'items' => 'getItems',
-        'estimated_box_contents_fee' => 'getEstimatedBoxContentsFee'
+        'estimatedBoxContentsFee' => 'getEstimatedBoxContentsFee'
     ];
 
     /**
@@ -209,12 +209,12 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['destination_fulfillment_center_id'] = $data['destination_fulfillment_center_id'] ?? null;
-        $this->container['ship_to_address'] = $data['ship_to_address'] ?? null;
-        $this->container['label_prep_type'] = $data['label_prep_type'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['destinationFulfillmentCenterId'] = $data['destinationFulfillmentCenterId'] ?? null;
+        $this->container['shipToAddress'] = $data['shipToAddress'] ?? null;
+        $this->container['labelPrepType'] = $data['labelPrepType'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
-        $this->container['estimated_box_contents_fee'] = $data['estimated_box_contents_fee'] ?? null;
+        $this->container['estimatedBoxContentsFee'] = $data['estimatedBoxContentsFee'] ?? null;
     }
 
     /**
@@ -226,17 +226,17 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if ($this->container['destination_fulfillment_center_id'] === null) {
-            $invalidProperties[] = "'destination_fulfillment_center_id' can't be null";
+        if ($this->container['destinationFulfillmentCenterId'] === null) {
+            $invalidProperties[] = "'destinationFulfillmentCenterId' can't be null";
         }
-        if ($this->container['ship_to_address'] === null) {
-            $invalidProperties[] = "'ship_to_address' can't be null";
+        if ($this->container['shipToAddress'] === null) {
+            $invalidProperties[] = "'shipToAddress' can't be null";
         }
-        if ($this->container['label_prep_type'] === null) {
-            $invalidProperties[] = "'label_prep_type' can't be null";
+        if ($this->container['labelPrepType'] === null) {
+            $invalidProperties[] = "'labelPrepType' can't be null";
         }
         if ($this->container['items'] === null) {
             $invalidProperties[] = "'items' can't be null";
@@ -257,97 +257,97 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation.
+     * @param string $shipmentId A shipment identifier originally returned by the createInboundShipmentPlan operation.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets destination_fulfillment_center_id
+     * Gets destinationFulfillmentCenterId
      *
      * @return string
      */
     public function getDestinationFulfillmentCenterId()
     {
-        return $this->container['destination_fulfillment_center_id'];
+        return $this->container['destinationFulfillmentCenterId'];
     }
 
     /**
-     * Sets destination_fulfillment_center_id
+     * Sets destinationFulfillmentCenterId
      *
-     * @param string $destination_fulfillment_center_id An Amazon fulfillment center identifier created by Amazon.
+     * @param string $destinationFulfillmentCenterId An Amazon fulfillment center identifier created by Amazon.
      *
      * @return self
      */
-    public function setDestinationFulfillmentCenterId($destination_fulfillment_center_id)
+    public function setDestinationFulfillmentCenterId($destinationFulfillmentCenterId)
     {
-        $this->container['destination_fulfillment_center_id'] = $destination_fulfillment_center_id;
+        $this->container['destinationFulfillmentCenterId'] = $destinationFulfillmentCenterId;
 
         return $this;
     }
 
     /**
-     * Gets ship_to_address
+     * Gets shipToAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address
      */
     public function getShipToAddress()
     {
-        return $this->container['ship_to_address'];
+        return $this->container['shipToAddress'];
     }
 
     /**
-     * Sets ship_to_address
+     * Sets shipToAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $ship_to_address ship_to_address
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $shipToAddress shipToAddress
      *
      * @return self
      */
-    public function setShipToAddress($ship_to_address)
+    public function setShipToAddress($shipToAddress)
     {
-        $this->container['ship_to_address'] = $ship_to_address;
+        $this->container['shipToAddress'] = $shipToAddress;
 
         return $this;
     }
 
     /**
-     * Gets label_prep_type
+     * Gets labelPrepType
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType
      */
     public function getLabelPrepType()
     {
-        return $this->container['label_prep_type'];
+        return $this->container['labelPrepType'];
     }
 
     /**
-     * Sets label_prep_type
+     * Sets labelPrepType
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType $label_prep_type label_prep_type
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepType $labelPrepType labelPrepType
      *
      * @return self
      */
-    public function setLabelPrepType($label_prep_type)
+    public function setLabelPrepType($labelPrepType)
     {
-        $this->container['label_prep_type'] = $label_prep_type;
+        $this->container['labelPrepType'] = $labelPrepType;
 
         return $this;
     }
@@ -377,25 +377,25 @@ class InboundShipmentPlan implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets estimated_box_contents_fee
+     * Gets estimatedBoxContentsFee
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null
      */
     public function getEstimatedBoxContentsFee()
     {
-        return $this->container['estimated_box_contents_fee'];
+        return $this->container['estimatedBoxContentsFee'];
     }
 
     /**
-     * Sets estimated_box_contents_fee
+     * Sets estimatedBoxContentsFee
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null $estimated_box_contents_fee estimated_box_contents_fee
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BoxContentsFeeDetails|null $estimatedBoxContentsFee estimatedBoxContentsFee
      *
      * @return self
      */
-    public function setEstimatedBoxContentsFee($estimated_box_contents_fee)
+    public function setEstimatedBoxContentsFee($estimatedBoxContentsFee)
     {
-        $this->container['estimated_box_contents_fee'] = $estimated_box_contents_fee;
+        $this->container['estimatedBoxContentsFee'] = $estimatedBoxContentsFee;
 
         return $this;
     }

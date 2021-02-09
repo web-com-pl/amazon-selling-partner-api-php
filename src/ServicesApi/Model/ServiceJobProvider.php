@@ -62,7 +62,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'service_job_provider_id' => 'string'
+        'serviceJobProviderId' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'service_job_provider_id' => null
+        'serviceJobProviderId' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'service_job_provider_id' => 'serviceJobProviderId'
+        'serviceJobProviderId' => 'serviceJobProviderId'
     ];
 
     /**
@@ -112,7 +112,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'service_job_provider_id' => 'setServiceJobProviderId'
+        'serviceJobProviderId' => 'setServiceJobProviderId'
     ];
 
     /**
@@ -121,7 +121,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'service_job_provider_id' => 'getServiceJobProviderId'
+        'serviceJobProviderId' => 'getServiceJobProviderId'
     ];
 
     /**
@@ -184,7 +184,7 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['service_job_provider_id'] = $data['service_job_provider_id'] ?? null;
+        $this->container['serviceJobProviderId'] = $data['serviceJobProviderId'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['service_job_provider_id']) && !preg_match("/^[A-Z0-9]*$/", $this->container['service_job_provider_id'])) {
-            $invalidProperties[] = "invalid value for 'service_job_provider_id', must be conform to the pattern /^[A-Z0-9]*$/.";
+        if (!is_null($this->container['serviceJobProviderId']) && !preg_match("/^[A-Z0-9]*$/", $this->container['serviceJobProviderId'])) {
+            $invalidProperties[] = "invalid value for 'serviceJobProviderId', must be conform to the pattern /^[A-Z0-9]*$/.";
         }
 
         return $invalidProperties;
@@ -216,30 +216,30 @@ class ServiceJobProvider implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets service_job_provider_id
+     * Gets serviceJobProviderId
      *
      * @return string|null
      */
     public function getServiceJobProviderId()
     {
-        return $this->container['service_job_provider_id'];
+        return $this->container['serviceJobProviderId'];
     }
 
     /**
-     * Sets service_job_provider_id
+     * Sets serviceJobProviderId
      *
-     * @param string|null $service_job_provider_id The identifier of the service job provider.
+     * @param string|null $serviceJobProviderId The identifier of the service job provider.
      *
      * @return self
      */
-    public function setServiceJobProviderId($service_job_provider_id)
+    public function setServiceJobProviderId($serviceJobProviderId)
     {
 
-        if (!is_null($service_job_provider_id) && (!preg_match("/^[A-Z0-9]*$/", $service_job_provider_id))) {
-            throw new \InvalidArgumentException("invalid value for $service_job_provider_id when calling ServiceJobProvider., must conform to the pattern /^[A-Z0-9]*$/.");
+        if (!is_null($serviceJobProviderId) && (!preg_match("/^[A-Z0-9]*$/", $serviceJobProviderId))) {
+            throw new \InvalidArgumentException("invalid value for $serviceJobProviderId when calling ServiceJobProvider., must conform to the pattern /^[A-Z0-9]*$/.");
         }
 
-        $this->container['service_job_provider_id'] = $service_job_provider_id;
+        $this->container['serviceJobProviderId'] = $serviceJobProviderId;
 
         return $this;
     }

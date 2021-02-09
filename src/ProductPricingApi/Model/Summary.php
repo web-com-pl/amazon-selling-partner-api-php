@@ -62,14 +62,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_offer_count' => 'int',
-        'number_of_offers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]',
-        'lowest_prices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]',
-        'buy_box_prices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]',
-        'list_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'suggested_lower_price_plus_shipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'buy_box_eligible_offers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]',
-        'offers_available_time' => '\DateTime'
+        'totalOfferCount' => 'int',
+        'numberOfOffers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]',
+        'lowestPrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]',
+        'buyBoxPrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]',
+        'listPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'suggestedLowerPricePlusShipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'buyBoxEligibleOffers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]',
+        'offersAvailableTime' => '\DateTime'
     ];
 
     /**
@@ -80,14 +80,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_offer_count' => 'int32',
-        'number_of_offers' => null,
-        'lowest_prices' => null,
-        'buy_box_prices' => null,
-        'list_price' => null,
-        'suggested_lower_price_plus_shipping' => null,
-        'buy_box_eligible_offers' => null,
-        'offers_available_time' => 'date-time'
+        'totalOfferCount' => 'int32',
+        'numberOfOffers' => null,
+        'lowestPrices' => null,
+        'buyBoxPrices' => null,
+        'listPrice' => null,
+        'suggestedLowerPricePlusShipping' => null,
+        'buyBoxEligibleOffers' => null,
+        'offersAvailableTime' => 'date-time'
     ];
 
     /**
@@ -117,14 +117,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_offer_count' => 'TotalOfferCount',
-        'number_of_offers' => 'NumberOfOffers',
-        'lowest_prices' => 'LowestPrices',
-        'buy_box_prices' => 'BuyBoxPrices',
-        'list_price' => 'ListPrice',
-        'suggested_lower_price_plus_shipping' => 'SuggestedLowerPricePlusShipping',
-        'buy_box_eligible_offers' => 'BuyBoxEligibleOffers',
-        'offers_available_time' => 'OffersAvailableTime'
+        'totalOfferCount' => 'TotalOfferCount',
+        'numberOfOffers' => 'NumberOfOffers',
+        'lowestPrices' => 'LowestPrices',
+        'buyBoxPrices' => 'BuyBoxPrices',
+        'listPrice' => 'ListPrice',
+        'suggestedLowerPricePlusShipping' => 'SuggestedLowerPricePlusShipping',
+        'buyBoxEligibleOffers' => 'BuyBoxEligibleOffers',
+        'offersAvailableTime' => 'OffersAvailableTime'
     ];
 
     /**
@@ -133,14 +133,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_offer_count' => 'setTotalOfferCount',
-        'number_of_offers' => 'setNumberOfOffers',
-        'lowest_prices' => 'setLowestPrices',
-        'buy_box_prices' => 'setBuyBoxPrices',
-        'list_price' => 'setListPrice',
-        'suggested_lower_price_plus_shipping' => 'setSuggestedLowerPricePlusShipping',
-        'buy_box_eligible_offers' => 'setBuyBoxEligibleOffers',
-        'offers_available_time' => 'setOffersAvailableTime'
+        'totalOfferCount' => 'setTotalOfferCount',
+        'numberOfOffers' => 'setNumberOfOffers',
+        'lowestPrices' => 'setLowestPrices',
+        'buyBoxPrices' => 'setBuyBoxPrices',
+        'listPrice' => 'setListPrice',
+        'suggestedLowerPricePlusShipping' => 'setSuggestedLowerPricePlusShipping',
+        'buyBoxEligibleOffers' => 'setBuyBoxEligibleOffers',
+        'offersAvailableTime' => 'setOffersAvailableTime'
     ];
 
     /**
@@ -149,14 +149,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_offer_count' => 'getTotalOfferCount',
-        'number_of_offers' => 'getNumberOfOffers',
-        'lowest_prices' => 'getLowestPrices',
-        'buy_box_prices' => 'getBuyBoxPrices',
-        'list_price' => 'getListPrice',
-        'suggested_lower_price_plus_shipping' => 'getSuggestedLowerPricePlusShipping',
-        'buy_box_eligible_offers' => 'getBuyBoxEligibleOffers',
-        'offers_available_time' => 'getOffersAvailableTime'
+        'totalOfferCount' => 'getTotalOfferCount',
+        'numberOfOffers' => 'getNumberOfOffers',
+        'lowestPrices' => 'getLowestPrices',
+        'buyBoxPrices' => 'getBuyBoxPrices',
+        'listPrice' => 'getListPrice',
+        'suggestedLowerPricePlusShipping' => 'getSuggestedLowerPricePlusShipping',
+        'buyBoxEligibleOffers' => 'getBuyBoxEligibleOffers',
+        'offersAvailableTime' => 'getOffersAvailableTime'
     ];
 
     /**
@@ -219,14 +219,14 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_offer_count'] = $data['total_offer_count'] ?? null;
-        $this->container['number_of_offers'] = $data['number_of_offers'] ?? null;
-        $this->container['lowest_prices'] = $data['lowest_prices'] ?? null;
-        $this->container['buy_box_prices'] = $data['buy_box_prices'] ?? null;
-        $this->container['list_price'] = $data['list_price'] ?? null;
-        $this->container['suggested_lower_price_plus_shipping'] = $data['suggested_lower_price_plus_shipping'] ?? null;
-        $this->container['buy_box_eligible_offers'] = $data['buy_box_eligible_offers'] ?? null;
-        $this->container['offers_available_time'] = $data['offers_available_time'] ?? null;
+        $this->container['totalOfferCount'] = $data['totalOfferCount'] ?? null;
+        $this->container['numberOfOffers'] = $data['numberOfOffers'] ?? null;
+        $this->container['lowestPrices'] = $data['lowestPrices'] ?? null;
+        $this->container['buyBoxPrices'] = $data['buyBoxPrices'] ?? null;
+        $this->container['listPrice'] = $data['listPrice'] ?? null;
+        $this->container['suggestedLowerPricePlusShipping'] = $data['suggestedLowerPricePlusShipping'] ?? null;
+        $this->container['buyBoxEligibleOffers'] = $data['buyBoxEligibleOffers'] ?? null;
+        $this->container['offersAvailableTime'] = $data['offersAvailableTime'] ?? null;
     }
 
     /**
@@ -238,8 +238,8 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['total_offer_count'] === null) {
-            $invalidProperties[] = "'total_offer_count' can't be null";
+        if ($this->container['totalOfferCount'] === null) {
+            $invalidProperties[] = "'totalOfferCount' can't be null";
         }
         return $invalidProperties;
     }
@@ -257,193 +257,193 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_offer_count
+     * Gets totalOfferCount
      *
      * @return int
      */
     public function getTotalOfferCount()
     {
-        return $this->container['total_offer_count'];
+        return $this->container['totalOfferCount'];
     }
 
     /**
-     * Sets total_offer_count
+     * Sets totalOfferCount
      *
-     * @param int $total_offer_count The number of unique offers contained in NumberOfOffers.
+     * @param int $totalOfferCount The number of unique offers contained in NumberOfOffers.
      *
      * @return self
      */
-    public function setTotalOfferCount($total_offer_count)
+    public function setTotalOfferCount($totalOfferCount)
     {
-        $this->container['total_offer_count'] = $total_offer_count;
+        $this->container['totalOfferCount'] = $totalOfferCount;
 
         return $this;
     }
 
     /**
-     * Gets number_of_offers
+     * Gets numberOfOffers
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null
      */
     public function getNumberOfOffers()
     {
-        return $this->container['number_of_offers'];
+        return $this->container['numberOfOffers'];
     }
 
     /**
-     * Sets number_of_offers
+     * Sets numberOfOffers
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null $number_of_offers number_of_offers
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null $numberOfOffers numberOfOffers
      *
      * @return self
      */
-    public function setNumberOfOffers($number_of_offers)
+    public function setNumberOfOffers($numberOfOffers)
     {
-        $this->container['number_of_offers'] = $number_of_offers;
+        $this->container['numberOfOffers'] = $numberOfOffers;
 
         return $this;
     }
 
     /**
-     * Gets lowest_prices
+     * Gets lowestPrices
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]|null
      */
     public function getLowestPrices()
     {
-        return $this->container['lowest_prices'];
+        return $this->container['lowestPrices'];
     }
 
     /**
-     * Sets lowest_prices
+     * Sets lowestPrices
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]|null $lowest_prices lowest_prices
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]|null $lowestPrices lowestPrices
      *
      * @return self
      */
-    public function setLowestPrices($lowest_prices)
+    public function setLowestPrices($lowestPrices)
     {
-        $this->container['lowest_prices'] = $lowest_prices;
+        $this->container['lowestPrices'] = $lowestPrices;
 
         return $this;
     }
 
     /**
-     * Gets buy_box_prices
+     * Gets buyBoxPrices
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]|null
      */
     public function getBuyBoxPrices()
     {
-        return $this->container['buy_box_prices'];
+        return $this->container['buyBoxPrices'];
     }
 
     /**
-     * Sets buy_box_prices
+     * Sets buyBoxPrices
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]|null $buy_box_prices buy_box_prices
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]|null $buyBoxPrices buyBoxPrices
      *
      * @return self
      */
-    public function setBuyBoxPrices($buy_box_prices)
+    public function setBuyBoxPrices($buyBoxPrices)
     {
-        $this->container['buy_box_prices'] = $buy_box_prices;
+        $this->container['buyBoxPrices'] = $buyBoxPrices;
 
         return $this;
     }
 
     /**
-     * Gets list_price
+     * Gets listPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
      */
     public function getListPrice()
     {
-        return $this->container['list_price'];
+        return $this->container['listPrice'];
     }
 
     /**
-     * Sets list_price
+     * Sets listPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $list_price list_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $listPrice listPrice
      *
      * @return self
      */
-    public function setListPrice($list_price)
+    public function setListPrice($listPrice)
     {
-        $this->container['list_price'] = $list_price;
+        $this->container['listPrice'] = $listPrice;
 
         return $this;
     }
 
     /**
-     * Gets suggested_lower_price_plus_shipping
+     * Gets suggestedLowerPricePlusShipping
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
      */
     public function getSuggestedLowerPricePlusShipping()
     {
-        return $this->container['suggested_lower_price_plus_shipping'];
+        return $this->container['suggestedLowerPricePlusShipping'];
     }
 
     /**
-     * Sets suggested_lower_price_plus_shipping
+     * Sets suggestedLowerPricePlusShipping
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $suggested_lower_price_plus_shipping suggested_lower_price_plus_shipping
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $suggestedLowerPricePlusShipping suggestedLowerPricePlusShipping
      *
      * @return self
      */
-    public function setSuggestedLowerPricePlusShipping($suggested_lower_price_plus_shipping)
+    public function setSuggestedLowerPricePlusShipping($suggestedLowerPricePlusShipping)
     {
-        $this->container['suggested_lower_price_plus_shipping'] = $suggested_lower_price_plus_shipping;
+        $this->container['suggestedLowerPricePlusShipping'] = $suggestedLowerPricePlusShipping;
 
         return $this;
     }
 
     /**
-     * Gets buy_box_eligible_offers
+     * Gets buyBoxEligibleOffers
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null
      */
     public function getBuyBoxEligibleOffers()
     {
-        return $this->container['buy_box_eligible_offers'];
+        return $this->container['buyBoxEligibleOffers'];
     }
 
     /**
-     * Sets buy_box_eligible_offers
+     * Sets buyBoxEligibleOffers
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null $buy_box_eligible_offers buy_box_eligible_offers
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]|null $buyBoxEligibleOffers buyBoxEligibleOffers
      *
      * @return self
      */
-    public function setBuyBoxEligibleOffers($buy_box_eligible_offers)
+    public function setBuyBoxEligibleOffers($buyBoxEligibleOffers)
     {
-        $this->container['buy_box_eligible_offers'] = $buy_box_eligible_offers;
+        $this->container['buyBoxEligibleOffers'] = $buyBoxEligibleOffers;
 
         return $this;
     }
 
     /**
-     * Gets offers_available_time
+     * Gets offersAvailableTime
      *
      * @return \DateTime|null
      */
     public function getOffersAvailableTime()
     {
-        return $this->container['offers_available_time'];
+        return $this->container['offersAvailableTime'];
     }
 
     /**
-     * Sets offers_available_time
+     * Sets offersAvailableTime
      *
-     * @param \DateTime|null $offers_available_time When the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing.
+     * @param \DateTime|null $offersAvailableTime When the status is ActiveButTooSoonForProcessing, this is the time when the offers will be available for processing.
      *
      * @return self
      */
-    public function setOffersAvailableTime($offers_available_time)
+    public function setOffersAvailableTime($offersAvailableTime)
     {
-        $this->container['offers_available_time'] = $offers_available_time;
+        $this->container['offersAvailableTime'] = $offersAvailableTime;
 
         return $this;
     }

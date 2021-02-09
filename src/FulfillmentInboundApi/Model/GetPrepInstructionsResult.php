@@ -61,10 +61,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sku_prep_instructions_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUPrepInstructions[]',
-        'invalid_sku_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]',
-        'asin_prep_instructions_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINPrepInstructions[]',
-        'invalid_asin_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]'
+        'sKUPrepInstructionsList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUPrepInstructions[]',
+        'invalidSKUList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]',
+        'aSINPrepInstructionsList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINPrepInstructions[]',
+        'invalidASINList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'sku_prep_instructions_list' => null,
-        'invalid_sku_list' => null,
-        'asin_prep_instructions_list' => null,
-        'invalid_asin_list' => null
+        'sKUPrepInstructionsList' => null,
+        'invalidSKUList' => null,
+        'aSINPrepInstructionsList' => null,
+        'invalidASINList' => null
     ];
 
     /**
@@ -108,10 +108,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'sku_prep_instructions_list' => 'SKUPrepInstructionsList',
-        'invalid_sku_list' => 'InvalidSKUList',
-        'asin_prep_instructions_list' => 'ASINPrepInstructionsList',
-        'invalid_asin_list' => 'InvalidASINList'
+        'sKUPrepInstructionsList' => 'SKUPrepInstructionsList',
+        'invalidSKUList' => 'InvalidSKUList',
+        'aSINPrepInstructionsList' => 'ASINPrepInstructionsList',
+        'invalidASINList' => 'InvalidASINList'
     ];
 
     /**
@@ -120,10 +120,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'sku_prep_instructions_list' => 'setSkuPrepInstructionsList',
-        'invalid_sku_list' => 'setInvalidSkuList',
-        'asin_prep_instructions_list' => 'setAsinPrepInstructionsList',
-        'invalid_asin_list' => 'setInvalidAsinList'
+        'sKUPrepInstructionsList' => 'setSKUPrepInstructionsList',
+        'invalidSKUList' => 'setInvalidSKUList',
+        'aSINPrepInstructionsList' => 'setASINPrepInstructionsList',
+        'invalidASINList' => 'setInvalidASINList'
     ];
 
     /**
@@ -132,10 +132,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'sku_prep_instructions_list' => 'getSkuPrepInstructionsList',
-        'invalid_sku_list' => 'getInvalidSkuList',
-        'asin_prep_instructions_list' => 'getAsinPrepInstructionsList',
-        'invalid_asin_list' => 'getInvalidAsinList'
+        'sKUPrepInstructionsList' => 'getSKUPrepInstructionsList',
+        'invalidSKUList' => 'getInvalidSKUList',
+        'aSINPrepInstructionsList' => 'getASINPrepInstructionsList',
+        'invalidASINList' => 'getInvalidASINList'
     ];
 
     /**
@@ -198,10 +198,10 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['sku_prep_instructions_list'] = $data['sku_prep_instructions_list'] ?? null;
-        $this->container['invalid_sku_list'] = $data['invalid_sku_list'] ?? null;
-        $this->container['asin_prep_instructions_list'] = $data['asin_prep_instructions_list'] ?? null;
-        $this->container['invalid_asin_list'] = $data['invalid_asin_list'] ?? null;
+        $this->container['sKUPrepInstructionsList'] = $data['sKUPrepInstructionsList'] ?? null;
+        $this->container['invalidSKUList'] = $data['invalidSKUList'] ?? null;
+        $this->container['aSINPrepInstructionsList'] = $data['aSINPrepInstructionsList'] ?? null;
+        $this->container['invalidASINList'] = $data['invalidASINList'] ?? null;
     }
 
     /**
@@ -229,97 +229,97 @@ class GetPrepInstructionsResult implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets sku_prep_instructions_list
+     * Gets sKUPrepInstructionsList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUPrepInstructions[]|null
      */
-    public function getSkuPrepInstructionsList()
+    public function getSKUPrepInstructionsList()
     {
-        return $this->container['sku_prep_instructions_list'];
+        return $this->container['sKUPrepInstructionsList'];
     }
 
     /**
-     * Sets sku_prep_instructions_list
+     * Sets sKUPrepInstructionsList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUPrepInstructions[]|null $sku_prep_instructions_list A list of SKU labeling requirements and item preparation instructions.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\SKUPrepInstructions[]|null $sKUPrepInstructionsList A list of SKU labeling requirements and item preparation instructions.
      *
      * @return self
      */
-    public function setSkuPrepInstructionsList($sku_prep_instructions_list)
+    public function setSKUPrepInstructionsList($sKUPrepInstructionsList)
     {
-        $this->container['sku_prep_instructions_list'] = $sku_prep_instructions_list;
+        $this->container['sKUPrepInstructionsList'] = $sKUPrepInstructionsList;
 
         return $this;
     }
 
     /**
-     * Gets invalid_sku_list
+     * Gets invalidSKUList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null
      */
-    public function getInvalidSkuList()
+    public function getInvalidSKUList()
     {
-        return $this->container['invalid_sku_list'];
+        return $this->container['invalidSKUList'];
     }
 
     /**
-     * Sets invalid_sku_list
+     * Sets invalidSKUList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null $invalid_sku_list A list of invalid SKU values and the reason they are invalid.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidSKU[]|null $invalidSKUList A list of invalid SKU values and the reason they are invalid.
      *
      * @return self
      */
-    public function setInvalidSkuList($invalid_sku_list)
+    public function setInvalidSKUList($invalidSKUList)
     {
-        $this->container['invalid_sku_list'] = $invalid_sku_list;
+        $this->container['invalidSKUList'] = $invalidSKUList;
 
         return $this;
     }
 
     /**
-     * Gets asin_prep_instructions_list
+     * Gets aSINPrepInstructionsList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINPrepInstructions[]|null
      */
-    public function getAsinPrepInstructionsList()
+    public function getASINPrepInstructionsList()
     {
-        return $this->container['asin_prep_instructions_list'];
+        return $this->container['aSINPrepInstructionsList'];
     }
 
     /**
-     * Sets asin_prep_instructions_list
+     * Sets aSINPrepInstructionsList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINPrepInstructions[]|null $asin_prep_instructions_list A list of item preparation instructions.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ASINPrepInstructions[]|null $aSINPrepInstructionsList A list of item preparation instructions.
      *
      * @return self
      */
-    public function setAsinPrepInstructionsList($asin_prep_instructions_list)
+    public function setASINPrepInstructionsList($aSINPrepInstructionsList)
     {
-        $this->container['asin_prep_instructions_list'] = $asin_prep_instructions_list;
+        $this->container['aSINPrepInstructionsList'] = $aSINPrepInstructionsList;
 
         return $this;
     }
 
     /**
-     * Gets invalid_asin_list
+     * Gets invalidASINList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null
      */
-    public function getInvalidAsinList()
+    public function getInvalidASINList()
     {
-        return $this->container['invalid_asin_list'];
+        return $this->container['invalidASINList'];
     }
 
     /**
-     * Sets invalid_asin_list
+     * Sets invalidASINList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null $invalid_asin_list A list of invalid ASIN values and the reasons they are invalid.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InvalidASIN[]|null $invalidASINList A list of invalid ASIN values and the reasons they are invalid.
      *
      * @return self
      */
-    public function setInvalidAsinList($invalid_asin_list)
+    public function setInvalidASINList($invalidASINList)
     {
-        $this->container['invalid_asin_list'] = $invalid_asin_list;
+        $this->container['invalidASINList'] = $invalidASINList;
 
         return $this;
     }

@@ -62,10 +62,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'client_reference_id' => 'string',
-        'accepted_rate' => '\Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate',
-        'label_results' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]'
+        'shipmentId' => 'string',
+        'clientReferenceId' => 'string',
+        'acceptedRate' => '\Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate',
+        'labelResults' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'client_reference_id' => null,
-        'accepted_rate' => null,
-        'label_results' => null
+        'shipmentId' => null,
+        'clientReferenceId' => null,
+        'acceptedRate' => null,
+        'labelResults' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'shipmentId',
-        'client_reference_id' => 'clientReferenceId',
-        'accepted_rate' => 'acceptedRate',
-        'label_results' => 'labelResults'
+        'shipmentId' => 'shipmentId',
+        'clientReferenceId' => 'clientReferenceId',
+        'acceptedRate' => 'acceptedRate',
+        'labelResults' => 'labelResults'
     ];
 
     /**
@@ -121,10 +121,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'client_reference_id' => 'setClientReferenceId',
-        'accepted_rate' => 'setAcceptedRate',
-        'label_results' => 'setLabelResults'
+        'shipmentId' => 'setShipmentId',
+        'clientReferenceId' => 'setClientReferenceId',
+        'acceptedRate' => 'setAcceptedRate',
+        'labelResults' => 'setLabelResults'
     ];
 
     /**
@@ -133,10 +133,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'client_reference_id' => 'getClientReferenceId',
-        'accepted_rate' => 'getAcceptedRate',
-        'label_results' => 'getLabelResults'
+        'shipmentId' => 'getShipmentId',
+        'clientReferenceId' => 'getClientReferenceId',
+        'acceptedRate' => 'getAcceptedRate',
+        'labelResults' => 'getLabelResults'
     ];
 
     /**
@@ -199,10 +199,10 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['client_reference_id'] = $data['client_reference_id'] ?? null;
-        $this->container['accepted_rate'] = $data['accepted_rate'] ?? null;
-        $this->container['label_results'] = $data['label_results'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['clientReferenceId'] = $data['clientReferenceId'] ?? null;
+        $this->container['acceptedRate'] = $data['acceptedRate'] ?? null;
+        $this->container['labelResults'] = $data['labelResults'] ?? null;
     }
 
     /**
@@ -214,18 +214,18 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if (!is_null($this->container['client_reference_id']) && (mb_strlen($this->container['client_reference_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'client_reference_id', the character length must be smaller than or equal to 40.";
+        if (!is_null($this->container['clientReferenceId']) && (mb_strlen($this->container['clientReferenceId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'clientReferenceId', the character length must be smaller than or equal to 40.";
         }
 
-        if ($this->container['accepted_rate'] === null) {
-            $invalidProperties[] = "'accepted_rate' can't be null";
+        if ($this->container['acceptedRate'] === null) {
+            $invalidProperties[] = "'acceptedRate' can't be null";
         }
-        if ($this->container['label_results'] === null) {
-            $invalidProperties[] = "'label_results' can't be null";
+        if ($this->container['labelResults'] === null) {
+            $invalidProperties[] = "'labelResults' can't be null";
         }
         return $invalidProperties;
     }
@@ -243,101 +243,101 @@ class PurchaseLabelsResult implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id The unique shipment identifier.
+     * @param string $shipmentId The unique shipment identifier.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets client_reference_id
+     * Gets clientReferenceId
      *
      * @return string|null
      */
     public function getClientReferenceId()
     {
-        return $this->container['client_reference_id'];
+        return $this->container['clientReferenceId'];
     }
 
     /**
-     * Sets client_reference_id
+     * Sets clientReferenceId
      *
-     * @param string|null $client_reference_id Client reference id.
+     * @param string|null $clientReferenceId Client reference id.
      *
      * @return self
      */
-    public function setClientReferenceId($client_reference_id)
+    public function setClientReferenceId($clientReferenceId)
     {
-        if (!is_null($client_reference_id) && (mb_strlen($client_reference_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $client_reference_id when calling PurchaseLabelsResult., must be smaller than or equal to 40.');
+        if (!is_null($clientReferenceId) && (mb_strlen($clientReferenceId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $clientReferenceId when calling PurchaseLabelsResult., must be smaller than or equal to 40.');
         }
 
-        $this->container['client_reference_id'] = $client_reference_id;
+        $this->container['clientReferenceId'] = $clientReferenceId;
 
         return $this;
     }
 
     /**
-     * Gets accepted_rate
+     * Gets acceptedRate
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate
      */
     public function getAcceptedRate()
     {
-        return $this->container['accepted_rate'];
+        return $this->container['acceptedRate'];
     }
 
     /**
-     * Sets accepted_rate
+     * Sets acceptedRate
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate $accepted_rate accepted_rate
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate $acceptedRate acceptedRate
      *
      * @return self
      */
-    public function setAcceptedRate($accepted_rate)
+    public function setAcceptedRate($acceptedRate)
     {
-        $this->container['accepted_rate'] = $accepted_rate;
+        $this->container['acceptedRate'] = $acceptedRate;
 
         return $this;
     }
 
     /**
-     * Gets label_results
+     * Gets labelResults
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]
      */
     public function getLabelResults()
     {
-        return $this->container['label_results'];
+        return $this->container['labelResults'];
     }
 
     /**
-     * Sets label_results
+     * Sets labelResults
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[] $label_results A list of label results
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[] $labelResults A list of label results
      *
      * @return self
      */
-    public function setLabelResults($label_results)
+    public function setLabelResults($labelResults)
     {
-        $this->container['label_results'] = $label_results;
+        $this->container['labelResults'] = $labelResults;
 
         return $this;
     }

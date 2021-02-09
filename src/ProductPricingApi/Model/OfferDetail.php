@@ -61,17 +61,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'my_offer' => 'bool',
-        'sub_condition' => 'string',
-        'seller_feedback_rating' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\SellerFeedbackType',
-        'shipping_time' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\DetailedShippingTimeType',
-        'listing_price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'myOffer' => 'bool',
+        'subCondition' => 'string',
+        'sellerFeedbackRating' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\SellerFeedbackType',
+        'shippingTime' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\DetailedShippingTimeType',
+        'listingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'points' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\Points',
         'shipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
-        'ships_from' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\ShipsFromType',
-        'is_fulfilled_by_amazon' => 'bool',
-        'is_buy_box_winner' => 'bool',
-        'is_featured_merchant' => 'bool'
+        'shipsFrom' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\ShipsFromType',
+        'isFulfilledByAmazon' => 'bool',
+        'isBuyBoxWinner' => 'bool',
+        'isFeaturedMerchant' => 'bool'
     ];
 
     /**
@@ -82,17 +82,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'my_offer' => null,
-        'sub_condition' => null,
-        'seller_feedback_rating' => null,
-        'shipping_time' => null,
-        'listing_price' => null,
+        'myOffer' => null,
+        'subCondition' => null,
+        'sellerFeedbackRating' => null,
+        'shippingTime' => null,
+        'listingPrice' => null,
         'points' => null,
         'shipping' => null,
-        'ships_from' => null,
-        'is_fulfilled_by_amazon' => null,
-        'is_buy_box_winner' => null,
-        'is_featured_merchant' => null
+        'shipsFrom' => null,
+        'isFulfilledByAmazon' => null,
+        'isBuyBoxWinner' => null,
+        'isFeaturedMerchant' => null
     ];
 
     /**
@@ -122,17 +122,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'my_offer' => 'MyOffer',
-        'sub_condition' => 'SubCondition',
-        'seller_feedback_rating' => 'SellerFeedbackRating',
-        'shipping_time' => 'ShippingTime',
-        'listing_price' => 'ListingPrice',
+        'myOffer' => 'MyOffer',
+        'subCondition' => 'SubCondition',
+        'sellerFeedbackRating' => 'SellerFeedbackRating',
+        'shippingTime' => 'ShippingTime',
+        'listingPrice' => 'ListingPrice',
         'points' => 'Points',
         'shipping' => 'Shipping',
-        'ships_from' => 'ShipsFrom',
-        'is_fulfilled_by_amazon' => 'IsFulfilledByAmazon',
-        'is_buy_box_winner' => 'IsBuyBoxWinner',
-        'is_featured_merchant' => 'IsFeaturedMerchant'
+        'shipsFrom' => 'ShipsFrom',
+        'isFulfilledByAmazon' => 'IsFulfilledByAmazon',
+        'isBuyBoxWinner' => 'IsBuyBoxWinner',
+        'isFeaturedMerchant' => 'IsFeaturedMerchant'
     ];
 
     /**
@@ -141,17 +141,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'my_offer' => 'setMyOffer',
-        'sub_condition' => 'setSubCondition',
-        'seller_feedback_rating' => 'setSellerFeedbackRating',
-        'shipping_time' => 'setShippingTime',
-        'listing_price' => 'setListingPrice',
+        'myOffer' => 'setMyOffer',
+        'subCondition' => 'setSubCondition',
+        'sellerFeedbackRating' => 'setSellerFeedbackRating',
+        'shippingTime' => 'setShippingTime',
+        'listingPrice' => 'setListingPrice',
         'points' => 'setPoints',
         'shipping' => 'setShipping',
-        'ships_from' => 'setShipsFrom',
-        'is_fulfilled_by_amazon' => 'setIsFulfilledByAmazon',
-        'is_buy_box_winner' => 'setIsBuyBoxWinner',
-        'is_featured_merchant' => 'setIsFeaturedMerchant'
+        'shipsFrom' => 'setShipsFrom',
+        'isFulfilledByAmazon' => 'setIsFulfilledByAmazon',
+        'isBuyBoxWinner' => 'setIsBuyBoxWinner',
+        'isFeaturedMerchant' => 'setIsFeaturedMerchant'
     ];
 
     /**
@@ -160,17 +160,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'my_offer' => 'getMyOffer',
-        'sub_condition' => 'getSubCondition',
-        'seller_feedback_rating' => 'getSellerFeedbackRating',
-        'shipping_time' => 'getShippingTime',
-        'listing_price' => 'getListingPrice',
+        'myOffer' => 'getMyOffer',
+        'subCondition' => 'getSubCondition',
+        'sellerFeedbackRating' => 'getSellerFeedbackRating',
+        'shippingTime' => 'getShippingTime',
+        'listingPrice' => 'getListingPrice',
         'points' => 'getPoints',
         'shipping' => 'getShipping',
-        'ships_from' => 'getShipsFrom',
-        'is_fulfilled_by_amazon' => 'getIsFulfilledByAmazon',
-        'is_buy_box_winner' => 'getIsBuyBoxWinner',
-        'is_featured_merchant' => 'getIsFeaturedMerchant'
+        'shipsFrom' => 'getShipsFrom',
+        'isFulfilledByAmazon' => 'getIsFulfilledByAmazon',
+        'isBuyBoxWinner' => 'getIsBuyBoxWinner',
+        'isFeaturedMerchant' => 'getIsFeaturedMerchant'
     ];
 
     /**
@@ -233,17 +233,17 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['my_offer'] = $data['my_offer'] ?? null;
-        $this->container['sub_condition'] = $data['sub_condition'] ?? null;
-        $this->container['seller_feedback_rating'] = $data['seller_feedback_rating'] ?? null;
-        $this->container['shipping_time'] = $data['shipping_time'] ?? null;
-        $this->container['listing_price'] = $data['listing_price'] ?? null;
+        $this->container['myOffer'] = $data['myOffer'] ?? null;
+        $this->container['subCondition'] = $data['subCondition'] ?? null;
+        $this->container['sellerFeedbackRating'] = $data['sellerFeedbackRating'] ?? null;
+        $this->container['shippingTime'] = $data['shippingTime'] ?? null;
+        $this->container['listingPrice'] = $data['listingPrice'] ?? null;
         $this->container['points'] = $data['points'] ?? null;
         $this->container['shipping'] = $data['shipping'] ?? null;
-        $this->container['ships_from'] = $data['ships_from'] ?? null;
-        $this->container['is_fulfilled_by_amazon'] = $data['is_fulfilled_by_amazon'] ?? null;
-        $this->container['is_buy_box_winner'] = $data['is_buy_box_winner'] ?? null;
-        $this->container['is_featured_merchant'] = $data['is_featured_merchant'] ?? null;
+        $this->container['shipsFrom'] = $data['shipsFrom'] ?? null;
+        $this->container['isFulfilledByAmazon'] = $data['isFulfilledByAmazon'] ?? null;
+        $this->container['isBuyBoxWinner'] = $data['isBuyBoxWinner'] ?? null;
+        $this->container['isFeaturedMerchant'] = $data['isFeaturedMerchant'] ?? null;
     }
 
     /**
@@ -255,20 +255,20 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['sub_condition'] === null) {
-            $invalidProperties[] = "'sub_condition' can't be null";
+        if ($this->container['subCondition'] === null) {
+            $invalidProperties[] = "'subCondition' can't be null";
         }
-        if ($this->container['shipping_time'] === null) {
-            $invalidProperties[] = "'shipping_time' can't be null";
+        if ($this->container['shippingTime'] === null) {
+            $invalidProperties[] = "'shippingTime' can't be null";
         }
-        if ($this->container['listing_price'] === null) {
-            $invalidProperties[] = "'listing_price' can't be null";
+        if ($this->container['listingPrice'] === null) {
+            $invalidProperties[] = "'listingPrice' can't be null";
         }
         if ($this->container['shipping'] === null) {
             $invalidProperties[] = "'shipping' can't be null";
         }
-        if ($this->container['is_fulfilled_by_amazon'] === null) {
-            $invalidProperties[] = "'is_fulfilled_by_amazon' can't be null";
+        if ($this->container['isFulfilledByAmazon'] === null) {
+            $invalidProperties[] = "'isFulfilledByAmazon' can't be null";
         }
         return $invalidProperties;
     }
@@ -286,121 +286,121 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets my_offer
+     * Gets myOffer
      *
      * @return bool|null
      */
     public function getMyOffer()
     {
-        return $this->container['my_offer'];
+        return $this->container['myOffer'];
     }
 
     /**
-     * Sets my_offer
+     * Sets myOffer
      *
-     * @param bool|null $my_offer When true, this is the seller's offer.
+     * @param bool|null $myOffer When true, this is the seller's offer.
      *
      * @return self
      */
-    public function setMyOffer($my_offer)
+    public function setMyOffer($myOffer)
     {
-        $this->container['my_offer'] = $my_offer;
+        $this->container['myOffer'] = $myOffer;
 
         return $this;
     }
 
     /**
-     * Gets sub_condition
+     * Gets subCondition
      *
      * @return string
      */
     public function getSubCondition()
     {
-        return $this->container['sub_condition'];
+        return $this->container['subCondition'];
     }
 
     /**
-     * Sets sub_condition
+     * Sets subCondition
      *
-     * @param string $sub_condition The subcondition of the item. Subcondition values: New, Mint, Very Good, Good, Acceptable, Poor, Club, OEM, Warranty, Refurbished Warranty, Refurbished, Open Box, or Other.
+     * @param string $subCondition The subcondition of the item. Subcondition values: New, Mint, Very Good, Good, Acceptable, Poor, Club, OEM, Warranty, Refurbished Warranty, Refurbished, Open Box, or Other.
      *
      * @return self
      */
-    public function setSubCondition($sub_condition)
+    public function setSubCondition($subCondition)
     {
-        $this->container['sub_condition'] = $sub_condition;
+        $this->container['subCondition'] = $subCondition;
 
         return $this;
     }
 
     /**
-     * Gets seller_feedback_rating
+     * Gets sellerFeedbackRating
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\SellerFeedbackType|null
      */
     public function getSellerFeedbackRating()
     {
-        return $this->container['seller_feedback_rating'];
+        return $this->container['sellerFeedbackRating'];
     }
 
     /**
-     * Sets seller_feedback_rating
+     * Sets sellerFeedbackRating
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\SellerFeedbackType|null $seller_feedback_rating seller_feedback_rating
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\SellerFeedbackType|null $sellerFeedbackRating sellerFeedbackRating
      *
      * @return self
      */
-    public function setSellerFeedbackRating($seller_feedback_rating)
+    public function setSellerFeedbackRating($sellerFeedbackRating)
     {
-        $this->container['seller_feedback_rating'] = $seller_feedback_rating;
+        $this->container['sellerFeedbackRating'] = $sellerFeedbackRating;
 
         return $this;
     }
 
     /**
-     * Gets shipping_time
+     * Gets shippingTime
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\DetailedShippingTimeType
      */
     public function getShippingTime()
     {
-        return $this->container['shipping_time'];
+        return $this->container['shippingTime'];
     }
 
     /**
-     * Sets shipping_time
+     * Sets shippingTime
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\DetailedShippingTimeType $shipping_time shipping_time
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\DetailedShippingTimeType $shippingTime shippingTime
      *
      * @return self
      */
-    public function setShippingTime($shipping_time)
+    public function setShippingTime($shippingTime)
     {
-        $this->container['shipping_time'] = $shipping_time;
+        $this->container['shippingTime'] = $shippingTime;
 
         return $this;
     }
 
     /**
-     * Gets listing_price
+     * Gets listingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType
      */
     public function getListingPrice()
     {
-        return $this->container['listing_price'];
+        return $this->container['listingPrice'];
     }
 
     /**
-     * Sets listing_price
+     * Sets listingPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listing_price listing_price
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType $listingPrice listingPrice
      *
      * @return self
      */
-    public function setListingPrice($listing_price)
+    public function setListingPrice($listingPrice)
     {
-        $this->container['listing_price'] = $listing_price;
+        $this->container['listingPrice'] = $listingPrice;
 
         return $this;
     }
@@ -454,97 +454,97 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ships_from
+     * Gets shipsFrom
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\ShipsFromType|null
      */
     public function getShipsFrom()
     {
-        return $this->container['ships_from'];
+        return $this->container['shipsFrom'];
     }
 
     /**
-     * Sets ships_from
+     * Sets shipsFrom
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\ShipsFromType|null $ships_from ships_from
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\ShipsFromType|null $shipsFrom shipsFrom
      *
      * @return self
      */
-    public function setShipsFrom($ships_from)
+    public function setShipsFrom($shipsFrom)
     {
-        $this->container['ships_from'] = $ships_from;
+        $this->container['shipsFrom'] = $shipsFrom;
 
         return $this;
     }
 
     /**
-     * Gets is_fulfilled_by_amazon
+     * Gets isFulfilledByAmazon
      *
      * @return bool
      */
     public function getIsFulfilledByAmazon()
     {
-        return $this->container['is_fulfilled_by_amazon'];
+        return $this->container['isFulfilledByAmazon'];
     }
 
     /**
-     * Sets is_fulfilled_by_amazon
+     * Sets isFulfilledByAmazon
      *
-     * @param bool $is_fulfilled_by_amazon When true, the offer is fulfilled by Amazon.
+     * @param bool $isFulfilledByAmazon When true, the offer is fulfilled by Amazon.
      *
      * @return self
      */
-    public function setIsFulfilledByAmazon($is_fulfilled_by_amazon)
+    public function setIsFulfilledByAmazon($isFulfilledByAmazon)
     {
-        $this->container['is_fulfilled_by_amazon'] = $is_fulfilled_by_amazon;
+        $this->container['isFulfilledByAmazon'] = $isFulfilledByAmazon;
 
         return $this;
     }
 
     /**
-     * Gets is_buy_box_winner
+     * Gets isBuyBoxWinner
      *
      * @return bool|null
      */
     public function getIsBuyBoxWinner()
     {
-        return $this->container['is_buy_box_winner'];
+        return $this->container['isBuyBoxWinner'];
     }
 
     /**
-     * Sets is_buy_box_winner
+     * Sets isBuyBoxWinner
      *
-     * @param bool|null $is_buy_box_winner When true, the offer is currently in the Buy Box. There can be up to two Buy Box winners at any time per ASIN, one that is eligible for Prime and one that is not eligible for Prime.
+     * @param bool|null $isBuyBoxWinner When true, the offer is currently in the Buy Box. There can be up to two Buy Box winners at any time per ASIN, one that is eligible for Prime and one that is not eligible for Prime.
      *
      * @return self
      */
-    public function setIsBuyBoxWinner($is_buy_box_winner)
+    public function setIsBuyBoxWinner($isBuyBoxWinner)
     {
-        $this->container['is_buy_box_winner'] = $is_buy_box_winner;
+        $this->container['isBuyBoxWinner'] = $isBuyBoxWinner;
 
         return $this;
     }
 
     /**
-     * Gets is_featured_merchant
+     * Gets isFeaturedMerchant
      *
      * @return bool|null
      */
     public function getIsFeaturedMerchant()
     {
-        return $this->container['is_featured_merchant'];
+        return $this->container['isFeaturedMerchant'];
     }
 
     /**
-     * Sets is_featured_merchant
+     * Sets isFeaturedMerchant
      *
-     * @param bool|null $is_featured_merchant When true, the seller of the item is eligible to win the Buy Box.
+     * @param bool|null $isFeaturedMerchant When true, the seller of the item is eligible to win the Buy Box.
      *
      * @return self
      */
-    public function setIsFeaturedMerchant($is_featured_merchant)
+    public function setIsFeaturedMerchant($isFeaturedMerchant)
     {
-        $this->container['is_featured_merchant'] = $is_featured_merchant;
+        $this->container['isFeaturedMerchant'] = $isFeaturedMerchant;
 
         return $this;
     }

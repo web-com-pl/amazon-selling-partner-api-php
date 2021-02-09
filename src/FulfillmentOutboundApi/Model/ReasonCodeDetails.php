@@ -62,9 +62,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'return_reason_code' => 'string',
+        'returnReasonCode' => 'string',
         'description' => 'string',
-        'translated_description' => 'string'
+        'translatedDescription' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'return_reason_code' => null,
+        'returnReasonCode' => null,
         'description' => null,
-        'translated_description' => null
+        'translatedDescription' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_reason_code' => 'returnReasonCode',
+        'returnReasonCode' => 'returnReasonCode',
         'description' => 'description',
-        'translated_description' => 'translatedDescription'
+        'translatedDescription' => 'translatedDescription'
     ];
 
     /**
@@ -118,9 +118,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'return_reason_code' => 'setReturnReasonCode',
+        'returnReasonCode' => 'setReturnReasonCode',
         'description' => 'setDescription',
-        'translated_description' => 'setTranslatedDescription'
+        'translatedDescription' => 'setTranslatedDescription'
     ];
 
     /**
@@ -129,9 +129,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'return_reason_code' => 'getReturnReasonCode',
+        'returnReasonCode' => 'getReturnReasonCode',
         'description' => 'getDescription',
-        'translated_description' => 'getTranslatedDescription'
+        'translatedDescription' => 'getTranslatedDescription'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_reason_code'] = $data['return_reason_code'] ?? null;
+        $this->container['returnReasonCode'] = $data['returnReasonCode'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['translated_description'] = $data['translated_description'] ?? null;
+        $this->container['translatedDescription'] = $data['translatedDescription'] ?? null;
     }
 
     /**
@@ -208,8 +208,8 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['return_reason_code'] === null) {
-            $invalidProperties[] = "'return_reason_code' can't be null";
+        if ($this->container['returnReasonCode'] === null) {
+            $invalidProperties[] = "'returnReasonCode' can't be null";
         }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
@@ -230,25 +230,25 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets return_reason_code
+     * Gets returnReasonCode
      *
      * @return string
      */
     public function getReturnReasonCode()
     {
-        return $this->container['return_reason_code'];
+        return $this->container['returnReasonCode'];
     }
 
     /**
-     * Sets return_reason_code
+     * Sets returnReasonCode
      *
-     * @param string $return_reason_code A code that indicates a valid return reason.
+     * @param string $returnReasonCode A code that indicates a valid return reason.
      *
      * @return self
      */
-    public function setReturnReasonCode($return_reason_code)
+    public function setReturnReasonCode($returnReasonCode)
     {
-        $this->container['return_reason_code'] = $return_reason_code;
+        $this->container['returnReasonCode'] = $returnReasonCode;
 
         return $this;
     }
@@ -278,25 +278,25 @@ class ReasonCodeDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets translated_description
+     * Gets translatedDescription
      *
      * @return string|null
      */
     public function getTranslatedDescription()
     {
-        return $this->container['translated_description'];
+        return $this->container['translatedDescription'];
     }
 
     /**
-     * Sets translated_description
+     * Sets translatedDescription
      *
-     * @param string|null $translated_description A translation of the description. The translation is in the language specified in the Language request parameter.
+     * @param string|null $translatedDescription A translation of the description. The translation is in the language specified in the Language request parameter.
      *
      * @return self
      */
-    public function setTranslatedDescription($translated_description)
+    public function setTranslatedDescription($translatedDescription)
     {
-        $this->container['translated_description'] = $translated_description;
+        $this->container['translatedDescription'] = $translatedDescription;
 
         return $this;
     }

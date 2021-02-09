@@ -62,8 +62,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_charge_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'product_description' => 'string',
+        'itemChargeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'productDescription' => 'string',
         'quantity' => 'string'
     ];
 
@@ -75,8 +75,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_charge_list' => null,
-        'product_description' => null,
+        'itemChargeList' => null,
+        'productDescription' => null,
         'quantity' => null
     ];
 
@@ -107,8 +107,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_charge_list' => 'itemChargeList',
-        'product_description' => 'productDescription',
+        'itemChargeList' => 'itemChargeList',
+        'productDescription' => 'productDescription',
         'quantity' => 'quantity'
     ];
 
@@ -118,8 +118,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_charge_list' => 'setItemChargeList',
-        'product_description' => 'setProductDescription',
+        'itemChargeList' => 'setItemChargeList',
+        'productDescription' => 'setProductDescription',
         'quantity' => 'setQuantity'
     ];
 
@@ -129,8 +129,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_charge_list' => 'getItemChargeList',
-        'product_description' => 'getProductDescription',
+        'itemChargeList' => 'getItemChargeList',
+        'productDescription' => 'getProductDescription',
         'quantity' => 'getQuantity'
     ];
 
@@ -194,8 +194,8 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_charge_list'] = $data['item_charge_list'] ?? null;
-        $this->container['product_description'] = $data['product_description'] ?? null;
+        $this->container['itemChargeList'] = $data['itemChargeList'] ?? null;
+        $this->container['productDescription'] = $data['productDescription'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
     }
 
@@ -224,49 +224,49 @@ class SAFETReimbursementItem implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_charge_list
+     * Gets itemChargeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getItemChargeList()
     {
-        return $this->container['item_charge_list'];
+        return $this->container['itemChargeList'];
     }
 
     /**
-     * Sets item_charge_list
+     * Sets itemChargeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $item_charge_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $itemChargeList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setItemChargeList($item_charge_list)
+    public function setItemChargeList($itemChargeList)
     {
-        $this->container['item_charge_list'] = $item_charge_list;
+        $this->container['itemChargeList'] = $itemChargeList;
 
         return $this;
     }
 
     /**
-     * Gets product_description
+     * Gets productDescription
      *
      * @return string|null
      */
     public function getProductDescription()
     {
-        return $this->container['product_description'];
+        return $this->container['productDescription'];
     }
 
     /**
-     * Sets product_description
+     * Sets productDescription
      *
-     * @param string|null $product_description The description of the item as shown on the product detail page on the retail website.
+     * @param string|null $productDescription The description of the item as shown on the product detail page on the retail website.
      *
      * @return self
      */
-    public function setProductDescription($product_description)
+    public function setProductDescription($productDescription)
     {
-        $this->container['product_description'] = $product_description;
+        $this->container['productDescription'] = $productDescription;
 
         return $this;
     }

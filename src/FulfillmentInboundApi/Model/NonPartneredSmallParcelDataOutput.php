@@ -62,7 +62,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'package_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageOutput[]'
+        'packageList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageOutput[]'
     ];
 
     /**
@@ -73,7 +73,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'package_list' => null
+        'packageList' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
-        'package_list' => 'PackageList'
+        'packageList' => 'PackageList'
     ];
 
     /**
@@ -112,7 +112,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'package_list' => 'setPackageList'
+        'packageList' => 'setPackageList'
     ];
 
     /**
@@ -121,7 +121,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'package_list' => 'getPackageList'
+        'packageList' => 'getPackageList'
     ];
 
     /**
@@ -184,7 +184,7 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
-        $this->container['package_list'] = $data['package_list'] ?? null;
+        $this->container['packageList'] = $data['packageList'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
-        if ($this->container['package_list'] === null) {
-            $invalidProperties[] = "'package_list' can't be null";
+        if ($this->container['packageList'] === null) {
+            $invalidProperties[] = "'packageList' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class NonPartneredSmallParcelDataOutput implements ModelInterface, ArrayAccess, 
 
 
     /**
-     * Gets package_list
+     * Gets packageList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageOutput[]
      */
     public function getPackageList()
     {
-        return $this->container['package_list'];
+        return $this->container['packageList'];
     }
 
     /**
-     * Sets package_list
+     * Sets packageList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageOutput[] $package_list A list of packages, including carrier, tracking number, and status information for each package.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageOutput[] $packageList A list of packages, including carrier, tracking number, and status information for each package.
      *
      * @return self
      */
-    public function setPackageList($package_list)
+    public function setPackageList($packageList)
     {
-        $this->container['package_list'] = $package_list;
+        $this->container['packageList'] = $packageList;
 
         return $this;
     }

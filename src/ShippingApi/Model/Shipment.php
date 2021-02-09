@@ -62,11 +62,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'client_reference_id' => 'string',
-        'ship_from' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'ship_to' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'accepted_rate' => '\Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate',
+        'shipmentId' => 'string',
+        'clientReferenceId' => 'string',
+        'shipFrom' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'shipTo' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'acceptedRate' => '\Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate',
         'shipper' => '\Webcom\Amazon\Rest\ShippingApi\Model\Party',
         'containers' => '\Webcom\Amazon\Rest\ShippingApi\Model\Container[]'
     ];
@@ -79,11 +79,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'client_reference_id' => null,
-        'ship_from' => null,
-        'ship_to' => null,
-        'accepted_rate' => null,
+        'shipmentId' => null,
+        'clientReferenceId' => null,
+        'shipFrom' => null,
+        'shipTo' => null,
+        'acceptedRate' => null,
         'shipper' => null,
         'containers' => null
     ];
@@ -115,11 +115,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'shipmentId',
-        'client_reference_id' => 'clientReferenceId',
-        'ship_from' => 'shipFrom',
-        'ship_to' => 'shipTo',
-        'accepted_rate' => 'acceptedRate',
+        'shipmentId' => 'shipmentId',
+        'clientReferenceId' => 'clientReferenceId',
+        'shipFrom' => 'shipFrom',
+        'shipTo' => 'shipTo',
+        'acceptedRate' => 'acceptedRate',
         'shipper' => 'shipper',
         'containers' => 'containers'
     ];
@@ -130,11 +130,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'client_reference_id' => 'setClientReferenceId',
-        'ship_from' => 'setShipFrom',
-        'ship_to' => 'setShipTo',
-        'accepted_rate' => 'setAcceptedRate',
+        'shipmentId' => 'setShipmentId',
+        'clientReferenceId' => 'setClientReferenceId',
+        'shipFrom' => 'setShipFrom',
+        'shipTo' => 'setShipTo',
+        'acceptedRate' => 'setAcceptedRate',
         'shipper' => 'setShipper',
         'containers' => 'setContainers'
     ];
@@ -145,11 +145,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'client_reference_id' => 'getClientReferenceId',
-        'ship_from' => 'getShipFrom',
-        'ship_to' => 'getShipTo',
-        'accepted_rate' => 'getAcceptedRate',
+        'shipmentId' => 'getShipmentId',
+        'clientReferenceId' => 'getClientReferenceId',
+        'shipFrom' => 'getShipFrom',
+        'shipTo' => 'getShipTo',
+        'acceptedRate' => 'getAcceptedRate',
         'shipper' => 'getShipper',
         'containers' => 'getContainers'
     ];
@@ -214,11 +214,11 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['client_reference_id'] = $data['client_reference_id'] ?? null;
-        $this->container['ship_from'] = $data['ship_from'] ?? null;
-        $this->container['ship_to'] = $data['ship_to'] ?? null;
-        $this->container['accepted_rate'] = $data['accepted_rate'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['clientReferenceId'] = $data['clientReferenceId'] ?? null;
+        $this->container['shipFrom'] = $data['shipFrom'] ?? null;
+        $this->container['shipTo'] = $data['shipTo'] ?? null;
+        $this->container['acceptedRate'] = $data['acceptedRate'] ?? null;
         $this->container['shipper'] = $data['shipper'] ?? null;
         $this->container['containers'] = $data['containers'] ?? null;
     }
@@ -232,21 +232,21 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if ($this->container['client_reference_id'] === null) {
-            $invalidProperties[] = "'client_reference_id' can't be null";
+        if ($this->container['clientReferenceId'] === null) {
+            $invalidProperties[] = "'clientReferenceId' can't be null";
         }
-        if ((mb_strlen($this->container['client_reference_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'client_reference_id', the character length must be smaller than or equal to 40.";
+        if ((mb_strlen($this->container['clientReferenceId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'clientReferenceId', the character length must be smaller than or equal to 40.";
         }
 
-        if ($this->container['ship_from'] === null) {
-            $invalidProperties[] = "'ship_from' can't be null";
+        if ($this->container['shipFrom'] === null) {
+            $invalidProperties[] = "'shipFrom' can't be null";
         }
-        if ($this->container['ship_to'] === null) {
-            $invalidProperties[] = "'ship_to' can't be null";
+        if ($this->container['shipTo'] === null) {
+            $invalidProperties[] = "'shipTo' can't be null";
         }
         if ($this->container['containers'] === null) {
             $invalidProperties[] = "'containers' can't be null";
@@ -267,125 +267,125 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id The unique shipment identifier.
+     * @param string $shipmentId The unique shipment identifier.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets client_reference_id
+     * Gets clientReferenceId
      *
      * @return string
      */
     public function getClientReferenceId()
     {
-        return $this->container['client_reference_id'];
+        return $this->container['clientReferenceId'];
     }
 
     /**
-     * Sets client_reference_id
+     * Sets clientReferenceId
      *
-     * @param string $client_reference_id Client reference id.
+     * @param string $clientReferenceId Client reference id.
      *
      * @return self
      */
-    public function setClientReferenceId($client_reference_id)
+    public function setClientReferenceId($clientReferenceId)
     {
-        if ((mb_strlen($client_reference_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $client_reference_id when calling Shipment., must be smaller than or equal to 40.');
+        if ((mb_strlen($clientReferenceId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $clientReferenceId when calling Shipment., must be smaller than or equal to 40.');
         }
 
-        $this->container['client_reference_id'] = $client_reference_id;
+        $this->container['clientReferenceId'] = $clientReferenceId;
 
         return $this;
     }
 
     /**
-     * Gets ship_from
+     * Gets shipFrom
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipFrom()
     {
-        return $this->container['ship_from'];
+        return $this->container['shipFrom'];
     }
 
     /**
-     * Sets ship_from
+     * Sets shipFrom
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_from ship_from
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipFrom shipFrom
      *
      * @return self
      */
-    public function setShipFrom($ship_from)
+    public function setShipFrom($shipFrom)
     {
-        $this->container['ship_from'] = $ship_from;
+        $this->container['shipFrom'] = $shipFrom;
 
         return $this;
     }
 
     /**
-     * Gets ship_to
+     * Gets shipTo
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipTo()
     {
-        return $this->container['ship_to'];
+        return $this->container['shipTo'];
     }
 
     /**
-     * Sets ship_to
+     * Sets shipTo
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_to ship_to
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipTo shipTo
      *
      * @return self
      */
-    public function setShipTo($ship_to)
+    public function setShipTo($shipTo)
     {
-        $this->container['ship_to'] = $ship_to;
+        $this->container['shipTo'] = $shipTo;
 
         return $this;
     }
 
     /**
-     * Gets accepted_rate
+     * Gets acceptedRate
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate|null
      */
     public function getAcceptedRate()
     {
-        return $this->container['accepted_rate'];
+        return $this->container['acceptedRate'];
     }
 
     /**
-     * Sets accepted_rate
+     * Sets acceptedRate
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate|null $accepted_rate accepted_rate
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\AcceptedRate|null $acceptedRate acceptedRate
      *
      * @return self
      */
-    public function setAcceptedRate($accepted_rate)
+    public function setAcceptedRate($acceptedRate)
     {
-        $this->container['accepted_rate'] = $accepted_rate;
+        $this->container['acceptedRate'] = $acceptedRate;
 
         return $this;
     }

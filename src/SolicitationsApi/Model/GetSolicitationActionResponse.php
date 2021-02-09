@@ -62,8 +62,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseLinks',
-        '_embedded' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseEmbedded',
+        'links' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseLinks',
+        'embedded' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseEmbedded',
         'payload' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\SolicitationsAction',
         'errors' => '\Webcom\Amazon\Rest\SolicitationsApi\Model\Error[]'
     ];
@@ -76,8 +76,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        '_links' => null,
-        '_embedded' => null,
+        'links' => null,
+        'embedded' => null,
         'payload' => null,
         'errors' => null
     ];
@@ -109,8 +109,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        '_links' => '_links',
-        '_embedded' => '_embedded',
+        'links' => '_links',
+        'embedded' => '_embedded',
         'payload' => 'payload',
         'errors' => 'errors'
     ];
@@ -121,8 +121,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        '_links' => 'setLinks',
-        '_embedded' => 'setEmbedded',
+        'links' => 'setLinks',
+        'embedded' => 'setEmbedded',
         'payload' => 'setPayload',
         'errors' => 'setErrors'
     ];
@@ -133,8 +133,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        '_links' => 'getLinks',
-        '_embedded' => 'getEmbedded',
+        'links' => 'getLinks',
+        'embedded' => 'getEmbedded',
         'payload' => 'getPayload',
         'errors' => 'getErrors'
     ];
@@ -199,8 +199,8 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['_links'] = $data['_links'] ?? null;
-        $this->container['_embedded'] = $data['_embedded'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
+        $this->container['embedded'] = $data['embedded'] ?? null;
         $this->container['payload'] = $data['payload'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
@@ -230,49 +230,49 @@ class GetSolicitationActionResponse implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets _links
+     * Gets links
      *
      * @return \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseLinks|null
      */
     public function getLinks()
     {
-        return $this->container['_links'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets _links
+     * Sets links
      *
-     * @param \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseLinks|null $_links _links
+     * @param \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseLinks|null $links links
      *
      * @return self
      */
-    public function setLinks($_links)
+    public function setLinks($links)
     {
-        $this->container['_links'] = $_links;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets _embedded
+     * Gets embedded
      *
      * @return \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseEmbedded|null
      */
     public function getEmbedded()
     {
-        return $this->container['_embedded'];
+        return $this->container['embedded'];
     }
 
     /**
-     * Sets _embedded
+     * Sets embedded
      *
-     * @param \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseEmbedded|null $_embedded _embedded
+     * @param \Webcom\Amazon\Rest\SolicitationsApi\Model\GetSolicitationActionResponseEmbedded|null $embedded embedded
      *
      * @return self
      */
-    public function setEmbedded($_embedded)
+    public function setEmbedded($embedded)
     {
-        $this->container['_embedded'] = $_embedded;
+        $this->container['embedded'] = $embedded;
 
         return $this;
     }

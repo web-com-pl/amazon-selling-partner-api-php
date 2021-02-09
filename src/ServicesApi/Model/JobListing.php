@@ -62,9 +62,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_result_size' => 'int',
-        'next_page_token' => 'string',
-        'previous_page_token' => 'string',
+        'totalResultSize' => 'int',
+        'nextPageToken' => 'string',
+        'previousPageToken' => 'string',
         'jobs' => '\Webcom\Amazon\Rest\ServicesApi\Model\ServiceJob[]'
     ];
 
@@ -76,9 +76,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_result_size' => null,
-        'next_page_token' => null,
-        'previous_page_token' => null,
+        'totalResultSize' => null,
+        'nextPageToken' => null,
+        'previousPageToken' => null,
         'jobs' => null
     ];
 
@@ -109,9 +109,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_result_size' => 'totalResultSize',
-        'next_page_token' => 'nextPageToken',
-        'previous_page_token' => 'previousPageToken',
+        'totalResultSize' => 'totalResultSize',
+        'nextPageToken' => 'nextPageToken',
+        'previousPageToken' => 'previousPageToken',
         'jobs' => 'jobs'
     ];
 
@@ -121,9 +121,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_result_size' => 'setTotalResultSize',
-        'next_page_token' => 'setNextPageToken',
-        'previous_page_token' => 'setPreviousPageToken',
+        'totalResultSize' => 'setTotalResultSize',
+        'nextPageToken' => 'setNextPageToken',
+        'previousPageToken' => 'setPreviousPageToken',
         'jobs' => 'setJobs'
     ];
 
@@ -133,9 +133,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_result_size' => 'getTotalResultSize',
-        'next_page_token' => 'getNextPageToken',
-        'previous_page_token' => 'getPreviousPageToken',
+        'totalResultSize' => 'getTotalResultSize',
+        'nextPageToken' => 'getNextPageToken',
+        'previousPageToken' => 'getPreviousPageToken',
         'jobs' => 'getJobs'
     ];
 
@@ -199,9 +199,9 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_result_size'] = $data['total_result_size'] ?? null;
-        $this->container['next_page_token'] = $data['next_page_token'] ?? null;
-        $this->container['previous_page_token'] = $data['previous_page_token'] ?? null;
+        $this->container['totalResultSize'] = $data['totalResultSize'] ?? null;
+        $this->container['nextPageToken'] = $data['nextPageToken'] ?? null;
+        $this->container['previousPageToken'] = $data['previousPageToken'] ?? null;
         $this->container['jobs'] = $data['jobs'] ?? null;
     }
 
@@ -230,73 +230,73 @@ class JobListing implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_result_size
+     * Gets totalResultSize
      *
      * @return int|null
      */
     public function getTotalResultSize()
     {
-        return $this->container['total_result_size'];
+        return $this->container['totalResultSize'];
     }
 
     /**
-     * Sets total_result_size
+     * Sets totalResultSize
      *
-     * @param int|null $total_result_size Total result size of the query result.
+     * @param int|null $totalResultSize Total result size of the query result.
      *
      * @return self
      */
-    public function setTotalResultSize($total_result_size)
+    public function setTotalResultSize($totalResultSize)
     {
-        $this->container['total_result_size'] = $total_result_size;
+        $this->container['totalResultSize'] = $totalResultSize;
 
         return $this;
     }
 
     /**
-     * Gets next_page_token
+     * Gets nextPageToken
      *
      * @return string|null
      */
     public function getNextPageToken()
     {
-        return $this->container['next_page_token'];
+        return $this->container['nextPageToken'];
     }
 
     /**
-     * Sets next_page_token
+     * Sets nextPageToken
      *
-     * @param string|null $next_page_token A generated string used to pass information to your next request.If nextPageToken is returned, pass the value of nextPageToken to the pageToken to get next results.
+     * @param string|null $nextPageToken A generated string used to pass information to your next request.If nextPageToken is returned, pass the value of nextPageToken to the pageToken to get next results.
      *
      * @return self
      */
-    public function setNextPageToken($next_page_token)
+    public function setNextPageToken($nextPageToken)
     {
-        $this->container['next_page_token'] = $next_page_token;
+        $this->container['nextPageToken'] = $nextPageToken;
 
         return $this;
     }
 
     /**
-     * Gets previous_page_token
+     * Gets previousPageToken
      *
      * @return string|null
      */
     public function getPreviousPageToken()
     {
-        return $this->container['previous_page_token'];
+        return $this->container['previousPageToken'];
     }
 
     /**
-     * Sets previous_page_token
+     * Sets previousPageToken
      *
-     * @param string|null $previous_page_token A generated string used to pass information to your next request.If previousPageToken is returned, pass the value of previousPageToken to the pageToken to get previous page results.
+     * @param string|null $previousPageToken A generated string used to pass information to your next request.If previousPageToken is returned, pass the value of previousPageToken to the pageToken to get previous page results.
      *
      * @return self
      */
-    public function setPreviousPageToken($previous_page_token)
+    public function setPreviousPageToken($previousPageToken)
     {
-        $this->container['previous_page_token'] = $previous_page_token;
+        $this->container['previousPageToken'] = $previousPageToken;
 
         return $this;
     }

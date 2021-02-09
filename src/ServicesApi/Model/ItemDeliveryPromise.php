@@ -62,8 +62,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'start_time' => '\DateTime',
-        'end_time' => '\DateTime'
+        'startTime' => '\DateTime',
+        'endTime' => '\DateTime'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'start_time' => 'date-time',
-        'end_time' => 'date-time'
+        'startTime' => 'date-time',
+        'endTime' => 'date-time'
     ];
 
     /**
@@ -105,8 +105,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'start_time' => 'startTime',
-        'end_time' => 'endTime'
+        'startTime' => 'startTime',
+        'endTime' => 'endTime'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime'
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime'
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['start_time'] = $data['start_time'] ?? null;
-        $this->container['end_time'] = $data['end_time'] ?? null;
+        $this->container['startTime'] = $data['startTime'] ?? null;
+        $this->container['endTime'] = $data['endTime'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ItemDeliveryPromise implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime|null $start_time The date and time of the start of the promised delivery window, in ISO 8601 format.
+     * @param \DateTime|null $startTime The date and time of the start of the promised delivery window, in ISO 8601 format.
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time The date and time of the end of the promised delivery window, in ISO 8601 format.
+     * @param \DateTime|null $endTime The date and time of the end of the promised delivery window, in ISO 8601 format.
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }

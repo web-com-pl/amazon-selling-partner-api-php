@@ -62,13 +62,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'fee_reason' => 'string',
-        'fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'seller_sku' => 'string',
-        'fn_sku' => 'string',
-        'fee_description' => 'string',
-        'asin' => 'string'
+        'amazonOrderId' => 'string',
+        'feeReason' => 'string',
+        'feeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'sellerSKU' => 'string',
+        'fnSKU' => 'string',
+        'feeDescription' => 'string',
+        'aSIN' => 'string'
     ];
 
     /**
@@ -79,13 +79,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'fee_reason' => null,
-        'fee_list' => null,
-        'seller_sku' => null,
-        'fn_sku' => null,
-        'fee_description' => null,
-        'asin' => null
+        'amazonOrderId' => null,
+        'feeReason' => null,
+        'feeList' => null,
+        'sellerSKU' => null,
+        'fnSKU' => null,
+        'feeDescription' => null,
+        'aSIN' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'fee_reason' => 'FeeReason',
-        'fee_list' => 'FeeList',
-        'seller_sku' => 'SellerSKU',
-        'fn_sku' => 'FnSKU',
-        'fee_description' => 'FeeDescription',
-        'asin' => 'ASIN'
+        'amazonOrderId' => 'AmazonOrderId',
+        'feeReason' => 'FeeReason',
+        'feeList' => 'FeeList',
+        'sellerSKU' => 'SellerSKU',
+        'fnSKU' => 'FnSKU',
+        'feeDescription' => 'FeeDescription',
+        'aSIN' => 'ASIN'
     ];
 
     /**
@@ -130,13 +130,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'fee_reason' => 'setFeeReason',
-        'fee_list' => 'setFeeList',
-        'seller_sku' => 'setSellerSku',
-        'fn_sku' => 'setFnSku',
-        'fee_description' => 'setFeeDescription',
-        'asin' => 'setAsin'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'feeReason' => 'setFeeReason',
+        'feeList' => 'setFeeList',
+        'sellerSKU' => 'setSellerSKU',
+        'fnSKU' => 'setFnSKU',
+        'feeDescription' => 'setFeeDescription',
+        'aSIN' => 'setASIN'
     ];
 
     /**
@@ -145,13 +145,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'fee_reason' => 'getFeeReason',
-        'fee_list' => 'getFeeList',
-        'seller_sku' => 'getSellerSku',
-        'fn_sku' => 'getFnSku',
-        'fee_description' => 'getFeeDescription',
-        'asin' => 'getAsin'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'feeReason' => 'getFeeReason',
+        'feeList' => 'getFeeList',
+        'sellerSKU' => 'getSellerSKU',
+        'fnSKU' => 'getFnSKU',
+        'feeDescription' => 'getFeeDescription',
+        'aSIN' => 'getASIN'
     ];
 
     /**
@@ -214,13 +214,13 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['fee_reason'] = $data['fee_reason'] ?? null;
-        $this->container['fee_list'] = $data['fee_list'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['fn_sku'] = $data['fn_sku'] ?? null;
-        $this->container['fee_description'] = $data['fee_description'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['feeReason'] = $data['feeReason'] ?? null;
+        $this->container['feeList'] = $data['feeList'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['fnSKU'] = $data['fnSKU'] ?? null;
+        $this->container['feeDescription'] = $data['feeDescription'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
     }
 
     /**
@@ -248,169 +248,169 @@ class ServiceFeeEvent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets fee_reason
+     * Gets feeReason
      *
      * @return string|null
      */
     public function getFeeReason()
     {
-        return $this->container['fee_reason'];
+        return $this->container['feeReason'];
     }
 
     /**
-     * Sets fee_reason
+     * Sets feeReason
      *
-     * @param string|null $fee_reason A short description of the service fee reason.
+     * @param string|null $feeReason A short description of the service fee reason.
      *
      * @return self
      */
-    public function setFeeReason($fee_reason)
+    public function setFeeReason($feeReason)
     {
-        $this->container['fee_reason'] = $fee_reason;
+        $this->container['feeReason'] = $feeReason;
 
         return $this;
     }
 
     /**
-     * Gets fee_list
+     * Gets feeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getFeeList()
     {
-        return $this->container['fee_list'];
+        return $this->container['feeList'];
     }
 
     /**
-     * Sets fee_list
+     * Sets feeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $feeList A list of fee component information.
      *
      * @return self
      */
-    public function setFeeList($fee_list)
+    public function setFeeList($feeList)
     {
-        $this->container['fee_list'] = $fee_list;
+        $this->container['feeList'] = $feeList;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
+     * @param string|null $sellerSKU The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets fn_sku
+     * Gets fnSKU
      *
      * @return string|null
      */
-    public function getFnSku()
+    public function getFnSKU()
     {
-        return $this->container['fn_sku'];
+        return $this->container['fnSKU'];
     }
 
     /**
-     * Sets fn_sku
+     * Sets fnSKU
      *
-     * @param string|null $fn_sku A unique identifier assigned by Amazon to products stored in and fulfilled from an Amazon fulfillment center.
+     * @param string|null $fnSKU A unique identifier assigned by Amazon to products stored in and fulfilled from an Amazon fulfillment center.
      *
      * @return self
      */
-    public function setFnSku($fn_sku)
+    public function setFnSKU($fnSKU)
     {
-        $this->container['fn_sku'] = $fn_sku;
+        $this->container['fnSKU'] = $fnSKU;
 
         return $this;
     }
 
     /**
-     * Gets fee_description
+     * Gets feeDescription
      *
      * @return string|null
      */
     public function getFeeDescription()
     {
-        return $this->container['fee_description'];
+        return $this->container['feeDescription'];
     }
 
     /**
-     * Sets fee_description
+     * Sets feeDescription
      *
-     * @param string|null $fee_description A short description of the service fee event.
+     * @param string|null $feeDescription A short description of the service fee event.
      *
      * @return self
      */
-    public function setFeeDescription($fee_description)
+    public function setFeeDescription($feeDescription)
     {
-        $this->container['fee_description'] = $fee_description;
+        $this->container['feeDescription'] = $feeDescription;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }

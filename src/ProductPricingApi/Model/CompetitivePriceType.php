@@ -61,11 +61,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'competitive_price_id' => 'string',
+        'competitivePriceId' => 'string',
         'price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType',
         'condition' => 'string',
         'subcondition' => 'string',
-        'belongs_to_requester' => 'bool'
+        'belongsToRequester' => 'bool'
     ];
 
     /**
@@ -76,11 +76,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'competitive_price_id' => null,
+        'competitivePriceId' => null,
         'price' => null,
         'condition' => null,
         'subcondition' => null,
-        'belongs_to_requester' => null
+        'belongsToRequester' => null
     ];
 
     /**
@@ -110,11 +110,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'competitive_price_id' => 'CompetitivePriceId',
+        'competitivePriceId' => 'CompetitivePriceId',
         'price' => 'Price',
         'condition' => 'condition',
         'subcondition' => 'subcondition',
-        'belongs_to_requester' => 'belongsToRequester'
+        'belongsToRequester' => 'belongsToRequester'
     ];
 
     /**
@@ -123,11 +123,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'competitive_price_id' => 'setCompetitivePriceId',
+        'competitivePriceId' => 'setCompetitivePriceId',
         'price' => 'setPrice',
         'condition' => 'setCondition',
         'subcondition' => 'setSubcondition',
-        'belongs_to_requester' => 'setBelongsToRequester'
+        'belongsToRequester' => 'setBelongsToRequester'
     ];
 
     /**
@@ -136,11 +136,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'competitive_price_id' => 'getCompetitivePriceId',
+        'competitivePriceId' => 'getCompetitivePriceId',
         'price' => 'getPrice',
         'condition' => 'getCondition',
         'subcondition' => 'getSubcondition',
-        'belongs_to_requester' => 'getBelongsToRequester'
+        'belongsToRequester' => 'getBelongsToRequester'
     ];
 
     /**
@@ -203,11 +203,11 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['competitive_price_id'] = $data['competitive_price_id'] ?? null;
+        $this->container['competitivePriceId'] = $data['competitivePriceId'] ?? null;
         $this->container['price'] = $data['price'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['subcondition'] = $data['subcondition'] ?? null;
-        $this->container['belongs_to_requester'] = $data['belongs_to_requester'] ?? null;
+        $this->container['belongsToRequester'] = $data['belongsToRequester'] ?? null;
     }
 
     /**
@@ -219,8 +219,8 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['competitive_price_id'] === null) {
-            $invalidProperties[] = "'competitive_price_id' can't be null";
+        if ($this->container['competitivePriceId'] === null) {
+            $invalidProperties[] = "'competitivePriceId' can't be null";
         }
         if ($this->container['price'] === null) {
             $invalidProperties[] = "'price' can't be null";
@@ -241,25 +241,25 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets competitive_price_id
+     * Gets competitivePriceId
      *
      * @return string
      */
     public function getCompetitivePriceId()
     {
-        return $this->container['competitive_price_id'];
+        return $this->container['competitivePriceId'];
     }
 
     /**
-     * Sets competitive_price_id
+     * Sets competitivePriceId
      *
-     * @param string $competitive_price_id The pricing model for each price that is returned.  Possible values:  * 1 - New Buy Box Price. * 2 - Used Buy Box Price.
+     * @param string $competitivePriceId The pricing model for each price that is returned.  Possible values:  * 1 - New Buy Box Price. * 2 - Used Buy Box Price.
      *
      * @return self
      */
-    public function setCompetitivePriceId($competitive_price_id)
+    public function setCompetitivePriceId($competitivePriceId)
     {
-        $this->container['competitive_price_id'] = $competitive_price_id;
+        $this->container['competitivePriceId'] = $competitivePriceId;
 
         return $this;
     }
@@ -337,25 +337,25 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets belongs_to_requester
+     * Gets belongsToRequester
      *
      * @return bool|null
      */
     public function getBelongsToRequester()
     {
-        return $this->container['belongs_to_requester'];
+        return $this->container['belongsToRequester'];
     }
 
     /**
-     * Sets belongs_to_requester
+     * Sets belongsToRequester
      *
-     * @param bool|null $belongs_to_requester Indicates whether or not the pricing information is for an offer listing that belongs to the requester. The requester is the seller associated with the SellerId that was submitted with the request. Possible values are: true and false.
+     * @param bool|null $belongsToRequester Indicates whether or not the pricing information is for an offer listing that belongs to the requester. The requester is the seller associated with the SellerId that was submitted with the request. Possible values are: true and false.
      *
      * @return self
      */
-    public function setBelongsToRequester($belongs_to_requester)
+    public function setBelongsToRequester($belongsToRequester)
     {
-        $this->container['belongs_to_requester'] = $belongs_to_requester;
+        $this->container['belongsToRequester'] = $belongsToRequester;
 
         return $this;
     }

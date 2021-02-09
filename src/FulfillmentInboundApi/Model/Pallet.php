@@ -64,7 +64,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'dimensions' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Dimensions',
         'weight' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Weight',
-        'is_stacked' => 'bool'
+        'isStacked' => 'bool'
     ];
 
     /**
@@ -77,7 +77,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'dimensions' => null,
         'weight' => null,
-        'is_stacked' => null
+        'isStacked' => null
     ];
 
     /**
@@ -109,7 +109,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'dimensions' => 'Dimensions',
         'weight' => 'Weight',
-        'is_stacked' => 'IsStacked'
+        'isStacked' => 'IsStacked'
     ];
 
     /**
@@ -120,7 +120,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'dimensions' => 'setDimensions',
         'weight' => 'setWeight',
-        'is_stacked' => 'setIsStacked'
+        'isStacked' => 'setIsStacked'
     ];
 
     /**
@@ -131,7 +131,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'dimensions' => 'getDimensions',
         'weight' => 'getWeight',
-        'is_stacked' => 'getIsStacked'
+        'isStacked' => 'getIsStacked'
     ];
 
     /**
@@ -196,7 +196,7 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['dimensions'] = $data['dimensions'] ?? null;
         $this->container['weight'] = $data['weight'] ?? null;
-        $this->container['is_stacked'] = $data['is_stacked'] ?? null;
+        $this->container['isStacked'] = $data['isStacked'] ?? null;
     }
 
     /**
@@ -211,8 +211,8 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['dimensions'] === null) {
             $invalidProperties[] = "'dimensions' can't be null";
         }
-        if ($this->container['is_stacked'] === null) {
-            $invalidProperties[] = "'is_stacked' can't be null";
+        if ($this->container['isStacked'] === null) {
+            $invalidProperties[] = "'isStacked' can't be null";
         }
         return $invalidProperties;
     }
@@ -278,25 +278,25 @@ class Pallet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_stacked
+     * Gets isStacked
      *
      * @return bool
      */
     public function getIsStacked()
     {
-        return $this->container['is_stacked'];
+        return $this->container['isStacked'];
     }
 
     /**
-     * Sets is_stacked
+     * Sets isStacked
      *
-     * @param bool $is_stacked Indicates whether pallets will be stacked when carrier arrives for pick-up.
+     * @param bool $isStacked Indicates whether pallets will be stacked when carrier arrives for pick-up.
      *
      * @return self
      */
-    public function setIsStacked($is_stacked)
+    public function setIsStacked($isStacked)
     {
-        $this->container['is_stacked'] = $is_stacked;
+        $this->container['isStacked'] = $isStacked;
 
         return $this;
     }

@@ -62,11 +62,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
-        'feature_name' => 'string',
-        'is_eligible' => 'bool',
-        'ineligible_reasons' => 'string[]',
-        'sku_info' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku'
+        'marketplaceId' => 'string',
+        'featureName' => 'string',
+        'isEligible' => 'bool',
+        'ineligibleReasons' => 'string[]',
+        'skuInfo' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku'
     ];
 
     /**
@@ -77,11 +77,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
-        'feature_name' => null,
-        'is_eligible' => null,
-        'ineligible_reasons' => null,
-        'sku_info' => null
+        'marketplaceId' => null,
+        'featureName' => null,
+        'isEligible' => null,
+        'ineligibleReasons' => null,
+        'skuInfo' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
-        'feature_name' => 'featureName',
-        'is_eligible' => 'isEligible',
-        'ineligible_reasons' => 'ineligibleReasons',
-        'sku_info' => 'skuInfo'
+        'marketplaceId' => 'marketplaceId',
+        'featureName' => 'featureName',
+        'isEligible' => 'isEligible',
+        'ineligibleReasons' => 'ineligibleReasons',
+        'skuInfo' => 'skuInfo'
     ];
 
     /**
@@ -124,11 +124,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
-        'feature_name' => 'setFeatureName',
-        'is_eligible' => 'setIsEligible',
-        'ineligible_reasons' => 'setIneligibleReasons',
-        'sku_info' => 'setSkuInfo'
+        'marketplaceId' => 'setMarketplaceId',
+        'featureName' => 'setFeatureName',
+        'isEligible' => 'setIsEligible',
+        'ineligibleReasons' => 'setIneligibleReasons',
+        'skuInfo' => 'setSkuInfo'
     ];
 
     /**
@@ -137,11 +137,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
-        'feature_name' => 'getFeatureName',
-        'is_eligible' => 'getIsEligible',
-        'ineligible_reasons' => 'getIneligibleReasons',
-        'sku_info' => 'getSkuInfo'
+        'marketplaceId' => 'getMarketplaceId',
+        'featureName' => 'getFeatureName',
+        'isEligible' => 'getIsEligible',
+        'ineligibleReasons' => 'getIneligibleReasons',
+        'skuInfo' => 'getSkuInfo'
     ];
 
     /**
@@ -204,11 +204,11 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['feature_name'] = $data['feature_name'] ?? null;
-        $this->container['is_eligible'] = $data['is_eligible'] ?? null;
-        $this->container['ineligible_reasons'] = $data['ineligible_reasons'] ?? null;
-        $this->container['sku_info'] = $data['sku_info'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['featureName'] = $data['featureName'] ?? null;
+        $this->container['isEligible'] = $data['isEligible'] ?? null;
+        $this->container['ineligibleReasons'] = $data['ineligibleReasons'] ?? null;
+        $this->container['skuInfo'] = $data['skuInfo'] ?? null;
     }
 
     /**
@@ -220,14 +220,14 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['feature_name'] === null) {
-            $invalidProperties[] = "'feature_name' can't be null";
+        if ($this->container['featureName'] === null) {
+            $invalidProperties[] = "'featureName' can't be null";
         }
-        if ($this->container['is_eligible'] === null) {
-            $invalidProperties[] = "'is_eligible' can't be null";
+        if ($this->container['isEligible'] === null) {
+            $invalidProperties[] = "'isEligible' can't be null";
         }
         return $invalidProperties;
     }
@@ -245,121 +245,121 @@ class GetFeatureSkuResult implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id The requested marketplace.
+     * @param string $marketplaceId The requested marketplace.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets feature_name
+     * Gets featureName
      *
      * @return string
      */
     public function getFeatureName()
     {
-        return $this->container['feature_name'];
+        return $this->container['featureName'];
     }
 
     /**
-     * Sets feature_name
+     * Sets featureName
      *
-     * @param string $feature_name The name of the feature.
+     * @param string $featureName The name of the feature.
      *
      * @return self
      */
-    public function setFeatureName($feature_name)
+    public function setFeatureName($featureName)
     {
-        $this->container['feature_name'] = $feature_name;
+        $this->container['featureName'] = $featureName;
 
         return $this;
     }
 
     /**
-     * Gets is_eligible
+     * Gets isEligible
      *
      * @return bool
      */
     public function getIsEligible()
     {
-        return $this->container['is_eligible'];
+        return $this->container['isEligible'];
     }
 
     /**
-     * Sets is_eligible
+     * Sets isEligible
      *
-     * @param bool $is_eligible When true, the seller SKU is eligible for the requested feature.
+     * @param bool $isEligible When true, the seller SKU is eligible for the requested feature.
      *
      * @return self
      */
-    public function setIsEligible($is_eligible)
+    public function setIsEligible($isEligible)
     {
-        $this->container['is_eligible'] = $is_eligible;
+        $this->container['isEligible'] = $isEligible;
 
         return $this;
     }
 
     /**
-     * Gets ineligible_reasons
+     * Gets ineligibleReasons
      *
      * @return string[]|null
      */
     public function getIneligibleReasons()
     {
-        return $this->container['ineligible_reasons'];
+        return $this->container['ineligibleReasons'];
     }
 
     /**
-     * Sets ineligible_reasons
+     * Sets ineligibleReasons
      *
-     * @param string[]|null $ineligible_reasons A list of one or more reasons that the seller SKU is ineligibile for the feature.  Possible values: * MERCHANT_NOT_ENROLLED - The merchant isn't enrolled for the feature. * SKU_NOT_ELIGIBLE - The SKU doesn't reside in a warehouse that supports the feature. * INVALID_SKU - There is an issue with the SKU provided.
+     * @param string[]|null $ineligibleReasons A list of one or more reasons that the seller SKU is ineligibile for the feature.  Possible values: * MERCHANT_NOT_ENROLLED - The merchant isn't enrolled for the feature. * SKU_NOT_ELIGIBLE - The SKU doesn't reside in a warehouse that supports the feature. * INVALID_SKU - There is an issue with the SKU provided.
      *
      * @return self
      */
-    public function setIneligibleReasons($ineligible_reasons)
+    public function setIneligibleReasons($ineligibleReasons)
     {
-        $this->container['ineligible_reasons'] = $ineligible_reasons;
+        $this->container['ineligibleReasons'] = $ineligibleReasons;
 
         return $this;
     }
 
     /**
-     * Gets sku_info
+     * Gets skuInfo
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku|null
      */
     public function getSkuInfo()
     {
-        return $this->container['sku_info'];
+        return $this->container['skuInfo'];
     }
 
     /**
-     * Sets sku_info
+     * Sets skuInfo
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku|null $sku_info sku_info
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSku|null $skuInfo skuInfo
      *
      * @return self
      */
-    public function setSkuInfo($sku_info)
+    public function setSkuInfo($skuInfo)
     {
-        $this->container['sku_info'] = $sku_info;
+        $this->container['skuInfo'] = $skuInfo;
 
         return $this;
     }

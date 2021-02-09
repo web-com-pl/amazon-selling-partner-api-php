@@ -62,10 +62,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'adjustment_type' => 'string',
-        'posted_date' => '\DateTime',
-        'adjustment_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'adjustment_item_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentItem[]'
+        'adjustmentType' => 'string',
+        'postedDate' => '\DateTime',
+        'adjustmentAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'adjustmentItemList' => '\Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentItem[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'adjustment_type' => null,
-        'posted_date' => 'date-time',
-        'adjustment_amount' => null,
-        'adjustment_item_list' => null
+        'adjustmentType' => null,
+        'postedDate' => 'date-time',
+        'adjustmentAmount' => null,
+        'adjustmentItemList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'adjustment_type' => 'AdjustmentType',
-        'posted_date' => 'PostedDate',
-        'adjustment_amount' => 'AdjustmentAmount',
-        'adjustment_item_list' => 'AdjustmentItemList'
+        'adjustmentType' => 'AdjustmentType',
+        'postedDate' => 'PostedDate',
+        'adjustmentAmount' => 'AdjustmentAmount',
+        'adjustmentItemList' => 'AdjustmentItemList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'adjustment_type' => 'setAdjustmentType',
-        'posted_date' => 'setPostedDate',
-        'adjustment_amount' => 'setAdjustmentAmount',
-        'adjustment_item_list' => 'setAdjustmentItemList'
+        'adjustmentType' => 'setAdjustmentType',
+        'postedDate' => 'setPostedDate',
+        'adjustmentAmount' => 'setAdjustmentAmount',
+        'adjustmentItemList' => 'setAdjustmentItemList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'adjustment_type' => 'getAdjustmentType',
-        'posted_date' => 'getPostedDate',
-        'adjustment_amount' => 'getAdjustmentAmount',
-        'adjustment_item_list' => 'getAdjustmentItemList'
+        'adjustmentType' => 'getAdjustmentType',
+        'postedDate' => 'getPostedDate',
+        'adjustmentAmount' => 'getAdjustmentAmount',
+        'adjustmentItemList' => 'getAdjustmentItemList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['adjustment_type'] = $data['adjustment_type'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['adjustment_amount'] = $data['adjustment_amount'] ?? null;
-        $this->container['adjustment_item_list'] = $data['adjustment_item_list'] ?? null;
+        $this->container['adjustmentType'] = $data['adjustmentType'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['adjustmentAmount'] = $data['adjustmentAmount'] ?? null;
+        $this->container['adjustmentItemList'] = $data['adjustmentItemList'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class AdjustmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets adjustment_type
+     * Gets adjustmentType
      *
      * @return string|null
      */
     public function getAdjustmentType()
     {
-        return $this->container['adjustment_type'];
+        return $this->container['adjustmentType'];
     }
 
     /**
-     * Sets adjustment_type
+     * Sets adjustmentType
      *
-     * @param string|null $adjustment_type The type of adjustment.  Possible values:  * FBAInventoryReimbursement - An FBA inventory reimbursement to a seller's account. This occurs if a seller's inventory is damaged.  * ReserveEvent - A reserve event that is generated at the time of a settlement period closing. This occurs when some money from a seller's account is held back.  * PostageBilling - The amount paid by a seller for shipping labels.  * PostageRefund - The reimbursement of shipping labels purchased for orders that were canceled or refunded.  * LostOrDamagedReimbursement - An Amazon Easy Ship reimbursement to a seller's account for a package that we lost or damaged.  * CanceledButPickedUpReimbursement - An Amazon Easy Ship reimbursement to a seller's account. This occurs when a package is picked up and the order is subsequently canceled. This value is used only in the India marketplace.  * ReimbursementClawback - An Amazon Easy Ship reimbursement clawback from a seller's account. This occurs when a prior reimbursement is reversed. This value is used only in the India marketplace.  * SellerRewards - An award credited to a seller's account for their participation in an offer in the Seller Rewards program. Applies only to the India marketplace.
+     * @param string|null $adjustmentType The type of adjustment.  Possible values:  * FBAInventoryReimbursement - An FBA inventory reimbursement to a seller's account. This occurs if a seller's inventory is damaged.  * ReserveEvent - A reserve event that is generated at the time of a settlement period closing. This occurs when some money from a seller's account is held back.  * PostageBilling - The amount paid by a seller for shipping labels.  * PostageRefund - The reimbursement of shipping labels purchased for orders that were canceled or refunded.  * LostOrDamagedReimbursement - An Amazon Easy Ship reimbursement to a seller's account for a package that we lost or damaged.  * CanceledButPickedUpReimbursement - An Amazon Easy Ship reimbursement to a seller's account. This occurs when a package is picked up and the order is subsequently canceled. This value is used only in the India marketplace.  * ReimbursementClawback - An Amazon Easy Ship reimbursement clawback from a seller's account. This occurs when a prior reimbursement is reversed. This value is used only in the India marketplace.  * SellerRewards - An award credited to a seller's account for their participation in an offer in the Seller Rewards program. Applies only to the India marketplace.
      *
      * @return self
      */
-    public function setAdjustmentType($adjustment_type)
+    public function setAdjustmentType($adjustmentType)
     {
-        $this->container['adjustment_type'] = $adjustment_type;
+        $this->container['adjustmentType'] = $adjustmentType;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets adjustment_amount
+     * Gets adjustmentAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getAdjustmentAmount()
     {
-        return $this->container['adjustment_amount'];
+        return $this->container['adjustmentAmount'];
     }
 
     /**
-     * Sets adjustment_amount
+     * Sets adjustmentAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $adjustment_amount adjustment_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $adjustmentAmount adjustmentAmount
      *
      * @return self
      */
-    public function setAdjustmentAmount($adjustment_amount)
+    public function setAdjustmentAmount($adjustmentAmount)
     {
-        $this->container['adjustment_amount'] = $adjustment_amount;
+        $this->container['adjustmentAmount'] = $adjustmentAmount;
 
         return $this;
     }
 
     /**
-     * Gets adjustment_item_list
+     * Gets adjustmentItemList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentItem[]|null
      */
     public function getAdjustmentItemList()
     {
-        return $this->container['adjustment_item_list'];
+        return $this->container['adjustmentItemList'];
     }
 
     /**
-     * Sets adjustment_item_list
+     * Sets adjustmentItemList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentItem[]|null $adjustment_item_list A list of information about items in an adjustment to the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentItem[]|null $adjustmentItemList A list of information about items in an adjustment to the seller's account.
      *
      * @return self
      */
-    public function setAdjustmentItemList($adjustment_item_list)
+    public function setAdjustmentItemList($adjustmentItemList)
     {
-        $this->container['adjustment_item_list'] = $adjustment_item_list;
+        $this->container['adjustmentItemList'] = $adjustmentItemList;
 
         return $this;
     }

@@ -63,11 +63,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'interval' => 'string',
-        'unit_count' => 'int',
-        'order_item_count' => 'int',
-        'order_count' => 'int',
-        'average_unit_price' => '\Webcom\Amazon\Rest\SalesApi\Model\Money',
-        'total_sales' => '\Webcom\Amazon\Rest\SalesApi\Model\Money'
+        'unitCount' => 'int',
+        'orderItemCount' => 'int',
+        'orderCount' => 'int',
+        'averageUnitPrice' => '\Webcom\Amazon\Rest\SalesApi\Model\Money',
+        'totalSales' => '\Webcom\Amazon\Rest\SalesApi\Model\Money'
     ];
 
     /**
@@ -79,11 +79,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'interval' => null,
-        'unit_count' => null,
-        'order_item_count' => null,
-        'order_count' => null,
-        'average_unit_price' => null,
-        'total_sales' => null
+        'unitCount' => null,
+        'orderItemCount' => null,
+        'orderCount' => null,
+        'averageUnitPrice' => null,
+        'totalSales' => null
     ];
 
     /**
@@ -114,11 +114,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'interval' => 'interval',
-        'unit_count' => 'unitCount',
-        'order_item_count' => 'orderItemCount',
-        'order_count' => 'orderCount',
-        'average_unit_price' => 'averageUnitPrice',
-        'total_sales' => 'totalSales'
+        'unitCount' => 'unitCount',
+        'orderItemCount' => 'orderItemCount',
+        'orderCount' => 'orderCount',
+        'averageUnitPrice' => 'averageUnitPrice',
+        'totalSales' => 'totalSales'
     ];
 
     /**
@@ -128,11 +128,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'interval' => 'setInterval',
-        'unit_count' => 'setUnitCount',
-        'order_item_count' => 'setOrderItemCount',
-        'order_count' => 'setOrderCount',
-        'average_unit_price' => 'setAverageUnitPrice',
-        'total_sales' => 'setTotalSales'
+        'unitCount' => 'setUnitCount',
+        'orderItemCount' => 'setOrderItemCount',
+        'orderCount' => 'setOrderCount',
+        'averageUnitPrice' => 'setAverageUnitPrice',
+        'totalSales' => 'setTotalSales'
     ];
 
     /**
@@ -142,11 +142,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'interval' => 'getInterval',
-        'unit_count' => 'getUnitCount',
-        'order_item_count' => 'getOrderItemCount',
-        'order_count' => 'getOrderCount',
-        'average_unit_price' => 'getAverageUnitPrice',
-        'total_sales' => 'getTotalSales'
+        'unitCount' => 'getUnitCount',
+        'orderItemCount' => 'getOrderItemCount',
+        'orderCount' => 'getOrderCount',
+        'averageUnitPrice' => 'getAverageUnitPrice',
+        'totalSales' => 'getTotalSales'
     ];
 
     /**
@@ -210,11 +210,11 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->container['interval'] = $data['interval'] ?? null;
-        $this->container['unit_count'] = $data['unit_count'] ?? null;
-        $this->container['order_item_count'] = $data['order_item_count'] ?? null;
-        $this->container['order_count'] = $data['order_count'] ?? null;
-        $this->container['average_unit_price'] = $data['average_unit_price'] ?? null;
-        $this->container['total_sales'] = $data['total_sales'] ?? null;
+        $this->container['unitCount'] = $data['unitCount'] ?? null;
+        $this->container['orderItemCount'] = $data['orderItemCount'] ?? null;
+        $this->container['orderCount'] = $data['orderCount'] ?? null;
+        $this->container['averageUnitPrice'] = $data['averageUnitPrice'] ?? null;
+        $this->container['totalSales'] = $data['totalSales'] ?? null;
     }
 
     /**
@@ -229,20 +229,20 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
         if ($this->container['interval'] === null) {
             $invalidProperties[] = "'interval' can't be null";
         }
-        if ($this->container['unit_count'] === null) {
-            $invalidProperties[] = "'unit_count' can't be null";
+        if ($this->container['unitCount'] === null) {
+            $invalidProperties[] = "'unitCount' can't be null";
         }
-        if ($this->container['order_item_count'] === null) {
-            $invalidProperties[] = "'order_item_count' can't be null";
+        if ($this->container['orderItemCount'] === null) {
+            $invalidProperties[] = "'orderItemCount' can't be null";
         }
-        if ($this->container['order_count'] === null) {
-            $invalidProperties[] = "'order_count' can't be null";
+        if ($this->container['orderCount'] === null) {
+            $invalidProperties[] = "'orderCount' can't be null";
         }
-        if ($this->container['average_unit_price'] === null) {
-            $invalidProperties[] = "'average_unit_price' can't be null";
+        if ($this->container['averageUnitPrice'] === null) {
+            $invalidProperties[] = "'averageUnitPrice' can't be null";
         }
-        if ($this->container['total_sales'] === null) {
-            $invalidProperties[] = "'total_sales' can't be null";
+        if ($this->container['totalSales'] === null) {
+            $invalidProperties[] = "'totalSales' can't be null";
         }
         return $invalidProperties;
     }
@@ -284,121 +284,121 @@ class OrderMetricsInterval implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets unit_count
+     * Gets unitCount
      *
      * @return int
      */
     public function getUnitCount()
     {
-        return $this->container['unit_count'];
+        return $this->container['unitCount'];
     }
 
     /**
-     * Sets unit_count
+     * Sets unitCount
      *
-     * @param int $unit_count The number of units in orders based on the specified filters.
+     * @param int $unitCount The number of units in orders based on the specified filters.
      *
      * @return self
      */
-    public function setUnitCount($unit_count)
+    public function setUnitCount($unitCount)
     {
-        $this->container['unit_count'] = $unit_count;
+        $this->container['unitCount'] = $unitCount;
 
         return $this;
     }
 
     /**
-     * Gets order_item_count
+     * Gets orderItemCount
      *
      * @return int
      */
     public function getOrderItemCount()
     {
-        return $this->container['order_item_count'];
+        return $this->container['orderItemCount'];
     }
 
     /**
-     * Sets order_item_count
+     * Sets orderItemCount
      *
-     * @param int $order_item_count The number of order items based on the specified filters.
+     * @param int $orderItemCount The number of order items based on the specified filters.
      *
      * @return self
      */
-    public function setOrderItemCount($order_item_count)
+    public function setOrderItemCount($orderItemCount)
     {
-        $this->container['order_item_count'] = $order_item_count;
+        $this->container['orderItemCount'] = $orderItemCount;
 
         return $this;
     }
 
     /**
-     * Gets order_count
+     * Gets orderCount
      *
      * @return int
      */
     public function getOrderCount()
     {
-        return $this->container['order_count'];
+        return $this->container['orderCount'];
     }
 
     /**
-     * Sets order_count
+     * Sets orderCount
      *
-     * @param int $order_count The number of orders based on the specified filters.
+     * @param int $orderCount The number of orders based on the specified filters.
      *
      * @return self
      */
-    public function setOrderCount($order_count)
+    public function setOrderCount($orderCount)
     {
-        $this->container['order_count'] = $order_count;
+        $this->container['orderCount'] = $orderCount;
 
         return $this;
     }
 
     /**
-     * Gets average_unit_price
+     * Gets averageUnitPrice
      *
      * @return \Webcom\Amazon\Rest\SalesApi\Model\Money
      */
     public function getAverageUnitPrice()
     {
-        return $this->container['average_unit_price'];
+        return $this->container['averageUnitPrice'];
     }
 
     /**
-     * Sets average_unit_price
+     * Sets averageUnitPrice
      *
-     * @param \Webcom\Amazon\Rest\SalesApi\Model\Money $average_unit_price average_unit_price
+     * @param \Webcom\Amazon\Rest\SalesApi\Model\Money $averageUnitPrice averageUnitPrice
      *
      * @return self
      */
-    public function setAverageUnitPrice($average_unit_price)
+    public function setAverageUnitPrice($averageUnitPrice)
     {
-        $this->container['average_unit_price'] = $average_unit_price;
+        $this->container['averageUnitPrice'] = $averageUnitPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_sales
+     * Gets totalSales
      *
      * @return \Webcom\Amazon\Rest\SalesApi\Model\Money
      */
     public function getTotalSales()
     {
-        return $this->container['total_sales'];
+        return $this->container['totalSales'];
     }
 
     /**
-     * Sets total_sales
+     * Sets totalSales
      *
-     * @param \Webcom\Amazon\Rest\SalesApi\Model\Money $total_sales total_sales
+     * @param \Webcom\Amazon\Rest\SalesApi\Model\Money $totalSales totalSales
      *
      * @return self
      */
-    public function setTotalSales($total_sales)
+    public function setTotalSales($totalSales)
     {
-        $this->container['total_sales'] = $total_sales;
+        $this->container['totalSales'] = $totalSales;
 
         return $this;
     }

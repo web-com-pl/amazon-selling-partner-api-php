@@ -62,15 +62,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'posted_date' => '\DateTime',
-        'marketplace_id' => 'string',
-        'transaction_type' => 'string',
-        'base_expense' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_type_cgst' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_type_sgst' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_type_igst' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'total_expense' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'amazonOrderId' => 'string',
+        'postedDate' => '\DateTime',
+        'marketplaceId' => 'string',
+        'transactionType' => 'string',
+        'baseExpense' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxTypeCGST' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxTypeSGST' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxTypeIGST' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'totalExpense' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -81,15 +81,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'posted_date' => 'date-time',
-        'marketplace_id' => null,
-        'transaction_type' => null,
-        'base_expense' => null,
-        'tax_type_cgst' => null,
-        'tax_type_sgst' => null,
-        'tax_type_igst' => null,
-        'total_expense' => null
+        'amazonOrderId' => null,
+        'postedDate' => 'date-time',
+        'marketplaceId' => null,
+        'transactionType' => null,
+        'baseExpense' => null,
+        'taxTypeCGST' => null,
+        'taxTypeSGST' => null,
+        'taxTypeIGST' => null,
+        'totalExpense' => null
     ];
 
     /**
@@ -119,15 +119,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'posted_date' => 'PostedDate',
-        'marketplace_id' => 'MarketplaceId',
-        'transaction_type' => 'TransactionType',
-        'base_expense' => 'BaseExpense',
-        'tax_type_cgst' => 'TaxTypeCGST',
-        'tax_type_sgst' => 'TaxTypeSGST',
-        'tax_type_igst' => 'TaxTypeIGST',
-        'total_expense' => 'TotalExpense'
+        'amazonOrderId' => 'AmazonOrderId',
+        'postedDate' => 'PostedDate',
+        'marketplaceId' => 'MarketplaceId',
+        'transactionType' => 'TransactionType',
+        'baseExpense' => 'BaseExpense',
+        'taxTypeCGST' => 'TaxTypeCGST',
+        'taxTypeSGST' => 'TaxTypeSGST',
+        'taxTypeIGST' => 'TaxTypeIGST',
+        'totalExpense' => 'TotalExpense'
     ];
 
     /**
@@ -136,15 +136,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'posted_date' => 'setPostedDate',
-        'marketplace_id' => 'setMarketplaceId',
-        'transaction_type' => 'setTransactionType',
-        'base_expense' => 'setBaseExpense',
-        'tax_type_cgst' => 'setTaxTypeCgst',
-        'tax_type_sgst' => 'setTaxTypeSgst',
-        'tax_type_igst' => 'setTaxTypeIgst',
-        'total_expense' => 'setTotalExpense'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'postedDate' => 'setPostedDate',
+        'marketplaceId' => 'setMarketplaceId',
+        'transactionType' => 'setTransactionType',
+        'baseExpense' => 'setBaseExpense',
+        'taxTypeCGST' => 'setTaxTypeCGST',
+        'taxTypeSGST' => 'setTaxTypeSGST',
+        'taxTypeIGST' => 'setTaxTypeIGST',
+        'totalExpense' => 'setTotalExpense'
     ];
 
     /**
@@ -153,15 +153,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'posted_date' => 'getPostedDate',
-        'marketplace_id' => 'getMarketplaceId',
-        'transaction_type' => 'getTransactionType',
-        'base_expense' => 'getBaseExpense',
-        'tax_type_cgst' => 'getTaxTypeCgst',
-        'tax_type_sgst' => 'getTaxTypeSgst',
-        'tax_type_igst' => 'getTaxTypeIgst',
-        'total_expense' => 'getTotalExpense'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'postedDate' => 'getPostedDate',
+        'marketplaceId' => 'getMarketplaceId',
+        'transactionType' => 'getTransactionType',
+        'baseExpense' => 'getBaseExpense',
+        'taxTypeCGST' => 'getTaxTypeCGST',
+        'taxTypeSGST' => 'getTaxTypeSGST',
+        'taxTypeIGST' => 'getTaxTypeIGST',
+        'totalExpense' => 'getTotalExpense'
     ];
 
     /**
@@ -224,15 +224,15 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['transaction_type'] = $data['transaction_type'] ?? null;
-        $this->container['base_expense'] = $data['base_expense'] ?? null;
-        $this->container['tax_type_cgst'] = $data['tax_type_cgst'] ?? null;
-        $this->container['tax_type_sgst'] = $data['tax_type_sgst'] ?? null;
-        $this->container['tax_type_igst'] = $data['tax_type_igst'] ?? null;
-        $this->container['total_expense'] = $data['total_expense'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['transactionType'] = $data['transactionType'] ?? null;
+        $this->container['baseExpense'] = $data['baseExpense'] ?? null;
+        $this->container['taxTypeCGST'] = $data['taxTypeCGST'] ?? null;
+        $this->container['taxTypeSGST'] = $data['taxTypeSGST'] ?? null;
+        $this->container['taxTypeIGST'] = $data['taxTypeIGST'] ?? null;
+        $this->container['totalExpense'] = $data['totalExpense'] ?? null;
     }
 
     /**
@@ -244,14 +244,14 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['tax_type_cgst'] === null) {
-            $invalidProperties[] = "'tax_type_cgst' can't be null";
+        if ($this->container['taxTypeCGST'] === null) {
+            $invalidProperties[] = "'taxTypeCGST' can't be null";
         }
-        if ($this->container['tax_type_sgst'] === null) {
-            $invalidProperties[] = "'tax_type_sgst' can't be null";
+        if ($this->container['taxTypeSGST'] === null) {
+            $invalidProperties[] = "'taxTypeSGST' can't be null";
         }
-        if ($this->container['tax_type_igst'] === null) {
-            $invalidProperties[] = "'tax_type_igst' can't be null";
+        if ($this->container['taxTypeIGST'] === null) {
+            $invalidProperties[] = "'taxTypeIGST' can't be null";
         }
         return $invalidProperties;
     }
@@ -269,217 +269,217 @@ class AffordabilityExpenseEvent implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id An encrypted, Amazon-defined marketplace identifier.
+     * @param string|null $marketplaceId An encrypted, Amazon-defined marketplace identifier.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_type
+     * Gets transactionType
      *
      * @return string|null
      */
     public function getTransactionType()
     {
-        return $this->container['transaction_type'];
+        return $this->container['transactionType'];
     }
 
     /**
-     * Sets transaction_type
+     * Sets transactionType
      *
-     * @param string|null $transaction_type Indicates the type of transaction.   Possible values:  * Charge - For an affordability promotion expense.  * Refund - For an affordability promotion expense reversal.
+     * @param string|null $transactionType Indicates the type of transaction.   Possible values:  * Charge - For an affordability promotion expense.  * Refund - For an affordability promotion expense reversal.
      *
      * @return self
      */
-    public function setTransactionType($transaction_type)
+    public function setTransactionType($transactionType)
     {
-        $this->container['transaction_type'] = $transaction_type;
+        $this->container['transactionType'] = $transactionType;
 
         return $this;
     }
 
     /**
-     * Gets base_expense
+     * Gets baseExpense
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getBaseExpense()
     {
-        return $this->container['base_expense'];
+        return $this->container['baseExpense'];
     }
 
     /**
-     * Sets base_expense
+     * Sets baseExpense
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $base_expense base_expense
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $baseExpense baseExpense
      *
      * @return self
      */
-    public function setBaseExpense($base_expense)
+    public function setBaseExpense($baseExpense)
     {
-        $this->container['base_expense'] = $base_expense;
+        $this->container['baseExpense'] = $baseExpense;
 
         return $this;
     }
 
     /**
-     * Gets tax_type_cgst
+     * Gets taxTypeCGST
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency
      */
-    public function getTaxTypeCgst()
+    public function getTaxTypeCGST()
     {
-        return $this->container['tax_type_cgst'];
+        return $this->container['taxTypeCGST'];
     }
 
     /**
-     * Sets tax_type_cgst
+     * Sets taxTypeCGST
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $tax_type_cgst tax_type_cgst
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $taxTypeCGST taxTypeCGST
      *
      * @return self
      */
-    public function setTaxTypeCgst($tax_type_cgst)
+    public function setTaxTypeCGST($taxTypeCGST)
     {
-        $this->container['tax_type_cgst'] = $tax_type_cgst;
+        $this->container['taxTypeCGST'] = $taxTypeCGST;
 
         return $this;
     }
 
     /**
-     * Gets tax_type_sgst
+     * Gets taxTypeSGST
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency
      */
-    public function getTaxTypeSgst()
+    public function getTaxTypeSGST()
     {
-        return $this->container['tax_type_sgst'];
+        return $this->container['taxTypeSGST'];
     }
 
     /**
-     * Sets tax_type_sgst
+     * Sets taxTypeSGST
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $tax_type_sgst tax_type_sgst
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $taxTypeSGST taxTypeSGST
      *
      * @return self
      */
-    public function setTaxTypeSgst($tax_type_sgst)
+    public function setTaxTypeSGST($taxTypeSGST)
     {
-        $this->container['tax_type_sgst'] = $tax_type_sgst;
+        $this->container['taxTypeSGST'] = $taxTypeSGST;
 
         return $this;
     }
 
     /**
-     * Gets tax_type_igst
+     * Gets taxTypeIGST
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency
      */
-    public function getTaxTypeIgst()
+    public function getTaxTypeIGST()
     {
-        return $this->container['tax_type_igst'];
+        return $this->container['taxTypeIGST'];
     }
 
     /**
-     * Sets tax_type_igst
+     * Sets taxTypeIGST
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $tax_type_igst tax_type_igst
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency $taxTypeIGST taxTypeIGST
      *
      * @return self
      */
-    public function setTaxTypeIgst($tax_type_igst)
+    public function setTaxTypeIGST($taxTypeIGST)
     {
-        $this->container['tax_type_igst'] = $tax_type_igst;
+        $this->container['taxTypeIGST'] = $taxTypeIGST;
 
         return $this;
     }
 
     /**
-     * Gets total_expense
+     * Gets totalExpense
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTotalExpense()
     {
-        return $this->container['total_expense'];
+        return $this->container['totalExpense'];
     }
 
     /**
-     * Sets total_expense
+     * Sets totalExpense
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $total_expense total_expense
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $totalExpense totalExpense
      *
      * @return self
      */
-    public function setTotalExpense($total_expense)
+    public function setTotalExpense($totalExpense)
     {
-        $this->container['total_expense'] = $total_expense;
+        $this->container['totalExpense'] = $totalExpense;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tracking_id' => 'string'
+        'trackingId' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tracking_id' => null
+        'trackingId' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tracking_id' => 'TrackingId'
+        'trackingId' => 'TrackingId'
     ];
 
     /**
@@ -112,7 +112,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tracking_id' => 'setTrackingId'
+        'trackingId' => 'setTrackingId'
     ];
 
     /**
@@ -121,7 +121,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tracking_id' => 'getTrackingId'
+        'trackingId' => 'getTrackingId'
     ];
 
     /**
@@ -184,7 +184,7 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tracking_id'] = $data['tracking_id'] ?? null;
+        $this->container['trackingId'] = $data['trackingId'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['tracking_id'] === null) {
-            $invalidProperties[] = "'tracking_id' can't be null";
+        if ($this->container['trackingId'] === null) {
+            $invalidProperties[] = "'trackingId' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class NonPartneredSmallParcelPackageInput implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets tracking_id
+     * Gets trackingId
      *
      * @return string
      */
     public function getTrackingId()
     {
-        return $this->container['tracking_id'];
+        return $this->container['trackingId'];
     }
 
     /**
-     * Sets tracking_id
+     * Sets trackingId
      *
-     * @param string $tracking_id The tracking number of the package, provided by the carrier.
+     * @param string $trackingId The tracking number of the package, provided by the carrier.
      *
      * @return self
      */
-    public function setTrackingId($tracking_id)
+    public function setTrackingId($trackingId)
     {
-        $this->container['tracking_id'] = $tracking_id;
+        $this->container['trackingId'] = $trackingId;
 
         return $this;
     }

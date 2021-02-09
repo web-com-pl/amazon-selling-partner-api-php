@@ -62,8 +62,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'available_carrier_will_pick_up_options' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableCarrierWillPickUpOption[]',
-        'available_delivery_experience_options' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableDeliveryExperienceOption[]'
+        'availableCarrierWillPickUpOptions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableCarrierWillPickUpOption[]',
+        'availableDeliveryExperienceOptions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableDeliveryExperienceOption[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'available_carrier_will_pick_up_options' => null,
-        'available_delivery_experience_options' => null
+        'availableCarrierWillPickUpOptions' => null,
+        'availableDeliveryExperienceOptions' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'available_carrier_will_pick_up_options' => 'AvailableCarrierWillPickUpOptions',
-        'available_delivery_experience_options' => 'AvailableDeliveryExperienceOptions'
+        'availableCarrierWillPickUpOptions' => 'AvailableCarrierWillPickUpOptions',
+        'availableDeliveryExperienceOptions' => 'AvailableDeliveryExperienceOptions'
     ];
 
     /**
@@ -115,8 +115,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'available_carrier_will_pick_up_options' => 'setAvailableCarrierWillPickUpOptions',
-        'available_delivery_experience_options' => 'setAvailableDeliveryExperienceOptions'
+        'availableCarrierWillPickUpOptions' => 'setAvailableCarrierWillPickUpOptions',
+        'availableDeliveryExperienceOptions' => 'setAvailableDeliveryExperienceOptions'
     ];
 
     /**
@@ -125,8 +125,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'available_carrier_will_pick_up_options' => 'getAvailableCarrierWillPickUpOptions',
-        'available_delivery_experience_options' => 'getAvailableDeliveryExperienceOptions'
+        'availableCarrierWillPickUpOptions' => 'getAvailableCarrierWillPickUpOptions',
+        'availableDeliveryExperienceOptions' => 'getAvailableDeliveryExperienceOptions'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['available_carrier_will_pick_up_options'] = $data['available_carrier_will_pick_up_options'] ?? null;
-        $this->container['available_delivery_experience_options'] = $data['available_delivery_experience_options'] ?? null;
+        $this->container['availableCarrierWillPickUpOptions'] = $data['availableCarrierWillPickUpOptions'] ?? null;
+        $this->container['availableDeliveryExperienceOptions'] = $data['availableDeliveryExperienceOptions'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
-        if ($this->container['available_carrier_will_pick_up_options'] === null) {
-            $invalidProperties[] = "'available_carrier_will_pick_up_options' can't be null";
+        if ($this->container['availableCarrierWillPickUpOptions'] === null) {
+            $invalidProperties[] = "'availableCarrierWillPickUpOptions' can't be null";
         }
-        if ($this->container['available_delivery_experience_options'] === null) {
-            $invalidProperties[] = "'available_delivery_experience_options' can't be null";
+        if ($this->container['availableDeliveryExperienceOptions'] === null) {
+            $invalidProperties[] = "'availableDeliveryExperienceOptions' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class AvailableShippingServiceOptions implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets available_carrier_will_pick_up_options
+     * Gets availableCarrierWillPickUpOptions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableCarrierWillPickUpOption[]
      */
     public function getAvailableCarrierWillPickUpOptions()
     {
-        return $this->container['available_carrier_will_pick_up_options'];
+        return $this->container['availableCarrierWillPickUpOptions'];
     }
 
     /**
-     * Sets available_carrier_will_pick_up_options
+     * Sets availableCarrierWillPickUpOptions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableCarrierWillPickUpOption[] $available_carrier_will_pick_up_options List of available carrier pickup options.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableCarrierWillPickUpOption[] $availableCarrierWillPickUpOptions List of available carrier pickup options.
      *
      * @return self
      */
-    public function setAvailableCarrierWillPickUpOptions($available_carrier_will_pick_up_options)
+    public function setAvailableCarrierWillPickUpOptions($availableCarrierWillPickUpOptions)
     {
-        $this->container['available_carrier_will_pick_up_options'] = $available_carrier_will_pick_up_options;
+        $this->container['availableCarrierWillPickUpOptions'] = $availableCarrierWillPickUpOptions;
 
         return $this;
     }
 
     /**
-     * Gets available_delivery_experience_options
+     * Gets availableDeliveryExperienceOptions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableDeliveryExperienceOption[]
      */
     public function getAvailableDeliveryExperienceOptions()
     {
-        return $this->container['available_delivery_experience_options'];
+        return $this->container['availableDeliveryExperienceOptions'];
     }
 
     /**
-     * Sets available_delivery_experience_options
+     * Sets availableDeliveryExperienceOptions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableDeliveryExperienceOption[] $available_delivery_experience_options List of available delivery experience options.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableDeliveryExperienceOption[] $availableDeliveryExperienceOptions List of available delivery experience options.
      *
      * @return self
      */
-    public function setAvailableDeliveryExperienceOptions($available_delivery_experience_options)
+    public function setAvailableDeliveryExperienceOptions($availableDeliveryExperienceOptions)
     {
-        $this->container['available_delivery_experience_options'] = $available_delivery_experience_options;
+        $this->container['availableDeliveryExperienceOptions'] = $availableDeliveryExperienceOptions;
 
         return $this;
     }

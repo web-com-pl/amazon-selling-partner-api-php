@@ -62,9 +62,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'order_items' => '\Webcom\Amazon\Rest\OrdersApi\Model\OrderItem[]',
-        'next_token' => 'string',
-        'amazon_order_id' => 'string'
+        'orderItems' => '\Webcom\Amazon\Rest\OrdersApi\Model\OrderItem[]',
+        'nextToken' => 'string',
+        'amazonOrderId' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'order_items' => null,
-        'next_token' => null,
-        'amazon_order_id' => null
+        'orderItems' => null,
+        'nextToken' => null,
+        'amazonOrderId' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_items' => 'OrderItems',
-        'next_token' => 'NextToken',
-        'amazon_order_id' => 'AmazonOrderId'
+        'orderItems' => 'OrderItems',
+        'nextToken' => 'NextToken',
+        'amazonOrderId' => 'AmazonOrderId'
     ];
 
     /**
@@ -118,9 +118,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'order_items' => 'setOrderItems',
-        'next_token' => 'setNextToken',
-        'amazon_order_id' => 'setAmazonOrderId'
+        'orderItems' => 'setOrderItems',
+        'nextToken' => 'setNextToken',
+        'amazonOrderId' => 'setAmazonOrderId'
     ];
 
     /**
@@ -129,9 +129,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'order_items' => 'getOrderItems',
-        'next_token' => 'getNextToken',
-        'amazon_order_id' => 'getAmazonOrderId'
+        'orderItems' => 'getOrderItems',
+        'nextToken' => 'getNextToken',
+        'amazonOrderId' => 'getAmazonOrderId'
     ];
 
     /**
@@ -194,9 +194,9 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_items'] = $data['order_items'] ?? null;
-        $this->container['next_token'] = $data['next_token'] ?? null;
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
+        $this->container['orderItems'] = $data['orderItems'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
     }
 
     /**
@@ -208,11 +208,11 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['order_items'] === null) {
-            $invalidProperties[] = "'order_items' can't be null";
+        if ($this->container['orderItems'] === null) {
+            $invalidProperties[] = "'orderItems' can't be null";
         }
-        if ($this->container['amazon_order_id'] === null) {
-            $invalidProperties[] = "'amazon_order_id' can't be null";
+        if ($this->container['amazonOrderId'] === null) {
+            $invalidProperties[] = "'amazonOrderId' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +230,73 @@ class OrderItemsList implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets order_items
+     * Gets orderItems
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\OrderItem[]
      */
     public function getOrderItems()
     {
-        return $this->container['order_items'];
+        return $this->container['orderItems'];
     }
 
     /**
-     * Sets order_items
+     * Sets orderItems
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\OrderItem[] $order_items A list of order items.
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\OrderItem[] $orderItems A list of order items.
      *
      * @return self
      */
-    public function setOrderItems($order_items)
+    public function setOrderItems($orderItems)
     {
-        $this->container['order_items'] = $order_items;
+        $this->container['orderItems'] = $orderItems;
 
         return $this;
     }
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string $amazon_order_id An Amazon-defined order identifier, in 3-7-7 format.
+     * @param string $amazonOrderId An Amazon-defined order identifier, in 3-7-7 format.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }

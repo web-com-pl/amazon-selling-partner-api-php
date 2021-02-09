@@ -63,8 +63,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'condition' => 'string',
-        'fulfillment_channel' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\FulfillmentChannelType',
-        'offer_count' => 'int'
+        'fulfillmentChannel' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\FulfillmentChannelType',
+        'offerCount' => 'int'
     ];
 
     /**
@@ -76,8 +76,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'condition' => null,
-        'fulfillment_channel' => null,
-        'offer_count' => 'int32'
+        'fulfillmentChannel' => null,
+        'offerCount' => 'int32'
     ];
 
     /**
@@ -108,8 +108,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'condition' => 'condition',
-        'fulfillment_channel' => 'fulfillmentChannel',
-        'offer_count' => 'OfferCount'
+        'fulfillmentChannel' => 'fulfillmentChannel',
+        'offerCount' => 'OfferCount'
     ];
 
     /**
@@ -119,8 +119,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'condition' => 'setCondition',
-        'fulfillment_channel' => 'setFulfillmentChannel',
-        'offer_count' => 'setOfferCount'
+        'fulfillmentChannel' => 'setFulfillmentChannel',
+        'offerCount' => 'setOfferCount'
     ];
 
     /**
@@ -130,8 +130,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'condition' => 'getCondition',
-        'fulfillment_channel' => 'getFulfillmentChannel',
-        'offer_count' => 'getOfferCount'
+        'fulfillmentChannel' => 'getFulfillmentChannel',
+        'offerCount' => 'getOfferCount'
     ];
 
     /**
@@ -195,8 +195,8 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['condition'] = $data['condition'] ?? null;
-        $this->container['fulfillment_channel'] = $data['fulfillment_channel'] ?? null;
-        $this->container['offer_count'] = $data['offer_count'] ?? null;
+        $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['offerCount'] = $data['offerCount'] ?? null;
     }
 
     /**
@@ -248,49 +248,49 @@ class OfferCountType implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets fulfillment_channel
+     * Gets fulfillmentChannel
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\FulfillmentChannelType|null
      */
     public function getFulfillmentChannel()
     {
-        return $this->container['fulfillment_channel'];
+        return $this->container['fulfillmentChannel'];
     }
 
     /**
-     * Sets fulfillment_channel
+     * Sets fulfillmentChannel
      *
-     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\FulfillmentChannelType|null $fulfillment_channel fulfillment_channel
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\FulfillmentChannelType|null $fulfillmentChannel fulfillmentChannel
      *
      * @return self
      */
-    public function setFulfillmentChannel($fulfillment_channel)
+    public function setFulfillmentChannel($fulfillmentChannel)
     {
-        $this->container['fulfillment_channel'] = $fulfillment_channel;
+        $this->container['fulfillmentChannel'] = $fulfillmentChannel;
 
         return $this;
     }
 
     /**
-     * Gets offer_count
+     * Gets offerCount
      *
      * @return int|null
      */
     public function getOfferCount()
     {
-        return $this->container['offer_count'];
+        return $this->container['offerCount'];
     }
 
     /**
-     * Sets offer_count
+     * Sets offerCount
      *
-     * @param int|null $offer_count The number of offers in a fulfillment channel that meet a specific condition.
+     * @param int|null $offerCount The number of offers in a fulfillment channel that meet a specific condition.
      *
      * @return self
      */
-    public function setOfferCount($offer_count)
+    public function setOfferCount($offerCount)
     {
-        $this->container['offer_count'] = $offer_count;
+        $this->container['offerCount'] = $offerCount;
 
         return $this;
     }

@@ -62,14 +62,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'removal_shipment_item_id' => 'string',
-        'tax_collection_model' => 'string',
-        'fulfillment_network_sku' => 'string',
+        'removalShipmentItemId' => 'string',
+        'taxCollectionModel' => 'string',
+        'fulfillmentNetworkSKU' => 'string',
         'quantity' => 'int',
         'revenue' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'fee_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'tax_withheld' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'feeAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'taxWithheld' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -80,14 +80,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'removal_shipment_item_id' => null,
-        'tax_collection_model' => null,
-        'fulfillment_network_sku' => null,
+        'removalShipmentItemId' => null,
+        'taxCollectionModel' => null,
+        'fulfillmentNetworkSKU' => null,
         'quantity' => 'int32',
         'revenue' => null,
-        'fee_amount' => null,
-        'tax_amount' => null,
-        'tax_withheld' => null
+        'feeAmount' => null,
+        'taxAmount' => null,
+        'taxWithheld' => null
     ];
 
     /**
@@ -117,14 +117,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'removal_shipment_item_id' => 'RemovalShipmentItemId',
-        'tax_collection_model' => 'TaxCollectionModel',
-        'fulfillment_network_sku' => 'FulfillmentNetworkSKU',
+        'removalShipmentItemId' => 'RemovalShipmentItemId',
+        'taxCollectionModel' => 'TaxCollectionModel',
+        'fulfillmentNetworkSKU' => 'FulfillmentNetworkSKU',
         'quantity' => 'Quantity',
         'revenue' => 'Revenue',
-        'fee_amount' => 'FeeAmount',
-        'tax_amount' => 'TaxAmount',
-        'tax_withheld' => 'TaxWithheld'
+        'feeAmount' => 'FeeAmount',
+        'taxAmount' => 'TaxAmount',
+        'taxWithheld' => 'TaxWithheld'
     ];
 
     /**
@@ -133,14 +133,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'removal_shipment_item_id' => 'setRemovalShipmentItemId',
-        'tax_collection_model' => 'setTaxCollectionModel',
-        'fulfillment_network_sku' => 'setFulfillmentNetworkSku',
+        'removalShipmentItemId' => 'setRemovalShipmentItemId',
+        'taxCollectionModel' => 'setTaxCollectionModel',
+        'fulfillmentNetworkSKU' => 'setFulfillmentNetworkSKU',
         'quantity' => 'setQuantity',
         'revenue' => 'setRevenue',
-        'fee_amount' => 'setFeeAmount',
-        'tax_amount' => 'setTaxAmount',
-        'tax_withheld' => 'setTaxWithheld'
+        'feeAmount' => 'setFeeAmount',
+        'taxAmount' => 'setTaxAmount',
+        'taxWithheld' => 'setTaxWithheld'
     ];
 
     /**
@@ -149,14 +149,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'removal_shipment_item_id' => 'getRemovalShipmentItemId',
-        'tax_collection_model' => 'getTaxCollectionModel',
-        'fulfillment_network_sku' => 'getFulfillmentNetworkSku',
+        'removalShipmentItemId' => 'getRemovalShipmentItemId',
+        'taxCollectionModel' => 'getTaxCollectionModel',
+        'fulfillmentNetworkSKU' => 'getFulfillmentNetworkSKU',
         'quantity' => 'getQuantity',
         'revenue' => 'getRevenue',
-        'fee_amount' => 'getFeeAmount',
-        'tax_amount' => 'getTaxAmount',
-        'tax_withheld' => 'getTaxWithheld'
+        'feeAmount' => 'getFeeAmount',
+        'taxAmount' => 'getTaxAmount',
+        'taxWithheld' => 'getTaxWithheld'
     ];
 
     /**
@@ -219,14 +219,14 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['removal_shipment_item_id'] = $data['removal_shipment_item_id'] ?? null;
-        $this->container['tax_collection_model'] = $data['tax_collection_model'] ?? null;
-        $this->container['fulfillment_network_sku'] = $data['fulfillment_network_sku'] ?? null;
+        $this->container['removalShipmentItemId'] = $data['removalShipmentItemId'] ?? null;
+        $this->container['taxCollectionModel'] = $data['taxCollectionModel'] ?? null;
+        $this->container['fulfillmentNetworkSKU'] = $data['fulfillmentNetworkSKU'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
         $this->container['revenue'] = $data['revenue'] ?? null;
-        $this->container['fee_amount'] = $data['fee_amount'] ?? null;
-        $this->container['tax_amount'] = $data['tax_amount'] ?? null;
-        $this->container['tax_withheld'] = $data['tax_withheld'] ?? null;
+        $this->container['feeAmount'] = $data['feeAmount'] ?? null;
+        $this->container['taxAmount'] = $data['taxAmount'] ?? null;
+        $this->container['taxWithheld'] = $data['taxWithheld'] ?? null;
     }
 
     /**
@@ -254,73 +254,73 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets removal_shipment_item_id
+     * Gets removalShipmentItemId
      *
      * @return string|null
      */
     public function getRemovalShipmentItemId()
     {
-        return $this->container['removal_shipment_item_id'];
+        return $this->container['removalShipmentItemId'];
     }
 
     /**
-     * Sets removal_shipment_item_id
+     * Sets removalShipmentItemId
      *
-     * @param string|null $removal_shipment_item_id An identifier for an item in a removal shipment.
+     * @param string|null $removalShipmentItemId An identifier for an item in a removal shipment.
      *
      * @return self
      */
-    public function setRemovalShipmentItemId($removal_shipment_item_id)
+    public function setRemovalShipmentItemId($removalShipmentItemId)
     {
-        $this->container['removal_shipment_item_id'] = $removal_shipment_item_id;
+        $this->container['removalShipmentItemId'] = $removalShipmentItemId;
 
         return $this;
     }
 
     /**
-     * Gets tax_collection_model
+     * Gets taxCollectionModel
      *
      * @return string|null
      */
     public function getTaxCollectionModel()
     {
-        return $this->container['tax_collection_model'];
+        return $this->container['taxCollectionModel'];
     }
 
     /**
-     * Sets tax_collection_model
+     * Sets taxCollectionModel
      *
-     * @param string|null $tax_collection_model The tax collection model applied to the item.  Possible values:  * MarketplaceFacilitator - Tax is withheld and remitted to the taxing authority by Amazon on behalf of the seller.  * Standard - Tax is paid to the seller and not remitted to the taxing authority by Amazon.
+     * @param string|null $taxCollectionModel The tax collection model applied to the item.  Possible values:  * MarketplaceFacilitator - Tax is withheld and remitted to the taxing authority by Amazon on behalf of the seller.  * Standard - Tax is paid to the seller and not remitted to the taxing authority by Amazon.
      *
      * @return self
      */
-    public function setTaxCollectionModel($tax_collection_model)
+    public function setTaxCollectionModel($taxCollectionModel)
     {
-        $this->container['tax_collection_model'] = $tax_collection_model;
+        $this->container['taxCollectionModel'] = $taxCollectionModel;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_network_sku
+     * Gets fulfillmentNetworkSKU
      *
      * @return string|null
      */
-    public function getFulfillmentNetworkSku()
+    public function getFulfillmentNetworkSKU()
     {
-        return $this->container['fulfillment_network_sku'];
+        return $this->container['fulfillmentNetworkSKU'];
     }
 
     /**
-     * Sets fulfillment_network_sku
+     * Sets fulfillmentNetworkSKU
      *
-     * @param string|null $fulfillment_network_sku The Amazon fulfillment network SKU for the item.
+     * @param string|null $fulfillmentNetworkSKU The Amazon fulfillment network SKU for the item.
      *
      * @return self
      */
-    public function setFulfillmentNetworkSku($fulfillment_network_sku)
+    public function setFulfillmentNetworkSKU($fulfillmentNetworkSKU)
     {
-        $this->container['fulfillment_network_sku'] = $fulfillment_network_sku;
+        $this->container['fulfillmentNetworkSKU'] = $fulfillmentNetworkSKU;
 
         return $this;
     }
@@ -374,73 +374,73 @@ class RemovalShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets fee_amount
+     * Gets feeAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getFeeAmount()
     {
-        return $this->container['fee_amount'];
+        return $this->container['feeAmount'];
     }
 
     /**
-     * Sets fee_amount
+     * Sets feeAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $fee_amount fee_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $feeAmount feeAmount
      *
      * @return self
      */
-    public function setFeeAmount($fee_amount)
+    public function setFeeAmount($feeAmount)
     {
-        $this->container['fee_amount'] = $fee_amount;
+        $this->container['feeAmount'] = $feeAmount;
 
         return $this;
     }
 
     /**
-     * Gets tax_amount
+     * Gets taxAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxAmount()
     {
-        return $this->container['tax_amount'];
+        return $this->container['taxAmount'];
     }
 
     /**
-     * Sets tax_amount
+     * Sets taxAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_amount tax_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxAmount taxAmount
      *
      * @return self
      */
-    public function setTaxAmount($tax_amount)
+    public function setTaxAmount($taxAmount)
     {
-        $this->container['tax_amount'] = $tax_amount;
+        $this->container['taxAmount'] = $taxAmount;
 
         return $this;
     }
 
     /**
-     * Gets tax_withheld
+     * Gets taxWithheld
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTaxWithheld()
     {
-        return $this->container['tax_withheld'];
+        return $this->container['taxWithheld'];
     }
 
     /**
-     * Sets tax_withheld
+     * Sets taxWithheld
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $tax_withheld tax_withheld
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $taxWithheld taxWithheld
      *
      * @return self
      */
-    public function setTaxWithheld($tax_withheld)
+    public function setTaxWithheld($taxWithheld)
     {
-        $this->container['tax_withheld'] = $tax_withheld;
+        $this->container['taxWithheld'] = $taxWithheld;
 
         return $this;
     }

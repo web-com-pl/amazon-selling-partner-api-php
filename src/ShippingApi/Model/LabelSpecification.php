@@ -62,8 +62,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label_format' => 'string',
-        'label_stock_size' => 'string'
+        'labelFormat' => 'string',
+        'labelStockSize' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'label_format' => null,
-        'label_stock_size' => null
+        'labelFormat' => null,
+        'labelStockSize' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'label_format' => 'labelFormat',
-        'label_stock_size' => 'labelStockSize'
+        'labelFormat' => 'labelFormat',
+        'labelStockSize' => 'labelStockSize'
     ];
 
     /**
@@ -115,8 +115,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'label_format' => 'setLabelFormat',
-        'label_stock_size' => 'setLabelStockSize'
+        'labelFormat' => 'setLabelFormat',
+        'labelStockSize' => 'setLabelStockSize'
     ];
 
     /**
@@ -125,8 +125,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'label_format' => 'getLabelFormat',
-        'label_stock_size' => 'getLabelStockSize'
+        'labelFormat' => 'getLabelFormat',
+        'labelStockSize' => 'getLabelStockSize'
     ];
 
     /**
@@ -215,8 +215,8 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['label_format'] = $data['label_format'] ?? null;
-        $this->container['label_stock_size'] = $data['label_stock_size'] ?? null;
+        $this->container['labelFormat'] = $data['labelFormat'] ?? null;
+        $this->container['labelStockSize'] = $data['labelStockSize'] ?? null;
     }
 
     /**
@@ -228,26 +228,26 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['label_format'] === null) {
-            $invalidProperties[] = "'label_format' can't be null";
+        if ($this->container['labelFormat'] === null) {
+            $invalidProperties[] = "'labelFormat' can't be null";
         }
         $allowedValues = $this->getLabelFormatAllowableValues();
-        if (!is_null($this->container['label_format']) && !in_array($this->container['label_format'], $allowedValues, true)) {
+        if (!is_null($this->container['labelFormat']) && !in_array($this->container['labelFormat'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'label_format', must be one of '%s'",
-                $this->container['label_format'],
+                "invalid value '%s' for 'labelFormat', must be one of '%s'",
+                $this->container['labelFormat'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['label_stock_size'] === null) {
-            $invalidProperties[] = "'label_stock_size' can't be null";
+        if ($this->container['labelStockSize'] === null) {
+            $invalidProperties[] = "'labelStockSize' can't be null";
         }
         $allowedValues = $this->getLabelStockSizeAllowableValues();
-        if (!is_null($this->container['label_stock_size']) && !in_array($this->container['label_stock_size'], $allowedValues, true)) {
+        if (!is_null($this->container['labelStockSize']) && !in_array($this->container['labelStockSize'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'label_stock_size', must be one of '%s'",
-                $this->container['label_stock_size'],
+                "invalid value '%s' for 'labelStockSize', must be one of '%s'",
+                $this->container['labelStockSize'],
                 implode("', '", $allowedValues)
             );
         }
@@ -268,69 +268,69 @@ class LabelSpecification implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets label_format
+     * Gets labelFormat
      *
      * @return string
      */
     public function getLabelFormat()
     {
-        return $this->container['label_format'];
+        return $this->container['labelFormat'];
     }
 
     /**
-     * Sets label_format
+     * Sets labelFormat
      *
-     * @param string $label_format The format of the label. Enum of PNG only for now.
+     * @param string $labelFormat The format of the label. Enum of PNG only for now.
      *
      * @return self
      */
-    public function setLabelFormat($label_format)
+    public function setLabelFormat($labelFormat)
     {
         $allowedValues = $this->getLabelFormatAllowableValues();
-        if (!in_array($label_format, $allowedValues, true)) {
+        if (!in_array($labelFormat, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'label_format', must be one of '%s'",
-                    $label_format,
+                    "Invalid value '%s' for 'labelFormat', must be one of '%s'",
+                    $labelFormat,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['label_format'] = $label_format;
+        $this->container['labelFormat'] = $labelFormat;
 
         return $this;
     }
 
     /**
-     * Gets label_stock_size
+     * Gets labelStockSize
      *
      * @return string
      */
     public function getLabelStockSize()
     {
-        return $this->container['label_stock_size'];
+        return $this->container['labelStockSize'];
     }
 
     /**
-     * Sets label_stock_size
+     * Sets labelStockSize
      *
-     * @param string $label_stock_size The label stock size specification in length and height. Enum of 4x6 only for now.
+     * @param string $labelStockSize The label stock size specification in length and height. Enum of 4x6 only for now.
      *
      * @return self
      */
-    public function setLabelStockSize($label_stock_size)
+    public function setLabelStockSize($labelStockSize)
     {
         $allowedValues = $this->getLabelStockSizeAllowableValues();
-        if (!in_array($label_stock_size, $allowedValues, true)) {
+        if (!in_array($labelStockSize, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'label_stock_size', must be one of '%s'",
-                    $label_stock_size,
+                    "Invalid value '%s' for 'labelStockSize', must be one of '%s'",
+                    $labelStockSize,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['label_stock_size'] = $label_stock_size;
+        $this->container['labelStockSize'] = $labelStockSize;
 
         return $this;
     }

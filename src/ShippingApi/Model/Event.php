@@ -62,8 +62,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event_code' => 'string',
-        'event_time' => '\DateTime',
+        'eventCode' => 'string',
+        'eventTime' => '\DateTime',
         'location' => '\Webcom\Amazon\Rest\ShippingApi\Model\Location'
     ];
 
@@ -75,8 +75,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'event_code' => null,
-        'event_time' => 'date-time',
+        'eventCode' => null,
+        'eventTime' => 'date-time',
         'location' => null
     ];
 
@@ -107,8 +107,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_code' => 'eventCode',
-        'event_time' => 'eventTime',
+        'eventCode' => 'eventCode',
+        'eventTime' => 'eventTime',
         'location' => 'location'
     ];
 
@@ -118,8 +118,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'event_code' => 'setEventCode',
-        'event_time' => 'setEventTime',
+        'eventCode' => 'setEventCode',
+        'eventTime' => 'setEventTime',
         'location' => 'setLocation'
     ];
 
@@ -129,8 +129,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'event_code' => 'getEventCode',
-        'event_time' => 'getEventTime',
+        'eventCode' => 'getEventCode',
+        'eventTime' => 'getEventTime',
         'location' => 'getLocation'
     ];
 
@@ -194,8 +194,8 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_code'] = $data['event_code'] ?? null;
-        $this->container['event_time'] = $data['event_time'] ?? null;
+        $this->container['eventCode'] = $data['eventCode'] ?? null;
+        $this->container['eventTime'] = $data['eventTime'] ?? null;
         $this->container['location'] = $data['location'] ?? null;
     }
 
@@ -208,19 +208,19 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['event_code'] === null) {
-            $invalidProperties[] = "'event_code' can't be null";
+        if ($this->container['eventCode'] === null) {
+            $invalidProperties[] = "'eventCode' can't be null";
         }
-        if ((mb_strlen($this->container['event_code']) > 60)) {
-            $invalidProperties[] = "invalid value for 'event_code', the character length must be smaller than or equal to 60.";
-        }
-
-        if ((mb_strlen($this->container['event_code']) < 1)) {
-            $invalidProperties[] = "invalid value for 'event_code', the character length must be bigger than or equal to 1.";
+        if ((mb_strlen($this->container['eventCode']) > 60)) {
+            $invalidProperties[] = "invalid value for 'eventCode', the character length must be smaller than or equal to 60.";
         }
 
-        if ($this->container['event_time'] === null) {
-            $invalidProperties[] = "'event_time' can't be null";
+        if ((mb_strlen($this->container['eventCode']) < 1)) {
+            $invalidProperties[] = "invalid value for 'eventCode', the character length must be bigger than or equal to 1.";
+        }
+
+        if ($this->container['eventTime'] === null) {
+            $invalidProperties[] = "'eventTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -238,56 +238,56 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets event_code
+     * Gets eventCode
      *
      * @return string
      */
     public function getEventCode()
     {
-        return $this->container['event_code'];
+        return $this->container['eventCode'];
     }
 
     /**
-     * Sets event_code
+     * Sets eventCode
      *
-     * @param string $event_code The event code of a shipment, such as Departed, Received, and ReadyForReceive.
+     * @param string $eventCode The event code of a shipment, such as Departed, Received, and ReadyForReceive.
      *
      * @return self
      */
-    public function setEventCode($event_code)
+    public function setEventCode($eventCode)
     {
-        if ((mb_strlen($event_code) > 60)) {
-            throw new \InvalidArgumentException('invalid length for $event_code when calling Event., must be smaller than or equal to 60.');
+        if ((mb_strlen($eventCode) > 60)) {
+            throw new \InvalidArgumentException('invalid length for $eventCode when calling Event., must be smaller than or equal to 60.');
         }
-        if ((mb_strlen($event_code) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $event_code when calling Event., must be bigger than or equal to 1.');
+        if ((mb_strlen($eventCode) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $eventCode when calling Event., must be bigger than or equal to 1.');
         }
 
-        $this->container['event_code'] = $event_code;
+        $this->container['eventCode'] = $eventCode;
 
         return $this;
     }
 
     /**
-     * Gets event_time
+     * Gets eventTime
      *
      * @return \DateTime
      */
     public function getEventTime()
     {
-        return $this->container['event_time'];
+        return $this->container['eventTime'];
     }
 
     /**
-     * Sets event_time
+     * Sets eventTime
      *
-     * @param \DateTime $event_time The date and time of an event for a shipment.
+     * @param \DateTime $eventTime The date and time of an event for a shipment.
      *
      * @return self
      */
-    public function setEventTime($event_time)
+    public function setEventTime($eventTime)
     {
-        $this->container['event_time'] = $event_time;
+        $this->container['eventTime'] = $eventTime;
 
         return $this;
     }

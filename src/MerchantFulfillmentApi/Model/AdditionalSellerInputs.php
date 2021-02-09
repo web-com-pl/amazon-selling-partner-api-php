@@ -62,8 +62,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_input_field_name' => 'string',
-        'additional_seller_input' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput'
+        'additionalInputFieldName' => 'string',
+        'additionalSellerInput' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput'
     ];
 
     /**
@@ -74,8 +74,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'additional_input_field_name' => null,
-        'additional_seller_input' => null
+        'additionalInputFieldName' => null,
+        'additionalSellerInput' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'additional_input_field_name' => 'AdditionalInputFieldName',
-        'additional_seller_input' => 'AdditionalSellerInput'
+        'additionalInputFieldName' => 'AdditionalInputFieldName',
+        'additionalSellerInput' => 'AdditionalSellerInput'
     ];
 
     /**
@@ -115,8 +115,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'additional_input_field_name' => 'setAdditionalInputFieldName',
-        'additional_seller_input' => 'setAdditionalSellerInput'
+        'additionalInputFieldName' => 'setAdditionalInputFieldName',
+        'additionalSellerInput' => 'setAdditionalSellerInput'
     ];
 
     /**
@@ -125,8 +125,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'additional_input_field_name' => 'getAdditionalInputFieldName',
-        'additional_seller_input' => 'getAdditionalSellerInput'
+        'additionalInputFieldName' => 'getAdditionalInputFieldName',
+        'additionalSellerInput' => 'getAdditionalSellerInput'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['additional_input_field_name'] = $data['additional_input_field_name'] ?? null;
-        $this->container['additional_seller_input'] = $data['additional_seller_input'] ?? null;
+        $this->container['additionalInputFieldName'] = $data['additionalInputFieldName'] ?? null;
+        $this->container['additionalSellerInput'] = $data['additionalSellerInput'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['additional_input_field_name'] === null) {
-            $invalidProperties[] = "'additional_input_field_name' can't be null";
+        if ($this->container['additionalInputFieldName'] === null) {
+            $invalidProperties[] = "'additionalInputFieldName' can't be null";
         }
-        if ($this->container['additional_seller_input'] === null) {
-            $invalidProperties[] = "'additional_seller_input' can't be null";
+        if ($this->container['additionalSellerInput'] === null) {
+            $invalidProperties[] = "'additionalSellerInput' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class AdditionalSellerInputs implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets additional_input_field_name
+     * Gets additionalInputFieldName
      *
      * @return string
      */
     public function getAdditionalInputFieldName()
     {
-        return $this->container['additional_input_field_name'];
+        return $this->container['additionalInputFieldName'];
     }
 
     /**
-     * Sets additional_input_field_name
+     * Sets additionalInputFieldName
      *
-     * @param string $additional_input_field_name The name of the additional input field.
+     * @param string $additionalInputFieldName The name of the additional input field.
      *
      * @return self
      */
-    public function setAdditionalInputFieldName($additional_input_field_name)
+    public function setAdditionalInputFieldName($additionalInputFieldName)
     {
-        $this->container['additional_input_field_name'] = $additional_input_field_name;
+        $this->container['additionalInputFieldName'] = $additionalInputFieldName;
 
         return $this;
     }
 
     /**
-     * Gets additional_seller_input
+     * Gets additionalSellerInput
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput
      */
     public function getAdditionalSellerInput()
     {
-        return $this->container['additional_seller_input'];
+        return $this->container['additionalSellerInput'];
     }
 
     /**
-     * Sets additional_seller_input
+     * Sets additionalSellerInput
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput $additional_seller_input additional_seller_input
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInput $additionalSellerInput additionalSellerInput
      *
      * @return self
      */
-    public function setAdditionalSellerInput($additional_seller_input)
+    public function setAdditionalSellerInput($additionalSellerInput)
     {
-        $this->container['additional_seller_input'] = $additional_seller_input;
+        $this->container['additionalSellerInput'] = $additionalSellerInput;
 
         return $this;
     }

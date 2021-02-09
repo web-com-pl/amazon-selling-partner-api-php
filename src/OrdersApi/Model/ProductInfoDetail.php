@@ -62,7 +62,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'number_of_items' => 'int'
+        'numberOfItems' => 'int'
     ];
 
     /**
@@ -73,7 +73,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'number_of_items' => null
+        'numberOfItems' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'number_of_items' => 'NumberOfItems'
+        'numberOfItems' => 'NumberOfItems'
     ];
 
     /**
@@ -112,7 +112,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'number_of_items' => 'setNumberOfItems'
+        'numberOfItems' => 'setNumberOfItems'
     ];
 
     /**
@@ -121,7 +121,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'number_of_items' => 'getNumberOfItems'
+        'numberOfItems' => 'getNumberOfItems'
     ];
 
     /**
@@ -184,7 +184,7 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['number_of_items'] = $data['number_of_items'] ?? null;
+        $this->container['numberOfItems'] = $data['numberOfItems'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class ProductInfoDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets number_of_items
+     * Gets numberOfItems
      *
      * @return int|null
      */
     public function getNumberOfItems()
     {
-        return $this->container['number_of_items'];
+        return $this->container['numberOfItems'];
     }
 
     /**
-     * Sets number_of_items
+     * Sets numberOfItems
      *
-     * @param int|null $number_of_items The total number of items that are included in the ASIN.
+     * @param int|null $numberOfItems The total number of items that are included in the ASIN.
      *
      * @return self
      */
-    public function setNumberOfItems($number_of_items)
+    public function setNumberOfItems($numberOfItems)
     {
-        $this->container['number_of_items'] = $number_of_items;
+        $this->container['numberOfItems'] = $numberOfItems;
 
         return $this;
     }

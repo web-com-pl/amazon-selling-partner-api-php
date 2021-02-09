@@ -62,19 +62,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipping_service_name' => 'string',
-        'carrier_name' => 'string',
-        'shipping_service_id' => 'string',
-        'shipping_service_offer_id' => 'string',
-        'ship_date' => '\DateTime',
-        'earliest_estimated_delivery_date' => '\DateTime',
-        'latest_estimated_delivery_date' => '\DateTime',
+        'shippingServiceName' => 'string',
+        'carrierName' => 'string',
+        'shippingServiceId' => 'string',
+        'shippingServiceOfferId' => 'string',
+        'shipDate' => '\DateTime',
+        'earliestEstimatedDeliveryDate' => '\DateTime',
+        'latestEstimatedDeliveryDate' => '\DateTime',
         'rate' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount',
-        'shipping_service_options' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions',
-        'available_shipping_service_options' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableShippingServiceOptions',
-        'available_label_formats' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat[]',
-        'available_format_options_for_label' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOption[]',
-        'requires_additional_seller_inputs' => 'bool'
+        'shippingServiceOptions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions',
+        'availableShippingServiceOptions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableShippingServiceOptions',
+        'availableLabelFormats' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat[]',
+        'availableFormatOptionsForLabel' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOption[]',
+        'requiresAdditionalSellerInputs' => 'bool'
     ];
 
     /**
@@ -85,19 +85,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipping_service_name' => null,
-        'carrier_name' => null,
-        'shipping_service_id' => null,
-        'shipping_service_offer_id' => null,
-        'ship_date' => 'date-time',
-        'earliest_estimated_delivery_date' => 'date-time',
-        'latest_estimated_delivery_date' => 'date-time',
+        'shippingServiceName' => null,
+        'carrierName' => null,
+        'shippingServiceId' => null,
+        'shippingServiceOfferId' => null,
+        'shipDate' => 'date-time',
+        'earliestEstimatedDeliveryDate' => 'date-time',
+        'latestEstimatedDeliveryDate' => 'date-time',
         'rate' => null,
-        'shipping_service_options' => null,
-        'available_shipping_service_options' => null,
-        'available_label_formats' => null,
-        'available_format_options_for_label' => null,
-        'requires_additional_seller_inputs' => null
+        'shippingServiceOptions' => null,
+        'availableShippingServiceOptions' => null,
+        'availableLabelFormats' => null,
+        'availableFormatOptionsForLabel' => null,
+        'requiresAdditionalSellerInputs' => null
     ];
 
     /**
@@ -127,19 +127,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipping_service_name' => 'ShippingServiceName',
-        'carrier_name' => 'CarrierName',
-        'shipping_service_id' => 'ShippingServiceId',
-        'shipping_service_offer_id' => 'ShippingServiceOfferId',
-        'ship_date' => 'ShipDate',
-        'earliest_estimated_delivery_date' => 'EarliestEstimatedDeliveryDate',
-        'latest_estimated_delivery_date' => 'LatestEstimatedDeliveryDate',
+        'shippingServiceName' => 'ShippingServiceName',
+        'carrierName' => 'CarrierName',
+        'shippingServiceId' => 'ShippingServiceId',
+        'shippingServiceOfferId' => 'ShippingServiceOfferId',
+        'shipDate' => 'ShipDate',
+        'earliestEstimatedDeliveryDate' => 'EarliestEstimatedDeliveryDate',
+        'latestEstimatedDeliveryDate' => 'LatestEstimatedDeliveryDate',
         'rate' => 'Rate',
-        'shipping_service_options' => 'ShippingServiceOptions',
-        'available_shipping_service_options' => 'AvailableShippingServiceOptions',
-        'available_label_formats' => 'AvailableLabelFormats',
-        'available_format_options_for_label' => 'AvailableFormatOptionsForLabel',
-        'requires_additional_seller_inputs' => 'RequiresAdditionalSellerInputs'
+        'shippingServiceOptions' => 'ShippingServiceOptions',
+        'availableShippingServiceOptions' => 'AvailableShippingServiceOptions',
+        'availableLabelFormats' => 'AvailableLabelFormats',
+        'availableFormatOptionsForLabel' => 'AvailableFormatOptionsForLabel',
+        'requiresAdditionalSellerInputs' => 'RequiresAdditionalSellerInputs'
     ];
 
     /**
@@ -148,19 +148,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'shipping_service_name' => 'setShippingServiceName',
-        'carrier_name' => 'setCarrierName',
-        'shipping_service_id' => 'setShippingServiceId',
-        'shipping_service_offer_id' => 'setShippingServiceOfferId',
-        'ship_date' => 'setShipDate',
-        'earliest_estimated_delivery_date' => 'setEarliestEstimatedDeliveryDate',
-        'latest_estimated_delivery_date' => 'setLatestEstimatedDeliveryDate',
+        'shippingServiceName' => 'setShippingServiceName',
+        'carrierName' => 'setCarrierName',
+        'shippingServiceId' => 'setShippingServiceId',
+        'shippingServiceOfferId' => 'setShippingServiceOfferId',
+        'shipDate' => 'setShipDate',
+        'earliestEstimatedDeliveryDate' => 'setEarliestEstimatedDeliveryDate',
+        'latestEstimatedDeliveryDate' => 'setLatestEstimatedDeliveryDate',
         'rate' => 'setRate',
-        'shipping_service_options' => 'setShippingServiceOptions',
-        'available_shipping_service_options' => 'setAvailableShippingServiceOptions',
-        'available_label_formats' => 'setAvailableLabelFormats',
-        'available_format_options_for_label' => 'setAvailableFormatOptionsForLabel',
-        'requires_additional_seller_inputs' => 'setRequiresAdditionalSellerInputs'
+        'shippingServiceOptions' => 'setShippingServiceOptions',
+        'availableShippingServiceOptions' => 'setAvailableShippingServiceOptions',
+        'availableLabelFormats' => 'setAvailableLabelFormats',
+        'availableFormatOptionsForLabel' => 'setAvailableFormatOptionsForLabel',
+        'requiresAdditionalSellerInputs' => 'setRequiresAdditionalSellerInputs'
     ];
 
     /**
@@ -169,19 +169,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'shipping_service_name' => 'getShippingServiceName',
-        'carrier_name' => 'getCarrierName',
-        'shipping_service_id' => 'getShippingServiceId',
-        'shipping_service_offer_id' => 'getShippingServiceOfferId',
-        'ship_date' => 'getShipDate',
-        'earliest_estimated_delivery_date' => 'getEarliestEstimatedDeliveryDate',
-        'latest_estimated_delivery_date' => 'getLatestEstimatedDeliveryDate',
+        'shippingServiceName' => 'getShippingServiceName',
+        'carrierName' => 'getCarrierName',
+        'shippingServiceId' => 'getShippingServiceId',
+        'shippingServiceOfferId' => 'getShippingServiceOfferId',
+        'shipDate' => 'getShipDate',
+        'earliestEstimatedDeliveryDate' => 'getEarliestEstimatedDeliveryDate',
+        'latestEstimatedDeliveryDate' => 'getLatestEstimatedDeliveryDate',
         'rate' => 'getRate',
-        'shipping_service_options' => 'getShippingServiceOptions',
-        'available_shipping_service_options' => 'getAvailableShippingServiceOptions',
-        'available_label_formats' => 'getAvailableLabelFormats',
-        'available_format_options_for_label' => 'getAvailableFormatOptionsForLabel',
-        'requires_additional_seller_inputs' => 'getRequiresAdditionalSellerInputs'
+        'shippingServiceOptions' => 'getShippingServiceOptions',
+        'availableShippingServiceOptions' => 'getAvailableShippingServiceOptions',
+        'availableLabelFormats' => 'getAvailableLabelFormats',
+        'availableFormatOptionsForLabel' => 'getAvailableFormatOptionsForLabel',
+        'requiresAdditionalSellerInputs' => 'getRequiresAdditionalSellerInputs'
     ];
 
     /**
@@ -244,19 +244,19 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipping_service_name'] = $data['shipping_service_name'] ?? null;
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
-        $this->container['shipping_service_id'] = $data['shipping_service_id'] ?? null;
-        $this->container['shipping_service_offer_id'] = $data['shipping_service_offer_id'] ?? null;
-        $this->container['ship_date'] = $data['ship_date'] ?? null;
-        $this->container['earliest_estimated_delivery_date'] = $data['earliest_estimated_delivery_date'] ?? null;
-        $this->container['latest_estimated_delivery_date'] = $data['latest_estimated_delivery_date'] ?? null;
+        $this->container['shippingServiceName'] = $data['shippingServiceName'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
+        $this->container['shippingServiceId'] = $data['shippingServiceId'] ?? null;
+        $this->container['shippingServiceOfferId'] = $data['shippingServiceOfferId'] ?? null;
+        $this->container['shipDate'] = $data['shipDate'] ?? null;
+        $this->container['earliestEstimatedDeliveryDate'] = $data['earliestEstimatedDeliveryDate'] ?? null;
+        $this->container['latestEstimatedDeliveryDate'] = $data['latestEstimatedDeliveryDate'] ?? null;
         $this->container['rate'] = $data['rate'] ?? null;
-        $this->container['shipping_service_options'] = $data['shipping_service_options'] ?? null;
-        $this->container['available_shipping_service_options'] = $data['available_shipping_service_options'] ?? null;
-        $this->container['available_label_formats'] = $data['available_label_formats'] ?? null;
-        $this->container['available_format_options_for_label'] = $data['available_format_options_for_label'] ?? null;
-        $this->container['requires_additional_seller_inputs'] = $data['requires_additional_seller_inputs'] ?? null;
+        $this->container['shippingServiceOptions'] = $data['shippingServiceOptions'] ?? null;
+        $this->container['availableShippingServiceOptions'] = $data['availableShippingServiceOptions'] ?? null;
+        $this->container['availableLabelFormats'] = $data['availableLabelFormats'] ?? null;
+        $this->container['availableFormatOptionsForLabel'] = $data['availableFormatOptionsForLabel'] ?? null;
+        $this->container['requiresAdditionalSellerInputs'] = $data['requiresAdditionalSellerInputs'] ?? null;
     }
 
     /**
@@ -268,29 +268,29 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['shipping_service_name'] === null) {
-            $invalidProperties[] = "'shipping_service_name' can't be null";
+        if ($this->container['shippingServiceName'] === null) {
+            $invalidProperties[] = "'shippingServiceName' can't be null";
         }
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
-        if ($this->container['shipping_service_id'] === null) {
-            $invalidProperties[] = "'shipping_service_id' can't be null";
+        if ($this->container['shippingServiceId'] === null) {
+            $invalidProperties[] = "'shippingServiceId' can't be null";
         }
-        if ($this->container['shipping_service_offer_id'] === null) {
-            $invalidProperties[] = "'shipping_service_offer_id' can't be null";
+        if ($this->container['shippingServiceOfferId'] === null) {
+            $invalidProperties[] = "'shippingServiceOfferId' can't be null";
         }
-        if ($this->container['ship_date'] === null) {
-            $invalidProperties[] = "'ship_date' can't be null";
+        if ($this->container['shipDate'] === null) {
+            $invalidProperties[] = "'shipDate' can't be null";
         }
         if ($this->container['rate'] === null) {
             $invalidProperties[] = "'rate' can't be null";
         }
-        if ($this->container['shipping_service_options'] === null) {
-            $invalidProperties[] = "'shipping_service_options' can't be null";
+        if ($this->container['shippingServiceOptions'] === null) {
+            $invalidProperties[] = "'shippingServiceOptions' can't be null";
         }
-        if ($this->container['requires_additional_seller_inputs'] === null) {
-            $invalidProperties[] = "'requires_additional_seller_inputs' can't be null";
+        if ($this->container['requiresAdditionalSellerInputs'] === null) {
+            $invalidProperties[] = "'requiresAdditionalSellerInputs' can't be null";
         }
         return $invalidProperties;
     }
@@ -308,169 +308,169 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets shipping_service_name
+     * Gets shippingServiceName
      *
      * @return string
      */
     public function getShippingServiceName()
     {
-        return $this->container['shipping_service_name'];
+        return $this->container['shippingServiceName'];
     }
 
     /**
-     * Sets shipping_service_name
+     * Sets shippingServiceName
      *
-     * @param string $shipping_service_name A plain text representation of a carrier's shipping service. For example, \"UPS Ground\" or \"FedEx Standard Overnight\".
+     * @param string $shippingServiceName A plain text representation of a carrier's shipping service. For example, \"UPS Ground\" or \"FedEx Standard Overnight\".
      *
      * @return self
      */
-    public function setShippingServiceName($shipping_service_name)
+    public function setShippingServiceName($shippingServiceName)
     {
-        $this->container['shipping_service_name'] = $shipping_service_name;
+        $this->container['shippingServiceName'] = $shippingServiceName;
 
         return $this;
     }
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The name of the carrier.
+     * @param string $carrierName The name of the carrier.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_id
+     * Gets shippingServiceId
      *
      * @return string
      */
     public function getShippingServiceId()
     {
-        return $this->container['shipping_service_id'];
+        return $this->container['shippingServiceId'];
     }
 
     /**
-     * Sets shipping_service_id
+     * Sets shippingServiceId
      *
-     * @param string $shipping_service_id An Amazon-defined shipping service identifier.
+     * @param string $shippingServiceId An Amazon-defined shipping service identifier.
      *
      * @return self
      */
-    public function setShippingServiceId($shipping_service_id)
+    public function setShippingServiceId($shippingServiceId)
     {
-        $this->container['shipping_service_id'] = $shipping_service_id;
+        $this->container['shippingServiceId'] = $shippingServiceId;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_offer_id
+     * Gets shippingServiceOfferId
      *
      * @return string
      */
     public function getShippingServiceOfferId()
     {
-        return $this->container['shipping_service_offer_id'];
+        return $this->container['shippingServiceOfferId'];
     }
 
     /**
-     * Sets shipping_service_offer_id
+     * Sets shippingServiceOfferId
      *
-     * @param string $shipping_service_offer_id An Amazon-defined shipping service offer identifier.
+     * @param string $shippingServiceOfferId An Amazon-defined shipping service offer identifier.
      *
      * @return self
      */
-    public function setShippingServiceOfferId($shipping_service_offer_id)
+    public function setShippingServiceOfferId($shippingServiceOfferId)
     {
-        $this->container['shipping_service_offer_id'] = $shipping_service_offer_id;
+        $this->container['shippingServiceOfferId'] = $shippingServiceOfferId;
 
         return $this;
     }
 
     /**
-     * Gets ship_date
+     * Gets shipDate
      *
      * @return \DateTime
      */
     public function getShipDate()
     {
-        return $this->container['ship_date'];
+        return $this->container['shipDate'];
     }
 
     /**
-     * Sets ship_date
+     * Sets shipDate
      *
-     * @param \DateTime $ship_date ship_date
+     * @param \DateTime $shipDate shipDate
      *
      * @return self
      */
-    public function setShipDate($ship_date)
+    public function setShipDate($shipDate)
     {
-        $this->container['ship_date'] = $ship_date;
+        $this->container['shipDate'] = $shipDate;
 
         return $this;
     }
 
     /**
-     * Gets earliest_estimated_delivery_date
+     * Gets earliestEstimatedDeliveryDate
      *
      * @return \DateTime|null
      */
     public function getEarliestEstimatedDeliveryDate()
     {
-        return $this->container['earliest_estimated_delivery_date'];
+        return $this->container['earliestEstimatedDeliveryDate'];
     }
 
     /**
-     * Sets earliest_estimated_delivery_date
+     * Sets earliestEstimatedDeliveryDate
      *
-     * @param \DateTime|null $earliest_estimated_delivery_date earliest_estimated_delivery_date
+     * @param \DateTime|null $earliestEstimatedDeliveryDate earliestEstimatedDeliveryDate
      *
      * @return self
      */
-    public function setEarliestEstimatedDeliveryDate($earliest_estimated_delivery_date)
+    public function setEarliestEstimatedDeliveryDate($earliestEstimatedDeliveryDate)
     {
-        $this->container['earliest_estimated_delivery_date'] = $earliest_estimated_delivery_date;
+        $this->container['earliestEstimatedDeliveryDate'] = $earliestEstimatedDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets latest_estimated_delivery_date
+     * Gets latestEstimatedDeliveryDate
      *
      * @return \DateTime|null
      */
     public function getLatestEstimatedDeliveryDate()
     {
-        return $this->container['latest_estimated_delivery_date'];
+        return $this->container['latestEstimatedDeliveryDate'];
     }
 
     /**
-     * Sets latest_estimated_delivery_date
+     * Sets latestEstimatedDeliveryDate
      *
-     * @param \DateTime|null $latest_estimated_delivery_date latest_estimated_delivery_date
+     * @param \DateTime|null $latestEstimatedDeliveryDate latestEstimatedDeliveryDate
      *
      * @return self
      */
-    public function setLatestEstimatedDeliveryDate($latest_estimated_delivery_date)
+    public function setLatestEstimatedDeliveryDate($latestEstimatedDeliveryDate)
     {
-        $this->container['latest_estimated_delivery_date'] = $latest_estimated_delivery_date;
+        $this->container['latestEstimatedDeliveryDate'] = $latestEstimatedDeliveryDate;
 
         return $this;
     }
@@ -500,121 +500,121 @@ class ShippingService implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets shipping_service_options
+     * Gets shippingServiceOptions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions
      */
     public function getShippingServiceOptions()
     {
-        return $this->container['shipping_service_options'];
+        return $this->container['shippingServiceOptions'];
     }
 
     /**
-     * Sets shipping_service_options
+     * Sets shippingServiceOptions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions $shipping_service_options shipping_service_options
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions $shippingServiceOptions shippingServiceOptions
      *
      * @return self
      */
-    public function setShippingServiceOptions($shipping_service_options)
+    public function setShippingServiceOptions($shippingServiceOptions)
     {
-        $this->container['shipping_service_options'] = $shipping_service_options;
+        $this->container['shippingServiceOptions'] = $shippingServiceOptions;
 
         return $this;
     }
 
     /**
-     * Gets available_shipping_service_options
+     * Gets availableShippingServiceOptions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableShippingServiceOptions|null
      */
     public function getAvailableShippingServiceOptions()
     {
-        return $this->container['available_shipping_service_options'];
+        return $this->container['availableShippingServiceOptions'];
     }
 
     /**
-     * Sets available_shipping_service_options
+     * Sets availableShippingServiceOptions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableShippingServiceOptions|null $available_shipping_service_options available_shipping_service_options
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AvailableShippingServiceOptions|null $availableShippingServiceOptions availableShippingServiceOptions
      *
      * @return self
      */
-    public function setAvailableShippingServiceOptions($available_shipping_service_options)
+    public function setAvailableShippingServiceOptions($availableShippingServiceOptions)
     {
-        $this->container['available_shipping_service_options'] = $available_shipping_service_options;
+        $this->container['availableShippingServiceOptions'] = $availableShippingServiceOptions;
 
         return $this;
     }
 
     /**
-     * Gets available_label_formats
+     * Gets availableLabelFormats
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat[]|null
      */
     public function getAvailableLabelFormats()
     {
-        return $this->container['available_label_formats'];
+        return $this->container['availableLabelFormats'];
     }
 
     /**
-     * Sets available_label_formats
+     * Sets availableLabelFormats
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat[]|null $available_label_formats List of label formats.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat[]|null $availableLabelFormats List of label formats.
      *
      * @return self
      */
-    public function setAvailableLabelFormats($available_label_formats)
+    public function setAvailableLabelFormats($availableLabelFormats)
     {
-        $this->container['available_label_formats'] = $available_label_formats;
+        $this->container['availableLabelFormats'] = $availableLabelFormats;
 
         return $this;
     }
 
     /**
-     * Gets available_format_options_for_label
+     * Gets availableFormatOptionsForLabel
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOption[]|null
      */
     public function getAvailableFormatOptionsForLabel()
     {
-        return $this->container['available_format_options_for_label'];
+        return $this->container['availableFormatOptionsForLabel'];
     }
 
     /**
-     * Sets available_format_options_for_label
+     * Sets availableFormatOptionsForLabel
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOption[]|null $available_format_options_for_label The available label formats.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOption[]|null $availableFormatOptionsForLabel The available label formats.
      *
      * @return self
      */
-    public function setAvailableFormatOptionsForLabel($available_format_options_for_label)
+    public function setAvailableFormatOptionsForLabel($availableFormatOptionsForLabel)
     {
-        $this->container['available_format_options_for_label'] = $available_format_options_for_label;
+        $this->container['availableFormatOptionsForLabel'] = $availableFormatOptionsForLabel;
 
         return $this;
     }
 
     /**
-     * Gets requires_additional_seller_inputs
+     * Gets requiresAdditionalSellerInputs
      *
      * @return bool
      */
     public function getRequiresAdditionalSellerInputs()
     {
-        return $this->container['requires_additional_seller_inputs'];
+        return $this->container['requiresAdditionalSellerInputs'];
     }
 
     /**
-     * Sets requires_additional_seller_inputs
+     * Sets requiresAdditionalSellerInputs
      *
-     * @param bool $requires_additional_seller_inputs When true, additional seller inputs are required.
+     * @param bool $requiresAdditionalSellerInputs When true, additional seller inputs are required.
      *
      * @return self
      */
-    public function setRequiresAdditionalSellerInputs($requires_additional_seller_inputs)
+    public function setRequiresAdditionalSellerInputs($requiresAdditionalSellerInputs)
     {
-        $this->container['requires_additional_seller_inputs'] = $requires_additional_seller_inputs;
+        $this->container['requiresAdditionalSellerInputs'] = $requiresAdditionalSellerInputs;
 
         return $this;
     }

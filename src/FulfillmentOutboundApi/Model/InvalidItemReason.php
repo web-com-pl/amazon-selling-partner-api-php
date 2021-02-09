@@ -62,7 +62,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invalid_item_reason_code' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReasonCode',
+        'invalidItemReasonCode' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReasonCode',
         'description' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'invalid_item_reason_code' => null,
+        'invalidItemReasonCode' => null,
         'description' => null
     ];
 
@@ -105,7 +105,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'invalid_item_reason_code' => 'invalidItemReasonCode',
+        'invalidItemReasonCode' => 'invalidItemReasonCode',
         'description' => 'description'
     ];
 
@@ -115,7 +115,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'invalid_item_reason_code' => 'setInvalidItemReasonCode',
+        'invalidItemReasonCode' => 'setInvalidItemReasonCode',
         'description' => 'setDescription'
     ];
 
@@ -125,7 +125,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'invalid_item_reason_code' => 'getInvalidItemReasonCode',
+        'invalidItemReasonCode' => 'getInvalidItemReasonCode',
         'description' => 'getDescription'
     ];
 
@@ -189,7 +189,7 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['invalid_item_reason_code'] = $data['invalid_item_reason_code'] ?? null;
+        $this->container['invalidItemReasonCode'] = $data['invalidItemReasonCode'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['invalid_item_reason_code'] === null) {
-            $invalidProperties[] = "'invalid_item_reason_code' can't be null";
+        if ($this->container['invalidItemReasonCode'] === null) {
+            $invalidProperties[] = "'invalidItemReasonCode' can't be null";
         }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
@@ -224,25 +224,25 @@ class InvalidItemReason implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets invalid_item_reason_code
+     * Gets invalidItemReasonCode
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReasonCode
      */
     public function getInvalidItemReasonCode()
     {
-        return $this->container['invalid_item_reason_code'];
+        return $this->container['invalidItemReasonCode'];
     }
 
     /**
-     * Sets invalid_item_reason_code
+     * Sets invalidItemReasonCode
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReasonCode $invalid_item_reason_code invalid_item_reason_code
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\InvalidItemReasonCode $invalidItemReasonCode invalidItemReasonCode
      *
      * @return self
      */
-    public function setInvalidItemReasonCode($invalid_item_reason_code)
+    public function setInvalidItemReasonCode($invalidItemReasonCode)
     {
-        $this->container['invalid_item_reason_code'] = $invalid_item_reason_code;
+        $this->container['invalidItemReasonCode'] = $invalidItemReasonCode;
 
         return $this;
     }

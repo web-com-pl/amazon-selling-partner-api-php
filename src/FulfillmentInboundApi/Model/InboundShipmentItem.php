@@ -62,14 +62,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'seller_sku' => 'string',
-        'fulfillment_network_sku' => 'string',
-        'quantity_shipped' => 'int',
-        'quantity_received' => 'int',
-        'quantity_in_case' => 'int',
-        'release_date' => '\DateTime',
-        'prep_details_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
+        'shipmentId' => 'string',
+        'sellerSKU' => 'string',
+        'fulfillmentNetworkSKU' => 'string',
+        'quantityShipped' => 'int',
+        'quantityReceived' => 'int',
+        'quantityInCase' => 'int',
+        'releaseDate' => '\DateTime',
+        'prepDetailsList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
     ];
 
     /**
@@ -80,14 +80,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'seller_sku' => null,
-        'fulfillment_network_sku' => null,
-        'quantity_shipped' => 'int32',
-        'quantity_received' => 'int32',
-        'quantity_in_case' => 'int32',
-        'release_date' => 'date',
-        'prep_details_list' => null
+        'shipmentId' => null,
+        'sellerSKU' => null,
+        'fulfillmentNetworkSKU' => null,
+        'quantityShipped' => 'int32',
+        'quantityReceived' => 'int32',
+        'quantityInCase' => 'int32',
+        'releaseDate' => 'date',
+        'prepDetailsList' => null
     ];
 
     /**
@@ -117,14 +117,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'ShipmentId',
-        'seller_sku' => 'SellerSKU',
-        'fulfillment_network_sku' => 'FulfillmentNetworkSKU',
-        'quantity_shipped' => 'QuantityShipped',
-        'quantity_received' => 'QuantityReceived',
-        'quantity_in_case' => 'QuantityInCase',
-        'release_date' => 'ReleaseDate',
-        'prep_details_list' => 'PrepDetailsList'
+        'shipmentId' => 'ShipmentId',
+        'sellerSKU' => 'SellerSKU',
+        'fulfillmentNetworkSKU' => 'FulfillmentNetworkSKU',
+        'quantityShipped' => 'QuantityShipped',
+        'quantityReceived' => 'QuantityReceived',
+        'quantityInCase' => 'QuantityInCase',
+        'releaseDate' => 'ReleaseDate',
+        'prepDetailsList' => 'PrepDetailsList'
     ];
 
     /**
@@ -133,14 +133,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'seller_sku' => 'setSellerSku',
-        'fulfillment_network_sku' => 'setFulfillmentNetworkSku',
-        'quantity_shipped' => 'setQuantityShipped',
-        'quantity_received' => 'setQuantityReceived',
-        'quantity_in_case' => 'setQuantityInCase',
-        'release_date' => 'setReleaseDate',
-        'prep_details_list' => 'setPrepDetailsList'
+        'shipmentId' => 'setShipmentId',
+        'sellerSKU' => 'setSellerSKU',
+        'fulfillmentNetworkSKU' => 'setFulfillmentNetworkSKU',
+        'quantityShipped' => 'setQuantityShipped',
+        'quantityReceived' => 'setQuantityReceived',
+        'quantityInCase' => 'setQuantityInCase',
+        'releaseDate' => 'setReleaseDate',
+        'prepDetailsList' => 'setPrepDetailsList'
     ];
 
     /**
@@ -149,14 +149,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'seller_sku' => 'getSellerSku',
-        'fulfillment_network_sku' => 'getFulfillmentNetworkSku',
-        'quantity_shipped' => 'getQuantityShipped',
-        'quantity_received' => 'getQuantityReceived',
-        'quantity_in_case' => 'getQuantityInCase',
-        'release_date' => 'getReleaseDate',
-        'prep_details_list' => 'getPrepDetailsList'
+        'shipmentId' => 'getShipmentId',
+        'sellerSKU' => 'getSellerSKU',
+        'fulfillmentNetworkSKU' => 'getFulfillmentNetworkSKU',
+        'quantityShipped' => 'getQuantityShipped',
+        'quantityReceived' => 'getQuantityReceived',
+        'quantityInCase' => 'getQuantityInCase',
+        'releaseDate' => 'getReleaseDate',
+        'prepDetailsList' => 'getPrepDetailsList'
     ];
 
     /**
@@ -219,14 +219,14 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['fulfillment_network_sku'] = $data['fulfillment_network_sku'] ?? null;
-        $this->container['quantity_shipped'] = $data['quantity_shipped'] ?? null;
-        $this->container['quantity_received'] = $data['quantity_received'] ?? null;
-        $this->container['quantity_in_case'] = $data['quantity_in_case'] ?? null;
-        $this->container['release_date'] = $data['release_date'] ?? null;
-        $this->container['prep_details_list'] = $data['prep_details_list'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['fulfillmentNetworkSKU'] = $data['fulfillmentNetworkSKU'] ?? null;
+        $this->container['quantityShipped'] = $data['quantityShipped'] ?? null;
+        $this->container['quantityReceived'] = $data['quantityReceived'] ?? null;
+        $this->container['quantityInCase'] = $data['quantityInCase'] ?? null;
+        $this->container['releaseDate'] = $data['releaseDate'] ?? null;
+        $this->container['prepDetailsList'] = $data['prepDetailsList'] ?? null;
     }
 
     /**
@@ -238,11 +238,11 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSKU'] === null) {
+            $invalidProperties[] = "'sellerSKU' can't be null";
         }
-        if ($this->container['quantity_shipped'] === null) {
-            $invalidProperties[] = "'quantity_shipped' can't be null";
+        if ($this->container['quantityShipped'] === null) {
+            $invalidProperties[] = "'quantityShipped' can't be null";
         }
         return $invalidProperties;
     }
@@ -260,193 +260,193 @@ class InboundShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string|null
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string|null $shipment_id A shipment identifier originally returned by the createInboundShipmentPlan operation.
+     * @param string|null $shipmentId A shipment identifier originally returned by the createInboundShipmentPlan operation.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSKU The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_network_sku
+     * Gets fulfillmentNetworkSKU
      *
      * @return string|null
      */
-    public function getFulfillmentNetworkSku()
+    public function getFulfillmentNetworkSKU()
     {
-        return $this->container['fulfillment_network_sku'];
+        return $this->container['fulfillmentNetworkSKU'];
     }
 
     /**
-     * Sets fulfillment_network_sku
+     * Sets fulfillmentNetworkSKU
      *
-     * @param string|null $fulfillment_network_sku Amazon's fulfillment network SKU of the item.
+     * @param string|null $fulfillmentNetworkSKU Amazon's fulfillment network SKU of the item.
      *
      * @return self
      */
-    public function setFulfillmentNetworkSku($fulfillment_network_sku)
+    public function setFulfillmentNetworkSKU($fulfillmentNetworkSKU)
     {
-        $this->container['fulfillment_network_sku'] = $fulfillment_network_sku;
+        $this->container['fulfillmentNetworkSKU'] = $fulfillmentNetworkSKU;
 
         return $this;
     }
 
     /**
-     * Gets quantity_shipped
+     * Gets quantityShipped
      *
      * @return int
      */
     public function getQuantityShipped()
     {
-        return $this->container['quantity_shipped'];
+        return $this->container['quantityShipped'];
     }
 
     /**
-     * Sets quantity_shipped
+     * Sets quantityShipped
      *
-     * @param int $quantity_shipped The item quantity.
+     * @param int $quantityShipped The item quantity.
      *
      * @return self
      */
-    public function setQuantityShipped($quantity_shipped)
+    public function setQuantityShipped($quantityShipped)
     {
-        $this->container['quantity_shipped'] = $quantity_shipped;
+        $this->container['quantityShipped'] = $quantityShipped;
 
         return $this;
     }
 
     /**
-     * Gets quantity_received
+     * Gets quantityReceived
      *
      * @return int|null
      */
     public function getQuantityReceived()
     {
-        return $this->container['quantity_received'];
+        return $this->container['quantityReceived'];
     }
 
     /**
-     * Sets quantity_received
+     * Sets quantityReceived
      *
-     * @param int|null $quantity_received The item quantity.
+     * @param int|null $quantityReceived The item quantity.
      *
      * @return self
      */
-    public function setQuantityReceived($quantity_received)
+    public function setQuantityReceived($quantityReceived)
     {
-        $this->container['quantity_received'] = $quantity_received;
+        $this->container['quantityReceived'] = $quantityReceived;
 
         return $this;
     }
 
     /**
-     * Gets quantity_in_case
+     * Gets quantityInCase
      *
      * @return int|null
      */
     public function getQuantityInCase()
     {
-        return $this->container['quantity_in_case'];
+        return $this->container['quantityInCase'];
     }
 
     /**
-     * Sets quantity_in_case
+     * Sets quantityInCase
      *
-     * @param int|null $quantity_in_case The item quantity.
+     * @param int|null $quantityInCase The item quantity.
      *
      * @return self
      */
-    public function setQuantityInCase($quantity_in_case)
+    public function setQuantityInCase($quantityInCase)
     {
-        $this->container['quantity_in_case'] = $quantity_in_case;
+        $this->container['quantityInCase'] = $quantityInCase;
 
         return $this;
     }
 
     /**
-     * Gets release_date
+     * Gets releaseDate
      *
      * @return \DateTime|null
      */
     public function getReleaseDate()
     {
-        return $this->container['release_date'];
+        return $this->container['releaseDate'];
     }
 
     /**
-     * Sets release_date
+     * Sets releaseDate
      *
-     * @param \DateTime|null $release_date release_date
+     * @param \DateTime|null $releaseDate releaseDate
      *
      * @return self
      */
-    public function setReleaseDate($release_date)
+    public function setReleaseDate($releaseDate)
     {
-        $this->container['release_date'] = $release_date;
+        $this->container['releaseDate'] = $releaseDate;
 
         return $this;
     }
 
     /**
-     * Gets prep_details_list
+     * Gets prepDetailsList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null
      */
     public function getPrepDetailsList()
     {
-        return $this->container['prep_details_list'];
+        return $this->container['prepDetailsList'];
     }
 
     /**
-     * Sets prep_details_list
+     * Sets prepDetailsList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prep_details_list A list of preparation instructions and who is responsible for that preparation.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prepDetailsList A list of preparation instructions and who is responsible for that preparation.
      *
      * @return self
      */
-    public function setPrepDetailsList($prep_details_list)
+    public function setPrepDetailsList($prepDetailsList)
     {
-        $this->container['prep_details_list'] = $prep_details_list;
+        $this->container['prepDetailsList'] = $prepDetailsList;
 
         return $this;
     }

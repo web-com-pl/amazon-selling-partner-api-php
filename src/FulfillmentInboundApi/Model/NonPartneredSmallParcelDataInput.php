@@ -62,8 +62,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_name' => 'string',
-        'package_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageInput[]'
+        'carrierName' => 'string',
+        'packageList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageInput[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_name' => null,
-        'package_list' => null
+        'carrierName' => null,
+        'packageList' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_name' => 'CarrierName',
-        'package_list' => 'PackageList'
+        'carrierName' => 'CarrierName',
+        'packageList' => 'PackageList'
     ];
 
     /**
@@ -115,8 +115,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'carrier_name' => 'setCarrierName',
-        'package_list' => 'setPackageList'
+        'carrierName' => 'setCarrierName',
+        'packageList' => 'setPackageList'
     ];
 
     /**
@@ -125,8 +125,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'carrier_name' => 'getCarrierName',
-        'package_list' => 'getPackageList'
+        'carrierName' => 'getCarrierName',
+        'packageList' => 'getPackageList'
     ];
 
     /**
@@ -189,8 +189,8 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
-        $this->container['package_list'] = $data['package_list'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
+        $this->container['packageList'] = $data['packageList'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
-        if ($this->container['package_list'] === null) {
-            $invalidProperties[] = "'package_list' can't be null";
+        if ($this->container['packageList'] === null) {
+            $invalidProperties[] = "'packageList' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class NonPartneredSmallParcelDataInput implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The carrier that you are using for the inbound shipment.
+     * @param string $carrierName The carrier that you are using for the inbound shipment.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }
 
     /**
-     * Gets package_list
+     * Gets packageList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageInput[]
      */
     public function getPackageList()
     {
-        return $this->container['package_list'];
+        return $this->container['packageList'];
     }
 
     /**
-     * Sets package_list
+     * Sets packageList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageInput[] $package_list A list of package tracking information.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelPackageInput[] $packageList A list of package tracking information.
      *
      * @return self
      */
-    public function setPackageList($package_list)
+    public function setPackageList($packageList)
     {
-        $this->container['package_list'] = $package_list;
+        $this->container['packageList'] = $packageList;
 
         return $this;
     }

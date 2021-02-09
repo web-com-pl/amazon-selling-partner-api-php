@@ -118,30 +118,30 @@ class FbaOutboundApi
     /**
      * Operation cancelFulfillmentOrder
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse
      */
-    public function cancelFulfillmentOrder($seller_fulfillment_order_id)
+    public function cancelFulfillmentOrder($sellerFulfillmentOrderId)
     {
-        list($response) = $this->cancelFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id);
+        list($response) = $this->cancelFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId);
         return $response;
     }
 
     /**
      * Operation cancelFulfillmentOrderWithHttpInfo
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id)
+    public function cancelFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId)
     {
-        $request = $this->cancelFulfillmentOrderRequest($seller_fulfillment_order_id);
+        $request = $this->cancelFulfillmentOrderRequest($sellerFulfillmentOrderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -361,14 +361,14 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelFulfillmentOrderAsync($seller_fulfillment_order_id)
+    public function cancelFulfillmentOrderAsync($sellerFulfillmentOrderId)
     {
-        return $this->cancelFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id)
+        return $this->cancelFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -381,15 +381,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id)
+    public function cancelFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CancelFulfillmentOrderResponse';
-        $request = $this->cancelFulfillmentOrderRequest($seller_fulfillment_order_id);
+        $request = $this->cancelFulfillmentOrderRequest($sellerFulfillmentOrderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -428,21 +428,21 @@ class FbaOutboundApi
     /**
      * Create request for operation 'cancelFulfillmentOrder'
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cancelFulfillmentOrderRequest($seller_fulfillment_order_id)
+    public function cancelFulfillmentOrderRequest($sellerFulfillmentOrderId)
     {
-        // verify the required parameter 'seller_fulfillment_order_id' is set
-        if ($seller_fulfillment_order_id === null || (is_array($seller_fulfillment_order_id) && count($seller_fulfillment_order_id) === 0)) {
+        // verify the required parameter 'sellerFulfillmentOrderId' is set
+        if ($sellerFulfillmentOrderId === null || (is_array($sellerFulfillmentOrderId) && count($sellerFulfillmentOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_fulfillment_order_id when calling cancelFulfillmentOrder'
+                'Missing the required parameter $sellerFulfillmentOrderId when calling cancelFulfillmentOrder'
             );
         }
-        if (strlen($seller_fulfillment_order_id) > 40) {
-            throw new \InvalidArgumentException('invalid length for "$seller_fulfillment_order_id" when calling FbaOutboundApi.cancelFulfillmentOrder, must be smaller than or equal to 40.');
+        if (strlen($sellerFulfillmentOrderId) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$sellerFulfillmentOrderId" when calling FbaOutboundApi.cancelFulfillmentOrder, must be smaller than or equal to 40.');
         }
 
 
@@ -456,10 +456,10 @@ class FbaOutboundApi
 
 
         // path params
-        if ($seller_fulfillment_order_id !== null) {
+        if ($sellerFulfillmentOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'sellerFulfillmentOrderId' . '}',
-                ObjectSerializer::toPathValue($seller_fulfillment_order_id),
+                ObjectSerializer::toPathValue($sellerFulfillmentOrderId),
                 $resourcePath
             );
         }
@@ -926,32 +926,32 @@ class FbaOutboundApi
     /**
      * Operation createFulfillmentReturn
      *
-     * @param  string $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
+     * @param  string $sellerFulfillmentOrderId An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse
      */
-    public function createFulfillmentReturn($seller_fulfillment_order_id, $body)
+    public function createFulfillmentReturn($sellerFulfillmentOrderId, $body)
     {
-        list($response) = $this->createFulfillmentReturnWithHttpInfo($seller_fulfillment_order_id, $body);
+        list($response) = $this->createFulfillmentReturnWithHttpInfo($sellerFulfillmentOrderId, $body);
         return $response;
     }
 
     /**
      * Operation createFulfillmentReturnWithHttpInfo
      *
-     * @param  string $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
+     * @param  string $sellerFulfillmentOrderId An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFulfillmentReturnWithHttpInfo($seller_fulfillment_order_id, $body)
+    public function createFulfillmentReturnWithHttpInfo($sellerFulfillmentOrderId, $body)
     {
-        $request = $this->createFulfillmentReturnRequest($seller_fulfillment_order_id, $body);
+        $request = $this->createFulfillmentReturnRequest($sellerFulfillmentOrderId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1171,15 +1171,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
+     * @param  string $sellerFulfillmentOrderId An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFulfillmentReturnAsync($seller_fulfillment_order_id, $body)
+    public function createFulfillmentReturnAsync($sellerFulfillmentOrderId, $body)
     {
-        return $this->createFulfillmentReturnAsyncWithHttpInfo($seller_fulfillment_order_id, $body)
+        return $this->createFulfillmentReturnAsyncWithHttpInfo($sellerFulfillmentOrderId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1192,16 +1192,16 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
+     * @param  string $sellerFulfillmentOrderId An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFulfillmentReturnAsyncWithHttpInfo($seller_fulfillment_order_id, $body)
+    public function createFulfillmentReturnAsyncWithHttpInfo($sellerFulfillmentOrderId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnResponse';
-        $request = $this->createFulfillmentReturnRequest($seller_fulfillment_order_id, $body);
+        $request = $this->createFulfillmentReturnRequest($sellerFulfillmentOrderId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1240,18 +1240,18 @@ class FbaOutboundApi
     /**
      * Create request for operation 'createFulfillmentReturn'
      *
-     * @param  string $seller_fulfillment_order_id An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
+     * @param  string $sellerFulfillmentOrderId An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer&#39;s request to return items. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\CreateFulfillmentReturnRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFulfillmentReturnRequest($seller_fulfillment_order_id, $body)
+    public function createFulfillmentReturnRequest($sellerFulfillmentOrderId, $body)
     {
-        // verify the required parameter 'seller_fulfillment_order_id' is set
-        if ($seller_fulfillment_order_id === null || (is_array($seller_fulfillment_order_id) && count($seller_fulfillment_order_id) === 0)) {
+        // verify the required parameter 'sellerFulfillmentOrderId' is set
+        if ($sellerFulfillmentOrderId === null || (is_array($sellerFulfillmentOrderId) && count($sellerFulfillmentOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_fulfillment_order_id when calling createFulfillmentReturn'
+                'Missing the required parameter $sellerFulfillmentOrderId when calling createFulfillmentReturn'
             );
         }
         // verify the required parameter 'body' is set
@@ -1271,10 +1271,10 @@ class FbaOutboundApi
 
 
         // path params
-        if ($seller_fulfillment_order_id !== null) {
+        if ($sellerFulfillmentOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'sellerFulfillmentOrderId' . '}',
-                ObjectSerializer::toPathValue($seller_fulfillment_order_id),
+                ObjectSerializer::toPathValue($sellerFulfillmentOrderId),
                 $resourcePath
             );
         }
@@ -1346,34 +1346,34 @@ class FbaOutboundApi
     /**
      * Operation getFeatureInventory
      *
-     * @param  string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
-     * @param  string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
-     * @param  string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
+     * @param  string $marketplaceId The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
+     * @param  string $featureName The name of the feature for which to return a list of eligible inventory. (required)
+     * @param  string $nextToken A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse
      */
-    public function getFeatureInventory($marketplace_id, $feature_name, $next_token = null)
+    public function getFeatureInventory($marketplaceId, $featureName, $nextToken = null)
     {
-        list($response) = $this->getFeatureInventoryWithHttpInfo($marketplace_id, $feature_name, $next_token);
+        list($response) = $this->getFeatureInventoryWithHttpInfo($marketplaceId, $featureName, $nextToken);
         return $response;
     }
 
     /**
      * Operation getFeatureInventoryWithHttpInfo
      *
-     * @param  string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
-     * @param  string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
-     * @param  string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
+     * @param  string $marketplaceId The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
+     * @param  string $featureName The name of the feature for which to return a list of eligible inventory. (required)
+     * @param  string $nextToken A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFeatureInventoryWithHttpInfo($marketplace_id, $feature_name, $next_token = null)
+    public function getFeatureInventoryWithHttpInfo($marketplaceId, $featureName, $nextToken = null)
     {
-        $request = $this->getFeatureInventoryRequest($marketplace_id, $feature_name, $next_token);
+        $request = $this->getFeatureInventoryRequest($marketplaceId, $featureName, $nextToken);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1593,16 +1593,16 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
-     * @param  string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
-     * @param  string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
+     * @param  string $marketplaceId The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
+     * @param  string $featureName The name of the feature for which to return a list of eligible inventory. (required)
+     * @param  string $nextToken A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeatureInventoryAsync($marketplace_id, $feature_name, $next_token = null)
+    public function getFeatureInventoryAsync($marketplaceId, $featureName, $nextToken = null)
     {
-        return $this->getFeatureInventoryAsyncWithHttpInfo($marketplace_id, $feature_name, $next_token)
+        return $this->getFeatureInventoryAsyncWithHttpInfo($marketplaceId, $featureName, $nextToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1615,17 +1615,17 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
-     * @param  string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
-     * @param  string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
+     * @param  string $marketplaceId The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
+     * @param  string $featureName The name of the feature for which to return a list of eligible inventory. (required)
+     * @param  string $nextToken A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeatureInventoryAsyncWithHttpInfo($marketplace_id, $feature_name, $next_token = null)
+    public function getFeatureInventoryAsyncWithHttpInfo($marketplaceId, $featureName, $nextToken = null)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureInventoryResponse';
-        $request = $this->getFeatureInventoryRequest($marketplace_id, $feature_name, $next_token);
+        $request = $this->getFeatureInventoryRequest($marketplaceId, $featureName, $nextToken);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1664,25 +1664,25 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getFeatureInventory'
      *
-     * @param  string $marketplace_id The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
-     * @param  string $feature_name The name of the feature for which to return a list of eligible inventory. (required)
-     * @param  string $next_token A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
+     * @param  string $marketplaceId The marketplace for which to return a list of the inventory that is eligible for the specified feature. (required)
+     * @param  string $featureName The name of the feature for which to return a list of eligible inventory. (required)
+     * @param  string $nextToken A string token returned in the response to your previous request that is used to return the next response page. A value of null will return the first page. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFeatureInventoryRequest($marketplace_id, $feature_name, $next_token = null)
+    public function getFeatureInventoryRequest($marketplaceId, $featureName, $nextToken = null)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getFeatureInventory'
+                'Missing the required parameter $marketplaceId when calling getFeatureInventory'
             );
         }
-        // verify the required parameter 'feature_name' is set
-        if ($feature_name === null || (is_array($feature_name) && count($feature_name) === 0)) {
+        // verify the required parameter 'featureName' is set
+        if ($featureName === null || (is_array($featureName) && count($featureName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $feature_name when calling getFeatureInventory'
+                'Missing the required parameter $featureName when calling getFeatureInventory'
             );
         }
 
@@ -1694,26 +1694,26 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['marketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['marketplaceId'] = $marketplaceId;
         }
         // query params
-        if (is_array($next_token)) {
-            $next_token = ObjectSerializer::serializeCollection($next_token, '', true);
+        if (is_array($nextToken)) {
+            $nextToken = ObjectSerializer::serializeCollection($nextToken, '', true);
         }
-        if ($next_token !== null) {
-            $queryParams['nextToken'] = $next_token;
+        if ($nextToken !== null) {
+            $queryParams['nextToken'] = $nextToken;
         }
 
 
         // path params
-        if ($feature_name !== null) {
+        if ($featureName !== null) {
             $resourcePath = str_replace(
                 '{' . 'featureName' . '}',
-                ObjectSerializer::toPathValue($feature_name),
+                ObjectSerializer::toPathValue($featureName),
                 $resourcePath
             );
         }
@@ -1779,34 +1779,34 @@ class FbaOutboundApi
     /**
      * Operation getFeatureSKU
      *
-     * @param  string $marketplace_id The marketplace for which to return the count. (required)
-     * @param  string $feature_name The name of the feature. (required)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId The marketplace for which to return the count. (required)
+     * @param  string $featureName The name of the feature. (required)
+     * @param  string $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse
      */
-    public function getFeatureSKU($marketplace_id, $feature_name, $seller_sku)
+    public function getFeatureSKU($marketplaceId, $featureName, $sellerSku)
     {
-        list($response) = $this->getFeatureSKUWithHttpInfo($marketplace_id, $feature_name, $seller_sku);
+        list($response) = $this->getFeatureSKUWithHttpInfo($marketplaceId, $featureName, $sellerSku);
         return $response;
     }
 
     /**
      * Operation getFeatureSKUWithHttpInfo
      *
-     * @param  string $marketplace_id The marketplace for which to return the count. (required)
-     * @param  string $feature_name The name of the feature. (required)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId The marketplace for which to return the count. (required)
+     * @param  string $featureName The name of the feature. (required)
+     * @param  string $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFeatureSKUWithHttpInfo($marketplace_id, $feature_name, $seller_sku)
+    public function getFeatureSKUWithHttpInfo($marketplaceId, $featureName, $sellerSku)
     {
-        $request = $this->getFeatureSKURequest($marketplace_id, $feature_name, $seller_sku);
+        $request = $this->getFeatureSKURequest($marketplaceId, $featureName, $sellerSku);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2026,16 +2026,16 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return the count. (required)
-     * @param  string $feature_name The name of the feature. (required)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId The marketplace for which to return the count. (required)
+     * @param  string $featureName The name of the feature. (required)
+     * @param  string $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeatureSKUAsync($marketplace_id, $feature_name, $seller_sku)
+    public function getFeatureSKUAsync($marketplaceId, $featureName, $sellerSku)
     {
-        return $this->getFeatureSKUAsyncWithHttpInfo($marketplace_id, $feature_name, $seller_sku)
+        return $this->getFeatureSKUAsyncWithHttpInfo($marketplaceId, $featureName, $sellerSku)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2048,17 +2048,17 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return the count. (required)
-     * @param  string $feature_name The name of the feature. (required)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId The marketplace for which to return the count. (required)
+     * @param  string $featureName The name of the feature. (required)
+     * @param  string $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeatureSKUAsyncWithHttpInfo($marketplace_id, $feature_name, $seller_sku)
+    public function getFeatureSKUAsyncWithHttpInfo($marketplaceId, $featureName, $sellerSku)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeatureSkuResponse';
-        $request = $this->getFeatureSKURequest($marketplace_id, $feature_name, $seller_sku);
+        $request = $this->getFeatureSKURequest($marketplaceId, $featureName, $sellerSku);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2097,31 +2097,31 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getFeatureSKU'
      *
-     * @param  string $marketplace_id The marketplace for which to return the count. (required)
-     * @param  string $feature_name The name of the feature. (required)
-     * @param  string $seller_sku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId The marketplace for which to return the count. (required)
+     * @param  string $featureName The name of the feature. (required)
+     * @param  string $sellerSku Used to identify an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFeatureSKURequest($marketplace_id, $feature_name, $seller_sku)
+    public function getFeatureSKURequest($marketplaceId, $featureName, $sellerSku)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getFeatureSKU'
+                'Missing the required parameter $marketplaceId when calling getFeatureSKU'
             );
         }
-        // verify the required parameter 'feature_name' is set
-        if ($feature_name === null || (is_array($feature_name) && count($feature_name) === 0)) {
+        // verify the required parameter 'featureName' is set
+        if ($featureName === null || (is_array($featureName) && count($featureName) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $feature_name when calling getFeatureSKU'
+                'Missing the required parameter $featureName when calling getFeatureSKU'
             );
         }
-        // verify the required parameter 'seller_sku' is set
-        if ($seller_sku === null || (is_array($seller_sku) && count($seller_sku) === 0)) {
+        // verify the required parameter 'sellerSku' is set
+        if ($sellerSku === null || (is_array($sellerSku) && count($sellerSku) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_sku when calling getFeatureSKU'
+                'Missing the required parameter $sellerSku when calling getFeatureSKU'
             );
         }
 
@@ -2133,27 +2133,27 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['marketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['marketplaceId'] = $marketplaceId;
         }
 
 
         // path params
-        if ($feature_name !== null) {
+        if ($featureName !== null) {
             $resourcePath = str_replace(
                 '{' . 'featureName' . '}',
-                ObjectSerializer::toPathValue($feature_name),
+                ObjectSerializer::toPathValue($featureName),
                 $resourcePath
             );
         }
         // path params
-        if ($seller_sku !== null) {
+        if ($sellerSku !== null) {
             $resourcePath = str_replace(
                 '{' . 'sellerSku' . '}',
-                ObjectSerializer::toPathValue($seller_sku),
+                ObjectSerializer::toPathValue($sellerSku),
                 $resourcePath
             );
         }
@@ -2219,30 +2219,30 @@ class FbaOutboundApi
     /**
      * Operation getFeatures
      *
-     * @param  string $marketplace_id The marketplace for which to return the list of features. (required)
+     * @param  string $marketplaceId The marketplace for which to return the list of features. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse
      */
-    public function getFeatures($marketplace_id)
+    public function getFeatures($marketplaceId)
     {
-        list($response) = $this->getFeaturesWithHttpInfo($marketplace_id);
+        list($response) = $this->getFeaturesWithHttpInfo($marketplaceId);
         return $response;
     }
 
     /**
      * Operation getFeaturesWithHttpInfo
      *
-     * @param  string $marketplace_id The marketplace for which to return the list of features. (required)
+     * @param  string $marketplaceId The marketplace for which to return the list of features. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFeaturesWithHttpInfo($marketplace_id)
+    public function getFeaturesWithHttpInfo($marketplaceId)
     {
-        $request = $this->getFeaturesRequest($marketplace_id);
+        $request = $this->getFeaturesRequest($marketplaceId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2462,14 +2462,14 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return the list of features. (required)
+     * @param  string $marketplaceId The marketplace for which to return the list of features. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeaturesAsync($marketplace_id)
+    public function getFeaturesAsync($marketplaceId)
     {
-        return $this->getFeaturesAsyncWithHttpInfo($marketplace_id)
+        return $this->getFeaturesAsyncWithHttpInfo($marketplaceId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2482,15 +2482,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $marketplace_id The marketplace for which to return the list of features. (required)
+     * @param  string $marketplaceId The marketplace for which to return the list of features. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFeaturesAsyncWithHttpInfo($marketplace_id)
+    public function getFeaturesAsyncWithHttpInfo($marketplaceId)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFeaturesResponse';
-        $request = $this->getFeaturesRequest($marketplace_id);
+        $request = $this->getFeaturesRequest($marketplaceId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2529,17 +2529,17 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getFeatures'
      *
-     * @param  string $marketplace_id The marketplace for which to return the list of features. (required)
+     * @param  string $marketplaceId The marketplace for which to return the list of features. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFeaturesRequest($marketplace_id)
+    public function getFeaturesRequest($marketplaceId)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getFeatures'
+                'Missing the required parameter $marketplaceId when calling getFeatures'
             );
         }
 
@@ -2551,11 +2551,11 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['marketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['marketplaceId'] = $marketplaceId;
         }
 
 
@@ -2621,30 +2621,30 @@ class FbaOutboundApi
     /**
      * Operation getFulfillmentOrder
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse
      */
-    public function getFulfillmentOrder($seller_fulfillment_order_id)
+    public function getFulfillmentOrder($sellerFulfillmentOrderId)
     {
-        list($response) = $this->getFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id);
+        list($response) = $this->getFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId);
         return $response;
     }
 
     /**
      * Operation getFulfillmentOrderWithHttpInfo
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id)
+    public function getFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId)
     {
-        $request = $this->getFulfillmentOrderRequest($seller_fulfillment_order_id);
+        $request = $this->getFulfillmentOrderRequest($sellerFulfillmentOrderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2864,14 +2864,14 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentOrderAsync($seller_fulfillment_order_id)
+    public function getFulfillmentOrderAsync($sellerFulfillmentOrderId)
     {
-        return $this->getFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id)
+        return $this->getFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2884,15 +2884,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id)
+    public function getFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentOrderResponse';
-        $request = $this->getFulfillmentOrderRequest($seller_fulfillment_order_id);
+        $request = $this->getFulfillmentOrderRequest($sellerFulfillmentOrderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2931,21 +2931,21 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getFulfillmentOrder'
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFulfillmentOrderRequest($seller_fulfillment_order_id)
+    public function getFulfillmentOrderRequest($sellerFulfillmentOrderId)
     {
-        // verify the required parameter 'seller_fulfillment_order_id' is set
-        if ($seller_fulfillment_order_id === null || (is_array($seller_fulfillment_order_id) && count($seller_fulfillment_order_id) === 0)) {
+        // verify the required parameter 'sellerFulfillmentOrderId' is set
+        if ($sellerFulfillmentOrderId === null || (is_array($sellerFulfillmentOrderId) && count($sellerFulfillmentOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_fulfillment_order_id when calling getFulfillmentOrder'
+                'Missing the required parameter $sellerFulfillmentOrderId when calling getFulfillmentOrder'
             );
         }
-        if (strlen($seller_fulfillment_order_id) > 40) {
-            throw new \InvalidArgumentException('invalid length for "$seller_fulfillment_order_id" when calling FbaOutboundApi.getFulfillmentOrder, must be smaller than or equal to 40.');
+        if (strlen($sellerFulfillmentOrderId) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$sellerFulfillmentOrderId" when calling FbaOutboundApi.getFulfillmentOrder, must be smaller than or equal to 40.');
         }
 
 
@@ -2959,10 +2959,10 @@ class FbaOutboundApi
 
 
         // path params
-        if ($seller_fulfillment_order_id !== null) {
+        if ($sellerFulfillmentOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'sellerFulfillmentOrderId' . '}',
-                ObjectSerializer::toPathValue($seller_fulfillment_order_id),
+                ObjectSerializer::toPathValue($sellerFulfillmentOrderId),
                 $resourcePath
             );
         }
@@ -3429,30 +3429,30 @@ class FbaOutboundApi
     /**
      * Operation getPackageTrackingDetails
      *
-     * @param  int $package_number The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
+     * @param  int $packageNumber The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse
      */
-    public function getPackageTrackingDetails($package_number)
+    public function getPackageTrackingDetails($packageNumber)
     {
-        list($response) = $this->getPackageTrackingDetailsWithHttpInfo($package_number);
+        list($response) = $this->getPackageTrackingDetailsWithHttpInfo($packageNumber);
         return $response;
     }
 
     /**
      * Operation getPackageTrackingDetailsWithHttpInfo
      *
-     * @param  int $package_number The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
+     * @param  int $packageNumber The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPackageTrackingDetailsWithHttpInfo($package_number)
+    public function getPackageTrackingDetailsWithHttpInfo($packageNumber)
     {
-        $request = $this->getPackageTrackingDetailsRequest($package_number);
+        $request = $this->getPackageTrackingDetailsRequest($packageNumber);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3672,14 +3672,14 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  int $package_number The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
+     * @param  int $packageNumber The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageTrackingDetailsAsync($package_number)
+    public function getPackageTrackingDetailsAsync($packageNumber)
     {
-        return $this->getPackageTrackingDetailsAsyncWithHttpInfo($package_number)
+        return $this->getPackageTrackingDetailsAsyncWithHttpInfo($packageNumber)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3692,15 +3692,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  int $package_number The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
+     * @param  int $packageNumber The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageTrackingDetailsAsyncWithHttpInfo($package_number)
+    public function getPackageTrackingDetailsAsyncWithHttpInfo($packageNumber)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetPackageTrackingDetailsResponse';
-        $request = $this->getPackageTrackingDetailsRequest($package_number);
+        $request = $this->getPackageTrackingDetailsRequest($packageNumber);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3739,17 +3739,17 @@ class FbaOutboundApi
     /**
      * Create request for operation 'getPackageTrackingDetails'
      *
-     * @param  int $package_number The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
+     * @param  int $packageNumber The unencrypted package identifier returned by the getFulfillmentOrder operation. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getPackageTrackingDetailsRequest($package_number)
+    public function getPackageTrackingDetailsRequest($packageNumber)
     {
-        // verify the required parameter 'package_number' is set
-        if ($package_number === null || (is_array($package_number) && count($package_number) === 0)) {
+        // verify the required parameter 'packageNumber' is set
+        if ($packageNumber === null || (is_array($packageNumber) && count($packageNumber) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $package_number when calling getPackageTrackingDetails'
+                'Missing the required parameter $packageNumber when calling getPackageTrackingDetails'
             );
         }
 
@@ -3761,11 +3761,11 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($package_number)) {
-            $package_number = ObjectSerializer::serializeCollection($package_number, '', true);
+        if (is_array($packageNumber)) {
+            $packageNumber = ObjectSerializer::serializeCollection($packageNumber, '', true);
         }
-        if ($package_number !== null) {
-            $queryParams['packageNumber'] = $package_number;
+        if ($packageNumber !== null) {
+            $queryParams['packageNumber'] = $packageNumber;
         }
 
 
@@ -3831,32 +3831,32 @@ class FbaOutboundApi
     /**
      * Operation listAllFulfillmentOrders
      *
-     * @param  \DateTime $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
-     * @param  string $next_token A string token returned in the response to your previous request. (optional)
+     * @param  \DateTime $queryStartDate A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param  string $nextToken A string token returned in the response to your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse
      */
-    public function listAllFulfillmentOrders($query_start_date = null, $next_token = null)
+    public function listAllFulfillmentOrders($queryStartDate = null, $nextToken = null)
     {
-        list($response) = $this->listAllFulfillmentOrdersWithHttpInfo($query_start_date, $next_token);
+        list($response) = $this->listAllFulfillmentOrdersWithHttpInfo($queryStartDate, $nextToken);
         return $response;
     }
 
     /**
      * Operation listAllFulfillmentOrdersWithHttpInfo
      *
-     * @param  \DateTime $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
-     * @param  string $next_token A string token returned in the response to your previous request. (optional)
+     * @param  \DateTime $queryStartDate A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param  string $nextToken A string token returned in the response to your previous request. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listAllFulfillmentOrdersWithHttpInfo($query_start_date = null, $next_token = null)
+    public function listAllFulfillmentOrdersWithHttpInfo($queryStartDate = null, $nextToken = null)
     {
-        $request = $this->listAllFulfillmentOrdersRequest($query_start_date, $next_token);
+        $request = $this->listAllFulfillmentOrdersRequest($queryStartDate, $nextToken);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4076,15 +4076,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  \DateTime $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
-     * @param  string $next_token A string token returned in the response to your previous request. (optional)
+     * @param  \DateTime $queryStartDate A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param  string $nextToken A string token returned in the response to your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listAllFulfillmentOrdersAsync($query_start_date = null, $next_token = null)
+    public function listAllFulfillmentOrdersAsync($queryStartDate = null, $nextToken = null)
     {
-        return $this->listAllFulfillmentOrdersAsyncWithHttpInfo($query_start_date, $next_token)
+        return $this->listAllFulfillmentOrdersAsyncWithHttpInfo($queryStartDate, $nextToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4097,16 +4097,16 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  \DateTime $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
-     * @param  string $next_token A string token returned in the response to your previous request. (optional)
+     * @param  \DateTime $queryStartDate A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param  string $nextToken A string token returned in the response to your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listAllFulfillmentOrdersAsyncWithHttpInfo($query_start_date = null, $next_token = null)
+    public function listAllFulfillmentOrdersAsyncWithHttpInfo($queryStartDate = null, $nextToken = null)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListAllFulfillmentOrdersResponse';
-        $request = $this->listAllFulfillmentOrdersRequest($query_start_date, $next_token);
+        $request = $this->listAllFulfillmentOrdersRequest($queryStartDate, $nextToken);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4145,13 +4145,13 @@ class FbaOutboundApi
     /**
      * Create request for operation 'listAllFulfillmentOrders'
      *
-     * @param  \DateTime $query_start_date A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
-     * @param  string $next_token A string token returned in the response to your previous request. (optional)
+     * @param  \DateTime $queryStartDate A date used to select fulfillment orders that were last updated after (or at) a specified time. An update is defined as any change in fulfillment order status, including the creation of a new fulfillment order. (optional)
+     * @param  string $nextToken A string token returned in the response to your previous request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listAllFulfillmentOrdersRequest($query_start_date = null, $next_token = null)
+    public function listAllFulfillmentOrdersRequest($queryStartDate = null, $nextToken = null)
     {
 
         $resourcePath = '/fba/outbound/2020-07-01/fulfillmentOrders';
@@ -4162,18 +4162,18 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($query_start_date)) {
-            $query_start_date = ObjectSerializer::serializeCollection($query_start_date, '', true);
+        if (is_array($queryStartDate)) {
+            $queryStartDate = ObjectSerializer::serializeCollection($queryStartDate, '', true);
         }
-        if ($query_start_date !== null) {
-            $queryParams['queryStartDate'] = $query_start_date;
+        if ($queryStartDate !== null) {
+            $queryParams['queryStartDate'] = $queryStartDate;
         }
         // query params
-        if (is_array($next_token)) {
-            $next_token = ObjectSerializer::serializeCollection($next_token, '', true);
+        if (is_array($nextToken)) {
+            $nextToken = ObjectSerializer::serializeCollection($nextToken, '', true);
         }
-        if ($next_token !== null) {
-            $queryParams['nextToken'] = $next_token;
+        if ($nextToken !== null) {
+            $queryParams['nextToken'] = $nextToken;
         }
 
 
@@ -4239,36 +4239,36 @@ class FbaOutboundApi
     /**
      * Operation listReturnReasonCodes
      *
-     * @param  string $seller_sku The seller SKU for which return reason codes are required. (required)
+     * @param  string $sellerSku The seller SKU for which return reason codes are required. (required)
      * @param  string $language The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into. (required)
-     * @param  string $marketplace_id The marketplace for which the seller wants return reason codes. (optional)
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $marketplaceId The marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse
      */
-    public function listReturnReasonCodes($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
+    public function listReturnReasonCodes($sellerSku, $language, $marketplaceId = null, $sellerFulfillmentOrderId = null)
     {
-        list($response) = $this->listReturnReasonCodesWithHttpInfo($seller_sku, $language, $marketplace_id, $seller_fulfillment_order_id);
+        list($response) = $this->listReturnReasonCodesWithHttpInfo($sellerSku, $language, $marketplaceId, $sellerFulfillmentOrderId);
         return $response;
     }
 
     /**
      * Operation listReturnReasonCodesWithHttpInfo
      *
-     * @param  string $seller_sku The seller SKU for which return reason codes are required. (required)
+     * @param  string $sellerSku The seller SKU for which return reason codes are required. (required)
      * @param  string $language The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into. (required)
-     * @param  string $marketplace_id The marketplace for which the seller wants return reason codes. (optional)
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $marketplaceId The marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listReturnReasonCodesWithHttpInfo($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
+    public function listReturnReasonCodesWithHttpInfo($sellerSku, $language, $marketplaceId = null, $sellerFulfillmentOrderId = null)
     {
-        $request = $this->listReturnReasonCodesRequest($seller_sku, $language, $marketplace_id, $seller_fulfillment_order_id);
+        $request = $this->listReturnReasonCodesRequest($sellerSku, $language, $marketplaceId, $sellerFulfillmentOrderId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4488,17 +4488,17 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_sku The seller SKU for which return reason codes are required. (required)
+     * @param  string $sellerSku The seller SKU for which return reason codes are required. (required)
      * @param  string $language The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into. (required)
-     * @param  string $marketplace_id The marketplace for which the seller wants return reason codes. (optional)
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $marketplaceId The marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listReturnReasonCodesAsync($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
+    public function listReturnReasonCodesAsync($sellerSku, $language, $marketplaceId = null, $sellerFulfillmentOrderId = null)
     {
-        return $this->listReturnReasonCodesAsyncWithHttpInfo($seller_sku, $language, $marketplace_id, $seller_fulfillment_order_id)
+        return $this->listReturnReasonCodesAsyncWithHttpInfo($sellerSku, $language, $marketplaceId, $sellerFulfillmentOrderId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4511,18 +4511,18 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_sku The seller SKU for which return reason codes are required. (required)
+     * @param  string $sellerSku The seller SKU for which return reason codes are required. (required)
      * @param  string $language The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into. (required)
-     * @param  string $marketplace_id The marketplace for which the seller wants return reason codes. (optional)
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $marketplaceId The marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listReturnReasonCodesAsyncWithHttpInfo($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
+    public function listReturnReasonCodesAsyncWithHttpInfo($sellerSku, $language, $marketplaceId = null, $sellerFulfillmentOrderId = null)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ListReturnReasonCodesResponse';
-        $request = $this->listReturnReasonCodesRequest($seller_sku, $language, $marketplace_id, $seller_fulfillment_order_id);
+        $request = $this->listReturnReasonCodesRequest($sellerSku, $language, $marketplaceId, $sellerFulfillmentOrderId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4561,20 +4561,20 @@ class FbaOutboundApi
     /**
      * Create request for operation 'listReturnReasonCodes'
      *
-     * @param  string $seller_sku The seller SKU for which return reason codes are required. (required)
+     * @param  string $sellerSku The seller SKU for which return reason codes are required. (required)
      * @param  string $language The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into. (required)
-     * @param  string $marketplace_id The marketplace for which the seller wants return reason codes. (optional)
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $marketplaceId The marketplace for which the seller wants return reason codes. (optional)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. The service uses this value to determine the marketplace for which the seller wants return reason codes. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listReturnReasonCodesRequest($seller_sku, $language, $marketplace_id = null, $seller_fulfillment_order_id = null)
+    public function listReturnReasonCodesRequest($sellerSku, $language, $marketplaceId = null, $sellerFulfillmentOrderId = null)
     {
-        // verify the required parameter 'seller_sku' is set
-        if ($seller_sku === null || (is_array($seller_sku) && count($seller_sku) === 0)) {
+        // verify the required parameter 'sellerSku' is set
+        if ($sellerSku === null || (is_array($sellerSku) && count($sellerSku) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_sku when calling listReturnReasonCodes'
+                'Missing the required parameter $sellerSku when calling listReturnReasonCodes'
             );
         }
         // verify the required parameter 'language' is set
@@ -4592,25 +4592,25 @@ class FbaOutboundApi
         $multipart = false;
 
         // query params
-        if (is_array($seller_sku)) {
-            $seller_sku = ObjectSerializer::serializeCollection($seller_sku, '', true);
+        if (is_array($sellerSku)) {
+            $sellerSku = ObjectSerializer::serializeCollection($sellerSku, '', true);
         }
-        if ($seller_sku !== null) {
-            $queryParams['sellerSku'] = $seller_sku;
-        }
-        // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
-        }
-        if ($marketplace_id !== null) {
-            $queryParams['marketplaceId'] = $marketplace_id;
+        if ($sellerSku !== null) {
+            $queryParams['sellerSku'] = $sellerSku;
         }
         // query params
-        if (is_array($seller_fulfillment_order_id)) {
-            $seller_fulfillment_order_id = ObjectSerializer::serializeCollection($seller_fulfillment_order_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($seller_fulfillment_order_id !== null) {
-            $queryParams['sellerFulfillmentOrderId'] = $seller_fulfillment_order_id;
+        if ($marketplaceId !== null) {
+            $queryParams['marketplaceId'] = $marketplaceId;
+        }
+        // query params
+        if (is_array($sellerFulfillmentOrderId)) {
+            $sellerFulfillmentOrderId = ObjectSerializer::serializeCollection($sellerFulfillmentOrderId, '', true);
+        }
+        if ($sellerFulfillmentOrderId !== null) {
+            $queryParams['sellerFulfillmentOrderId'] = $sellerFulfillmentOrderId;
         }
         // query params
         if (is_array($language)) {
@@ -4683,32 +4683,32 @@ class FbaOutboundApi
     /**
      * Operation updateFulfillmentOrder
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse
      */
-    public function updateFulfillmentOrder($seller_fulfillment_order_id, $body)
+    public function updateFulfillmentOrder($sellerFulfillmentOrderId, $body)
     {
-        list($response) = $this->updateFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id, $body);
+        list($response) = $this->updateFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId, $body);
         return $response;
     }
 
     /**
      * Operation updateFulfillmentOrderWithHttpInfo
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentOutboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse|\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateFulfillmentOrderWithHttpInfo($seller_fulfillment_order_id, $body)
+    public function updateFulfillmentOrderWithHttpInfo($sellerFulfillmentOrderId, $body)
     {
-        $request = $this->updateFulfillmentOrderRequest($seller_fulfillment_order_id, $body);
+        $request = $this->updateFulfillmentOrderRequest($sellerFulfillmentOrderId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4928,15 +4928,15 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateFulfillmentOrderAsync($seller_fulfillment_order_id, $body)
+    public function updateFulfillmentOrderAsync($sellerFulfillmentOrderId, $body)
     {
-        return $this->updateFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id, $body)
+        return $this->updateFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4949,16 +4949,16 @@ class FbaOutboundApi
      *
      * 
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateFulfillmentOrderAsyncWithHttpInfo($seller_fulfillment_order_id, $body)
+    public function updateFulfillmentOrderAsyncWithHttpInfo($sellerFulfillmentOrderId, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderResponse';
-        $request = $this->updateFulfillmentOrderRequest($seller_fulfillment_order_id, $body);
+        $request = $this->updateFulfillmentOrderRequest($sellerFulfillmentOrderId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4997,22 +4997,22 @@ class FbaOutboundApi
     /**
      * Create request for operation 'updateFulfillmentOrder'
      *
-     * @param  string $seller_fulfillment_order_id The identifier assigned to the item by the seller when the fulfillment order was created. (required)
+     * @param  string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created. (required)
      * @param  \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\UpdateFulfillmentOrderRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateFulfillmentOrderRequest($seller_fulfillment_order_id, $body)
+    public function updateFulfillmentOrderRequest($sellerFulfillmentOrderId, $body)
     {
-        // verify the required parameter 'seller_fulfillment_order_id' is set
-        if ($seller_fulfillment_order_id === null || (is_array($seller_fulfillment_order_id) && count($seller_fulfillment_order_id) === 0)) {
+        // verify the required parameter 'sellerFulfillmentOrderId' is set
+        if ($sellerFulfillmentOrderId === null || (is_array($sellerFulfillmentOrderId) && count($sellerFulfillmentOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_fulfillment_order_id when calling updateFulfillmentOrder'
+                'Missing the required parameter $sellerFulfillmentOrderId when calling updateFulfillmentOrder'
             );
         }
-        if (strlen($seller_fulfillment_order_id) > 40) {
-            throw new \InvalidArgumentException('invalid length for "$seller_fulfillment_order_id" when calling FbaOutboundApi.updateFulfillmentOrder, must be smaller than or equal to 40.');
+        if (strlen($sellerFulfillmentOrderId) > 40) {
+            throw new \InvalidArgumentException('invalid length for "$sellerFulfillmentOrderId" when calling FbaOutboundApi.updateFulfillmentOrder, must be smaller than or equal to 40.');
         }
 
         // verify the required parameter 'body' is set
@@ -5032,10 +5032,10 @@ class FbaOutboundApi
 
 
         // path params
-        if ($seller_fulfillment_order_id !== null) {
+        if ($sellerFulfillmentOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'sellerFulfillmentOrderId' . '}',
-                ObjectSerializer::toPathValue($seller_fulfillment_order_id),
+                ObjectSerializer::toPathValue($sellerFulfillmentOrderId),
                 $resourcePath
             );
         }

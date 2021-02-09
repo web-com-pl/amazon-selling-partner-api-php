@@ -61,11 +61,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fulfillment_order' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder',
-        'fulfillment_order_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderItem[]',
-        'fulfillment_shipments' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentShipment[]',
-        'return_items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]',
-        'return_authorizations' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]'
+        'fulfillmentOrder' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder',
+        'fulfillmentOrderItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderItem[]',
+        'fulfillmentShipments' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentShipment[]',
+        'returnItems' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]',
+        'returnAuthorizations' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]'
     ];
 
     /**
@@ -76,11 +76,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fulfillment_order' => null,
-        'fulfillment_order_items' => null,
-        'fulfillment_shipments' => null,
-        'return_items' => null,
-        'return_authorizations' => null
+        'fulfillmentOrder' => null,
+        'fulfillmentOrderItems' => null,
+        'fulfillmentShipments' => null,
+        'returnItems' => null,
+        'returnAuthorizations' => null
     ];
 
     /**
@@ -110,11 +110,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'fulfillment_order' => 'fulfillmentOrder',
-        'fulfillment_order_items' => 'fulfillmentOrderItems',
-        'fulfillment_shipments' => 'fulfillmentShipments',
-        'return_items' => 'returnItems',
-        'return_authorizations' => 'returnAuthorizations'
+        'fulfillmentOrder' => 'fulfillmentOrder',
+        'fulfillmentOrderItems' => 'fulfillmentOrderItems',
+        'fulfillmentShipments' => 'fulfillmentShipments',
+        'returnItems' => 'returnItems',
+        'returnAuthorizations' => 'returnAuthorizations'
     ];
 
     /**
@@ -123,11 +123,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'fulfillment_order' => 'setFulfillmentOrder',
-        'fulfillment_order_items' => 'setFulfillmentOrderItems',
-        'fulfillment_shipments' => 'setFulfillmentShipments',
-        'return_items' => 'setReturnItems',
-        'return_authorizations' => 'setReturnAuthorizations'
+        'fulfillmentOrder' => 'setFulfillmentOrder',
+        'fulfillmentOrderItems' => 'setFulfillmentOrderItems',
+        'fulfillmentShipments' => 'setFulfillmentShipments',
+        'returnItems' => 'setReturnItems',
+        'returnAuthorizations' => 'setReturnAuthorizations'
     ];
 
     /**
@@ -136,11 +136,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'fulfillment_order' => 'getFulfillmentOrder',
-        'fulfillment_order_items' => 'getFulfillmentOrderItems',
-        'fulfillment_shipments' => 'getFulfillmentShipments',
-        'return_items' => 'getReturnItems',
-        'return_authorizations' => 'getReturnAuthorizations'
+        'fulfillmentOrder' => 'getFulfillmentOrder',
+        'fulfillmentOrderItems' => 'getFulfillmentOrderItems',
+        'fulfillmentShipments' => 'getFulfillmentShipments',
+        'returnItems' => 'getReturnItems',
+        'returnAuthorizations' => 'getReturnAuthorizations'
     ];
 
     /**
@@ -203,11 +203,11 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['fulfillment_order'] = $data['fulfillment_order'] ?? null;
-        $this->container['fulfillment_order_items'] = $data['fulfillment_order_items'] ?? null;
-        $this->container['fulfillment_shipments'] = $data['fulfillment_shipments'] ?? null;
-        $this->container['return_items'] = $data['return_items'] ?? null;
-        $this->container['return_authorizations'] = $data['return_authorizations'] ?? null;
+        $this->container['fulfillmentOrder'] = $data['fulfillmentOrder'] ?? null;
+        $this->container['fulfillmentOrderItems'] = $data['fulfillmentOrderItems'] ?? null;
+        $this->container['fulfillmentShipments'] = $data['fulfillmentShipments'] ?? null;
+        $this->container['returnItems'] = $data['returnItems'] ?? null;
+        $this->container['returnAuthorizations'] = $data['returnAuthorizations'] ?? null;
     }
 
     /**
@@ -219,17 +219,17 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['fulfillment_order'] === null) {
-            $invalidProperties[] = "'fulfillment_order' can't be null";
+        if ($this->container['fulfillmentOrder'] === null) {
+            $invalidProperties[] = "'fulfillmentOrder' can't be null";
         }
-        if ($this->container['fulfillment_order_items'] === null) {
-            $invalidProperties[] = "'fulfillment_order_items' can't be null";
+        if ($this->container['fulfillmentOrderItems'] === null) {
+            $invalidProperties[] = "'fulfillmentOrderItems' can't be null";
         }
-        if ($this->container['return_items'] === null) {
-            $invalidProperties[] = "'return_items' can't be null";
+        if ($this->container['returnItems'] === null) {
+            $invalidProperties[] = "'returnItems' can't be null";
         }
-        if ($this->container['return_authorizations'] === null) {
-            $invalidProperties[] = "'return_authorizations' can't be null";
+        if ($this->container['returnAuthorizations'] === null) {
+            $invalidProperties[] = "'returnAuthorizations' can't be null";
         }
         return $invalidProperties;
     }
@@ -247,121 +247,121 @@ class GetFulfillmentOrderResult implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets fulfillment_order
+     * Gets fulfillmentOrder
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder
      */
     public function getFulfillmentOrder()
     {
-        return $this->container['fulfillment_order'];
+        return $this->container['fulfillmentOrder'];
     }
 
     /**
-     * Sets fulfillment_order
+     * Sets fulfillmentOrder
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder $fulfillment_order fulfillment_order
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder $fulfillmentOrder fulfillmentOrder
      *
      * @return self
      */
-    public function setFulfillmentOrder($fulfillment_order)
+    public function setFulfillmentOrder($fulfillmentOrder)
     {
-        $this->container['fulfillment_order'] = $fulfillment_order;
+        $this->container['fulfillmentOrder'] = $fulfillmentOrder;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_order_items
+     * Gets fulfillmentOrderItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderItem[]
      */
     public function getFulfillmentOrderItems()
     {
-        return $this->container['fulfillment_order_items'];
+        return $this->container['fulfillmentOrderItems'];
     }
 
     /**
-     * Sets fulfillment_order_items
+     * Sets fulfillmentOrderItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderItem[] $fulfillment_order_items An array of fulfillment order item information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrderItem[] $fulfillmentOrderItems An array of fulfillment order item information.
      *
      * @return self
      */
-    public function setFulfillmentOrderItems($fulfillment_order_items)
+    public function setFulfillmentOrderItems($fulfillmentOrderItems)
     {
-        $this->container['fulfillment_order_items'] = $fulfillment_order_items;
+        $this->container['fulfillmentOrderItems'] = $fulfillmentOrderItems;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_shipments
+     * Gets fulfillmentShipments
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentShipment[]|null
      */
     public function getFulfillmentShipments()
     {
-        return $this->container['fulfillment_shipments'];
+        return $this->container['fulfillmentShipments'];
     }
 
     /**
-     * Sets fulfillment_shipments
+     * Sets fulfillmentShipments
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentShipment[]|null $fulfillment_shipments An array of fulfillment shipment information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentShipment[]|null $fulfillmentShipments An array of fulfillment shipment information.
      *
      * @return self
      */
-    public function setFulfillmentShipments($fulfillment_shipments)
+    public function setFulfillmentShipments($fulfillmentShipments)
     {
-        $this->container['fulfillment_shipments'] = $fulfillment_shipments;
+        $this->container['fulfillmentShipments'] = $fulfillmentShipments;
 
         return $this;
     }
 
     /**
-     * Gets return_items
+     * Gets returnItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[]
      */
     public function getReturnItems()
     {
-        return $this->container['return_items'];
+        return $this->container['returnItems'];
     }
 
     /**
-     * Sets return_items
+     * Sets returnItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[] $return_items An array of items that Amazon accepted for return. Returns empty if no items were accepted for return.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnItem[] $returnItems An array of items that Amazon accepted for return. Returns empty if no items were accepted for return.
      *
      * @return self
      */
-    public function setReturnItems($return_items)
+    public function setReturnItems($returnItems)
     {
-        $this->container['return_items'] = $return_items;
+        $this->container['returnItems'] = $returnItems;
 
         return $this;
     }
 
     /**
-     * Gets return_authorizations
+     * Gets returnAuthorizations
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[]
      */
     public function getReturnAuthorizations()
     {
-        return $this->container['return_authorizations'];
+        return $this->container['returnAuthorizations'];
     }
 
     /**
-     * Sets return_authorizations
+     * Sets returnAuthorizations
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[] $return_authorizations An array of return authorization information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReturnAuthorization[] $returnAuthorizations An array of return authorization information.
      *
      * @return self
      */
-    public function setReturnAuthorizations($return_authorizations)
+    public function setReturnAuthorizations($returnAuthorizations)
     {
-        $this->container['return_authorizations'] = $return_authorizations;
+        $this->container['returnAuthorizations'] = $returnAuthorizations;
 
         return $this;
     }

@@ -63,7 +63,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'destination_id' => 'string',
+        'destinationId' => 'string',
         'resource' => '\Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResource'
     ];
 
@@ -76,7 +76,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'destination_id' => null,
+        'destinationId' => null,
         'resource' => null
     ];
 
@@ -108,7 +108,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'destination_id' => 'destinationId',
+        'destinationId' => 'destinationId',
         'resource' => 'resource'
     ];
 
@@ -119,7 +119,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'name' => 'setName',
-        'destination_id' => 'setDestinationId',
+        'destinationId' => 'setDestinationId',
         'resource' => 'setResource'
     ];
 
@@ -130,7 +130,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'name' => 'getName',
-        'destination_id' => 'getDestinationId',
+        'destinationId' => 'getDestinationId',
         'resource' => 'getResource'
     ];
 
@@ -195,7 +195,7 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['destination_id'] = $data['destination_id'] ?? null;
+        $this->container['destinationId'] = $data['destinationId'] ?? null;
         $this->container['resource'] = $data['resource'] ?? null;
     }
 
@@ -215,8 +215,8 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
         }
 
-        if ($this->container['destination_id'] === null) {
-            $invalidProperties[] = "'destination_id' can't be null";
+        if ($this->container['destinationId'] === null) {
+            $invalidProperties[] = "'destinationId' can't be null";
         }
         if ($this->container['resource'] === null) {
             $invalidProperties[] = "'resource' can't be null";
@@ -265,25 +265,25 @@ class Destination implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets destination_id
+     * Gets destinationId
      *
      * @return string
      */
     public function getDestinationId()
     {
-        return $this->container['destination_id'];
+        return $this->container['destinationId'];
     }
 
     /**
-     * Sets destination_id
+     * Sets destinationId
      *
-     * @param string $destination_id The destination identifier generated when you created the destination.
+     * @param string $destinationId The destination identifier generated when you created the destination.
      *
      * @return self
      */
-    public function setDestinationId($destination_id)
+    public function setDestinationId($destinationId)
     {
-        $this->container['destination_id'] = $destination_id;
+        $this->container['destinationId'] = $destinationId;
 
         return $this;
     }

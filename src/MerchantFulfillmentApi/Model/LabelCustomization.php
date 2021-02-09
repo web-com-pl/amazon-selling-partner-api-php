@@ -62,8 +62,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_text_for_label' => 'string',
-        'standard_id_for_label' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel'
+        'customTextForLabel' => 'string',
+        'standardIdForLabel' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel'
     ];
 
     /**
@@ -74,8 +74,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'custom_text_for_label' => null,
-        'standard_id_for_label' => null
+        'customTextForLabel' => null,
+        'standardIdForLabel' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'custom_text_for_label' => 'CustomTextForLabel',
-        'standard_id_for_label' => 'StandardIdForLabel'
+        'customTextForLabel' => 'CustomTextForLabel',
+        'standardIdForLabel' => 'StandardIdForLabel'
     ];
 
     /**
@@ -115,8 +115,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'custom_text_for_label' => 'setCustomTextForLabel',
-        'standard_id_for_label' => 'setStandardIdForLabel'
+        'customTextForLabel' => 'setCustomTextForLabel',
+        'standardIdForLabel' => 'setStandardIdForLabel'
     ];
 
     /**
@@ -125,8 +125,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'custom_text_for_label' => 'getCustomTextForLabel',
-        'standard_id_for_label' => 'getStandardIdForLabel'
+        'customTextForLabel' => 'getCustomTextForLabel',
+        'standardIdForLabel' => 'getStandardIdForLabel'
     ];
 
     /**
@@ -189,8 +189,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['custom_text_for_label'] = $data['custom_text_for_label'] ?? null;
-        $this->container['standard_id_for_label'] = $data['standard_id_for_label'] ?? null;
+        $this->container['customTextForLabel'] = $data['customTextForLabel'] ?? null;
+        $this->container['standardIdForLabel'] = $data['standardIdForLabel'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['custom_text_for_label']) && (mb_strlen($this->container['custom_text_for_label']) > 14)) {
-            $invalidProperties[] = "invalid value for 'custom_text_for_label', the character length must be smaller than or equal to 14.";
+        if (!is_null($this->container['customTextForLabel']) && (mb_strlen($this->container['customTextForLabel']) > 14)) {
+            $invalidProperties[] = "invalid value for 'customTextForLabel', the character length must be smaller than or equal to 14.";
         }
 
         return $invalidProperties;
@@ -222,53 +222,53 @@ class LabelCustomization implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets custom_text_for_label
+     * Gets customTextForLabel
      *
      * @return string|null
      */
     public function getCustomTextForLabel()
     {
-        return $this->container['custom_text_for_label'];
+        return $this->container['customTextForLabel'];
     }
 
     /**
-     * Sets custom_text_for_label
+     * Sets customTextForLabel
      *
-     * @param string|null $custom_text_for_label Custom text to print on the label.  Note: Custom text is only included on labels that are in ZPL format (ZPL203). FedEx does not support CustomTextForLabel.
+     * @param string|null $customTextForLabel Custom text to print on the label.  Note: Custom text is only included on labels that are in ZPL format (ZPL203). FedEx does not support CustomTextForLabel.
      *
      * @return self
      */
-    public function setCustomTextForLabel($custom_text_for_label)
+    public function setCustomTextForLabel($customTextForLabel)
     {
-        if (!is_null($custom_text_for_label) && (mb_strlen($custom_text_for_label) > 14)) {
-            throw new \InvalidArgumentException('invalid length for $custom_text_for_label when calling LabelCustomization., must be smaller than or equal to 14.');
+        if (!is_null($customTextForLabel) && (mb_strlen($customTextForLabel) > 14)) {
+            throw new \InvalidArgumentException('invalid length for $customTextForLabel when calling LabelCustomization., must be smaller than or equal to 14.');
         }
 
-        $this->container['custom_text_for_label'] = $custom_text_for_label;
+        $this->container['customTextForLabel'] = $customTextForLabel;
 
         return $this;
     }
 
     /**
-     * Gets standard_id_for_label
+     * Gets standardIdForLabel
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null
      */
     public function getStandardIdForLabel()
     {
-        return $this->container['standard_id_for_label'];
+        return $this->container['standardIdForLabel'];
     }
 
     /**
-     * Sets standard_id_for_label
+     * Sets standardIdForLabel
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null $standard_id_for_label standard_id_for_label
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null $standardIdForLabel standardIdForLabel
      *
      * @return self
      */
-    public function setStandardIdForLabel($standard_id_for_label)
+    public function setStandardIdForLabel($standardIdForLabel)
     {
-        $this->container['standard_id_for_label'] = $standard_id_for_label;
+        $this->container['standardIdForLabel'] = $standardIdForLabel;
 
         return $this;
     }

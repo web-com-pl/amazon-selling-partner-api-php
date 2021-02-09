@@ -63,12 +63,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'quantity' => 'string',
-        'per_unit_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'total_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'seller_sku' => 'string',
-        'fn_sku' => 'string',
-        'product_description' => 'string',
-        'asin' => 'string'
+        'perUnitAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'totalAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'sellerSKU' => 'string',
+        'fnSKU' => 'string',
+        'productDescription' => 'string',
+        'aSIN' => 'string'
     ];
 
     /**
@@ -80,12 +80,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'quantity' => null,
-        'per_unit_amount' => null,
-        'total_amount' => null,
-        'seller_sku' => null,
-        'fn_sku' => null,
-        'product_description' => null,
-        'asin' => null
+        'perUnitAmount' => null,
+        'totalAmount' => null,
+        'sellerSKU' => null,
+        'fnSKU' => null,
+        'productDescription' => null,
+        'aSIN' => null
     ];
 
     /**
@@ -116,12 +116,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'quantity' => 'Quantity',
-        'per_unit_amount' => 'PerUnitAmount',
-        'total_amount' => 'TotalAmount',
-        'seller_sku' => 'SellerSKU',
-        'fn_sku' => 'FnSKU',
-        'product_description' => 'ProductDescription',
-        'asin' => 'ASIN'
+        'perUnitAmount' => 'PerUnitAmount',
+        'totalAmount' => 'TotalAmount',
+        'sellerSKU' => 'SellerSKU',
+        'fnSKU' => 'FnSKU',
+        'productDescription' => 'ProductDescription',
+        'aSIN' => 'ASIN'
     ];
 
     /**
@@ -131,12 +131,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'quantity' => 'setQuantity',
-        'per_unit_amount' => 'setPerUnitAmount',
-        'total_amount' => 'setTotalAmount',
-        'seller_sku' => 'setSellerSku',
-        'fn_sku' => 'setFnSku',
-        'product_description' => 'setProductDescription',
-        'asin' => 'setAsin'
+        'perUnitAmount' => 'setPerUnitAmount',
+        'totalAmount' => 'setTotalAmount',
+        'sellerSKU' => 'setSellerSKU',
+        'fnSKU' => 'setFnSKU',
+        'productDescription' => 'setProductDescription',
+        'aSIN' => 'setASIN'
     ];
 
     /**
@@ -146,12 +146,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'quantity' => 'getQuantity',
-        'per_unit_amount' => 'getPerUnitAmount',
-        'total_amount' => 'getTotalAmount',
-        'seller_sku' => 'getSellerSku',
-        'fn_sku' => 'getFnSku',
-        'product_description' => 'getProductDescription',
-        'asin' => 'getAsin'
+        'perUnitAmount' => 'getPerUnitAmount',
+        'totalAmount' => 'getTotalAmount',
+        'sellerSKU' => 'getSellerSKU',
+        'fnSKU' => 'getFnSKU',
+        'productDescription' => 'getProductDescription',
+        'aSIN' => 'getASIN'
     ];
 
     /**
@@ -215,12 +215,12 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['per_unit_amount'] = $data['per_unit_amount'] ?? null;
-        $this->container['total_amount'] = $data['total_amount'] ?? null;
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['fn_sku'] = $data['fn_sku'] ?? null;
-        $this->container['product_description'] = $data['product_description'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
+        $this->container['perUnitAmount'] = $data['perUnitAmount'] ?? null;
+        $this->container['totalAmount'] = $data['totalAmount'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['fnSKU'] = $data['fnSKU'] ?? null;
+        $this->container['productDescription'] = $data['productDescription'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
     }
 
     /**
@@ -272,145 +272,145 @@ class AdjustmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets per_unit_amount
+     * Gets perUnitAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getPerUnitAmount()
     {
-        return $this->container['per_unit_amount'];
+        return $this->container['perUnitAmount'];
     }
 
     /**
-     * Sets per_unit_amount
+     * Sets perUnitAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $per_unit_amount per_unit_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $perUnitAmount perUnitAmount
      *
      * @return self
      */
-    public function setPerUnitAmount($per_unit_amount)
+    public function setPerUnitAmount($perUnitAmount)
     {
-        $this->container['per_unit_amount'] = $per_unit_amount;
+        $this->container['perUnitAmount'] = $perUnitAmount;
 
         return $this;
     }
 
     /**
-     * Gets total_amount
+     * Gets totalAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getTotalAmount()
     {
-        return $this->container['total_amount'];
+        return $this->container['totalAmount'];
     }
 
     /**
-     * Sets total_amount
+     * Sets totalAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $total_amount total_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $totalAmount totalAmount
      *
      * @return self
      */
-    public function setTotalAmount($total_amount)
+    public function setTotalAmount($totalAmount)
     {
-        $this->container['total_amount'] = $total_amount;
+        $this->container['totalAmount'] = $totalAmount;
 
         return $this;
     }
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
+     * @param string|null $sellerSKU The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets fn_sku
+     * Gets fnSKU
      *
      * @return string|null
      */
-    public function getFnSku()
+    public function getFnSKU()
     {
-        return $this->container['fn_sku'];
+        return $this->container['fnSKU'];
     }
 
     /**
-     * Sets fn_sku
+     * Sets fnSKU
      *
-     * @param string|null $fn_sku A unique identifier assigned to products stored in and fulfilled from a fulfillment center.
+     * @param string|null $fnSKU A unique identifier assigned to products stored in and fulfilled from a fulfillment center.
      *
      * @return self
      */
-    public function setFnSku($fn_sku)
+    public function setFnSKU($fnSKU)
     {
-        $this->container['fn_sku'] = $fn_sku;
+        $this->container['fnSKU'] = $fnSKU;
 
         return $this;
     }
 
     /**
-     * Gets product_description
+     * Gets productDescription
      *
      * @return string|null
      */
     public function getProductDescription()
     {
-        return $this->container['product_description'];
+        return $this->container['productDescription'];
     }
 
     /**
-     * Sets product_description
+     * Sets productDescription
      *
-     * @param string|null $product_description A short description of the item.
+     * @param string|null $productDescription A short description of the item.
      *
      * @return self
      */
-    public function setProductDescription($product_description)
+    public function setProductDescription($productDescription)
     {
-        $this->container['product_description'] = $product_description;
+        $this->container['productDescription'] = $productDescription;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }

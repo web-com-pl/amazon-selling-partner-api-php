@@ -61,7 +61,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transport_result' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult'
+        'transportResult' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult'
     ];
 
     /**
@@ -72,7 +72,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transport_result' => null
+        'transportResult' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'transport_result' => 'TransportResult'
+        'transportResult' => 'TransportResult'
     ];
 
     /**
@@ -111,7 +111,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'transport_result' => 'setTransportResult'
+        'transportResult' => 'setTransportResult'
     ];
 
     /**
@@ -120,7 +120,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'transport_result' => 'getTransportResult'
+        'transportResult' => 'getTransportResult'
     ];
 
     /**
@@ -183,7 +183,7 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['transport_result'] = $data['transport_result'] ?? null;
+        $this->container['transportResult'] = $data['transportResult'] ?? null;
     }
 
     /**
@@ -211,25 +211,25 @@ class CommonTransportResult implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets transport_result
+     * Gets transportResult
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult|null
      */
     public function getTransportResult()
     {
-        return $this->container['transport_result'];
+        return $this->container['transportResult'];
     }
 
     /**
-     * Sets transport_result
+     * Sets transportResult
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult|null $transport_result transport_result
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportResult|null $transportResult transportResult
      *
      * @return self
      */
-    public function setTransportResult($transport_result)
+    public function setTransportResult($transportResult)
     {
-        $this->container['transport_result'] = $transport_result;
+        $this->container['transportResult'] = $transportResult;
 
         return $this;
     }

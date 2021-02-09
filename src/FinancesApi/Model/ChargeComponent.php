@@ -62,8 +62,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'charge_type' => 'string',
-        'charge_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'chargeType' => 'string',
+        'chargeAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'charge_type' => null,
-        'charge_amount' => null
+        'chargeType' => null,
+        'chargeAmount' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'charge_type' => 'ChargeType',
-        'charge_amount' => 'ChargeAmount'
+        'chargeType' => 'ChargeType',
+        'chargeAmount' => 'ChargeAmount'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'charge_type' => 'setChargeType',
-        'charge_amount' => 'setChargeAmount'
+        'chargeType' => 'setChargeType',
+        'chargeAmount' => 'setChargeAmount'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'charge_type' => 'getChargeType',
-        'charge_amount' => 'getChargeAmount'
+        'chargeType' => 'getChargeType',
+        'chargeAmount' => 'getChargeAmount'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['charge_type'] = $data['charge_type'] ?? null;
-        $this->container['charge_amount'] = $data['charge_amount'] ?? null;
+        $this->container['chargeType'] = $data['chargeType'] ?? null;
+        $this->container['chargeAmount'] = $data['chargeAmount'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ChargeComponent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets charge_type
+     * Gets chargeType
      *
      * @return string|null
      */
     public function getChargeType()
     {
-        return $this->container['charge_type'];
+        return $this->container['chargeType'];
     }
 
     /**
-     * Sets charge_type
+     * Sets chargeType
      *
-     * @param string|null $charge_type The type of charge.
+     * @param string|null $chargeType The type of charge.
      *
      * @return self
      */
-    public function setChargeType($charge_type)
+    public function setChargeType($chargeType)
     {
-        $this->container['charge_type'] = $charge_type;
+        $this->container['chargeType'] = $chargeType;
 
         return $this;
     }
 
     /**
-     * Gets charge_amount
+     * Gets chargeAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getChargeAmount()
     {
-        return $this->container['charge_amount'];
+        return $this->container['chargeAmount'];
     }
 
     /**
-     * Sets charge_amount
+     * Sets chargeAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $charge_amount charge_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $chargeAmount chargeAmount
      *
      * @return self
      */
-    public function setChargeAmount($charge_amount)
+    public function setChargeAmount($chargeAmount)
     {
-        $this->container['charge_amount'] = $charge_amount;
+        $this->container['chargeAmount'] = $chargeAmount;
 
         return $this;
     }

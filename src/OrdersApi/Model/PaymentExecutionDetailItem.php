@@ -63,7 +63,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'payment' => '\Webcom\Amazon\Rest\OrdersApi\Model\Money',
-        'payment_method' => 'string'
+        'paymentMethod' => 'string'
     ];
 
     /**
@@ -75,7 +75,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPIFormats = [
         'payment' => null,
-        'payment_method' => null
+        'paymentMethod' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $attributeMap = [
         'payment' => 'Payment',
-        'payment_method' => 'PaymentMethod'
+        'paymentMethod' => 'PaymentMethod'
     ];
 
     /**
@@ -116,7 +116,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $setters = [
         'payment' => 'setPayment',
-        'payment_method' => 'setPaymentMethod'
+        'paymentMethod' => 'setPaymentMethod'
     ];
 
     /**
@@ -126,7 +126,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $getters = [
         'payment' => 'getPayment',
-        'payment_method' => 'getPaymentMethod'
+        'paymentMethod' => 'getPaymentMethod'
     ];
 
     /**
@@ -190,7 +190,7 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
     public function __construct(array $data = null)
     {
         $this->container['payment'] = $data['payment'] ?? null;
-        $this->container['payment_method'] = $data['payment_method'] ?? null;
+        $this->container['paymentMethod'] = $data['paymentMethod'] ?? null;
     }
 
     /**
@@ -205,8 +205,8 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
         if ($this->container['payment'] === null) {
             $invalidProperties[] = "'payment' can't be null";
         }
-        if ($this->container['payment_method'] === null) {
-            $invalidProperties[] = "'payment_method' can't be null";
+        if ($this->container['paymentMethod'] === null) {
+            $invalidProperties[] = "'paymentMethod' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,25 +248,25 @@ class PaymentExecutionDetailItem implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets payment_method
+     * Gets paymentMethod
      *
      * @return string
      */
     public function getPaymentMethod()
     {
-        return $this->container['payment_method'];
+        return $this->container['paymentMethod'];
     }
 
     /**
-     * Sets payment_method
+     * Sets paymentMethod
      *
-     * @param string $payment_method A sub-payment method for a COD order.  Possible values:  * COD - Cash On Delivery.  * GC - Gift Card.  * PointsAccount - Amazon Points.
+     * @param string $paymentMethod A sub-payment method for a COD order.  Possible values:  * COD - Cash On Delivery.  * GC - Gift Card.  * PointsAccount - Amazon Points.
      *
      * @return self
      */
-    public function setPaymentMethod($payment_method)
+    public function setPaymentMethod($paymentMethod)
     {
-        $this->container['payment_method'] = $payment_method;
+        $this->container['paymentMethod'] = $paymentMethod;
 
         return $this;
     }

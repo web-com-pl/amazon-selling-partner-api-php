@@ -62,7 +62,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'asin' => 'string',
-        'additional_inputs' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]'
+        'additionalInputs' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]'
     ];
 
     /**
@@ -74,7 +74,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'asin' => null,
-        'additional_inputs' => null
+        'additionalInputs' => null
     ];
 
     /**
@@ -105,7 +105,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'asin' => 'Asin',
-        'additional_inputs' => 'AdditionalInputs'
+        'additionalInputs' => 'AdditionalInputs'
     ];
 
     /**
@@ -115,7 +115,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'asin' => 'setAsin',
-        'additional_inputs' => 'setAdditionalInputs'
+        'additionalInputs' => 'setAdditionalInputs'
     ];
 
     /**
@@ -125,7 +125,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'asin' => 'getAsin',
-        'additional_inputs' => 'getAdditionalInputs'
+        'additionalInputs' => 'getAdditionalInputs'
     ];
 
     /**
@@ -189,7 +189,7 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['additional_inputs'] = $data['additional_inputs'] ?? null;
+        $this->container['additionalInputs'] = $data['additionalInputs'] ?? null;
     }
 
     /**
@@ -204,8 +204,8 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['asin'] === null) {
             $invalidProperties[] = "'asin' can't be null";
         }
-        if ($this->container['additional_inputs'] === null) {
-            $invalidProperties[] = "'additional_inputs' can't be null";
+        if ($this->container['additionalInputs'] === null) {
+            $invalidProperties[] = "'additionalInputs' can't be null";
         }
         return $invalidProperties;
     }
@@ -247,25 +247,25 @@ class ItemLevelFields implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets additional_inputs
+     * Gets additionalInputs
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[]
      */
     public function getAdditionalInputs()
     {
-        return $this->container['additional_inputs'];
+        return $this->container['additionalInputs'];
     }
 
     /**
-     * Sets additional_inputs
+     * Sets additionalInputs
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[] $additional_inputs A list of additional inputs.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalInputs[] $additionalInputs A list of additional inputs.
      *
      * @return self
      */
-    public function setAdditionalInputs($additional_inputs)
+    public function setAdditionalInputs($additionalInputs)
     {
-        $this->container['additional_inputs'] = $additional_inputs;
+        $this->container['additionalInputs'] = $additionalInputs;
 
         return $this;
     }

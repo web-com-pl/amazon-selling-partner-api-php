@@ -62,8 +62,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_name' => 'string',
-        'pro_number' => 'string'
+        'carrierName' => 'string',
+        'proNumber' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_name' => null,
-        'pro_number' => null
+        'carrierName' => null,
+        'proNumber' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_name' => 'CarrierName',
-        'pro_number' => 'ProNumber'
+        'carrierName' => 'CarrierName',
+        'proNumber' => 'ProNumber'
     ];
 
     /**
@@ -115,8 +115,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'carrier_name' => 'setCarrierName',
-        'pro_number' => 'setProNumber'
+        'carrierName' => 'setCarrierName',
+        'proNumber' => 'setProNumber'
     ];
 
     /**
@@ -125,8 +125,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'carrier_name' => 'getCarrierName',
-        'pro_number' => 'getProNumber'
+        'carrierName' => 'getCarrierName',
+        'proNumber' => 'getProNumber'
     ];
 
     /**
@@ -189,8 +189,8 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_name'] = $data['carrier_name'] ?? null;
-        $this->container['pro_number'] = $data['pro_number'] ?? null;
+        $this->container['carrierName'] = $data['carrierName'] ?? null;
+        $this->container['proNumber'] = $data['proNumber'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_name'] === null) {
-            $invalidProperties[] = "'carrier_name' can't be null";
+        if ($this->container['carrierName'] === null) {
+            $invalidProperties[] = "'carrierName' can't be null";
         }
-        if ($this->container['pro_number'] === null) {
-            $invalidProperties[] = "'pro_number' can't be null";
+        if ($this->container['proNumber'] === null) {
+            $invalidProperties[] = "'proNumber' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class NonPartneredLtlDataOutput implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets carrier_name
+     * Gets carrierName
      *
      * @return string
      */
     public function getCarrierName()
     {
-        return $this->container['carrier_name'];
+        return $this->container['carrierName'];
     }
 
     /**
-     * Sets carrier_name
+     * Sets carrierName
      *
-     * @param string $carrier_name The carrier that you are using for the inbound shipment.
+     * @param string $carrierName The carrier that you are using for the inbound shipment.
      *
      * @return self
      */
-    public function setCarrierName($carrier_name)
+    public function setCarrierName($carrierName)
     {
-        $this->container['carrier_name'] = $carrier_name;
+        $this->container['carrierName'] = $carrierName;
 
         return $this;
     }
 
     /**
-     * Gets pro_number
+     * Gets proNumber
      *
      * @return string
      */
     public function getProNumber()
     {
-        return $this->container['pro_number'];
+        return $this->container['proNumber'];
     }
 
     /**
-     * Sets pro_number
+     * Sets proNumber
      *
-     * @param string $pro_number The PRO number (\"progressive number\" or \"progressive ID\") assigned to the shipment by the carrier.
+     * @param string $proNumber The PRO number (\"progressive number\" or \"progressive ID\") assigned to the shipment by the carrier.
      *
      * @return self
      */
-    public function setProNumber($pro_number)
+    public function setProNumber($proNumber)
     {
-        $this->container['pro_number'] = $pro_number;
+        $this->container['proNumber'] = $proNumber;
 
         return $this;
     }

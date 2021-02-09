@@ -62,11 +62,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'return_authorization_id' => 'string',
-        'fulfillment_center_id' => 'string',
-        'return_to_address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
-        'amazon_rma_id' => 'string',
-        'rma_page_url' => 'string'
+        'returnAuthorizationId' => 'string',
+        'fulfillmentCenterId' => 'string',
+        'returnToAddress' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
+        'amazonRmaId' => 'string',
+        'rmaPageURL' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'return_authorization_id' => null,
-        'fulfillment_center_id' => null,
-        'return_to_address' => null,
-        'amazon_rma_id' => null,
-        'rma_page_url' => null
+        'returnAuthorizationId' => null,
+        'fulfillmentCenterId' => null,
+        'returnToAddress' => null,
+        'amazonRmaId' => null,
+        'rmaPageURL' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'return_authorization_id' => 'returnAuthorizationId',
-        'fulfillment_center_id' => 'fulfillmentCenterId',
-        'return_to_address' => 'returnToAddress',
-        'amazon_rma_id' => 'amazonRmaId',
-        'rma_page_url' => 'rmaPageURL'
+        'returnAuthorizationId' => 'returnAuthorizationId',
+        'fulfillmentCenterId' => 'fulfillmentCenterId',
+        'returnToAddress' => 'returnToAddress',
+        'amazonRmaId' => 'amazonRmaId',
+        'rmaPageURL' => 'rmaPageURL'
     ];
 
     /**
@@ -124,11 +124,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'return_authorization_id' => 'setReturnAuthorizationId',
-        'fulfillment_center_id' => 'setFulfillmentCenterId',
-        'return_to_address' => 'setReturnToAddress',
-        'amazon_rma_id' => 'setAmazonRmaId',
-        'rma_page_url' => 'setRmaPageUrl'
+        'returnAuthorizationId' => 'setReturnAuthorizationId',
+        'fulfillmentCenterId' => 'setFulfillmentCenterId',
+        'returnToAddress' => 'setReturnToAddress',
+        'amazonRmaId' => 'setAmazonRmaId',
+        'rmaPageURL' => 'setRmaPageURL'
     ];
 
     /**
@@ -137,11 +137,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'return_authorization_id' => 'getReturnAuthorizationId',
-        'fulfillment_center_id' => 'getFulfillmentCenterId',
-        'return_to_address' => 'getReturnToAddress',
-        'amazon_rma_id' => 'getAmazonRmaId',
-        'rma_page_url' => 'getRmaPageUrl'
+        'returnAuthorizationId' => 'getReturnAuthorizationId',
+        'fulfillmentCenterId' => 'getFulfillmentCenterId',
+        'returnToAddress' => 'getReturnToAddress',
+        'amazonRmaId' => 'getAmazonRmaId',
+        'rmaPageURL' => 'getRmaPageURL'
     ];
 
     /**
@@ -204,11 +204,11 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['return_authorization_id'] = $data['return_authorization_id'] ?? null;
-        $this->container['fulfillment_center_id'] = $data['fulfillment_center_id'] ?? null;
-        $this->container['return_to_address'] = $data['return_to_address'] ?? null;
-        $this->container['amazon_rma_id'] = $data['amazon_rma_id'] ?? null;
-        $this->container['rma_page_url'] = $data['rma_page_url'] ?? null;
+        $this->container['returnAuthorizationId'] = $data['returnAuthorizationId'] ?? null;
+        $this->container['fulfillmentCenterId'] = $data['fulfillmentCenterId'] ?? null;
+        $this->container['returnToAddress'] = $data['returnToAddress'] ?? null;
+        $this->container['amazonRmaId'] = $data['amazonRmaId'] ?? null;
+        $this->container['rmaPageURL'] = $data['rmaPageURL'] ?? null;
     }
 
     /**
@@ -220,20 +220,20 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['return_authorization_id'] === null) {
-            $invalidProperties[] = "'return_authorization_id' can't be null";
+        if ($this->container['returnAuthorizationId'] === null) {
+            $invalidProperties[] = "'returnAuthorizationId' can't be null";
         }
-        if ($this->container['fulfillment_center_id'] === null) {
-            $invalidProperties[] = "'fulfillment_center_id' can't be null";
+        if ($this->container['fulfillmentCenterId'] === null) {
+            $invalidProperties[] = "'fulfillmentCenterId' can't be null";
         }
-        if ($this->container['return_to_address'] === null) {
-            $invalidProperties[] = "'return_to_address' can't be null";
+        if ($this->container['returnToAddress'] === null) {
+            $invalidProperties[] = "'returnToAddress' can't be null";
         }
-        if ($this->container['amazon_rma_id'] === null) {
-            $invalidProperties[] = "'amazon_rma_id' can't be null";
+        if ($this->container['amazonRmaId'] === null) {
+            $invalidProperties[] = "'amazonRmaId' can't be null";
         }
-        if ($this->container['rma_page_url'] === null) {
-            $invalidProperties[] = "'rma_page_url' can't be null";
+        if ($this->container['rmaPageURL'] === null) {
+            $invalidProperties[] = "'rmaPageURL' can't be null";
         }
         return $invalidProperties;
     }
@@ -251,121 +251,121 @@ class ReturnAuthorization implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets return_authorization_id
+     * Gets returnAuthorizationId
      *
      * @return string
      */
     public function getReturnAuthorizationId()
     {
-        return $this->container['return_authorization_id'];
+        return $this->container['returnAuthorizationId'];
     }
 
     /**
-     * Sets return_authorization_id
+     * Sets returnAuthorizationId
      *
-     * @param string $return_authorization_id An identifier for the return authorization. This identifier associates return items with the return authorization used to return them.
+     * @param string $returnAuthorizationId An identifier for the return authorization. This identifier associates return items with the return authorization used to return them.
      *
      * @return self
      */
-    public function setReturnAuthorizationId($return_authorization_id)
+    public function setReturnAuthorizationId($returnAuthorizationId)
     {
-        $this->container['return_authorization_id'] = $return_authorization_id;
+        $this->container['returnAuthorizationId'] = $returnAuthorizationId;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_center_id
+     * Gets fulfillmentCenterId
      *
      * @return string
      */
     public function getFulfillmentCenterId()
     {
-        return $this->container['fulfillment_center_id'];
+        return $this->container['fulfillmentCenterId'];
     }
 
     /**
-     * Sets fulfillment_center_id
+     * Sets fulfillmentCenterId
      *
-     * @param string $fulfillment_center_id An identifier for the Amazon fulfillment center that the return items should be sent to.
+     * @param string $fulfillmentCenterId An identifier for the Amazon fulfillment center that the return items should be sent to.
      *
      * @return self
      */
-    public function setFulfillmentCenterId($fulfillment_center_id)
+    public function setFulfillmentCenterId($fulfillmentCenterId)
     {
-        $this->container['fulfillment_center_id'] = $fulfillment_center_id;
+        $this->container['fulfillmentCenterId'] = $fulfillmentCenterId;
 
         return $this;
     }
 
     /**
-     * Gets return_to_address
+     * Gets returnToAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address
      */
     public function getReturnToAddress()
     {
-        return $this->container['return_to_address'];
+        return $this->container['returnToAddress'];
     }
 
     /**
-     * Sets return_to_address
+     * Sets returnToAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address $return_to_address return_to_address
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address $returnToAddress returnToAddress
      *
      * @return self
      */
-    public function setReturnToAddress($return_to_address)
+    public function setReturnToAddress($returnToAddress)
     {
-        $this->container['return_to_address'] = $return_to_address;
+        $this->container['returnToAddress'] = $returnToAddress;
 
         return $this;
     }
 
     /**
-     * Gets amazon_rma_id
+     * Gets amazonRmaId
      *
      * @return string
      */
     public function getAmazonRmaId()
     {
-        return $this->container['amazon_rma_id'];
+        return $this->container['amazonRmaId'];
     }
 
     /**
-     * Sets amazon_rma_id
+     * Sets amazonRmaId
      *
-     * @param string $amazon_rma_id The return merchandise authorization (RMA) that Amazon needs to process the return.
+     * @param string $amazonRmaId The return merchandise authorization (RMA) that Amazon needs to process the return.
      *
      * @return self
      */
-    public function setAmazonRmaId($amazon_rma_id)
+    public function setAmazonRmaId($amazonRmaId)
     {
-        $this->container['amazon_rma_id'] = $amazon_rma_id;
+        $this->container['amazonRmaId'] = $amazonRmaId;
 
         return $this;
     }
 
     /**
-     * Gets rma_page_url
+     * Gets rmaPageURL
      *
      * @return string
      */
-    public function getRmaPageUrl()
+    public function getRmaPageURL()
     {
-        return $this->container['rma_page_url'];
+        return $this->container['rmaPageURL'];
     }
 
     /**
-     * Sets rma_page_url
+     * Sets rmaPageURL
      *
-     * @param string $rma_page_url A URL for a web page that contains the return authorization barcode and the mailing label. This does not include pre-paid shipping.
+     * @param string $rmaPageURL A URL for a web page that contains the return authorization barcode and the mailing label. This does not include pre-paid shipping.
      *
      * @return self
      */
-    public function setRmaPageUrl($rma_page_url)
+    public function setRmaPageURL($rmaPageURL)
     {
-        $this->container['rma_page_url'] = $rma_page_url;
+        $this->container['rmaPageURL'] = $rmaPageURL;
 
         return $this;
     }

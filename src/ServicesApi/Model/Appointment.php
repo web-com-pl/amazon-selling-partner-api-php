@@ -62,11 +62,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appointment_id' => 'string',
-        'appointment_status' => 'string',
-        'appointment_time' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime',
-        'assigned_technicians' => '\Webcom\Amazon\Rest\ServicesApi\Model\Technician[]',
-        'rescheduled_appointment_id' => 'string',
+        'appointmentId' => 'string',
+        'appointmentStatus' => 'string',
+        'appointmentTime' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime',
+        'assignedTechnicians' => '\Webcom\Amazon\Rest\ServicesApi\Model\Technician[]',
+        'rescheduledAppointmentId' => 'string',
         'poa' => '\Webcom\Amazon\Rest\ServicesApi\Model\Poa'
     ];
 
@@ -78,11 +78,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appointment_id' => null,
-        'appointment_status' => null,
-        'appointment_time' => null,
-        'assigned_technicians' => null,
-        'rescheduled_appointment_id' => null,
+        'appointmentId' => null,
+        'appointmentStatus' => null,
+        'appointmentTime' => null,
+        'assignedTechnicians' => null,
+        'rescheduledAppointmentId' => null,
         'poa' => null
     ];
 
@@ -113,11 +113,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'appointment_id' => 'appointmentId',
-        'appointment_status' => 'appointmentStatus',
-        'appointment_time' => 'appointmentTime',
-        'assigned_technicians' => 'assignedTechnicians',
-        'rescheduled_appointment_id' => 'rescheduledAppointmentId',
+        'appointmentId' => 'appointmentId',
+        'appointmentStatus' => 'appointmentStatus',
+        'appointmentTime' => 'appointmentTime',
+        'assignedTechnicians' => 'assignedTechnicians',
+        'rescheduledAppointmentId' => 'rescheduledAppointmentId',
         'poa' => 'poa'
     ];
 
@@ -127,11 +127,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'appointment_id' => 'setAppointmentId',
-        'appointment_status' => 'setAppointmentStatus',
-        'appointment_time' => 'setAppointmentTime',
-        'assigned_technicians' => 'setAssignedTechnicians',
-        'rescheduled_appointment_id' => 'setRescheduledAppointmentId',
+        'appointmentId' => 'setAppointmentId',
+        'appointmentStatus' => 'setAppointmentStatus',
+        'appointmentTime' => 'setAppointmentTime',
+        'assignedTechnicians' => 'setAssignedTechnicians',
+        'rescheduledAppointmentId' => 'setRescheduledAppointmentId',
         'poa' => 'setPoa'
     ];
 
@@ -141,11 +141,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'appointment_id' => 'getAppointmentId',
-        'appointment_status' => 'getAppointmentStatus',
-        'appointment_time' => 'getAppointmentTime',
-        'assigned_technicians' => 'getAssignedTechnicians',
-        'rescheduled_appointment_id' => 'getRescheduledAppointmentId',
+        'appointmentId' => 'getAppointmentId',
+        'appointmentStatus' => 'getAppointmentStatus',
+        'appointmentTime' => 'getAppointmentTime',
+        'assignedTechnicians' => 'getAssignedTechnicians',
+        'rescheduledAppointmentId' => 'getRescheduledAppointmentId',
         'poa' => 'getPoa'
     ];
 
@@ -226,11 +226,11 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['appointment_id'] = $data['appointment_id'] ?? null;
-        $this->container['appointment_status'] = $data['appointment_status'] ?? null;
-        $this->container['appointment_time'] = $data['appointment_time'] ?? null;
-        $this->container['assigned_technicians'] = $data['assigned_technicians'] ?? null;
-        $this->container['rescheduled_appointment_id'] = $data['rescheduled_appointment_id'] ?? null;
+        $this->container['appointmentId'] = $data['appointmentId'] ?? null;
+        $this->container['appointmentStatus'] = $data['appointmentStatus'] ?? null;
+        $this->container['appointmentTime'] = $data['appointmentTime'] ?? null;
+        $this->container['assignedTechnicians'] = $data['assignedTechnicians'] ?? null;
+        $this->container['rescheduledAppointmentId'] = $data['rescheduledAppointmentId'] ?? null;
         $this->container['poa'] = $data['poa'] ?? null;
     }
 
@@ -243,29 +243,29 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['appointment_id']) && (mb_strlen($this->container['appointment_id']) > 100)) {
-            $invalidProperties[] = "invalid value for 'appointment_id', the character length must be smaller than or equal to 100.";
+        if (!is_null($this->container['appointmentId']) && (mb_strlen($this->container['appointmentId']) > 100)) {
+            $invalidProperties[] = "invalid value for 'appointmentId', the character length must be smaller than or equal to 100.";
         }
 
-        if (!is_null($this->container['appointment_id']) && (mb_strlen($this->container['appointment_id']) < 5)) {
-            $invalidProperties[] = "invalid value for 'appointment_id', the character length must be bigger than or equal to 5.";
+        if (!is_null($this->container['appointmentId']) && (mb_strlen($this->container['appointmentId']) < 5)) {
+            $invalidProperties[] = "invalid value for 'appointmentId', the character length must be bigger than or equal to 5.";
         }
 
         $allowedValues = $this->getAppointmentStatusAllowableValues();
-        if (!is_null($this->container['appointment_status']) && !in_array($this->container['appointment_status'], $allowedValues, true)) {
+        if (!is_null($this->container['appointmentStatus']) && !in_array($this->container['appointmentStatus'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'appointment_status', must be one of '%s'",
-                $this->container['appointment_status'],
+                "invalid value '%s' for 'appointmentStatus', must be one of '%s'",
+                $this->container['appointmentStatus'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if (!is_null($this->container['rescheduled_appointment_id']) && (mb_strlen($this->container['rescheduled_appointment_id']) > 100)) {
-            $invalidProperties[] = "invalid value for 'rescheduled_appointment_id', the character length must be smaller than or equal to 100.";
+        if (!is_null($this->container['rescheduledAppointmentId']) && (mb_strlen($this->container['rescheduledAppointmentId']) > 100)) {
+            $invalidProperties[] = "invalid value for 'rescheduledAppointmentId', the character length must be smaller than or equal to 100.";
         }
 
-        if (!is_null($this->container['rescheduled_appointment_id']) && (mb_strlen($this->container['rescheduled_appointment_id']) < 5)) {
-            $invalidProperties[] = "invalid value for 'rescheduled_appointment_id', the character length must be bigger than or equal to 5.";
+        if (!is_null($this->container['rescheduledAppointmentId']) && (mb_strlen($this->container['rescheduledAppointmentId']) < 5)) {
+            $invalidProperties[] = "invalid value for 'rescheduledAppointmentId', the character length must be bigger than or equal to 5.";
         }
 
         return $invalidProperties;
@@ -284,145 +284,145 @@ class Appointment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets appointment_id
+     * Gets appointmentId
      *
      * @return string|null
      */
     public function getAppointmentId()
     {
-        return $this->container['appointment_id'];
+        return $this->container['appointmentId'];
     }
 
     /**
-     * Sets appointment_id
+     * Sets appointmentId
      *
-     * @param string|null $appointment_id The appointment identifier.
+     * @param string|null $appointmentId The appointment identifier.
      *
      * @return self
      */
-    public function setAppointmentId($appointment_id)
+    public function setAppointmentId($appointmentId)
     {
-        if (!is_null($appointment_id) && (mb_strlen($appointment_id) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $appointment_id when calling Appointment., must be smaller than or equal to 100.');
+        if (!is_null($appointmentId) && (mb_strlen($appointmentId) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $appointmentId when calling Appointment., must be smaller than or equal to 100.');
         }
-        if (!is_null($appointment_id) && (mb_strlen($appointment_id) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $appointment_id when calling Appointment., must be bigger than or equal to 5.');
+        if (!is_null($appointmentId) && (mb_strlen($appointmentId) < 5)) {
+            throw new \InvalidArgumentException('invalid length for $appointmentId when calling Appointment., must be bigger than or equal to 5.');
         }
 
-        $this->container['appointment_id'] = $appointment_id;
+        $this->container['appointmentId'] = $appointmentId;
 
         return $this;
     }
 
     /**
-     * Gets appointment_status
+     * Gets appointmentStatus
      *
      * @return string|null
      */
     public function getAppointmentStatus()
     {
-        return $this->container['appointment_status'];
+        return $this->container['appointmentStatus'];
     }
 
     /**
-     * Sets appointment_status
+     * Sets appointmentStatus
      *
-     * @param string|null $appointment_status The status of the appointment.
+     * @param string|null $appointmentStatus The status of the appointment.
      *
      * @return self
      */
-    public function setAppointmentStatus($appointment_status)
+    public function setAppointmentStatus($appointmentStatus)
     {
         $allowedValues = $this->getAppointmentStatusAllowableValues();
-        if (!is_null($appointment_status) && !in_array($appointment_status, $allowedValues, true)) {
+        if (!is_null($appointmentStatus) && !in_array($appointmentStatus, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'appointment_status', must be one of '%s'",
-                    $appointment_status,
+                    "Invalid value '%s' for 'appointmentStatus', must be one of '%s'",
+                    $appointmentStatus,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['appointment_status'] = $appointment_status;
+        $this->container['appointmentStatus'] = $appointmentStatus;
 
         return $this;
     }
 
     /**
-     * Gets appointment_time
+     * Gets appointmentTime
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null
      */
     public function getAppointmentTime()
     {
-        return $this->container['appointment_time'];
+        return $this->container['appointmentTime'];
     }
 
     /**
-     * Sets appointment_time
+     * Sets appointmentTime
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null $appointment_time appointment_time
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null $appointmentTime appointmentTime
      *
      * @return self
      */
-    public function setAppointmentTime($appointment_time)
+    public function setAppointmentTime($appointmentTime)
     {
-        $this->container['appointment_time'] = $appointment_time;
+        $this->container['appointmentTime'] = $appointmentTime;
 
         return $this;
     }
 
     /**
-     * Gets assigned_technicians
+     * Gets assignedTechnicians
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\Technician[]|null
      */
     public function getAssignedTechnicians()
     {
-        return $this->container['assigned_technicians'];
+        return $this->container['assignedTechnicians'];
     }
 
     /**
-     * Sets assigned_technicians
+     * Sets assignedTechnicians
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\Technician[]|null $assigned_technicians A list of technicians assigned to the service job.
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\Technician[]|null $assignedTechnicians A list of technicians assigned to the service job.
      *
      * @return self
      */
-    public function setAssignedTechnicians($assigned_technicians)
+    public function setAssignedTechnicians($assignedTechnicians)
     {
-        $this->container['assigned_technicians'] = $assigned_technicians;
+        $this->container['assignedTechnicians'] = $assignedTechnicians;
 
         return $this;
     }
 
     /**
-     * Gets rescheduled_appointment_id
+     * Gets rescheduledAppointmentId
      *
      * @return string|null
      */
     public function getRescheduledAppointmentId()
     {
-        return $this->container['rescheduled_appointment_id'];
+        return $this->container['rescheduledAppointmentId'];
     }
 
     /**
-     * Sets rescheduled_appointment_id
+     * Sets rescheduledAppointmentId
      *
-     * @param string|null $rescheduled_appointment_id The appointment identifier.
+     * @param string|null $rescheduledAppointmentId The appointment identifier.
      *
      * @return self
      */
-    public function setRescheduledAppointmentId($rescheduled_appointment_id)
+    public function setRescheduledAppointmentId($rescheduledAppointmentId)
     {
-        if (!is_null($rescheduled_appointment_id) && (mb_strlen($rescheduled_appointment_id) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $rescheduled_appointment_id when calling Appointment., must be smaller than or equal to 100.');
+        if (!is_null($rescheduledAppointmentId) && (mb_strlen($rescheduledAppointmentId) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $rescheduledAppointmentId when calling Appointment., must be smaller than or equal to 100.');
         }
-        if (!is_null($rescheduled_appointment_id) && (mb_strlen($rescheduled_appointment_id) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $rescheduled_appointment_id when calling Appointment., must be bigger than or equal to 5.');
+        if (!is_null($rescheduledAppointmentId) && (mb_strlen($rescheduledAppointmentId) < 5)) {
+            throw new \InvalidArgumentException('invalid length for $rescheduledAppointmentId when calling Appointment., must be bigger than or equal to 5.');
         }
 
-        $this->container['rescheduled_appointment_id'] = $rescheduled_appointment_id;
+        $this->container['rescheduledAppointmentId'] = $rescheduledAppointmentId;
 
         return $this;
     }

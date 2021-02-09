@@ -61,7 +61,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transport_content' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportContent'
+        'transportContent' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportContent'
     ];
 
     /**
@@ -72,7 +72,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transport_content' => null
+        'transportContent' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'transport_content' => 'TransportContent'
+        'transportContent' => 'TransportContent'
     ];
 
     /**
@@ -111,7 +111,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'transport_content' => 'setTransportContent'
+        'transportContent' => 'setTransportContent'
     ];
 
     /**
@@ -120,7 +120,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'transport_content' => 'getTransportContent'
+        'transportContent' => 'getTransportContent'
     ];
 
     /**
@@ -183,7 +183,7 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['transport_content'] = $data['transport_content'] ?? null;
+        $this->container['transportContent'] = $data['transportContent'] ?? null;
     }
 
     /**
@@ -211,25 +211,25 @@ class GetTransportDetailsResult implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets transport_content
+     * Gets transportContent
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportContent|null
      */
     public function getTransportContent()
     {
-        return $this->container['transport_content'];
+        return $this->container['transportContent'];
     }
 
     /**
-     * Sets transport_content
+     * Sets transportContent
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportContent|null $transport_content transport_content
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportContent|null $transportContent transportContent
      *
      * @return self
      */
-    public function setTransportContent($transport_content)
+    public function setTransportContent($transportContent)
     {
-        $this->container['transport_content'] = $transport_content;
+        $this->container['transportContent'] = $transportContent;
 
         return $this;
     }

@@ -62,9 +62,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_units' => 'int',
-        'fee_per_unit' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
-        'total_fee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
+        'totalUnits' => 'int',
+        'feePerUnit' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount',
+        'totalFee' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount'
     ];
 
     /**
@@ -75,9 +75,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_units' => 'int32',
-        'fee_per_unit' => null,
-        'total_fee' => null
+        'totalUnits' => 'int32',
+        'feePerUnit' => null,
+        'totalFee' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_units' => 'TotalUnits',
-        'fee_per_unit' => 'FeePerUnit',
-        'total_fee' => 'TotalFee'
+        'totalUnits' => 'TotalUnits',
+        'feePerUnit' => 'FeePerUnit',
+        'totalFee' => 'TotalFee'
     ];
 
     /**
@@ -118,9 +118,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'total_units' => 'setTotalUnits',
-        'fee_per_unit' => 'setFeePerUnit',
-        'total_fee' => 'setTotalFee'
+        'totalUnits' => 'setTotalUnits',
+        'feePerUnit' => 'setFeePerUnit',
+        'totalFee' => 'setTotalFee'
     ];
 
     /**
@@ -129,9 +129,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'total_units' => 'getTotalUnits',
-        'fee_per_unit' => 'getFeePerUnit',
-        'total_fee' => 'getTotalFee'
+        'totalUnits' => 'getTotalUnits',
+        'feePerUnit' => 'getFeePerUnit',
+        'totalFee' => 'getTotalFee'
     ];
 
     /**
@@ -194,9 +194,9 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_units'] = $data['total_units'] ?? null;
-        $this->container['fee_per_unit'] = $data['fee_per_unit'] ?? null;
-        $this->container['total_fee'] = $data['total_fee'] ?? null;
+        $this->container['totalUnits'] = $data['totalUnits'] ?? null;
+        $this->container['feePerUnit'] = $data['feePerUnit'] ?? null;
+        $this->container['totalFee'] = $data['totalFee'] ?? null;
     }
 
     /**
@@ -224,73 +224,73 @@ class BoxContentsFeeDetails implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets total_units
+     * Gets totalUnits
      *
      * @return int|null
      */
     public function getTotalUnits()
     {
-        return $this->container['total_units'];
+        return $this->container['totalUnits'];
     }
 
     /**
-     * Sets total_units
+     * Sets totalUnits
      *
-     * @param int|null $total_units The item quantity.
+     * @param int|null $totalUnits The item quantity.
      *
      * @return self
      */
-    public function setTotalUnits($total_units)
+    public function setTotalUnits($totalUnits)
     {
-        $this->container['total_units'] = $total_units;
+        $this->container['totalUnits'] = $totalUnits;
 
         return $this;
     }
 
     /**
-     * Gets fee_per_unit
+     * Gets feePerUnit
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getFeePerUnit()
     {
-        return $this->container['fee_per_unit'];
+        return $this->container['feePerUnit'];
     }
 
     /**
-     * Sets fee_per_unit
+     * Sets feePerUnit
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $fee_per_unit fee_per_unit
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $feePerUnit feePerUnit
      *
      * @return self
      */
-    public function setFeePerUnit($fee_per_unit)
+    public function setFeePerUnit($feePerUnit)
     {
-        $this->container['fee_per_unit'] = $fee_per_unit;
+        $this->container['feePerUnit'] = $feePerUnit;
 
         return $this;
     }
 
     /**
-     * Gets total_fee
+     * Gets totalFee
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null
      */
     public function getTotalFee()
     {
-        return $this->container['total_fee'];
+        return $this->container['totalFee'];
     }
 
     /**
-     * Sets total_fee
+     * Sets totalFee
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $total_fee total_fee
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Amount|null $totalFee totalFee
      *
      * @return self
      */
-    public function setTotalFee($total_fee)
+    public function setTotalFee($totalFee)
     {
-        $this->container['total_fee'] = $total_fee;
+        $this->container['totalFee'] = $totalFee;
 
         return $this;
     }

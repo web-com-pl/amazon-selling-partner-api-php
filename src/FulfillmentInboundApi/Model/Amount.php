@@ -62,7 +62,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency_code' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\CurrencyCode',
+        'currencyCode' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\CurrencyCode',
         'value' => 'double'
     ];
 
@@ -74,7 +74,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'currency_code' => null,
+        'currencyCode' => null,
         'value' => 'double'
     ];
 
@@ -105,7 +105,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'currency_code' => 'CurrencyCode',
+        'currencyCode' => 'CurrencyCode',
         'value' => 'Value'
     ];
 
@@ -115,7 +115,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'currency_code' => 'setCurrencyCode',
+        'currencyCode' => 'setCurrencyCode',
         'value' => 'setValue'
     ];
 
@@ -125,7 +125,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'currency_code' => 'getCurrencyCode',
+        'currencyCode' => 'getCurrencyCode',
         'value' => 'getValue'
     ];
 
@@ -189,7 +189,7 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['currency_code'] = $data['currency_code'] ?? null;
+        $this->container['currencyCode'] = $data['currencyCode'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['currency_code'] === null) {
-            $invalidProperties[] = "'currency_code' can't be null";
+        if ($this->container['currencyCode'] === null) {
+            $invalidProperties[] = "'currencyCode' can't be null";
         }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
@@ -224,25 +224,25 @@ class Amount implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\CurrencyCode
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
+     * Sets currencyCode
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\CurrencyCode $currency_code currency_code
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\CurrencyCode $currencyCode currencyCode
      *
      * @return self
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }

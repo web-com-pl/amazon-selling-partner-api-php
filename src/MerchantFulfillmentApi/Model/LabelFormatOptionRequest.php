@@ -62,7 +62,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'include_packing_slip_with_label' => 'bool'
+        'includePackingSlipWithLabel' => 'bool'
     ];
 
     /**
@@ -73,7 +73,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'include_packing_slip_with_label' => null
+        'includePackingSlipWithLabel' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_packing_slip_with_label' => 'IncludePackingSlipWithLabel'
+        'includePackingSlipWithLabel' => 'IncludePackingSlipWithLabel'
     ];
 
     /**
@@ -112,7 +112,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'include_packing_slip_with_label' => 'setIncludePackingSlipWithLabel'
+        'includePackingSlipWithLabel' => 'setIncludePackingSlipWithLabel'
     ];
 
     /**
@@ -121,7 +121,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'include_packing_slip_with_label' => 'getIncludePackingSlipWithLabel'
+        'includePackingSlipWithLabel' => 'getIncludePackingSlipWithLabel'
     ];
 
     /**
@@ -184,7 +184,7 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_packing_slip_with_label'] = $data['include_packing_slip_with_label'] ?? null;
+        $this->container['includePackingSlipWithLabel'] = $data['includePackingSlipWithLabel'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class LabelFormatOptionRequest implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets include_packing_slip_with_label
+     * Gets includePackingSlipWithLabel
      *
      * @return bool|null
      */
     public function getIncludePackingSlipWithLabel()
     {
-        return $this->container['include_packing_slip_with_label'];
+        return $this->container['includePackingSlipWithLabel'];
     }
 
     /**
-     * Sets include_packing_slip_with_label
+     * Sets includePackingSlipWithLabel
      *
-     * @param bool|null $include_packing_slip_with_label When true, include a packing slip with the label.
+     * @param bool|null $includePackingSlipWithLabel When true, include a packing slip with the label.
      *
      * @return self
      */
-    public function setIncludePackingSlipWithLabel($include_packing_slip_with_label)
+    public function setIncludePackingSlipWithLabel($includePackingSlipWithLabel)
     {
-        $this->container['include_packing_slip_with_label'] = $include_packing_slip_with_label;
+        $this->container['includePackingSlipWithLabel'] = $includePackingSlipWithLabel;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'listing_price' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
+        'listingPrice' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
         'shipping' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
         'points' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\Points'
     ];
@@ -75,7 +75,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'listing_price' => null,
+        'listingPrice' => null,
         'shipping' => null,
         'points' => null
     ];
@@ -107,7 +107,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'listing_price' => 'ListingPrice',
+        'listingPrice' => 'ListingPrice',
         'shipping' => 'Shipping',
         'points' => 'Points'
     ];
@@ -118,7 +118,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'listing_price' => 'setListingPrice',
+        'listingPrice' => 'setListingPrice',
         'shipping' => 'setShipping',
         'points' => 'setPoints'
     ];
@@ -129,7 +129,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'listing_price' => 'getListingPrice',
+        'listingPrice' => 'getListingPrice',
         'shipping' => 'getShipping',
         'points' => 'getPoints'
     ];
@@ -194,7 +194,7 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['listing_price'] = $data['listing_price'] ?? null;
+        $this->container['listingPrice'] = $data['listingPrice'] ?? null;
         $this->container['shipping'] = $data['shipping'] ?? null;
         $this->container['points'] = $data['points'] ?? null;
     }
@@ -208,8 +208,8 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['listing_price'] === null) {
-            $invalidProperties[] = "'listing_price' can't be null";
+        if ($this->container['listingPrice'] === null) {
+            $invalidProperties[] = "'listingPrice' can't be null";
         }
         return $invalidProperties;
     }
@@ -227,25 +227,25 @@ class PriceToEstimateFees implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets listing_price
+     * Gets listingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType
      */
     public function getListingPrice()
     {
-        return $this->container['listing_price'];
+        return $this->container['listingPrice'];
     }
 
     /**
-     * Sets listing_price
+     * Sets listingPrice
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $listing_price listing_price
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $listingPrice listingPrice
      *
      * @return self
      */
-    public function setListingPrice($listing_price)
+    public function setListingPrice($listingPrice)
     {
-        $this->container['listing_price'] = $listing_price;
+        $this->container['listingPrice'] = $listingPrice;
 
         return $this;
     }

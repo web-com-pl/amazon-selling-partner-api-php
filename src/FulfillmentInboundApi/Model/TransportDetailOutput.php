@@ -62,10 +62,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'partnered_small_parcel_data' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelDataOutput',
-        'non_partnered_small_parcel_data' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelDataOutput',
-        'partnered_ltl_data' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredLtlDataOutput',
-        'non_partnered_ltl_data' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredLtlDataOutput'
+        'partneredSmallParcelData' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelDataOutput',
+        'nonPartneredSmallParcelData' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelDataOutput',
+        'partneredLtlData' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredLtlDataOutput',
+        'nonPartneredLtlData' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredLtlDataOutput'
     ];
 
     /**
@@ -76,10 +76,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'partnered_small_parcel_data' => null,
-        'non_partnered_small_parcel_data' => null,
-        'partnered_ltl_data' => null,
-        'non_partnered_ltl_data' => null
+        'partneredSmallParcelData' => null,
+        'nonPartneredSmallParcelData' => null,
+        'partneredLtlData' => null,
+        'nonPartneredLtlData' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'partnered_small_parcel_data' => 'PartneredSmallParcelData',
-        'non_partnered_small_parcel_data' => 'NonPartneredSmallParcelData',
-        'partnered_ltl_data' => 'PartneredLtlData',
-        'non_partnered_ltl_data' => 'NonPartneredLtlData'
+        'partneredSmallParcelData' => 'PartneredSmallParcelData',
+        'nonPartneredSmallParcelData' => 'NonPartneredSmallParcelData',
+        'partneredLtlData' => 'PartneredLtlData',
+        'nonPartneredLtlData' => 'NonPartneredLtlData'
     ];
 
     /**
@@ -121,10 +121,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'partnered_small_parcel_data' => 'setPartneredSmallParcelData',
-        'non_partnered_small_parcel_data' => 'setNonPartneredSmallParcelData',
-        'partnered_ltl_data' => 'setPartneredLtlData',
-        'non_partnered_ltl_data' => 'setNonPartneredLtlData'
+        'partneredSmallParcelData' => 'setPartneredSmallParcelData',
+        'nonPartneredSmallParcelData' => 'setNonPartneredSmallParcelData',
+        'partneredLtlData' => 'setPartneredLtlData',
+        'nonPartneredLtlData' => 'setNonPartneredLtlData'
     ];
 
     /**
@@ -133,10 +133,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'partnered_small_parcel_data' => 'getPartneredSmallParcelData',
-        'non_partnered_small_parcel_data' => 'getNonPartneredSmallParcelData',
-        'partnered_ltl_data' => 'getPartneredLtlData',
-        'non_partnered_ltl_data' => 'getNonPartneredLtlData'
+        'partneredSmallParcelData' => 'getPartneredSmallParcelData',
+        'nonPartneredSmallParcelData' => 'getNonPartneredSmallParcelData',
+        'partneredLtlData' => 'getPartneredLtlData',
+        'nonPartneredLtlData' => 'getNonPartneredLtlData'
     ];
 
     /**
@@ -199,10 +199,10 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['partnered_small_parcel_data'] = $data['partnered_small_parcel_data'] ?? null;
-        $this->container['non_partnered_small_parcel_data'] = $data['non_partnered_small_parcel_data'] ?? null;
-        $this->container['partnered_ltl_data'] = $data['partnered_ltl_data'] ?? null;
-        $this->container['non_partnered_ltl_data'] = $data['non_partnered_ltl_data'] ?? null;
+        $this->container['partneredSmallParcelData'] = $data['partneredSmallParcelData'] ?? null;
+        $this->container['nonPartneredSmallParcelData'] = $data['nonPartneredSmallParcelData'] ?? null;
+        $this->container['partneredLtlData'] = $data['partneredLtlData'] ?? null;
+        $this->container['nonPartneredLtlData'] = $data['nonPartneredLtlData'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class TransportDetailOutput implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets partnered_small_parcel_data
+     * Gets partneredSmallParcelData
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelDataOutput|null
      */
     public function getPartneredSmallParcelData()
     {
-        return $this->container['partnered_small_parcel_data'];
+        return $this->container['partneredSmallParcelData'];
     }
 
     /**
-     * Sets partnered_small_parcel_data
+     * Sets partneredSmallParcelData
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelDataOutput|null $partnered_small_parcel_data partnered_small_parcel_data
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredSmallParcelDataOutput|null $partneredSmallParcelData partneredSmallParcelData
      *
      * @return self
      */
-    public function setPartneredSmallParcelData($partnered_small_parcel_data)
+    public function setPartneredSmallParcelData($partneredSmallParcelData)
     {
-        $this->container['partnered_small_parcel_data'] = $partnered_small_parcel_data;
+        $this->container['partneredSmallParcelData'] = $partneredSmallParcelData;
 
         return $this;
     }
 
     /**
-     * Gets non_partnered_small_parcel_data
+     * Gets nonPartneredSmallParcelData
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelDataOutput|null
      */
     public function getNonPartneredSmallParcelData()
     {
-        return $this->container['non_partnered_small_parcel_data'];
+        return $this->container['nonPartneredSmallParcelData'];
     }
 
     /**
-     * Sets non_partnered_small_parcel_data
+     * Sets nonPartneredSmallParcelData
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelDataOutput|null $non_partnered_small_parcel_data non_partnered_small_parcel_data
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredSmallParcelDataOutput|null $nonPartneredSmallParcelData nonPartneredSmallParcelData
      *
      * @return self
      */
-    public function setNonPartneredSmallParcelData($non_partnered_small_parcel_data)
+    public function setNonPartneredSmallParcelData($nonPartneredSmallParcelData)
     {
-        $this->container['non_partnered_small_parcel_data'] = $non_partnered_small_parcel_data;
+        $this->container['nonPartneredSmallParcelData'] = $nonPartneredSmallParcelData;
 
         return $this;
     }
 
     /**
-     * Gets partnered_ltl_data
+     * Gets partneredLtlData
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredLtlDataOutput|null
      */
     public function getPartneredLtlData()
     {
-        return $this->container['partnered_ltl_data'];
+        return $this->container['partneredLtlData'];
     }
 
     /**
-     * Sets partnered_ltl_data
+     * Sets partneredLtlData
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredLtlDataOutput|null $partnered_ltl_data partnered_ltl_data
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PartneredLtlDataOutput|null $partneredLtlData partneredLtlData
      *
      * @return self
      */
-    public function setPartneredLtlData($partnered_ltl_data)
+    public function setPartneredLtlData($partneredLtlData)
     {
-        $this->container['partnered_ltl_data'] = $partnered_ltl_data;
+        $this->container['partneredLtlData'] = $partneredLtlData;
 
         return $this;
     }
 
     /**
-     * Gets non_partnered_ltl_data
+     * Gets nonPartneredLtlData
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredLtlDataOutput|null
      */
     public function getNonPartneredLtlData()
     {
-        return $this->container['non_partnered_ltl_data'];
+        return $this->container['nonPartneredLtlData'];
     }
 
     /**
-     * Sets non_partnered_ltl_data
+     * Sets nonPartneredLtlData
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredLtlDataOutput|null $non_partnered_ltl_data non_partnered_ltl_data
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\NonPartneredLtlDataOutput|null $nonPartneredLtlData nonPartneredLtlData
      *
      * @return self
      */
-    public function setNonPartneredLtlData($non_partnered_ltl_data)
+    public function setNonPartneredLtlData($nonPartneredLtlData)
     {
-        $this->container['non_partnered_ltl_data'] = $non_partnered_ltl_data;
+        $this->container['nonPartneredLtlData'] = $nonPartneredLtlData;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appointment_time' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput'
+        'appointmentTime' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput'
     ];
 
     /**
@@ -73,7 +73,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appointment_time' => null
+        'appointmentTime' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'appointment_time' => 'appointmentTime'
+        'appointmentTime' => 'appointmentTime'
     ];
 
     /**
@@ -112,7 +112,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'appointment_time' => 'setAppointmentTime'
+        'appointmentTime' => 'setAppointmentTime'
     ];
 
     /**
@@ -121,7 +121,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'appointment_time' => 'getAppointmentTime'
+        'appointmentTime' => 'getAppointmentTime'
     ];
 
     /**
@@ -184,7 +184,7 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['appointment_time'] = $data['appointment_time'] ?? null;
+        $this->container['appointmentTime'] = $data['appointmentTime'] ?? null;
     }
 
     /**
@@ -196,8 +196,8 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['appointment_time'] === null) {
-            $invalidProperties[] = "'appointment_time' can't be null";
+        if ($this->container['appointmentTime'] === null) {
+            $invalidProperties[] = "'appointmentTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,25 +215,25 @@ class AddAppointmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets appointment_time
+     * Gets appointmentTime
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput
      */
     public function getAppointmentTime()
     {
-        return $this->container['appointment_time'];
+        return $this->container['appointmentTime'];
     }
 
     /**
-     * Sets appointment_time
+     * Sets appointmentTime
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput $appointment_time appointment_time
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTimeInput $appointmentTime appointmentTime
      *
      * @return self
      */
-    public function setAppointmentTime($appointment_time)
+    public function setAppointmentTime($appointmentTime)
     {
-        $this->container['appointment_time'] = $appointment_time;
+        $this->container['appointmentTime'] = $appointmentTime;
 
         return $this;
     }

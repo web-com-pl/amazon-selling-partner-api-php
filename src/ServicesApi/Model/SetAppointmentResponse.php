@@ -62,7 +62,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appointment_id' => 'string',
+        'appointmentId' => 'string',
         'warnings' => '\Webcom\Amazon\Rest\ServicesApi\Model\Warning[]',
         'errors' => '\Webcom\Amazon\Rest\ServicesApi\Model\Error[]'
     ];
@@ -75,7 +75,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appointment_id' => null,
+        'appointmentId' => null,
         'warnings' => null,
         'errors' => null
     ];
@@ -107,7 +107,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'appointment_id' => 'appointmentId',
+        'appointmentId' => 'appointmentId',
         'warnings' => 'warnings',
         'errors' => 'errors'
     ];
@@ -118,7 +118,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'appointment_id' => 'setAppointmentId',
+        'appointmentId' => 'setAppointmentId',
         'warnings' => 'setWarnings',
         'errors' => 'setErrors'
     ];
@@ -129,7 +129,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'appointment_id' => 'getAppointmentId',
+        'appointmentId' => 'getAppointmentId',
         'warnings' => 'getWarnings',
         'errors' => 'getErrors'
     ];
@@ -194,7 +194,7 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['appointment_id'] = $data['appointment_id'] ?? null;
+        $this->container['appointmentId'] = $data['appointmentId'] ?? null;
         $this->container['warnings'] = $data['warnings'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
@@ -208,12 +208,12 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['appointment_id']) && (mb_strlen($this->container['appointment_id']) > 100)) {
-            $invalidProperties[] = "invalid value for 'appointment_id', the character length must be smaller than or equal to 100.";
+        if (!is_null($this->container['appointmentId']) && (mb_strlen($this->container['appointmentId']) > 100)) {
+            $invalidProperties[] = "invalid value for 'appointmentId', the character length must be smaller than or equal to 100.";
         }
 
-        if (!is_null($this->container['appointment_id']) && (mb_strlen($this->container['appointment_id']) < 5)) {
-            $invalidProperties[] = "invalid value for 'appointment_id', the character length must be bigger than or equal to 5.";
+        if (!is_null($this->container['appointmentId']) && (mb_strlen($this->container['appointmentId']) < 5)) {
+            $invalidProperties[] = "invalid value for 'appointmentId', the character length must be bigger than or equal to 5.";
         }
 
         return $invalidProperties;
@@ -232,32 +232,32 @@ class SetAppointmentResponse implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets appointment_id
+     * Gets appointmentId
      *
      * @return string|null
      */
     public function getAppointmentId()
     {
-        return $this->container['appointment_id'];
+        return $this->container['appointmentId'];
     }
 
     /**
-     * Sets appointment_id
+     * Sets appointmentId
      *
-     * @param string|null $appointment_id The appointment identifier.
+     * @param string|null $appointmentId The appointment identifier.
      *
      * @return self
      */
-    public function setAppointmentId($appointment_id)
+    public function setAppointmentId($appointmentId)
     {
-        if (!is_null($appointment_id) && (mb_strlen($appointment_id) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $appointment_id when calling SetAppointmentResponse., must be smaller than or equal to 100.');
+        if (!is_null($appointmentId) && (mb_strlen($appointmentId) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $appointmentId when calling SetAppointmentResponse., must be smaller than or equal to 100.');
         }
-        if (!is_null($appointment_id) && (mb_strlen($appointment_id) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $appointment_id when calling SetAppointmentResponse., must be bigger than or equal to 5.');
+        if (!is_null($appointmentId) && (mb_strlen($appointmentId) < 5)) {
+            throw new \InvalidArgumentException('invalid length for $appointmentId when calling SetAppointmentResponse., must be bigger than or equal to 5.');
         }
 
-        $this->container['appointment_id'] = $appointment_id;
+        $this->container['appointmentId'] = $appointmentId;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier_will_pick_up_option' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
+        'carrierWillPickUpOption' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
         'charge' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount'
     ];
 
@@ -74,7 +74,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'carrier_will_pick_up_option' => null,
+        'carrierWillPickUpOption' => null,
         'charge' => null
     ];
 
@@ -105,7 +105,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'carrier_will_pick_up_option' => 'CarrierWillPickUpOption',
+        'carrierWillPickUpOption' => 'CarrierWillPickUpOption',
         'charge' => 'Charge'
     ];
 
@@ -115,7 +115,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'carrier_will_pick_up_option' => 'setCarrierWillPickUpOption',
+        'carrierWillPickUpOption' => 'setCarrierWillPickUpOption',
         'charge' => 'setCharge'
     ];
 
@@ -125,7 +125,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'carrier_will_pick_up_option' => 'getCarrierWillPickUpOption',
+        'carrierWillPickUpOption' => 'getCarrierWillPickUpOption',
         'charge' => 'getCharge'
     ];
 
@@ -189,7 +189,7 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
-        $this->container['carrier_will_pick_up_option'] = $data['carrier_will_pick_up_option'] ?? null;
+        $this->container['carrierWillPickUpOption'] = $data['carrierWillPickUpOption'] ?? null;
         $this->container['charge'] = $data['charge'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['carrier_will_pick_up_option'] === null) {
-            $invalidProperties[] = "'carrier_will_pick_up_option' can't be null";
+        if ($this->container['carrierWillPickUpOption'] === null) {
+            $invalidProperties[] = "'carrierWillPickUpOption' can't be null";
         }
         if ($this->container['charge'] === null) {
             $invalidProperties[] = "'charge' can't be null";
@@ -224,25 +224,25 @@ class AvailableCarrierWillPickUpOption implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets carrier_will_pick_up_option
+     * Gets carrierWillPickUpOption
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption
      */
     public function getCarrierWillPickUpOption()
     {
-        return $this->container['carrier_will_pick_up_option'];
+        return $this->container['carrierWillPickUpOption'];
     }
 
     /**
-     * Sets carrier_will_pick_up_option
+     * Sets carrierWillPickUpOption
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption $carrier_will_pick_up_option carrier_will_pick_up_option
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption $carrierWillPickUpOption carrierWillPickUpOption
      *
      * @return self
      */
-    public function setCarrierWillPickUpOption($carrier_will_pick_up_option)
+    public function setCarrierWillPickUpOption($carrierWillPickUpOption)
     {
-        $this->container['carrier_will_pick_up_option'] = $carrier_will_pick_up_option;
+        $this->container['carrierWillPickUpOption'] = $carrierWillPickUpOption;
 
         return $this;
     }

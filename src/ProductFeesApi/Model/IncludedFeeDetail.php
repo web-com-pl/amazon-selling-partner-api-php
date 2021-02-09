@@ -62,11 +62,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fee_type' => 'string',
-        'fee_amount' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
-        'fee_promotion' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
-        'tax_amount' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
-        'final_fee' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType'
+        'feeType' => 'string',
+        'feeAmount' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
+        'feePromotion' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
+        'taxAmount' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType',
+        'finalFee' => '\Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType'
     ];
 
     /**
@@ -77,11 +77,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fee_type' => null,
-        'fee_amount' => null,
-        'fee_promotion' => null,
-        'tax_amount' => null,
-        'final_fee' => null
+        'feeType' => null,
+        'feeAmount' => null,
+        'feePromotion' => null,
+        'taxAmount' => null,
+        'finalFee' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'fee_type' => 'FeeType',
-        'fee_amount' => 'FeeAmount',
-        'fee_promotion' => 'FeePromotion',
-        'tax_amount' => 'TaxAmount',
-        'final_fee' => 'FinalFee'
+        'feeType' => 'FeeType',
+        'feeAmount' => 'FeeAmount',
+        'feePromotion' => 'FeePromotion',
+        'taxAmount' => 'TaxAmount',
+        'finalFee' => 'FinalFee'
     ];
 
     /**
@@ -124,11 +124,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'fee_type' => 'setFeeType',
-        'fee_amount' => 'setFeeAmount',
-        'fee_promotion' => 'setFeePromotion',
-        'tax_amount' => 'setTaxAmount',
-        'final_fee' => 'setFinalFee'
+        'feeType' => 'setFeeType',
+        'feeAmount' => 'setFeeAmount',
+        'feePromotion' => 'setFeePromotion',
+        'taxAmount' => 'setTaxAmount',
+        'finalFee' => 'setFinalFee'
     ];
 
     /**
@@ -137,11 +137,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'fee_type' => 'getFeeType',
-        'fee_amount' => 'getFeeAmount',
-        'fee_promotion' => 'getFeePromotion',
-        'tax_amount' => 'getTaxAmount',
-        'final_fee' => 'getFinalFee'
+        'feeType' => 'getFeeType',
+        'feeAmount' => 'getFeeAmount',
+        'feePromotion' => 'getFeePromotion',
+        'taxAmount' => 'getTaxAmount',
+        'finalFee' => 'getFinalFee'
     ];
 
     /**
@@ -204,11 +204,11 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['fee_type'] = $data['fee_type'] ?? null;
-        $this->container['fee_amount'] = $data['fee_amount'] ?? null;
-        $this->container['fee_promotion'] = $data['fee_promotion'] ?? null;
-        $this->container['tax_amount'] = $data['tax_amount'] ?? null;
-        $this->container['final_fee'] = $data['final_fee'] ?? null;
+        $this->container['feeType'] = $data['feeType'] ?? null;
+        $this->container['feeAmount'] = $data['feeAmount'] ?? null;
+        $this->container['feePromotion'] = $data['feePromotion'] ?? null;
+        $this->container['taxAmount'] = $data['taxAmount'] ?? null;
+        $this->container['finalFee'] = $data['finalFee'] ?? null;
     }
 
     /**
@@ -220,14 +220,14 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['fee_type'] === null) {
-            $invalidProperties[] = "'fee_type' can't be null";
+        if ($this->container['feeType'] === null) {
+            $invalidProperties[] = "'feeType' can't be null";
         }
-        if ($this->container['fee_amount'] === null) {
-            $invalidProperties[] = "'fee_amount' can't be null";
+        if ($this->container['feeAmount'] === null) {
+            $invalidProperties[] = "'feeAmount' can't be null";
         }
-        if ($this->container['final_fee'] === null) {
-            $invalidProperties[] = "'final_fee' can't be null";
+        if ($this->container['finalFee'] === null) {
+            $invalidProperties[] = "'finalFee' can't be null";
         }
         return $invalidProperties;
     }
@@ -245,121 +245,121 @@ class IncludedFeeDetail implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets fee_type
+     * Gets feeType
      *
      * @return string
      */
     public function getFeeType()
     {
-        return $this->container['fee_type'];
+        return $this->container['feeType'];
     }
 
     /**
-     * Sets fee_type
+     * Sets feeType
      *
-     * @param string $fee_type The type of fee charged to a seller.
+     * @param string $feeType The type of fee charged to a seller.
      *
      * @return self
      */
-    public function setFeeType($fee_type)
+    public function setFeeType($feeType)
     {
-        $this->container['fee_type'] = $fee_type;
+        $this->container['feeType'] = $feeType;
 
         return $this;
     }
 
     /**
-     * Gets fee_amount
+     * Gets feeAmount
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType
      */
     public function getFeeAmount()
     {
-        return $this->container['fee_amount'];
+        return $this->container['feeAmount'];
     }
 
     /**
-     * Sets fee_amount
+     * Sets feeAmount
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $fee_amount fee_amount
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $feeAmount feeAmount
      *
      * @return self
      */
-    public function setFeeAmount($fee_amount)
+    public function setFeeAmount($feeAmount)
     {
-        $this->container['fee_amount'] = $fee_amount;
+        $this->container['feeAmount'] = $feeAmount;
 
         return $this;
     }
 
     /**
-     * Gets fee_promotion
+     * Gets feePromotion
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null
      */
     public function getFeePromotion()
     {
-        return $this->container['fee_promotion'];
+        return $this->container['feePromotion'];
     }
 
     /**
-     * Sets fee_promotion
+     * Sets feePromotion
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $fee_promotion fee_promotion
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $feePromotion feePromotion
      *
      * @return self
      */
-    public function setFeePromotion($fee_promotion)
+    public function setFeePromotion($feePromotion)
     {
-        $this->container['fee_promotion'] = $fee_promotion;
+        $this->container['feePromotion'] = $feePromotion;
 
         return $this;
     }
 
     /**
-     * Gets tax_amount
+     * Gets taxAmount
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null
      */
     public function getTaxAmount()
     {
-        return $this->container['tax_amount'];
+        return $this->container['taxAmount'];
     }
 
     /**
-     * Sets tax_amount
+     * Sets taxAmount
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $tax_amount tax_amount
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType|null $taxAmount taxAmount
      *
      * @return self
      */
-    public function setTaxAmount($tax_amount)
+    public function setTaxAmount($taxAmount)
     {
-        $this->container['tax_amount'] = $tax_amount;
+        $this->container['taxAmount'] = $taxAmount;
 
         return $this;
     }
 
     /**
-     * Gets final_fee
+     * Gets finalFee
      *
      * @return \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType
      */
     public function getFinalFee()
     {
-        return $this->container['final_fee'];
+        return $this->container['finalFee'];
     }
 
     /**
-     * Sets final_fee
+     * Sets finalFee
      *
-     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $final_fee final_fee
+     * @param \Webcom\Amazon\Rest\ProductFeesApi\Model\MoneyType $finalFee finalFee
      *
      * @return self
      */
-    public function setFinalFee($final_fee)
+    public function setFinalFee($finalFee)
     {
-        $this->container['final_fee'] = $final_fee;
+        $this->container['finalFee'] = $finalFee;
 
         return $this;
     }

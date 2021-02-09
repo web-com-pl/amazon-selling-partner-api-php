@@ -62,7 +62,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'resource_specification' => '\Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResourceSpecification',
+        'resourceSpecification' => '\Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResourceSpecification',
         'name' => 'string'
     ];
 
@@ -74,7 +74,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'resource_specification' => null,
+        'resourceSpecification' => null,
         'name' => null
     ];
 
@@ -105,7 +105,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'resource_specification' => 'resourceSpecification',
+        'resourceSpecification' => 'resourceSpecification',
         'name' => 'name'
     ];
 
@@ -115,7 +115,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'resource_specification' => 'setResourceSpecification',
+        'resourceSpecification' => 'setResourceSpecification',
         'name' => 'setName'
     ];
 
@@ -125,7 +125,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'resource_specification' => 'getResourceSpecification',
+        'resourceSpecification' => 'getResourceSpecification',
         'name' => 'getName'
     ];
 
@@ -189,7 +189,7 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['resource_specification'] = $data['resource_specification'] ?? null;
+        $this->container['resourceSpecification'] = $data['resourceSpecification'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['resource_specification'] === null) {
-            $invalidProperties[] = "'resource_specification' can't be null";
+        if ($this->container['resourceSpecification'] === null) {
+            $invalidProperties[] = "'resourceSpecification' can't be null";
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -224,25 +224,25 @@ class CreateDestinationRequest implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets resource_specification
+     * Gets resourceSpecification
      *
      * @return \Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResourceSpecification
      */
     public function getResourceSpecification()
     {
-        return $this->container['resource_specification'];
+        return $this->container['resourceSpecification'];
     }
 
     /**
-     * Sets resource_specification
+     * Sets resourceSpecification
      *
-     * @param \Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResourceSpecification $resource_specification resource_specification
+     * @param \Webcom\Amazon\Rest\NotificationsApi\Model\DestinationResourceSpecification $resourceSpecification resourceSpecification
      *
      * @return self
      */
-    public function setResourceSpecification($resource_specification)
+    public function setResourceSpecification($resourceSpecification)
     {
-        $this->container['resource_specification'] = $resource_specification;
+        $this->container['resourceSpecification'] = $resourceSpecification;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency_code' => 'string',
+        'currencyCode' => 'string',
         'amount' => 'double'
     ];
 
@@ -74,7 +74,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'currency_code' => null,
+        'currencyCode' => null,
         'amount' => 'double'
     ];
 
@@ -105,7 +105,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'currency_code' => 'CurrencyCode',
+        'currencyCode' => 'CurrencyCode',
         'amount' => 'Amount'
     ];
 
@@ -115,7 +115,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'currency_code' => 'setCurrencyCode',
+        'currencyCode' => 'setCurrencyCode',
         'amount' => 'setAmount'
     ];
 
@@ -125,7 +125,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'currency_code' => 'getCurrencyCode',
+        'currencyCode' => 'getCurrencyCode',
         'amount' => 'getAmount'
     ];
 
@@ -189,7 +189,7 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['currency_code'] = $data['currency_code'] ?? null;
+        $this->container['currencyCode'] = $data['currencyCode'] ?? null;
         $this->container['amount'] = $data['amount'] ?? null;
     }
 
@@ -202,11 +202,11 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['currency_code'] === null) {
-            $invalidProperties[] = "'currency_code' can't be null";
+        if ($this->container['currencyCode'] === null) {
+            $invalidProperties[] = "'currencyCode' can't be null";
         }
-        if ((mb_strlen($this->container['currency_code']) > 3)) {
-            $invalidProperties[] = "invalid value for 'currency_code', the character length must be smaller than or equal to 3.";
+        if ((mb_strlen($this->container['currencyCode']) > 3)) {
+            $invalidProperties[] = "invalid value for 'currencyCode', the character length must be smaller than or equal to 3.";
         }
 
         if ($this->container['amount'] === null) {
@@ -228,29 +228,29 @@ class CurrencyAmount implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      *
      * @return string
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
+     * Sets currencyCode
      *
-     * @param string $currency_code Three-digit currency code in ISO 4217 format.
+     * @param string $currencyCode Three-digit currency code in ISO 4217 format.
      *
      * @return self
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        if ((mb_strlen($currency_code) > 3)) {
-            throw new \InvalidArgumentException('invalid length for $currency_code when calling CurrencyAmount., must be smaller than or equal to 3.');
+        if ((mb_strlen($currencyCode) > 3)) {
+            throw new \InvalidArgumentException('invalid length for $currencyCode when calling CurrencyAmount., must be smaller than or equal to 3.');
         }
 
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }

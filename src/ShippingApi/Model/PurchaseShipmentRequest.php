@@ -62,13 +62,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client_reference_id' => 'string',
-        'ship_to' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'ship_from' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'ship_date' => '\DateTime',
-        'service_type' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
+        'clientReferenceId' => 'string',
+        'shipTo' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'shipFrom' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'shipDate' => '\DateTime',
+        'serviceType' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType',
         'containers' => '\Webcom\Amazon\Rest\ShippingApi\Model\Container[]',
-        'label_specification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
+        'labelSpecification' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification'
     ];
 
     /**
@@ -79,13 +79,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'client_reference_id' => null,
-        'ship_to' => null,
-        'ship_from' => null,
-        'ship_date' => 'date-time',
-        'service_type' => null,
+        'clientReferenceId' => null,
+        'shipTo' => null,
+        'shipFrom' => null,
+        'shipDate' => 'date-time',
+        'serviceType' => null,
         'containers' => null,
-        'label_specification' => null
+        'labelSpecification' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'client_reference_id' => 'clientReferenceId',
-        'ship_to' => 'shipTo',
-        'ship_from' => 'shipFrom',
-        'ship_date' => 'shipDate',
-        'service_type' => 'serviceType',
+        'clientReferenceId' => 'clientReferenceId',
+        'shipTo' => 'shipTo',
+        'shipFrom' => 'shipFrom',
+        'shipDate' => 'shipDate',
+        'serviceType' => 'serviceType',
         'containers' => 'containers',
-        'label_specification' => 'labelSpecification'
+        'labelSpecification' => 'labelSpecification'
     ];
 
     /**
@@ -130,13 +130,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'client_reference_id' => 'setClientReferenceId',
-        'ship_to' => 'setShipTo',
-        'ship_from' => 'setShipFrom',
-        'ship_date' => 'setShipDate',
-        'service_type' => 'setServiceType',
+        'clientReferenceId' => 'setClientReferenceId',
+        'shipTo' => 'setShipTo',
+        'shipFrom' => 'setShipFrom',
+        'shipDate' => 'setShipDate',
+        'serviceType' => 'setServiceType',
         'containers' => 'setContainers',
-        'label_specification' => 'setLabelSpecification'
+        'labelSpecification' => 'setLabelSpecification'
     ];
 
     /**
@@ -145,13 +145,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'client_reference_id' => 'getClientReferenceId',
-        'ship_to' => 'getShipTo',
-        'ship_from' => 'getShipFrom',
-        'ship_date' => 'getShipDate',
-        'service_type' => 'getServiceType',
+        'clientReferenceId' => 'getClientReferenceId',
+        'shipTo' => 'getShipTo',
+        'shipFrom' => 'getShipFrom',
+        'shipDate' => 'getShipDate',
+        'serviceType' => 'getServiceType',
         'containers' => 'getContainers',
-        'label_specification' => 'getLabelSpecification'
+        'labelSpecification' => 'getLabelSpecification'
     ];
 
     /**
@@ -214,13 +214,13 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['client_reference_id'] = $data['client_reference_id'] ?? null;
-        $this->container['ship_to'] = $data['ship_to'] ?? null;
-        $this->container['ship_from'] = $data['ship_from'] ?? null;
-        $this->container['ship_date'] = $data['ship_date'] ?? null;
-        $this->container['service_type'] = $data['service_type'] ?? null;
+        $this->container['clientReferenceId'] = $data['clientReferenceId'] ?? null;
+        $this->container['shipTo'] = $data['shipTo'] ?? null;
+        $this->container['shipFrom'] = $data['shipFrom'] ?? null;
+        $this->container['shipDate'] = $data['shipDate'] ?? null;
+        $this->container['serviceType'] = $data['serviceType'] ?? null;
         $this->container['containers'] = $data['containers'] ?? null;
-        $this->container['label_specification'] = $data['label_specification'] ?? null;
+        $this->container['labelSpecification'] = $data['labelSpecification'] ?? null;
     }
 
     /**
@@ -232,27 +232,27 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['client_reference_id'] === null) {
-            $invalidProperties[] = "'client_reference_id' can't be null";
+        if ($this->container['clientReferenceId'] === null) {
+            $invalidProperties[] = "'clientReferenceId' can't be null";
         }
-        if ((mb_strlen($this->container['client_reference_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'client_reference_id', the character length must be smaller than or equal to 40.";
+        if ((mb_strlen($this->container['clientReferenceId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'clientReferenceId', the character length must be smaller than or equal to 40.";
         }
 
-        if ($this->container['ship_to'] === null) {
-            $invalidProperties[] = "'ship_to' can't be null";
+        if ($this->container['shipTo'] === null) {
+            $invalidProperties[] = "'shipTo' can't be null";
         }
-        if ($this->container['ship_from'] === null) {
-            $invalidProperties[] = "'ship_from' can't be null";
+        if ($this->container['shipFrom'] === null) {
+            $invalidProperties[] = "'shipFrom' can't be null";
         }
-        if ($this->container['service_type'] === null) {
-            $invalidProperties[] = "'service_type' can't be null";
+        if ($this->container['serviceType'] === null) {
+            $invalidProperties[] = "'serviceType' can't be null";
         }
         if ($this->container['containers'] === null) {
             $invalidProperties[] = "'containers' can't be null";
         }
-        if ($this->container['label_specification'] === null) {
-            $invalidProperties[] = "'label_specification' can't be null";
+        if ($this->container['labelSpecification'] === null) {
+            $invalidProperties[] = "'labelSpecification' can't be null";
         }
         return $invalidProperties;
     }
@@ -270,125 +270,125 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets client_reference_id
+     * Gets clientReferenceId
      *
      * @return string
      */
     public function getClientReferenceId()
     {
-        return $this->container['client_reference_id'];
+        return $this->container['clientReferenceId'];
     }
 
     /**
-     * Sets client_reference_id
+     * Sets clientReferenceId
      *
-     * @param string $client_reference_id Client reference id.
+     * @param string $clientReferenceId Client reference id.
      *
      * @return self
      */
-    public function setClientReferenceId($client_reference_id)
+    public function setClientReferenceId($clientReferenceId)
     {
-        if ((mb_strlen($client_reference_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $client_reference_id when calling PurchaseShipmentRequest., must be smaller than or equal to 40.');
+        if ((mb_strlen($clientReferenceId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $clientReferenceId when calling PurchaseShipmentRequest., must be smaller than or equal to 40.');
         }
 
-        $this->container['client_reference_id'] = $client_reference_id;
+        $this->container['clientReferenceId'] = $clientReferenceId;
 
         return $this;
     }
 
     /**
-     * Gets ship_to
+     * Gets shipTo
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipTo()
     {
-        return $this->container['ship_to'];
+        return $this->container['shipTo'];
     }
 
     /**
-     * Sets ship_to
+     * Sets shipTo
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_to ship_to
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipTo shipTo
      *
      * @return self
      */
-    public function setShipTo($ship_to)
+    public function setShipTo($shipTo)
     {
-        $this->container['ship_to'] = $ship_to;
+        $this->container['shipTo'] = $shipTo;
 
         return $this;
     }
 
     /**
-     * Gets ship_from
+     * Gets shipFrom
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipFrom()
     {
-        return $this->container['ship_from'];
+        return $this->container['shipFrom'];
     }
 
     /**
-     * Sets ship_from
+     * Sets shipFrom
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_from ship_from
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipFrom shipFrom
      *
      * @return self
      */
-    public function setShipFrom($ship_from)
+    public function setShipFrom($shipFrom)
     {
-        $this->container['ship_from'] = $ship_from;
+        $this->container['shipFrom'] = $shipFrom;
 
         return $this;
     }
 
     /**
-     * Gets ship_date
+     * Gets shipDate
      *
      * @return \DateTime|null
      */
     public function getShipDate()
     {
-        return $this->container['ship_date'];
+        return $this->container['shipDate'];
     }
 
     /**
-     * Sets ship_date
+     * Sets shipDate
      *
-     * @param \DateTime|null $ship_date The start date and time. This defaults to the current date and time.
+     * @param \DateTime|null $shipDate The start date and time. This defaults to the current date and time.
      *
      * @return self
      */
-    public function setShipDate($ship_date)
+    public function setShipDate($shipDate)
     {
-        $this->container['ship_date'] = $ship_date;
+        $this->container['shipDate'] = $shipDate;
 
         return $this;
     }
 
     /**
-     * Gets service_type
+     * Gets serviceType
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType
      */
     public function getServiceType()
     {
-        return $this->container['service_type'];
+        return $this->container['serviceType'];
     }
 
     /**
-     * Sets service_type
+     * Sets serviceType
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType $service_type service_type
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType $serviceType serviceType
      *
      * @return self
      */
-    public function setServiceType($service_type)
+    public function setServiceType($serviceType)
     {
-        $this->container['service_type'] = $service_type;
+        $this->container['serviceType'] = $serviceType;
 
         return $this;
     }
@@ -418,25 +418,25 @@ class PurchaseShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets label_specification
+     * Gets labelSpecification
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification
      */
     public function getLabelSpecification()
     {
-        return $this->container['label_specification'];
+        return $this->container['labelSpecification'];
     }
 
     /**
-     * Sets label_specification
+     * Sets labelSpecification
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $label_specification label_specification
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelSpecification $labelSpecification labelSpecification
      *
      * @return self
      */
-    public function setLabelSpecification($label_specification)
+    public function setLabelSpecification($labelSpecification)
     {
-        $this->container['label_specification'] = $label_specification;
+        $this->container['labelSpecification'] = $labelSpecification;
 
         return $this;
     }

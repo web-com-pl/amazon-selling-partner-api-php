@@ -63,14 +63,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'address_line1' => 'string',
-        'address_line2' => 'string',
-        'address_line3' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressLine3' => 'string',
         'city' => 'string',
-        'district_or_county' => 'string',
-        'state_or_region' => 'string',
-        'postal_code' => 'string',
-        'country_code' => 'string',
+        'districtOrCounty' => 'string',
+        'stateOrRegion' => 'string',
+        'postalCode' => 'string',
+        'countryCode' => 'string',
         'phone' => 'string'
     ];
 
@@ -83,14 +83,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'address_line1' => null,
-        'address_line2' => null,
-        'address_line3' => null,
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'addressLine3' => null,
         'city' => null,
-        'district_or_county' => null,
-        'state_or_region' => null,
-        'postal_code' => null,
-        'country_code' => null,
+        'districtOrCounty' => null,
+        'stateOrRegion' => null,
+        'postalCode' => null,
+        'countryCode' => null,
         'phone' => null
     ];
 
@@ -122,14 +122,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'address_line1' => 'addressLine1',
-        'address_line2' => 'addressLine2',
-        'address_line3' => 'addressLine3',
+        'addressLine1' => 'addressLine1',
+        'addressLine2' => 'addressLine2',
+        'addressLine3' => 'addressLine3',
         'city' => 'city',
-        'district_or_county' => 'districtOrCounty',
-        'state_or_region' => 'stateOrRegion',
-        'postal_code' => 'postalCode',
-        'country_code' => 'countryCode',
+        'districtOrCounty' => 'districtOrCounty',
+        'stateOrRegion' => 'stateOrRegion',
+        'postalCode' => 'postalCode',
+        'countryCode' => 'countryCode',
         'phone' => 'phone'
     ];
 
@@ -140,14 +140,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'name' => 'setName',
-        'address_line1' => 'setAddressLine1',
-        'address_line2' => 'setAddressLine2',
-        'address_line3' => 'setAddressLine3',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressLine3' => 'setAddressLine3',
         'city' => 'setCity',
-        'district_or_county' => 'setDistrictOrCounty',
-        'state_or_region' => 'setStateOrRegion',
-        'postal_code' => 'setPostalCode',
-        'country_code' => 'setCountryCode',
+        'districtOrCounty' => 'setDistrictOrCounty',
+        'stateOrRegion' => 'setStateOrRegion',
+        'postalCode' => 'setPostalCode',
+        'countryCode' => 'setCountryCode',
         'phone' => 'setPhone'
     ];
 
@@ -158,14 +158,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'name' => 'getName',
-        'address_line1' => 'getAddressLine1',
-        'address_line2' => 'getAddressLine2',
-        'address_line3' => 'getAddressLine3',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressLine3' => 'getAddressLine3',
         'city' => 'getCity',
-        'district_or_county' => 'getDistrictOrCounty',
-        'state_or_region' => 'getStateOrRegion',
-        'postal_code' => 'getPostalCode',
-        'country_code' => 'getCountryCode',
+        'districtOrCounty' => 'getDistrictOrCounty',
+        'stateOrRegion' => 'getStateOrRegion',
+        'postalCode' => 'getPostalCode',
+        'countryCode' => 'getCountryCode',
         'phone' => 'getPhone'
     ];
 
@@ -230,14 +230,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['address_line1'] = $data['address_line1'] ?? null;
-        $this->container['address_line2'] = $data['address_line2'] ?? null;
-        $this->container['address_line3'] = $data['address_line3'] ?? null;
+        $this->container['addressLine1'] = $data['addressLine1'] ?? null;
+        $this->container['addressLine2'] = $data['addressLine2'] ?? null;
+        $this->container['addressLine3'] = $data['addressLine3'] ?? null;
         $this->container['city'] = $data['city'] ?? null;
-        $this->container['district_or_county'] = $data['district_or_county'] ?? null;
-        $this->container['state_or_region'] = $data['state_or_region'] ?? null;
-        $this->container['postal_code'] = $data['postal_code'] ?? null;
-        $this->container['country_code'] = $data['country_code'] ?? null;
+        $this->container['districtOrCounty'] = $data['districtOrCounty'] ?? null;
+        $this->container['stateOrRegion'] = $data['stateOrRegion'] ?? null;
+        $this->container['postalCode'] = $data['postalCode'] ?? null;
+        $this->container['countryCode'] = $data['countryCode'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
     }
 
@@ -253,14 +253,14 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['address_line1'] === null) {
-            $invalidProperties[] = "'address_line1' can't be null";
+        if ($this->container['addressLine1'] === null) {
+            $invalidProperties[] = "'addressLine1' can't be null";
         }
-        if ($this->container['district_or_county'] === null) {
-            $invalidProperties[] = "'district_or_county' can't be null";
+        if ($this->container['districtOrCounty'] === null) {
+            $invalidProperties[] = "'districtOrCounty' can't be null";
         }
-        if ($this->container['country_code'] === null) {
-            $invalidProperties[] = "'country_code' can't be null";
+        if ($this->container['countryCode'] === null) {
+            $invalidProperties[] = "'countryCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,73 +302,73 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address_line1
+     * Gets addressLine1
      *
      * @return string
      */
     public function getAddressLine1()
     {
-        return $this->container['address_line1'];
+        return $this->container['addressLine1'];
     }
 
     /**
-     * Sets address_line1
+     * Sets addressLine1
      *
-     * @param string $address_line1 The first line of the address.
+     * @param string $addressLine1 The first line of the address.
      *
      * @return self
      */
-    public function setAddressLine1($address_line1)
+    public function setAddressLine1($addressLine1)
     {
-        $this->container['address_line1'] = $address_line1;
+        $this->container['addressLine1'] = $addressLine1;
 
         return $this;
     }
 
     /**
-     * Gets address_line2
+     * Gets addressLine2
      *
      * @return string|null
      */
     public function getAddressLine2()
     {
-        return $this->container['address_line2'];
+        return $this->container['addressLine2'];
     }
 
     /**
-     * Sets address_line2
+     * Sets addressLine2
      *
-     * @param string|null $address_line2 Additional address information, if required.
+     * @param string|null $addressLine2 Additional address information, if required.
      *
      * @return self
      */
-    public function setAddressLine2($address_line2)
+    public function setAddressLine2($addressLine2)
     {
-        $this->container['address_line2'] = $address_line2;
+        $this->container['addressLine2'] = $addressLine2;
 
         return $this;
     }
 
     /**
-     * Gets address_line3
+     * Gets addressLine3
      *
      * @return string|null
      */
     public function getAddressLine3()
     {
-        return $this->container['address_line3'];
+        return $this->container['addressLine3'];
     }
 
     /**
-     * Sets address_line3
+     * Sets addressLine3
      *
-     * @param string|null $address_line3 Additional address information, if required.
+     * @param string|null $addressLine3 Additional address information, if required.
      *
      * @return self
      */
-    public function setAddressLine3($address_line3)
+    public function setAddressLine3($addressLine3)
     {
-        $this->container['address_line3'] = $address_line3;
+        $this->container['addressLine3'] = $addressLine3;
 
         return $this;
     }
@@ -398,97 +398,97 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets district_or_county
+     * Gets districtOrCounty
      *
      * @return string
      */
     public function getDistrictOrCounty()
     {
-        return $this->container['district_or_county'];
+        return $this->container['districtOrCounty'];
     }
 
     /**
-     * Sets district_or_county
+     * Sets districtOrCounty
      *
-     * @param string $district_or_county The district or county where the person, business, or institution is located.
+     * @param string $districtOrCounty The district or county where the person, business, or institution is located.
      *
      * @return self
      */
-    public function setDistrictOrCounty($district_or_county)
+    public function setDistrictOrCounty($districtOrCounty)
     {
-        $this->container['district_or_county'] = $district_or_county;
+        $this->container['districtOrCounty'] = $districtOrCounty;
 
         return $this;
     }
 
     /**
-     * Gets state_or_region
+     * Gets stateOrRegion
      *
      * @return string|null
      */
     public function getStateOrRegion()
     {
-        return $this->container['state_or_region'];
+        return $this->container['stateOrRegion'];
     }
 
     /**
-     * Sets state_or_region
+     * Sets stateOrRegion
      *
-     * @param string|null $state_or_region The state or region where the person, business or institution is located.
+     * @param string|null $stateOrRegion The state or region where the person, business or institution is located.
      *
      * @return self
      */
-    public function setStateOrRegion($state_or_region)
+    public function setStateOrRegion($stateOrRegion)
     {
-        $this->container['state_or_region'] = $state_or_region;
+        $this->container['stateOrRegion'] = $stateOrRegion;
 
         return $this;
     }
 
     /**
-     * Gets postal_code
+     * Gets postalCode
      *
      * @return string|null
      */
     public function getPostalCode()
     {
-        return $this->container['postal_code'];
+        return $this->container['postalCode'];
     }
 
     /**
-     * Sets postal_code
+     * Sets postalCode
      *
-     * @param string|null $postal_code The postal code of the address.
+     * @param string|null $postalCode The postal code of the address.
      *
      * @return self
      */
-    public function setPostalCode($postal_code)
+    public function setPostalCode($postalCode)
     {
-        $this->container['postal_code'] = $postal_code;
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string $country_code The two digit country code. In ISO 3166-1 alpha-2 format.
+     * @param string $countryCode The two digit country code. In ISO 3166-1 alpha-2 format.
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }

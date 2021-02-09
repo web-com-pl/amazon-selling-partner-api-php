@@ -62,7 +62,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'next_token' => 'string'
+        'nextToken' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'next_token' => null
+        'nextToken' => null
     ];
 
     /**
@@ -103,7 +103,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_token' => 'nextToken'
+        'nextToken' => 'nextToken'
     ];
 
     /**
@@ -112,7 +112,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'next_token' => 'setNextToken'
+        'nextToken' => 'setNextToken'
     ];
 
     /**
@@ -121,7 +121,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'next_token' => 'getNextToken'
+        'nextToken' => 'getNextToken'
     ];
 
     /**
@@ -184,7 +184,7 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_token'] = $data['next_token'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
     }
 
     /**
@@ -212,25 +212,25 @@ class Pagination implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token A generated string used to retrieve the next page of the result. If nextToken is returned, pass the value of nextToken to the next request. If nextToken is not returned, there are no more items to return.
+     * @param string|null $nextToken A generated string used to retrieve the next page of the result. If nextToken is returned, pass the value of nextToken to the next request. If nextToken is not returned, there are no more items to return.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }

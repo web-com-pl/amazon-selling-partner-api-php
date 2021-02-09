@@ -62,9 +62,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_partnered' => 'bool',
-        'shipment_type' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType',
-        'transport_details' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailInput'
+        'isPartnered' => 'bool',
+        'shipmentType' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType',
+        'transportDetails' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailInput'
     ];
 
     /**
@@ -75,9 +75,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_partnered' => null,
-        'shipment_type' => null,
-        'transport_details' => null
+        'isPartnered' => null,
+        'shipmentType' => null,
+        'transportDetails' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_partnered' => 'IsPartnered',
-        'shipment_type' => 'ShipmentType',
-        'transport_details' => 'TransportDetails'
+        'isPartnered' => 'IsPartnered',
+        'shipmentType' => 'ShipmentType',
+        'transportDetails' => 'TransportDetails'
     ];
 
     /**
@@ -118,9 +118,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'is_partnered' => 'setIsPartnered',
-        'shipment_type' => 'setShipmentType',
-        'transport_details' => 'setTransportDetails'
+        'isPartnered' => 'setIsPartnered',
+        'shipmentType' => 'setShipmentType',
+        'transportDetails' => 'setTransportDetails'
     ];
 
     /**
@@ -129,9 +129,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'is_partnered' => 'getIsPartnered',
-        'shipment_type' => 'getShipmentType',
-        'transport_details' => 'getTransportDetails'
+        'isPartnered' => 'getIsPartnered',
+        'shipmentType' => 'getShipmentType',
+        'transportDetails' => 'getTransportDetails'
     ];
 
     /**
@@ -194,9 +194,9 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_partnered'] = $data['is_partnered'] ?? null;
-        $this->container['shipment_type'] = $data['shipment_type'] ?? null;
-        $this->container['transport_details'] = $data['transport_details'] ?? null;
+        $this->container['isPartnered'] = $data['isPartnered'] ?? null;
+        $this->container['shipmentType'] = $data['shipmentType'] ?? null;
+        $this->container['transportDetails'] = $data['transportDetails'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['is_partnered'] === null) {
-            $invalidProperties[] = "'is_partnered' can't be null";
+        if ($this->container['isPartnered'] === null) {
+            $invalidProperties[] = "'isPartnered' can't be null";
         }
-        if ($this->container['shipment_type'] === null) {
-            $invalidProperties[] = "'shipment_type' can't be null";
+        if ($this->container['shipmentType'] === null) {
+            $invalidProperties[] = "'shipmentType' can't be null";
         }
-        if ($this->container['transport_details'] === null) {
-            $invalidProperties[] = "'transport_details' can't be null";
+        if ($this->container['transportDetails'] === null) {
+            $invalidProperties[] = "'transportDetails' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class PutTransportDetailsRequest implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets is_partnered
+     * Gets isPartnered
      *
      * @return bool
      */
     public function getIsPartnered()
     {
-        return $this->container['is_partnered'];
+        return $this->container['isPartnered'];
     }
 
     /**
-     * Sets is_partnered
+     * Sets isPartnered
      *
-     * @param bool $is_partnered Indicates whether a putTransportDetails request is for an Amazon-partnered carrier.
+     * @param bool $isPartnered Indicates whether a putTransportDetails request is for an Amazon-partnered carrier.
      *
      * @return self
      */
-    public function setIsPartnered($is_partnered)
+    public function setIsPartnered($isPartnered)
     {
-        $this->container['is_partnered'] = $is_partnered;
+        $this->container['isPartnered'] = $isPartnered;
 
         return $this;
     }
 
     /**
-     * Gets shipment_type
+     * Gets shipmentType
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType
      */
     public function getShipmentType()
     {
-        return $this->container['shipment_type'];
+        return $this->container['shipmentType'];
     }
 
     /**
-     * Sets shipment_type
+     * Sets shipmentType
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType $shipment_type shipment_type
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\ShipmentType $shipmentType shipmentType
      *
      * @return self
      */
-    public function setShipmentType($shipment_type)
+    public function setShipmentType($shipmentType)
     {
-        $this->container['shipment_type'] = $shipment_type;
+        $this->container['shipmentType'] = $shipmentType;
 
         return $this;
     }
 
     /**
-     * Gets transport_details
+     * Gets transportDetails
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailInput
      */
     public function getTransportDetails()
     {
-        return $this->container['transport_details'];
+        return $this->container['transportDetails'];
     }
 
     /**
-     * Sets transport_details
+     * Sets transportDetails
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailInput $transport_details transport_details
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\TransportDetailInput $transportDetails transportDetails
      *
      * @return self
      */
-    public function setTransportDetails($transport_details)
+    public function setTransportDetails($transportDetails)
     {
-        $this->container['transport_details'] = $transport_details;
+        $this->container['transportDetails'] = $transportDetails;
 
         return $this;
     }

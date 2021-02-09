@@ -62,8 +62,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'start_date' => '\DateTime',
-        'end_date' => '\DateTime'
+        'startDate' => '\DateTime',
+        'endDate' => '\DateTime'
     ];
 
     /**
@@ -74,8 +74,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'start_date' => 'date-time',
-        'end_date' => 'date-time'
+        'startDate' => 'date-time',
+        'endDate' => 'date-time'
     ];
 
     /**
@@ -105,8 +105,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'start_date' => 'startDate',
-        'end_date' => 'endDate'
+        'startDate' => 'startDate',
+        'endDate' => 'endDate'
     ];
 
     /**
@@ -115,8 +115,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'start_date' => 'setStartDate',
-        'end_date' => 'setEndDate'
+        'startDate' => 'setStartDate',
+        'endDate' => 'setEndDate'
     ];
 
     /**
@@ -125,8 +125,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'start_date' => 'getStartDate',
-        'end_date' => 'getEndDate'
+        'startDate' => 'getStartDate',
+        'endDate' => 'getEndDate'
     ];
 
     /**
@@ -189,8 +189,8 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['start_date'] = $data['start_date'] ?? null;
-        $this->container['end_date'] = $data['end_date'] ?? null;
+        $this->container['startDate'] = $data['startDate'] ?? null;
+        $this->container['endDate'] = $data['endDate'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['start_date'] === null) {
-            $invalidProperties[] = "'start_date' can't be null";
+        if ($this->container['startDate'] === null) {
+            $invalidProperties[] = "'startDate' can't be null";
         }
-        if ($this->container['end_date'] === null) {
-            $invalidProperties[] = "'end_date' can't be null";
+        if ($this->container['endDate'] === null) {
+            $invalidProperties[] = "'endDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class DeliveryWindow implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets start_date
+     * Gets startDate
      *
      * @return \DateTime
      */
     public function getStartDate()
     {
-        return $this->container['start_date'];
+        return $this->container['startDate'];
     }
 
     /**
-     * Sets start_date
+     * Sets startDate
      *
-     * @param \DateTime $start_date start_date
+     * @param \DateTime $startDate startDate
      *
      * @return self
      */
-    public function setStartDate($start_date)
+    public function setStartDate($startDate)
     {
-        $this->container['start_date'] = $start_date;
+        $this->container['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime $end_date end_date
+     * @param \DateTime $endDate endDate
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }

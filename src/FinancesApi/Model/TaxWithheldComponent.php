@@ -62,8 +62,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tax_collection_model' => 'string',
-        'taxes_withheld' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]'
+        'taxCollectionModel' => 'string',
+        'taxesWithheld' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]'
     ];
 
     /**
@@ -74,8 +74,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tax_collection_model' => null,
-        'taxes_withheld' => null
+        'taxCollectionModel' => null,
+        'taxesWithheld' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'tax_collection_model' => 'TaxCollectionModel',
-        'taxes_withheld' => 'TaxesWithheld'
+        'taxCollectionModel' => 'TaxCollectionModel',
+        'taxesWithheld' => 'TaxesWithheld'
     ];
 
     /**
@@ -115,8 +115,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'tax_collection_model' => 'setTaxCollectionModel',
-        'taxes_withheld' => 'setTaxesWithheld'
+        'taxCollectionModel' => 'setTaxCollectionModel',
+        'taxesWithheld' => 'setTaxesWithheld'
     ];
 
     /**
@@ -125,8 +125,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'tax_collection_model' => 'getTaxCollectionModel',
-        'taxes_withheld' => 'getTaxesWithheld'
+        'taxCollectionModel' => 'getTaxCollectionModel',
+        'taxesWithheld' => 'getTaxesWithheld'
     ];
 
     /**
@@ -189,8 +189,8 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['tax_collection_model'] = $data['tax_collection_model'] ?? null;
-        $this->container['taxes_withheld'] = $data['taxes_withheld'] ?? null;
+        $this->container['taxCollectionModel'] = $data['taxCollectionModel'] ?? null;
+        $this->container['taxesWithheld'] = $data['taxesWithheld'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class TaxWithheldComponent implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets tax_collection_model
+     * Gets taxCollectionModel
      *
      * @return string|null
      */
     public function getTaxCollectionModel()
     {
-        return $this->container['tax_collection_model'];
+        return $this->container['taxCollectionModel'];
     }
 
     /**
-     * Sets tax_collection_model
+     * Sets taxCollectionModel
      *
-     * @param string|null $tax_collection_model The tax collection model applied to the item.  Possible values:  * MarketplaceFacilitator - Tax is withheld and remitted to the taxing authority by Amazon on behalf of the seller.  * Standard - Tax is paid to the seller and not remitted to the taxing authority by Amazon.
+     * @param string|null $taxCollectionModel The tax collection model applied to the item.  Possible values:  * MarketplaceFacilitator - Tax is withheld and remitted to the taxing authority by Amazon on behalf of the seller.  * Standard - Tax is paid to the seller and not remitted to the taxing authority by Amazon.
      *
      * @return self
      */
-    public function setTaxCollectionModel($tax_collection_model)
+    public function setTaxCollectionModel($taxCollectionModel)
     {
-        $this->container['tax_collection_model'] = $tax_collection_model;
+        $this->container['taxCollectionModel'] = $taxCollectionModel;
 
         return $this;
     }
 
     /**
-     * Gets taxes_withheld
+     * Gets taxesWithheld
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getTaxesWithheld()
     {
-        return $this->container['taxes_withheld'];
+        return $this->container['taxesWithheld'];
     }
 
     /**
-     * Sets taxes_withheld
+     * Sets taxesWithheld
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $taxes_withheld A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $taxesWithheld A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setTaxesWithheld($taxes_withheld)
+    public function setTaxesWithheld($taxesWithheld)
     {
-        $this->container['taxes_withheld'] = $taxes_withheld;
+        $this->container['taxesWithheld'] = $taxesWithheld;
 
         return $this;
     }

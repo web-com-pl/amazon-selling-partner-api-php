@@ -62,8 +62,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'start_time' => '\DateTime',
-        'duration_in_minutes' => 'int'
+        'startTime' => '\DateTime',
+        'durationInMinutes' => 'int'
     ];
 
     /**
@@ -74,8 +74,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'start_time' => 'date-time',
-        'duration_in_minutes' => null
+        'startTime' => 'date-time',
+        'durationInMinutes' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'start_time' => 'startTime',
-        'duration_in_minutes' => 'durationInMinutes'
+        'startTime' => 'startTime',
+        'durationInMinutes' => 'durationInMinutes'
     ];
 
     /**
@@ -115,8 +115,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'start_time' => 'setStartTime',
-        'duration_in_minutes' => 'setDurationInMinutes'
+        'startTime' => 'setStartTime',
+        'durationInMinutes' => 'setDurationInMinutes'
     ];
 
     /**
@@ -125,8 +125,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'start_time' => 'getStartTime',
-        'duration_in_minutes' => 'getDurationInMinutes'
+        'startTime' => 'getStartTime',
+        'durationInMinutes' => 'getDurationInMinutes'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['start_time'] = $data['start_time'] ?? null;
-        $this->container['duration_in_minutes'] = $data['duration_in_minutes'] ?? null;
+        $this->container['startTime'] = $data['startTime'] ?? null;
+        $this->container['durationInMinutes'] = $data['durationInMinutes'] ?? null;
     }
 
     /**
@@ -202,14 +202,14 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['start_time'] === null) {
-            $invalidProperties[] = "'start_time' can't be null";
+        if ($this->container['startTime'] === null) {
+            $invalidProperties[] = "'startTime' can't be null";
         }
-        if ($this->container['duration_in_minutes'] === null) {
-            $invalidProperties[] = "'duration_in_minutes' can't be null";
+        if ($this->container['durationInMinutes'] === null) {
+            $invalidProperties[] = "'durationInMinutes' can't be null";
         }
-        if (($this->container['duration_in_minutes'] < 1)) {
-            $invalidProperties[] = "invalid value for 'duration_in_minutes', must be bigger than or equal to 1.";
+        if (($this->container['durationInMinutes'] < 1)) {
+            $invalidProperties[] = "invalid value for 'durationInMinutes', must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -228,54 +228,54 @@ class AppointmentTime implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime $start_time The date and time of the start of the appointment window, in ISO 8601 format.
+     * @param \DateTime $startTime The date and time of the start of the appointment window, in ISO 8601 format.
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets duration_in_minutes
+     * Gets durationInMinutes
      *
      * @return int
      */
     public function getDurationInMinutes()
     {
-        return $this->container['duration_in_minutes'];
+        return $this->container['durationInMinutes'];
     }
 
     /**
-     * Sets duration_in_minutes
+     * Sets durationInMinutes
      *
-     * @param int $duration_in_minutes The duration of the appointment window, in minutes.
+     * @param int $durationInMinutes The duration of the appointment window, in minutes.
      *
      * @return self
      */
-    public function setDurationInMinutes($duration_in_minutes)
+    public function setDurationInMinutes($durationInMinutes)
     {
 
-        if (($duration_in_minutes < 1)) {
-            throw new \InvalidArgumentException('invalid value for $duration_in_minutes when calling AppointmentTime., must be bigger than or equal to 1.');
+        if (($durationInMinutes < 1)) {
+            throw new \InvalidArgumentException('invalid value for $durationInMinutes when calling AppointmentTime., must be bigger than or equal to 1.');
         }
 
-        $this->container['duration_in_minutes'] = $duration_in_minutes;
+        $this->container['durationInMinutes'] = $durationInMinutes;
 
         return $this;
     }

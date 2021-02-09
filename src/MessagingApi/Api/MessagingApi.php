@@ -118,34 +118,34 @@ class MessagingApi
     /**
      * Operation confirmCustomizationDetails
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse
      */
-    public function confirmCustomizationDetails($amazon_order_id, $marketplace_ids, $body)
+    public function confirmCustomizationDetails($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->confirmCustomizationDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->confirmCustomizationDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation confirmCustomizationDetailsWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function confirmCustomizationDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function confirmCustomizationDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->confirmCustomizationDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->confirmCustomizationDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -385,16 +385,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function confirmCustomizationDetailsAsync($amazon_order_id, $marketplace_ids, $body)
+    public function confirmCustomizationDetailsAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->confirmCustomizationDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->confirmCustomizationDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -407,17 +407,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function confirmCustomizationDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function confirmCustomizationDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsResponse';
-        $request = $this->confirmCustomizationDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->confirmCustomizationDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -456,29 +456,29 @@ class MessagingApi
     /**
      * Create request for operation 'confirmCustomizationDetails'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmCustomizationDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function confirmCustomizationDetailsRequest($amazon_order_id, $marketplace_ids, $body)
+    public function confirmCustomizationDetailsRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling confirmCustomizationDetails'
+                'Missing the required parameter $amazonOrderId when calling confirmCustomizationDetails'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling confirmCustomizationDetails'
+                'Missing the required parameter $marketplaceIds when calling confirmCustomizationDetails'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.confirmCustomizationDetails, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.confirmCustomizationDetails, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -496,19 +496,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -580,34 +580,34 @@ class MessagingApi
     /**
      * Operation createAmazonMotors
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse
      */
-    public function createAmazonMotors($amazon_order_id, $marketplace_ids, $body)
+    public function createAmazonMotors($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createAmazonMotorsWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createAmazonMotorsWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createAmazonMotorsWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAmazonMotorsWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createAmazonMotorsWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createAmazonMotorsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createAmazonMotorsRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -847,16 +847,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAmazonMotorsAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createAmazonMotorsAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createAmazonMotorsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createAmazonMotorsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -869,17 +869,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAmazonMotorsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createAmazonMotorsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsResponse';
-        $request = $this->createAmazonMotorsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createAmazonMotorsRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -918,29 +918,29 @@ class MessagingApi
     /**
      * Create request for operation 'createAmazonMotors'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateAmazonMotorsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAmazonMotorsRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createAmazonMotorsRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createAmazonMotors'
+                'Missing the required parameter $amazonOrderId when calling createAmazonMotors'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createAmazonMotors'
+                'Missing the required parameter $marketplaceIds when calling createAmazonMotors'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createAmazonMotors, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createAmazonMotors, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -958,19 +958,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -1042,34 +1042,34 @@ class MessagingApi
     /**
      * Operation createConfirmDeliveryDetails
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse
      */
-    public function createConfirmDeliveryDetails($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmDeliveryDetails($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createConfirmDeliveryDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createConfirmDeliveryDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createConfirmDeliveryDetailsWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConfirmDeliveryDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmDeliveryDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createConfirmDeliveryDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmDeliveryDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1309,16 +1309,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmDeliveryDetailsAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmDeliveryDetailsAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createConfirmDeliveryDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createConfirmDeliveryDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1331,17 +1331,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmDeliveryDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmDeliveryDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsResponse';
-        $request = $this->createConfirmDeliveryDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmDeliveryDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1380,29 +1380,29 @@ class MessagingApi
     /**
      * Create request for operation 'createConfirmDeliveryDetails'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmDeliveryDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConfirmDeliveryDetailsRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmDeliveryDetailsRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createConfirmDeliveryDetails'
+                'Missing the required parameter $amazonOrderId when calling createConfirmDeliveryDetails'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createConfirmDeliveryDetails'
+                'Missing the required parameter $marketplaceIds when calling createConfirmDeliveryDetails'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createConfirmDeliveryDetails, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createConfirmDeliveryDetails, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -1420,19 +1420,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -1504,34 +1504,34 @@ class MessagingApi
     /**
      * Operation createConfirmOrderDetails
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse
      */
-    public function createConfirmOrderDetails($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmOrderDetails($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createConfirmOrderDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createConfirmOrderDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createConfirmOrderDetailsWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConfirmOrderDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmOrderDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createConfirmOrderDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmOrderDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1771,16 +1771,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmOrderDetailsAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmOrderDetailsAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createConfirmOrderDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createConfirmOrderDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1793,17 +1793,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmOrderDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmOrderDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsResponse';
-        $request = $this->createConfirmOrderDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmOrderDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1842,29 +1842,29 @@ class MessagingApi
     /**
      * Create request for operation 'createConfirmOrderDetails'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmOrderDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConfirmOrderDetailsRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmOrderDetailsRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createConfirmOrderDetails'
+                'Missing the required parameter $amazonOrderId when calling createConfirmOrderDetails'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createConfirmOrderDetails'
+                'Missing the required parameter $marketplaceIds when calling createConfirmOrderDetails'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createConfirmOrderDetails, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createConfirmOrderDetails, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -1882,19 +1882,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -1966,34 +1966,34 @@ class MessagingApi
     /**
      * Operation createConfirmServiceDetails
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse
      */
-    public function createConfirmServiceDetails($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmServiceDetails($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createConfirmServiceDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createConfirmServiceDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createConfirmServiceDetailsWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConfirmServiceDetailsWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmServiceDetailsWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createConfirmServiceDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmServiceDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2233,16 +2233,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmServiceDetailsAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmServiceDetailsAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createConfirmServiceDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createConfirmServiceDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2255,17 +2255,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConfirmServiceDetailsAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmServiceDetailsAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsResponse';
-        $request = $this->createConfirmServiceDetailsRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createConfirmServiceDetailsRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2304,29 +2304,29 @@ class MessagingApi
     /**
      * Create request for operation 'createConfirmServiceDetails'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateConfirmServiceDetailsRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConfirmServiceDetailsRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createConfirmServiceDetailsRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createConfirmServiceDetails'
+                'Missing the required parameter $amazonOrderId when calling createConfirmServiceDetails'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createConfirmServiceDetails'
+                'Missing the required parameter $marketplaceIds when calling createConfirmServiceDetails'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createConfirmServiceDetails, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createConfirmServiceDetails, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -2344,19 +2344,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -2428,34 +2428,34 @@ class MessagingApi
     /**
      * Operation createDigitalAccessKey
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse
      */
-    public function createDigitalAccessKey($amazon_order_id, $marketplace_ids, $body)
+    public function createDigitalAccessKey($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createDigitalAccessKeyWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createDigitalAccessKeyWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createDigitalAccessKeyWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDigitalAccessKeyWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createDigitalAccessKeyWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createDigitalAccessKeyRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createDigitalAccessKeyRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2695,16 +2695,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDigitalAccessKeyAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createDigitalAccessKeyAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createDigitalAccessKeyAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createDigitalAccessKeyAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2717,17 +2717,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDigitalAccessKeyAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createDigitalAccessKeyAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyResponse';
-        $request = $this->createDigitalAccessKeyRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createDigitalAccessKeyRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2766,29 +2766,29 @@ class MessagingApi
     /**
      * Create request for operation 'createDigitalAccessKey'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateDigitalAccessKeyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDigitalAccessKeyRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createDigitalAccessKeyRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createDigitalAccessKey'
+                'Missing the required parameter $amazonOrderId when calling createDigitalAccessKey'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createDigitalAccessKey'
+                'Missing the required parameter $marketplaceIds when calling createDigitalAccessKey'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createDigitalAccessKey, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createDigitalAccessKey, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -2806,19 +2806,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -2890,34 +2890,34 @@ class MessagingApi
     /**
      * Operation createLegalDisclosure
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse
      */
-    public function createLegalDisclosure($amazon_order_id, $marketplace_ids, $body)
+    public function createLegalDisclosure($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createLegalDisclosureWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createLegalDisclosureWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createLegalDisclosureWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createLegalDisclosureWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createLegalDisclosureWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createLegalDisclosureRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createLegalDisclosureRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3157,16 +3157,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLegalDisclosureAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createLegalDisclosureAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createLegalDisclosureAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createLegalDisclosureAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3179,17 +3179,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLegalDisclosureAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createLegalDisclosureAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureResponse';
-        $request = $this->createLegalDisclosureRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createLegalDisclosureRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3228,29 +3228,29 @@ class MessagingApi
     /**
      * Create request for operation 'createLegalDisclosure'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateLegalDisclosureRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createLegalDisclosureRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createLegalDisclosureRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createLegalDisclosure'
+                'Missing the required parameter $amazonOrderId when calling createLegalDisclosure'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createLegalDisclosure'
+                'Missing the required parameter $marketplaceIds when calling createLegalDisclosure'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createLegalDisclosure, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createLegalDisclosure, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -3268,19 +3268,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -3352,32 +3352,32 @@ class MessagingApi
     /**
      * Operation createNegativeFeedbackRemoval
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse
      */
-    public function createNegativeFeedbackRemoval($amazon_order_id, $marketplace_ids)
+    public function createNegativeFeedbackRemoval($amazonOrderId, $marketplaceIds)
     {
-        list($response) = $this->createNegativeFeedbackRemovalWithHttpInfo($amazon_order_id, $marketplace_ids);
+        list($response) = $this->createNegativeFeedbackRemovalWithHttpInfo($amazonOrderId, $marketplaceIds);
         return $response;
     }
 
     /**
      * Operation createNegativeFeedbackRemovalWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNegativeFeedbackRemovalWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function createNegativeFeedbackRemovalWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
-        $request = $this->createNegativeFeedbackRemovalRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->createNegativeFeedbackRemovalRequest($amazonOrderId, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3617,15 +3617,15 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNegativeFeedbackRemovalAsync($amazon_order_id, $marketplace_ids)
+    public function createNegativeFeedbackRemovalAsync($amazonOrderId, $marketplaceIds)
     {
-        return $this->createNegativeFeedbackRemovalAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+        return $this->createNegativeFeedbackRemovalAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3638,16 +3638,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNegativeFeedbackRemovalAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function createNegativeFeedbackRemovalAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateNegativeFeedbackRemovalResponse';
-        $request = $this->createNegativeFeedbackRemovalRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->createNegativeFeedbackRemovalRequest($amazonOrderId, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3686,28 +3686,28 @@ class MessagingApi
     /**
      * Create request for operation 'createNegativeFeedbackRemoval'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createNegativeFeedbackRemovalRequest($amazon_order_id, $marketplace_ids)
+    public function createNegativeFeedbackRemovalRequest($amazonOrderId, $marketplaceIds)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createNegativeFeedbackRemoval'
+                'Missing the required parameter $amazonOrderId when calling createNegativeFeedbackRemoval'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createNegativeFeedbackRemoval'
+                'Missing the required parameter $marketplaceIds when calling createNegativeFeedbackRemoval'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createNegativeFeedbackRemoval, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createNegativeFeedbackRemoval, number of items must be less than or equal to 1.');
         }
 
 
@@ -3719,19 +3719,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -3797,34 +3797,34 @@ class MessagingApi
     /**
      * Operation createUnexpectedProblem
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse
      */
-    public function createUnexpectedProblem($amazon_order_id, $marketplace_ids, $body)
+    public function createUnexpectedProblem($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createUnexpectedProblemWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createUnexpectedProblemWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createUnexpectedProblemWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUnexpectedProblemWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createUnexpectedProblemWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createUnexpectedProblemRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createUnexpectedProblemRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4064,16 +4064,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUnexpectedProblemAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createUnexpectedProblemAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createUnexpectedProblemAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createUnexpectedProblemAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4086,17 +4086,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUnexpectedProblemAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createUnexpectedProblemAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemResponse';
-        $request = $this->createUnexpectedProblemRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createUnexpectedProblemRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4135,29 +4135,29 @@ class MessagingApi
     /**
      * Create request for operation 'createUnexpectedProblem'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUnexpectedProblemRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createUnexpectedProblemRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createUnexpectedProblem'
+                'Missing the required parameter $amazonOrderId when calling createUnexpectedProblem'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createUnexpectedProblem'
+                'Missing the required parameter $marketplaceIds when calling createUnexpectedProblem'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createUnexpectedProblem, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createUnexpectedProblem, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -4175,19 +4175,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -4259,34 +4259,34 @@ class MessagingApi
     /**
      * Operation createWarranty
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyRequest $body body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse
      */
-    public function createWarranty($amazon_order_id, $marketplace_ids, $body)
+    public function createWarranty($amazonOrderId, $marketplaceIds, $body)
     {
-        list($response) = $this->createWarrantyWithHttpInfo($amazon_order_id, $marketplace_ids, $body);
+        list($response) = $this->createWarrantyWithHttpInfo($amazonOrderId, $marketplaceIds, $body);
         return $response;
     }
 
     /**
      * Operation createWarrantyWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyRequest $body (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse|\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createWarrantyWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createWarrantyWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
-        $request = $this->createWarrantyRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createWarrantyRequest($amazonOrderId, $marketplaceIds, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4526,16 +4526,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createWarrantyAsync($amazon_order_id, $marketplace_ids, $body)
+    public function createWarrantyAsync($amazonOrderId, $marketplaceIds, $body)
     {
-        return $this->createWarrantyAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+        return $this->createWarrantyAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4548,17 +4548,17 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createWarrantyAsyncWithHttpInfo($amazon_order_id, $marketplace_ids, $body)
+    public function createWarrantyAsyncWithHttpInfo($amazonOrderId, $marketplaceIds, $body)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyResponse';
-        $request = $this->createWarrantyRequest($amazon_order_id, $marketplace_ids, $body);
+        $request = $this->createWarrantyRequest($amazonOrderId, $marketplaceIds, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4597,29 +4597,29 @@ class MessagingApi
     /**
      * Create request for operation 'createWarranty'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      * @param  \Webcom\Amazon\Rest\MessagingApi\Model\CreateWarrantyRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createWarrantyRequest($amazon_order_id, $marketplace_ids, $body)
+    public function createWarrantyRequest($amazonOrderId, $marketplaceIds, $body)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling createWarranty'
+                'Missing the required parameter $amazonOrderId when calling createWarranty'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling createWarranty'
+                'Missing the required parameter $marketplaceIds when calling createWarranty'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.createWarranty, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.createWarranty, number of items must be less than or equal to 1.');
         }
 
         // verify the required parameter 'body' is set
@@ -4637,19 +4637,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -4721,32 +4721,32 @@ class MessagingApi
     /**
      * Operation getAttributes
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse
      */
-    public function getAttributes($amazon_order_id, $marketplace_ids)
+    public function getAttributes($amazonOrderId, $marketplaceIds)
     {
-        list($response) = $this->getAttributesWithHttpInfo($amazon_order_id, $marketplace_ids);
+        list($response) = $this->getAttributesWithHttpInfo($amazonOrderId, $marketplaceIds);
         return $response;
     }
 
     /**
      * Operation getAttributesWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAttributesWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getAttributesWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
-        $request = $this->getAttributesRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getAttributesRequest($amazonOrderId, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4986,15 +4986,15 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAttributesAsync($amazon_order_id, $marketplace_ids)
+    public function getAttributesAsync($amazonOrderId, $marketplaceIds)
     {
-        return $this->getAttributesAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+        return $this->getAttributesAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5007,16 +5007,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAttributesAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getAttributesAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\GetAttributesResponse';
-        $request = $this->getAttributesRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getAttributesRequest($amazonOrderId, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5055,28 +5055,28 @@ class MessagingApi
     /**
      * Create request for operation 'getAttributes'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which a message is sent. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which a message is sent. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getAttributesRequest($amazon_order_id, $marketplace_ids)
+    public function getAttributesRequest($amazonOrderId, $marketplaceIds)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling getAttributes'
+                'Missing the required parameter $amazonOrderId when calling getAttributes'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling getAttributes'
+                'Missing the required parameter $marketplaceIds when calling getAttributes'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.getAttributes, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.getAttributes, number of items must be less than or equal to 1.');
         }
 
 
@@ -5088,19 +5088,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }
@@ -5166,32 +5166,32 @@ class MessagingApi
     /**
      * Operation getMessagingActionsForOrder
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse
      */
-    public function getMessagingActionsForOrder($amazon_order_id, $marketplace_ids)
+    public function getMessagingActionsForOrder($amazonOrderId, $marketplaceIds)
     {
-        list($response) = $this->getMessagingActionsForOrderWithHttpInfo($amazon_order_id, $marketplace_ids);
+        list($response) = $this->getMessagingActionsForOrderWithHttpInfo($amazonOrderId, $marketplaceIds);
         return $response;
     }
 
     /**
      * Operation getMessagingActionsForOrderWithHttpInfo
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \Webcom\Amazon\Rest\MessagingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse|\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMessagingActionsForOrderWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getMessagingActionsForOrderWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
-        $request = $this->getMessagingActionsForOrderRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getMessagingActionsForOrderRequest($amazonOrderId, $marketplaceIds);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5431,15 +5431,15 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMessagingActionsForOrderAsync($amazon_order_id, $marketplace_ids)
+    public function getMessagingActionsForOrderAsync($amazonOrderId, $marketplaceIds)
     {
-        return $this->getMessagingActionsForOrderAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+        return $this->getMessagingActionsForOrderAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5452,16 +5452,16 @@ class MessagingApi
      *
      * 
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMessagingActionsForOrderAsyncWithHttpInfo($amazon_order_id, $marketplace_ids)
+    public function getMessagingActionsForOrderAsyncWithHttpInfo($amazonOrderId, $marketplaceIds)
     {
         $returnType = '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponse';
-        $request = $this->getMessagingActionsForOrderRequest($amazon_order_id, $marketplace_ids);
+        $request = $this->getMessagingActionsForOrderRequest($amazonOrderId, $marketplaceIds);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5500,28 +5500,28 @@ class MessagingApi
     /**
      * Create request for operation 'getMessagingActionsForOrder'
      *
-     * @param  string $amazon_order_id An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
-     * @param  string[] $marketplace_ids A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
+     * @param  string $amazonOrderId An Amazon order identifier. This specifies the order for which you want a list of available message types. (required)
+     * @param  string[] $marketplaceIds A marketplace identifier. This specifies the marketplace in which the order was placed. Only one marketplace can be specified. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMessagingActionsForOrderRequest($amazon_order_id, $marketplace_ids)
+    public function getMessagingActionsForOrderRequest($amazonOrderId, $marketplaceIds)
     {
-        // verify the required parameter 'amazon_order_id' is set
-        if ($amazon_order_id === null || (is_array($amazon_order_id) && count($amazon_order_id) === 0)) {
+        // verify the required parameter 'amazonOrderId' is set
+        if ($amazonOrderId === null || (is_array($amazonOrderId) && count($amazonOrderId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $amazon_order_id when calling getMessagingActionsForOrder'
+                'Missing the required parameter $amazonOrderId when calling getMessagingActionsForOrder'
             );
         }
-        // verify the required parameter 'marketplace_ids' is set
-        if ($marketplace_ids === null || (is_array($marketplace_ids) && count($marketplace_ids) === 0)) {
+        // verify the required parameter 'marketplaceIds' is set
+        if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_ids when calling getMessagingActionsForOrder'
+                'Missing the required parameter $marketplaceIds when calling getMessagingActionsForOrder'
             );
         }
-        if (count($marketplace_ids) > 1) {
-            throw new \InvalidArgumentException('invalid value for "$marketplace_ids" when calling MessagingApi.getMessagingActionsForOrder, number of items must be less than or equal to 1.');
+        if (count($marketplaceIds) > 1) {
+            throw new \InvalidArgumentException('invalid value for "$marketplaceIds" when calling MessagingApi.getMessagingActionsForOrder, number of items must be less than or equal to 1.');
         }
 
 
@@ -5533,19 +5533,19 @@ class MessagingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_ids)) {
-            $marketplace_ids = ObjectSerializer::serializeCollection($marketplace_ids, 'form', true);
+        if (is_array($marketplaceIds)) {
+            $marketplaceIds = ObjectSerializer::serializeCollection($marketplaceIds, 'form', true);
         }
-        if ($marketplace_ids !== null) {
-            $queryParams['marketplaceIds'] = $marketplace_ids;
+        if ($marketplaceIds !== null) {
+            $queryParams['marketplaceIds'] = $marketplaceIds;
         }
 
 
         // path params
-        if ($amazon_order_id !== null) {
+        if ($amazonOrderId !== null) {
             $resourcePath = str_replace(
                 '{' . 'amazonOrderId' . '}',
-                ObjectSerializer::toPathValue($amazon_order_id),
+                ObjectSerializer::toPathValue($amazonOrderId),
                 $resourcePath
             );
         }

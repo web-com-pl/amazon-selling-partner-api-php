@@ -62,8 +62,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_participating' => 'bool',
-        'has_suspended_listings' => 'bool'
+        'isParticipating' => 'bool',
+        'hasSuspendedListings' => 'bool'
     ];
 
     /**
@@ -74,8 +74,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_participating' => null,
-        'has_suspended_listings' => null
+        'isParticipating' => null,
+        'hasSuspendedListings' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_participating' => 'isParticipating',
-        'has_suspended_listings' => 'hasSuspendedListings'
+        'isParticipating' => 'isParticipating',
+        'hasSuspendedListings' => 'hasSuspendedListings'
     ];
 
     /**
@@ -115,8 +115,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'is_participating' => 'setIsParticipating',
-        'has_suspended_listings' => 'setHasSuspendedListings'
+        'isParticipating' => 'setIsParticipating',
+        'hasSuspendedListings' => 'setHasSuspendedListings'
     ];
 
     /**
@@ -125,8 +125,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'is_participating' => 'getIsParticipating',
-        'has_suspended_listings' => 'getHasSuspendedListings'
+        'isParticipating' => 'getIsParticipating',
+        'hasSuspendedListings' => 'getHasSuspendedListings'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_participating'] = $data['is_participating'] ?? null;
-        $this->container['has_suspended_listings'] = $data['has_suspended_listings'] ?? null;
+        $this->container['isParticipating'] = $data['isParticipating'] ?? null;
+        $this->container['hasSuspendedListings'] = $data['hasSuspendedListings'] ?? null;
     }
 
     /**
@@ -202,11 +202,11 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['is_participating'] === null) {
-            $invalidProperties[] = "'is_participating' can't be null";
+        if ($this->container['isParticipating'] === null) {
+            $invalidProperties[] = "'isParticipating' can't be null";
         }
-        if ($this->container['has_suspended_listings'] === null) {
-            $invalidProperties[] = "'has_suspended_listings' can't be null";
+        if ($this->container['hasSuspendedListings'] === null) {
+            $invalidProperties[] = "'hasSuspendedListings' can't be null";
         }
         return $invalidProperties;
     }
@@ -224,49 +224,49 @@ class Participation implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets is_participating
+     * Gets isParticipating
      *
      * @return bool
      */
     public function getIsParticipating()
     {
-        return $this->container['is_participating'];
+        return $this->container['isParticipating'];
     }
 
     /**
-     * Sets is_participating
+     * Sets isParticipating
      *
-     * @param bool $is_participating is_participating
+     * @param bool $isParticipating isParticipating
      *
      * @return self
      */
-    public function setIsParticipating($is_participating)
+    public function setIsParticipating($isParticipating)
     {
-        $this->container['is_participating'] = $is_participating;
+        $this->container['isParticipating'] = $isParticipating;
 
         return $this;
     }
 
     /**
-     * Gets has_suspended_listings
+     * Gets hasSuspendedListings
      *
      * @return bool
      */
     public function getHasSuspendedListings()
     {
-        return $this->container['has_suspended_listings'];
+        return $this->container['hasSuspendedListings'];
     }
 
     /**
-     * Sets has_suspended_listings
+     * Sets hasSuspendedListings
      *
-     * @param bool $has_suspended_listings Specifies if the seller has suspended listings. True if the seller Listing Status is set to Inactive, otherwise False.
+     * @param bool $hasSuspendedListings Specifies if the seller has suspended listings. True if the seller Listing Status is set to Inactive, otherwise False.
      *
      * @return self
      */
-    public function setHasSuspendedListings($has_suspended_listings)
+    public function setHasSuspendedListings($hasSuspendedListings)
     {
-        $this->container['has_suspended_listings'] = $has_suspended_listings;
+        $this->container['hasSuspendedListings'] = $hasSuspendedListings;
 
         return $this;
     }

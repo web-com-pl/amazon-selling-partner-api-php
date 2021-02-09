@@ -62,8 +62,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_request_details' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails',
-        'shipping_offering_filter' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingOfferingFilter'
+        'shipmentRequestDetails' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails',
+        'shippingOfferingFilter' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingOfferingFilter'
     ];
 
     /**
@@ -74,8 +74,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_request_details' => null,
-        'shipping_offering_filter' => null
+        'shipmentRequestDetails' => null,
+        'shippingOfferingFilter' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_request_details' => 'ShipmentRequestDetails',
-        'shipping_offering_filter' => 'ShippingOfferingFilter'
+        'shipmentRequestDetails' => 'ShipmentRequestDetails',
+        'shippingOfferingFilter' => 'ShippingOfferingFilter'
     ];
 
     /**
@@ -115,8 +115,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'shipment_request_details' => 'setShipmentRequestDetails',
-        'shipping_offering_filter' => 'setShippingOfferingFilter'
+        'shipmentRequestDetails' => 'setShipmentRequestDetails',
+        'shippingOfferingFilter' => 'setShippingOfferingFilter'
     ];
 
     /**
@@ -125,8 +125,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'shipment_request_details' => 'getShipmentRequestDetails',
-        'shipping_offering_filter' => 'getShippingOfferingFilter'
+        'shipmentRequestDetails' => 'getShipmentRequestDetails',
+        'shippingOfferingFilter' => 'getShippingOfferingFilter'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_request_details'] = $data['shipment_request_details'] ?? null;
-        $this->container['shipping_offering_filter'] = $data['shipping_offering_filter'] ?? null;
+        $this->container['shipmentRequestDetails'] = $data['shipmentRequestDetails'] ?? null;
+        $this->container['shippingOfferingFilter'] = $data['shippingOfferingFilter'] ?? null;
     }
 
     /**
@@ -202,8 +202,8 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_request_details'] === null) {
-            $invalidProperties[] = "'shipment_request_details' can't be null";
+        if ($this->container['shipmentRequestDetails'] === null) {
+            $invalidProperties[] = "'shipmentRequestDetails' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,49 +221,49 @@ class GetEligibleShipmentServicesRequest implements ModelInterface, ArrayAccess,
 
 
     /**
-     * Gets shipment_request_details
+     * Gets shipmentRequestDetails
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails
      */
     public function getShipmentRequestDetails()
     {
-        return $this->container['shipment_request_details'];
+        return $this->container['shipmentRequestDetails'];
     }
 
     /**
-     * Sets shipment_request_details
+     * Sets shipmentRequestDetails
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails $shipment_request_details shipment_request_details
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails $shipmentRequestDetails shipmentRequestDetails
      *
      * @return self
      */
-    public function setShipmentRequestDetails($shipment_request_details)
+    public function setShipmentRequestDetails($shipmentRequestDetails)
     {
-        $this->container['shipment_request_details'] = $shipment_request_details;
+        $this->container['shipmentRequestDetails'] = $shipmentRequestDetails;
 
         return $this;
     }
 
     /**
-     * Gets shipping_offering_filter
+     * Gets shippingOfferingFilter
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingOfferingFilter|null
      */
     public function getShippingOfferingFilter()
     {
-        return $this->container['shipping_offering_filter'];
+        return $this->container['shippingOfferingFilter'];
     }
 
     /**
-     * Sets shipping_offering_filter
+     * Sets shippingOfferingFilter
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingOfferingFilter|null $shipping_offering_filter shipping_offering_filter
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingOfferingFilter|null $shippingOfferingFilter shippingOfferingFilter
      *
      * @return self
      */
-    public function setShippingOfferingFilter($shipping_offering_filter)
+    public function setShippingOfferingFilter($shippingOfferingFilter)
     {
-        $this->container['shipping_offering_filter'] = $shipping_offering_filter;
+        $this->container['shippingOfferingFilter'] = $shippingOfferingFilter;
 
         return $this;
     }

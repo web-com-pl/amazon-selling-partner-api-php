@@ -62,11 +62,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ship_to' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'ship_from' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
-        'service_types' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType[]',
-        'ship_date' => '\DateTime',
-        'container_specifications' => '\Webcom\Amazon\Rest\ShippingApi\Model\ContainerSpecification[]'
+        'shipTo' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'shipFrom' => '\Webcom\Amazon\Rest\ShippingApi\Model\Address',
+        'serviceTypes' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceType[]',
+        'shipDate' => '\DateTime',
+        'containerSpecifications' => '\Webcom\Amazon\Rest\ShippingApi\Model\ContainerSpecification[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ship_to' => null,
-        'ship_from' => null,
-        'service_types' => null,
-        'ship_date' => 'date-time',
-        'container_specifications' => null
+        'shipTo' => null,
+        'shipFrom' => null,
+        'serviceTypes' => null,
+        'shipDate' => 'date-time',
+        'containerSpecifications' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'ship_to' => 'shipTo',
-        'ship_from' => 'shipFrom',
-        'service_types' => 'serviceTypes',
-        'ship_date' => 'shipDate',
-        'container_specifications' => 'containerSpecifications'
+        'shipTo' => 'shipTo',
+        'shipFrom' => 'shipFrom',
+        'serviceTypes' => 'serviceTypes',
+        'shipDate' => 'shipDate',
+        'containerSpecifications' => 'containerSpecifications'
     ];
 
     /**
@@ -124,11 +124,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'ship_to' => 'setShipTo',
-        'ship_from' => 'setShipFrom',
-        'service_types' => 'setServiceTypes',
-        'ship_date' => 'setShipDate',
-        'container_specifications' => 'setContainerSpecifications'
+        'shipTo' => 'setShipTo',
+        'shipFrom' => 'setShipFrom',
+        'serviceTypes' => 'setServiceTypes',
+        'shipDate' => 'setShipDate',
+        'containerSpecifications' => 'setContainerSpecifications'
     ];
 
     /**
@@ -137,11 +137,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'ship_to' => 'getShipTo',
-        'ship_from' => 'getShipFrom',
-        'service_types' => 'getServiceTypes',
-        'ship_date' => 'getShipDate',
-        'container_specifications' => 'getContainerSpecifications'
+        'shipTo' => 'getShipTo',
+        'shipFrom' => 'getShipFrom',
+        'serviceTypes' => 'getServiceTypes',
+        'shipDate' => 'getShipDate',
+        'containerSpecifications' => 'getContainerSpecifications'
     ];
 
     /**
@@ -204,11 +204,11 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['ship_to'] = $data['ship_to'] ?? null;
-        $this->container['ship_from'] = $data['ship_from'] ?? null;
-        $this->container['service_types'] = $data['service_types'] ?? null;
-        $this->container['ship_date'] = $data['ship_date'] ?? null;
-        $this->container['container_specifications'] = $data['container_specifications'] ?? null;
+        $this->container['shipTo'] = $data['shipTo'] ?? null;
+        $this->container['shipFrom'] = $data['shipFrom'] ?? null;
+        $this->container['serviceTypes'] = $data['serviceTypes'] ?? null;
+        $this->container['shipDate'] = $data['shipDate'] ?? null;
+        $this->container['containerSpecifications'] = $data['containerSpecifications'] ?? null;
     }
 
     /**
@@ -220,17 +220,17 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['ship_to'] === null) {
-            $invalidProperties[] = "'ship_to' can't be null";
+        if ($this->container['shipTo'] === null) {
+            $invalidProperties[] = "'shipTo' can't be null";
         }
-        if ($this->container['ship_from'] === null) {
-            $invalidProperties[] = "'ship_from' can't be null";
+        if ($this->container['shipFrom'] === null) {
+            $invalidProperties[] = "'shipFrom' can't be null";
         }
-        if ($this->container['service_types'] === null) {
-            $invalidProperties[] = "'service_types' can't be null";
+        if ($this->container['serviceTypes'] === null) {
+            $invalidProperties[] = "'serviceTypes' can't be null";
         }
-        if ($this->container['container_specifications'] === null) {
-            $invalidProperties[] = "'container_specifications' can't be null";
+        if ($this->container['containerSpecifications'] === null) {
+            $invalidProperties[] = "'containerSpecifications' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,121 +248,121 @@ class GetRatesRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets ship_to
+     * Gets shipTo
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipTo()
     {
-        return $this->container['ship_to'];
+        return $this->container['shipTo'];
     }
 
     /**
-     * Sets ship_to
+     * Sets shipTo
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_to ship_to
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipTo shipTo
      *
      * @return self
      */
-    public function setShipTo($ship_to)
+    public function setShipTo($shipTo)
     {
-        $this->container['ship_to'] = $ship_to;
+        $this->container['shipTo'] = $shipTo;
 
         return $this;
     }
 
     /**
-     * Gets ship_from
+     * Gets shipFrom
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Address
      */
     public function getShipFrom()
     {
-        return $this->container['ship_from'];
+        return $this->container['shipFrom'];
     }
 
     /**
-     * Sets ship_from
+     * Sets shipFrom
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $ship_from ship_from
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Address $shipFrom shipFrom
      *
      * @return self
      */
-    public function setShipFrom($ship_from)
+    public function setShipFrom($shipFrom)
     {
-        $this->container['ship_from'] = $ship_from;
+        $this->container['shipFrom'] = $shipFrom;
 
         return $this;
     }
 
     /**
-     * Gets service_types
+     * Gets serviceTypes
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType[]
      */
     public function getServiceTypes()
     {
-        return $this->container['service_types'];
+        return $this->container['serviceTypes'];
     }
 
     /**
-     * Sets service_types
+     * Sets serviceTypes
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType[] $service_types A list of service types that can be used to send the shipment.
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceType[] $serviceTypes A list of service types that can be used to send the shipment.
      *
      * @return self
      */
-    public function setServiceTypes($service_types)
+    public function setServiceTypes($serviceTypes)
     {
-        $this->container['service_types'] = $service_types;
+        $this->container['serviceTypes'] = $serviceTypes;
 
         return $this;
     }
 
     /**
-     * Gets ship_date
+     * Gets shipDate
      *
      * @return \DateTime|null
      */
     public function getShipDate()
     {
-        return $this->container['ship_date'];
+        return $this->container['shipDate'];
     }
 
     /**
-     * Sets ship_date
+     * Sets shipDate
      *
-     * @param \DateTime|null $ship_date The start date and time. This defaults to the current date and time.
+     * @param \DateTime|null $shipDate The start date and time. This defaults to the current date and time.
      *
      * @return self
      */
-    public function setShipDate($ship_date)
+    public function setShipDate($shipDate)
     {
-        $this->container['ship_date'] = $ship_date;
+        $this->container['shipDate'] = $shipDate;
 
         return $this;
     }
 
     /**
-     * Gets container_specifications
+     * Gets containerSpecifications
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ContainerSpecification[]
      */
     public function getContainerSpecifications()
     {
-        return $this->container['container_specifications'];
+        return $this->container['containerSpecifications'];
     }
 
     /**
-     * Sets container_specifications
+     * Sets containerSpecifications
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ContainerSpecification[] $container_specifications A list of container specifications.
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ContainerSpecification[] $containerSpecifications A list of container specifications.
      *
      * @return self
      */
-    public function setContainerSpecifications($container_specifications)
+    public function setContainerSpecifications($containerSpecifications)
     {
-        $this->container['container_specifications'] = $container_specifications;
+        $this->container['containerSpecifications'] = $containerSpecifications;
 
         return $this;
     }

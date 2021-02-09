@@ -62,10 +62,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_reserved_quantity' => 'int',
-        'pending_customer_order_quantity' => 'int',
-        'pending_transshipment_quantity' => 'int',
-        'fc_processing_quantity' => 'int'
+        'totalReservedQuantity' => 'int',
+        'pendingCustomerOrderQuantity' => 'int',
+        'pendingTransshipmentQuantity' => 'int',
+        'fcProcessingQuantity' => 'int'
     ];
 
     /**
@@ -76,10 +76,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_reserved_quantity' => null,
-        'pending_customer_order_quantity' => null,
-        'pending_transshipment_quantity' => null,
-        'fc_processing_quantity' => null
+        'totalReservedQuantity' => null,
+        'pendingCustomerOrderQuantity' => null,
+        'pendingTransshipmentQuantity' => null,
+        'fcProcessingQuantity' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_reserved_quantity' => 'totalReservedQuantity',
-        'pending_customer_order_quantity' => 'pendingCustomerOrderQuantity',
-        'pending_transshipment_quantity' => 'pendingTransshipmentQuantity',
-        'fc_processing_quantity' => 'fcProcessingQuantity'
+        'totalReservedQuantity' => 'totalReservedQuantity',
+        'pendingCustomerOrderQuantity' => 'pendingCustomerOrderQuantity',
+        'pendingTransshipmentQuantity' => 'pendingTransshipmentQuantity',
+        'fcProcessingQuantity' => 'fcProcessingQuantity'
     ];
 
     /**
@@ -121,10 +121,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_reserved_quantity' => 'setTotalReservedQuantity',
-        'pending_customer_order_quantity' => 'setPendingCustomerOrderQuantity',
-        'pending_transshipment_quantity' => 'setPendingTransshipmentQuantity',
-        'fc_processing_quantity' => 'setFcProcessingQuantity'
+        'totalReservedQuantity' => 'setTotalReservedQuantity',
+        'pendingCustomerOrderQuantity' => 'setPendingCustomerOrderQuantity',
+        'pendingTransshipmentQuantity' => 'setPendingTransshipmentQuantity',
+        'fcProcessingQuantity' => 'setFcProcessingQuantity'
     ];
 
     /**
@@ -133,10 +133,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_reserved_quantity' => 'getTotalReservedQuantity',
-        'pending_customer_order_quantity' => 'getPendingCustomerOrderQuantity',
-        'pending_transshipment_quantity' => 'getPendingTransshipmentQuantity',
-        'fc_processing_quantity' => 'getFcProcessingQuantity'
+        'totalReservedQuantity' => 'getTotalReservedQuantity',
+        'pendingCustomerOrderQuantity' => 'getPendingCustomerOrderQuantity',
+        'pendingTransshipmentQuantity' => 'getPendingTransshipmentQuantity',
+        'fcProcessingQuantity' => 'getFcProcessingQuantity'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_reserved_quantity'] = $data['total_reserved_quantity'] ?? null;
-        $this->container['pending_customer_order_quantity'] = $data['pending_customer_order_quantity'] ?? null;
-        $this->container['pending_transshipment_quantity'] = $data['pending_transshipment_quantity'] ?? null;
-        $this->container['fc_processing_quantity'] = $data['fc_processing_quantity'] ?? null;
+        $this->container['totalReservedQuantity'] = $data['totalReservedQuantity'] ?? null;
+        $this->container['pendingCustomerOrderQuantity'] = $data['pendingCustomerOrderQuantity'] ?? null;
+        $this->container['pendingTransshipmentQuantity'] = $data['pendingTransshipmentQuantity'] ?? null;
+        $this->container['fcProcessingQuantity'] = $data['fcProcessingQuantity'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class ReservedQuantity implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_reserved_quantity
+     * Gets totalReservedQuantity
      *
      * @return int|null
      */
     public function getTotalReservedQuantity()
     {
-        return $this->container['total_reserved_quantity'];
+        return $this->container['totalReservedQuantity'];
     }
 
     /**
-     * Sets total_reserved_quantity
+     * Sets totalReservedQuantity
      *
-     * @param int|null $total_reserved_quantity The total number of units in Amazon's fulfillment network that are currently being picked, packed, and shipped; or are sidelined for measurement, sampling, or other internal processes.
+     * @param int|null $totalReservedQuantity The total number of units in Amazon's fulfillment network that are currently being picked, packed, and shipped; or are sidelined for measurement, sampling, or other internal processes.
      *
      * @return self
      */
-    public function setTotalReservedQuantity($total_reserved_quantity)
+    public function setTotalReservedQuantity($totalReservedQuantity)
     {
-        $this->container['total_reserved_quantity'] = $total_reserved_quantity;
+        $this->container['totalReservedQuantity'] = $totalReservedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets pending_customer_order_quantity
+     * Gets pendingCustomerOrderQuantity
      *
      * @return int|null
      */
     public function getPendingCustomerOrderQuantity()
     {
-        return $this->container['pending_customer_order_quantity'];
+        return $this->container['pendingCustomerOrderQuantity'];
     }
 
     /**
-     * Sets pending_customer_order_quantity
+     * Sets pendingCustomerOrderQuantity
      *
-     * @param int|null $pending_customer_order_quantity The number of units reserved for customer orders.
+     * @param int|null $pendingCustomerOrderQuantity The number of units reserved for customer orders.
      *
      * @return self
      */
-    public function setPendingCustomerOrderQuantity($pending_customer_order_quantity)
+    public function setPendingCustomerOrderQuantity($pendingCustomerOrderQuantity)
     {
-        $this->container['pending_customer_order_quantity'] = $pending_customer_order_quantity;
+        $this->container['pendingCustomerOrderQuantity'] = $pendingCustomerOrderQuantity;
 
         return $this;
     }
 
     /**
-     * Gets pending_transshipment_quantity
+     * Gets pendingTransshipmentQuantity
      *
      * @return int|null
      */
     public function getPendingTransshipmentQuantity()
     {
-        return $this->container['pending_transshipment_quantity'];
+        return $this->container['pendingTransshipmentQuantity'];
     }
 
     /**
-     * Sets pending_transshipment_quantity
+     * Sets pendingTransshipmentQuantity
      *
-     * @param int|null $pending_transshipment_quantity The number of units being transferred from one fulfillment center to another.
+     * @param int|null $pendingTransshipmentQuantity The number of units being transferred from one fulfillment center to another.
      *
      * @return self
      */
-    public function setPendingTransshipmentQuantity($pending_transshipment_quantity)
+    public function setPendingTransshipmentQuantity($pendingTransshipmentQuantity)
     {
-        $this->container['pending_transshipment_quantity'] = $pending_transshipment_quantity;
+        $this->container['pendingTransshipmentQuantity'] = $pendingTransshipmentQuantity;
 
         return $this;
     }
 
     /**
-     * Gets fc_processing_quantity
+     * Gets fcProcessingQuantity
      *
      * @return int|null
      */
     public function getFcProcessingQuantity()
     {
-        return $this->container['fc_processing_quantity'];
+        return $this->container['fcProcessingQuantity'];
     }
 
     /**
-     * Sets fc_processing_quantity
+     * Sets fcProcessingQuantity
      *
-     * @param int|null $fc_processing_quantity The number of units that have been sidelined at the fulfillment center for additional processing.
+     * @param int|null $fcProcessingQuantity The number of units that have been sidelined at the fulfillment center for additional processing.
      *
      * @return self
      */
-    public function setFcProcessingQuantity($fc_processing_quantity)
+    public function setFcProcessingQuantity($fcProcessingQuantity)
     {
-        $this->container['fc_processing_quantity'] = $fc_processing_quantity;
+        $this->container['fcProcessingQuantity'] = $fcProcessingQuantity;
 
         return $this;
     }

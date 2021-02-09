@@ -62,9 +62,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'subscription_id' => 'string',
-        'payload_version' => 'string',
-        'destination_id' => 'string'
+        'subscriptionId' => 'string',
+        'payloadVersion' => 'string',
+        'destinationId' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'subscription_id' => null,
-        'payload_version' => null,
-        'destination_id' => null
+        'subscriptionId' => null,
+        'payloadVersion' => null,
+        'destinationId' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'subscription_id' => 'subscriptionId',
-        'payload_version' => 'payloadVersion',
-        'destination_id' => 'destinationId'
+        'subscriptionId' => 'subscriptionId',
+        'payloadVersion' => 'payloadVersion',
+        'destinationId' => 'destinationId'
     ];
 
     /**
@@ -118,9 +118,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'subscription_id' => 'setSubscriptionId',
-        'payload_version' => 'setPayloadVersion',
-        'destination_id' => 'setDestinationId'
+        'subscriptionId' => 'setSubscriptionId',
+        'payloadVersion' => 'setPayloadVersion',
+        'destinationId' => 'setDestinationId'
     ];
 
     /**
@@ -129,9 +129,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'subscription_id' => 'getSubscriptionId',
-        'payload_version' => 'getPayloadVersion',
-        'destination_id' => 'getDestinationId'
+        'subscriptionId' => 'getSubscriptionId',
+        'payloadVersion' => 'getPayloadVersion',
+        'destinationId' => 'getDestinationId'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['subscription_id'] = $data['subscription_id'] ?? null;
-        $this->container['payload_version'] = $data['payload_version'] ?? null;
-        $this->container['destination_id'] = $data['destination_id'] ?? null;
+        $this->container['subscriptionId'] = $data['subscriptionId'] ?? null;
+        $this->container['payloadVersion'] = $data['payloadVersion'] ?? null;
+        $this->container['destinationId'] = $data['destinationId'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['subscription_id'] === null) {
-            $invalidProperties[] = "'subscription_id' can't be null";
+        if ($this->container['subscriptionId'] === null) {
+            $invalidProperties[] = "'subscriptionId' can't be null";
         }
-        if ($this->container['payload_version'] === null) {
-            $invalidProperties[] = "'payload_version' can't be null";
+        if ($this->container['payloadVersion'] === null) {
+            $invalidProperties[] = "'payloadVersion' can't be null";
         }
-        if ($this->container['destination_id'] === null) {
-            $invalidProperties[] = "'destination_id' can't be null";
+        if ($this->container['destinationId'] === null) {
+            $invalidProperties[] = "'destinationId' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class Subscription implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets subscription_id
+     * Gets subscriptionId
      *
      * @return string
      */
     public function getSubscriptionId()
     {
-        return $this->container['subscription_id'];
+        return $this->container['subscriptionId'];
     }
 
     /**
-     * Sets subscription_id
+     * Sets subscriptionId
      *
-     * @param string $subscription_id The subscription identifier generated when the subscription is created.
+     * @param string $subscriptionId The subscription identifier generated when the subscription is created.
      *
      * @return self
      */
-    public function setSubscriptionId($subscription_id)
+    public function setSubscriptionId($subscriptionId)
     {
-        $this->container['subscription_id'] = $subscription_id;
+        $this->container['subscriptionId'] = $subscriptionId;
 
         return $this;
     }
 
     /**
-     * Gets payload_version
+     * Gets payloadVersion
      *
      * @return string
      */
     public function getPayloadVersion()
     {
-        return $this->container['payload_version'];
+        return $this->container['payloadVersion'];
     }
 
     /**
-     * Sets payload_version
+     * Sets payloadVersion
      *
-     * @param string $payload_version The version of the payload object to be used in the notification.
+     * @param string $payloadVersion The version of the payload object to be used in the notification.
      *
      * @return self
      */
-    public function setPayloadVersion($payload_version)
+    public function setPayloadVersion($payloadVersion)
     {
-        $this->container['payload_version'] = $payload_version;
+        $this->container['payloadVersion'] = $payloadVersion;
 
         return $this;
     }
 
     /**
-     * Gets destination_id
+     * Gets destinationId
      *
      * @return string
      */
     public function getDestinationId()
     {
-        return $this->container['destination_id'];
+        return $this->container['destinationId'];
     }
 
     /**
-     * Sets destination_id
+     * Sets destinationId
      *
-     * @param string $destination_id The identifier for the destination where notifications will be delivered.
+     * @param string $destinationId The identifier for the destination where notifications will be delivered.
      *
      * @return self
      */
-    public function setDestinationId($destination_id)
+    public function setDestinationId($destinationId)
     {
-        $this->container['destination_id'] = $destination_id;
+        $this->container['destinationId'] = $destinationId;
 
         return $this;
     }

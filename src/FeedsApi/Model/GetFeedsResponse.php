@@ -63,7 +63,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'payload' => '\Webcom\Amazon\Rest\FeedsApi\Model\Feed[]',
-        'next_token' => 'string',
+        'nextToken' => 'string',
         'errors' => '\Webcom\Amazon\Rest\FeedsApi\Model\Error[]'
     ];
 
@@ -76,7 +76,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'payload' => null,
-        'next_token' => null,
+        'nextToken' => null,
         'errors' => null
     ];
 
@@ -108,7 +108,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'payload' => 'payload',
-        'next_token' => 'nextToken',
+        'nextToken' => 'nextToken',
         'errors' => 'errors'
     ];
 
@@ -119,7 +119,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'payload' => 'setPayload',
-        'next_token' => 'setNextToken',
+        'nextToken' => 'setNextToken',
         'errors' => 'setErrors'
     ];
 
@@ -130,7 +130,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'payload' => 'getPayload',
-        'next_token' => 'getNextToken',
+        'nextToken' => 'getNextToken',
         'errors' => 'getErrors'
     ];
 
@@ -195,7 +195,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['payload'] = $data['payload'] ?? null;
-        $this->container['next_token'] = $data['next_token'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
 
@@ -248,25 +248,25 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token Returned when the number of results exceeds pageSize. To get the next page of results, call the getFeeds operation with this token as the only parameter.
+     * @param string|null $nextToken Returned when the number of results exceeds pageSize. To get the next page of results, call the getFeeds operation with this token as the only parameter.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }

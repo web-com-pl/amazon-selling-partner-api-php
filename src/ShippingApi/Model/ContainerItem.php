@@ -63,8 +63,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'quantity' => 'float',
-        'unit_price' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
-        'unit_weight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
+        'unitPrice' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
+        'unitWeight' => '\Webcom\Amazon\Rest\ShippingApi\Model\Weight',
         'title' => 'string'
     ];
 
@@ -77,8 +77,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'quantity' => null,
-        'unit_price' => null,
-        'unit_weight' => null,
+        'unitPrice' => null,
+        'unitWeight' => null,
         'title' => null
     ];
 
@@ -110,8 +110,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'quantity' => 'quantity',
-        'unit_price' => 'unitPrice',
-        'unit_weight' => 'unitWeight',
+        'unitPrice' => 'unitPrice',
+        'unitWeight' => 'unitWeight',
         'title' => 'title'
     ];
 
@@ -122,8 +122,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'quantity' => 'setQuantity',
-        'unit_price' => 'setUnitPrice',
-        'unit_weight' => 'setUnitWeight',
+        'unitPrice' => 'setUnitPrice',
+        'unitWeight' => 'setUnitWeight',
         'title' => 'setTitle'
     ];
 
@@ -134,8 +134,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'quantity' => 'getQuantity',
-        'unit_price' => 'getUnitPrice',
-        'unit_weight' => 'getUnitWeight',
+        'unitPrice' => 'getUnitPrice',
+        'unitWeight' => 'getUnitWeight',
         'title' => 'getTitle'
     ];
 
@@ -200,8 +200,8 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['unit_price'] = $data['unit_price'] ?? null;
-        $this->container['unit_weight'] = $data['unit_weight'] ?? null;
+        $this->container['unitPrice'] = $data['unitPrice'] ?? null;
+        $this->container['unitWeight'] = $data['unitWeight'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
     }
 
@@ -217,11 +217,11 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['unit_price'] === null) {
-            $invalidProperties[] = "'unit_price' can't be null";
+        if ($this->container['unitPrice'] === null) {
+            $invalidProperties[] = "'unitPrice' can't be null";
         }
-        if ($this->container['unit_weight'] === null) {
-            $invalidProperties[] = "'unit_weight' can't be null";
+        if ($this->container['unitWeight'] === null) {
+            $invalidProperties[] = "'unitWeight' can't be null";
         }
         if ($this->container['title'] === null) {
             $invalidProperties[] = "'title' can't be null";
@@ -270,49 +270,49 @@ class ContainerItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets unit_price
+     * Gets unitPrice
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Currency
      */
     public function getUnitPrice()
     {
-        return $this->container['unit_price'];
+        return $this->container['unitPrice'];
     }
 
     /**
-     * Sets unit_price
+     * Sets unitPrice
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency $unit_price unit_price
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Currency $unitPrice unitPrice
      *
      * @return self
      */
-    public function setUnitPrice($unit_price)
+    public function setUnitPrice($unitPrice)
     {
-        $this->container['unit_price'] = $unit_price;
+        $this->container['unitPrice'] = $unitPrice;
 
         return $this;
     }
 
     /**
-     * Gets unit_weight
+     * Gets unitWeight
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\Weight
      */
     public function getUnitWeight()
     {
-        return $this->container['unit_weight'];
+        return $this->container['unitWeight'];
     }
 
     /**
-     * Sets unit_weight
+     * Sets unitWeight
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight $unit_weight unit_weight
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\Weight $unitWeight unitWeight
      *
      * @return self
      */
-    public function setUnitWeight($unit_weight)
+    public function setUnitWeight($unitWeight)
     {
-        $this->container['unit_weight'] = $unit_weight;
+        $this->container['unitWeight'] = $unitWeight;
 
         return $this;
     }

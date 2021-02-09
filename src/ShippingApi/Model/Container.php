@@ -62,8 +62,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'container_type' => 'string',
-        'container_reference_id' => 'string',
+        'containerType' => 'string',
+        'containerReferenceId' => 'string',
         'value' => '\Webcom\Amazon\Rest\ShippingApi\Model\Currency',
         'dimensions' => '\Webcom\Amazon\Rest\ShippingApi\Model\Dimensions',
         'items' => '\Webcom\Amazon\Rest\ShippingApi\Model\ContainerItem[]',
@@ -78,8 +78,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'container_type' => null,
-        'container_reference_id' => null,
+        'containerType' => null,
+        'containerReferenceId' => null,
         'value' => null,
         'dimensions' => null,
         'items' => null,
@@ -113,8 +113,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'container_type' => 'containerType',
-        'container_reference_id' => 'containerReferenceId',
+        'containerType' => 'containerType',
+        'containerReferenceId' => 'containerReferenceId',
         'value' => 'value',
         'dimensions' => 'dimensions',
         'items' => 'items',
@@ -127,8 +127,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'container_type' => 'setContainerType',
-        'container_reference_id' => 'setContainerReferenceId',
+        'containerType' => 'setContainerType',
+        'containerReferenceId' => 'setContainerReferenceId',
         'value' => 'setValue',
         'dimensions' => 'setDimensions',
         'items' => 'setItems',
@@ -141,8 +141,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'container_type' => 'getContainerType',
-        'container_reference_id' => 'getContainerReferenceId',
+        'containerType' => 'getContainerType',
+        'containerReferenceId' => 'getContainerReferenceId',
         'value' => 'getValue',
         'dimensions' => 'getDimensions',
         'items' => 'getItems',
@@ -222,8 +222,8 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['container_type'] = $data['container_type'] ?? null;
-        $this->container['container_reference_id'] = $data['container_reference_id'] ?? null;
+        $this->container['containerType'] = $data['containerType'] ?? null;
+        $this->container['containerReferenceId'] = $data['containerReferenceId'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
         $this->container['dimensions'] = $data['dimensions'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
@@ -240,19 +240,19 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getContainerTypeAllowableValues();
-        if (!is_null($this->container['container_type']) && !in_array($this->container['container_type'], $allowedValues, true)) {
+        if (!is_null($this->container['containerType']) && !in_array($this->container['containerType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'container_type', must be one of '%s'",
-                $this->container['container_type'],
+                "invalid value '%s' for 'containerType', must be one of '%s'",
+                $this->container['containerType'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['container_reference_id'] === null) {
-            $invalidProperties[] = "'container_reference_id' can't be null";
+        if ($this->container['containerReferenceId'] === null) {
+            $invalidProperties[] = "'containerReferenceId' can't be null";
         }
-        if ((mb_strlen($this->container['container_reference_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'container_reference_id', the character length must be smaller than or equal to 40.";
+        if ((mb_strlen($this->container['containerReferenceId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'containerReferenceId', the character length must be smaller than or equal to 40.";
         }
 
         if ($this->container['value'] === null) {
@@ -283,63 +283,63 @@ class Container implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets container_type
+     * Gets containerType
      *
      * @return string|null
      */
     public function getContainerType()
     {
-        return $this->container['container_type'];
+        return $this->container['containerType'];
     }
 
     /**
-     * Sets container_type
+     * Sets containerType
      *
-     * @param string|null $container_type The type of physical container being used. (always 'PACKAGE')
+     * @param string|null $containerType The type of physical container being used. (always 'PACKAGE')
      *
      * @return self
      */
-    public function setContainerType($container_type)
+    public function setContainerType($containerType)
     {
         $allowedValues = $this->getContainerTypeAllowableValues();
-        if (!is_null($container_type) && !in_array($container_type, $allowedValues, true)) {
+        if (!is_null($containerType) && !in_array($containerType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'container_type', must be one of '%s'",
-                    $container_type,
+                    "Invalid value '%s' for 'containerType', must be one of '%s'",
+                    $containerType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['container_type'] = $container_type;
+        $this->container['containerType'] = $containerType;
 
         return $this;
     }
 
     /**
-     * Gets container_reference_id
+     * Gets containerReferenceId
      *
      * @return string
      */
     public function getContainerReferenceId()
     {
-        return $this->container['container_reference_id'];
+        return $this->container['containerReferenceId'];
     }
 
     /**
-     * Sets container_reference_id
+     * Sets containerReferenceId
      *
-     * @param string $container_reference_id An identifier for the container. This must be unique within all the containers in the same shipment.
+     * @param string $containerReferenceId An identifier for the container. This must be unique within all the containers in the same shipment.
      *
      * @return self
      */
-    public function setContainerReferenceId($container_reference_id)
+    public function setContainerReferenceId($containerReferenceId)
     {
-        if ((mb_strlen($container_reference_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $container_reference_id when calling Container., must be smaller than or equal to 40.');
+        if ((mb_strlen($containerReferenceId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $containerReferenceId when calling Container., must be smaller than or equal to 40.');
         }
 
-        $this->container['container_reference_id'] = $container_reference_id;
+        $this->container['containerReferenceId'] = $containerReferenceId;
 
         return $this;
     }

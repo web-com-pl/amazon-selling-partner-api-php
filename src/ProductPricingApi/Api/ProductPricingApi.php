@@ -118,8 +118,8 @@ class ProductPricingApi
     /**
      * Operation getCompetitivePricing
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
      *
@@ -127,17 +127,17 @@ class ProductPricingApi
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse
      */
-    public function getCompetitivePricing($marketplace_id, $item_type, $asins = null, $skus = null)
+    public function getCompetitivePricing($marketplaceId, $itemType, $asins = null, $skus = null)
     {
-        list($response) = $this->getCompetitivePricingWithHttpInfo($marketplace_id, $item_type, $asins, $skus);
+        list($response) = $this->getCompetitivePricingWithHttpInfo($marketplaceId, $itemType, $asins, $skus);
         return $response;
     }
 
     /**
      * Operation getCompetitivePricingWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
      *
@@ -145,9 +145,9 @@ class ProductPricingApi
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCompetitivePricingWithHttpInfo($marketplace_id, $item_type, $asins = null, $skus = null)
+    public function getCompetitivePricingWithHttpInfo($marketplaceId, $itemType, $asins = null, $skus = null)
     {
-        $request = $this->getCompetitivePricingRequest($marketplace_id, $item_type, $asins, $skus);
+        $request = $this->getCompetitivePricingRequest($marketplaceId, $itemType, $asins, $skus);
 
         try {
             $options = $this->createHttpClientOption();
@@ -367,17 +367,17 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompetitivePricingAsync($marketplace_id, $item_type, $asins = null, $skus = null)
+    public function getCompetitivePricingAsync($marketplaceId, $itemType, $asins = null, $skus = null)
     {
-        return $this->getCompetitivePricingAsyncWithHttpInfo($marketplace_id, $item_type, $asins, $skus)
+        return $this->getCompetitivePricingAsyncWithHttpInfo($marketplaceId, $itemType, $asins, $skus)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -390,18 +390,18 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompetitivePricingAsyncWithHttpInfo($marketplace_id, $item_type, $asins = null, $skus = null)
+    public function getCompetitivePricingAsyncWithHttpInfo($marketplaceId, $itemType, $asins = null, $skus = null)
     {
         $returnType = '\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse';
-        $request = $this->getCompetitivePricingRequest($marketplace_id, $item_type, $asins, $skus);
+        $request = $this->getCompetitivePricingRequest($marketplaceId, $itemType, $asins, $skus);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -440,26 +440,26 @@ class ProductPricingApi
     /**
      * Create request for operation 'getCompetitivePricing'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCompetitivePricingRequest($marketplace_id, $item_type, $asins = null, $skus = null)
+    public function getCompetitivePricingRequest($marketplaceId, $itemType, $asins = null, $skus = null)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getCompetitivePricing'
+                'Missing the required parameter $marketplaceId when calling getCompetitivePricing'
             );
         }
-        // verify the required parameter 'item_type' is set
-        if ($item_type === null || (is_array($item_type) && count($item_type) === 0)) {
+        // verify the required parameter 'itemType' is set
+        if ($itemType === null || (is_array($itemType) && count($itemType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_type when calling getCompetitivePricing'
+                'Missing the required parameter $itemType when calling getCompetitivePricing'
             );
         }
         if ($asins !== null && count($asins) > 20) {
@@ -479,11 +479,11 @@ class ProductPricingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
         if (is_array($asins)) {
@@ -500,11 +500,11 @@ class ProductPricingApi
             $queryParams['Skus'] = $skus;
         }
         // query params
-        if (is_array($item_type)) {
-            $item_type = ObjectSerializer::serializeCollection($item_type, '', true);
+        if (is_array($itemType)) {
+            $itemType = ObjectSerializer::serializeCollection($itemType, '', true);
         }
-        if ($item_type !== null) {
-            $queryParams['ItemType'] = $item_type;
+        if ($itemType !== null) {
+            $queryParams['ItemType'] = $itemType;
         }
 
 
@@ -570,34 +570,34 @@ class ProductPricingApi
     /**
      * Operation getItemOffers
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse
      */
-    public function getItemOffers($marketplace_id, $item_condition, $asin)
+    public function getItemOffers($marketplaceId, $itemCondition, $asin)
     {
-        list($response) = $this->getItemOffersWithHttpInfo($marketplace_id, $item_condition, $asin);
+        list($response) = $this->getItemOffersWithHttpInfo($marketplaceId, $itemCondition, $asin);
         return $response;
     }
 
     /**
      * Operation getItemOffersWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getItemOffersWithHttpInfo($marketplace_id, $item_condition, $asin)
+    public function getItemOffersWithHttpInfo($marketplaceId, $itemCondition, $asin)
     {
-        $request = $this->getItemOffersRequest($marketplace_id, $item_condition, $asin);
+        $request = $this->getItemOffersRequest($marketplaceId, $itemCondition, $asin);
 
         try {
             $options = $this->createHttpClientOption();
@@ -817,16 +817,16 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemOffersAsync($marketplace_id, $item_condition, $asin)
+    public function getItemOffersAsync($marketplaceId, $itemCondition, $asin)
     {
-        return $this->getItemOffersAsyncWithHttpInfo($marketplace_id, $item_condition, $asin)
+        return $this->getItemOffersAsyncWithHttpInfo($marketplaceId, $itemCondition, $asin)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -839,17 +839,17 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemOffersAsyncWithHttpInfo($marketplace_id, $item_condition, $asin)
+    public function getItemOffersAsyncWithHttpInfo($marketplaceId, $itemCondition, $asin)
     {
         $returnType = '\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse';
-        $request = $this->getItemOffersRequest($marketplace_id, $item_condition, $asin);
+        $request = $this->getItemOffersRequest($marketplaceId, $itemCondition, $asin);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -888,25 +888,25 @@ class ProductPricingApi
     /**
      * Create request for operation 'getItemOffers'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
      * @param  string $asin The Amazon Standard Identification Number (ASIN) of the item. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getItemOffersRequest($marketplace_id, $item_condition, $asin)
+    public function getItemOffersRequest($marketplaceId, $itemCondition, $asin)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getItemOffers'
+                'Missing the required parameter $marketplaceId when calling getItemOffers'
             );
         }
-        // verify the required parameter 'item_condition' is set
-        if ($item_condition === null || (is_array($item_condition) && count($item_condition) === 0)) {
+        // verify the required parameter 'itemCondition' is set
+        if ($itemCondition === null || (is_array($itemCondition) && count($itemCondition) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_condition when calling getItemOffers'
+                'Missing the required parameter $itemCondition when calling getItemOffers'
             );
         }
         // verify the required parameter 'asin' is set
@@ -924,18 +924,18 @@ class ProductPricingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
-        if (is_array($item_condition)) {
-            $item_condition = ObjectSerializer::serializeCollection($item_condition, '', true);
+        if (is_array($itemCondition)) {
+            $itemCondition = ObjectSerializer::serializeCollection($itemCondition, '', true);
         }
-        if ($item_condition !== null) {
-            $queryParams['ItemCondition'] = $item_condition;
+        if ($itemCondition !== null) {
+            $queryParams['ItemCondition'] = $itemCondition;
         }
 
 
@@ -1009,34 +1009,34 @@ class ProductPricingApi
     /**
      * Operation getListingOffers
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
-     * @param  string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse
      */
-    public function getListingOffers($marketplace_id, $item_condition, $seller_sku)
+    public function getListingOffers($marketplaceId, $itemCondition, $sellerSKU)
     {
-        list($response) = $this->getListingOffersWithHttpInfo($marketplace_id, $item_condition, $seller_sku);
+        list($response) = $this->getListingOffersWithHttpInfo($marketplaceId, $itemCondition, $sellerSKU);
         return $response;
     }
 
     /**
      * Operation getListingOffersWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
-     * @param  string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getListingOffersWithHttpInfo($marketplace_id, $item_condition, $seller_sku)
+    public function getListingOffersWithHttpInfo($marketplaceId, $itemCondition, $sellerSKU)
     {
-        $request = $this->getListingOffersRequest($marketplace_id, $item_condition, $seller_sku);
+        $request = $this->getListingOffersRequest($marketplaceId, $itemCondition, $sellerSKU);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1256,16 +1256,16 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
-     * @param  string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getListingOffersAsync($marketplace_id, $item_condition, $seller_sku)
+    public function getListingOffersAsync($marketplaceId, $itemCondition, $sellerSKU)
     {
-        return $this->getListingOffersAsyncWithHttpInfo($marketplace_id, $item_condition, $seller_sku)
+        return $this->getListingOffersAsyncWithHttpInfo($marketplaceId, $itemCondition, $sellerSKU)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1278,17 +1278,17 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
-     * @param  string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getListingOffersAsyncWithHttpInfo($marketplace_id, $item_condition, $seller_sku)
+    public function getListingOffersAsyncWithHttpInfo($marketplaceId, $itemCondition, $sellerSKU)
     {
         $returnType = '\Webcom\Amazon\Rest\ProductPricingApi\Model\GetOffersResponse';
-        $request = $this->getListingOffersRequest($marketplace_id, $item_condition, $seller_sku);
+        $request = $this->getListingOffersRequest($marketplaceId, $itemCondition, $sellerSKU);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1327,31 +1327,31 @@ class ProductPricingApi
     /**
      * Create request for operation 'getListingOffers'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
-     * @param  string $seller_sku Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (required)
+     * @param  string $sellerSKU Identifies an item in the given marketplace. SellerSKU is qualified by the seller&#39;s SellerId, which is included with every operation that you submit. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getListingOffersRequest($marketplace_id, $item_condition, $seller_sku)
+    public function getListingOffersRequest($marketplaceId, $itemCondition, $sellerSKU)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getListingOffers'
+                'Missing the required parameter $marketplaceId when calling getListingOffers'
             );
         }
-        // verify the required parameter 'item_condition' is set
-        if ($item_condition === null || (is_array($item_condition) && count($item_condition) === 0)) {
+        // verify the required parameter 'itemCondition' is set
+        if ($itemCondition === null || (is_array($itemCondition) && count($itemCondition) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_condition when calling getListingOffers'
+                'Missing the required parameter $itemCondition when calling getListingOffers'
             );
         }
-        // verify the required parameter 'seller_sku' is set
-        if ($seller_sku === null || (is_array($seller_sku) && count($seller_sku) === 0)) {
+        // verify the required parameter 'sellerSKU' is set
+        if ($sellerSKU === null || (is_array($sellerSKU) && count($sellerSKU) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $seller_sku when calling getListingOffers'
+                'Missing the required parameter $sellerSKU when calling getListingOffers'
             );
         }
 
@@ -1363,26 +1363,26 @@ class ProductPricingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
-        if (is_array($item_condition)) {
-            $item_condition = ObjectSerializer::serializeCollection($item_condition, '', true);
+        if (is_array($itemCondition)) {
+            $itemCondition = ObjectSerializer::serializeCollection($itemCondition, '', true);
         }
-        if ($item_condition !== null) {
-            $queryParams['ItemCondition'] = $item_condition;
+        if ($itemCondition !== null) {
+            $queryParams['ItemCondition'] = $itemCondition;
         }
 
 
         // path params
-        if ($seller_sku !== null) {
+        if ($sellerSKU !== null) {
             $resourcePath = str_replace(
                 '{' . 'SellerSKU' . '}',
-                ObjectSerializer::toPathValue($seller_sku),
+                ObjectSerializer::toPathValue($sellerSKU),
                 $resourcePath
             );
         }
@@ -1448,38 +1448,38 @@ class ProductPricingApi
     /**
      * Operation getPricing
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse
      */
-    public function getPricing($marketplace_id, $item_type, $asins = null, $skus = null, $item_condition = null)
+    public function getPricing($marketplaceId, $itemType, $asins = null, $skus = null, $itemCondition = null)
     {
-        list($response) = $this->getPricingWithHttpInfo($marketplace_id, $item_type, $asins, $skus, $item_condition);
+        list($response) = $this->getPricingWithHttpInfo($marketplaceId, $itemType, $asins, $skus, $itemCondition);
         return $response;
     }
 
     /**
      * Operation getPricingWithHttpInfo
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
      *
      * @throws \Webcom\Amazon\Rest\ProductPricingApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse|\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPricingWithHttpInfo($marketplace_id, $item_type, $asins = null, $skus = null, $item_condition = null)
+    public function getPricingWithHttpInfo($marketplaceId, $itemType, $asins = null, $skus = null, $itemCondition = null)
     {
-        $request = $this->getPricingRequest($marketplace_id, $item_type, $asins, $skus, $item_condition);
+        $request = $this->getPricingRequest($marketplaceId, $itemType, $asins, $skus, $itemCondition);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1699,18 +1699,18 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPricingAsync($marketplace_id, $item_type, $asins = null, $skus = null, $item_condition = null)
+    public function getPricingAsync($marketplaceId, $itemType, $asins = null, $skus = null, $itemCondition = null)
     {
-        return $this->getPricingAsyncWithHttpInfo($marketplace_id, $item_type, $asins, $skus, $item_condition)
+        return $this->getPricingAsyncWithHttpInfo($marketplaceId, $itemType, $asins, $skus, $itemCondition)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1723,19 +1723,19 @@ class ProductPricingApi
      *
      * 
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPricingAsyncWithHttpInfo($marketplace_id, $item_type, $asins = null, $skus = null, $item_condition = null)
+    public function getPricingAsyncWithHttpInfo($marketplaceId, $itemType, $asins = null, $skus = null, $itemCondition = null)
     {
         $returnType = '\Webcom\Amazon\Rest\ProductPricingApi\Model\GetPricingResponse';
-        $request = $this->getPricingRequest($marketplace_id, $item_type, $asins, $skus, $item_condition);
+        $request = $this->getPricingRequest($marketplaceId, $itemType, $asins, $skus, $itemCondition);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1774,27 +1774,27 @@ class ProductPricingApi
     /**
      * Create request for operation 'getPricing'
      *
-     * @param  string $marketplace_id A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
-     * @param  string $item_type Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
+     * @param  string $marketplaceId A marketplace identifier. Specifies the marketplace for which prices are returned. (required)
+     * @param  string $itemType Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. (required)
      * @param  string[] $asins A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace. (optional)
      * @param  string[] $skus A list of up to twenty seller SKU values used to identify items in the given marketplace. (optional)
-     * @param  string $item_condition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
+     * @param  string $itemCondition Filters the offer listings based on item condition. Possible values: New, Used, Collectible, Refurbished, Club. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getPricingRequest($marketplace_id, $item_type, $asins = null, $skus = null, $item_condition = null)
+    public function getPricingRequest($marketplaceId, $itemType, $asins = null, $skus = null, $itemCondition = null)
     {
-        // verify the required parameter 'marketplace_id' is set
-        if ($marketplace_id === null || (is_array($marketplace_id) && count($marketplace_id) === 0)) {
+        // verify the required parameter 'marketplaceId' is set
+        if ($marketplaceId === null || (is_array($marketplaceId) && count($marketplaceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marketplace_id when calling getPricing'
+                'Missing the required parameter $marketplaceId when calling getPricing'
             );
         }
-        // verify the required parameter 'item_type' is set
-        if ($item_type === null || (is_array($item_type) && count($item_type) === 0)) {
+        // verify the required parameter 'itemType' is set
+        if ($itemType === null || (is_array($itemType) && count($itemType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_type when calling getPricing'
+                'Missing the required parameter $itemType when calling getPricing'
             );
         }
         if ($asins !== null && count($asins) > 20) {
@@ -1814,11 +1814,11 @@ class ProductPricingApi
         $multipart = false;
 
         // query params
-        if (is_array($marketplace_id)) {
-            $marketplace_id = ObjectSerializer::serializeCollection($marketplace_id, '', true);
+        if (is_array($marketplaceId)) {
+            $marketplaceId = ObjectSerializer::serializeCollection($marketplaceId, '', true);
         }
-        if ($marketplace_id !== null) {
-            $queryParams['MarketplaceId'] = $marketplace_id;
+        if ($marketplaceId !== null) {
+            $queryParams['MarketplaceId'] = $marketplaceId;
         }
         // query params
         if (is_array($asins)) {
@@ -1835,18 +1835,18 @@ class ProductPricingApi
             $queryParams['Skus'] = $skus;
         }
         // query params
-        if (is_array($item_type)) {
-            $item_type = ObjectSerializer::serializeCollection($item_type, '', true);
+        if (is_array($itemType)) {
+            $itemType = ObjectSerializer::serializeCollection($itemType, '', true);
         }
-        if ($item_type !== null) {
-            $queryParams['ItemType'] = $item_type;
+        if ($itemType !== null) {
+            $queryParams['ItemType'] = $itemType;
         }
         // query params
-        if (is_array($item_condition)) {
-            $item_condition = ObjectSerializer::serializeCollection($item_condition, '', true);
+        if (is_array($itemCondition)) {
+            $itemCondition = ObjectSerializer::serializeCollection($itemCondition, '', true);
         }
-        if ($item_condition !== null) {
-            $queryParams['ItemCondition'] = $item_condition;
+        if ($itemCondition !== null) {
+            $queryParams['ItemCondition'] = $itemCondition;
         }
 
 

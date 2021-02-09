@@ -61,7 +61,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetSchemaResponseLinks',
+        'links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetSchemaResponseLinks',
         'payload' => 'object',
         'errors' => '\Webcom\Amazon\Rest\MessagingApi\Model\Error[]'
     ];
@@ -74,7 +74,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        '_links' => null,
+        'links' => null,
         'payload' => null,
         'errors' => null
     ];
@@ -106,7 +106,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        '_links' => '_links',
+        'links' => '_links',
         'payload' => 'payload',
         'errors' => 'errors'
     ];
@@ -117,7 +117,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        '_links' => 'setLinks',
+        'links' => 'setLinks',
         'payload' => 'setPayload',
         'errors' => 'setErrors'
     ];
@@ -128,7 +128,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        '_links' => 'getLinks',
+        'links' => 'getLinks',
         'payload' => 'getPayload',
         'errors' => 'getErrors'
     ];
@@ -193,7 +193,7 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['_links'] = $data['_links'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
         $this->container['payload'] = $data['payload'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
@@ -223,25 +223,25 @@ class GetSchemaResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets _links
+     * Gets links
      *
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetSchemaResponseLinks|null
      */
     public function getLinks()
     {
-        return $this->container['_links'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets _links
+     * Sets links
      *
-     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetSchemaResponseLinks|null $_links _links
+     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetSchemaResponseLinks|null $links links
      *
      * @return self
      */
-    public function setLinks($_links)
+    public function setLinks($links)
     {
-        $this->container['_links'] = $_links;
+        $this->container['links'] = $links;
 
         return $this;
     }

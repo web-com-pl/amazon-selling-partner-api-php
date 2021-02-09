@@ -62,7 +62,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
+        'marketplaceId' => 'string',
         'items' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\Item[]'
     ];
 
@@ -74,7 +74,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
+        'marketplaceId' => null,
         'items' => null
     ];
 
@@ -105,7 +105,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
+        'marketplaceId' => 'marketplaceId',
         'items' => 'items'
     ];
 
@@ -115,7 +115,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
+        'marketplaceId' => 'setMarketplaceId',
         'items' => 'setItems'
     ];
 
@@ -125,7 +125,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
+        'marketplaceId' => 'getMarketplaceId',
         'items' => 'getItems'
     ];
 
@@ -189,7 +189,7 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
     }
 
@@ -202,8 +202,8 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['marketplace_id'] === null) {
-            $invalidProperties[] = "'marketplace_id' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
         if ($this->container['items'] === null) {
             $invalidProperties[] = "'items' can't be null";
@@ -224,25 +224,25 @@ class SmallAndLightFeePreviewRequest implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string $marketplace_id A marketplace identifier.
+     * @param string $marketplaceId A marketplace identifier.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }

@@ -62,7 +62,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'upload_destination_id' => 'string',
+        'uploadDestinationId' => 'string',
         'url' => 'string',
         'headers' => 'object'
     ];
@@ -75,7 +75,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'upload_destination_id' => null,
+        'uploadDestinationId' => null,
         'url' => null,
         'headers' => null
     ];
@@ -107,7 +107,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'upload_destination_id' => 'uploadDestinationId',
+        'uploadDestinationId' => 'uploadDestinationId',
         'url' => 'url',
         'headers' => 'headers'
     ];
@@ -118,7 +118,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'upload_destination_id' => 'setUploadDestinationId',
+        'uploadDestinationId' => 'setUploadDestinationId',
         'url' => 'setUrl',
         'headers' => 'setHeaders'
     ];
@@ -129,7 +129,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'upload_destination_id' => 'getUploadDestinationId',
+        'uploadDestinationId' => 'getUploadDestinationId',
         'url' => 'getUrl',
         'headers' => 'getHeaders'
     ];
@@ -194,7 +194,7 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['upload_destination_id'] = $data['upload_destination_id'] ?? null;
+        $this->container['uploadDestinationId'] = $data['uploadDestinationId'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['headers'] = $data['headers'] ?? null;
     }
@@ -224,25 +224,25 @@ class UploadDestination implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets upload_destination_id
+     * Gets uploadDestinationId
      *
      * @return string|null
      */
     public function getUploadDestinationId()
     {
-        return $this->container['upload_destination_id'];
+        return $this->container['uploadDestinationId'];
     }
 
     /**
-     * Sets upload_destination_id
+     * Sets uploadDestinationId
      *
-     * @param string|null $upload_destination_id The unique identifier for the upload destination.
+     * @param string|null $uploadDestinationId The unique identifier for the upload destination.
      *
      * @return self
      */
-    public function setUploadDestinationId($upload_destination_id)
+    public function setUploadDestinationId($uploadDestinationId)
     {
-        $this->container['upload_destination_id'] = $upload_destination_id;
+        $this->container['uploadDestinationId'] = $uploadDestinationId;
 
         return $this;
     }

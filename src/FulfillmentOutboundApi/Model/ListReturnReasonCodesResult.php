@@ -61,7 +61,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'reason_code_details' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReasonCodeDetails[]'
+        'reasonCodeDetails' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReasonCodeDetails[]'
     ];
 
     /**
@@ -72,7 +72,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'reason_code_details' => null
+        'reasonCodeDetails' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason_code_details' => 'reasonCodeDetails'
+        'reasonCodeDetails' => 'reasonCodeDetails'
     ];
 
     /**
@@ -111,7 +111,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'reason_code_details' => 'setReasonCodeDetails'
+        'reasonCodeDetails' => 'setReasonCodeDetails'
     ];
 
     /**
@@ -120,7 +120,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'reason_code_details' => 'getReasonCodeDetails'
+        'reasonCodeDetails' => 'getReasonCodeDetails'
     ];
 
     /**
@@ -183,7 +183,7 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
-        $this->container['reason_code_details'] = $data['reason_code_details'] ?? null;
+        $this->container['reasonCodeDetails'] = $data['reasonCodeDetails'] ?? null;
     }
 
     /**
@@ -211,25 +211,25 @@ class ListReturnReasonCodesResult implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets reason_code_details
+     * Gets reasonCodeDetails
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReasonCodeDetails[]|null
      */
     public function getReasonCodeDetails()
     {
-        return $this->container['reason_code_details'];
+        return $this->container['reasonCodeDetails'];
     }
 
     /**
-     * Sets reason_code_details
+     * Sets reasonCodeDetails
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReasonCodeDetails[]|null $reason_code_details An array of return reason code details.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ReasonCodeDetails[]|null $reasonCodeDetails An array of return reason code details.
      *
      * @return self
      */
-    public function setReasonCodeDetails($reason_code_details)
+    public function setReasonCodeDetails($reasonCodeDetails)
     {
-        $this->container['reason_code_details'] = $reason_code_details;
+        $this->container['reasonCodeDetails'] = $reasonCodeDetails;
 
         return $this;
     }

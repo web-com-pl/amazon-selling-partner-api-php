@@ -62,11 +62,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_experience' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceType',
-        'declared_value' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount',
-        'carrier_will_pick_up' => 'bool',
-        'carrier_will_pick_up_option' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
-        'label_format' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat'
+        'deliveryExperience' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceType',
+        'declaredValue' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount',
+        'carrierWillPickUp' => 'bool',
+        'carrierWillPickUpOption' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption',
+        'labelFormat' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat'
     ];
 
     /**
@@ -77,11 +77,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'delivery_experience' => null,
-        'declared_value' => null,
-        'carrier_will_pick_up' => null,
-        'carrier_will_pick_up_option' => null,
-        'label_format' => null
+        'deliveryExperience' => null,
+        'declaredValue' => null,
+        'carrierWillPickUp' => null,
+        'carrierWillPickUpOption' => null,
+        'labelFormat' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_experience' => 'DeliveryExperience',
-        'declared_value' => 'DeclaredValue',
-        'carrier_will_pick_up' => 'CarrierWillPickUp',
-        'carrier_will_pick_up_option' => 'CarrierWillPickUpOption',
-        'label_format' => 'LabelFormat'
+        'deliveryExperience' => 'DeliveryExperience',
+        'declaredValue' => 'DeclaredValue',
+        'carrierWillPickUp' => 'CarrierWillPickUp',
+        'carrierWillPickUpOption' => 'CarrierWillPickUpOption',
+        'labelFormat' => 'LabelFormat'
     ];
 
     /**
@@ -124,11 +124,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'delivery_experience' => 'setDeliveryExperience',
-        'declared_value' => 'setDeclaredValue',
-        'carrier_will_pick_up' => 'setCarrierWillPickUp',
-        'carrier_will_pick_up_option' => 'setCarrierWillPickUpOption',
-        'label_format' => 'setLabelFormat'
+        'deliveryExperience' => 'setDeliveryExperience',
+        'declaredValue' => 'setDeclaredValue',
+        'carrierWillPickUp' => 'setCarrierWillPickUp',
+        'carrierWillPickUpOption' => 'setCarrierWillPickUpOption',
+        'labelFormat' => 'setLabelFormat'
     ];
 
     /**
@@ -137,11 +137,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'delivery_experience' => 'getDeliveryExperience',
-        'declared_value' => 'getDeclaredValue',
-        'carrier_will_pick_up' => 'getCarrierWillPickUp',
-        'carrier_will_pick_up_option' => 'getCarrierWillPickUpOption',
-        'label_format' => 'getLabelFormat'
+        'deliveryExperience' => 'getDeliveryExperience',
+        'declaredValue' => 'getDeclaredValue',
+        'carrierWillPickUp' => 'getCarrierWillPickUp',
+        'carrierWillPickUpOption' => 'getCarrierWillPickUpOption',
+        'labelFormat' => 'getLabelFormat'
     ];
 
     /**
@@ -204,11 +204,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_experience'] = $data['delivery_experience'] ?? null;
-        $this->container['declared_value'] = $data['declared_value'] ?? null;
-        $this->container['carrier_will_pick_up'] = $data['carrier_will_pick_up'] ?? null;
-        $this->container['carrier_will_pick_up_option'] = $data['carrier_will_pick_up_option'] ?? null;
-        $this->container['label_format'] = $data['label_format'] ?? null;
+        $this->container['deliveryExperience'] = $data['deliveryExperience'] ?? null;
+        $this->container['declaredValue'] = $data['declaredValue'] ?? null;
+        $this->container['carrierWillPickUp'] = $data['carrierWillPickUp'] ?? null;
+        $this->container['carrierWillPickUpOption'] = $data['carrierWillPickUpOption'] ?? null;
+        $this->container['labelFormat'] = $data['labelFormat'] ?? null;
     }
 
     /**
@@ -220,11 +220,11 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['delivery_experience'] === null) {
-            $invalidProperties[] = "'delivery_experience' can't be null";
+        if ($this->container['deliveryExperience'] === null) {
+            $invalidProperties[] = "'deliveryExperience' can't be null";
         }
-        if ($this->container['carrier_will_pick_up'] === null) {
-            $invalidProperties[] = "'carrier_will_pick_up' can't be null";
+        if ($this->container['carrierWillPickUp'] === null) {
+            $invalidProperties[] = "'carrierWillPickUp' can't be null";
         }
         return $invalidProperties;
     }
@@ -242,121 +242,121 @@ class ShippingServiceOptions implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets delivery_experience
+     * Gets deliveryExperience
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceType
      */
     public function getDeliveryExperience()
     {
-        return $this->container['delivery_experience'];
+        return $this->container['deliveryExperience'];
     }
 
     /**
-     * Sets delivery_experience
+     * Sets deliveryExperience
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceType $delivery_experience delivery_experience
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\DeliveryExperienceType $deliveryExperience deliveryExperience
      *
      * @return self
      */
-    public function setDeliveryExperience($delivery_experience)
+    public function setDeliveryExperience($deliveryExperience)
     {
-        $this->container['delivery_experience'] = $delivery_experience;
+        $this->container['deliveryExperience'] = $deliveryExperience;
 
         return $this;
     }
 
     /**
-     * Gets declared_value
+     * Gets declaredValue
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null
      */
     public function getDeclaredValue()
     {
-        return $this->container['declared_value'];
+        return $this->container['declaredValue'];
     }
 
     /**
-     * Sets declared_value
+     * Sets declaredValue
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null $declared_value declared_value
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null $declaredValue declaredValue
      *
      * @return self
      */
-    public function setDeclaredValue($declared_value)
+    public function setDeclaredValue($declaredValue)
     {
-        $this->container['declared_value'] = $declared_value;
+        $this->container['declaredValue'] = $declaredValue;
 
         return $this;
     }
 
     /**
-     * Gets carrier_will_pick_up
+     * Gets carrierWillPickUp
      *
      * @return bool
      */
     public function getCarrierWillPickUp()
     {
-        return $this->container['carrier_will_pick_up'];
+        return $this->container['carrierWillPickUp'];
     }
 
     /**
-     * Sets carrier_will_pick_up
+     * Sets carrierWillPickUp
      *
-     * @param bool $carrier_will_pick_up When true, the carrier will pick up the package.  Note: Scheduled carrier pickup is available only using Dynamex (US), DPD (UK), and Royal Mail (UK).
+     * @param bool $carrierWillPickUp When true, the carrier will pick up the package.  Note: Scheduled carrier pickup is available only using Dynamex (US), DPD (UK), and Royal Mail (UK).
      *
      * @return self
      */
-    public function setCarrierWillPickUp($carrier_will_pick_up)
+    public function setCarrierWillPickUp($carrierWillPickUp)
     {
-        $this->container['carrier_will_pick_up'] = $carrier_will_pick_up;
+        $this->container['carrierWillPickUp'] = $carrierWillPickUp;
 
         return $this;
     }
 
     /**
-     * Gets carrier_will_pick_up_option
+     * Gets carrierWillPickUpOption
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null
      */
     public function getCarrierWillPickUpOption()
     {
-        return $this->container['carrier_will_pick_up_option'];
+        return $this->container['carrierWillPickUpOption'];
     }
 
     /**
-     * Sets carrier_will_pick_up_option
+     * Sets carrierWillPickUpOption
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null $carrier_will_pick_up_option carrier_will_pick_up_option
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CarrierWillPickUpOption|null $carrierWillPickUpOption carrierWillPickUpOption
      *
      * @return self
      */
-    public function setCarrierWillPickUpOption($carrier_will_pick_up_option)
+    public function setCarrierWillPickUpOption($carrierWillPickUpOption)
     {
-        $this->container['carrier_will_pick_up_option'] = $carrier_will_pick_up_option;
+        $this->container['carrierWillPickUpOption'] = $carrierWillPickUpOption;
 
         return $this;
     }
 
     /**
-     * Gets label_format
+     * Gets labelFormat
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null
      */
     public function getLabelFormat()
     {
-        return $this->container['label_format'];
+        return $this->container['labelFormat'];
     }
 
     /**
-     * Sets label_format
+     * Sets labelFormat
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $label_format label_format
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $labelFormat labelFormat
      *
      * @return self
      */
-    public function setLabelFormat($label_format)
+    public function setLabelFormat($labelFormat)
     {
-        $this->container['label_format'] = $label_format;
+        $this->container['labelFormat'] = $labelFormat;
 
         return $this;
     }

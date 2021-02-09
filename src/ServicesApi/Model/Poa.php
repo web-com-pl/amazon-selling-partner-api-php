@@ -62,11 +62,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'appointment_time' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime',
+        'appointmentTime' => '\Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime',
         'technicians' => '\Webcom\Amazon\Rest\ServicesApi\Model\Technician[]',
-        'uploading_technician' => 'string',
-        'upload_time' => '\DateTime',
-        'poa_type' => 'string'
+        'uploadingTechnician' => 'string',
+        'uploadTime' => '\DateTime',
+        'poaType' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'appointment_time' => null,
+        'appointmentTime' => null,
         'technicians' => null,
-        'uploading_technician' => null,
-        'upload_time' => 'date-time',
-        'poa_type' => null
+        'uploadingTechnician' => null,
+        'uploadTime' => 'date-time',
+        'poaType' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'appointment_time' => 'appointmentTime',
+        'appointmentTime' => 'appointmentTime',
         'technicians' => 'technicians',
-        'uploading_technician' => 'uploadingTechnician',
-        'upload_time' => 'uploadTime',
-        'poa_type' => 'poaType'
+        'uploadingTechnician' => 'uploadingTechnician',
+        'uploadTime' => 'uploadTime',
+        'poaType' => 'poaType'
     ];
 
     /**
@@ -124,11 +124,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'appointment_time' => 'setAppointmentTime',
+        'appointmentTime' => 'setAppointmentTime',
         'technicians' => 'setTechnicians',
-        'uploading_technician' => 'setUploadingTechnician',
-        'upload_time' => 'setUploadTime',
-        'poa_type' => 'setPoaType'
+        'uploadingTechnician' => 'setUploadingTechnician',
+        'uploadTime' => 'setUploadTime',
+        'poaType' => 'setPoaType'
     ];
 
     /**
@@ -137,11 +137,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'appointment_time' => 'getAppointmentTime',
+        'appointmentTime' => 'getAppointmentTime',
         'technicians' => 'getTechnicians',
-        'uploading_technician' => 'getUploadingTechnician',
-        'upload_time' => 'getUploadTime',
-        'poa_type' => 'getPoaType'
+        'uploadingTechnician' => 'getUploadingTechnician',
+        'uploadTime' => 'getUploadTime',
+        'poaType' => 'getPoaType'
     ];
 
     /**
@@ -223,11 +223,11 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['appointment_time'] = $data['appointment_time'] ?? null;
+        $this->container['appointmentTime'] = $data['appointmentTime'] ?? null;
         $this->container['technicians'] = $data['technicians'] ?? null;
-        $this->container['uploading_technician'] = $data['uploading_technician'] ?? null;
-        $this->container['upload_time'] = $data['upload_time'] ?? null;
-        $this->container['poa_type'] = $data['poa_type'] ?? null;
+        $this->container['uploadingTechnician'] = $data['uploadingTechnician'] ?? null;
+        $this->container['uploadTime'] = $data['uploadTime'] ?? null;
+        $this->container['poaType'] = $data['poaType'] ?? null;
     }
 
     /**
@@ -239,15 +239,15 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['uploading_technician']) && !preg_match("/^[A-Z0-9]*$/", $this->container['uploading_technician'])) {
-            $invalidProperties[] = "invalid value for 'uploading_technician', must be conform to the pattern /^[A-Z0-9]*$/.";
+        if (!is_null($this->container['uploadingTechnician']) && !preg_match("/^[A-Z0-9]*$/", $this->container['uploadingTechnician'])) {
+            $invalidProperties[] = "invalid value for 'uploadingTechnician', must be conform to the pattern /^[A-Z0-9]*$/.";
         }
 
         $allowedValues = $this->getPoaTypeAllowableValues();
-        if (!is_null($this->container['poa_type']) && !in_array($this->container['poa_type'], $allowedValues, true)) {
+        if (!is_null($this->container['poaType']) && !in_array($this->container['poaType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'poa_type', must be one of '%s'",
-                $this->container['poa_type'],
+                "invalid value '%s' for 'poaType', must be one of '%s'",
+                $this->container['poaType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -268,25 +268,25 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets appointment_time
+     * Gets appointmentTime
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null
      */
     public function getAppointmentTime()
     {
-        return $this->container['appointment_time'];
+        return $this->container['appointmentTime'];
     }
 
     /**
-     * Sets appointment_time
+     * Sets appointmentTime
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null $appointment_time appointment_time
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\AppointmentTime|null $appointmentTime appointmentTime
      *
      * @return self
      */
-    public function setAppointmentTime($appointment_time)
+    public function setAppointmentTime($appointmentTime)
     {
-        $this->container['appointment_time'] = $appointment_time;
+        $this->container['appointmentTime'] = $appointmentTime;
 
         return $this;
     }
@@ -316,88 +316,88 @@ class Poa implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets uploading_technician
+     * Gets uploadingTechnician
      *
      * @return string|null
      */
     public function getUploadingTechnician()
     {
-        return $this->container['uploading_technician'];
+        return $this->container['uploadingTechnician'];
     }
 
     /**
-     * Sets uploading_technician
+     * Sets uploadingTechnician
      *
-     * @param string|null $uploading_technician The identifier of the technician who uploaded the POA.
+     * @param string|null $uploadingTechnician The identifier of the technician who uploaded the POA.
      *
      * @return self
      */
-    public function setUploadingTechnician($uploading_technician)
+    public function setUploadingTechnician($uploadingTechnician)
     {
 
-        if (!is_null($uploading_technician) && (!preg_match("/^[A-Z0-9]*$/", $uploading_technician))) {
-            throw new \InvalidArgumentException("invalid value for $uploading_technician when calling Poa., must conform to the pattern /^[A-Z0-9]*$/.");
+        if (!is_null($uploadingTechnician) && (!preg_match("/^[A-Z0-9]*$/", $uploadingTechnician))) {
+            throw new \InvalidArgumentException("invalid value for $uploadingTechnician when calling Poa., must conform to the pattern /^[A-Z0-9]*$/.");
         }
 
-        $this->container['uploading_technician'] = $uploading_technician;
+        $this->container['uploadingTechnician'] = $uploadingTechnician;
 
         return $this;
     }
 
     /**
-     * Gets upload_time
+     * Gets uploadTime
      *
      * @return \DateTime|null
      */
     public function getUploadTime()
     {
-        return $this->container['upload_time'];
+        return $this->container['uploadTime'];
     }
 
     /**
-     * Sets upload_time
+     * Sets uploadTime
      *
-     * @param \DateTime|null $upload_time The date and time when the POA was uploaded, in ISO 8601 format.
+     * @param \DateTime|null $uploadTime The date and time when the POA was uploaded, in ISO 8601 format.
      *
      * @return self
      */
-    public function setUploadTime($upload_time)
+    public function setUploadTime($uploadTime)
     {
-        $this->container['upload_time'] = $upload_time;
+        $this->container['uploadTime'] = $uploadTime;
 
         return $this;
     }
 
     /**
-     * Gets poa_type
+     * Gets poaType
      *
      * @return string|null
      */
     public function getPoaType()
     {
-        return $this->container['poa_type'];
+        return $this->container['poaType'];
     }
 
     /**
-     * Sets poa_type
+     * Sets poaType
      *
-     * @param string|null $poa_type The type of POA uploaded.
+     * @param string|null $poaType The type of POA uploaded.
      *
      * @return self
      */
-    public function setPoaType($poa_type)
+    public function setPoaType($poaType)
     {
         $allowedValues = $this->getPoaTypeAllowableValues();
-        if (!is_null($poa_type) && !in_array($poa_type, $allowedValues, true)) {
+        if (!is_null($poaType) && !in_array($poaType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'poa_type', must be one of '%s'",
-                    $poa_type,
+                    "Invalid value '%s' for 'poaType', must be one of '%s'",
+                    $poaType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['poa_type'] = $poa_type;
+        $this->container['poaType'] = $poaType;
 
         return $this;
     }

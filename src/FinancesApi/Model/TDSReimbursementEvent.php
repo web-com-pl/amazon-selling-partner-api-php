@@ -62,9 +62,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'tds_order_id' => 'string',
-        'reimbursed_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'tdsOrderId' => 'string',
+        'reimbursedAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -75,9 +75,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'tds_order_id' => null,
-        'reimbursed_amount' => null
+        'postedDate' => 'date-time',
+        'tdsOrderId' => null,
+        'reimbursedAmount' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'tds_order_id' => 'TdsOrderId',
-        'reimbursed_amount' => 'ReimbursedAmount'
+        'postedDate' => 'PostedDate',
+        'tdsOrderId' => 'TdsOrderId',
+        'reimbursedAmount' => 'ReimbursedAmount'
     ];
 
     /**
@@ -118,9 +118,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'tds_order_id' => 'setTdsOrderId',
-        'reimbursed_amount' => 'setReimbursedAmount'
+        'postedDate' => 'setPostedDate',
+        'tdsOrderId' => 'setTdsOrderId',
+        'reimbursedAmount' => 'setReimbursedAmount'
     ];
 
     /**
@@ -129,9 +129,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'tds_order_id' => 'getTdsOrderId',
-        'reimbursed_amount' => 'getReimbursedAmount'
+        'postedDate' => 'getPostedDate',
+        'tdsOrderId' => 'getTdsOrderId',
+        'reimbursedAmount' => 'getReimbursedAmount'
     ];
 
     /**
@@ -194,9 +194,9 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['tds_order_id'] = $data['tds_order_id'] ?? null;
-        $this->container['reimbursed_amount'] = $data['reimbursed_amount'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['tdsOrderId'] = $data['tdsOrderId'] ?? null;
+        $this->container['reimbursedAmount'] = $data['reimbursedAmount'] ?? null;
     }
 
     /**
@@ -224,73 +224,73 @@ class TDSReimbursementEvent implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets tds_order_id
+     * Gets tdsOrderId
      *
      * @return string|null
      */
     public function getTdsOrderId()
     {
-        return $this->container['tds_order_id'];
+        return $this->container['tdsOrderId'];
     }
 
     /**
-     * Sets tds_order_id
+     * Sets tdsOrderId
      *
-     * @param string|null $tds_order_id A tax deduction at source (TDS) claim identifier.
+     * @param string|null $tdsOrderId A tax deduction at source (TDS) claim identifier.
      *
      * @return self
      */
-    public function setTdsOrderId($tds_order_id)
+    public function setTdsOrderId($tdsOrderId)
     {
-        $this->container['tds_order_id'] = $tds_order_id;
+        $this->container['tdsOrderId'] = $tdsOrderId;
 
         return $this;
     }
 
     /**
-     * Gets reimbursed_amount
+     * Gets reimbursedAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getReimbursedAmount()
     {
-        return $this->container['reimbursed_amount'];
+        return $this->container['reimbursedAmount'];
     }
 
     /**
-     * Sets reimbursed_amount
+     * Sets reimbursedAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $reimbursed_amount reimbursed_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $reimbursedAmount reimbursedAmount
      *
      * @return self
      */
-    public function setReimbursedAmount($reimbursed_amount)
+    public function setReimbursedAmount($reimbursedAmount)
     {
-        $this->container['reimbursed_amount'] = $reimbursed_amount;
+        $this->container['reimbursedAmount'] = $reimbursedAmount;
 
         return $this;
     }

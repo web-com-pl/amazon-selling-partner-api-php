@@ -62,12 +62,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'asin' => 'string',
+        'sellerSKU' => 'string',
+        'aSIN' => 'string',
         'condition' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Condition',
         'quantity' => 'int',
-        'quantity_in_case' => 'int',
-        'prep_details_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
+        'quantityInCase' => 'int',
+        'prepDetailsList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]'
     ];
 
     /**
@@ -78,12 +78,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'asin' => null,
+        'sellerSKU' => null,
+        'aSIN' => null,
         'condition' => null,
         'quantity' => 'int32',
-        'quantity_in_case' => 'int32',
-        'prep_details_list' => null
+        'quantityInCase' => 'int32',
+        'prepDetailsList' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'SellerSKU',
-        'asin' => 'ASIN',
+        'sellerSKU' => 'SellerSKU',
+        'aSIN' => 'ASIN',
         'condition' => 'Condition',
         'quantity' => 'Quantity',
-        'quantity_in_case' => 'QuantityInCase',
-        'prep_details_list' => 'PrepDetailsList'
+        'quantityInCase' => 'QuantityInCase',
+        'prepDetailsList' => 'PrepDetailsList'
     ];
 
     /**
@@ -127,12 +127,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'asin' => 'setAsin',
+        'sellerSKU' => 'setSellerSKU',
+        'aSIN' => 'setASIN',
         'condition' => 'setCondition',
         'quantity' => 'setQuantity',
-        'quantity_in_case' => 'setQuantityInCase',
-        'prep_details_list' => 'setPrepDetailsList'
+        'quantityInCase' => 'setQuantityInCase',
+        'prepDetailsList' => 'setPrepDetailsList'
     ];
 
     /**
@@ -141,12 +141,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'asin' => 'getAsin',
+        'sellerSKU' => 'getSellerSKU',
+        'aSIN' => 'getASIN',
         'condition' => 'getCondition',
         'quantity' => 'getQuantity',
-        'quantity_in_case' => 'getQuantityInCase',
-        'prep_details_list' => 'getPrepDetailsList'
+        'quantityInCase' => 'getQuantityInCase',
+        'prepDetailsList' => 'getPrepDetailsList'
     ];
 
     /**
@@ -209,12 +209,12 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['quantity_in_case'] = $data['quantity_in_case'] ?? null;
-        $this->container['prep_details_list'] = $data['prep_details_list'] ?? null;
+        $this->container['quantityInCase'] = $data['quantityInCase'] ?? null;
+        $this->container['prepDetailsList'] = $data['prepDetailsList'] ?? null;
     }
 
     /**
@@ -226,11 +226,11 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_sku'] === null) {
-            $invalidProperties[] = "'seller_sku' can't be null";
+        if ($this->container['sellerSKU'] === null) {
+            $invalidProperties[] = "'sellerSKU' can't be null";
         }
-        if ($this->container['asin'] === null) {
-            $invalidProperties[] = "'asin' can't be null";
+        if ($this->container['aSIN'] === null) {
+            $invalidProperties[] = "'aSIN' can't be null";
         }
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
@@ -254,49 +254,49 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string $seller_sku The seller SKU of the item.
+     * @param string $sellerSKU The seller SKU of the item.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
@@ -350,49 +350,49 @@ class InboundShipmentPlanRequestItem implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets quantity_in_case
+     * Gets quantityInCase
      *
      * @return int|null
      */
     public function getQuantityInCase()
     {
-        return $this->container['quantity_in_case'];
+        return $this->container['quantityInCase'];
     }
 
     /**
-     * Sets quantity_in_case
+     * Sets quantityInCase
      *
-     * @param int|null $quantity_in_case The item quantity.
+     * @param int|null $quantityInCase The item quantity.
      *
      * @return self
      */
-    public function setQuantityInCase($quantity_in_case)
+    public function setQuantityInCase($quantityInCase)
     {
-        $this->container['quantity_in_case'] = $quantity_in_case;
+        $this->container['quantityInCase'] = $quantityInCase;
 
         return $this;
     }
 
     /**
-     * Gets prep_details_list
+     * Gets prepDetailsList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null
      */
     public function getPrepDetailsList()
     {
-        return $this->container['prep_details_list'];
+        return $this->container['prepDetailsList'];
     }
 
     /**
-     * Sets prep_details_list
+     * Sets prepDetailsList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prep_details_list A list of preparation instructions and who is responsible for that preparation.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepDetails[]|null $prepDetailsList A list of preparation instructions and who is responsible for that preparation.
      *
      * @return self
      */
-    public function setPrepDetailsList($prep_details_list)
+    public function setPrepDetailsList($prepDetailsList)
     {
-        $this->container['prep_details_list'] = $prep_details_list;
+        $this->container['prepDetailsList'] = $prepDetailsList;
 
         return $this;
     }

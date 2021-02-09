@@ -62,8 +62,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'feature_name' => 'string',
-        'feature_fulfillment_policy' => 'string'
+        'featureName' => 'string',
+        'featureFulfillmentPolicy' => 'string'
     ];
 
     /**
@@ -74,8 +74,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'feature_name' => null,
-        'feature_fulfillment_policy' => null
+        'featureName' => null,
+        'featureFulfillmentPolicy' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'feature_name' => 'featureName',
-        'feature_fulfillment_policy' => 'featureFulfillmentPolicy'
+        'featureName' => 'featureName',
+        'featureFulfillmentPolicy' => 'featureFulfillmentPolicy'
     ];
 
     /**
@@ -115,8 +115,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'feature_name' => 'setFeatureName',
-        'feature_fulfillment_policy' => 'setFeatureFulfillmentPolicy'
+        'featureName' => 'setFeatureName',
+        'featureFulfillmentPolicy' => 'setFeatureFulfillmentPolicy'
     ];
 
     /**
@@ -125,8 +125,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'feature_name' => 'getFeatureName',
-        'feature_fulfillment_policy' => 'getFeatureFulfillmentPolicy'
+        'featureName' => 'getFeatureName',
+        'featureFulfillmentPolicy' => 'getFeatureFulfillmentPolicy'
     ];
 
     /**
@@ -204,8 +204,8 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['feature_name'] = $data['feature_name'] ?? null;
-        $this->container['feature_fulfillment_policy'] = $data['feature_fulfillment_policy'] ?? null;
+        $this->container['featureName'] = $data['featureName'] ?? null;
+        $this->container['featureFulfillmentPolicy'] = $data['featureFulfillmentPolicy'] ?? null;
     }
 
     /**
@@ -218,10 +218,10 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getFeatureFulfillmentPolicyAllowableValues();
-        if (!is_null($this->container['feature_fulfillment_policy']) && !in_array($this->container['feature_fulfillment_policy'], $allowedValues, true)) {
+        if (!is_null($this->container['featureFulfillmentPolicy']) && !in_array($this->container['featureFulfillmentPolicy'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'feature_fulfillment_policy', must be one of '%s'",
-                $this->container['feature_fulfillment_policy'],
+                "invalid value '%s' for 'featureFulfillmentPolicy', must be one of '%s'",
+                $this->container['featureFulfillmentPolicy'],
                 implode("', '", $allowedValues)
             );
         }
@@ -242,59 +242,59 @@ class FeatureSettings implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets feature_name
+     * Gets featureName
      *
      * @return string|null
      */
     public function getFeatureName()
     {
-        return $this->container['feature_name'];
+        return $this->container['featureName'];
     }
 
     /**
-     * Sets feature_name
+     * Sets featureName
      *
-     * @param string|null $feature_name The name of the feature.
+     * @param string|null $featureName The name of the feature.
      *
      * @return self
      */
-    public function setFeatureName($feature_name)
+    public function setFeatureName($featureName)
     {
-        $this->container['feature_name'] = $feature_name;
+        $this->container['featureName'] = $featureName;
 
         return $this;
     }
 
     /**
-     * Gets feature_fulfillment_policy
+     * Gets featureFulfillmentPolicy
      *
      * @return string|null
      */
     public function getFeatureFulfillmentPolicy()
     {
-        return $this->container['feature_fulfillment_policy'];
+        return $this->container['featureFulfillmentPolicy'];
     }
 
     /**
-     * Sets feature_fulfillment_policy
+     * Sets featureFulfillmentPolicy
      *
-     * @param string|null $feature_fulfillment_policy Specifies the policy to use when fulfilling an order.
+     * @param string|null $featureFulfillmentPolicy Specifies the policy to use when fulfilling an order.
      *
      * @return self
      */
-    public function setFeatureFulfillmentPolicy($feature_fulfillment_policy)
+    public function setFeatureFulfillmentPolicy($featureFulfillmentPolicy)
     {
         $allowedValues = $this->getFeatureFulfillmentPolicyAllowableValues();
-        if (!is_null($feature_fulfillment_policy) && !in_array($feature_fulfillment_policy, $allowedValues, true)) {
+        if (!is_null($featureFulfillmentPolicy) && !in_array($featureFulfillmentPolicy, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'feature_fulfillment_policy', must be one of '%s'",
-                    $feature_fulfillment_policy,
+                    "Invalid value '%s' for 'featureFulfillmentPolicy', must be one of '%s'",
+                    $featureFulfillmentPolicy,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['feature_fulfillment_policy'] = $feature_fulfillment_policy;
+        $this->container['featureFulfillmentPolicy'] = $featureFulfillmentPolicy;
 
         return $this;
     }

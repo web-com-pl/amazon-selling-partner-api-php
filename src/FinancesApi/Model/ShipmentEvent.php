@@ -62,19 +62,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'seller_order_id' => 'string',
-        'marketplace_name' => 'string',
-        'order_charge_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'order_charge_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'shipment_fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'shipment_fee_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'order_fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'order_fee_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'direct_payment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\DirectPayment[]',
-        'posted_date' => '\DateTime',
-        'shipment_item_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]',
-        'shipment_item_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]'
+        'amazonOrderId' => 'string',
+        'sellerOrderId' => 'string',
+        'marketplaceName' => 'string',
+        'orderChargeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'orderChargeAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'shipmentFeeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'shipmentFeeAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'orderFeeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'orderFeeAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'directPaymentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\DirectPayment[]',
+        'postedDate' => '\DateTime',
+        'shipmentItemList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]',
+        'shipmentItemAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]'
     ];
 
     /**
@@ -85,19 +85,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'seller_order_id' => null,
-        'marketplace_name' => null,
-        'order_charge_list' => null,
-        'order_charge_adjustment_list' => null,
-        'shipment_fee_list' => null,
-        'shipment_fee_adjustment_list' => null,
-        'order_fee_list' => null,
-        'order_fee_adjustment_list' => null,
-        'direct_payment_list' => null,
-        'posted_date' => 'date-time',
-        'shipment_item_list' => null,
-        'shipment_item_adjustment_list' => null
+        'amazonOrderId' => null,
+        'sellerOrderId' => null,
+        'marketplaceName' => null,
+        'orderChargeList' => null,
+        'orderChargeAdjustmentList' => null,
+        'shipmentFeeList' => null,
+        'shipmentFeeAdjustmentList' => null,
+        'orderFeeList' => null,
+        'orderFeeAdjustmentList' => null,
+        'directPaymentList' => null,
+        'postedDate' => 'date-time',
+        'shipmentItemList' => null,
+        'shipmentItemAdjustmentList' => null
     ];
 
     /**
@@ -127,19 +127,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'seller_order_id' => 'SellerOrderId',
-        'marketplace_name' => 'MarketplaceName',
-        'order_charge_list' => 'OrderChargeList',
-        'order_charge_adjustment_list' => 'OrderChargeAdjustmentList',
-        'shipment_fee_list' => 'ShipmentFeeList',
-        'shipment_fee_adjustment_list' => 'ShipmentFeeAdjustmentList',
-        'order_fee_list' => 'OrderFeeList',
-        'order_fee_adjustment_list' => 'OrderFeeAdjustmentList',
-        'direct_payment_list' => 'DirectPaymentList',
-        'posted_date' => 'PostedDate',
-        'shipment_item_list' => 'ShipmentItemList',
-        'shipment_item_adjustment_list' => 'ShipmentItemAdjustmentList'
+        'amazonOrderId' => 'AmazonOrderId',
+        'sellerOrderId' => 'SellerOrderId',
+        'marketplaceName' => 'MarketplaceName',
+        'orderChargeList' => 'OrderChargeList',
+        'orderChargeAdjustmentList' => 'OrderChargeAdjustmentList',
+        'shipmentFeeList' => 'ShipmentFeeList',
+        'shipmentFeeAdjustmentList' => 'ShipmentFeeAdjustmentList',
+        'orderFeeList' => 'OrderFeeList',
+        'orderFeeAdjustmentList' => 'OrderFeeAdjustmentList',
+        'directPaymentList' => 'DirectPaymentList',
+        'postedDate' => 'PostedDate',
+        'shipmentItemList' => 'ShipmentItemList',
+        'shipmentItemAdjustmentList' => 'ShipmentItemAdjustmentList'
     ];
 
     /**
@@ -148,19 +148,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'seller_order_id' => 'setSellerOrderId',
-        'marketplace_name' => 'setMarketplaceName',
-        'order_charge_list' => 'setOrderChargeList',
-        'order_charge_adjustment_list' => 'setOrderChargeAdjustmentList',
-        'shipment_fee_list' => 'setShipmentFeeList',
-        'shipment_fee_adjustment_list' => 'setShipmentFeeAdjustmentList',
-        'order_fee_list' => 'setOrderFeeList',
-        'order_fee_adjustment_list' => 'setOrderFeeAdjustmentList',
-        'direct_payment_list' => 'setDirectPaymentList',
-        'posted_date' => 'setPostedDate',
-        'shipment_item_list' => 'setShipmentItemList',
-        'shipment_item_adjustment_list' => 'setShipmentItemAdjustmentList'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'sellerOrderId' => 'setSellerOrderId',
+        'marketplaceName' => 'setMarketplaceName',
+        'orderChargeList' => 'setOrderChargeList',
+        'orderChargeAdjustmentList' => 'setOrderChargeAdjustmentList',
+        'shipmentFeeList' => 'setShipmentFeeList',
+        'shipmentFeeAdjustmentList' => 'setShipmentFeeAdjustmentList',
+        'orderFeeList' => 'setOrderFeeList',
+        'orderFeeAdjustmentList' => 'setOrderFeeAdjustmentList',
+        'directPaymentList' => 'setDirectPaymentList',
+        'postedDate' => 'setPostedDate',
+        'shipmentItemList' => 'setShipmentItemList',
+        'shipmentItemAdjustmentList' => 'setShipmentItemAdjustmentList'
     ];
 
     /**
@@ -169,19 +169,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'seller_order_id' => 'getSellerOrderId',
-        'marketplace_name' => 'getMarketplaceName',
-        'order_charge_list' => 'getOrderChargeList',
-        'order_charge_adjustment_list' => 'getOrderChargeAdjustmentList',
-        'shipment_fee_list' => 'getShipmentFeeList',
-        'shipment_fee_adjustment_list' => 'getShipmentFeeAdjustmentList',
-        'order_fee_list' => 'getOrderFeeList',
-        'order_fee_adjustment_list' => 'getOrderFeeAdjustmentList',
-        'direct_payment_list' => 'getDirectPaymentList',
-        'posted_date' => 'getPostedDate',
-        'shipment_item_list' => 'getShipmentItemList',
-        'shipment_item_adjustment_list' => 'getShipmentItemAdjustmentList'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'sellerOrderId' => 'getSellerOrderId',
+        'marketplaceName' => 'getMarketplaceName',
+        'orderChargeList' => 'getOrderChargeList',
+        'orderChargeAdjustmentList' => 'getOrderChargeAdjustmentList',
+        'shipmentFeeList' => 'getShipmentFeeList',
+        'shipmentFeeAdjustmentList' => 'getShipmentFeeAdjustmentList',
+        'orderFeeList' => 'getOrderFeeList',
+        'orderFeeAdjustmentList' => 'getOrderFeeAdjustmentList',
+        'directPaymentList' => 'getDirectPaymentList',
+        'postedDate' => 'getPostedDate',
+        'shipmentItemList' => 'getShipmentItemList',
+        'shipmentItemAdjustmentList' => 'getShipmentItemAdjustmentList'
     ];
 
     /**
@@ -244,19 +244,19 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['seller_order_id'] = $data['seller_order_id'] ?? null;
-        $this->container['marketplace_name'] = $data['marketplace_name'] ?? null;
-        $this->container['order_charge_list'] = $data['order_charge_list'] ?? null;
-        $this->container['order_charge_adjustment_list'] = $data['order_charge_adjustment_list'] ?? null;
-        $this->container['shipment_fee_list'] = $data['shipment_fee_list'] ?? null;
-        $this->container['shipment_fee_adjustment_list'] = $data['shipment_fee_adjustment_list'] ?? null;
-        $this->container['order_fee_list'] = $data['order_fee_list'] ?? null;
-        $this->container['order_fee_adjustment_list'] = $data['order_fee_adjustment_list'] ?? null;
-        $this->container['direct_payment_list'] = $data['direct_payment_list'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['shipment_item_list'] = $data['shipment_item_list'] ?? null;
-        $this->container['shipment_item_adjustment_list'] = $data['shipment_item_adjustment_list'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['sellerOrderId'] = $data['sellerOrderId'] ?? null;
+        $this->container['marketplaceName'] = $data['marketplaceName'] ?? null;
+        $this->container['orderChargeList'] = $data['orderChargeList'] ?? null;
+        $this->container['orderChargeAdjustmentList'] = $data['orderChargeAdjustmentList'] ?? null;
+        $this->container['shipmentFeeList'] = $data['shipmentFeeList'] ?? null;
+        $this->container['shipmentFeeAdjustmentList'] = $data['shipmentFeeAdjustmentList'] ?? null;
+        $this->container['orderFeeList'] = $data['orderFeeList'] ?? null;
+        $this->container['orderFeeAdjustmentList'] = $data['orderFeeAdjustmentList'] ?? null;
+        $this->container['directPaymentList'] = $data['directPaymentList'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['shipmentItemList'] = $data['shipmentItemList'] ?? null;
+        $this->container['shipmentItemAdjustmentList'] = $data['shipmentItemAdjustmentList'] ?? null;
     }
 
     /**
@@ -284,313 +284,313 @@ class ShipmentEvent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string|null
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string|null $amazon_order_id An Amazon-defined identifier for an order.
+     * @param string|null $amazonOrderId An Amazon-defined identifier for an order.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets seller_order_id
+     * Gets sellerOrderId
      *
      * @return string|null
      */
     public function getSellerOrderId()
     {
-        return $this->container['seller_order_id'];
+        return $this->container['sellerOrderId'];
     }
 
     /**
-     * Sets seller_order_id
+     * Sets sellerOrderId
      *
-     * @param string|null $seller_order_id A seller-defined identifier for an order.
+     * @param string|null $sellerOrderId A seller-defined identifier for an order.
      *
      * @return self
      */
-    public function setSellerOrderId($seller_order_id)
+    public function setSellerOrderId($sellerOrderId)
     {
-        $this->container['seller_order_id'] = $seller_order_id;
+        $this->container['sellerOrderId'] = $sellerOrderId;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_name
+     * Gets marketplaceName
      *
      * @return string|null
      */
     public function getMarketplaceName()
     {
-        return $this->container['marketplace_name'];
+        return $this->container['marketplaceName'];
     }
 
     /**
-     * Sets marketplace_name
+     * Sets marketplaceName
      *
-     * @param string|null $marketplace_name The name of the marketplace where the event occurred.
+     * @param string|null $marketplaceName The name of the marketplace where the event occurred.
      *
      * @return self
      */
-    public function setMarketplaceName($marketplace_name)
+    public function setMarketplaceName($marketplaceName)
     {
-        $this->container['marketplace_name'] = $marketplace_name;
+        $this->container['marketplaceName'] = $marketplaceName;
 
         return $this;
     }
 
     /**
-     * Gets order_charge_list
+     * Gets orderChargeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getOrderChargeList()
     {
-        return $this->container['order_charge_list'];
+        return $this->container['orderChargeList'];
     }
 
     /**
-     * Sets order_charge_list
+     * Sets orderChargeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $order_charge_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $orderChargeList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setOrderChargeList($order_charge_list)
+    public function setOrderChargeList($orderChargeList)
     {
-        $this->container['order_charge_list'] = $order_charge_list;
+        $this->container['orderChargeList'] = $orderChargeList;
 
         return $this;
     }
 
     /**
-     * Gets order_charge_adjustment_list
+     * Gets orderChargeAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getOrderChargeAdjustmentList()
     {
-        return $this->container['order_charge_adjustment_list'];
+        return $this->container['orderChargeAdjustmentList'];
     }
 
     /**
-     * Sets order_charge_adjustment_list
+     * Sets orderChargeAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $order_charge_adjustment_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $orderChargeAdjustmentList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setOrderChargeAdjustmentList($order_charge_adjustment_list)
+    public function setOrderChargeAdjustmentList($orderChargeAdjustmentList)
     {
-        $this->container['order_charge_adjustment_list'] = $order_charge_adjustment_list;
+        $this->container['orderChargeAdjustmentList'] = $orderChargeAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets shipment_fee_list
+     * Gets shipmentFeeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getShipmentFeeList()
     {
-        return $this->container['shipment_fee_list'];
+        return $this->container['shipmentFeeList'];
     }
 
     /**
-     * Sets shipment_fee_list
+     * Sets shipmentFeeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $shipment_fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $shipmentFeeList A list of fee component information.
      *
      * @return self
      */
-    public function setShipmentFeeList($shipment_fee_list)
+    public function setShipmentFeeList($shipmentFeeList)
     {
-        $this->container['shipment_fee_list'] = $shipment_fee_list;
+        $this->container['shipmentFeeList'] = $shipmentFeeList;
 
         return $this;
     }
 
     /**
-     * Gets shipment_fee_adjustment_list
+     * Gets shipmentFeeAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getShipmentFeeAdjustmentList()
     {
-        return $this->container['shipment_fee_adjustment_list'];
+        return $this->container['shipmentFeeAdjustmentList'];
     }
 
     /**
-     * Sets shipment_fee_adjustment_list
+     * Sets shipmentFeeAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $shipment_fee_adjustment_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $shipmentFeeAdjustmentList A list of fee component information.
      *
      * @return self
      */
-    public function setShipmentFeeAdjustmentList($shipment_fee_adjustment_list)
+    public function setShipmentFeeAdjustmentList($shipmentFeeAdjustmentList)
     {
-        $this->container['shipment_fee_adjustment_list'] = $shipment_fee_adjustment_list;
+        $this->container['shipmentFeeAdjustmentList'] = $shipmentFeeAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets order_fee_list
+     * Gets orderFeeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getOrderFeeList()
     {
-        return $this->container['order_fee_list'];
+        return $this->container['orderFeeList'];
     }
 
     /**
-     * Sets order_fee_list
+     * Sets orderFeeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $order_fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $orderFeeList A list of fee component information.
      *
      * @return self
      */
-    public function setOrderFeeList($order_fee_list)
+    public function setOrderFeeList($orderFeeList)
     {
-        $this->container['order_fee_list'] = $order_fee_list;
+        $this->container['orderFeeList'] = $orderFeeList;
 
         return $this;
     }
 
     /**
-     * Gets order_fee_adjustment_list
+     * Gets orderFeeAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getOrderFeeAdjustmentList()
     {
-        return $this->container['order_fee_adjustment_list'];
+        return $this->container['orderFeeAdjustmentList'];
     }
 
     /**
-     * Sets order_fee_adjustment_list
+     * Sets orderFeeAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $order_fee_adjustment_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $orderFeeAdjustmentList A list of fee component information.
      *
      * @return self
      */
-    public function setOrderFeeAdjustmentList($order_fee_adjustment_list)
+    public function setOrderFeeAdjustmentList($orderFeeAdjustmentList)
     {
-        $this->container['order_fee_adjustment_list'] = $order_fee_adjustment_list;
+        $this->container['orderFeeAdjustmentList'] = $orderFeeAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets direct_payment_list
+     * Gets directPaymentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\DirectPayment[]|null
      */
     public function getDirectPaymentList()
     {
-        return $this->container['direct_payment_list'];
+        return $this->container['directPaymentList'];
     }
 
     /**
-     * Sets direct_payment_list
+     * Sets directPaymentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DirectPayment[]|null $direct_payment_list A list of direct payment information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DirectPayment[]|null $directPaymentList A list of direct payment information.
      *
      * @return self
      */
-    public function setDirectPaymentList($direct_payment_list)
+    public function setDirectPaymentList($directPaymentList)
     {
-        $this->container['direct_payment_list'] = $direct_payment_list;
+        $this->container['directPaymentList'] = $directPaymentList;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets shipment_item_list
+     * Gets shipmentItemList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null
      */
     public function getShipmentItemList()
     {
-        return $this->container['shipment_item_list'];
+        return $this->container['shipmentItemList'];
     }
 
     /**
-     * Sets shipment_item_list
+     * Sets shipmentItemList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null $shipment_item_list A list of shipment items.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null $shipmentItemList A list of shipment items.
      *
      * @return self
      */
-    public function setShipmentItemList($shipment_item_list)
+    public function setShipmentItemList($shipmentItemList)
     {
-        $this->container['shipment_item_list'] = $shipment_item_list;
+        $this->container['shipmentItemList'] = $shipmentItemList;
 
         return $this;
     }
 
     /**
-     * Gets shipment_item_adjustment_list
+     * Gets shipmentItemAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null
      */
     public function getShipmentItemAdjustmentList()
     {
-        return $this->container['shipment_item_adjustment_list'];
+        return $this->container['shipmentItemAdjustmentList'];
     }
 
     /**
-     * Sets shipment_item_adjustment_list
+     * Sets shipmentItemAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null $shipment_item_adjustment_list A list of shipment items.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentItem[]|null $shipmentItemAdjustmentList A list of shipment items.
      *
      * @return self
      */
-    public function setShipmentItemAdjustmentList($shipment_item_adjustment_list)
+    public function setShipmentItemAdjustmentList($shipmentItemAdjustmentList)
     {
-        $this->container['shipment_item_adjustment_list'] = $shipment_item_adjustment_list;
+        $this->container['shipmentItemAdjustmentList'] = $shipmentItemAdjustmentList;
 
         return $this;
     }

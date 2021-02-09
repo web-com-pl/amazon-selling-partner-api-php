@@ -62,13 +62,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_unfulfillable_quantity' => 'int',
-        'customer_damaged_quantity' => 'int',
-        'warehouse_damaged_quantity' => 'int',
-        'distributor_damaged_quantity' => 'int',
-        'carrier_damaged_quantity' => 'int',
-        'defective_quantity' => 'int',
-        'expired_quantity' => 'int'
+        'totalUnfulfillableQuantity' => 'int',
+        'customerDamagedQuantity' => 'int',
+        'warehouseDamagedQuantity' => 'int',
+        'distributorDamagedQuantity' => 'int',
+        'carrierDamagedQuantity' => 'int',
+        'defectiveQuantity' => 'int',
+        'expiredQuantity' => 'int'
     ];
 
     /**
@@ -79,13 +79,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_unfulfillable_quantity' => null,
-        'customer_damaged_quantity' => null,
-        'warehouse_damaged_quantity' => null,
-        'distributor_damaged_quantity' => null,
-        'carrier_damaged_quantity' => null,
-        'defective_quantity' => null,
-        'expired_quantity' => null
+        'totalUnfulfillableQuantity' => null,
+        'customerDamagedQuantity' => null,
+        'warehouseDamagedQuantity' => null,
+        'distributorDamagedQuantity' => null,
+        'carrierDamagedQuantity' => null,
+        'defectiveQuantity' => null,
+        'expiredQuantity' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_unfulfillable_quantity' => 'totalUnfulfillableQuantity',
-        'customer_damaged_quantity' => 'customerDamagedQuantity',
-        'warehouse_damaged_quantity' => 'warehouseDamagedQuantity',
-        'distributor_damaged_quantity' => 'distributorDamagedQuantity',
-        'carrier_damaged_quantity' => 'carrierDamagedQuantity',
-        'defective_quantity' => 'defectiveQuantity',
-        'expired_quantity' => 'expiredQuantity'
+        'totalUnfulfillableQuantity' => 'totalUnfulfillableQuantity',
+        'customerDamagedQuantity' => 'customerDamagedQuantity',
+        'warehouseDamagedQuantity' => 'warehouseDamagedQuantity',
+        'distributorDamagedQuantity' => 'distributorDamagedQuantity',
+        'carrierDamagedQuantity' => 'carrierDamagedQuantity',
+        'defectiveQuantity' => 'defectiveQuantity',
+        'expiredQuantity' => 'expiredQuantity'
     ];
 
     /**
@@ -130,13 +130,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'total_unfulfillable_quantity' => 'setTotalUnfulfillableQuantity',
-        'customer_damaged_quantity' => 'setCustomerDamagedQuantity',
-        'warehouse_damaged_quantity' => 'setWarehouseDamagedQuantity',
-        'distributor_damaged_quantity' => 'setDistributorDamagedQuantity',
-        'carrier_damaged_quantity' => 'setCarrierDamagedQuantity',
-        'defective_quantity' => 'setDefectiveQuantity',
-        'expired_quantity' => 'setExpiredQuantity'
+        'totalUnfulfillableQuantity' => 'setTotalUnfulfillableQuantity',
+        'customerDamagedQuantity' => 'setCustomerDamagedQuantity',
+        'warehouseDamagedQuantity' => 'setWarehouseDamagedQuantity',
+        'distributorDamagedQuantity' => 'setDistributorDamagedQuantity',
+        'carrierDamagedQuantity' => 'setCarrierDamagedQuantity',
+        'defectiveQuantity' => 'setDefectiveQuantity',
+        'expiredQuantity' => 'setExpiredQuantity'
     ];
 
     /**
@@ -145,13 +145,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'total_unfulfillable_quantity' => 'getTotalUnfulfillableQuantity',
-        'customer_damaged_quantity' => 'getCustomerDamagedQuantity',
-        'warehouse_damaged_quantity' => 'getWarehouseDamagedQuantity',
-        'distributor_damaged_quantity' => 'getDistributorDamagedQuantity',
-        'carrier_damaged_quantity' => 'getCarrierDamagedQuantity',
-        'defective_quantity' => 'getDefectiveQuantity',
-        'expired_quantity' => 'getExpiredQuantity'
+        'totalUnfulfillableQuantity' => 'getTotalUnfulfillableQuantity',
+        'customerDamagedQuantity' => 'getCustomerDamagedQuantity',
+        'warehouseDamagedQuantity' => 'getWarehouseDamagedQuantity',
+        'distributorDamagedQuantity' => 'getDistributorDamagedQuantity',
+        'carrierDamagedQuantity' => 'getCarrierDamagedQuantity',
+        'defectiveQuantity' => 'getDefectiveQuantity',
+        'expiredQuantity' => 'getExpiredQuantity'
     ];
 
     /**
@@ -214,13 +214,13 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['total_unfulfillable_quantity'] = $data['total_unfulfillable_quantity'] ?? null;
-        $this->container['customer_damaged_quantity'] = $data['customer_damaged_quantity'] ?? null;
-        $this->container['warehouse_damaged_quantity'] = $data['warehouse_damaged_quantity'] ?? null;
-        $this->container['distributor_damaged_quantity'] = $data['distributor_damaged_quantity'] ?? null;
-        $this->container['carrier_damaged_quantity'] = $data['carrier_damaged_quantity'] ?? null;
-        $this->container['defective_quantity'] = $data['defective_quantity'] ?? null;
-        $this->container['expired_quantity'] = $data['expired_quantity'] ?? null;
+        $this->container['totalUnfulfillableQuantity'] = $data['totalUnfulfillableQuantity'] ?? null;
+        $this->container['customerDamagedQuantity'] = $data['customerDamagedQuantity'] ?? null;
+        $this->container['warehouseDamagedQuantity'] = $data['warehouseDamagedQuantity'] ?? null;
+        $this->container['distributorDamagedQuantity'] = $data['distributorDamagedQuantity'] ?? null;
+        $this->container['carrierDamagedQuantity'] = $data['carrierDamagedQuantity'] ?? null;
+        $this->container['defectiveQuantity'] = $data['defectiveQuantity'] ?? null;
+        $this->container['expiredQuantity'] = $data['expiredQuantity'] ?? null;
     }
 
     /**
@@ -248,169 +248,169 @@ class UnfulfillableQuantity implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets total_unfulfillable_quantity
+     * Gets totalUnfulfillableQuantity
      *
      * @return int|null
      */
     public function getTotalUnfulfillableQuantity()
     {
-        return $this->container['total_unfulfillable_quantity'];
+        return $this->container['totalUnfulfillableQuantity'];
     }
 
     /**
-     * Sets total_unfulfillable_quantity
+     * Sets totalUnfulfillableQuantity
      *
-     * @param int|null $total_unfulfillable_quantity The total number of units in Amazon's fulfillment network in unsellable condition.
+     * @param int|null $totalUnfulfillableQuantity The total number of units in Amazon's fulfillment network in unsellable condition.
      *
      * @return self
      */
-    public function setTotalUnfulfillableQuantity($total_unfulfillable_quantity)
+    public function setTotalUnfulfillableQuantity($totalUnfulfillableQuantity)
     {
-        $this->container['total_unfulfillable_quantity'] = $total_unfulfillable_quantity;
+        $this->container['totalUnfulfillableQuantity'] = $totalUnfulfillableQuantity;
 
         return $this;
     }
 
     /**
-     * Gets customer_damaged_quantity
+     * Gets customerDamagedQuantity
      *
      * @return int|null
      */
     public function getCustomerDamagedQuantity()
     {
-        return $this->container['customer_damaged_quantity'];
+        return $this->container['customerDamagedQuantity'];
     }
 
     /**
-     * Sets customer_damaged_quantity
+     * Sets customerDamagedQuantity
      *
-     * @param int|null $customer_damaged_quantity The number of units in customer damaged disposition.
+     * @param int|null $customerDamagedQuantity The number of units in customer damaged disposition.
      *
      * @return self
      */
-    public function setCustomerDamagedQuantity($customer_damaged_quantity)
+    public function setCustomerDamagedQuantity($customerDamagedQuantity)
     {
-        $this->container['customer_damaged_quantity'] = $customer_damaged_quantity;
+        $this->container['customerDamagedQuantity'] = $customerDamagedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets warehouse_damaged_quantity
+     * Gets warehouseDamagedQuantity
      *
      * @return int|null
      */
     public function getWarehouseDamagedQuantity()
     {
-        return $this->container['warehouse_damaged_quantity'];
+        return $this->container['warehouseDamagedQuantity'];
     }
 
     /**
-     * Sets warehouse_damaged_quantity
+     * Sets warehouseDamagedQuantity
      *
-     * @param int|null $warehouse_damaged_quantity The number of units in warehouse damaged disposition.
+     * @param int|null $warehouseDamagedQuantity The number of units in warehouse damaged disposition.
      *
      * @return self
      */
-    public function setWarehouseDamagedQuantity($warehouse_damaged_quantity)
+    public function setWarehouseDamagedQuantity($warehouseDamagedQuantity)
     {
-        $this->container['warehouse_damaged_quantity'] = $warehouse_damaged_quantity;
+        $this->container['warehouseDamagedQuantity'] = $warehouseDamagedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets distributor_damaged_quantity
+     * Gets distributorDamagedQuantity
      *
      * @return int|null
      */
     public function getDistributorDamagedQuantity()
     {
-        return $this->container['distributor_damaged_quantity'];
+        return $this->container['distributorDamagedQuantity'];
     }
 
     /**
-     * Sets distributor_damaged_quantity
+     * Sets distributorDamagedQuantity
      *
-     * @param int|null $distributor_damaged_quantity The number of units in distributor damaged disposition.
+     * @param int|null $distributorDamagedQuantity The number of units in distributor damaged disposition.
      *
      * @return self
      */
-    public function setDistributorDamagedQuantity($distributor_damaged_quantity)
+    public function setDistributorDamagedQuantity($distributorDamagedQuantity)
     {
-        $this->container['distributor_damaged_quantity'] = $distributor_damaged_quantity;
+        $this->container['distributorDamagedQuantity'] = $distributorDamagedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets carrier_damaged_quantity
+     * Gets carrierDamagedQuantity
      *
      * @return int|null
      */
     public function getCarrierDamagedQuantity()
     {
-        return $this->container['carrier_damaged_quantity'];
+        return $this->container['carrierDamagedQuantity'];
     }
 
     /**
-     * Sets carrier_damaged_quantity
+     * Sets carrierDamagedQuantity
      *
-     * @param int|null $carrier_damaged_quantity The number of units in carrier damaged disposition.
+     * @param int|null $carrierDamagedQuantity The number of units in carrier damaged disposition.
      *
      * @return self
      */
-    public function setCarrierDamagedQuantity($carrier_damaged_quantity)
+    public function setCarrierDamagedQuantity($carrierDamagedQuantity)
     {
-        $this->container['carrier_damaged_quantity'] = $carrier_damaged_quantity;
+        $this->container['carrierDamagedQuantity'] = $carrierDamagedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets defective_quantity
+     * Gets defectiveQuantity
      *
      * @return int|null
      */
     public function getDefectiveQuantity()
     {
-        return $this->container['defective_quantity'];
+        return $this->container['defectiveQuantity'];
     }
 
     /**
-     * Sets defective_quantity
+     * Sets defectiveQuantity
      *
-     * @param int|null $defective_quantity The number of units in defective disposition.
+     * @param int|null $defectiveQuantity The number of units in defective disposition.
      *
      * @return self
      */
-    public function setDefectiveQuantity($defective_quantity)
+    public function setDefectiveQuantity($defectiveQuantity)
     {
-        $this->container['defective_quantity'] = $defective_quantity;
+        $this->container['defectiveQuantity'] = $defectiveQuantity;
 
         return $this;
     }
 
     /**
-     * Gets expired_quantity
+     * Gets expiredQuantity
      *
      * @return int|null
      */
     public function getExpiredQuantity()
     {
-        return $this->container['expired_quantity'];
+        return $this->container['expiredQuantity'];
     }
 
     /**
-     * Sets expired_quantity
+     * Sets expiredQuantity
      *
-     * @param int|null $expired_quantity The number of units in expired disposition.
+     * @param int|null $expiredQuantity The number of units in expired disposition.
      *
      * @return self
      */
-    public function setExpiredQuantity($expired_quantity)
+    public function setExpiredQuantity($expiredQuantity)
     {
-        $this->container['expired_quantity'] = $expired_quantity;
+        $this->container['expiredQuantity'] = $expiredQuantity;
 
         return $this;
     }

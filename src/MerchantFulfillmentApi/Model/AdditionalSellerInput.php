@@ -62,15 +62,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data_type' => 'string',
-        'value_as_string' => 'string',
-        'value_as_boolean' => 'bool',
-        'value_as_integer' => 'int',
-        'value_as_timestamp' => '\DateTime',
-        'value_as_address' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
-        'value_as_weight' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight',
-        'value_as_dimension' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Length',
-        'value_as_currency' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount'
+        'dataType' => 'string',
+        'valueAsString' => 'string',
+        'valueAsBoolean' => 'bool',
+        'valueAsInteger' => 'int',
+        'valueAsTimestamp' => '\DateTime',
+        'valueAsAddress' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
+        'valueAsWeight' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight',
+        'valueAsDimension' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Length',
+        'valueAsCurrency' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount'
     ];
 
     /**
@@ -81,15 +81,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data_type' => null,
-        'value_as_string' => null,
-        'value_as_boolean' => null,
-        'value_as_integer' => null,
-        'value_as_timestamp' => 'date-time',
-        'value_as_address' => null,
-        'value_as_weight' => null,
-        'value_as_dimension' => null,
-        'value_as_currency' => null
+        'dataType' => null,
+        'valueAsString' => null,
+        'valueAsBoolean' => null,
+        'valueAsInteger' => null,
+        'valueAsTimestamp' => 'date-time',
+        'valueAsAddress' => null,
+        'valueAsWeight' => null,
+        'valueAsDimension' => null,
+        'valueAsCurrency' => null
     ];
 
     /**
@@ -119,15 +119,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data_type' => 'DataType',
-        'value_as_string' => 'ValueAsString',
-        'value_as_boolean' => 'ValueAsBoolean',
-        'value_as_integer' => 'ValueAsInteger',
-        'value_as_timestamp' => 'ValueAsTimestamp',
-        'value_as_address' => 'ValueAsAddress',
-        'value_as_weight' => 'ValueAsWeight',
-        'value_as_dimension' => 'ValueAsDimension',
-        'value_as_currency' => 'ValueAsCurrency'
+        'dataType' => 'DataType',
+        'valueAsString' => 'ValueAsString',
+        'valueAsBoolean' => 'ValueAsBoolean',
+        'valueAsInteger' => 'ValueAsInteger',
+        'valueAsTimestamp' => 'ValueAsTimestamp',
+        'valueAsAddress' => 'ValueAsAddress',
+        'valueAsWeight' => 'ValueAsWeight',
+        'valueAsDimension' => 'ValueAsDimension',
+        'valueAsCurrency' => 'ValueAsCurrency'
     ];
 
     /**
@@ -136,15 +136,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data_type' => 'setDataType',
-        'value_as_string' => 'setValueAsString',
-        'value_as_boolean' => 'setValueAsBoolean',
-        'value_as_integer' => 'setValueAsInteger',
-        'value_as_timestamp' => 'setValueAsTimestamp',
-        'value_as_address' => 'setValueAsAddress',
-        'value_as_weight' => 'setValueAsWeight',
-        'value_as_dimension' => 'setValueAsDimension',
-        'value_as_currency' => 'setValueAsCurrency'
+        'dataType' => 'setDataType',
+        'valueAsString' => 'setValueAsString',
+        'valueAsBoolean' => 'setValueAsBoolean',
+        'valueAsInteger' => 'setValueAsInteger',
+        'valueAsTimestamp' => 'setValueAsTimestamp',
+        'valueAsAddress' => 'setValueAsAddress',
+        'valueAsWeight' => 'setValueAsWeight',
+        'valueAsDimension' => 'setValueAsDimension',
+        'valueAsCurrency' => 'setValueAsCurrency'
     ];
 
     /**
@@ -153,15 +153,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data_type' => 'getDataType',
-        'value_as_string' => 'getValueAsString',
-        'value_as_boolean' => 'getValueAsBoolean',
-        'value_as_integer' => 'getValueAsInteger',
-        'value_as_timestamp' => 'getValueAsTimestamp',
-        'value_as_address' => 'getValueAsAddress',
-        'value_as_weight' => 'getValueAsWeight',
-        'value_as_dimension' => 'getValueAsDimension',
-        'value_as_currency' => 'getValueAsCurrency'
+        'dataType' => 'getDataType',
+        'valueAsString' => 'getValueAsString',
+        'valueAsBoolean' => 'getValueAsBoolean',
+        'valueAsInteger' => 'getValueAsInteger',
+        'valueAsTimestamp' => 'getValueAsTimestamp',
+        'valueAsAddress' => 'getValueAsAddress',
+        'valueAsWeight' => 'getValueAsWeight',
+        'valueAsDimension' => 'getValueAsDimension',
+        'valueAsCurrency' => 'getValueAsCurrency'
     ];
 
     /**
@@ -224,15 +224,15 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['data_type'] = $data['data_type'] ?? null;
-        $this->container['value_as_string'] = $data['value_as_string'] ?? null;
-        $this->container['value_as_boolean'] = $data['value_as_boolean'] ?? null;
-        $this->container['value_as_integer'] = $data['value_as_integer'] ?? null;
-        $this->container['value_as_timestamp'] = $data['value_as_timestamp'] ?? null;
-        $this->container['value_as_address'] = $data['value_as_address'] ?? null;
-        $this->container['value_as_weight'] = $data['value_as_weight'] ?? null;
-        $this->container['value_as_dimension'] = $data['value_as_dimension'] ?? null;
-        $this->container['value_as_currency'] = $data['value_as_currency'] ?? null;
+        $this->container['dataType'] = $data['dataType'] ?? null;
+        $this->container['valueAsString'] = $data['valueAsString'] ?? null;
+        $this->container['valueAsBoolean'] = $data['valueAsBoolean'] ?? null;
+        $this->container['valueAsInteger'] = $data['valueAsInteger'] ?? null;
+        $this->container['valueAsTimestamp'] = $data['valueAsTimestamp'] ?? null;
+        $this->container['valueAsAddress'] = $data['valueAsAddress'] ?? null;
+        $this->container['valueAsWeight'] = $data['valueAsWeight'] ?? null;
+        $this->container['valueAsDimension'] = $data['valueAsDimension'] ?? null;
+        $this->container['valueAsCurrency'] = $data['valueAsCurrency'] ?? null;
     }
 
     /**
@@ -260,217 +260,217 @@ class AdditionalSellerInput implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data_type
+     * Gets dataType
      *
      * @return string|null
      */
     public function getDataType()
     {
-        return $this->container['data_type'];
+        return $this->container['dataType'];
     }
 
     /**
-     * Sets data_type
+     * Sets dataType
      *
-     * @param string|null $data_type The data type of the additional information.
+     * @param string|null $dataType The data type of the additional information.
      *
      * @return self
      */
-    public function setDataType($data_type)
+    public function setDataType($dataType)
     {
-        $this->container['data_type'] = $data_type;
+        $this->container['dataType'] = $dataType;
 
         return $this;
     }
 
     /**
-     * Gets value_as_string
+     * Gets valueAsString
      *
      * @return string|null
      */
     public function getValueAsString()
     {
-        return $this->container['value_as_string'];
+        return $this->container['valueAsString'];
     }
 
     /**
-     * Sets value_as_string
+     * Sets valueAsString
      *
-     * @param string|null $value_as_string The value when the data type is string.
+     * @param string|null $valueAsString The value when the data type is string.
      *
      * @return self
      */
-    public function setValueAsString($value_as_string)
+    public function setValueAsString($valueAsString)
     {
-        $this->container['value_as_string'] = $value_as_string;
+        $this->container['valueAsString'] = $valueAsString;
 
         return $this;
     }
 
     /**
-     * Gets value_as_boolean
+     * Gets valueAsBoolean
      *
      * @return bool|null
      */
     public function getValueAsBoolean()
     {
-        return $this->container['value_as_boolean'];
+        return $this->container['valueAsBoolean'];
     }
 
     /**
-     * Sets value_as_boolean
+     * Sets valueAsBoolean
      *
-     * @param bool|null $value_as_boolean The value when the data type is boolean.
+     * @param bool|null $valueAsBoolean The value when the data type is boolean.
      *
      * @return self
      */
-    public function setValueAsBoolean($value_as_boolean)
+    public function setValueAsBoolean($valueAsBoolean)
     {
-        $this->container['value_as_boolean'] = $value_as_boolean;
+        $this->container['valueAsBoolean'] = $valueAsBoolean;
 
         return $this;
     }
 
     /**
-     * Gets value_as_integer
+     * Gets valueAsInteger
      *
      * @return int|null
      */
     public function getValueAsInteger()
     {
-        return $this->container['value_as_integer'];
+        return $this->container['valueAsInteger'];
     }
 
     /**
-     * Sets value_as_integer
+     * Sets valueAsInteger
      *
-     * @param int|null $value_as_integer The value when the data type is integer.
+     * @param int|null $valueAsInteger The value when the data type is integer.
      *
      * @return self
      */
-    public function setValueAsInteger($value_as_integer)
+    public function setValueAsInteger($valueAsInteger)
     {
-        $this->container['value_as_integer'] = $value_as_integer;
+        $this->container['valueAsInteger'] = $valueAsInteger;
 
         return $this;
     }
 
     /**
-     * Gets value_as_timestamp
+     * Gets valueAsTimestamp
      *
      * @return \DateTime|null
      */
     public function getValueAsTimestamp()
     {
-        return $this->container['value_as_timestamp'];
+        return $this->container['valueAsTimestamp'];
     }
 
     /**
-     * Sets value_as_timestamp
+     * Sets valueAsTimestamp
      *
-     * @param \DateTime|null $value_as_timestamp value_as_timestamp
+     * @param \DateTime|null $valueAsTimestamp valueAsTimestamp
      *
      * @return self
      */
-    public function setValueAsTimestamp($value_as_timestamp)
+    public function setValueAsTimestamp($valueAsTimestamp)
     {
-        $this->container['value_as_timestamp'] = $value_as_timestamp;
+        $this->container['valueAsTimestamp'] = $valueAsTimestamp;
 
         return $this;
     }
 
     /**
-     * Gets value_as_address
+     * Gets valueAsAddress
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address|null
      */
     public function getValueAsAddress()
     {
-        return $this->container['value_as_address'];
+        return $this->container['valueAsAddress'];
     }
 
     /**
-     * Sets value_as_address
+     * Sets valueAsAddress
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address|null $value_as_address value_as_address
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address|null $valueAsAddress valueAsAddress
      *
      * @return self
      */
-    public function setValueAsAddress($value_as_address)
+    public function setValueAsAddress($valueAsAddress)
     {
-        $this->container['value_as_address'] = $value_as_address;
+        $this->container['valueAsAddress'] = $valueAsAddress;
 
         return $this;
     }
 
     /**
-     * Gets value_as_weight
+     * Gets valueAsWeight
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null
      */
     public function getValueAsWeight()
     {
-        return $this->container['value_as_weight'];
+        return $this->container['valueAsWeight'];
     }
 
     /**
-     * Sets value_as_weight
+     * Sets valueAsWeight
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null $value_as_weight value_as_weight
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight|null $valueAsWeight valueAsWeight
      *
      * @return self
      */
-    public function setValueAsWeight($value_as_weight)
+    public function setValueAsWeight($valueAsWeight)
     {
-        $this->container['value_as_weight'] = $value_as_weight;
+        $this->container['valueAsWeight'] = $valueAsWeight;
 
         return $this;
     }
 
     /**
-     * Gets value_as_dimension
+     * Gets valueAsDimension
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Length|null
      */
     public function getValueAsDimension()
     {
-        return $this->container['value_as_dimension'];
+        return $this->container['valueAsDimension'];
     }
 
     /**
-     * Sets value_as_dimension
+     * Sets valueAsDimension
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Length|null $value_as_dimension value_as_dimension
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Length|null $valueAsDimension valueAsDimension
      *
      * @return self
      */
-    public function setValueAsDimension($value_as_dimension)
+    public function setValueAsDimension($valueAsDimension)
     {
-        $this->container['value_as_dimension'] = $value_as_dimension;
+        $this->container['valueAsDimension'] = $valueAsDimension;
 
         return $this;
     }
 
     /**
-     * Gets value_as_currency
+     * Gets valueAsCurrency
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null
      */
     public function getValueAsCurrency()
     {
-        return $this->container['value_as_currency'];
+        return $this->container['valueAsCurrency'];
     }
 
     /**
-     * Sets value_as_currency
+     * Sets valueAsCurrency
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null $value_as_currency value_as_currency
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\CurrencyAmount|null $valueAsCurrency valueAsCurrency
      *
      * @return self
      */
-    public function setValueAsCurrency($value_as_currency)
+    public function setValueAsCurrency($valueAsCurrency)
     {
-        $this->container['value_as_currency'] = $value_as_currency;
+        $this->container['valueAsCurrency'] = $valueAsCurrency;
 
         return $this;
     }

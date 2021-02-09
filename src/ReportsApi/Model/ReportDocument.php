@@ -61,10 +61,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'report_document_id' => 'string',
+        'reportDocumentId' => 'string',
         'url' => 'string',
-        'encryption_details' => '\Webcom\Amazon\Rest\ReportsApi\Model\ReportDocumentEncryptionDetails',
-        'compression_algorithm' => 'string'
+        'encryptionDetails' => '\Webcom\Amazon\Rest\ReportsApi\Model\ReportDocumentEncryptionDetails',
+        'compressionAlgorithm' => 'string'
     ];
 
     /**
@@ -75,10 +75,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'report_document_id' => null,
+        'reportDocumentId' => null,
         'url' => null,
-        'encryption_details' => null,
-        'compression_algorithm' => null
+        'encryptionDetails' => null,
+        'compressionAlgorithm' => null
     ];
 
     /**
@@ -108,10 +108,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_document_id' => 'reportDocumentId',
+        'reportDocumentId' => 'reportDocumentId',
         'url' => 'url',
-        'encryption_details' => 'encryptionDetails',
-        'compression_algorithm' => 'compressionAlgorithm'
+        'encryptionDetails' => 'encryptionDetails',
+        'compressionAlgorithm' => 'compressionAlgorithm'
     ];
 
     /**
@@ -120,10 +120,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'report_document_id' => 'setReportDocumentId',
+        'reportDocumentId' => 'setReportDocumentId',
         'url' => 'setUrl',
-        'encryption_details' => 'setEncryptionDetails',
-        'compression_algorithm' => 'setCompressionAlgorithm'
+        'encryptionDetails' => 'setEncryptionDetails',
+        'compressionAlgorithm' => 'setCompressionAlgorithm'
     ];
 
     /**
@@ -132,10 +132,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'report_document_id' => 'getReportDocumentId',
+        'reportDocumentId' => 'getReportDocumentId',
         'url' => 'getUrl',
-        'encryption_details' => 'getEncryptionDetails',
-        'compression_algorithm' => 'getCompressionAlgorithm'
+        'encryptionDetails' => 'getEncryptionDetails',
+        'compressionAlgorithm' => 'getCompressionAlgorithm'
     ];
 
     /**
@@ -211,10 +211,10 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['report_document_id'] = $data['report_document_id'] ?? null;
+        $this->container['reportDocumentId'] = $data['reportDocumentId'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
-        $this->container['encryption_details'] = $data['encryption_details'] ?? null;
-        $this->container['compression_algorithm'] = $data['compression_algorithm'] ?? null;
+        $this->container['encryptionDetails'] = $data['encryptionDetails'] ?? null;
+        $this->container['compressionAlgorithm'] = $data['compressionAlgorithm'] ?? null;
     }
 
     /**
@@ -226,20 +226,20 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['report_document_id'] === null) {
-            $invalidProperties[] = "'report_document_id' can't be null";
+        if ($this->container['reportDocumentId'] === null) {
+            $invalidProperties[] = "'reportDocumentId' can't be null";
         }
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
         }
-        if ($this->container['encryption_details'] === null) {
-            $invalidProperties[] = "'encryption_details' can't be null";
+        if ($this->container['encryptionDetails'] === null) {
+            $invalidProperties[] = "'encryptionDetails' can't be null";
         }
         $allowedValues = $this->getCompressionAlgorithmAllowableValues();
-        if (!is_null($this->container['compression_algorithm']) && !in_array($this->container['compression_algorithm'], $allowedValues, true)) {
+        if (!is_null($this->container['compressionAlgorithm']) && !in_array($this->container['compressionAlgorithm'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'compression_algorithm', must be one of '%s'",
-                $this->container['compression_algorithm'],
+                "invalid value '%s' for 'compressionAlgorithm', must be one of '%s'",
+                $this->container['compressionAlgorithm'],
                 implode("', '", $allowedValues)
             );
         }
@@ -260,25 +260,25 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets report_document_id
+     * Gets reportDocumentId
      *
      * @return string
      */
     public function getReportDocumentId()
     {
-        return $this->container['report_document_id'];
+        return $this->container['reportDocumentId'];
     }
 
     /**
-     * Sets report_document_id
+     * Sets reportDocumentId
      *
-     * @param string $report_document_id The identifier for the report document. This identifier is unique only in combination with a seller ID.
+     * @param string $reportDocumentId The identifier for the report document. This identifier is unique only in combination with a seller ID.
      *
      * @return self
      */
-    public function setReportDocumentId($report_document_id)
+    public function setReportDocumentId($reportDocumentId)
     {
-        $this->container['report_document_id'] = $report_document_id;
+        $this->container['reportDocumentId'] = $reportDocumentId;
 
         return $this;
     }
@@ -308,59 +308,59 @@ class ReportDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets encryption_details
+     * Gets encryptionDetails
      *
      * @return \Webcom\Amazon\Rest\ReportsApi\Model\ReportDocumentEncryptionDetails
      */
     public function getEncryptionDetails()
     {
-        return $this->container['encryption_details'];
+        return $this->container['encryptionDetails'];
     }
 
     /**
-     * Sets encryption_details
+     * Sets encryptionDetails
      *
-     * @param \Webcom\Amazon\Rest\ReportsApi\Model\ReportDocumentEncryptionDetails $encryption_details encryption_details
+     * @param \Webcom\Amazon\Rest\ReportsApi\Model\ReportDocumentEncryptionDetails $encryptionDetails encryptionDetails
      *
      * @return self
      */
-    public function setEncryptionDetails($encryption_details)
+    public function setEncryptionDetails($encryptionDetails)
     {
-        $this->container['encryption_details'] = $encryption_details;
+        $this->container['encryptionDetails'] = $encryptionDetails;
 
         return $this;
     }
 
     /**
-     * Gets compression_algorithm
+     * Gets compressionAlgorithm
      *
      * @return string|null
      */
     public function getCompressionAlgorithm()
     {
-        return $this->container['compression_algorithm'];
+        return $this->container['compressionAlgorithm'];
     }
 
     /**
-     * Sets compression_algorithm
+     * Sets compressionAlgorithm
      *
-     * @param string|null $compression_algorithm If present, the report document contents have been compressed with the provided algorithm.
+     * @param string|null $compressionAlgorithm If present, the report document contents have been compressed with the provided algorithm.
      *
      * @return self
      */
-    public function setCompressionAlgorithm($compression_algorithm)
+    public function setCompressionAlgorithm($compressionAlgorithm)
     {
         $allowedValues = $this->getCompressionAlgorithmAllowableValues();
-        if (!is_null($compression_algorithm) && !in_array($compression_algorithm, $allowedValues, true)) {
+        if (!is_null($compressionAlgorithm) && !in_array($compressionAlgorithm, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'compression_algorithm', must be one of '%s'",
-                    $compression_algorithm,
+                    "Invalid value '%s' for 'compressionAlgorithm', must be one of '%s'",
+                    $compressionAlgorithm,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['compression_algorithm'] = $compression_algorithm;
+        $this->container['compressionAlgorithm'] = $compressionAlgorithm;
 
         return $this;
     }

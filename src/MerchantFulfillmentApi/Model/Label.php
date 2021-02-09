@@ -62,11 +62,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_text_for_label' => 'string',
+        'customTextForLabel' => 'string',
         'dimensions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelDimensions',
-        'file_contents' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileContents',
-        'label_format' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat',
-        'standard_id_for_label' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel'
+        'fileContents' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileContents',
+        'labelFormat' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat',
+        'standardIdForLabel' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel'
     ];
 
     /**
@@ -77,11 +77,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'custom_text_for_label' => null,
+        'customTextForLabel' => null,
         'dimensions' => null,
-        'file_contents' => null,
-        'label_format' => null,
-        'standard_id_for_label' => null
+        'fileContents' => null,
+        'labelFormat' => null,
+        'standardIdForLabel' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'custom_text_for_label' => 'CustomTextForLabel',
+        'customTextForLabel' => 'CustomTextForLabel',
         'dimensions' => 'Dimensions',
-        'file_contents' => 'FileContents',
-        'label_format' => 'LabelFormat',
-        'standard_id_for_label' => 'StandardIdForLabel'
+        'fileContents' => 'FileContents',
+        'labelFormat' => 'LabelFormat',
+        'standardIdForLabel' => 'StandardIdForLabel'
     ];
 
     /**
@@ -124,11 +124,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'custom_text_for_label' => 'setCustomTextForLabel',
+        'customTextForLabel' => 'setCustomTextForLabel',
         'dimensions' => 'setDimensions',
-        'file_contents' => 'setFileContents',
-        'label_format' => 'setLabelFormat',
-        'standard_id_for_label' => 'setStandardIdForLabel'
+        'fileContents' => 'setFileContents',
+        'labelFormat' => 'setLabelFormat',
+        'standardIdForLabel' => 'setStandardIdForLabel'
     ];
 
     /**
@@ -137,11 +137,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'custom_text_for_label' => 'getCustomTextForLabel',
+        'customTextForLabel' => 'getCustomTextForLabel',
         'dimensions' => 'getDimensions',
-        'file_contents' => 'getFileContents',
-        'label_format' => 'getLabelFormat',
-        'standard_id_for_label' => 'getStandardIdForLabel'
+        'fileContents' => 'getFileContents',
+        'labelFormat' => 'getLabelFormat',
+        'standardIdForLabel' => 'getStandardIdForLabel'
     ];
 
     /**
@@ -204,11 +204,11 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['custom_text_for_label'] = $data['custom_text_for_label'] ?? null;
+        $this->container['customTextForLabel'] = $data['customTextForLabel'] ?? null;
         $this->container['dimensions'] = $data['dimensions'] ?? null;
-        $this->container['file_contents'] = $data['file_contents'] ?? null;
-        $this->container['label_format'] = $data['label_format'] ?? null;
-        $this->container['standard_id_for_label'] = $data['standard_id_for_label'] ?? null;
+        $this->container['fileContents'] = $data['fileContents'] ?? null;
+        $this->container['labelFormat'] = $data['labelFormat'] ?? null;
+        $this->container['standardIdForLabel'] = $data['standardIdForLabel'] ?? null;
     }
 
     /**
@@ -220,15 +220,15 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['custom_text_for_label']) && (mb_strlen($this->container['custom_text_for_label']) > 14)) {
-            $invalidProperties[] = "invalid value for 'custom_text_for_label', the character length must be smaller than or equal to 14.";
+        if (!is_null($this->container['customTextForLabel']) && (mb_strlen($this->container['customTextForLabel']) > 14)) {
+            $invalidProperties[] = "invalid value for 'customTextForLabel', the character length must be smaller than or equal to 14.";
         }
 
         if ($this->container['dimensions'] === null) {
             $invalidProperties[] = "'dimensions' can't be null";
         }
-        if ($this->container['file_contents'] === null) {
-            $invalidProperties[] = "'file_contents' can't be null";
+        if ($this->container['fileContents'] === null) {
+            $invalidProperties[] = "'fileContents' can't be null";
         }
         return $invalidProperties;
     }
@@ -246,29 +246,29 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets custom_text_for_label
+     * Gets customTextForLabel
      *
      * @return string|null
      */
     public function getCustomTextForLabel()
     {
-        return $this->container['custom_text_for_label'];
+        return $this->container['customTextForLabel'];
     }
 
     /**
-     * Sets custom_text_for_label
+     * Sets customTextForLabel
      *
-     * @param string|null $custom_text_for_label Custom text to print on the label.  Note: Custom text is only included on labels that are in ZPL format (ZPL203). FedEx does not support CustomTextForLabel.
+     * @param string|null $customTextForLabel Custom text to print on the label.  Note: Custom text is only included on labels that are in ZPL format (ZPL203). FedEx does not support CustomTextForLabel.
      *
      * @return self
      */
-    public function setCustomTextForLabel($custom_text_for_label)
+    public function setCustomTextForLabel($customTextForLabel)
     {
-        if (!is_null($custom_text_for_label) && (mb_strlen($custom_text_for_label) > 14)) {
-            throw new \InvalidArgumentException('invalid length for $custom_text_for_label when calling Label., must be smaller than or equal to 14.');
+        if (!is_null($customTextForLabel) && (mb_strlen($customTextForLabel) > 14)) {
+            throw new \InvalidArgumentException('invalid length for $customTextForLabel when calling Label., must be smaller than or equal to 14.');
         }
 
-        $this->container['custom_text_for_label'] = $custom_text_for_label;
+        $this->container['customTextForLabel'] = $customTextForLabel;
 
         return $this;
     }
@@ -298,73 +298,73 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets file_contents
+     * Gets fileContents
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileContents
      */
     public function getFileContents()
     {
-        return $this->container['file_contents'];
+        return $this->container['fileContents'];
     }
 
     /**
-     * Sets file_contents
+     * Sets fileContents
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileContents $file_contents file_contents
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileContents $fileContents fileContents
      *
      * @return self
      */
-    public function setFileContents($file_contents)
+    public function setFileContents($fileContents)
     {
-        $this->container['file_contents'] = $file_contents;
+        $this->container['fileContents'] = $fileContents;
 
         return $this;
     }
 
     /**
-     * Gets label_format
+     * Gets labelFormat
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null
      */
     public function getLabelFormat()
     {
-        return $this->container['label_format'];
+        return $this->container['labelFormat'];
     }
 
     /**
-     * Sets label_format
+     * Sets labelFormat
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $label_format label_format
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $labelFormat labelFormat
      *
      * @return self
      */
-    public function setLabelFormat($label_format)
+    public function setLabelFormat($labelFormat)
     {
-        $this->container['label_format'] = $label_format;
+        $this->container['labelFormat'] = $labelFormat;
 
         return $this;
     }
 
     /**
-     * Gets standard_id_for_label
+     * Gets standardIdForLabel
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null
      */
     public function getStandardIdForLabel()
     {
-        return $this->container['standard_id_for_label'];
+        return $this->container['standardIdForLabel'];
     }
 
     /**
-     * Sets standard_id_for_label
+     * Sets standardIdForLabel
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null $standard_id_for_label standard_id_for_label
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\StandardIdForLabel|null $standardIdForLabel standardIdForLabel
      *
      * @return self
      */
-    public function setStandardIdForLabel($standard_id_for_label)
+    public function setStandardIdForLabel($standardIdForLabel)
     {
-        $this->container['standard_id_for_label'] = $standard_id_for_label;
+        $this->container['standardIdForLabel'] = $standardIdForLabel;
 
         return $this;
     }

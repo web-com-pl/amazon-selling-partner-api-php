@@ -62,8 +62,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseLinks',
-        '_embedded' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseEmbedded',
+        'links' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseLinks',
+        'embedded' => '\Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseEmbedded',
         'errors' => '\Webcom\Amazon\Rest\MessagingApi\Model\Error[]'
     ];
 
@@ -75,8 +75,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        '_links' => null,
-        '_embedded' => null,
+        'links' => null,
+        'embedded' => null,
         'errors' => null
     ];
 
@@ -107,8 +107,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        '_links' => '_links',
-        '_embedded' => '_embedded',
+        'links' => '_links',
+        'embedded' => '_embedded',
         'errors' => 'errors'
     ];
 
@@ -118,8 +118,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        '_links' => 'setLinks',
-        '_embedded' => 'setEmbedded',
+        'links' => 'setLinks',
+        'embedded' => 'setEmbedded',
         'errors' => 'setErrors'
     ];
 
@@ -129,8 +129,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        '_links' => 'getLinks',
-        '_embedded' => 'getEmbedded',
+        'links' => 'getLinks',
+        'embedded' => 'getEmbedded',
         'errors' => 'getErrors'
     ];
 
@@ -194,8 +194,8 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['_links'] = $data['_links'] ?? null;
-        $this->container['_embedded'] = $data['_embedded'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
+        $this->container['embedded'] = $data['embedded'] ?? null;
         $this->container['errors'] = $data['errors'] ?? null;
     }
 
@@ -224,49 +224,49 @@ class GetMessagingActionsForOrderResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets _links
+     * Gets links
      *
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseLinks|null
      */
     public function getLinks()
     {
-        return $this->container['_links'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets _links
+     * Sets links
      *
-     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseLinks|null $_links _links
+     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseLinks|null $links links
      *
      * @return self
      */
-    public function setLinks($_links)
+    public function setLinks($links)
     {
-        $this->container['_links'] = $_links;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets _embedded
+     * Gets embedded
      *
      * @return \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseEmbedded|null
      */
     public function getEmbedded()
     {
-        return $this->container['_embedded'];
+        return $this->container['embedded'];
     }
 
     /**
-     * Sets _embedded
+     * Sets embedded
      *
-     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseEmbedded|null $_embedded _embedded
+     * @param \Webcom\Amazon\Rest\MessagingApi\Model\GetMessagingActionsForOrderResponseEmbedded|null $embedded embedded
      *
      * @return self
      */
-    public function setEmbedded($_embedded)
+    public function setEmbedded($embedded)
     {
-        $this->container['_embedded'] = $_embedded;
+        $this->container['embedded'] = $embedded;
 
         return $this;
     }

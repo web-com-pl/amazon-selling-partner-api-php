@@ -62,28 +62,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
-        'refund_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
-        'guarantee_claim_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
-        'chargeback_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
-        'pay_with_amazon_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\PayWithAmazonEvent[]',
-        'service_provider_credit_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\SolutionProviderCreditEvent[]',
-        'retrocharge_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\RetrochargeEvent[]',
-        'rental_transaction_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\RentalTransactionEvent[]',
-        'product_ads_payment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ProductAdsPaymentEvent[]',
-        'service_fee_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ServiceFeeEvent[]',
-        'seller_deal_payment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\SellerDealPaymentEvent[]',
-        'debt_recovery_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryEvent[]',
-        'loan_servicing_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\LoanServicingEvent[]',
-        'adjustment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentEvent[]',
-        'safet_reimbursement_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementEvent[]',
-        'seller_review_enrollment_payment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\SellerReviewEnrollmentPaymentEvent[]',
-        'fba_liquidation_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FBALiquidationEvent[]',
-        'coupon_payment_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\CouponPaymentEvent[]',
-        'imaging_services_fee_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ImagingServicesFeeEvent[]',
-        'network_commingling_transaction_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\NetworkComminglingTransactionEvent[]',
-        'affordability_expense_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]',
-        'affordability_expense_reversal_event_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]'
+        'shipmentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
+        'refundEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
+        'guaranteeClaimEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
+        'chargebackEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]',
+        'payWithAmazonEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\PayWithAmazonEvent[]',
+        'serviceProviderCreditEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\SolutionProviderCreditEvent[]',
+        'retrochargeEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\RetrochargeEvent[]',
+        'rentalTransactionEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\RentalTransactionEvent[]',
+        'productAdsPaymentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ProductAdsPaymentEvent[]',
+        'serviceFeeEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ServiceFeeEvent[]',
+        'sellerDealPaymentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\SellerDealPaymentEvent[]',
+        'debtRecoveryEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryEvent[]',
+        'loanServicingEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\LoanServicingEvent[]',
+        'adjustmentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentEvent[]',
+        'sAFETReimbursementEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementEvent[]',
+        'sellerReviewEnrollmentPaymentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\SellerReviewEnrollmentPaymentEvent[]',
+        'fBALiquidationEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FBALiquidationEvent[]',
+        'couponPaymentEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\CouponPaymentEvent[]',
+        'imagingServicesFeeEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ImagingServicesFeeEvent[]',
+        'networkComminglingTransactionEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\NetworkComminglingTransactionEvent[]',
+        'affordabilityExpenseEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]',
+        'affordabilityExpenseReversalEventList' => '\Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]'
     ];
 
     /**
@@ -94,28 +94,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_event_list' => null,
-        'refund_event_list' => null,
-        'guarantee_claim_event_list' => null,
-        'chargeback_event_list' => null,
-        'pay_with_amazon_event_list' => null,
-        'service_provider_credit_event_list' => null,
-        'retrocharge_event_list' => null,
-        'rental_transaction_event_list' => null,
-        'product_ads_payment_event_list' => null,
-        'service_fee_event_list' => null,
-        'seller_deal_payment_event_list' => null,
-        'debt_recovery_event_list' => null,
-        'loan_servicing_event_list' => null,
-        'adjustment_event_list' => null,
-        'safet_reimbursement_event_list' => null,
-        'seller_review_enrollment_payment_event_list' => null,
-        'fba_liquidation_event_list' => null,
-        'coupon_payment_event_list' => null,
-        'imaging_services_fee_event_list' => null,
-        'network_commingling_transaction_event_list' => null,
-        'affordability_expense_event_list' => null,
-        'affordability_expense_reversal_event_list' => null
+        'shipmentEventList' => null,
+        'refundEventList' => null,
+        'guaranteeClaimEventList' => null,
+        'chargebackEventList' => null,
+        'payWithAmazonEventList' => null,
+        'serviceProviderCreditEventList' => null,
+        'retrochargeEventList' => null,
+        'rentalTransactionEventList' => null,
+        'productAdsPaymentEventList' => null,
+        'serviceFeeEventList' => null,
+        'sellerDealPaymentEventList' => null,
+        'debtRecoveryEventList' => null,
+        'loanServicingEventList' => null,
+        'adjustmentEventList' => null,
+        'sAFETReimbursementEventList' => null,
+        'sellerReviewEnrollmentPaymentEventList' => null,
+        'fBALiquidationEventList' => null,
+        'couponPaymentEventList' => null,
+        'imagingServicesFeeEventList' => null,
+        'networkComminglingTransactionEventList' => null,
+        'affordabilityExpenseEventList' => null,
+        'affordabilityExpenseReversalEventList' => null
     ];
 
     /**
@@ -145,28 +145,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_event_list' => 'ShipmentEventList',
-        'refund_event_list' => 'RefundEventList',
-        'guarantee_claim_event_list' => 'GuaranteeClaimEventList',
-        'chargeback_event_list' => 'ChargebackEventList',
-        'pay_with_amazon_event_list' => 'PayWithAmazonEventList',
-        'service_provider_credit_event_list' => 'ServiceProviderCreditEventList',
-        'retrocharge_event_list' => 'RetrochargeEventList',
-        'rental_transaction_event_list' => 'RentalTransactionEventList',
-        'product_ads_payment_event_list' => 'ProductAdsPaymentEventList',
-        'service_fee_event_list' => 'ServiceFeeEventList',
-        'seller_deal_payment_event_list' => 'SellerDealPaymentEventList',
-        'debt_recovery_event_list' => 'DebtRecoveryEventList',
-        'loan_servicing_event_list' => 'LoanServicingEventList',
-        'adjustment_event_list' => 'AdjustmentEventList',
-        'safet_reimbursement_event_list' => 'SAFETReimbursementEventList',
-        'seller_review_enrollment_payment_event_list' => 'SellerReviewEnrollmentPaymentEventList',
-        'fba_liquidation_event_list' => 'FBALiquidationEventList',
-        'coupon_payment_event_list' => 'CouponPaymentEventList',
-        'imaging_services_fee_event_list' => 'ImagingServicesFeeEventList',
-        'network_commingling_transaction_event_list' => 'NetworkComminglingTransactionEventList',
-        'affordability_expense_event_list' => 'AffordabilityExpenseEventList',
-        'affordability_expense_reversal_event_list' => 'AffordabilityExpenseReversalEventList'
+        'shipmentEventList' => 'ShipmentEventList',
+        'refundEventList' => 'RefundEventList',
+        'guaranteeClaimEventList' => 'GuaranteeClaimEventList',
+        'chargebackEventList' => 'ChargebackEventList',
+        'payWithAmazonEventList' => 'PayWithAmazonEventList',
+        'serviceProviderCreditEventList' => 'ServiceProviderCreditEventList',
+        'retrochargeEventList' => 'RetrochargeEventList',
+        'rentalTransactionEventList' => 'RentalTransactionEventList',
+        'productAdsPaymentEventList' => 'ProductAdsPaymentEventList',
+        'serviceFeeEventList' => 'ServiceFeeEventList',
+        'sellerDealPaymentEventList' => 'SellerDealPaymentEventList',
+        'debtRecoveryEventList' => 'DebtRecoveryEventList',
+        'loanServicingEventList' => 'LoanServicingEventList',
+        'adjustmentEventList' => 'AdjustmentEventList',
+        'sAFETReimbursementEventList' => 'SAFETReimbursementEventList',
+        'sellerReviewEnrollmentPaymentEventList' => 'SellerReviewEnrollmentPaymentEventList',
+        'fBALiquidationEventList' => 'FBALiquidationEventList',
+        'couponPaymentEventList' => 'CouponPaymentEventList',
+        'imagingServicesFeeEventList' => 'ImagingServicesFeeEventList',
+        'networkComminglingTransactionEventList' => 'NetworkComminglingTransactionEventList',
+        'affordabilityExpenseEventList' => 'AffordabilityExpenseEventList',
+        'affordabilityExpenseReversalEventList' => 'AffordabilityExpenseReversalEventList'
     ];
 
     /**
@@ -175,28 +175,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'shipment_event_list' => 'setShipmentEventList',
-        'refund_event_list' => 'setRefundEventList',
-        'guarantee_claim_event_list' => 'setGuaranteeClaimEventList',
-        'chargeback_event_list' => 'setChargebackEventList',
-        'pay_with_amazon_event_list' => 'setPayWithAmazonEventList',
-        'service_provider_credit_event_list' => 'setServiceProviderCreditEventList',
-        'retrocharge_event_list' => 'setRetrochargeEventList',
-        'rental_transaction_event_list' => 'setRentalTransactionEventList',
-        'product_ads_payment_event_list' => 'setProductAdsPaymentEventList',
-        'service_fee_event_list' => 'setServiceFeeEventList',
-        'seller_deal_payment_event_list' => 'setSellerDealPaymentEventList',
-        'debt_recovery_event_list' => 'setDebtRecoveryEventList',
-        'loan_servicing_event_list' => 'setLoanServicingEventList',
-        'adjustment_event_list' => 'setAdjustmentEventList',
-        'safet_reimbursement_event_list' => 'setSafetReimbursementEventList',
-        'seller_review_enrollment_payment_event_list' => 'setSellerReviewEnrollmentPaymentEventList',
-        'fba_liquidation_event_list' => 'setFbaLiquidationEventList',
-        'coupon_payment_event_list' => 'setCouponPaymentEventList',
-        'imaging_services_fee_event_list' => 'setImagingServicesFeeEventList',
-        'network_commingling_transaction_event_list' => 'setNetworkComminglingTransactionEventList',
-        'affordability_expense_event_list' => 'setAffordabilityExpenseEventList',
-        'affordability_expense_reversal_event_list' => 'setAffordabilityExpenseReversalEventList'
+        'shipmentEventList' => 'setShipmentEventList',
+        'refundEventList' => 'setRefundEventList',
+        'guaranteeClaimEventList' => 'setGuaranteeClaimEventList',
+        'chargebackEventList' => 'setChargebackEventList',
+        'payWithAmazonEventList' => 'setPayWithAmazonEventList',
+        'serviceProviderCreditEventList' => 'setServiceProviderCreditEventList',
+        'retrochargeEventList' => 'setRetrochargeEventList',
+        'rentalTransactionEventList' => 'setRentalTransactionEventList',
+        'productAdsPaymentEventList' => 'setProductAdsPaymentEventList',
+        'serviceFeeEventList' => 'setServiceFeeEventList',
+        'sellerDealPaymentEventList' => 'setSellerDealPaymentEventList',
+        'debtRecoveryEventList' => 'setDebtRecoveryEventList',
+        'loanServicingEventList' => 'setLoanServicingEventList',
+        'adjustmentEventList' => 'setAdjustmentEventList',
+        'sAFETReimbursementEventList' => 'setSAFETReimbursementEventList',
+        'sellerReviewEnrollmentPaymentEventList' => 'setSellerReviewEnrollmentPaymentEventList',
+        'fBALiquidationEventList' => 'setFBALiquidationEventList',
+        'couponPaymentEventList' => 'setCouponPaymentEventList',
+        'imagingServicesFeeEventList' => 'setImagingServicesFeeEventList',
+        'networkComminglingTransactionEventList' => 'setNetworkComminglingTransactionEventList',
+        'affordabilityExpenseEventList' => 'setAffordabilityExpenseEventList',
+        'affordabilityExpenseReversalEventList' => 'setAffordabilityExpenseReversalEventList'
     ];
 
     /**
@@ -205,28 +205,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'shipment_event_list' => 'getShipmentEventList',
-        'refund_event_list' => 'getRefundEventList',
-        'guarantee_claim_event_list' => 'getGuaranteeClaimEventList',
-        'chargeback_event_list' => 'getChargebackEventList',
-        'pay_with_amazon_event_list' => 'getPayWithAmazonEventList',
-        'service_provider_credit_event_list' => 'getServiceProviderCreditEventList',
-        'retrocharge_event_list' => 'getRetrochargeEventList',
-        'rental_transaction_event_list' => 'getRentalTransactionEventList',
-        'product_ads_payment_event_list' => 'getProductAdsPaymentEventList',
-        'service_fee_event_list' => 'getServiceFeeEventList',
-        'seller_deal_payment_event_list' => 'getSellerDealPaymentEventList',
-        'debt_recovery_event_list' => 'getDebtRecoveryEventList',
-        'loan_servicing_event_list' => 'getLoanServicingEventList',
-        'adjustment_event_list' => 'getAdjustmentEventList',
-        'safet_reimbursement_event_list' => 'getSafetReimbursementEventList',
-        'seller_review_enrollment_payment_event_list' => 'getSellerReviewEnrollmentPaymentEventList',
-        'fba_liquidation_event_list' => 'getFbaLiquidationEventList',
-        'coupon_payment_event_list' => 'getCouponPaymentEventList',
-        'imaging_services_fee_event_list' => 'getImagingServicesFeeEventList',
-        'network_commingling_transaction_event_list' => 'getNetworkComminglingTransactionEventList',
-        'affordability_expense_event_list' => 'getAffordabilityExpenseEventList',
-        'affordability_expense_reversal_event_list' => 'getAffordabilityExpenseReversalEventList'
+        'shipmentEventList' => 'getShipmentEventList',
+        'refundEventList' => 'getRefundEventList',
+        'guaranteeClaimEventList' => 'getGuaranteeClaimEventList',
+        'chargebackEventList' => 'getChargebackEventList',
+        'payWithAmazonEventList' => 'getPayWithAmazonEventList',
+        'serviceProviderCreditEventList' => 'getServiceProviderCreditEventList',
+        'retrochargeEventList' => 'getRetrochargeEventList',
+        'rentalTransactionEventList' => 'getRentalTransactionEventList',
+        'productAdsPaymentEventList' => 'getProductAdsPaymentEventList',
+        'serviceFeeEventList' => 'getServiceFeeEventList',
+        'sellerDealPaymentEventList' => 'getSellerDealPaymentEventList',
+        'debtRecoveryEventList' => 'getDebtRecoveryEventList',
+        'loanServicingEventList' => 'getLoanServicingEventList',
+        'adjustmentEventList' => 'getAdjustmentEventList',
+        'sAFETReimbursementEventList' => 'getSAFETReimbursementEventList',
+        'sellerReviewEnrollmentPaymentEventList' => 'getSellerReviewEnrollmentPaymentEventList',
+        'fBALiquidationEventList' => 'getFBALiquidationEventList',
+        'couponPaymentEventList' => 'getCouponPaymentEventList',
+        'imagingServicesFeeEventList' => 'getImagingServicesFeeEventList',
+        'networkComminglingTransactionEventList' => 'getNetworkComminglingTransactionEventList',
+        'affordabilityExpenseEventList' => 'getAffordabilityExpenseEventList',
+        'affordabilityExpenseReversalEventList' => 'getAffordabilityExpenseReversalEventList'
     ];
 
     /**
@@ -289,28 +289,28 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_event_list'] = $data['shipment_event_list'] ?? null;
-        $this->container['refund_event_list'] = $data['refund_event_list'] ?? null;
-        $this->container['guarantee_claim_event_list'] = $data['guarantee_claim_event_list'] ?? null;
-        $this->container['chargeback_event_list'] = $data['chargeback_event_list'] ?? null;
-        $this->container['pay_with_amazon_event_list'] = $data['pay_with_amazon_event_list'] ?? null;
-        $this->container['service_provider_credit_event_list'] = $data['service_provider_credit_event_list'] ?? null;
-        $this->container['retrocharge_event_list'] = $data['retrocharge_event_list'] ?? null;
-        $this->container['rental_transaction_event_list'] = $data['rental_transaction_event_list'] ?? null;
-        $this->container['product_ads_payment_event_list'] = $data['product_ads_payment_event_list'] ?? null;
-        $this->container['service_fee_event_list'] = $data['service_fee_event_list'] ?? null;
-        $this->container['seller_deal_payment_event_list'] = $data['seller_deal_payment_event_list'] ?? null;
-        $this->container['debt_recovery_event_list'] = $data['debt_recovery_event_list'] ?? null;
-        $this->container['loan_servicing_event_list'] = $data['loan_servicing_event_list'] ?? null;
-        $this->container['adjustment_event_list'] = $data['adjustment_event_list'] ?? null;
-        $this->container['safet_reimbursement_event_list'] = $data['safet_reimbursement_event_list'] ?? null;
-        $this->container['seller_review_enrollment_payment_event_list'] = $data['seller_review_enrollment_payment_event_list'] ?? null;
-        $this->container['fba_liquidation_event_list'] = $data['fba_liquidation_event_list'] ?? null;
-        $this->container['coupon_payment_event_list'] = $data['coupon_payment_event_list'] ?? null;
-        $this->container['imaging_services_fee_event_list'] = $data['imaging_services_fee_event_list'] ?? null;
-        $this->container['network_commingling_transaction_event_list'] = $data['network_commingling_transaction_event_list'] ?? null;
-        $this->container['affordability_expense_event_list'] = $data['affordability_expense_event_list'] ?? null;
-        $this->container['affordability_expense_reversal_event_list'] = $data['affordability_expense_reversal_event_list'] ?? null;
+        $this->container['shipmentEventList'] = $data['shipmentEventList'] ?? null;
+        $this->container['refundEventList'] = $data['refundEventList'] ?? null;
+        $this->container['guaranteeClaimEventList'] = $data['guaranteeClaimEventList'] ?? null;
+        $this->container['chargebackEventList'] = $data['chargebackEventList'] ?? null;
+        $this->container['payWithAmazonEventList'] = $data['payWithAmazonEventList'] ?? null;
+        $this->container['serviceProviderCreditEventList'] = $data['serviceProviderCreditEventList'] ?? null;
+        $this->container['retrochargeEventList'] = $data['retrochargeEventList'] ?? null;
+        $this->container['rentalTransactionEventList'] = $data['rentalTransactionEventList'] ?? null;
+        $this->container['productAdsPaymentEventList'] = $data['productAdsPaymentEventList'] ?? null;
+        $this->container['serviceFeeEventList'] = $data['serviceFeeEventList'] ?? null;
+        $this->container['sellerDealPaymentEventList'] = $data['sellerDealPaymentEventList'] ?? null;
+        $this->container['debtRecoveryEventList'] = $data['debtRecoveryEventList'] ?? null;
+        $this->container['loanServicingEventList'] = $data['loanServicingEventList'] ?? null;
+        $this->container['adjustmentEventList'] = $data['adjustmentEventList'] ?? null;
+        $this->container['sAFETReimbursementEventList'] = $data['sAFETReimbursementEventList'] ?? null;
+        $this->container['sellerReviewEnrollmentPaymentEventList'] = $data['sellerReviewEnrollmentPaymentEventList'] ?? null;
+        $this->container['fBALiquidationEventList'] = $data['fBALiquidationEventList'] ?? null;
+        $this->container['couponPaymentEventList'] = $data['couponPaymentEventList'] ?? null;
+        $this->container['imagingServicesFeeEventList'] = $data['imagingServicesFeeEventList'] ?? null;
+        $this->container['networkComminglingTransactionEventList'] = $data['networkComminglingTransactionEventList'] ?? null;
+        $this->container['affordabilityExpenseEventList'] = $data['affordabilityExpenseEventList'] ?? null;
+        $this->container['affordabilityExpenseReversalEventList'] = $data['affordabilityExpenseReversalEventList'] ?? null;
     }
 
     /**
@@ -338,529 +338,529 @@ class FinancialEvents implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets shipment_event_list
+     * Gets shipmentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null
      */
     public function getShipmentEventList()
     {
-        return $this->container['shipment_event_list'];
+        return $this->container['shipmentEventList'];
     }
 
     /**
-     * Sets shipment_event_list
+     * Sets shipmentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $shipment_event_list A list of shipment event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $shipmentEventList A list of shipment event information.
      *
      * @return self
      */
-    public function setShipmentEventList($shipment_event_list)
+    public function setShipmentEventList($shipmentEventList)
     {
-        $this->container['shipment_event_list'] = $shipment_event_list;
+        $this->container['shipmentEventList'] = $shipmentEventList;
 
         return $this;
     }
 
     /**
-     * Gets refund_event_list
+     * Gets refundEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null
      */
     public function getRefundEventList()
     {
-        return $this->container['refund_event_list'];
+        return $this->container['refundEventList'];
     }
 
     /**
-     * Sets refund_event_list
+     * Sets refundEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $refund_event_list A list of shipment event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $refundEventList A list of shipment event information.
      *
      * @return self
      */
-    public function setRefundEventList($refund_event_list)
+    public function setRefundEventList($refundEventList)
     {
-        $this->container['refund_event_list'] = $refund_event_list;
+        $this->container['refundEventList'] = $refundEventList;
 
         return $this;
     }
 
     /**
-     * Gets guarantee_claim_event_list
+     * Gets guaranteeClaimEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null
      */
     public function getGuaranteeClaimEventList()
     {
-        return $this->container['guarantee_claim_event_list'];
+        return $this->container['guaranteeClaimEventList'];
     }
 
     /**
-     * Sets guarantee_claim_event_list
+     * Sets guaranteeClaimEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $guarantee_claim_event_list A list of shipment event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $guaranteeClaimEventList A list of shipment event information.
      *
      * @return self
      */
-    public function setGuaranteeClaimEventList($guarantee_claim_event_list)
+    public function setGuaranteeClaimEventList($guaranteeClaimEventList)
     {
-        $this->container['guarantee_claim_event_list'] = $guarantee_claim_event_list;
+        $this->container['guaranteeClaimEventList'] = $guaranteeClaimEventList;
 
         return $this;
     }
 
     /**
-     * Gets chargeback_event_list
+     * Gets chargebackEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null
      */
     public function getChargebackEventList()
     {
-        return $this->container['chargeback_event_list'];
+        return $this->container['chargebackEventList'];
     }
 
     /**
-     * Sets chargeback_event_list
+     * Sets chargebackEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $chargeback_event_list A list of shipment event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ShipmentEvent[]|null $chargebackEventList A list of shipment event information.
      *
      * @return self
      */
-    public function setChargebackEventList($chargeback_event_list)
+    public function setChargebackEventList($chargebackEventList)
     {
-        $this->container['chargeback_event_list'] = $chargeback_event_list;
+        $this->container['chargebackEventList'] = $chargebackEventList;
 
         return $this;
     }
 
     /**
-     * Gets pay_with_amazon_event_list
+     * Gets payWithAmazonEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\PayWithAmazonEvent[]|null
      */
     public function getPayWithAmazonEventList()
     {
-        return $this->container['pay_with_amazon_event_list'];
+        return $this->container['payWithAmazonEventList'];
     }
 
     /**
-     * Sets pay_with_amazon_event_list
+     * Sets payWithAmazonEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\PayWithAmazonEvent[]|null $pay_with_amazon_event_list A list of events related to the seller's Pay with Amazon account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\PayWithAmazonEvent[]|null $payWithAmazonEventList A list of events related to the seller's Pay with Amazon account.
      *
      * @return self
      */
-    public function setPayWithAmazonEventList($pay_with_amazon_event_list)
+    public function setPayWithAmazonEventList($payWithAmazonEventList)
     {
-        $this->container['pay_with_amazon_event_list'] = $pay_with_amazon_event_list;
+        $this->container['payWithAmazonEventList'] = $payWithAmazonEventList;
 
         return $this;
     }
 
     /**
-     * Gets service_provider_credit_event_list
+     * Gets serviceProviderCreditEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\SolutionProviderCreditEvent[]|null
      */
     public function getServiceProviderCreditEventList()
     {
-        return $this->container['service_provider_credit_event_list'];
+        return $this->container['serviceProviderCreditEventList'];
     }
 
     /**
-     * Sets service_provider_credit_event_list
+     * Sets serviceProviderCreditEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SolutionProviderCreditEvent[]|null $service_provider_credit_event_list A list of information about solution provider credits.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SolutionProviderCreditEvent[]|null $serviceProviderCreditEventList A list of information about solution provider credits.
      *
      * @return self
      */
-    public function setServiceProviderCreditEventList($service_provider_credit_event_list)
+    public function setServiceProviderCreditEventList($serviceProviderCreditEventList)
     {
-        $this->container['service_provider_credit_event_list'] = $service_provider_credit_event_list;
+        $this->container['serviceProviderCreditEventList'] = $serviceProviderCreditEventList;
 
         return $this;
     }
 
     /**
-     * Gets retrocharge_event_list
+     * Gets retrochargeEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\RetrochargeEvent[]|null
      */
     public function getRetrochargeEventList()
     {
-        return $this->container['retrocharge_event_list'];
+        return $this->container['retrochargeEventList'];
     }
 
     /**
-     * Sets retrocharge_event_list
+     * Sets retrochargeEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RetrochargeEvent[]|null $retrocharge_event_list A list of information about Retrocharge or RetrochargeReversal events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RetrochargeEvent[]|null $retrochargeEventList A list of information about Retrocharge or RetrochargeReversal events.
      *
      * @return self
      */
-    public function setRetrochargeEventList($retrocharge_event_list)
+    public function setRetrochargeEventList($retrochargeEventList)
     {
-        $this->container['retrocharge_event_list'] = $retrocharge_event_list;
+        $this->container['retrochargeEventList'] = $retrochargeEventList;
 
         return $this;
     }
 
     /**
-     * Gets rental_transaction_event_list
+     * Gets rentalTransactionEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\RentalTransactionEvent[]|null
      */
     public function getRentalTransactionEventList()
     {
-        return $this->container['rental_transaction_event_list'];
+        return $this->container['rentalTransactionEventList'];
     }
 
     /**
-     * Sets rental_transaction_event_list
+     * Sets rentalTransactionEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RentalTransactionEvent[]|null $rental_transaction_event_list A list of rental transaction event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\RentalTransactionEvent[]|null $rentalTransactionEventList A list of rental transaction event information.
      *
      * @return self
      */
-    public function setRentalTransactionEventList($rental_transaction_event_list)
+    public function setRentalTransactionEventList($rentalTransactionEventList)
     {
-        $this->container['rental_transaction_event_list'] = $rental_transaction_event_list;
+        $this->container['rentalTransactionEventList'] = $rentalTransactionEventList;
 
         return $this;
     }
 
     /**
-     * Gets product_ads_payment_event_list
+     * Gets productAdsPaymentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ProductAdsPaymentEvent[]|null
      */
     public function getProductAdsPaymentEventList()
     {
-        return $this->container['product_ads_payment_event_list'];
+        return $this->container['productAdsPaymentEventList'];
     }
 
     /**
-     * Sets product_ads_payment_event_list
+     * Sets productAdsPaymentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ProductAdsPaymentEvent[]|null $product_ads_payment_event_list A list of sponsored products payment events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ProductAdsPaymentEvent[]|null $productAdsPaymentEventList A list of sponsored products payment events.
      *
      * @return self
      */
-    public function setProductAdsPaymentEventList($product_ads_payment_event_list)
+    public function setProductAdsPaymentEventList($productAdsPaymentEventList)
     {
-        $this->container['product_ads_payment_event_list'] = $product_ads_payment_event_list;
+        $this->container['productAdsPaymentEventList'] = $productAdsPaymentEventList;
 
         return $this;
     }
 
     /**
-     * Gets service_fee_event_list
+     * Gets serviceFeeEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ServiceFeeEvent[]|null
      */
     public function getServiceFeeEventList()
     {
-        return $this->container['service_fee_event_list'];
+        return $this->container['serviceFeeEventList'];
     }
 
     /**
-     * Sets service_fee_event_list
+     * Sets serviceFeeEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ServiceFeeEvent[]|null $service_fee_event_list A list of information about service fee events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ServiceFeeEvent[]|null $serviceFeeEventList A list of information about service fee events.
      *
      * @return self
      */
-    public function setServiceFeeEventList($service_fee_event_list)
+    public function setServiceFeeEventList($serviceFeeEventList)
     {
-        $this->container['service_fee_event_list'] = $service_fee_event_list;
+        $this->container['serviceFeeEventList'] = $serviceFeeEventList;
 
         return $this;
     }
 
     /**
-     * Gets seller_deal_payment_event_list
+     * Gets sellerDealPaymentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\SellerDealPaymentEvent[]|null
      */
     public function getSellerDealPaymentEventList()
     {
-        return $this->container['seller_deal_payment_event_list'];
+        return $this->container['sellerDealPaymentEventList'];
     }
 
     /**
-     * Sets seller_deal_payment_event_list
+     * Sets sellerDealPaymentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SellerDealPaymentEvent[]|null $seller_deal_payment_event_list A list of payment events for deal-related fees.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SellerDealPaymentEvent[]|null $sellerDealPaymentEventList A list of payment events for deal-related fees.
      *
      * @return self
      */
-    public function setSellerDealPaymentEventList($seller_deal_payment_event_list)
+    public function setSellerDealPaymentEventList($sellerDealPaymentEventList)
     {
-        $this->container['seller_deal_payment_event_list'] = $seller_deal_payment_event_list;
+        $this->container['sellerDealPaymentEventList'] = $sellerDealPaymentEventList;
 
         return $this;
     }
 
     /**
-     * Gets debt_recovery_event_list
+     * Gets debtRecoveryEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryEvent[]|null
      */
     public function getDebtRecoveryEventList()
     {
-        return $this->container['debt_recovery_event_list'];
+        return $this->container['debtRecoveryEventList'];
     }
 
     /**
-     * Sets debt_recovery_event_list
+     * Sets debtRecoveryEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryEvent[]|null $debt_recovery_event_list A list of debt recovery event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryEvent[]|null $debtRecoveryEventList A list of debt recovery event information.
      *
      * @return self
      */
-    public function setDebtRecoveryEventList($debt_recovery_event_list)
+    public function setDebtRecoveryEventList($debtRecoveryEventList)
     {
-        $this->container['debt_recovery_event_list'] = $debt_recovery_event_list;
+        $this->container['debtRecoveryEventList'] = $debtRecoveryEventList;
 
         return $this;
     }
 
     /**
-     * Gets loan_servicing_event_list
+     * Gets loanServicingEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\LoanServicingEvent[]|null
      */
     public function getLoanServicingEventList()
     {
-        return $this->container['loan_servicing_event_list'];
+        return $this->container['loanServicingEventList'];
     }
 
     /**
-     * Sets loan_servicing_event_list
+     * Sets loanServicingEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\LoanServicingEvent[]|null $loan_servicing_event_list A list of loan servicing events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\LoanServicingEvent[]|null $loanServicingEventList A list of loan servicing events.
      *
      * @return self
      */
-    public function setLoanServicingEventList($loan_servicing_event_list)
+    public function setLoanServicingEventList($loanServicingEventList)
     {
-        $this->container['loan_servicing_event_list'] = $loan_servicing_event_list;
+        $this->container['loanServicingEventList'] = $loanServicingEventList;
 
         return $this;
     }
 
     /**
-     * Gets adjustment_event_list
+     * Gets adjustmentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentEvent[]|null
      */
     public function getAdjustmentEventList()
     {
-        return $this->container['adjustment_event_list'];
+        return $this->container['adjustmentEventList'];
     }
 
     /**
-     * Sets adjustment_event_list
+     * Sets adjustmentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentEvent[]|null $adjustment_event_list A list of adjustment event information for the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AdjustmentEvent[]|null $adjustmentEventList A list of adjustment event information for the seller's account.
      *
      * @return self
      */
-    public function setAdjustmentEventList($adjustment_event_list)
+    public function setAdjustmentEventList($adjustmentEventList)
     {
-        $this->container['adjustment_event_list'] = $adjustment_event_list;
+        $this->container['adjustmentEventList'] = $adjustmentEventList;
 
         return $this;
     }
 
     /**
-     * Gets safet_reimbursement_event_list
+     * Gets sAFETReimbursementEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementEvent[]|null
      */
-    public function getSafetReimbursementEventList()
+    public function getSAFETReimbursementEventList()
     {
-        return $this->container['safet_reimbursement_event_list'];
+        return $this->container['sAFETReimbursementEventList'];
     }
 
     /**
-     * Sets safet_reimbursement_event_list
+     * Sets sAFETReimbursementEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementEvent[]|null $safet_reimbursement_event_list A list of SAFETReimbursementEvents.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SAFETReimbursementEvent[]|null $sAFETReimbursementEventList A list of SAFETReimbursementEvents.
      *
      * @return self
      */
-    public function setSafetReimbursementEventList($safet_reimbursement_event_list)
+    public function setSAFETReimbursementEventList($sAFETReimbursementEventList)
     {
-        $this->container['safet_reimbursement_event_list'] = $safet_reimbursement_event_list;
+        $this->container['sAFETReimbursementEventList'] = $sAFETReimbursementEventList;
 
         return $this;
     }
 
     /**
-     * Gets seller_review_enrollment_payment_event_list
+     * Gets sellerReviewEnrollmentPaymentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\SellerReviewEnrollmentPaymentEvent[]|null
      */
     public function getSellerReviewEnrollmentPaymentEventList()
     {
-        return $this->container['seller_review_enrollment_payment_event_list'];
+        return $this->container['sellerReviewEnrollmentPaymentEventList'];
     }
 
     /**
-     * Sets seller_review_enrollment_payment_event_list
+     * Sets sellerReviewEnrollmentPaymentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SellerReviewEnrollmentPaymentEvent[]|null $seller_review_enrollment_payment_event_list A list of information about fee events for the Early Reviewer Program.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\SellerReviewEnrollmentPaymentEvent[]|null $sellerReviewEnrollmentPaymentEventList A list of information about fee events for the Early Reviewer Program.
      *
      * @return self
      */
-    public function setSellerReviewEnrollmentPaymentEventList($seller_review_enrollment_payment_event_list)
+    public function setSellerReviewEnrollmentPaymentEventList($sellerReviewEnrollmentPaymentEventList)
     {
-        $this->container['seller_review_enrollment_payment_event_list'] = $seller_review_enrollment_payment_event_list;
+        $this->container['sellerReviewEnrollmentPaymentEventList'] = $sellerReviewEnrollmentPaymentEventList;
 
         return $this;
     }
 
     /**
-     * Gets fba_liquidation_event_list
+     * Gets fBALiquidationEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FBALiquidationEvent[]|null
      */
-    public function getFbaLiquidationEventList()
+    public function getFBALiquidationEventList()
     {
-        return $this->container['fba_liquidation_event_list'];
+        return $this->container['fBALiquidationEventList'];
     }
 
     /**
-     * Sets fba_liquidation_event_list
+     * Sets fBALiquidationEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FBALiquidationEvent[]|null $fba_liquidation_event_list A list of FBA inventory liquidation payment events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FBALiquidationEvent[]|null $fBALiquidationEventList A list of FBA inventory liquidation payment events.
      *
      * @return self
      */
-    public function setFbaLiquidationEventList($fba_liquidation_event_list)
+    public function setFBALiquidationEventList($fBALiquidationEventList)
     {
-        $this->container['fba_liquidation_event_list'] = $fba_liquidation_event_list;
+        $this->container['fBALiquidationEventList'] = $fBALiquidationEventList;
 
         return $this;
     }
 
     /**
-     * Gets coupon_payment_event_list
+     * Gets couponPaymentEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\CouponPaymentEvent[]|null
      */
     public function getCouponPaymentEventList()
     {
-        return $this->container['coupon_payment_event_list'];
+        return $this->container['couponPaymentEventList'];
     }
 
     /**
-     * Sets coupon_payment_event_list
+     * Sets couponPaymentEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\CouponPaymentEvent[]|null $coupon_payment_event_list A list of coupon payment event information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\CouponPaymentEvent[]|null $couponPaymentEventList A list of coupon payment event information.
      *
      * @return self
      */
-    public function setCouponPaymentEventList($coupon_payment_event_list)
+    public function setCouponPaymentEventList($couponPaymentEventList)
     {
-        $this->container['coupon_payment_event_list'] = $coupon_payment_event_list;
+        $this->container['couponPaymentEventList'] = $couponPaymentEventList;
 
         return $this;
     }
 
     /**
-     * Gets imaging_services_fee_event_list
+     * Gets imagingServicesFeeEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ImagingServicesFeeEvent[]|null
      */
     public function getImagingServicesFeeEventList()
     {
-        return $this->container['imaging_services_fee_event_list'];
+        return $this->container['imagingServicesFeeEventList'];
     }
 
     /**
-     * Sets imaging_services_fee_event_list
+     * Sets imagingServicesFeeEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ImagingServicesFeeEvent[]|null $imaging_services_fee_event_list A list of fee events related to Amazon Imaging services.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ImagingServicesFeeEvent[]|null $imagingServicesFeeEventList A list of fee events related to Amazon Imaging services.
      *
      * @return self
      */
-    public function setImagingServicesFeeEventList($imaging_services_fee_event_list)
+    public function setImagingServicesFeeEventList($imagingServicesFeeEventList)
     {
-        $this->container['imaging_services_fee_event_list'] = $imaging_services_fee_event_list;
+        $this->container['imagingServicesFeeEventList'] = $imagingServicesFeeEventList;
 
         return $this;
     }
 
     /**
-     * Gets network_commingling_transaction_event_list
+     * Gets networkComminglingTransactionEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\NetworkComminglingTransactionEvent[]|null
      */
     public function getNetworkComminglingTransactionEventList()
     {
-        return $this->container['network_commingling_transaction_event_list'];
+        return $this->container['networkComminglingTransactionEventList'];
     }
 
     /**
-     * Sets network_commingling_transaction_event_list
+     * Sets networkComminglingTransactionEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\NetworkComminglingTransactionEvent[]|null $network_commingling_transaction_event_list A list of network commingling transaction events.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\NetworkComminglingTransactionEvent[]|null $networkComminglingTransactionEventList A list of network commingling transaction events.
      *
      * @return self
      */
-    public function setNetworkComminglingTransactionEventList($network_commingling_transaction_event_list)
+    public function setNetworkComminglingTransactionEventList($networkComminglingTransactionEventList)
     {
-        $this->container['network_commingling_transaction_event_list'] = $network_commingling_transaction_event_list;
+        $this->container['networkComminglingTransactionEventList'] = $networkComminglingTransactionEventList;
 
         return $this;
     }
 
     /**
-     * Gets affordability_expense_event_list
+     * Gets affordabilityExpenseEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null
      */
     public function getAffordabilityExpenseEventList()
     {
-        return $this->container['affordability_expense_event_list'];
+        return $this->container['affordabilityExpenseEventList'];
     }
 
     /**
-     * Sets affordability_expense_event_list
+     * Sets affordabilityExpenseEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null $affordability_expense_event_list A list of expense information related to an affordability promotion.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null $affordabilityExpenseEventList A list of expense information related to an affordability promotion.
      *
      * @return self
      */
-    public function setAffordabilityExpenseEventList($affordability_expense_event_list)
+    public function setAffordabilityExpenseEventList($affordabilityExpenseEventList)
     {
-        $this->container['affordability_expense_event_list'] = $affordability_expense_event_list;
+        $this->container['affordabilityExpenseEventList'] = $affordabilityExpenseEventList;
 
         return $this;
     }
 
     /**
-     * Gets affordability_expense_reversal_event_list
+     * Gets affordabilityExpenseReversalEventList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null
      */
     public function getAffordabilityExpenseReversalEventList()
     {
-        return $this->container['affordability_expense_reversal_event_list'];
+        return $this->container['affordabilityExpenseReversalEventList'];
     }
 
     /**
-     * Sets affordability_expense_reversal_event_list
+     * Sets affordabilityExpenseReversalEventList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null $affordability_expense_reversal_event_list A list of expense information related to an affordability promotion.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\AffordabilityExpenseEvent[]|null $affordabilityExpenseReversalEventList A list of expense information related to an affordability promotion.
      *
      * @return self
      */
-    public function setAffordabilityExpenseReversalEventList($affordability_expense_reversal_event_list)
+    public function setAffordabilityExpenseReversalEventList($affordabilityExpenseReversalEventList)
     {
-        $this->container['affordability_expense_reversal_event_list'] = $affordability_expense_reversal_event_list;
+        $this->container['affordabilityExpenseReversalEventList'] = $affordabilityExpenseReversalEventList;
 
         return $this;
     }

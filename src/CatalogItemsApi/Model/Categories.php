@@ -61,8 +61,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product_category_id' => 'string',
-        'product_category_name' => 'string',
+        'productCategoryId' => 'string',
+        'productCategoryName' => 'string',
         'parent' => 'object'
     ];
 
@@ -74,8 +74,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'product_category_id' => null,
-        'product_category_name' => null,
+        'productCategoryId' => null,
+        'productCategoryName' => null,
         'parent' => null
     ];
 
@@ -106,8 +106,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_category_id' => 'ProductCategoryId',
-        'product_category_name' => 'ProductCategoryName',
+        'productCategoryId' => 'ProductCategoryId',
+        'productCategoryName' => 'ProductCategoryName',
         'parent' => 'parent'
     ];
 
@@ -117,8 +117,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'product_category_id' => 'setProductCategoryId',
-        'product_category_name' => 'setProductCategoryName',
+        'productCategoryId' => 'setProductCategoryId',
+        'productCategoryName' => 'setProductCategoryName',
         'parent' => 'setParent'
     ];
 
@@ -128,8 +128,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'product_category_id' => 'getProductCategoryId',
-        'product_category_name' => 'getProductCategoryName',
+        'productCategoryId' => 'getProductCategoryId',
+        'productCategoryName' => 'getProductCategoryName',
         'parent' => 'getParent'
     ];
 
@@ -193,8 +193,8 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_category_id'] = $data['product_category_id'] ?? null;
-        $this->container['product_category_name'] = $data['product_category_name'] ?? null;
+        $this->container['productCategoryId'] = $data['productCategoryId'] ?? null;
+        $this->container['productCategoryName'] = $data['productCategoryName'] ?? null;
         $this->container['parent'] = $data['parent'] ?? null;
     }
 
@@ -223,49 +223,49 @@ class Categories implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets product_category_id
+     * Gets productCategoryId
      *
      * @return string|null
      */
     public function getProductCategoryId()
     {
-        return $this->container['product_category_id'];
+        return $this->container['productCategoryId'];
     }
 
     /**
-     * Sets product_category_id
+     * Sets productCategoryId
      *
-     * @param string|null $product_category_id The identifier for the product category (or browse node).
+     * @param string|null $productCategoryId The identifier for the product category (or browse node).
      *
      * @return self
      */
-    public function setProductCategoryId($product_category_id)
+    public function setProductCategoryId($productCategoryId)
     {
-        $this->container['product_category_id'] = $product_category_id;
+        $this->container['productCategoryId'] = $productCategoryId;
 
         return $this;
     }
 
     /**
-     * Gets product_category_name
+     * Gets productCategoryName
      *
      * @return string|null
      */
     public function getProductCategoryName()
     {
-        return $this->container['product_category_name'];
+        return $this->container['productCategoryName'];
     }
 
     /**
-     * Sets product_category_name
+     * Sets productCategoryName
      *
-     * @param string|null $product_category_name The name of the product category (or browse node).
+     * @param string|null $productCategoryName The name of the product category (or browse node).
      *
      * @return self
      */
-    public function setProductCategoryName($product_category_name)
+    public function setProductCategoryName($productCategoryName)
     {
-        $this->container['product_category_name'] = $product_category_name;
+        $this->container['productCategoryName'] = $productCategoryName;
 
         return $this;
     }

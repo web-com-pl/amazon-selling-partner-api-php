@@ -62,8 +62,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'delivery_window' => '\Webcom\Amazon\Rest\ShippingApi\Model\TimeRange',
-        'receive_window' => '\Webcom\Amazon\Rest\ShippingApi\Model\TimeRange'
+        'deliveryWindow' => '\Webcom\Amazon\Rest\ShippingApi\Model\TimeRange',
+        'receiveWindow' => '\Webcom\Amazon\Rest\ShippingApi\Model\TimeRange'
     ];
 
     /**
@@ -74,8 +74,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'delivery_window' => null,
-        'receive_window' => null
+        'deliveryWindow' => null,
+        'receiveWindow' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_window' => 'deliveryWindow',
-        'receive_window' => 'receiveWindow'
+        'deliveryWindow' => 'deliveryWindow',
+        'receiveWindow' => 'receiveWindow'
     ];
 
     /**
@@ -115,8 +115,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'delivery_window' => 'setDeliveryWindow',
-        'receive_window' => 'setReceiveWindow'
+        'deliveryWindow' => 'setDeliveryWindow',
+        'receiveWindow' => 'setReceiveWindow'
     ];
 
     /**
@@ -125,8 +125,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'delivery_window' => 'getDeliveryWindow',
-        'receive_window' => 'getReceiveWindow'
+        'deliveryWindow' => 'getDeliveryWindow',
+        'receiveWindow' => 'getReceiveWindow'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_window'] = $data['delivery_window'] ?? null;
-        $this->container['receive_window'] = $data['receive_window'] ?? null;
+        $this->container['deliveryWindow'] = $data['deliveryWindow'] ?? null;
+        $this->container['receiveWindow'] = $data['receiveWindow'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class ShippingPromiseSet implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets delivery_window
+     * Gets deliveryWindow
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null
      */
     public function getDeliveryWindow()
     {
-        return $this->container['delivery_window'];
+        return $this->container['deliveryWindow'];
     }
 
     /**
-     * Sets delivery_window
+     * Sets deliveryWindow
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null $delivery_window delivery_window
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null $deliveryWindow deliveryWindow
      *
      * @return self
      */
-    public function setDeliveryWindow($delivery_window)
+    public function setDeliveryWindow($deliveryWindow)
     {
-        $this->container['delivery_window'] = $delivery_window;
+        $this->container['deliveryWindow'] = $deliveryWindow;
 
         return $this;
     }
 
     /**
-     * Gets receive_window
+     * Gets receiveWindow
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null
      */
     public function getReceiveWindow()
     {
-        return $this->container['receive_window'];
+        return $this->container['receiveWindow'];
     }
 
     /**
-     * Sets receive_window
+     * Sets receiveWindow
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null $receive_window receive_window
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\TimeRange|null $receiveWindow receiveWindow
      *
      * @return self
      */
-    public function setReceiveWindow($receive_window)
+    public function setReceiveWindow($receiveWindow)
     {
-        $this->container['receive_window'] = $receive_window;
+        $this->container['receiveWindow'] = $receiveWindow;
 
         return $this;
     }

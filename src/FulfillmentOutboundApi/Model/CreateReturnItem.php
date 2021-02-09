@@ -62,11 +62,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_return_item_id' => 'string',
-        'seller_fulfillment_order_item_id' => 'string',
-        'amazon_shipment_id' => 'string',
-        'return_reason_code' => 'string',
-        'return_comment' => 'string'
+        'sellerReturnItemId' => 'string',
+        'sellerFulfillmentOrderItemId' => 'string',
+        'amazonShipmentId' => 'string',
+        'returnReasonCode' => 'string',
+        'returnComment' => 'string'
     ];
 
     /**
@@ -77,11 +77,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_return_item_id' => null,
-        'seller_fulfillment_order_item_id' => null,
-        'amazon_shipment_id' => null,
-        'return_reason_code' => null,
-        'return_comment' => null
+        'sellerReturnItemId' => null,
+        'sellerFulfillmentOrderItemId' => null,
+        'amazonShipmentId' => null,
+        'returnReasonCode' => null,
+        'returnComment' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_return_item_id' => 'sellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'sellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'amazonShipmentId',
-        'return_reason_code' => 'returnReasonCode',
-        'return_comment' => 'returnComment'
+        'sellerReturnItemId' => 'sellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'sellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'amazonShipmentId',
+        'returnReasonCode' => 'returnReasonCode',
+        'returnComment' => 'returnComment'
     ];
 
     /**
@@ -124,11 +124,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_return_item_id' => 'setSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'setSellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'setAmazonShipmentId',
-        'return_reason_code' => 'setReturnReasonCode',
-        'return_comment' => 'setReturnComment'
+        'sellerReturnItemId' => 'setSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'setSellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'setAmazonShipmentId',
+        'returnReasonCode' => 'setReturnReasonCode',
+        'returnComment' => 'setReturnComment'
     ];
 
     /**
@@ -137,11 +137,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_return_item_id' => 'getSellerReturnItemId',
-        'seller_fulfillment_order_item_id' => 'getSellerFulfillmentOrderItemId',
-        'amazon_shipment_id' => 'getAmazonShipmentId',
-        'return_reason_code' => 'getReturnReasonCode',
-        'return_comment' => 'getReturnComment'
+        'sellerReturnItemId' => 'getSellerReturnItemId',
+        'sellerFulfillmentOrderItemId' => 'getSellerFulfillmentOrderItemId',
+        'amazonShipmentId' => 'getAmazonShipmentId',
+        'returnReasonCode' => 'getReturnReasonCode',
+        'returnComment' => 'getReturnComment'
     ];
 
     /**
@@ -204,11 +204,11 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_return_item_id'] = $data['seller_return_item_id'] ?? null;
-        $this->container['seller_fulfillment_order_item_id'] = $data['seller_fulfillment_order_item_id'] ?? null;
-        $this->container['amazon_shipment_id'] = $data['amazon_shipment_id'] ?? null;
-        $this->container['return_reason_code'] = $data['return_reason_code'] ?? null;
-        $this->container['return_comment'] = $data['return_comment'] ?? null;
+        $this->container['sellerReturnItemId'] = $data['sellerReturnItemId'] ?? null;
+        $this->container['sellerFulfillmentOrderItemId'] = $data['sellerFulfillmentOrderItemId'] ?? null;
+        $this->container['amazonShipmentId'] = $data['amazonShipmentId'] ?? null;
+        $this->container['returnReasonCode'] = $data['returnReasonCode'] ?? null;
+        $this->container['returnComment'] = $data['returnComment'] ?? null;
     }
 
     /**
@@ -220,24 +220,24 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['seller_return_item_id'] === null) {
-            $invalidProperties[] = "'seller_return_item_id' can't be null";
+        if ($this->container['sellerReturnItemId'] === null) {
+            $invalidProperties[] = "'sellerReturnItemId' can't be null";
         }
-        if ((mb_strlen($this->container['seller_return_item_id']) > 80)) {
-            $invalidProperties[] = "invalid value for 'seller_return_item_id', the character length must be smaller than or equal to 80.";
+        if ((mb_strlen($this->container['sellerReturnItemId']) > 80)) {
+            $invalidProperties[] = "invalid value for 'sellerReturnItemId', the character length must be smaller than or equal to 80.";
         }
 
-        if ($this->container['seller_fulfillment_order_item_id'] === null) {
-            $invalidProperties[] = "'seller_fulfillment_order_item_id' can't be null";
+        if ($this->container['sellerFulfillmentOrderItemId'] === null) {
+            $invalidProperties[] = "'sellerFulfillmentOrderItemId' can't be null";
         }
-        if ($this->container['amazon_shipment_id'] === null) {
-            $invalidProperties[] = "'amazon_shipment_id' can't be null";
+        if ($this->container['amazonShipmentId'] === null) {
+            $invalidProperties[] = "'amazonShipmentId' can't be null";
         }
-        if ($this->container['return_reason_code'] === null) {
-            $invalidProperties[] = "'return_reason_code' can't be null";
+        if ($this->container['returnReasonCode'] === null) {
+            $invalidProperties[] = "'returnReasonCode' can't be null";
         }
-        if (!is_null($this->container['return_comment']) && (mb_strlen($this->container['return_comment']) > 1000)) {
-            $invalidProperties[] = "invalid value for 'return_comment', the character length must be smaller than or equal to 1000.";
+        if (!is_null($this->container['returnComment']) && (mb_strlen($this->container['returnComment']) > 1000)) {
+            $invalidProperties[] = "invalid value for 'returnComment', the character length must be smaller than or equal to 1000.";
         }
 
         return $invalidProperties;
@@ -256,129 +256,129 @@ class CreateReturnItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_return_item_id
+     * Gets sellerReturnItemId
      *
      * @return string
      */
     public function getSellerReturnItemId()
     {
-        return $this->container['seller_return_item_id'];
+        return $this->container['sellerReturnItemId'];
     }
 
     /**
-     * Sets seller_return_item_id
+     * Sets sellerReturnItemId
      *
-     * @param string $seller_return_item_id An identifier assigned by the seller to the return item.
+     * @param string $sellerReturnItemId An identifier assigned by the seller to the return item.
      *
      * @return self
      */
-    public function setSellerReturnItemId($seller_return_item_id)
+    public function setSellerReturnItemId($sellerReturnItemId)
     {
-        if ((mb_strlen($seller_return_item_id) > 80)) {
-            throw new \InvalidArgumentException('invalid length for $seller_return_item_id when calling CreateReturnItem., must be smaller than or equal to 80.');
+        if ((mb_strlen($sellerReturnItemId) > 80)) {
+            throw new \InvalidArgumentException('invalid length for $sellerReturnItemId when calling CreateReturnItem., must be smaller than or equal to 80.');
         }
 
-        $this->container['seller_return_item_id'] = $seller_return_item_id;
+        $this->container['sellerReturnItemId'] = $sellerReturnItemId;
 
         return $this;
     }
 
     /**
-     * Gets seller_fulfillment_order_item_id
+     * Gets sellerFulfillmentOrderItemId
      *
      * @return string
      */
     public function getSellerFulfillmentOrderItemId()
     {
-        return $this->container['seller_fulfillment_order_item_id'];
+        return $this->container['sellerFulfillmentOrderItemId'];
     }
 
     /**
-     * Sets seller_fulfillment_order_item_id
+     * Sets sellerFulfillmentOrderItemId
      *
-     * @param string $seller_fulfillment_order_item_id The identifier assigned to the item by the seller when the fulfillment order was created.
+     * @param string $sellerFulfillmentOrderItemId The identifier assigned to the item by the seller when the fulfillment order was created.
      *
      * @return self
      */
-    public function setSellerFulfillmentOrderItemId($seller_fulfillment_order_item_id)
+    public function setSellerFulfillmentOrderItemId($sellerFulfillmentOrderItemId)
     {
-        $this->container['seller_fulfillment_order_item_id'] = $seller_fulfillment_order_item_id;
+        $this->container['sellerFulfillmentOrderItemId'] = $sellerFulfillmentOrderItemId;
 
         return $this;
     }
 
     /**
-     * Gets amazon_shipment_id
+     * Gets amazonShipmentId
      *
      * @return string
      */
     public function getAmazonShipmentId()
     {
-        return $this->container['amazon_shipment_id'];
+        return $this->container['amazonShipmentId'];
     }
 
     /**
-     * Sets amazon_shipment_id
+     * Sets amazonShipmentId
      *
-     * @param string $amazon_shipment_id The identifier for the shipment that is associated with the return item.
+     * @param string $amazonShipmentId The identifier for the shipment that is associated with the return item.
      *
      * @return self
      */
-    public function setAmazonShipmentId($amazon_shipment_id)
+    public function setAmazonShipmentId($amazonShipmentId)
     {
-        $this->container['amazon_shipment_id'] = $amazon_shipment_id;
+        $this->container['amazonShipmentId'] = $amazonShipmentId;
 
         return $this;
     }
 
     /**
-     * Gets return_reason_code
+     * Gets returnReasonCode
      *
      * @return string
      */
     public function getReturnReasonCode()
     {
-        return $this->container['return_reason_code'];
+        return $this->container['returnReasonCode'];
     }
 
     /**
-     * Sets return_reason_code
+     * Sets returnReasonCode
      *
-     * @param string $return_reason_code The return reason code assigned to the return item by the seller.
+     * @param string $returnReasonCode The return reason code assigned to the return item by the seller.
      *
      * @return self
      */
-    public function setReturnReasonCode($return_reason_code)
+    public function setReturnReasonCode($returnReasonCode)
     {
-        $this->container['return_reason_code'] = $return_reason_code;
+        $this->container['returnReasonCode'] = $returnReasonCode;
 
         return $this;
     }
 
     /**
-     * Gets return_comment
+     * Gets returnComment
      *
      * @return string|null
      */
     public function getReturnComment()
     {
-        return $this->container['return_comment'];
+        return $this->container['returnComment'];
     }
 
     /**
-     * Sets return_comment
+     * Sets returnComment
      *
-     * @param string|null $return_comment An optional comment about the return item.
+     * @param string|null $returnComment An optional comment about the return item.
      *
      * @return self
      */
-    public function setReturnComment($return_comment)
+    public function setReturnComment($returnComment)
     {
-        if (!is_null($return_comment) && (mb_strlen($return_comment) > 1000)) {
-            throw new \InvalidArgumentException('invalid length for $return_comment when calling CreateReturnItem., must be smaller than or equal to 1000.');
+        if (!is_null($returnComment) && (mb_strlen($returnComment) > 1000)) {
+            throw new \InvalidArgumentException('invalid length for $returnComment when calling CreateReturnItem., must be smaller than or equal to 1000.');
         }
 
-        $this->container['return_comment'] = $return_comment;
+        $this->container['returnComment'] = $returnComment;
 
         return $this;
     }

@@ -62,19 +62,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'seller_sku' => 'string',
-        'order_item_id' => 'string',
-        'order_adjustment_item_id' => 'string',
-        'quantity_shipped' => 'int',
-        'item_charge_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'item_charge_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
-        'item_fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'item_fee_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
-        'item_tax_withheld_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]',
-        'promotion_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]',
-        'promotion_adjustment_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]',
-        'cost_of_points_granted' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'cost_of_points_returned' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'sellerSKU' => 'string',
+        'orderItemId' => 'string',
+        'orderAdjustmentItemId' => 'string',
+        'quantityShipped' => 'int',
+        'itemChargeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'itemChargeAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]',
+        'itemFeeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'itemFeeAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]',
+        'itemTaxWithheldList' => '\Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]',
+        'promotionList' => '\Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]',
+        'promotionAdjustmentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]',
+        'costOfPointsGranted' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'costOfPointsReturned' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -85,19 +85,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'seller_sku' => null,
-        'order_item_id' => null,
-        'order_adjustment_item_id' => null,
-        'quantity_shipped' => 'int32',
-        'item_charge_list' => null,
-        'item_charge_adjustment_list' => null,
-        'item_fee_list' => null,
-        'item_fee_adjustment_list' => null,
-        'item_tax_withheld_list' => null,
-        'promotion_list' => null,
-        'promotion_adjustment_list' => null,
-        'cost_of_points_granted' => null,
-        'cost_of_points_returned' => null
+        'sellerSKU' => null,
+        'orderItemId' => null,
+        'orderAdjustmentItemId' => null,
+        'quantityShipped' => 'int32',
+        'itemChargeList' => null,
+        'itemChargeAdjustmentList' => null,
+        'itemFeeList' => null,
+        'itemFeeAdjustmentList' => null,
+        'itemTaxWithheldList' => null,
+        'promotionList' => null,
+        'promotionAdjustmentList' => null,
+        'costOfPointsGranted' => null,
+        'costOfPointsReturned' => null
     ];
 
     /**
@@ -127,19 +127,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'seller_sku' => 'SellerSKU',
-        'order_item_id' => 'OrderItemId',
-        'order_adjustment_item_id' => 'OrderAdjustmentItemId',
-        'quantity_shipped' => 'QuantityShipped',
-        'item_charge_list' => 'ItemChargeList',
-        'item_charge_adjustment_list' => 'ItemChargeAdjustmentList',
-        'item_fee_list' => 'ItemFeeList',
-        'item_fee_adjustment_list' => 'ItemFeeAdjustmentList',
-        'item_tax_withheld_list' => 'ItemTaxWithheldList',
-        'promotion_list' => 'PromotionList',
-        'promotion_adjustment_list' => 'PromotionAdjustmentList',
-        'cost_of_points_granted' => 'CostOfPointsGranted',
-        'cost_of_points_returned' => 'CostOfPointsReturned'
+        'sellerSKU' => 'SellerSKU',
+        'orderItemId' => 'OrderItemId',
+        'orderAdjustmentItemId' => 'OrderAdjustmentItemId',
+        'quantityShipped' => 'QuantityShipped',
+        'itemChargeList' => 'ItemChargeList',
+        'itemChargeAdjustmentList' => 'ItemChargeAdjustmentList',
+        'itemFeeList' => 'ItemFeeList',
+        'itemFeeAdjustmentList' => 'ItemFeeAdjustmentList',
+        'itemTaxWithheldList' => 'ItemTaxWithheldList',
+        'promotionList' => 'PromotionList',
+        'promotionAdjustmentList' => 'PromotionAdjustmentList',
+        'costOfPointsGranted' => 'CostOfPointsGranted',
+        'costOfPointsReturned' => 'CostOfPointsReturned'
     ];
 
     /**
@@ -148,19 +148,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'seller_sku' => 'setSellerSku',
-        'order_item_id' => 'setOrderItemId',
-        'order_adjustment_item_id' => 'setOrderAdjustmentItemId',
-        'quantity_shipped' => 'setQuantityShipped',
-        'item_charge_list' => 'setItemChargeList',
-        'item_charge_adjustment_list' => 'setItemChargeAdjustmentList',
-        'item_fee_list' => 'setItemFeeList',
-        'item_fee_adjustment_list' => 'setItemFeeAdjustmentList',
-        'item_tax_withheld_list' => 'setItemTaxWithheldList',
-        'promotion_list' => 'setPromotionList',
-        'promotion_adjustment_list' => 'setPromotionAdjustmentList',
-        'cost_of_points_granted' => 'setCostOfPointsGranted',
-        'cost_of_points_returned' => 'setCostOfPointsReturned'
+        'sellerSKU' => 'setSellerSKU',
+        'orderItemId' => 'setOrderItemId',
+        'orderAdjustmentItemId' => 'setOrderAdjustmentItemId',
+        'quantityShipped' => 'setQuantityShipped',
+        'itemChargeList' => 'setItemChargeList',
+        'itemChargeAdjustmentList' => 'setItemChargeAdjustmentList',
+        'itemFeeList' => 'setItemFeeList',
+        'itemFeeAdjustmentList' => 'setItemFeeAdjustmentList',
+        'itemTaxWithheldList' => 'setItemTaxWithheldList',
+        'promotionList' => 'setPromotionList',
+        'promotionAdjustmentList' => 'setPromotionAdjustmentList',
+        'costOfPointsGranted' => 'setCostOfPointsGranted',
+        'costOfPointsReturned' => 'setCostOfPointsReturned'
     ];
 
     /**
@@ -169,19 +169,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'seller_sku' => 'getSellerSku',
-        'order_item_id' => 'getOrderItemId',
-        'order_adjustment_item_id' => 'getOrderAdjustmentItemId',
-        'quantity_shipped' => 'getQuantityShipped',
-        'item_charge_list' => 'getItemChargeList',
-        'item_charge_adjustment_list' => 'getItemChargeAdjustmentList',
-        'item_fee_list' => 'getItemFeeList',
-        'item_fee_adjustment_list' => 'getItemFeeAdjustmentList',
-        'item_tax_withheld_list' => 'getItemTaxWithheldList',
-        'promotion_list' => 'getPromotionList',
-        'promotion_adjustment_list' => 'getPromotionAdjustmentList',
-        'cost_of_points_granted' => 'getCostOfPointsGranted',
-        'cost_of_points_returned' => 'getCostOfPointsReturned'
+        'sellerSKU' => 'getSellerSKU',
+        'orderItemId' => 'getOrderItemId',
+        'orderAdjustmentItemId' => 'getOrderAdjustmentItemId',
+        'quantityShipped' => 'getQuantityShipped',
+        'itemChargeList' => 'getItemChargeList',
+        'itemChargeAdjustmentList' => 'getItemChargeAdjustmentList',
+        'itemFeeList' => 'getItemFeeList',
+        'itemFeeAdjustmentList' => 'getItemFeeAdjustmentList',
+        'itemTaxWithheldList' => 'getItemTaxWithheldList',
+        'promotionList' => 'getPromotionList',
+        'promotionAdjustmentList' => 'getPromotionAdjustmentList',
+        'costOfPointsGranted' => 'getCostOfPointsGranted',
+        'costOfPointsReturned' => 'getCostOfPointsReturned'
     ];
 
     /**
@@ -244,19 +244,19 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['seller_sku'] = $data['seller_sku'] ?? null;
-        $this->container['order_item_id'] = $data['order_item_id'] ?? null;
-        $this->container['order_adjustment_item_id'] = $data['order_adjustment_item_id'] ?? null;
-        $this->container['quantity_shipped'] = $data['quantity_shipped'] ?? null;
-        $this->container['item_charge_list'] = $data['item_charge_list'] ?? null;
-        $this->container['item_charge_adjustment_list'] = $data['item_charge_adjustment_list'] ?? null;
-        $this->container['item_fee_list'] = $data['item_fee_list'] ?? null;
-        $this->container['item_fee_adjustment_list'] = $data['item_fee_adjustment_list'] ?? null;
-        $this->container['item_tax_withheld_list'] = $data['item_tax_withheld_list'] ?? null;
-        $this->container['promotion_list'] = $data['promotion_list'] ?? null;
-        $this->container['promotion_adjustment_list'] = $data['promotion_adjustment_list'] ?? null;
-        $this->container['cost_of_points_granted'] = $data['cost_of_points_granted'] ?? null;
-        $this->container['cost_of_points_returned'] = $data['cost_of_points_returned'] ?? null;
+        $this->container['sellerSKU'] = $data['sellerSKU'] ?? null;
+        $this->container['orderItemId'] = $data['orderItemId'] ?? null;
+        $this->container['orderAdjustmentItemId'] = $data['orderAdjustmentItemId'] ?? null;
+        $this->container['quantityShipped'] = $data['quantityShipped'] ?? null;
+        $this->container['itemChargeList'] = $data['itemChargeList'] ?? null;
+        $this->container['itemChargeAdjustmentList'] = $data['itemChargeAdjustmentList'] ?? null;
+        $this->container['itemFeeList'] = $data['itemFeeList'] ?? null;
+        $this->container['itemFeeAdjustmentList'] = $data['itemFeeAdjustmentList'] ?? null;
+        $this->container['itemTaxWithheldList'] = $data['itemTaxWithheldList'] ?? null;
+        $this->container['promotionList'] = $data['promotionList'] ?? null;
+        $this->container['promotionAdjustmentList'] = $data['promotionAdjustmentList'] ?? null;
+        $this->container['costOfPointsGranted'] = $data['costOfPointsGranted'] ?? null;
+        $this->container['costOfPointsReturned'] = $data['costOfPointsReturned'] ?? null;
     }
 
     /**
@@ -284,313 +284,313 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets seller_sku
+     * Gets sellerSKU
      *
      * @return string|null
      */
-    public function getSellerSku()
+    public function getSellerSKU()
     {
-        return $this->container['seller_sku'];
+        return $this->container['sellerSKU'];
     }
 
     /**
-     * Sets seller_sku
+     * Sets sellerSKU
      *
-     * @param string|null $seller_sku The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
+     * @param string|null $sellerSKU The seller SKU of the item. The seller SKU is qualified by the seller's seller ID, which is included with every call to the Selling Partner API.
      *
      * @return self
      */
-    public function setSellerSku($seller_sku)
+    public function setSellerSKU($sellerSKU)
     {
-        $this->container['seller_sku'] = $seller_sku;
+        $this->container['sellerSKU'] = $sellerSKU;
 
         return $this;
     }
 
     /**
-     * Gets order_item_id
+     * Gets orderItemId
      *
      * @return string|null
      */
     public function getOrderItemId()
     {
-        return $this->container['order_item_id'];
+        return $this->container['orderItemId'];
     }
 
     /**
-     * Sets order_item_id
+     * Sets orderItemId
      *
-     * @param string|null $order_item_id An Amazon-defined order item identifier.
+     * @param string|null $orderItemId An Amazon-defined order item identifier.
      *
      * @return self
      */
-    public function setOrderItemId($order_item_id)
+    public function setOrderItemId($orderItemId)
     {
-        $this->container['order_item_id'] = $order_item_id;
+        $this->container['orderItemId'] = $orderItemId;
 
         return $this;
     }
 
     /**
-     * Gets order_adjustment_item_id
+     * Gets orderAdjustmentItemId
      *
      * @return string|null
      */
     public function getOrderAdjustmentItemId()
     {
-        return $this->container['order_adjustment_item_id'];
+        return $this->container['orderAdjustmentItemId'];
     }
 
     /**
-     * Sets order_adjustment_item_id
+     * Sets orderAdjustmentItemId
      *
-     * @param string|null $order_adjustment_item_id An Amazon-defined order adjustment identifier defined for refunds, guarantee claims, and chargeback events.
+     * @param string|null $orderAdjustmentItemId An Amazon-defined order adjustment identifier defined for refunds, guarantee claims, and chargeback events.
      *
      * @return self
      */
-    public function setOrderAdjustmentItemId($order_adjustment_item_id)
+    public function setOrderAdjustmentItemId($orderAdjustmentItemId)
     {
-        $this->container['order_adjustment_item_id'] = $order_adjustment_item_id;
+        $this->container['orderAdjustmentItemId'] = $orderAdjustmentItemId;
 
         return $this;
     }
 
     /**
-     * Gets quantity_shipped
+     * Gets quantityShipped
      *
      * @return int|null
      */
     public function getQuantityShipped()
     {
-        return $this->container['quantity_shipped'];
+        return $this->container['quantityShipped'];
     }
 
     /**
-     * Sets quantity_shipped
+     * Sets quantityShipped
      *
-     * @param int|null $quantity_shipped The number of items shipped.
+     * @param int|null $quantityShipped The number of items shipped.
      *
      * @return self
      */
-    public function setQuantityShipped($quantity_shipped)
+    public function setQuantityShipped($quantityShipped)
     {
-        $this->container['quantity_shipped'] = $quantity_shipped;
+        $this->container['quantityShipped'] = $quantityShipped;
 
         return $this;
     }
 
     /**
-     * Gets item_charge_list
+     * Gets itemChargeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getItemChargeList()
     {
-        return $this->container['item_charge_list'];
+        return $this->container['itemChargeList'];
     }
 
     /**
-     * Sets item_charge_list
+     * Sets itemChargeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $item_charge_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $itemChargeList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setItemChargeList($item_charge_list)
+    public function setItemChargeList($itemChargeList)
     {
-        $this->container['item_charge_list'] = $item_charge_list;
+        $this->container['itemChargeList'] = $itemChargeList;
 
         return $this;
     }
 
     /**
-     * Gets item_charge_adjustment_list
+     * Gets itemChargeAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null
      */
     public function getItemChargeAdjustmentList()
     {
-        return $this->container['item_charge_adjustment_list'];
+        return $this->container['itemChargeAdjustmentList'];
     }
 
     /**
-     * Sets item_charge_adjustment_list
+     * Sets itemChargeAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $item_charge_adjustment_list A list of charge information on the seller's account.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeComponent[]|null $itemChargeAdjustmentList A list of charge information on the seller's account.
      *
      * @return self
      */
-    public function setItemChargeAdjustmentList($item_charge_adjustment_list)
+    public function setItemChargeAdjustmentList($itemChargeAdjustmentList)
     {
-        $this->container['item_charge_adjustment_list'] = $item_charge_adjustment_list;
+        $this->container['itemChargeAdjustmentList'] = $itemChargeAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets item_fee_list
+     * Gets itemFeeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getItemFeeList()
     {
-        return $this->container['item_fee_list'];
+        return $this->container['itemFeeList'];
     }
 
     /**
-     * Sets item_fee_list
+     * Sets itemFeeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $item_fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $itemFeeList A list of fee component information.
      *
      * @return self
      */
-    public function setItemFeeList($item_fee_list)
+    public function setItemFeeList($itemFeeList)
     {
-        $this->container['item_fee_list'] = $item_fee_list;
+        $this->container['itemFeeList'] = $itemFeeList;
 
         return $this;
     }
 
     /**
-     * Gets item_fee_adjustment_list
+     * Gets itemFeeAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getItemFeeAdjustmentList()
     {
-        return $this->container['item_fee_adjustment_list'];
+        return $this->container['itemFeeAdjustmentList'];
     }
 
     /**
-     * Sets item_fee_adjustment_list
+     * Sets itemFeeAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $item_fee_adjustment_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $itemFeeAdjustmentList A list of fee component information.
      *
      * @return self
      */
-    public function setItemFeeAdjustmentList($item_fee_adjustment_list)
+    public function setItemFeeAdjustmentList($itemFeeAdjustmentList)
     {
-        $this->container['item_fee_adjustment_list'] = $item_fee_adjustment_list;
+        $this->container['itemFeeAdjustmentList'] = $itemFeeAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets item_tax_withheld_list
+     * Gets itemTaxWithheldList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null
      */
     public function getItemTaxWithheldList()
     {
-        return $this->container['item_tax_withheld_list'];
+        return $this->container['itemTaxWithheldList'];
     }
 
     /**
-     * Sets item_tax_withheld_list
+     * Sets itemTaxWithheldList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $item_tax_withheld_list A list of information about taxes withheld.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\TaxWithheldComponent[]|null $itemTaxWithheldList A list of information about taxes withheld.
      *
      * @return self
      */
-    public function setItemTaxWithheldList($item_tax_withheld_list)
+    public function setItemTaxWithheldList($itemTaxWithheldList)
     {
-        $this->container['item_tax_withheld_list'] = $item_tax_withheld_list;
+        $this->container['itemTaxWithheldList'] = $itemTaxWithheldList;
 
         return $this;
     }
 
     /**
-     * Gets promotion_list
+     * Gets promotionList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null
      */
     public function getPromotionList()
     {
-        return $this->container['promotion_list'];
+        return $this->container['promotionList'];
     }
 
     /**
-     * Sets promotion_list
+     * Sets promotionList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null $promotion_list A list of promotions.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null $promotionList A list of promotions.
      *
      * @return self
      */
-    public function setPromotionList($promotion_list)
+    public function setPromotionList($promotionList)
     {
-        $this->container['promotion_list'] = $promotion_list;
+        $this->container['promotionList'] = $promotionList;
 
         return $this;
     }
 
     /**
-     * Gets promotion_adjustment_list
+     * Gets promotionAdjustmentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null
      */
     public function getPromotionAdjustmentList()
     {
-        return $this->container['promotion_adjustment_list'];
+        return $this->container['promotionAdjustmentList'];
     }
 
     /**
-     * Sets promotion_adjustment_list
+     * Sets promotionAdjustmentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null $promotion_adjustment_list A list of promotions.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Promotion[]|null $promotionAdjustmentList A list of promotions.
      *
      * @return self
      */
-    public function setPromotionAdjustmentList($promotion_adjustment_list)
+    public function setPromotionAdjustmentList($promotionAdjustmentList)
     {
-        $this->container['promotion_adjustment_list'] = $promotion_adjustment_list;
+        $this->container['promotionAdjustmentList'] = $promotionAdjustmentList;
 
         return $this;
     }
 
     /**
-     * Gets cost_of_points_granted
+     * Gets costOfPointsGranted
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getCostOfPointsGranted()
     {
-        return $this->container['cost_of_points_granted'];
+        return $this->container['costOfPointsGranted'];
     }
 
     /**
-     * Sets cost_of_points_granted
+     * Sets costOfPointsGranted
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $cost_of_points_granted cost_of_points_granted
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $costOfPointsGranted costOfPointsGranted
      *
      * @return self
      */
-    public function setCostOfPointsGranted($cost_of_points_granted)
+    public function setCostOfPointsGranted($costOfPointsGranted)
     {
-        $this->container['cost_of_points_granted'] = $cost_of_points_granted;
+        $this->container['costOfPointsGranted'] = $costOfPointsGranted;
 
         return $this;
     }
 
     /**
-     * Gets cost_of_points_returned
+     * Gets costOfPointsReturned
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getCostOfPointsReturned()
     {
-        return $this->container['cost_of_points_returned'];
+        return $this->container['costOfPointsReturned'];
     }
 
     /**
-     * Sets cost_of_points_returned
+     * Sets costOfPointsReturned
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $cost_of_points_returned cost_of_points_returned
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $costOfPointsReturned costOfPointsReturned
      *
      * @return self
      */
-    public function setCostOfPointsReturned($cost_of_points_returned)
+    public function setCostOfPointsReturned($costOfPointsReturned)
     {
-        $this->container['cost_of_points_returned'] = $cost_of_points_returned;
+        $this->container['costOfPointsReturned'] = $costOfPointsReturned;
 
         return $this;
     }

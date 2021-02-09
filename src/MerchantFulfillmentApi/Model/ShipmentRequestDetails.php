@@ -62,16 +62,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'seller_order_id' => 'string',
-        'item_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Item[]',
-        'ship_from_address' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
-        'package_dimensions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PackageDimensions',
+        'amazonOrderId' => 'string',
+        'sellerOrderId' => 'string',
+        'itemList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Item[]',
+        'shipFromAddress' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address',
+        'packageDimensions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PackageDimensions',
         'weight' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Weight',
-        'must_arrive_by_date' => '\DateTime',
-        'ship_date' => '\DateTime',
-        'shipping_service_options' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions',
-        'label_customization' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelCustomization'
+        'mustArriveByDate' => '\DateTime',
+        'shipDate' => '\DateTime',
+        'shippingServiceOptions' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions',
+        'labelCustomization' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelCustomization'
     ];
 
     /**
@@ -82,16 +82,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'seller_order_id' => null,
-        'item_list' => null,
-        'ship_from_address' => null,
-        'package_dimensions' => null,
+        'amazonOrderId' => null,
+        'sellerOrderId' => null,
+        'itemList' => null,
+        'shipFromAddress' => null,
+        'packageDimensions' => null,
         'weight' => null,
-        'must_arrive_by_date' => 'date-time',
-        'ship_date' => 'date-time',
-        'shipping_service_options' => null,
-        'label_customization' => null
+        'mustArriveByDate' => 'date-time',
+        'shipDate' => 'date-time',
+        'shippingServiceOptions' => null,
+        'labelCustomization' => null
     ];
 
     /**
@@ -121,16 +121,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'seller_order_id' => 'SellerOrderId',
-        'item_list' => 'ItemList',
-        'ship_from_address' => 'ShipFromAddress',
-        'package_dimensions' => 'PackageDimensions',
+        'amazonOrderId' => 'AmazonOrderId',
+        'sellerOrderId' => 'SellerOrderId',
+        'itemList' => 'ItemList',
+        'shipFromAddress' => 'ShipFromAddress',
+        'packageDimensions' => 'PackageDimensions',
         'weight' => 'Weight',
-        'must_arrive_by_date' => 'MustArriveByDate',
-        'ship_date' => 'ShipDate',
-        'shipping_service_options' => 'ShippingServiceOptions',
-        'label_customization' => 'LabelCustomization'
+        'mustArriveByDate' => 'MustArriveByDate',
+        'shipDate' => 'ShipDate',
+        'shippingServiceOptions' => 'ShippingServiceOptions',
+        'labelCustomization' => 'LabelCustomization'
     ];
 
     /**
@@ -139,16 +139,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'seller_order_id' => 'setSellerOrderId',
-        'item_list' => 'setItemList',
-        'ship_from_address' => 'setShipFromAddress',
-        'package_dimensions' => 'setPackageDimensions',
+        'amazonOrderId' => 'setAmazonOrderId',
+        'sellerOrderId' => 'setSellerOrderId',
+        'itemList' => 'setItemList',
+        'shipFromAddress' => 'setShipFromAddress',
+        'packageDimensions' => 'setPackageDimensions',
         'weight' => 'setWeight',
-        'must_arrive_by_date' => 'setMustArriveByDate',
-        'ship_date' => 'setShipDate',
-        'shipping_service_options' => 'setShippingServiceOptions',
-        'label_customization' => 'setLabelCustomization'
+        'mustArriveByDate' => 'setMustArriveByDate',
+        'shipDate' => 'setShipDate',
+        'shippingServiceOptions' => 'setShippingServiceOptions',
+        'labelCustomization' => 'setLabelCustomization'
     ];
 
     /**
@@ -157,16 +157,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'seller_order_id' => 'getSellerOrderId',
-        'item_list' => 'getItemList',
-        'ship_from_address' => 'getShipFromAddress',
-        'package_dimensions' => 'getPackageDimensions',
+        'amazonOrderId' => 'getAmazonOrderId',
+        'sellerOrderId' => 'getSellerOrderId',
+        'itemList' => 'getItemList',
+        'shipFromAddress' => 'getShipFromAddress',
+        'packageDimensions' => 'getPackageDimensions',
         'weight' => 'getWeight',
-        'must_arrive_by_date' => 'getMustArriveByDate',
-        'ship_date' => 'getShipDate',
-        'shipping_service_options' => 'getShippingServiceOptions',
-        'label_customization' => 'getLabelCustomization'
+        'mustArriveByDate' => 'getMustArriveByDate',
+        'shipDate' => 'getShipDate',
+        'shippingServiceOptions' => 'getShippingServiceOptions',
+        'labelCustomization' => 'getLabelCustomization'
     ];
 
     /**
@@ -229,16 +229,16 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['seller_order_id'] = $data['seller_order_id'] ?? null;
-        $this->container['item_list'] = $data['item_list'] ?? null;
-        $this->container['ship_from_address'] = $data['ship_from_address'] ?? null;
-        $this->container['package_dimensions'] = $data['package_dimensions'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['sellerOrderId'] = $data['sellerOrderId'] ?? null;
+        $this->container['itemList'] = $data['itemList'] ?? null;
+        $this->container['shipFromAddress'] = $data['shipFromAddress'] ?? null;
+        $this->container['packageDimensions'] = $data['packageDimensions'] ?? null;
         $this->container['weight'] = $data['weight'] ?? null;
-        $this->container['must_arrive_by_date'] = $data['must_arrive_by_date'] ?? null;
-        $this->container['ship_date'] = $data['ship_date'] ?? null;
-        $this->container['shipping_service_options'] = $data['shipping_service_options'] ?? null;
-        $this->container['label_customization'] = $data['label_customization'] ?? null;
+        $this->container['mustArriveByDate'] = $data['mustArriveByDate'] ?? null;
+        $this->container['shipDate'] = $data['shipDate'] ?? null;
+        $this->container['shippingServiceOptions'] = $data['shippingServiceOptions'] ?? null;
+        $this->container['labelCustomization'] = $data['labelCustomization'] ?? null;
     }
 
     /**
@@ -250,27 +250,27 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['amazon_order_id'] === null) {
-            $invalidProperties[] = "'amazon_order_id' can't be null";
+        if ($this->container['amazonOrderId'] === null) {
+            $invalidProperties[] = "'amazonOrderId' can't be null";
         }
-        if (!is_null($this->container['seller_order_id']) && (mb_strlen($this->container['seller_order_id']) > 64)) {
-            $invalidProperties[] = "invalid value for 'seller_order_id', the character length must be smaller than or equal to 64.";
+        if (!is_null($this->container['sellerOrderId']) && (mb_strlen($this->container['sellerOrderId']) > 64)) {
+            $invalidProperties[] = "invalid value for 'sellerOrderId', the character length must be smaller than or equal to 64.";
         }
 
-        if ($this->container['item_list'] === null) {
-            $invalidProperties[] = "'item_list' can't be null";
+        if ($this->container['itemList'] === null) {
+            $invalidProperties[] = "'itemList' can't be null";
         }
-        if ($this->container['ship_from_address'] === null) {
-            $invalidProperties[] = "'ship_from_address' can't be null";
+        if ($this->container['shipFromAddress'] === null) {
+            $invalidProperties[] = "'shipFromAddress' can't be null";
         }
-        if ($this->container['package_dimensions'] === null) {
-            $invalidProperties[] = "'package_dimensions' can't be null";
+        if ($this->container['packageDimensions'] === null) {
+            $invalidProperties[] = "'packageDimensions' can't be null";
         }
         if ($this->container['weight'] === null) {
             $invalidProperties[] = "'weight' can't be null";
         }
-        if ($this->container['shipping_service_options'] === null) {
-            $invalidProperties[] = "'shipping_service_options' can't be null";
+        if ($this->container['shippingServiceOptions'] === null) {
+            $invalidProperties[] = "'shippingServiceOptions' can't be null";
         }
         return $invalidProperties;
     }
@@ -288,125 +288,125 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string $amazon_order_id An Amazon-defined order identifier, in 3-7-7 format. <br>**Pattern** : `[0-9A-Z]{3}-[0-9]{7}-[0-9]{7}`.
+     * @param string $amazonOrderId An Amazon-defined order identifier, in 3-7-7 format. <br>**Pattern** : `[0-9A-Z]{3}-[0-9]{7}-[0-9]{7}`.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets seller_order_id
+     * Gets sellerOrderId
      *
      * @return string|null
      */
     public function getSellerOrderId()
     {
-        return $this->container['seller_order_id'];
+        return $this->container['sellerOrderId'];
     }
 
     /**
-     * Sets seller_order_id
+     * Sets sellerOrderId
      *
-     * @param string|null $seller_order_id A seller-defined order identifier.
+     * @param string|null $sellerOrderId A seller-defined order identifier.
      *
      * @return self
      */
-    public function setSellerOrderId($seller_order_id)
+    public function setSellerOrderId($sellerOrderId)
     {
-        if (!is_null($seller_order_id) && (mb_strlen($seller_order_id) > 64)) {
-            throw new \InvalidArgumentException('invalid length for $seller_order_id when calling ShipmentRequestDetails., must be smaller than or equal to 64.');
+        if (!is_null($sellerOrderId) && (mb_strlen($sellerOrderId) > 64)) {
+            throw new \InvalidArgumentException('invalid length for $sellerOrderId when calling ShipmentRequestDetails., must be smaller than or equal to 64.');
         }
 
-        $this->container['seller_order_id'] = $seller_order_id;
+        $this->container['sellerOrderId'] = $sellerOrderId;
 
         return $this;
     }
 
     /**
-     * Gets item_list
+     * Gets itemList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Item[]
      */
     public function getItemList()
     {
-        return $this->container['item_list'];
+        return $this->container['itemList'];
     }
 
     /**
-     * Sets item_list
+     * Sets itemList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Item[] $item_list The list of items to be included in a shipment.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Item[] $itemList The list of items to be included in a shipment.
      *
      * @return self
      */
-    public function setItemList($item_list)
+    public function setItemList($itemList)
     {
-        $this->container['item_list'] = $item_list;
+        $this->container['itemList'] = $itemList;
 
         return $this;
     }
 
     /**
-     * Gets ship_from_address
+     * Gets shipFromAddress
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address
      */
     public function getShipFromAddress()
     {
-        return $this->container['ship_from_address'];
+        return $this->container['shipFromAddress'];
     }
 
     /**
-     * Sets ship_from_address
+     * Sets shipFromAddress
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address $ship_from_address ship_from_address
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\Address $shipFromAddress shipFromAddress
      *
      * @return self
      */
-    public function setShipFromAddress($ship_from_address)
+    public function setShipFromAddress($shipFromAddress)
     {
-        $this->container['ship_from_address'] = $ship_from_address;
+        $this->container['shipFromAddress'] = $shipFromAddress;
 
         return $this;
     }
 
     /**
-     * Gets package_dimensions
+     * Gets packageDimensions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PackageDimensions
      */
     public function getPackageDimensions()
     {
-        return $this->container['package_dimensions'];
+        return $this->container['packageDimensions'];
     }
 
     /**
-     * Sets package_dimensions
+     * Sets packageDimensions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PackageDimensions $package_dimensions package_dimensions
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\PackageDimensions $packageDimensions packageDimensions
      *
      * @return self
      */
-    public function setPackageDimensions($package_dimensions)
+    public function setPackageDimensions($packageDimensions)
     {
-        $this->container['package_dimensions'] = $package_dimensions;
+        $this->container['packageDimensions'] = $packageDimensions;
 
         return $this;
     }
@@ -436,97 +436,97 @@ class ShipmentRequestDetails implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets must_arrive_by_date
+     * Gets mustArriveByDate
      *
      * @return \DateTime|null
      */
     public function getMustArriveByDate()
     {
-        return $this->container['must_arrive_by_date'];
+        return $this->container['mustArriveByDate'];
     }
 
     /**
-     * Sets must_arrive_by_date
+     * Sets mustArriveByDate
      *
-     * @param \DateTime|null $must_arrive_by_date must_arrive_by_date
+     * @param \DateTime|null $mustArriveByDate mustArriveByDate
      *
      * @return self
      */
-    public function setMustArriveByDate($must_arrive_by_date)
+    public function setMustArriveByDate($mustArriveByDate)
     {
-        $this->container['must_arrive_by_date'] = $must_arrive_by_date;
+        $this->container['mustArriveByDate'] = $mustArriveByDate;
 
         return $this;
     }
 
     /**
-     * Gets ship_date
+     * Gets shipDate
      *
      * @return \DateTime|null
      */
     public function getShipDate()
     {
-        return $this->container['ship_date'];
+        return $this->container['shipDate'];
     }
 
     /**
-     * Sets ship_date
+     * Sets shipDate
      *
-     * @param \DateTime|null $ship_date ship_date
+     * @param \DateTime|null $shipDate shipDate
      *
      * @return self
      */
-    public function setShipDate($ship_date)
+    public function setShipDate($shipDate)
     {
-        $this->container['ship_date'] = $ship_date;
+        $this->container['shipDate'] = $shipDate;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_options
+     * Gets shippingServiceOptions
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions
      */
     public function getShippingServiceOptions()
     {
-        return $this->container['shipping_service_options'];
+        return $this->container['shippingServiceOptions'];
     }
 
     /**
-     * Sets shipping_service_options
+     * Sets shippingServiceOptions
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions $shipping_service_options shipping_service_options
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShippingServiceOptions $shippingServiceOptions shippingServiceOptions
      *
      * @return self
      */
-    public function setShippingServiceOptions($shipping_service_options)
+    public function setShippingServiceOptions($shippingServiceOptions)
     {
-        $this->container['shipping_service_options'] = $shipping_service_options;
+        $this->container['shippingServiceOptions'] = $shippingServiceOptions;
 
         return $this;
     }
 
     /**
-     * Gets label_customization
+     * Gets labelCustomization
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelCustomization|null
      */
     public function getLabelCustomization()
     {
-        return $this->container['label_customization'];
+        return $this->container['labelCustomization'];
     }
 
     /**
-     * Sets label_customization
+     * Sets labelCustomization
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelCustomization|null $label_customization label_customization
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelCustomization|null $labelCustomization labelCustomization
      *
      * @return self
      */
-    public function setLabelCustomization($label_customization)
+    public function setLabelCustomization($labelCustomization)
     {
-        $this->container['label_customization'] = $label_customization;
+        $this->container['labelCustomization'] = $labelCustomization;
 
         return $this;
     }

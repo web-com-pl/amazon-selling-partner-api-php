@@ -62,10 +62,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'imaging_request_billing_item_id' => 'string',
-        'asin' => 'string',
-        'posted_date' => '\DateTime',
-        'fee_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]'
+        'imagingRequestBillingItemID' => 'string',
+        'aSIN' => 'string',
+        'postedDate' => '\DateTime',
+        'feeList' => '\Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'imaging_request_billing_item_id' => null,
-        'asin' => null,
-        'posted_date' => 'date-time',
-        'fee_list' => null
+        'imagingRequestBillingItemID' => null,
+        'aSIN' => null,
+        'postedDate' => 'date-time',
+        'feeList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'imaging_request_billing_item_id' => 'ImagingRequestBillingItemID',
-        'asin' => 'ASIN',
-        'posted_date' => 'PostedDate',
-        'fee_list' => 'FeeList'
+        'imagingRequestBillingItemID' => 'ImagingRequestBillingItemID',
+        'aSIN' => 'ASIN',
+        'postedDate' => 'PostedDate',
+        'feeList' => 'FeeList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'imaging_request_billing_item_id' => 'setImagingRequestBillingItemId',
-        'asin' => 'setAsin',
-        'posted_date' => 'setPostedDate',
-        'fee_list' => 'setFeeList'
+        'imagingRequestBillingItemID' => 'setImagingRequestBillingItemID',
+        'aSIN' => 'setASIN',
+        'postedDate' => 'setPostedDate',
+        'feeList' => 'setFeeList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'imaging_request_billing_item_id' => 'getImagingRequestBillingItemId',
-        'asin' => 'getAsin',
-        'posted_date' => 'getPostedDate',
-        'fee_list' => 'getFeeList'
+        'imagingRequestBillingItemID' => 'getImagingRequestBillingItemID',
+        'aSIN' => 'getASIN',
+        'postedDate' => 'getPostedDate',
+        'feeList' => 'getFeeList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->container['imaging_request_billing_item_id'] = $data['imaging_request_billing_item_id'] ?? null;
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['fee_list'] = $data['fee_list'] ?? null;
+        $this->container['imagingRequestBillingItemID'] = $data['imagingRequestBillingItemID'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['feeList'] = $data['feeList'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class ImagingServicesFeeEvent implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets imaging_request_billing_item_id
+     * Gets imagingRequestBillingItemID
      *
      * @return string|null
      */
-    public function getImagingRequestBillingItemId()
+    public function getImagingRequestBillingItemID()
     {
-        return $this->container['imaging_request_billing_item_id'];
+        return $this->container['imagingRequestBillingItemID'];
     }
 
     /**
-     * Sets imaging_request_billing_item_id
+     * Sets imagingRequestBillingItemID
      *
-     * @param string|null $imaging_request_billing_item_id The identifier for the imaging services request.
+     * @param string|null $imagingRequestBillingItemID The identifier for the imaging services request.
      *
      * @return self
      */
-    public function setImagingRequestBillingItemId($imaging_request_billing_item_id)
+    public function setImagingRequestBillingItemID($imagingRequestBillingItemID)
     {
-        $this->container['imaging_request_billing_item_id'] = $imaging_request_billing_item_id;
+        $this->container['imagingRequestBillingItemID'] = $imagingRequestBillingItemID;
 
         return $this;
     }
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item for which the imaging service was requested.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item for which the imaging service was requested.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets fee_list
+     * Gets feeList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null
      */
     public function getFeeList()
     {
-        return $this->container['fee_list'];
+        return $this->container['feeList'];
     }
 
     /**
-     * Sets fee_list
+     * Sets feeList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $fee_list A list of fee component information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\FeeComponent[]|null $feeList A list of fee component information.
      *
      * @return self
      */
-    public function setFeeList($fee_list)
+    public function setFeeList($feeList)
     {
-        $this->container['fee_list'] = $fee_list;
+        $this->container['feeList'] = $feeList;
 
         return $this;
     }

@@ -65,10 +65,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'string',
         'title' => 'string',
         'quantity' => 'int',
-        'order_id' => 'string',
-        'item_status' => 'string',
-        'brand_name' => 'string',
-        'item_delivery' => '\Webcom\Amazon\Rest\ServicesApi\Model\ItemDelivery'
+        'orderId' => 'string',
+        'itemStatus' => 'string',
+        'brandName' => 'string',
+        'itemDelivery' => '\Webcom\Amazon\Rest\ServicesApi\Model\ItemDelivery'
     ];
 
     /**
@@ -82,10 +82,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => null,
         'title' => null,
         'quantity' => null,
-        'order_id' => null,
-        'item_status' => null,
-        'brand_name' => null,
-        'item_delivery' => null
+        'orderId' => null,
+        'itemStatus' => null,
+        'brandName' => null,
+        'itemDelivery' => null
     ];
 
     /**
@@ -118,10 +118,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'asin',
         'title' => 'title',
         'quantity' => 'quantity',
-        'order_id' => 'orderId',
-        'item_status' => 'itemStatus',
-        'brand_name' => 'brandName',
-        'item_delivery' => 'itemDelivery'
+        'orderId' => 'orderId',
+        'itemStatus' => 'itemStatus',
+        'brandName' => 'brandName',
+        'itemDelivery' => 'itemDelivery'
     ];
 
     /**
@@ -133,10 +133,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'setAsin',
         'title' => 'setTitle',
         'quantity' => 'setQuantity',
-        'order_id' => 'setOrderId',
-        'item_status' => 'setItemStatus',
-        'brand_name' => 'setBrandName',
-        'item_delivery' => 'setItemDelivery'
+        'orderId' => 'setOrderId',
+        'itemStatus' => 'setItemStatus',
+        'brandName' => 'setBrandName',
+        'itemDelivery' => 'setItemDelivery'
     ];
 
     /**
@@ -148,10 +148,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'asin' => 'getAsin',
         'title' => 'getTitle',
         'quantity' => 'getQuantity',
-        'order_id' => 'getOrderId',
-        'item_status' => 'getItemStatus',
-        'brand_name' => 'getBrandName',
-        'item_delivery' => 'getItemDelivery'
+        'orderId' => 'getOrderId',
+        'itemStatus' => 'getItemStatus',
+        'brandName' => 'getBrandName',
+        'itemDelivery' => 'getItemDelivery'
     ];
 
     /**
@@ -236,10 +236,10 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['asin'] = $data['asin'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['quantity'] = $data['quantity'] ?? null;
-        $this->container['order_id'] = $data['order_id'] ?? null;
-        $this->container['item_status'] = $data['item_status'] ?? null;
-        $this->container['brand_name'] = $data['brand_name'] ?? null;
-        $this->container['item_delivery'] = $data['item_delivery'] ?? null;
+        $this->container['orderId'] = $data['orderId'] ?? null;
+        $this->container['itemStatus'] = $data['itemStatus'] ?? null;
+        $this->container['brandName'] = $data['brandName'] ?? null;
+        $this->container['itemDelivery'] = $data['itemDelivery'] ?? null;
     }
 
     /**
@@ -251,19 +251,19 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['order_id']) && (mb_strlen($this->container['order_id']) > 20)) {
-            $invalidProperties[] = "invalid value for 'order_id', the character length must be smaller than or equal to 20.";
+        if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 20)) {
+            $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 20.";
         }
 
-        if (!is_null($this->container['order_id']) && (mb_strlen($this->container['order_id']) < 5)) {
-            $invalidProperties[] = "invalid value for 'order_id', the character length must be bigger than or equal to 5.";
+        if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 5)) {
+            $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 5.";
         }
 
         $allowedValues = $this->getItemStatusAllowableValues();
-        if (!is_null($this->container['item_status']) && !in_array($this->container['item_status'], $allowedValues, true)) {
+        if (!is_null($this->container['itemStatus']) && !in_array($this->container['itemStatus'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'item_status', must be one of '%s'",
-                $this->container['item_status'],
+                "invalid value '%s' for 'itemStatus', must be one of '%s'",
+                $this->container['itemStatus'],
                 implode("', '", $allowedValues)
             );
         }
@@ -356,114 +356,114 @@ class AssociatedItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets order_id
+     * Gets orderId
      *
      * @return string|null
      */
     public function getOrderId()
     {
-        return $this->container['order_id'];
+        return $this->container['orderId'];
     }
 
     /**
-     * Sets order_id
+     * Sets orderId
      *
-     * @param string|null $order_id The Amazon-defined identifier for an order placed by the buyer, in 3-7-7 format.
+     * @param string|null $orderId The Amazon-defined identifier for an order placed by the buyer, in 3-7-7 format.
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setOrderId($orderId)
     {
-        if (!is_null($order_id) && (mb_strlen($order_id) > 20)) {
-            throw new \InvalidArgumentException('invalid length for $order_id when calling AssociatedItem., must be smaller than or equal to 20.');
+        if (!is_null($orderId) && (mb_strlen($orderId) > 20)) {
+            throw new \InvalidArgumentException('invalid length for $orderId when calling AssociatedItem., must be smaller than or equal to 20.');
         }
-        if (!is_null($order_id) && (mb_strlen($order_id) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $order_id when calling AssociatedItem., must be bigger than or equal to 5.');
+        if (!is_null($orderId) && (mb_strlen($orderId) < 5)) {
+            throw new \InvalidArgumentException('invalid length for $orderId when calling AssociatedItem., must be bigger than or equal to 5.');
         }
 
-        $this->container['order_id'] = $order_id;
+        $this->container['orderId'] = $orderId;
 
         return $this;
     }
 
     /**
-     * Gets item_status
+     * Gets itemStatus
      *
      * @return string|null
      */
     public function getItemStatus()
     {
-        return $this->container['item_status'];
+        return $this->container['itemStatus'];
     }
 
     /**
-     * Sets item_status
+     * Sets itemStatus
      *
-     * @param string|null $item_status The status of the item.
+     * @param string|null $itemStatus The status of the item.
      *
      * @return self
      */
-    public function setItemStatus($item_status)
+    public function setItemStatus($itemStatus)
     {
         $allowedValues = $this->getItemStatusAllowableValues();
-        if (!is_null($item_status) && !in_array($item_status, $allowedValues, true)) {
+        if (!is_null($itemStatus) && !in_array($itemStatus, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'item_status', must be one of '%s'",
-                    $item_status,
+                    "Invalid value '%s' for 'itemStatus', must be one of '%s'",
+                    $itemStatus,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['item_status'] = $item_status;
+        $this->container['itemStatus'] = $itemStatus;
 
         return $this;
     }
 
     /**
-     * Gets brand_name
+     * Gets brandName
      *
      * @return string|null
      */
     public function getBrandName()
     {
-        return $this->container['brand_name'];
+        return $this->container['brandName'];
     }
 
     /**
-     * Sets brand_name
+     * Sets brandName
      *
-     * @param string|null $brand_name The brand name of the item.
+     * @param string|null $brandName The brand name of the item.
      *
      * @return self
      */
-    public function setBrandName($brand_name)
+    public function setBrandName($brandName)
     {
-        $this->container['brand_name'] = $brand_name;
+        $this->container['brandName'] = $brandName;
 
         return $this;
     }
 
     /**
-     * Gets item_delivery
+     * Gets itemDelivery
      *
      * @return \Webcom\Amazon\Rest\ServicesApi\Model\ItemDelivery|null
      */
     public function getItemDelivery()
     {
-        return $this->container['item_delivery'];
+        return $this->container['itemDelivery'];
     }
 
     /**
-     * Sets item_delivery
+     * Sets itemDelivery
      *
-     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ItemDelivery|null $item_delivery item_delivery
+     * @param \Webcom\Amazon\Rest\ServicesApi\Model\ItemDelivery|null $itemDelivery itemDelivery
      *
      * @return self
      */
-    public function setItemDelivery($item_delivery)
+    public function setItemDelivery($itemDelivery)
     {
-        $this->container['item_delivery'] = $item_delivery;
+        $this->container['itemDelivery'] = $itemDelivery;
 
         return $this;
     }

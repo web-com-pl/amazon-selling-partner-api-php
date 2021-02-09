@@ -62,9 +62,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_id' => 'string',
-        'service_rate' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate',
-        'label_results' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]'
+        'shipmentId' => 'string',
+        'serviceRate' => '\Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate',
+        'labelResults' => '\Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]'
     ];
 
     /**
@@ -75,9 +75,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_id' => null,
-        'service_rate' => null,
-        'label_results' => null
+        'shipmentId' => null,
+        'serviceRate' => null,
+        'labelResults' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_id' => 'shipmentId',
-        'service_rate' => 'serviceRate',
-        'label_results' => 'labelResults'
+        'shipmentId' => 'shipmentId',
+        'serviceRate' => 'serviceRate',
+        'labelResults' => 'labelResults'
     ];
 
     /**
@@ -118,9 +118,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'shipment_id' => 'setShipmentId',
-        'service_rate' => 'setServiceRate',
-        'label_results' => 'setLabelResults'
+        'shipmentId' => 'setShipmentId',
+        'serviceRate' => 'setServiceRate',
+        'labelResults' => 'setLabelResults'
     ];
 
     /**
@@ -129,9 +129,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'shipment_id' => 'getShipmentId',
-        'service_rate' => 'getServiceRate',
-        'label_results' => 'getLabelResults'
+        'shipmentId' => 'getShipmentId',
+        'serviceRate' => 'getServiceRate',
+        'labelResults' => 'getLabelResults'
     ];
 
     /**
@@ -194,9 +194,9 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_id'] = $data['shipment_id'] ?? null;
-        $this->container['service_rate'] = $data['service_rate'] ?? null;
-        $this->container['label_results'] = $data['label_results'] ?? null;
+        $this->container['shipmentId'] = $data['shipmentId'] ?? null;
+        $this->container['serviceRate'] = $data['serviceRate'] ?? null;
+        $this->container['labelResults'] = $data['labelResults'] ?? null;
     }
 
     /**
@@ -208,14 +208,14 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_id'] === null) {
-            $invalidProperties[] = "'shipment_id' can't be null";
+        if ($this->container['shipmentId'] === null) {
+            $invalidProperties[] = "'shipmentId' can't be null";
         }
-        if ($this->container['service_rate'] === null) {
-            $invalidProperties[] = "'service_rate' can't be null";
+        if ($this->container['serviceRate'] === null) {
+            $invalidProperties[] = "'serviceRate' can't be null";
         }
-        if ($this->container['label_results'] === null) {
-            $invalidProperties[] = "'label_results' can't be null";
+        if ($this->container['labelResults'] === null) {
+            $invalidProperties[] = "'labelResults' can't be null";
         }
         return $invalidProperties;
     }
@@ -233,73 +233,73 @@ class PurchaseShipmentResult implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets shipment_id
+     * Gets shipmentId
      *
      * @return string
      */
     public function getShipmentId()
     {
-        return $this->container['shipment_id'];
+        return $this->container['shipmentId'];
     }
 
     /**
-     * Sets shipment_id
+     * Sets shipmentId
      *
-     * @param string $shipment_id The unique shipment identifier.
+     * @param string $shipmentId The unique shipment identifier.
      *
      * @return self
      */
-    public function setShipmentId($shipment_id)
+    public function setShipmentId($shipmentId)
     {
-        $this->container['shipment_id'] = $shipment_id;
+        $this->container['shipmentId'] = $shipmentId;
 
         return $this;
     }
 
     /**
-     * Gets service_rate
+     * Gets serviceRate
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate
      */
     public function getServiceRate()
     {
-        return $this->container['service_rate'];
+        return $this->container['serviceRate'];
     }
 
     /**
-     * Sets service_rate
+     * Sets serviceRate
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate $service_rate service_rate
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\ServiceRate $serviceRate serviceRate
      *
      * @return self
      */
-    public function setServiceRate($service_rate)
+    public function setServiceRate($serviceRate)
     {
-        $this->container['service_rate'] = $service_rate;
+        $this->container['serviceRate'] = $serviceRate;
 
         return $this;
     }
 
     /**
-     * Gets label_results
+     * Gets labelResults
      *
      * @return \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[]
      */
     public function getLabelResults()
     {
-        return $this->container['label_results'];
+        return $this->container['labelResults'];
     }
 
     /**
-     * Sets label_results
+     * Sets labelResults
      *
-     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[] $label_results A list of label results
+     * @param \Webcom\Amazon\Rest\ShippingApi\Model\LabelResult[] $labelResults A list of label results
      *
      * @return self
      */
-    public function setLabelResults($label_results)
+    public function setLabelResults($labelResults)
     {
-        $this->container['label_results'] = $label_results;
+        $this->container['labelResults'] = $labelResults;
 
         return $this;
     }

@@ -62,13 +62,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'marketplace_id' => 'string',
+        'marketplaceId' => 'string',
         'address' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Address',
         'items' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\GetFulfillmentPreviewItem[]',
-        'shipping_speed_categories' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory[]',
-        'include_cod_fulfillment_preview' => 'bool',
-        'include_delivery_windows' => 'bool',
-        'feature_constraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
+        'shippingSpeedCategories' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory[]',
+        'includeCODFulfillmentPreview' => 'bool',
+        'includeDeliveryWindows' => 'bool',
+        'featureConstraints' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]'
     ];
 
     /**
@@ -79,13 +79,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'marketplace_id' => null,
+        'marketplaceId' => null,
         'address' => null,
         'items' => null,
-        'shipping_speed_categories' => null,
-        'include_cod_fulfillment_preview' => null,
-        'include_delivery_windows' => null,
-        'feature_constraints' => null
+        'shippingSpeedCategories' => null,
+        'includeCODFulfillmentPreview' => null,
+        'includeDeliveryWindows' => null,
+        'featureConstraints' => null
     ];
 
     /**
@@ -115,13 +115,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'marketplace_id' => 'marketplaceId',
+        'marketplaceId' => 'marketplaceId',
         'address' => 'address',
         'items' => 'items',
-        'shipping_speed_categories' => 'shippingSpeedCategories',
-        'include_cod_fulfillment_preview' => 'includeCODFulfillmentPreview',
-        'include_delivery_windows' => 'includeDeliveryWindows',
-        'feature_constraints' => 'featureConstraints'
+        'shippingSpeedCategories' => 'shippingSpeedCategories',
+        'includeCODFulfillmentPreview' => 'includeCODFulfillmentPreview',
+        'includeDeliveryWindows' => 'includeDeliveryWindows',
+        'featureConstraints' => 'featureConstraints'
     ];
 
     /**
@@ -130,13 +130,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'marketplace_id' => 'setMarketplaceId',
+        'marketplaceId' => 'setMarketplaceId',
         'address' => 'setAddress',
         'items' => 'setItems',
-        'shipping_speed_categories' => 'setShippingSpeedCategories',
-        'include_cod_fulfillment_preview' => 'setIncludeCodFulfillmentPreview',
-        'include_delivery_windows' => 'setIncludeDeliveryWindows',
-        'feature_constraints' => 'setFeatureConstraints'
+        'shippingSpeedCategories' => 'setShippingSpeedCategories',
+        'includeCODFulfillmentPreview' => 'setIncludeCODFulfillmentPreview',
+        'includeDeliveryWindows' => 'setIncludeDeliveryWindows',
+        'featureConstraints' => 'setFeatureConstraints'
     ];
 
     /**
@@ -145,13 +145,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'marketplace_id' => 'getMarketplaceId',
+        'marketplaceId' => 'getMarketplaceId',
         'address' => 'getAddress',
         'items' => 'getItems',
-        'shipping_speed_categories' => 'getShippingSpeedCategories',
-        'include_cod_fulfillment_preview' => 'getIncludeCodFulfillmentPreview',
-        'include_delivery_windows' => 'getIncludeDeliveryWindows',
-        'feature_constraints' => 'getFeatureConstraints'
+        'shippingSpeedCategories' => 'getShippingSpeedCategories',
+        'includeCODFulfillmentPreview' => 'getIncludeCODFulfillmentPreview',
+        'includeDeliveryWindows' => 'getIncludeDeliveryWindows',
+        'featureConstraints' => 'getFeatureConstraints'
     ];
 
     /**
@@ -214,13 +214,13 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(array $data = null)
     {
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
         $this->container['address'] = $data['address'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
-        $this->container['shipping_speed_categories'] = $data['shipping_speed_categories'] ?? null;
-        $this->container['include_cod_fulfillment_preview'] = $data['include_cod_fulfillment_preview'] ?? null;
-        $this->container['include_delivery_windows'] = $data['include_delivery_windows'] ?? null;
-        $this->container['feature_constraints'] = $data['feature_constraints'] ?? null;
+        $this->container['shippingSpeedCategories'] = $data['shippingSpeedCategories'] ?? null;
+        $this->container['includeCODFulfillmentPreview'] = $data['includeCODFulfillmentPreview'] ?? null;
+        $this->container['includeDeliveryWindows'] = $data['includeDeliveryWindows'] ?? null;
+        $this->container['featureConstraints'] = $data['featureConstraints'] ?? null;
     }
 
     /**
@@ -254,25 +254,25 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The marketplace the fulfillment order is placed against.
+     * @param string|null $marketplaceId The marketplace the fulfillment order is placed against.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
@@ -326,97 +326,97 @@ class GetFulfillmentPreviewRequest implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
-     * Gets shipping_speed_categories
+     * Gets shippingSpeedCategories
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory[]|null
      */
     public function getShippingSpeedCategories()
     {
-        return $this->container['shipping_speed_categories'];
+        return $this->container['shippingSpeedCategories'];
     }
 
     /**
-     * Sets shipping_speed_categories
+     * Sets shippingSpeedCategories
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory[]|null $shipping_speed_categories shipping_speed_categories
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\ShippingSpeedCategory[]|null $shippingSpeedCategories shippingSpeedCategories
      *
      * @return self
      */
-    public function setShippingSpeedCategories($shipping_speed_categories)
+    public function setShippingSpeedCategories($shippingSpeedCategories)
     {
-        $this->container['shipping_speed_categories'] = $shipping_speed_categories;
+        $this->container['shippingSpeedCategories'] = $shippingSpeedCategories;
 
         return $this;
     }
 
     /**
-     * Gets include_cod_fulfillment_preview
+     * Gets includeCODFulfillmentPreview
      *
      * @return bool|null
      */
-    public function getIncludeCodFulfillmentPreview()
+    public function getIncludeCODFulfillmentPreview()
     {
-        return $this->container['include_cod_fulfillment_preview'];
+        return $this->container['includeCODFulfillmentPreview'];
     }
 
     /**
-     * Sets include_cod_fulfillment_preview
+     * Sets includeCODFulfillmentPreview
      *
-     * @param bool|null $include_cod_fulfillment_preview Specifies whether to return fulfillment order previews that are for COD (Cash On Delivery).  Possible values:  * true - Returns all fulfillment order previews (both for COD and not for COD). * false - Returns only fulfillment order previews that are not for COD.
+     * @param bool|null $includeCODFulfillmentPreview Specifies whether to return fulfillment order previews that are for COD (Cash On Delivery).  Possible values:  * true - Returns all fulfillment order previews (both for COD and not for COD). * false - Returns only fulfillment order previews that are not for COD.
      *
      * @return self
      */
-    public function setIncludeCodFulfillmentPreview($include_cod_fulfillment_preview)
+    public function setIncludeCODFulfillmentPreview($includeCODFulfillmentPreview)
     {
-        $this->container['include_cod_fulfillment_preview'] = $include_cod_fulfillment_preview;
+        $this->container['includeCODFulfillmentPreview'] = $includeCODFulfillmentPreview;
 
         return $this;
     }
 
     /**
-     * Gets include_delivery_windows
+     * Gets includeDeliveryWindows
      *
      * @return bool|null
      */
     public function getIncludeDeliveryWindows()
     {
-        return $this->container['include_delivery_windows'];
+        return $this->container['includeDeliveryWindows'];
     }
 
     /**
-     * Sets include_delivery_windows
+     * Sets includeDeliveryWindows
      *
-     * @param bool|null $include_delivery_windows Specifies whether to return the ScheduledDeliveryInfo response object, which contains the available delivery windows for a Scheduled Delivery. The ScheduledDeliveryInfo response object can only be returned for fulfillment order previews with ShippingSpeedCategories = ScheduledDelivery.
+     * @param bool|null $includeDeliveryWindows Specifies whether to return the ScheduledDeliveryInfo response object, which contains the available delivery windows for a Scheduled Delivery. The ScheduledDeliveryInfo response object can only be returned for fulfillment order previews with ShippingSpeedCategories = ScheduledDelivery.
      *
      * @return self
      */
-    public function setIncludeDeliveryWindows($include_delivery_windows)
+    public function setIncludeDeliveryWindows($includeDeliveryWindows)
     {
-        $this->container['include_delivery_windows'] = $include_delivery_windows;
+        $this->container['includeDeliveryWindows'] = $includeDeliveryWindows;
 
         return $this;
     }
 
     /**
-     * Gets feature_constraints
+     * Gets featureConstraints
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null
      */
     public function getFeatureConstraints()
     {
-        return $this->container['feature_constraints'];
+        return $this->container['featureConstraints'];
     }
 
     /**
-     * Sets feature_constraints
+     * Sets featureConstraints
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $feature_constraints A list of features and their fulfillment policies to apply to the order.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FeatureSettings[]|null $featureConstraints A list of features and their fulfillment policies to apply to the order.
      *
      * @return self
      */
-    public function setFeatureConstraints($feature_constraints)
+    public function setFeatureConstraints($featureConstraints)
     {
-        $this->container['feature_constraints'] = $feature_constraints;
+        $this->container['featureConstraints'] = $featureConstraints;
 
         return $this;
     }

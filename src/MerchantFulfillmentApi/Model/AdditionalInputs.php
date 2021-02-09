@@ -62,8 +62,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_input_field_name' => 'string',
-        'seller_input_definition' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\SellerInputDefinition'
+        'additionalInputFieldName' => 'string',
+        'sellerInputDefinition' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\SellerInputDefinition'
     ];
 
     /**
@@ -74,8 +74,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'additional_input_field_name' => null,
-        'seller_input_definition' => null
+        'additionalInputFieldName' => null,
+        'sellerInputDefinition' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'additional_input_field_name' => 'AdditionalInputFieldName',
-        'seller_input_definition' => 'SellerInputDefinition'
+        'additionalInputFieldName' => 'AdditionalInputFieldName',
+        'sellerInputDefinition' => 'SellerInputDefinition'
     ];
 
     /**
@@ -115,8 +115,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'additional_input_field_name' => 'setAdditionalInputFieldName',
-        'seller_input_definition' => 'setSellerInputDefinition'
+        'additionalInputFieldName' => 'setAdditionalInputFieldName',
+        'sellerInputDefinition' => 'setSellerInputDefinition'
     ];
 
     /**
@@ -125,8 +125,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'additional_input_field_name' => 'getAdditionalInputFieldName',
-        'seller_input_definition' => 'getSellerInputDefinition'
+        'additionalInputFieldName' => 'getAdditionalInputFieldName',
+        'sellerInputDefinition' => 'getSellerInputDefinition'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['additional_input_field_name'] = $data['additional_input_field_name'] ?? null;
-        $this->container['seller_input_definition'] = $data['seller_input_definition'] ?? null;
+        $this->container['additionalInputFieldName'] = $data['additionalInputFieldName'] ?? null;
+        $this->container['sellerInputDefinition'] = $data['sellerInputDefinition'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class AdditionalInputs implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets additional_input_field_name
+     * Gets additionalInputFieldName
      *
      * @return string|null
      */
     public function getAdditionalInputFieldName()
     {
-        return $this->container['additional_input_field_name'];
+        return $this->container['additionalInputFieldName'];
     }
 
     /**
-     * Sets additional_input_field_name
+     * Sets additionalInputFieldName
      *
-     * @param string|null $additional_input_field_name The field name.
+     * @param string|null $additionalInputFieldName The field name.
      *
      * @return self
      */
-    public function setAdditionalInputFieldName($additional_input_field_name)
+    public function setAdditionalInputFieldName($additionalInputFieldName)
     {
-        $this->container['additional_input_field_name'] = $additional_input_field_name;
+        $this->container['additionalInputFieldName'] = $additionalInputFieldName;
 
         return $this;
     }
 
     /**
-     * Gets seller_input_definition
+     * Gets sellerInputDefinition
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\SellerInputDefinition|null
      */
     public function getSellerInputDefinition()
     {
-        return $this->container['seller_input_definition'];
+        return $this->container['sellerInputDefinition'];
     }
 
     /**
-     * Sets seller_input_definition
+     * Sets sellerInputDefinition
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\SellerInputDefinition|null $seller_input_definition seller_input_definition
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\SellerInputDefinition|null $sellerInputDefinition sellerInputDefinition
      *
      * @return self
      */
-    public function setSellerInputDefinition($seller_input_definition)
+    public function setSellerInputDefinition($sellerInputDefinition)
     {
-        $this->container['seller_input_definition'] = $seller_input_definition;
+        $this->container['sellerInputDefinition'] = $sellerInputDefinition;
 
         return $this;
     }

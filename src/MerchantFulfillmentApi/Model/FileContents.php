@@ -63,7 +63,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'contents' => 'string',
-        'file_type' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileType',
+        'fileType' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileType',
         'checksum' => 'string'
     ];
 
@@ -76,7 +76,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'contents' => null,
-        'file_type' => null,
+        'fileType' => null,
         'checksum' => null
     ];
 
@@ -108,7 +108,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'contents' => 'Contents',
-        'file_type' => 'FileType',
+        'fileType' => 'FileType',
         'checksum' => 'Checksum'
     ];
 
@@ -119,7 +119,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'contents' => 'setContents',
-        'file_type' => 'setFileType',
+        'fileType' => 'setFileType',
         'checksum' => 'setChecksum'
     ];
 
@@ -130,7 +130,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'contents' => 'getContents',
-        'file_type' => 'getFileType',
+        'fileType' => 'getFileType',
         'checksum' => 'getChecksum'
     ];
 
@@ -195,7 +195,7 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['contents'] = $data['contents'] ?? null;
-        $this->container['file_type'] = $data['file_type'] ?? null;
+        $this->container['fileType'] = $data['fileType'] ?? null;
         $this->container['checksum'] = $data['checksum'] ?? null;
     }
 
@@ -211,8 +211,8 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['contents'] === null) {
             $invalidProperties[] = "'contents' can't be null";
         }
-        if ($this->container['file_type'] === null) {
-            $invalidProperties[] = "'file_type' can't be null";
+        if ($this->container['fileType'] === null) {
+            $invalidProperties[] = "'fileType' can't be null";
         }
         if ($this->container['checksum'] === null) {
             $invalidProperties[] = "'checksum' can't be null";
@@ -257,25 +257,25 @@ class FileContents implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets file_type
+     * Gets fileType
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileType
      */
     public function getFileType()
     {
-        return $this->container['file_type'];
+        return $this->container['fileType'];
     }
 
     /**
-     * Sets file_type
+     * Sets fileType
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileType $file_type file_type
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\FileType $fileType fileType
      *
      * @return self
      */
-    public function setFileType($file_type)
+    public function setFileType($fileType)
     {
-        $this->container['file_type'] = $file_type;
+        $this->container['fileType'] = $fileType;
 
         return $this;
     }

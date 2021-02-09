@@ -62,8 +62,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'include_packing_slip_with_label' => 'bool',
-        'label_format' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat'
+        'includePackingSlipWithLabel' => 'bool',
+        'labelFormat' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat'
     ];
 
     /**
@@ -74,8 +74,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'include_packing_slip_with_label' => null,
-        'label_format' => null
+        'includePackingSlipWithLabel' => null,
+        'labelFormat' => null
     ];
 
     /**
@@ -105,8 +105,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_packing_slip_with_label' => 'IncludePackingSlipWithLabel',
-        'label_format' => 'LabelFormat'
+        'includePackingSlipWithLabel' => 'IncludePackingSlipWithLabel',
+        'labelFormat' => 'LabelFormat'
     ];
 
     /**
@@ -115,8 +115,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'include_packing_slip_with_label' => 'setIncludePackingSlipWithLabel',
-        'label_format' => 'setLabelFormat'
+        'includePackingSlipWithLabel' => 'setIncludePackingSlipWithLabel',
+        'labelFormat' => 'setLabelFormat'
     ];
 
     /**
@@ -125,8 +125,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'include_packing_slip_with_label' => 'getIncludePackingSlipWithLabel',
-        'label_format' => 'getLabelFormat'
+        'includePackingSlipWithLabel' => 'getIncludePackingSlipWithLabel',
+        'labelFormat' => 'getLabelFormat'
     ];
 
     /**
@@ -189,8 +189,8 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_packing_slip_with_label'] = $data['include_packing_slip_with_label'] ?? null;
-        $this->container['label_format'] = $data['label_format'] ?? null;
+        $this->container['includePackingSlipWithLabel'] = $data['includePackingSlipWithLabel'] ?? null;
+        $this->container['labelFormat'] = $data['labelFormat'] ?? null;
     }
 
     /**
@@ -218,49 +218,49 @@ class LabelFormatOption implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets include_packing_slip_with_label
+     * Gets includePackingSlipWithLabel
      *
      * @return bool|null
      */
     public function getIncludePackingSlipWithLabel()
     {
-        return $this->container['include_packing_slip_with_label'];
+        return $this->container['includePackingSlipWithLabel'];
     }
 
     /**
-     * Sets include_packing_slip_with_label
+     * Sets includePackingSlipWithLabel
      *
-     * @param bool|null $include_packing_slip_with_label When true, include a packing slip with the label.
+     * @param bool|null $includePackingSlipWithLabel When true, include a packing slip with the label.
      *
      * @return self
      */
-    public function setIncludePackingSlipWithLabel($include_packing_slip_with_label)
+    public function setIncludePackingSlipWithLabel($includePackingSlipWithLabel)
     {
-        $this->container['include_packing_slip_with_label'] = $include_packing_slip_with_label;
+        $this->container['includePackingSlipWithLabel'] = $includePackingSlipWithLabel;
 
         return $this;
     }
 
     /**
-     * Gets label_format
+     * Gets labelFormat
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null
      */
     public function getLabelFormat()
     {
-        return $this->container['label_format'];
+        return $this->container['labelFormat'];
     }
 
     /**
-     * Sets label_format
+     * Sets labelFormat
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $label_format label_format
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormat|null $labelFormat labelFormat
      *
      * @return self
      */
-    public function setLabelFormat($label_format)
+    public function setLabelFormat($labelFormat)
     {
-        $this->container['label_format'] = $label_format;
+        $this->container['labelFormat'] = $labelFormat;
 
         return $this;
     }

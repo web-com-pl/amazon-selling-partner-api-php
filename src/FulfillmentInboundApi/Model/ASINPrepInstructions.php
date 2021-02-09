@@ -62,10 +62,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'asin' => 'string',
-        'barcode_instruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BarcodeInstruction',
-        'prep_guidance' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepGuidance',
-        'prep_instruction_list' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction[]'
+        'aSIN' => 'string',
+        'barcodeInstruction' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BarcodeInstruction',
+        'prepGuidance' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepGuidance',
+        'prepInstructionList' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction[]'
     ];
 
     /**
@@ -76,10 +76,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'asin' => null,
-        'barcode_instruction' => null,
-        'prep_guidance' => null,
-        'prep_instruction_list' => null
+        'aSIN' => null,
+        'barcodeInstruction' => null,
+        'prepGuidance' => null,
+        'prepInstructionList' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'asin' => 'ASIN',
-        'barcode_instruction' => 'BarcodeInstruction',
-        'prep_guidance' => 'PrepGuidance',
-        'prep_instruction_list' => 'PrepInstructionList'
+        'aSIN' => 'ASIN',
+        'barcodeInstruction' => 'BarcodeInstruction',
+        'prepGuidance' => 'PrepGuidance',
+        'prepInstructionList' => 'PrepInstructionList'
     ];
 
     /**
@@ -121,10 +121,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'asin' => 'setAsin',
-        'barcode_instruction' => 'setBarcodeInstruction',
-        'prep_guidance' => 'setPrepGuidance',
-        'prep_instruction_list' => 'setPrepInstructionList'
+        'aSIN' => 'setASIN',
+        'barcodeInstruction' => 'setBarcodeInstruction',
+        'prepGuidance' => 'setPrepGuidance',
+        'prepInstructionList' => 'setPrepInstructionList'
     ];
 
     /**
@@ -133,10 +133,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'asin' => 'getAsin',
-        'barcode_instruction' => 'getBarcodeInstruction',
-        'prep_guidance' => 'getPrepGuidance',
-        'prep_instruction_list' => 'getPrepInstructionList'
+        'aSIN' => 'getASIN',
+        'barcodeInstruction' => 'getBarcodeInstruction',
+        'prepGuidance' => 'getPrepGuidance',
+        'prepInstructionList' => 'getPrepInstructionList'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['asin'] = $data['asin'] ?? null;
-        $this->container['barcode_instruction'] = $data['barcode_instruction'] ?? null;
-        $this->container['prep_guidance'] = $data['prep_guidance'] ?? null;
-        $this->container['prep_instruction_list'] = $data['prep_instruction_list'] ?? null;
+        $this->container['aSIN'] = $data['aSIN'] ?? null;
+        $this->container['barcodeInstruction'] = $data['barcodeInstruction'] ?? null;
+        $this->container['prepGuidance'] = $data['prepGuidance'] ?? null;
+        $this->container['prepInstructionList'] = $data['prepInstructionList'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class ASINPrepInstructions implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets asin
+     * Gets aSIN
      *
      * @return string|null
      */
-    public function getAsin()
+    public function getASIN()
     {
-        return $this->container['asin'];
+        return $this->container['aSIN'];
     }
 
     /**
-     * Sets asin
+     * Sets aSIN
      *
-     * @param string|null $asin The Amazon Standard Identification Number (ASIN) of the item.
+     * @param string|null $aSIN The Amazon Standard Identification Number (ASIN) of the item.
      *
      * @return self
      */
-    public function setAsin($asin)
+    public function setASIN($aSIN)
     {
-        $this->container['asin'] = $asin;
+        $this->container['aSIN'] = $aSIN;
 
         return $this;
     }
 
     /**
-     * Gets barcode_instruction
+     * Gets barcodeInstruction
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BarcodeInstruction|null
      */
     public function getBarcodeInstruction()
     {
-        return $this->container['barcode_instruction'];
+        return $this->container['barcodeInstruction'];
     }
 
     /**
-     * Sets barcode_instruction
+     * Sets barcodeInstruction
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BarcodeInstruction|null $barcode_instruction barcode_instruction
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\BarcodeInstruction|null $barcodeInstruction barcodeInstruction
      *
      * @return self
      */
-    public function setBarcodeInstruction($barcode_instruction)
+    public function setBarcodeInstruction($barcodeInstruction)
     {
-        $this->container['barcode_instruction'] = $barcode_instruction;
+        $this->container['barcodeInstruction'] = $barcodeInstruction;
 
         return $this;
     }
 
     /**
-     * Gets prep_guidance
+     * Gets prepGuidance
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepGuidance|null
      */
     public function getPrepGuidance()
     {
-        return $this->container['prep_guidance'];
+        return $this->container['prepGuidance'];
     }
 
     /**
-     * Sets prep_guidance
+     * Sets prepGuidance
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepGuidance|null $prep_guidance prep_guidance
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepGuidance|null $prepGuidance prepGuidance
      *
      * @return self
      */
-    public function setPrepGuidance($prep_guidance)
+    public function setPrepGuidance($prepGuidance)
     {
-        $this->container['prep_guidance'] = $prep_guidance;
+        $this->container['prepGuidance'] = $prepGuidance;
 
         return $this;
     }
 
     /**
-     * Gets prep_instruction_list
+     * Gets prepInstructionList
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction[]|null
      */
     public function getPrepInstructionList()
     {
-        return $this->container['prep_instruction_list'];
+        return $this->container['prepInstructionList'];
     }
 
     /**
-     * Sets prep_instruction_list
+     * Sets prepInstructionList
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction[]|null $prep_instruction_list A list of preparation instructions to help with item sourcing decisions.
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\PrepInstruction[]|null $prepInstructionList A list of preparation instructions to help with item sourcing decisions.
      *
      * @return self
      */
-    public function setPrepInstructionList($prep_instruction_list)
+    public function setPrepInstructionList($prepInstructionList)
     {
-        $this->container['prep_instruction_list'] = $prep_instruction_list;
+        $this->container['prepInstructionList'] = $prepInstructionList;
 
         return $this;
     }

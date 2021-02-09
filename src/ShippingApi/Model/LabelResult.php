@@ -62,8 +62,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'container_reference_id' => 'string',
-        'tracking_id' => 'string',
+        'containerReferenceId' => 'string',
+        'trackingId' => 'string',
         'label' => '\Webcom\Amazon\Rest\ShippingApi\Model\Label'
     ];
 
@@ -75,8 +75,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'container_reference_id' => null,
-        'tracking_id' => null,
+        'containerReferenceId' => null,
+        'trackingId' => null,
         'label' => null
     ];
 
@@ -107,8 +107,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'container_reference_id' => 'containerReferenceId',
-        'tracking_id' => 'trackingId',
+        'containerReferenceId' => 'containerReferenceId',
+        'trackingId' => 'trackingId',
         'label' => 'label'
     ];
 
@@ -118,8 +118,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'container_reference_id' => 'setContainerReferenceId',
-        'tracking_id' => 'setTrackingId',
+        'containerReferenceId' => 'setContainerReferenceId',
+        'trackingId' => 'setTrackingId',
         'label' => 'setLabel'
     ];
 
@@ -129,8 +129,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'container_reference_id' => 'getContainerReferenceId',
-        'tracking_id' => 'getTrackingId',
+        'containerReferenceId' => 'getContainerReferenceId',
+        'trackingId' => 'getTrackingId',
         'label' => 'getLabel'
     ];
 
@@ -194,8 +194,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['container_reference_id'] = $data['container_reference_id'] ?? null;
-        $this->container['tracking_id'] = $data['tracking_id'] ?? null;
+        $this->container['containerReferenceId'] = $data['containerReferenceId'] ?? null;
+        $this->container['trackingId'] = $data['trackingId'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
     }
 
@@ -208,8 +208,8 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['container_reference_id']) && (mb_strlen($this->container['container_reference_id']) > 40)) {
-            $invalidProperties[] = "invalid value for 'container_reference_id', the character length must be smaller than or equal to 40.";
+        if (!is_null($this->container['containerReferenceId']) && (mb_strlen($this->container['containerReferenceId']) > 40)) {
+            $invalidProperties[] = "invalid value for 'containerReferenceId', the character length must be smaller than or equal to 40.";
         }
 
         return $invalidProperties;
@@ -228,53 +228,53 @@ class LabelResult implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets container_reference_id
+     * Gets containerReferenceId
      *
      * @return string|null
      */
     public function getContainerReferenceId()
     {
-        return $this->container['container_reference_id'];
+        return $this->container['containerReferenceId'];
     }
 
     /**
-     * Sets container_reference_id
+     * Sets containerReferenceId
      *
-     * @param string|null $container_reference_id An identifier for the container. This must be unique within all the containers in the same shipment.
+     * @param string|null $containerReferenceId An identifier for the container. This must be unique within all the containers in the same shipment.
      *
      * @return self
      */
-    public function setContainerReferenceId($container_reference_id)
+    public function setContainerReferenceId($containerReferenceId)
     {
-        if (!is_null($container_reference_id) && (mb_strlen($container_reference_id) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $container_reference_id when calling LabelResult., must be smaller than or equal to 40.');
+        if (!is_null($containerReferenceId) && (mb_strlen($containerReferenceId) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $containerReferenceId when calling LabelResult., must be smaller than or equal to 40.');
         }
 
-        $this->container['container_reference_id'] = $container_reference_id;
+        $this->container['containerReferenceId'] = $containerReferenceId;
 
         return $this;
     }
 
     /**
-     * Gets tracking_id
+     * Gets trackingId
      *
      * @return string|null
      */
     public function getTrackingId()
     {
-        return $this->container['tracking_id'];
+        return $this->container['trackingId'];
     }
 
     /**
-     * Sets tracking_id
+     * Sets trackingId
      *
-     * @param string|null $tracking_id The tracking identifier assigned to the container.
+     * @param string|null $trackingId The tracking identifier assigned to the container.
      *
      * @return self
      */
-    public function setTrackingId($tracking_id)
+    public function setTrackingId($trackingId)
     {
-        $this->container['tracking_id'] = $tracking_id;
+        $this->container['trackingId'] = $trackingId;
 
         return $this;
     }

@@ -62,10 +62,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'posted_date' => '\DateTime',
-        'original_removal_order_id' => 'string',
-        'liquidation_proceeds_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'liquidation_fee_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
+        'postedDate' => '\DateTime',
+        'originalRemovalOrderId' => 'string',
+        'liquidationProceedsAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'liquidationFeeAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency'
     ];
 
     /**
@@ -76,10 +76,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'posted_date' => 'date-time',
-        'original_removal_order_id' => null,
-        'liquidation_proceeds_amount' => null,
-        'liquidation_fee_amount' => null
+        'postedDate' => 'date-time',
+        'originalRemovalOrderId' => null,
+        'liquidationProceedsAmount' => null,
+        'liquidationFeeAmount' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'posted_date' => 'PostedDate',
-        'original_removal_order_id' => 'OriginalRemovalOrderId',
-        'liquidation_proceeds_amount' => 'LiquidationProceedsAmount',
-        'liquidation_fee_amount' => 'LiquidationFeeAmount'
+        'postedDate' => 'PostedDate',
+        'originalRemovalOrderId' => 'OriginalRemovalOrderId',
+        'liquidationProceedsAmount' => 'LiquidationProceedsAmount',
+        'liquidationFeeAmount' => 'LiquidationFeeAmount'
     ];
 
     /**
@@ -121,10 +121,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'posted_date' => 'setPostedDate',
-        'original_removal_order_id' => 'setOriginalRemovalOrderId',
-        'liquidation_proceeds_amount' => 'setLiquidationProceedsAmount',
-        'liquidation_fee_amount' => 'setLiquidationFeeAmount'
+        'postedDate' => 'setPostedDate',
+        'originalRemovalOrderId' => 'setOriginalRemovalOrderId',
+        'liquidationProceedsAmount' => 'setLiquidationProceedsAmount',
+        'liquidationFeeAmount' => 'setLiquidationFeeAmount'
     ];
 
     /**
@@ -133,10 +133,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'posted_date' => 'getPostedDate',
-        'original_removal_order_id' => 'getOriginalRemovalOrderId',
-        'liquidation_proceeds_amount' => 'getLiquidationProceedsAmount',
-        'liquidation_fee_amount' => 'getLiquidationFeeAmount'
+        'postedDate' => 'getPostedDate',
+        'originalRemovalOrderId' => 'getOriginalRemovalOrderId',
+        'liquidationProceedsAmount' => 'getLiquidationProceedsAmount',
+        'liquidationFeeAmount' => 'getLiquidationFeeAmount'
     ];
 
     /**
@@ -199,10 +199,10 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['posted_date'] = $data['posted_date'] ?? null;
-        $this->container['original_removal_order_id'] = $data['original_removal_order_id'] ?? null;
-        $this->container['liquidation_proceeds_amount'] = $data['liquidation_proceeds_amount'] ?? null;
-        $this->container['liquidation_fee_amount'] = $data['liquidation_fee_amount'] ?? null;
+        $this->container['postedDate'] = $data['postedDate'] ?? null;
+        $this->container['originalRemovalOrderId'] = $data['originalRemovalOrderId'] ?? null;
+        $this->container['liquidationProceedsAmount'] = $data['liquidationProceedsAmount'] ?? null;
+        $this->container['liquidationFeeAmount'] = $data['liquidationFeeAmount'] ?? null;
     }
 
     /**
@@ -230,97 +230,97 @@ class FBALiquidationEvent implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets posted_date
+     * Gets postedDate
      *
      * @return \DateTime|null
      */
     public function getPostedDate()
     {
-        return $this->container['posted_date'];
+        return $this->container['postedDate'];
     }
 
     /**
-     * Sets posted_date
+     * Sets postedDate
      *
-     * @param \DateTime|null $posted_date posted_date
+     * @param \DateTime|null $postedDate postedDate
      *
      * @return self
      */
-    public function setPostedDate($posted_date)
+    public function setPostedDate($postedDate)
     {
-        $this->container['posted_date'] = $posted_date;
+        $this->container['postedDate'] = $postedDate;
 
         return $this;
     }
 
     /**
-     * Gets original_removal_order_id
+     * Gets originalRemovalOrderId
      *
      * @return string|null
      */
     public function getOriginalRemovalOrderId()
     {
-        return $this->container['original_removal_order_id'];
+        return $this->container['originalRemovalOrderId'];
     }
 
     /**
-     * Sets original_removal_order_id
+     * Sets originalRemovalOrderId
      *
-     * @param string|null $original_removal_order_id The identifier for the original removal order.
+     * @param string|null $originalRemovalOrderId The identifier for the original removal order.
      *
      * @return self
      */
-    public function setOriginalRemovalOrderId($original_removal_order_id)
+    public function setOriginalRemovalOrderId($originalRemovalOrderId)
     {
-        $this->container['original_removal_order_id'] = $original_removal_order_id;
+        $this->container['originalRemovalOrderId'] = $originalRemovalOrderId;
 
         return $this;
     }
 
     /**
-     * Gets liquidation_proceeds_amount
+     * Gets liquidationProceedsAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getLiquidationProceedsAmount()
     {
-        return $this->container['liquidation_proceeds_amount'];
+        return $this->container['liquidationProceedsAmount'];
     }
 
     /**
-     * Sets liquidation_proceeds_amount
+     * Sets liquidationProceedsAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $liquidation_proceeds_amount liquidation_proceeds_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $liquidationProceedsAmount liquidationProceedsAmount
      *
      * @return self
      */
-    public function setLiquidationProceedsAmount($liquidation_proceeds_amount)
+    public function setLiquidationProceedsAmount($liquidationProceedsAmount)
     {
-        $this->container['liquidation_proceeds_amount'] = $liquidation_proceeds_amount;
+        $this->container['liquidationProceedsAmount'] = $liquidationProceedsAmount;
 
         return $this;
     }
 
     /**
-     * Gets liquidation_fee_amount
+     * Gets liquidationFeeAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getLiquidationFeeAmount()
     {
-        return $this->container['liquidation_fee_amount'];
+        return $this->container['liquidationFeeAmount'];
     }
 
     /**
-     * Sets liquidation_fee_amount
+     * Sets liquidationFeeAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $liquidation_fee_amount liquidation_fee_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $liquidationFeeAmount liquidationFeeAmount
      *
      * @return self
      */
-    public function setLiquidationFeeAmount($liquidation_fee_amount)
+    public function setLiquidationFeeAmount($liquidationFeeAmount)
     {
-        $this->container['liquidation_fee_amount'] = $liquidation_fee_amount;
+        $this->container['liquidationFeeAmount'] = $liquidationFeeAmount;
 
         return $this;
     }

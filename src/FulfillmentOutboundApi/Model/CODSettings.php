@@ -62,11 +62,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_cod_required' => 'bool',
-        'cod_charge' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'cod_charge_tax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'shipping_charge' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
-        'shipping_charge_tax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
+        'isCodRequired' => 'bool',
+        'codCharge' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'codChargeTax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'shippingCharge' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money',
+        'shippingChargeTax' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money'
     ];
 
     /**
@@ -77,11 +77,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_cod_required' => null,
-        'cod_charge' => null,
-        'cod_charge_tax' => null,
-        'shipping_charge' => null,
-        'shipping_charge_tax' => null
+        'isCodRequired' => null,
+        'codCharge' => null,
+        'codChargeTax' => null,
+        'shippingCharge' => null,
+        'shippingChargeTax' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_cod_required' => 'isCodRequired',
-        'cod_charge' => 'codCharge',
-        'cod_charge_tax' => 'codChargeTax',
-        'shipping_charge' => 'shippingCharge',
-        'shipping_charge_tax' => 'shippingChargeTax'
+        'isCodRequired' => 'isCodRequired',
+        'codCharge' => 'codCharge',
+        'codChargeTax' => 'codChargeTax',
+        'shippingCharge' => 'shippingCharge',
+        'shippingChargeTax' => 'shippingChargeTax'
     ];
 
     /**
@@ -124,11 +124,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'is_cod_required' => 'setIsCodRequired',
-        'cod_charge' => 'setCodCharge',
-        'cod_charge_tax' => 'setCodChargeTax',
-        'shipping_charge' => 'setShippingCharge',
-        'shipping_charge_tax' => 'setShippingChargeTax'
+        'isCodRequired' => 'setIsCodRequired',
+        'codCharge' => 'setCodCharge',
+        'codChargeTax' => 'setCodChargeTax',
+        'shippingCharge' => 'setShippingCharge',
+        'shippingChargeTax' => 'setShippingChargeTax'
     ];
 
     /**
@@ -137,11 +137,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'is_cod_required' => 'getIsCodRequired',
-        'cod_charge' => 'getCodCharge',
-        'cod_charge_tax' => 'getCodChargeTax',
-        'shipping_charge' => 'getShippingCharge',
-        'shipping_charge_tax' => 'getShippingChargeTax'
+        'isCodRequired' => 'getIsCodRequired',
+        'codCharge' => 'getCodCharge',
+        'codChargeTax' => 'getCodChargeTax',
+        'shippingCharge' => 'getShippingCharge',
+        'shippingChargeTax' => 'getShippingChargeTax'
     ];
 
     /**
@@ -204,11 +204,11 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_cod_required'] = $data['is_cod_required'] ?? null;
-        $this->container['cod_charge'] = $data['cod_charge'] ?? null;
-        $this->container['cod_charge_tax'] = $data['cod_charge_tax'] ?? null;
-        $this->container['shipping_charge'] = $data['shipping_charge'] ?? null;
-        $this->container['shipping_charge_tax'] = $data['shipping_charge_tax'] ?? null;
+        $this->container['isCodRequired'] = $data['isCodRequired'] ?? null;
+        $this->container['codCharge'] = $data['codCharge'] ?? null;
+        $this->container['codChargeTax'] = $data['codChargeTax'] ?? null;
+        $this->container['shippingCharge'] = $data['shippingCharge'] ?? null;
+        $this->container['shippingChargeTax'] = $data['shippingChargeTax'] ?? null;
     }
 
     /**
@@ -220,8 +220,8 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['is_cod_required'] === null) {
-            $invalidProperties[] = "'is_cod_required' can't be null";
+        if ($this->container['isCodRequired'] === null) {
+            $invalidProperties[] = "'isCodRequired' can't be null";
         }
         return $invalidProperties;
     }
@@ -239,121 +239,121 @@ class CODSettings implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets is_cod_required
+     * Gets isCodRequired
      *
      * @return bool
      */
     public function getIsCodRequired()
     {
-        return $this->container['is_cod_required'];
+        return $this->container['isCodRequired'];
     }
 
     /**
-     * Sets is_cod_required
+     * Sets isCodRequired
      *
-     * @param bool $is_cod_required When true, this fulfillment order requires a COD (Cash On Delivery) payment.
+     * @param bool $isCodRequired When true, this fulfillment order requires a COD (Cash On Delivery) payment.
      *
      * @return self
      */
-    public function setIsCodRequired($is_cod_required)
+    public function setIsCodRequired($isCodRequired)
     {
-        $this->container['is_cod_required'] = $is_cod_required;
+        $this->container['isCodRequired'] = $isCodRequired;
 
         return $this;
     }
 
     /**
-     * Gets cod_charge
+     * Gets codCharge
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getCodCharge()
     {
-        return $this->container['cod_charge'];
+        return $this->container['codCharge'];
     }
 
     /**
-     * Sets cod_charge
+     * Sets codCharge
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $cod_charge cod_charge
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $codCharge codCharge
      *
      * @return self
      */
-    public function setCodCharge($cod_charge)
+    public function setCodCharge($codCharge)
     {
-        $this->container['cod_charge'] = $cod_charge;
+        $this->container['codCharge'] = $codCharge;
 
         return $this;
     }
 
     /**
-     * Gets cod_charge_tax
+     * Gets codChargeTax
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getCodChargeTax()
     {
-        return $this->container['cod_charge_tax'];
+        return $this->container['codChargeTax'];
     }
 
     /**
-     * Sets cod_charge_tax
+     * Sets codChargeTax
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $cod_charge_tax cod_charge_tax
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $codChargeTax codChargeTax
      *
      * @return self
      */
-    public function setCodChargeTax($cod_charge_tax)
+    public function setCodChargeTax($codChargeTax)
     {
-        $this->container['cod_charge_tax'] = $cod_charge_tax;
+        $this->container['codChargeTax'] = $codChargeTax;
 
         return $this;
     }
 
     /**
-     * Gets shipping_charge
+     * Gets shippingCharge
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getShippingCharge()
     {
-        return $this->container['shipping_charge'];
+        return $this->container['shippingCharge'];
     }
 
     /**
-     * Sets shipping_charge
+     * Sets shippingCharge
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $shipping_charge shipping_charge
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $shippingCharge shippingCharge
      *
      * @return self
      */
-    public function setShippingCharge($shipping_charge)
+    public function setShippingCharge($shippingCharge)
     {
-        $this->container['shipping_charge'] = $shipping_charge;
+        $this->container['shippingCharge'] = $shippingCharge;
 
         return $this;
     }
 
     /**
-     * Gets shipping_charge_tax
+     * Gets shippingChargeTax
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null
      */
     public function getShippingChargeTax()
     {
-        return $this->container['shipping_charge_tax'];
+        return $this->container['shippingChargeTax'];
     }
 
     /**
-     * Sets shipping_charge_tax
+     * Sets shippingChargeTax
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $shipping_charge_tax shipping_charge_tax
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\Money|null $shippingChargeTax shippingChargeTax
      *
      * @return self
      */
-    public function setShippingChargeTax($shipping_charge_tax)
+    public function setShippingChargeTax($shippingChargeTax)
     {
-        $this->container['shipping_charge_tax'] = $shipping_charge_tax;
+        $this->container['shippingChargeTax'] = $shippingChargeTax;
 
         return $this;
     }

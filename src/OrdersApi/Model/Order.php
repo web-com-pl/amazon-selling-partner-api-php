@@ -62,41 +62,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amazon_order_id' => 'string',
-        'seller_order_id' => 'string',
-        'purchase_date' => 'string',
-        'last_update_date' => 'string',
-        'order_status' => 'string',
-        'fulfillment_channel' => 'string',
-        'sales_channel' => 'string',
-        'order_channel' => 'string',
-        'ship_service_level' => 'string',
-        'order_total' => '\Webcom\Amazon\Rest\OrdersApi\Model\Money',
-        'number_of_items_shipped' => 'int',
-        'number_of_items_unshipped' => 'int',
-        'payment_execution_detail' => '\Webcom\Amazon\Rest\OrdersApi\Model\PaymentExecutionDetailItem[]',
-        'payment_method' => 'string',
-        'payment_method_details' => 'string[]',
-        'marketplace_id' => 'string',
-        'shipment_service_level_category' => 'string',
-        'easy_ship_shipment_status' => 'string',
-        'cba_displayable_shipping_label' => 'string',
-        'order_type' => 'string',
-        'earliest_ship_date' => 'string',
-        'latest_ship_date' => 'string',
-        'earliest_delivery_date' => 'string',
-        'latest_delivery_date' => 'string',
-        'is_business_order' => 'bool',
-        'is_prime' => 'bool',
-        'is_premium_order' => 'bool',
-        'is_global_express_enabled' => 'bool',
-        'replaced_order_id' => 'string',
-        'is_replacement_order' => 'bool',
-        'promise_response_due_date' => 'string',
-        'is_estimated_ship_date_set' => 'bool',
-        'is_sold_by_ab' => 'bool',
-        'assigned_ship_from_location_address' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
-        'fulfillment_instruction' => '\Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction'
+        'amazonOrderId' => 'string',
+        'sellerOrderId' => 'string',
+        'purchaseDate' => 'string',
+        'lastUpdateDate' => 'string',
+        'orderStatus' => 'string',
+        'fulfillmentChannel' => 'string',
+        'salesChannel' => 'string',
+        'orderChannel' => 'string',
+        'shipServiceLevel' => 'string',
+        'orderTotal' => '\Webcom\Amazon\Rest\OrdersApi\Model\Money',
+        'numberOfItemsShipped' => 'int',
+        'numberOfItemsUnshipped' => 'int',
+        'paymentExecutionDetail' => '\Webcom\Amazon\Rest\OrdersApi\Model\PaymentExecutionDetailItem[]',
+        'paymentMethod' => 'string',
+        'paymentMethodDetails' => 'string[]',
+        'marketplaceId' => 'string',
+        'shipmentServiceLevelCategory' => 'string',
+        'easyShipShipmentStatus' => 'string',
+        'cbaDisplayableShippingLabel' => 'string',
+        'orderType' => 'string',
+        'earliestShipDate' => 'string',
+        'latestShipDate' => 'string',
+        'earliestDeliveryDate' => 'string',
+        'latestDeliveryDate' => 'string',
+        'isBusinessOrder' => 'bool',
+        'isPrime' => 'bool',
+        'isPremiumOrder' => 'bool',
+        'isGlobalExpressEnabled' => 'bool',
+        'replacedOrderId' => 'string',
+        'isReplacementOrder' => 'bool',
+        'promiseResponseDueDate' => 'string',
+        'isEstimatedShipDateSet' => 'bool',
+        'isSoldByAB' => 'bool',
+        'assignedShipFromLocationAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
+        'fulfillmentInstruction' => '\Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction'
     ];
 
     /**
@@ -107,41 +107,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amazon_order_id' => null,
-        'seller_order_id' => null,
-        'purchase_date' => null,
-        'last_update_date' => null,
-        'order_status' => null,
-        'fulfillment_channel' => null,
-        'sales_channel' => null,
-        'order_channel' => null,
-        'ship_service_level' => null,
-        'order_total' => null,
-        'number_of_items_shipped' => null,
-        'number_of_items_unshipped' => null,
-        'payment_execution_detail' => null,
-        'payment_method' => null,
-        'payment_method_details' => null,
-        'marketplace_id' => null,
-        'shipment_service_level_category' => null,
-        'easy_ship_shipment_status' => null,
-        'cba_displayable_shipping_label' => null,
-        'order_type' => null,
-        'earliest_ship_date' => null,
-        'latest_ship_date' => null,
-        'earliest_delivery_date' => null,
-        'latest_delivery_date' => null,
-        'is_business_order' => null,
-        'is_prime' => null,
-        'is_premium_order' => null,
-        'is_global_express_enabled' => null,
-        'replaced_order_id' => null,
-        'is_replacement_order' => null,
-        'promise_response_due_date' => null,
-        'is_estimated_ship_date_set' => null,
-        'is_sold_by_ab' => null,
-        'assigned_ship_from_location_address' => null,
-        'fulfillment_instruction' => null
+        'amazonOrderId' => null,
+        'sellerOrderId' => null,
+        'purchaseDate' => null,
+        'lastUpdateDate' => null,
+        'orderStatus' => null,
+        'fulfillmentChannel' => null,
+        'salesChannel' => null,
+        'orderChannel' => null,
+        'shipServiceLevel' => null,
+        'orderTotal' => null,
+        'numberOfItemsShipped' => null,
+        'numberOfItemsUnshipped' => null,
+        'paymentExecutionDetail' => null,
+        'paymentMethod' => null,
+        'paymentMethodDetails' => null,
+        'marketplaceId' => null,
+        'shipmentServiceLevelCategory' => null,
+        'easyShipShipmentStatus' => null,
+        'cbaDisplayableShippingLabel' => null,
+        'orderType' => null,
+        'earliestShipDate' => null,
+        'latestShipDate' => null,
+        'earliestDeliveryDate' => null,
+        'latestDeliveryDate' => null,
+        'isBusinessOrder' => null,
+        'isPrime' => null,
+        'isPremiumOrder' => null,
+        'isGlobalExpressEnabled' => null,
+        'replacedOrderId' => null,
+        'isReplacementOrder' => null,
+        'promiseResponseDueDate' => null,
+        'isEstimatedShipDateSet' => null,
+        'isSoldByAB' => null,
+        'assignedShipFromLocationAddress' => null,
+        'fulfillmentInstruction' => null
     ];
 
     /**
@@ -171,41 +171,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'amazon_order_id' => 'AmazonOrderId',
-        'seller_order_id' => 'SellerOrderId',
-        'purchase_date' => 'PurchaseDate',
-        'last_update_date' => 'LastUpdateDate',
-        'order_status' => 'OrderStatus',
-        'fulfillment_channel' => 'FulfillmentChannel',
-        'sales_channel' => 'SalesChannel',
-        'order_channel' => 'OrderChannel',
-        'ship_service_level' => 'ShipServiceLevel',
-        'order_total' => 'OrderTotal',
-        'number_of_items_shipped' => 'NumberOfItemsShipped',
-        'number_of_items_unshipped' => 'NumberOfItemsUnshipped',
-        'payment_execution_detail' => 'PaymentExecutionDetail',
-        'payment_method' => 'PaymentMethod',
-        'payment_method_details' => 'PaymentMethodDetails',
-        'marketplace_id' => 'MarketplaceId',
-        'shipment_service_level_category' => 'ShipmentServiceLevelCategory',
-        'easy_ship_shipment_status' => 'EasyShipShipmentStatus',
-        'cba_displayable_shipping_label' => 'CbaDisplayableShippingLabel',
-        'order_type' => 'OrderType',
-        'earliest_ship_date' => 'EarliestShipDate',
-        'latest_ship_date' => 'LatestShipDate',
-        'earliest_delivery_date' => 'EarliestDeliveryDate',
-        'latest_delivery_date' => 'LatestDeliveryDate',
-        'is_business_order' => 'IsBusinessOrder',
-        'is_prime' => 'IsPrime',
-        'is_premium_order' => 'IsPremiumOrder',
-        'is_global_express_enabled' => 'IsGlobalExpressEnabled',
-        'replaced_order_id' => 'ReplacedOrderId',
-        'is_replacement_order' => 'IsReplacementOrder',
-        'promise_response_due_date' => 'PromiseResponseDueDate',
-        'is_estimated_ship_date_set' => 'IsEstimatedShipDateSet',
-        'is_sold_by_ab' => 'IsSoldByAB',
-        'assigned_ship_from_location_address' => 'AssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'FulfillmentInstruction'
+        'amazonOrderId' => 'AmazonOrderId',
+        'sellerOrderId' => 'SellerOrderId',
+        'purchaseDate' => 'PurchaseDate',
+        'lastUpdateDate' => 'LastUpdateDate',
+        'orderStatus' => 'OrderStatus',
+        'fulfillmentChannel' => 'FulfillmentChannel',
+        'salesChannel' => 'SalesChannel',
+        'orderChannel' => 'OrderChannel',
+        'shipServiceLevel' => 'ShipServiceLevel',
+        'orderTotal' => 'OrderTotal',
+        'numberOfItemsShipped' => 'NumberOfItemsShipped',
+        'numberOfItemsUnshipped' => 'NumberOfItemsUnshipped',
+        'paymentExecutionDetail' => 'PaymentExecutionDetail',
+        'paymentMethod' => 'PaymentMethod',
+        'paymentMethodDetails' => 'PaymentMethodDetails',
+        'marketplaceId' => 'MarketplaceId',
+        'shipmentServiceLevelCategory' => 'ShipmentServiceLevelCategory',
+        'easyShipShipmentStatus' => 'EasyShipShipmentStatus',
+        'cbaDisplayableShippingLabel' => 'CbaDisplayableShippingLabel',
+        'orderType' => 'OrderType',
+        'earliestShipDate' => 'EarliestShipDate',
+        'latestShipDate' => 'LatestShipDate',
+        'earliestDeliveryDate' => 'EarliestDeliveryDate',
+        'latestDeliveryDate' => 'LatestDeliveryDate',
+        'isBusinessOrder' => 'IsBusinessOrder',
+        'isPrime' => 'IsPrime',
+        'isPremiumOrder' => 'IsPremiumOrder',
+        'isGlobalExpressEnabled' => 'IsGlobalExpressEnabled',
+        'replacedOrderId' => 'ReplacedOrderId',
+        'isReplacementOrder' => 'IsReplacementOrder',
+        'promiseResponseDueDate' => 'PromiseResponseDueDate',
+        'isEstimatedShipDateSet' => 'IsEstimatedShipDateSet',
+        'isSoldByAB' => 'IsSoldByAB',
+        'assignedShipFromLocationAddress' => 'AssignedShipFromLocationAddress',
+        'fulfillmentInstruction' => 'FulfillmentInstruction'
     ];
 
     /**
@@ -214,41 +214,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'amazon_order_id' => 'setAmazonOrderId',
-        'seller_order_id' => 'setSellerOrderId',
-        'purchase_date' => 'setPurchaseDate',
-        'last_update_date' => 'setLastUpdateDate',
-        'order_status' => 'setOrderStatus',
-        'fulfillment_channel' => 'setFulfillmentChannel',
-        'sales_channel' => 'setSalesChannel',
-        'order_channel' => 'setOrderChannel',
-        'ship_service_level' => 'setShipServiceLevel',
-        'order_total' => 'setOrderTotal',
-        'number_of_items_shipped' => 'setNumberOfItemsShipped',
-        'number_of_items_unshipped' => 'setNumberOfItemsUnshipped',
-        'payment_execution_detail' => 'setPaymentExecutionDetail',
-        'payment_method' => 'setPaymentMethod',
-        'payment_method_details' => 'setPaymentMethodDetails',
-        'marketplace_id' => 'setMarketplaceId',
-        'shipment_service_level_category' => 'setShipmentServiceLevelCategory',
-        'easy_ship_shipment_status' => 'setEasyShipShipmentStatus',
-        'cba_displayable_shipping_label' => 'setCbaDisplayableShippingLabel',
-        'order_type' => 'setOrderType',
-        'earliest_ship_date' => 'setEarliestShipDate',
-        'latest_ship_date' => 'setLatestShipDate',
-        'earliest_delivery_date' => 'setEarliestDeliveryDate',
-        'latest_delivery_date' => 'setLatestDeliveryDate',
-        'is_business_order' => 'setIsBusinessOrder',
-        'is_prime' => 'setIsPrime',
-        'is_premium_order' => 'setIsPremiumOrder',
-        'is_global_express_enabled' => 'setIsGlobalExpressEnabled',
-        'replaced_order_id' => 'setReplacedOrderId',
-        'is_replacement_order' => 'setIsReplacementOrder',
-        'promise_response_due_date' => 'setPromiseResponseDueDate',
-        'is_estimated_ship_date_set' => 'setIsEstimatedShipDateSet',
-        'is_sold_by_ab' => 'setIsSoldByAb',
-        'assigned_ship_from_location_address' => 'setAssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'setFulfillmentInstruction'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'sellerOrderId' => 'setSellerOrderId',
+        'purchaseDate' => 'setPurchaseDate',
+        'lastUpdateDate' => 'setLastUpdateDate',
+        'orderStatus' => 'setOrderStatus',
+        'fulfillmentChannel' => 'setFulfillmentChannel',
+        'salesChannel' => 'setSalesChannel',
+        'orderChannel' => 'setOrderChannel',
+        'shipServiceLevel' => 'setShipServiceLevel',
+        'orderTotal' => 'setOrderTotal',
+        'numberOfItemsShipped' => 'setNumberOfItemsShipped',
+        'numberOfItemsUnshipped' => 'setNumberOfItemsUnshipped',
+        'paymentExecutionDetail' => 'setPaymentExecutionDetail',
+        'paymentMethod' => 'setPaymentMethod',
+        'paymentMethodDetails' => 'setPaymentMethodDetails',
+        'marketplaceId' => 'setMarketplaceId',
+        'shipmentServiceLevelCategory' => 'setShipmentServiceLevelCategory',
+        'easyShipShipmentStatus' => 'setEasyShipShipmentStatus',
+        'cbaDisplayableShippingLabel' => 'setCbaDisplayableShippingLabel',
+        'orderType' => 'setOrderType',
+        'earliestShipDate' => 'setEarliestShipDate',
+        'latestShipDate' => 'setLatestShipDate',
+        'earliestDeliveryDate' => 'setEarliestDeliveryDate',
+        'latestDeliveryDate' => 'setLatestDeliveryDate',
+        'isBusinessOrder' => 'setIsBusinessOrder',
+        'isPrime' => 'setIsPrime',
+        'isPremiumOrder' => 'setIsPremiumOrder',
+        'isGlobalExpressEnabled' => 'setIsGlobalExpressEnabled',
+        'replacedOrderId' => 'setReplacedOrderId',
+        'isReplacementOrder' => 'setIsReplacementOrder',
+        'promiseResponseDueDate' => 'setPromiseResponseDueDate',
+        'isEstimatedShipDateSet' => 'setIsEstimatedShipDateSet',
+        'isSoldByAB' => 'setIsSoldByAB',
+        'assignedShipFromLocationAddress' => 'setAssignedShipFromLocationAddress',
+        'fulfillmentInstruction' => 'setFulfillmentInstruction'
     ];
 
     /**
@@ -257,41 +257,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'amazon_order_id' => 'getAmazonOrderId',
-        'seller_order_id' => 'getSellerOrderId',
-        'purchase_date' => 'getPurchaseDate',
-        'last_update_date' => 'getLastUpdateDate',
-        'order_status' => 'getOrderStatus',
-        'fulfillment_channel' => 'getFulfillmentChannel',
-        'sales_channel' => 'getSalesChannel',
-        'order_channel' => 'getOrderChannel',
-        'ship_service_level' => 'getShipServiceLevel',
-        'order_total' => 'getOrderTotal',
-        'number_of_items_shipped' => 'getNumberOfItemsShipped',
-        'number_of_items_unshipped' => 'getNumberOfItemsUnshipped',
-        'payment_execution_detail' => 'getPaymentExecutionDetail',
-        'payment_method' => 'getPaymentMethod',
-        'payment_method_details' => 'getPaymentMethodDetails',
-        'marketplace_id' => 'getMarketplaceId',
-        'shipment_service_level_category' => 'getShipmentServiceLevelCategory',
-        'easy_ship_shipment_status' => 'getEasyShipShipmentStatus',
-        'cba_displayable_shipping_label' => 'getCbaDisplayableShippingLabel',
-        'order_type' => 'getOrderType',
-        'earliest_ship_date' => 'getEarliestShipDate',
-        'latest_ship_date' => 'getLatestShipDate',
-        'earliest_delivery_date' => 'getEarliestDeliveryDate',
-        'latest_delivery_date' => 'getLatestDeliveryDate',
-        'is_business_order' => 'getIsBusinessOrder',
-        'is_prime' => 'getIsPrime',
-        'is_premium_order' => 'getIsPremiumOrder',
-        'is_global_express_enabled' => 'getIsGlobalExpressEnabled',
-        'replaced_order_id' => 'getReplacedOrderId',
-        'is_replacement_order' => 'getIsReplacementOrder',
-        'promise_response_due_date' => 'getPromiseResponseDueDate',
-        'is_estimated_ship_date_set' => 'getIsEstimatedShipDateSet',
-        'is_sold_by_ab' => 'getIsSoldByAb',
-        'assigned_ship_from_location_address' => 'getAssignedShipFromLocationAddress',
-        'fulfillment_instruction' => 'getFulfillmentInstruction'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'sellerOrderId' => 'getSellerOrderId',
+        'purchaseDate' => 'getPurchaseDate',
+        'lastUpdateDate' => 'getLastUpdateDate',
+        'orderStatus' => 'getOrderStatus',
+        'fulfillmentChannel' => 'getFulfillmentChannel',
+        'salesChannel' => 'getSalesChannel',
+        'orderChannel' => 'getOrderChannel',
+        'shipServiceLevel' => 'getShipServiceLevel',
+        'orderTotal' => 'getOrderTotal',
+        'numberOfItemsShipped' => 'getNumberOfItemsShipped',
+        'numberOfItemsUnshipped' => 'getNumberOfItemsUnshipped',
+        'paymentExecutionDetail' => 'getPaymentExecutionDetail',
+        'paymentMethod' => 'getPaymentMethod',
+        'paymentMethodDetails' => 'getPaymentMethodDetails',
+        'marketplaceId' => 'getMarketplaceId',
+        'shipmentServiceLevelCategory' => 'getShipmentServiceLevelCategory',
+        'easyShipShipmentStatus' => 'getEasyShipShipmentStatus',
+        'cbaDisplayableShippingLabel' => 'getCbaDisplayableShippingLabel',
+        'orderType' => 'getOrderType',
+        'earliestShipDate' => 'getEarliestShipDate',
+        'latestShipDate' => 'getLatestShipDate',
+        'earliestDeliveryDate' => 'getEarliestDeliveryDate',
+        'latestDeliveryDate' => 'getLatestDeliveryDate',
+        'isBusinessOrder' => 'getIsBusinessOrder',
+        'isPrime' => 'getIsPrime',
+        'isPremiumOrder' => 'getIsPremiumOrder',
+        'isGlobalExpressEnabled' => 'getIsGlobalExpressEnabled',
+        'replacedOrderId' => 'getReplacedOrderId',
+        'isReplacementOrder' => 'getIsReplacementOrder',
+        'promiseResponseDueDate' => 'getPromiseResponseDueDate',
+        'isEstimatedShipDateSet' => 'getIsEstimatedShipDateSet',
+        'isSoldByAB' => 'getIsSoldByAB',
+        'assignedShipFromLocationAddress' => 'getAssignedShipFromLocationAddress',
+        'fulfillmentInstruction' => 'getFulfillmentInstruction'
     ];
 
     /**
@@ -434,41 +434,41 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['amazon_order_id'] = $data['amazon_order_id'] ?? null;
-        $this->container['seller_order_id'] = $data['seller_order_id'] ?? null;
-        $this->container['purchase_date'] = $data['purchase_date'] ?? null;
-        $this->container['last_update_date'] = $data['last_update_date'] ?? null;
-        $this->container['order_status'] = $data['order_status'] ?? null;
-        $this->container['fulfillment_channel'] = $data['fulfillment_channel'] ?? null;
-        $this->container['sales_channel'] = $data['sales_channel'] ?? null;
-        $this->container['order_channel'] = $data['order_channel'] ?? null;
-        $this->container['ship_service_level'] = $data['ship_service_level'] ?? null;
-        $this->container['order_total'] = $data['order_total'] ?? null;
-        $this->container['number_of_items_shipped'] = $data['number_of_items_shipped'] ?? null;
-        $this->container['number_of_items_unshipped'] = $data['number_of_items_unshipped'] ?? null;
-        $this->container['payment_execution_detail'] = $data['payment_execution_detail'] ?? null;
-        $this->container['payment_method'] = $data['payment_method'] ?? null;
-        $this->container['payment_method_details'] = $data['payment_method_details'] ?? null;
-        $this->container['marketplace_id'] = $data['marketplace_id'] ?? null;
-        $this->container['shipment_service_level_category'] = $data['shipment_service_level_category'] ?? null;
-        $this->container['easy_ship_shipment_status'] = $data['easy_ship_shipment_status'] ?? null;
-        $this->container['cba_displayable_shipping_label'] = $data['cba_displayable_shipping_label'] ?? null;
-        $this->container['order_type'] = $data['order_type'] ?? null;
-        $this->container['earliest_ship_date'] = $data['earliest_ship_date'] ?? null;
-        $this->container['latest_ship_date'] = $data['latest_ship_date'] ?? null;
-        $this->container['earliest_delivery_date'] = $data['earliest_delivery_date'] ?? null;
-        $this->container['latest_delivery_date'] = $data['latest_delivery_date'] ?? null;
-        $this->container['is_business_order'] = $data['is_business_order'] ?? null;
-        $this->container['is_prime'] = $data['is_prime'] ?? null;
-        $this->container['is_premium_order'] = $data['is_premium_order'] ?? null;
-        $this->container['is_global_express_enabled'] = $data['is_global_express_enabled'] ?? null;
-        $this->container['replaced_order_id'] = $data['replaced_order_id'] ?? null;
-        $this->container['is_replacement_order'] = $data['is_replacement_order'] ?? null;
-        $this->container['promise_response_due_date'] = $data['promise_response_due_date'] ?? null;
-        $this->container['is_estimated_ship_date_set'] = $data['is_estimated_ship_date_set'] ?? null;
-        $this->container['is_sold_by_ab'] = $data['is_sold_by_ab'] ?? null;
-        $this->container['assigned_ship_from_location_address'] = $data['assigned_ship_from_location_address'] ?? null;
-        $this->container['fulfillment_instruction'] = $data['fulfillment_instruction'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['sellerOrderId'] = $data['sellerOrderId'] ?? null;
+        $this->container['purchaseDate'] = $data['purchaseDate'] ?? null;
+        $this->container['lastUpdateDate'] = $data['lastUpdateDate'] ?? null;
+        $this->container['orderStatus'] = $data['orderStatus'] ?? null;
+        $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['salesChannel'] = $data['salesChannel'] ?? null;
+        $this->container['orderChannel'] = $data['orderChannel'] ?? null;
+        $this->container['shipServiceLevel'] = $data['shipServiceLevel'] ?? null;
+        $this->container['orderTotal'] = $data['orderTotal'] ?? null;
+        $this->container['numberOfItemsShipped'] = $data['numberOfItemsShipped'] ?? null;
+        $this->container['numberOfItemsUnshipped'] = $data['numberOfItemsUnshipped'] ?? null;
+        $this->container['paymentExecutionDetail'] = $data['paymentExecutionDetail'] ?? null;
+        $this->container['paymentMethod'] = $data['paymentMethod'] ?? null;
+        $this->container['paymentMethodDetails'] = $data['paymentMethodDetails'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['shipmentServiceLevelCategory'] = $data['shipmentServiceLevelCategory'] ?? null;
+        $this->container['easyShipShipmentStatus'] = $data['easyShipShipmentStatus'] ?? null;
+        $this->container['cbaDisplayableShippingLabel'] = $data['cbaDisplayableShippingLabel'] ?? null;
+        $this->container['orderType'] = $data['orderType'] ?? null;
+        $this->container['earliestShipDate'] = $data['earliestShipDate'] ?? null;
+        $this->container['latestShipDate'] = $data['latestShipDate'] ?? null;
+        $this->container['earliestDeliveryDate'] = $data['earliestDeliveryDate'] ?? null;
+        $this->container['latestDeliveryDate'] = $data['latestDeliveryDate'] ?? null;
+        $this->container['isBusinessOrder'] = $data['isBusinessOrder'] ?? null;
+        $this->container['isPrime'] = $data['isPrime'] ?? null;
+        $this->container['isPremiumOrder'] = $data['isPremiumOrder'] ?? null;
+        $this->container['isGlobalExpressEnabled'] = $data['isGlobalExpressEnabled'] ?? null;
+        $this->container['replacedOrderId'] = $data['replacedOrderId'] ?? null;
+        $this->container['isReplacementOrder'] = $data['isReplacementOrder'] ?? null;
+        $this->container['promiseResponseDueDate'] = $data['promiseResponseDueDate'] ?? null;
+        $this->container['isEstimatedShipDateSet'] = $data['isEstimatedShipDateSet'] ?? null;
+        $this->container['isSoldByAB'] = $data['isSoldByAB'] ?? null;
+        $this->container['assignedShipFromLocationAddress'] = $data['assignedShipFromLocationAddress'] ?? null;
+        $this->container['fulfillmentInstruction'] = $data['fulfillmentInstruction'] ?? null;
     }
 
     /**
@@ -480,50 +480,50 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['amazon_order_id'] === null) {
-            $invalidProperties[] = "'amazon_order_id' can't be null";
+        if ($this->container['amazonOrderId'] === null) {
+            $invalidProperties[] = "'amazonOrderId' can't be null";
         }
-        if ($this->container['purchase_date'] === null) {
-            $invalidProperties[] = "'purchase_date' can't be null";
+        if ($this->container['purchaseDate'] === null) {
+            $invalidProperties[] = "'purchaseDate' can't be null";
         }
-        if ($this->container['last_update_date'] === null) {
-            $invalidProperties[] = "'last_update_date' can't be null";
+        if ($this->container['lastUpdateDate'] === null) {
+            $invalidProperties[] = "'lastUpdateDate' can't be null";
         }
-        if ($this->container['order_status'] === null) {
-            $invalidProperties[] = "'order_status' can't be null";
+        if ($this->container['orderStatus'] === null) {
+            $invalidProperties[] = "'orderStatus' can't be null";
         }
         $allowedValues = $this->getOrderStatusAllowableValues();
-        if (!is_null($this->container['order_status']) && !in_array($this->container['order_status'], $allowedValues, true)) {
+        if (!is_null($this->container['orderStatus']) && !in_array($this->container['orderStatus'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'order_status', must be one of '%s'",
-                $this->container['order_status'],
+                "invalid value '%s' for 'orderStatus', must be one of '%s'",
+                $this->container['orderStatus'],
                 implode("', '", $allowedValues)
             );
         }
 
         $allowedValues = $this->getFulfillmentChannelAllowableValues();
-        if (!is_null($this->container['fulfillment_channel']) && !in_array($this->container['fulfillment_channel'], $allowedValues, true)) {
+        if (!is_null($this->container['fulfillmentChannel']) && !in_array($this->container['fulfillmentChannel'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'fulfillment_channel', must be one of '%s'",
-                $this->container['fulfillment_channel'],
+                "invalid value '%s' for 'fulfillmentChannel', must be one of '%s'",
+                $this->container['fulfillmentChannel'],
                 implode("', '", $allowedValues)
             );
         }
 
         $allowedValues = $this->getPaymentMethodAllowableValues();
-        if (!is_null($this->container['payment_method']) && !in_array($this->container['payment_method'], $allowedValues, true)) {
+        if (!is_null($this->container['paymentMethod']) && !in_array($this->container['paymentMethod'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'payment_method', must be one of '%s'",
-                $this->container['payment_method'],
+                "invalid value '%s' for 'paymentMethod', must be one of '%s'",
+                $this->container['paymentMethod'],
                 implode("', '", $allowedValues)
             );
         }
 
         $allowedValues = $this->getOrderTypeAllowableValues();
-        if (!is_null($this->container['order_type']) && !in_array($this->container['order_type'], $allowedValues, true)) {
+        if (!is_null($this->container['orderType']) && !in_array($this->container['orderType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'order_type', must be one of '%s'",
-                $this->container['order_type'],
+                "invalid value '%s' for 'orderType', must be one of '%s'",
+                $this->container['orderType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -544,881 +544,881 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets amazon_order_id
+     * Gets amazonOrderId
      *
      * @return string
      */
     public function getAmazonOrderId()
     {
-        return $this->container['amazon_order_id'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets amazon_order_id
+     * Sets amazonOrderId
      *
-     * @param string $amazon_order_id An Amazon-defined order identifier, in 3-7-7 format.
+     * @param string $amazonOrderId An Amazon-defined order identifier, in 3-7-7 format.
      *
      * @return self
      */
-    public function setAmazonOrderId($amazon_order_id)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['amazon_order_id'] = $amazon_order_id;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets seller_order_id
+     * Gets sellerOrderId
      *
      * @return string|null
      */
     public function getSellerOrderId()
     {
-        return $this->container['seller_order_id'];
+        return $this->container['sellerOrderId'];
     }
 
     /**
-     * Sets seller_order_id
+     * Sets sellerOrderId
      *
-     * @param string|null $seller_order_id A seller-defined order identifier.
+     * @param string|null $sellerOrderId A seller-defined order identifier.
      *
      * @return self
      */
-    public function setSellerOrderId($seller_order_id)
+    public function setSellerOrderId($sellerOrderId)
     {
-        $this->container['seller_order_id'] = $seller_order_id;
+        $this->container['sellerOrderId'] = $sellerOrderId;
 
         return $this;
     }
 
     /**
-     * Gets purchase_date
+     * Gets purchaseDate
      *
      * @return string
      */
     public function getPurchaseDate()
     {
-        return $this->container['purchase_date'];
+        return $this->container['purchaseDate'];
     }
 
     /**
-     * Sets purchase_date
+     * Sets purchaseDate
      *
-     * @param string $purchase_date The date when the order was created.
+     * @param string $purchaseDate The date when the order was created.
      *
      * @return self
      */
-    public function setPurchaseDate($purchase_date)
+    public function setPurchaseDate($purchaseDate)
     {
-        $this->container['purchase_date'] = $purchase_date;
+        $this->container['purchaseDate'] = $purchaseDate;
 
         return $this;
     }
 
     /**
-     * Gets last_update_date
+     * Gets lastUpdateDate
      *
      * @return string
      */
     public function getLastUpdateDate()
     {
-        return $this->container['last_update_date'];
+        return $this->container['lastUpdateDate'];
     }
 
     /**
-     * Sets last_update_date
+     * Sets lastUpdateDate
      *
-     * @param string $last_update_date The date when the order was last updated.  Note: LastUpdateDate is returned with an incorrect date for orders that were last updated before 2009-04-01.
+     * @param string $lastUpdateDate The date when the order was last updated.  Note: LastUpdateDate is returned with an incorrect date for orders that were last updated before 2009-04-01.
      *
      * @return self
      */
-    public function setLastUpdateDate($last_update_date)
+    public function setLastUpdateDate($lastUpdateDate)
     {
-        $this->container['last_update_date'] = $last_update_date;
+        $this->container['lastUpdateDate'] = $lastUpdateDate;
 
         return $this;
     }
 
     /**
-     * Gets order_status
+     * Gets orderStatus
      *
      * @return string
      */
     public function getOrderStatus()
     {
-        return $this->container['order_status'];
+        return $this->container['orderStatus'];
     }
 
     /**
-     * Sets order_status
+     * Sets orderStatus
      *
-     * @param string $order_status The current order status.
+     * @param string $orderStatus The current order status.
      *
      * @return self
      */
-    public function setOrderStatus($order_status)
+    public function setOrderStatus($orderStatus)
     {
         $allowedValues = $this->getOrderStatusAllowableValues();
-        if (!in_array($order_status, $allowedValues, true)) {
+        if (!in_array($orderStatus, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'order_status', must be one of '%s'",
-                    $order_status,
+                    "Invalid value '%s' for 'orderStatus', must be one of '%s'",
+                    $orderStatus,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['order_status'] = $order_status;
+        $this->container['orderStatus'] = $orderStatus;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_channel
+     * Gets fulfillmentChannel
      *
      * @return string|null
      */
     public function getFulfillmentChannel()
     {
-        return $this->container['fulfillment_channel'];
+        return $this->container['fulfillmentChannel'];
     }
 
     /**
-     * Sets fulfillment_channel
+     * Sets fulfillmentChannel
      *
-     * @param string|null $fulfillment_channel Whether the order was fulfilled by Amazon (AFN) or by the seller (MFN).
+     * @param string|null $fulfillmentChannel Whether the order was fulfilled by Amazon (AFN) or by the seller (MFN).
      *
      * @return self
      */
-    public function setFulfillmentChannel($fulfillment_channel)
+    public function setFulfillmentChannel($fulfillmentChannel)
     {
         $allowedValues = $this->getFulfillmentChannelAllowableValues();
-        if (!is_null($fulfillment_channel) && !in_array($fulfillment_channel, $allowedValues, true)) {
+        if (!is_null($fulfillmentChannel) && !in_array($fulfillmentChannel, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'fulfillment_channel', must be one of '%s'",
-                    $fulfillment_channel,
+                    "Invalid value '%s' for 'fulfillmentChannel', must be one of '%s'",
+                    $fulfillmentChannel,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['fulfillment_channel'] = $fulfillment_channel;
+        $this->container['fulfillmentChannel'] = $fulfillmentChannel;
 
         return $this;
     }
 
     /**
-     * Gets sales_channel
+     * Gets salesChannel
      *
      * @return string|null
      */
     public function getSalesChannel()
     {
-        return $this->container['sales_channel'];
+        return $this->container['salesChannel'];
     }
 
     /**
-     * Sets sales_channel
+     * Sets salesChannel
      *
-     * @param string|null $sales_channel The sales channel of the first item in the order.
+     * @param string|null $salesChannel The sales channel of the first item in the order.
      *
      * @return self
      */
-    public function setSalesChannel($sales_channel)
+    public function setSalesChannel($salesChannel)
     {
-        $this->container['sales_channel'] = $sales_channel;
+        $this->container['salesChannel'] = $salesChannel;
 
         return $this;
     }
 
     /**
-     * Gets order_channel
+     * Gets orderChannel
      *
      * @return string|null
      */
     public function getOrderChannel()
     {
-        return $this->container['order_channel'];
+        return $this->container['orderChannel'];
     }
 
     /**
-     * Sets order_channel
+     * Sets orderChannel
      *
-     * @param string|null $order_channel The order channel of the first item in the order.
+     * @param string|null $orderChannel The order channel of the first item in the order.
      *
      * @return self
      */
-    public function setOrderChannel($order_channel)
+    public function setOrderChannel($orderChannel)
     {
-        $this->container['order_channel'] = $order_channel;
+        $this->container['orderChannel'] = $orderChannel;
 
         return $this;
     }
 
     /**
-     * Gets ship_service_level
+     * Gets shipServiceLevel
      *
      * @return string|null
      */
     public function getShipServiceLevel()
     {
-        return $this->container['ship_service_level'];
+        return $this->container['shipServiceLevel'];
     }
 
     /**
-     * Sets ship_service_level
+     * Sets shipServiceLevel
      *
-     * @param string|null $ship_service_level The shipment service level of the order.
+     * @param string|null $shipServiceLevel The shipment service level of the order.
      *
      * @return self
      */
-    public function setShipServiceLevel($ship_service_level)
+    public function setShipServiceLevel($shipServiceLevel)
     {
-        $this->container['ship_service_level'] = $ship_service_level;
+        $this->container['shipServiceLevel'] = $shipServiceLevel;
 
         return $this;
     }
 
     /**
-     * Gets order_total
+     * Gets orderTotal
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\Money|null
      */
     public function getOrderTotal()
     {
-        return $this->container['order_total'];
+        return $this->container['orderTotal'];
     }
 
     /**
-     * Sets order_total
+     * Sets orderTotal
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Money|null $order_total order_total
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Money|null $orderTotal orderTotal
      *
      * @return self
      */
-    public function setOrderTotal($order_total)
+    public function setOrderTotal($orderTotal)
     {
-        $this->container['order_total'] = $order_total;
+        $this->container['orderTotal'] = $orderTotal;
 
         return $this;
     }
 
     /**
-     * Gets number_of_items_shipped
+     * Gets numberOfItemsShipped
      *
      * @return int|null
      */
     public function getNumberOfItemsShipped()
     {
-        return $this->container['number_of_items_shipped'];
+        return $this->container['numberOfItemsShipped'];
     }
 
     /**
-     * Sets number_of_items_shipped
+     * Sets numberOfItemsShipped
      *
-     * @param int|null $number_of_items_shipped The number of items shipped.
+     * @param int|null $numberOfItemsShipped The number of items shipped.
      *
      * @return self
      */
-    public function setNumberOfItemsShipped($number_of_items_shipped)
+    public function setNumberOfItemsShipped($numberOfItemsShipped)
     {
-        $this->container['number_of_items_shipped'] = $number_of_items_shipped;
+        $this->container['numberOfItemsShipped'] = $numberOfItemsShipped;
 
         return $this;
     }
 
     /**
-     * Gets number_of_items_unshipped
+     * Gets numberOfItemsUnshipped
      *
      * @return int|null
      */
     public function getNumberOfItemsUnshipped()
     {
-        return $this->container['number_of_items_unshipped'];
+        return $this->container['numberOfItemsUnshipped'];
     }
 
     /**
-     * Sets number_of_items_unshipped
+     * Sets numberOfItemsUnshipped
      *
-     * @param int|null $number_of_items_unshipped The number of items unshipped.
+     * @param int|null $numberOfItemsUnshipped The number of items unshipped.
      *
      * @return self
      */
-    public function setNumberOfItemsUnshipped($number_of_items_unshipped)
+    public function setNumberOfItemsUnshipped($numberOfItemsUnshipped)
     {
-        $this->container['number_of_items_unshipped'] = $number_of_items_unshipped;
+        $this->container['numberOfItemsUnshipped'] = $numberOfItemsUnshipped;
 
         return $this;
     }
 
     /**
-     * Gets payment_execution_detail
+     * Gets paymentExecutionDetail
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\PaymentExecutionDetailItem[]|null
      */
     public function getPaymentExecutionDetail()
     {
-        return $this->container['payment_execution_detail'];
+        return $this->container['paymentExecutionDetail'];
     }
 
     /**
-     * Sets payment_execution_detail
+     * Sets paymentExecutionDetail
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\PaymentExecutionDetailItem[]|null $payment_execution_detail A list of payment execution detail items.
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\PaymentExecutionDetailItem[]|null $paymentExecutionDetail A list of payment execution detail items.
      *
      * @return self
      */
-    public function setPaymentExecutionDetail($payment_execution_detail)
+    public function setPaymentExecutionDetail($paymentExecutionDetail)
     {
-        $this->container['payment_execution_detail'] = $payment_execution_detail;
+        $this->container['paymentExecutionDetail'] = $paymentExecutionDetail;
 
         return $this;
     }
 
     /**
-     * Gets payment_method
+     * Gets paymentMethod
      *
      * @return string|null
      */
     public function getPaymentMethod()
     {
-        return $this->container['payment_method'];
+        return $this->container['paymentMethod'];
     }
 
     /**
-     * Sets payment_method
+     * Sets paymentMethod
      *
-     * @param string|null $payment_method The payment method for the order. This property is limited to Cash On Delivery (COD) and Convenience Store (CVS) payment methods. Unless you need the specific COD payment information provided by the PaymentExecutionDetailItem object, we recommend using the PaymentMethodDetails property to get payment method information.
+     * @param string|null $paymentMethod The payment method for the order. This property is limited to Cash On Delivery (COD) and Convenience Store (CVS) payment methods. Unless you need the specific COD payment information provided by the PaymentExecutionDetailItem object, we recommend using the PaymentMethodDetails property to get payment method information.
      *
      * @return self
      */
-    public function setPaymentMethod($payment_method)
+    public function setPaymentMethod($paymentMethod)
     {
         $allowedValues = $this->getPaymentMethodAllowableValues();
-        if (!is_null($payment_method) && !in_array($payment_method, $allowedValues, true)) {
+        if (!is_null($paymentMethod) && !in_array($paymentMethod, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'payment_method', must be one of '%s'",
-                    $payment_method,
+                    "Invalid value '%s' for 'paymentMethod', must be one of '%s'",
+                    $paymentMethod,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['payment_method'] = $payment_method;
+        $this->container['paymentMethod'] = $paymentMethod;
 
         return $this;
     }
 
     /**
-     * Gets payment_method_details
+     * Gets paymentMethodDetails
      *
      * @return string[]|null
      */
     public function getPaymentMethodDetails()
     {
-        return $this->container['payment_method_details'];
+        return $this->container['paymentMethodDetails'];
     }
 
     /**
-     * Sets payment_method_details
+     * Sets paymentMethodDetails
      *
-     * @param string[]|null $payment_method_details A list of payment method detail items.
+     * @param string[]|null $paymentMethodDetails A list of payment method detail items.
      *
      * @return self
      */
-    public function setPaymentMethodDetails($payment_method_details)
+    public function setPaymentMethodDetails($paymentMethodDetails)
     {
-        $this->container['payment_method_details'] = $payment_method_details;
+        $this->container['paymentMethodDetails'] = $paymentMethodDetails;
 
         return $this;
     }
 
     /**
-     * Gets marketplace_id
+     * Gets marketplaceId
      *
      * @return string|null
      */
     public function getMarketplaceId()
     {
-        return $this->container['marketplace_id'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets marketplace_id
+     * Sets marketplaceId
      *
-     * @param string|null $marketplace_id The identifier for the marketplace where the order was placed.
+     * @param string|null $marketplaceId The identifier for the marketplace where the order was placed.
      *
      * @return self
      */
-    public function setMarketplaceId($marketplace_id)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['marketplace_id'] = $marketplace_id;
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets shipment_service_level_category
+     * Gets shipmentServiceLevelCategory
      *
      * @return string|null
      */
     public function getShipmentServiceLevelCategory()
     {
-        return $this->container['shipment_service_level_category'];
+        return $this->container['shipmentServiceLevelCategory'];
     }
 
     /**
-     * Sets shipment_service_level_category
+     * Sets shipmentServiceLevelCategory
      *
-     * @param string|null $shipment_service_level_category The shipment service level category of the order.  Possible values: Expedited, FreeEconomy, NextDay, SameDay, SecondDay, Scheduled, Standard.
+     * @param string|null $shipmentServiceLevelCategory The shipment service level category of the order.  Possible values: Expedited, FreeEconomy, NextDay, SameDay, SecondDay, Scheduled, Standard.
      *
      * @return self
      */
-    public function setShipmentServiceLevelCategory($shipment_service_level_category)
+    public function setShipmentServiceLevelCategory($shipmentServiceLevelCategory)
     {
-        $this->container['shipment_service_level_category'] = $shipment_service_level_category;
+        $this->container['shipmentServiceLevelCategory'] = $shipmentServiceLevelCategory;
 
         return $this;
     }
 
     /**
-     * Gets easy_ship_shipment_status
+     * Gets easyShipShipmentStatus
      *
      * @return string|null
      */
     public function getEasyShipShipmentStatus()
     {
-        return $this->container['easy_ship_shipment_status'];
+        return $this->container['easyShipShipmentStatus'];
     }
 
     /**
-     * Sets easy_ship_shipment_status
+     * Sets easyShipShipmentStatus
      *
-     * @param string|null $easy_ship_shipment_status The status of the Amazon Easy Ship order. This property is included only for Amazon Easy Ship orders.  Possible values: PendingPickUp, LabelCanceled, PickedUp, OutForDelivery, Damaged, Delivered, RejectedByBuyer, Undeliverable, ReturnedToSeller, ReturningToSeller.
+     * @param string|null $easyShipShipmentStatus The status of the Amazon Easy Ship order. This property is included only for Amazon Easy Ship orders.  Possible values: PendingPickUp, LabelCanceled, PickedUp, OutForDelivery, Damaged, Delivered, RejectedByBuyer, Undeliverable, ReturnedToSeller, ReturningToSeller.
      *
      * @return self
      */
-    public function setEasyShipShipmentStatus($easy_ship_shipment_status)
+    public function setEasyShipShipmentStatus($easyShipShipmentStatus)
     {
-        $this->container['easy_ship_shipment_status'] = $easy_ship_shipment_status;
+        $this->container['easyShipShipmentStatus'] = $easyShipShipmentStatus;
 
         return $this;
     }
 
     /**
-     * Gets cba_displayable_shipping_label
+     * Gets cbaDisplayableShippingLabel
      *
      * @return string|null
      */
     public function getCbaDisplayableShippingLabel()
     {
-        return $this->container['cba_displayable_shipping_label'];
+        return $this->container['cbaDisplayableShippingLabel'];
     }
 
     /**
-     * Sets cba_displayable_shipping_label
+     * Sets cbaDisplayableShippingLabel
      *
-     * @param string|null $cba_displayable_shipping_label Custom ship label for Checkout by Amazon (CBA).
+     * @param string|null $cbaDisplayableShippingLabel Custom ship label for Checkout by Amazon (CBA).
      *
      * @return self
      */
-    public function setCbaDisplayableShippingLabel($cba_displayable_shipping_label)
+    public function setCbaDisplayableShippingLabel($cbaDisplayableShippingLabel)
     {
-        $this->container['cba_displayable_shipping_label'] = $cba_displayable_shipping_label;
+        $this->container['cbaDisplayableShippingLabel'] = $cbaDisplayableShippingLabel;
 
         return $this;
     }
 
     /**
-     * Gets order_type
+     * Gets orderType
      *
      * @return string|null
      */
     public function getOrderType()
     {
-        return $this->container['order_type'];
+        return $this->container['orderType'];
     }
 
     /**
-     * Sets order_type
+     * Sets orderType
      *
-     * @param string|null $order_type The type of the order.
+     * @param string|null $orderType The type of the order.
      *
      * @return self
      */
-    public function setOrderType($order_type)
+    public function setOrderType($orderType)
     {
         $allowedValues = $this->getOrderTypeAllowableValues();
-        if (!is_null($order_type) && !in_array($order_type, $allowedValues, true)) {
+        if (!is_null($orderType) && !in_array($orderType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'order_type', must be one of '%s'",
-                    $order_type,
+                    "Invalid value '%s' for 'orderType', must be one of '%s'",
+                    $orderType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['order_type'] = $order_type;
+        $this->container['orderType'] = $orderType;
 
         return $this;
     }
 
     /**
-     * Gets earliest_ship_date
+     * Gets earliestShipDate
      *
      * @return string|null
      */
     public function getEarliestShipDate()
     {
-        return $this->container['earliest_ship_date'];
+        return $this->container['earliestShipDate'];
     }
 
     /**
-     * Sets earliest_ship_date
+     * Sets earliestShipDate
      *
-     * @param string|null $earliest_ship_date The start of the time period within which you have committed to ship the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.  Note: EarliestShipDate might not be returned for orders placed before February 1, 2013.
+     * @param string|null $earliestShipDate The start of the time period within which you have committed to ship the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.  Note: EarliestShipDate might not be returned for orders placed before February 1, 2013.
      *
      * @return self
      */
-    public function setEarliestShipDate($earliest_ship_date)
+    public function setEarliestShipDate($earliestShipDate)
     {
-        $this->container['earliest_ship_date'] = $earliest_ship_date;
+        $this->container['earliestShipDate'] = $earliestShipDate;
 
         return $this;
     }
 
     /**
-     * Gets latest_ship_date
+     * Gets latestShipDate
      *
      * @return string|null
      */
     public function getLatestShipDate()
     {
-        return $this->container['latest_ship_date'];
+        return $this->container['latestShipDate'];
     }
 
     /**
-     * Sets latest_ship_date
+     * Sets latestShipDate
      *
-     * @param string|null $latest_ship_date The end of the time period within which you have committed to ship the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.  Note: LatestShipDate might not be returned for orders placed before February 1, 2013.
+     * @param string|null $latestShipDate The end of the time period within which you have committed to ship the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.  Note: LatestShipDate might not be returned for orders placed before February 1, 2013.
      *
      * @return self
      */
-    public function setLatestShipDate($latest_ship_date)
+    public function setLatestShipDate($latestShipDate)
     {
-        $this->container['latest_ship_date'] = $latest_ship_date;
+        $this->container['latestShipDate'] = $latestShipDate;
 
         return $this;
     }
 
     /**
-     * Gets earliest_delivery_date
+     * Gets earliestDeliveryDate
      *
      * @return string|null
      */
     public function getEarliestDeliveryDate()
     {
-        return $this->container['earliest_delivery_date'];
+        return $this->container['earliestDeliveryDate'];
     }
 
     /**
-     * Sets earliest_delivery_date
+     * Sets earliestDeliveryDate
      *
-     * @param string|null $earliest_delivery_date The start of the time period within which you have committed to fulfill the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.
+     * @param string|null $earliestDeliveryDate The start of the time period within which you have committed to fulfill the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders.
      *
      * @return self
      */
-    public function setEarliestDeliveryDate($earliest_delivery_date)
+    public function setEarliestDeliveryDate($earliestDeliveryDate)
     {
-        $this->container['earliest_delivery_date'] = $earliest_delivery_date;
+        $this->container['earliestDeliveryDate'] = $earliestDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets latest_delivery_date
+     * Gets latestDeliveryDate
      *
      * @return string|null
      */
     public function getLatestDeliveryDate()
     {
-        return $this->container['latest_delivery_date'];
+        return $this->container['latestDeliveryDate'];
     }
 
     /**
-     * Sets latest_delivery_date
+     * Sets latestDeliveryDate
      *
-     * @param string|null $latest_delivery_date The end of the time period within which you have committed to fulfill the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders that do not have a PendingAvailability, Pending, or Canceled status.
+     * @param string|null $latestDeliveryDate The end of the time period within which you have committed to fulfill the order. In ISO 8601 date time format. Returned only for seller-fulfilled orders that do not have a PendingAvailability, Pending, or Canceled status.
      *
      * @return self
      */
-    public function setLatestDeliveryDate($latest_delivery_date)
+    public function setLatestDeliveryDate($latestDeliveryDate)
     {
-        $this->container['latest_delivery_date'] = $latest_delivery_date;
+        $this->container['latestDeliveryDate'] = $latestDeliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets is_business_order
+     * Gets isBusinessOrder
      *
      * @return bool|null
      */
     public function getIsBusinessOrder()
     {
-        return $this->container['is_business_order'];
+        return $this->container['isBusinessOrder'];
     }
 
     /**
-     * Sets is_business_order
+     * Sets isBusinessOrder
      *
-     * @param bool|null $is_business_order When true, the order is an Amazon Business order. An Amazon Business order is an order where the buyer is a Verified Business Buyer.
+     * @param bool|null $isBusinessOrder When true, the order is an Amazon Business order. An Amazon Business order is an order where the buyer is a Verified Business Buyer.
      *
      * @return self
      */
-    public function setIsBusinessOrder($is_business_order)
+    public function setIsBusinessOrder($isBusinessOrder)
     {
-        $this->container['is_business_order'] = $is_business_order;
+        $this->container['isBusinessOrder'] = $isBusinessOrder;
 
         return $this;
     }
 
     /**
-     * Gets is_prime
+     * Gets isPrime
      *
      * @return bool|null
      */
     public function getIsPrime()
     {
-        return $this->container['is_prime'];
+        return $this->container['isPrime'];
     }
 
     /**
-     * Sets is_prime
+     * Sets isPrime
      *
-     * @param bool|null $is_prime When true, the order is a seller-fulfilled Amazon Prime order.
+     * @param bool|null $isPrime When true, the order is a seller-fulfilled Amazon Prime order.
      *
      * @return self
      */
-    public function setIsPrime($is_prime)
+    public function setIsPrime($isPrime)
     {
-        $this->container['is_prime'] = $is_prime;
+        $this->container['isPrime'] = $isPrime;
 
         return $this;
     }
 
     /**
-     * Gets is_premium_order
+     * Gets isPremiumOrder
      *
      * @return bool|null
      */
     public function getIsPremiumOrder()
     {
-        return $this->container['is_premium_order'];
+        return $this->container['isPremiumOrder'];
     }
 
     /**
-     * Sets is_premium_order
+     * Sets isPremiumOrder
      *
-     * @param bool|null $is_premium_order When true, the order has a Premium Shipping Service Level Agreement. For more information about Premium Shipping orders, see \"Premium Shipping Options\" in the Seller Central Help for your marketplace.
+     * @param bool|null $isPremiumOrder When true, the order has a Premium Shipping Service Level Agreement. For more information about Premium Shipping orders, see \"Premium Shipping Options\" in the Seller Central Help for your marketplace.
      *
      * @return self
      */
-    public function setIsPremiumOrder($is_premium_order)
+    public function setIsPremiumOrder($isPremiumOrder)
     {
-        $this->container['is_premium_order'] = $is_premium_order;
+        $this->container['isPremiumOrder'] = $isPremiumOrder;
 
         return $this;
     }
 
     /**
-     * Gets is_global_express_enabled
+     * Gets isGlobalExpressEnabled
      *
      * @return bool|null
      */
     public function getIsGlobalExpressEnabled()
     {
-        return $this->container['is_global_express_enabled'];
+        return $this->container['isGlobalExpressEnabled'];
     }
 
     /**
-     * Sets is_global_express_enabled
+     * Sets isGlobalExpressEnabled
      *
-     * @param bool|null $is_global_express_enabled When true, the order is a GlobalExpress order.
+     * @param bool|null $isGlobalExpressEnabled When true, the order is a GlobalExpress order.
      *
      * @return self
      */
-    public function setIsGlobalExpressEnabled($is_global_express_enabled)
+    public function setIsGlobalExpressEnabled($isGlobalExpressEnabled)
     {
-        $this->container['is_global_express_enabled'] = $is_global_express_enabled;
+        $this->container['isGlobalExpressEnabled'] = $isGlobalExpressEnabled;
 
         return $this;
     }
 
     /**
-     * Gets replaced_order_id
+     * Gets replacedOrderId
      *
      * @return string|null
      */
     public function getReplacedOrderId()
     {
-        return $this->container['replaced_order_id'];
+        return $this->container['replacedOrderId'];
     }
 
     /**
-     * Sets replaced_order_id
+     * Sets replacedOrderId
      *
-     * @param string|null $replaced_order_id The order ID value for the order that is being replaced. Returned only if IsReplacementOrder = true.
+     * @param string|null $replacedOrderId The order ID value for the order that is being replaced. Returned only if IsReplacementOrder = true.
      *
      * @return self
      */
-    public function setReplacedOrderId($replaced_order_id)
+    public function setReplacedOrderId($replacedOrderId)
     {
-        $this->container['replaced_order_id'] = $replaced_order_id;
+        $this->container['replacedOrderId'] = $replacedOrderId;
 
         return $this;
     }
 
     /**
-     * Gets is_replacement_order
+     * Gets isReplacementOrder
      *
      * @return bool|null
      */
     public function getIsReplacementOrder()
     {
-        return $this->container['is_replacement_order'];
+        return $this->container['isReplacementOrder'];
     }
 
     /**
-     * Sets is_replacement_order
+     * Sets isReplacementOrder
      *
-     * @param bool|null $is_replacement_order When true, this is a replacement order.
+     * @param bool|null $isReplacementOrder When true, this is a replacement order.
      *
      * @return self
      */
-    public function setIsReplacementOrder($is_replacement_order)
+    public function setIsReplacementOrder($isReplacementOrder)
     {
-        $this->container['is_replacement_order'] = $is_replacement_order;
+        $this->container['isReplacementOrder'] = $isReplacementOrder;
 
         return $this;
     }
 
     /**
-     * Gets promise_response_due_date
+     * Gets promiseResponseDueDate
      *
      * @return string|null
      */
     public function getPromiseResponseDueDate()
     {
-        return $this->container['promise_response_due_date'];
+        return $this->container['promiseResponseDueDate'];
     }
 
     /**
-     * Sets promise_response_due_date
+     * Sets promiseResponseDueDate
      *
-     * @param string|null $promise_response_due_date Indicates the date by which the seller must respond to the buyer with an estimated ship date. Returned only for Sourcing on Demand orders.
+     * @param string|null $promiseResponseDueDate Indicates the date by which the seller must respond to the buyer with an estimated ship date. Returned only for Sourcing on Demand orders.
      *
      * @return self
      */
-    public function setPromiseResponseDueDate($promise_response_due_date)
+    public function setPromiseResponseDueDate($promiseResponseDueDate)
     {
-        $this->container['promise_response_due_date'] = $promise_response_due_date;
+        $this->container['promiseResponseDueDate'] = $promiseResponseDueDate;
 
         return $this;
     }
 
     /**
-     * Gets is_estimated_ship_date_set
+     * Gets isEstimatedShipDateSet
      *
      * @return bool|null
      */
     public function getIsEstimatedShipDateSet()
     {
-        return $this->container['is_estimated_ship_date_set'];
+        return $this->container['isEstimatedShipDateSet'];
     }
 
     /**
-     * Sets is_estimated_ship_date_set
+     * Sets isEstimatedShipDateSet
      *
-     * @param bool|null $is_estimated_ship_date_set When true, the estimated ship date is set for the order. Returned only for Sourcing on Demand orders.
+     * @param bool|null $isEstimatedShipDateSet When true, the estimated ship date is set for the order. Returned only for Sourcing on Demand orders.
      *
      * @return self
      */
-    public function setIsEstimatedShipDateSet($is_estimated_ship_date_set)
+    public function setIsEstimatedShipDateSet($isEstimatedShipDateSet)
     {
-        $this->container['is_estimated_ship_date_set'] = $is_estimated_ship_date_set;
+        $this->container['isEstimatedShipDateSet'] = $isEstimatedShipDateSet;
 
         return $this;
     }
 
     /**
-     * Gets is_sold_by_ab
+     * Gets isSoldByAB
      *
      * @return bool|null
      */
-    public function getIsSoldByAb()
+    public function getIsSoldByAB()
     {
-        return $this->container['is_sold_by_ab'];
+        return $this->container['isSoldByAB'];
     }
 
     /**
-     * Sets is_sold_by_ab
+     * Sets isSoldByAB
      *
-     * @param bool|null $is_sold_by_ab When true, the item within this order was bought and re-sold by Amazon Business EU SARL (ABEU). By buying and instantly re-selling your items, ABEU becomes the seller of record, making your inventory available for sale to customers who would not otherwise purchase from a third-party seller.
+     * @param bool|null $isSoldByAB When true, the item within this order was bought and re-sold by Amazon Business EU SARL (ABEU). By buying and instantly re-selling your items, ABEU becomes the seller of record, making your inventory available for sale to customers who would not otherwise purchase from a third-party seller.
      *
      * @return self
      */
-    public function setIsSoldByAb($is_sold_by_ab)
+    public function setIsSoldByAB($isSoldByAB)
     {
-        $this->container['is_sold_by_ab'] = $is_sold_by_ab;
+        $this->container['isSoldByAB'] = $isSoldByAB;
 
         return $this;
     }
 
     /**
-     * Gets assigned_ship_from_location_address
+     * Gets assignedShipFromLocationAddress
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\Address|null
      */
     public function getAssignedShipFromLocationAddress()
     {
-        return $this->container['assigned_ship_from_location_address'];
+        return $this->container['assignedShipFromLocationAddress'];
     }
 
     /**
-     * Sets assigned_ship_from_location_address
+     * Sets assignedShipFromLocationAddress
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $assigned_ship_from_location_address assigned_ship_from_location_address
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $assignedShipFromLocationAddress assignedShipFromLocationAddress
      *
      * @return self
      */
-    public function setAssignedShipFromLocationAddress($assigned_ship_from_location_address)
+    public function setAssignedShipFromLocationAddress($assignedShipFromLocationAddress)
     {
-        $this->container['assigned_ship_from_location_address'] = $assigned_ship_from_location_address;
+        $this->container['assignedShipFromLocationAddress'] = $assignedShipFromLocationAddress;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_instruction
+     * Gets fulfillmentInstruction
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction|null
      */
     public function getFulfillmentInstruction()
     {
-        return $this->container['fulfillment_instruction'];
+        return $this->container['fulfillmentInstruction'];
     }
 
     /**
-     * Sets fulfillment_instruction
+     * Sets fulfillmentInstruction
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction|null $fulfillment_instruction fulfillment_instruction
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction|null $fulfillmentInstruction fulfillmentInstruction
      *
      * @return self
      */
-    public function setFulfillmentInstruction($fulfillment_instruction)
+    public function setFulfillmentInstruction($fulfillmentInstruction)
     {
-        $this->container['fulfillment_instruction'] = $fulfillment_instruction;
+        $this->container['fulfillmentInstruction'] = $fulfillmentInstruction;
 
         return $this;
     }

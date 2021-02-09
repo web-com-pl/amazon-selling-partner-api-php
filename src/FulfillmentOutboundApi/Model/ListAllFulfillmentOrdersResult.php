@@ -61,8 +61,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'next_token' => 'string',
-        'fulfillment_orders' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder[]'
+        'nextToken' => 'string',
+        'fulfillmentOrders' => '\Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder[]'
     ];
 
     /**
@@ -73,8 +73,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'next_token' => null,
-        'fulfillment_orders' => null
+        'nextToken' => null,
+        'fulfillmentOrders' => null
     ];
 
     /**
@@ -104,8 +104,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_token' => 'nextToken',
-        'fulfillment_orders' => 'fulfillmentOrders'
+        'nextToken' => 'nextToken',
+        'fulfillmentOrders' => 'fulfillmentOrders'
     ];
 
     /**
@@ -114,8 +114,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'next_token' => 'setNextToken',
-        'fulfillment_orders' => 'setFulfillmentOrders'
+        'nextToken' => 'setNextToken',
+        'fulfillmentOrders' => 'setFulfillmentOrders'
     ];
 
     /**
@@ -124,8 +124,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'next_token' => 'getNextToken',
-        'fulfillment_orders' => 'getFulfillmentOrders'
+        'nextToken' => 'getNextToken',
+        'fulfillmentOrders' => 'getFulfillmentOrders'
     ];
 
     /**
@@ -188,8 +188,8 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_token'] = $data['next_token'] ?? null;
-        $this->container['fulfillment_orders'] = $data['fulfillment_orders'] ?? null;
+        $this->container['nextToken'] = $data['nextToken'] ?? null;
+        $this->container['fulfillmentOrders'] = $data['fulfillmentOrders'] ?? null;
     }
 
     /**
@@ -217,49 +217,49 @@ class ListAllFulfillmentOrdersResult implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets next_token
+     * Gets nextToken
      *
      * @return string|null
      */
     public function getNextToken()
     {
-        return $this->container['next_token'];
+        return $this->container['nextToken'];
     }
 
     /**
-     * Sets next_token
+     * Sets nextToken
      *
-     * @param string|null $next_token When present and not empty, pass this string token in the next request to return the next response page.
+     * @param string|null $nextToken When present and not empty, pass this string token in the next request to return the next response page.
      *
      * @return self
      */
-    public function setNextToken($next_token)
+    public function setNextToken($nextToken)
     {
-        $this->container['next_token'] = $next_token;
+        $this->container['nextToken'] = $nextToken;
 
         return $this;
     }
 
     /**
-     * Gets fulfillment_orders
+     * Gets fulfillmentOrders
      *
      * @return \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder[]|null
      */
     public function getFulfillmentOrders()
     {
-        return $this->container['fulfillment_orders'];
+        return $this->container['fulfillmentOrders'];
     }
 
     /**
-     * Sets fulfillment_orders
+     * Sets fulfillmentOrders
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder[]|null $fulfillment_orders An array of fulfillment order information.
+     * @param \Webcom\Amazon\Rest\FulfillmentOutboundApi\Model\FulfillmentOrder[]|null $fulfillmentOrders An array of fulfillment order information.
      *
      * @return self
      */
-    public function setFulfillmentOrders($fulfillment_orders)
+    public function setFulfillmentOrders($fulfillmentOrders)
     {
-        $this->container['fulfillment_orders'] = $fulfillment_orders;
+        $this->container['fulfillmentOrders'] = $fulfillmentOrders;
 
         return $this;
     }

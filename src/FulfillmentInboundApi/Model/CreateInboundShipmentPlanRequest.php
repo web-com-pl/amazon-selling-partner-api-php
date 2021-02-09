@@ -62,11 +62,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ship_from_address' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
-        'label_prep_preference' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference',
-        'ship_to_country_code' => 'string',
-        'ship_to_country_subdivision_code' => 'string',
-        'inbound_shipment_plan_request_items' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanRequestItem[]'
+        'shipFromAddress' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address',
+        'labelPrepPreference' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference',
+        'shipToCountryCode' => 'string',
+        'shipToCountrySubdivisionCode' => 'string',
+        'inboundShipmentPlanRequestItems' => '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanRequestItem[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ship_from_address' => null,
-        'label_prep_preference' => null,
-        'ship_to_country_code' => null,
-        'ship_to_country_subdivision_code' => null,
-        'inbound_shipment_plan_request_items' => null
+        'shipFromAddress' => null,
+        'labelPrepPreference' => null,
+        'shipToCountryCode' => null,
+        'shipToCountrySubdivisionCode' => null,
+        'inboundShipmentPlanRequestItems' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'ship_from_address' => 'ShipFromAddress',
-        'label_prep_preference' => 'LabelPrepPreference',
-        'ship_to_country_code' => 'ShipToCountryCode',
-        'ship_to_country_subdivision_code' => 'ShipToCountrySubdivisionCode',
-        'inbound_shipment_plan_request_items' => 'InboundShipmentPlanRequestItems'
+        'shipFromAddress' => 'ShipFromAddress',
+        'labelPrepPreference' => 'LabelPrepPreference',
+        'shipToCountryCode' => 'ShipToCountryCode',
+        'shipToCountrySubdivisionCode' => 'ShipToCountrySubdivisionCode',
+        'inboundShipmentPlanRequestItems' => 'InboundShipmentPlanRequestItems'
     ];
 
     /**
@@ -124,11 +124,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'ship_from_address' => 'setShipFromAddress',
-        'label_prep_preference' => 'setLabelPrepPreference',
-        'ship_to_country_code' => 'setShipToCountryCode',
-        'ship_to_country_subdivision_code' => 'setShipToCountrySubdivisionCode',
-        'inbound_shipment_plan_request_items' => 'setInboundShipmentPlanRequestItems'
+        'shipFromAddress' => 'setShipFromAddress',
+        'labelPrepPreference' => 'setLabelPrepPreference',
+        'shipToCountryCode' => 'setShipToCountryCode',
+        'shipToCountrySubdivisionCode' => 'setShipToCountrySubdivisionCode',
+        'inboundShipmentPlanRequestItems' => 'setInboundShipmentPlanRequestItems'
     ];
 
     /**
@@ -137,11 +137,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'ship_from_address' => 'getShipFromAddress',
-        'label_prep_preference' => 'getLabelPrepPreference',
-        'ship_to_country_code' => 'getShipToCountryCode',
-        'ship_to_country_subdivision_code' => 'getShipToCountrySubdivisionCode',
-        'inbound_shipment_plan_request_items' => 'getInboundShipmentPlanRequestItems'
+        'shipFromAddress' => 'getShipFromAddress',
+        'labelPrepPreference' => 'getLabelPrepPreference',
+        'shipToCountryCode' => 'getShipToCountryCode',
+        'shipToCountrySubdivisionCode' => 'getShipToCountrySubdivisionCode',
+        'inboundShipmentPlanRequestItems' => 'getInboundShipmentPlanRequestItems'
     ];
 
     /**
@@ -204,11 +204,11 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
-        $this->container['ship_from_address'] = $data['ship_from_address'] ?? null;
-        $this->container['label_prep_preference'] = $data['label_prep_preference'] ?? null;
-        $this->container['ship_to_country_code'] = $data['ship_to_country_code'] ?? null;
-        $this->container['ship_to_country_subdivision_code'] = $data['ship_to_country_subdivision_code'] ?? null;
-        $this->container['inbound_shipment_plan_request_items'] = $data['inbound_shipment_plan_request_items'] ?? null;
+        $this->container['shipFromAddress'] = $data['shipFromAddress'] ?? null;
+        $this->container['labelPrepPreference'] = $data['labelPrepPreference'] ?? null;
+        $this->container['shipToCountryCode'] = $data['shipToCountryCode'] ?? null;
+        $this->container['shipToCountrySubdivisionCode'] = $data['shipToCountrySubdivisionCode'] ?? null;
+        $this->container['inboundShipmentPlanRequestItems'] = $data['inboundShipmentPlanRequestItems'] ?? null;
     }
 
     /**
@@ -220,14 +220,14 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['ship_from_address'] === null) {
-            $invalidProperties[] = "'ship_from_address' can't be null";
+        if ($this->container['shipFromAddress'] === null) {
+            $invalidProperties[] = "'shipFromAddress' can't be null";
         }
-        if ($this->container['label_prep_preference'] === null) {
-            $invalidProperties[] = "'label_prep_preference' can't be null";
+        if ($this->container['labelPrepPreference'] === null) {
+            $invalidProperties[] = "'labelPrepPreference' can't be null";
         }
-        if ($this->container['inbound_shipment_plan_request_items'] === null) {
-            $invalidProperties[] = "'inbound_shipment_plan_request_items' can't be null";
+        if ($this->container['inboundShipmentPlanRequestItems'] === null) {
+            $invalidProperties[] = "'inboundShipmentPlanRequestItems' can't be null";
         }
         return $invalidProperties;
     }
@@ -245,121 +245,121 @@ class CreateInboundShipmentPlanRequest implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets ship_from_address
+     * Gets shipFromAddress
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address
      */
     public function getShipFromAddress()
     {
-        return $this->container['ship_from_address'];
+        return $this->container['shipFromAddress'];
     }
 
     /**
-     * Sets ship_from_address
+     * Sets shipFromAddress
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $ship_from_address ship_from_address
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\Address $shipFromAddress shipFromAddress
      *
      * @return self
      */
-    public function setShipFromAddress($ship_from_address)
+    public function setShipFromAddress($shipFromAddress)
     {
-        $this->container['ship_from_address'] = $ship_from_address;
+        $this->container['shipFromAddress'] = $shipFromAddress;
 
         return $this;
     }
 
     /**
-     * Gets label_prep_preference
+     * Gets labelPrepPreference
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference
      */
     public function getLabelPrepPreference()
     {
-        return $this->container['label_prep_preference'];
+        return $this->container['labelPrepPreference'];
     }
 
     /**
-     * Sets label_prep_preference
+     * Sets labelPrepPreference
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference $label_prep_preference label_prep_preference
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\LabelPrepPreference $labelPrepPreference labelPrepPreference
      *
      * @return self
      */
-    public function setLabelPrepPreference($label_prep_preference)
+    public function setLabelPrepPreference($labelPrepPreference)
     {
-        $this->container['label_prep_preference'] = $label_prep_preference;
+        $this->container['labelPrepPreference'] = $labelPrepPreference;
 
         return $this;
     }
 
     /**
-     * Gets ship_to_country_code
+     * Gets shipToCountryCode
      *
      * @return string|null
      */
     public function getShipToCountryCode()
     {
-        return $this->container['ship_to_country_code'];
+        return $this->container['shipToCountryCode'];
     }
 
     /**
-     * Sets ship_to_country_code
+     * Sets shipToCountryCode
      *
-     * @param string|null $ship_to_country_code The two-character country code for the country where the inbound shipment is to be sent.  Note: Not required. Specifying both ShipToCountryCode and ShipToCountrySubdivisionCode returns an error.   Values:   ShipToCountryCode values for North America:  * CA – Canada  * MX - Mexico  * US - United States  ShipToCountryCode values for MCI sellers in Europe:  * DE – Germany  * ES – Spain  * FR – France  * GB – United Kingdom  * IT – Italy  Default: The country code for the seller's home marketplace.
+     * @param string|null $shipToCountryCode The two-character country code for the country where the inbound shipment is to be sent.  Note: Not required. Specifying both ShipToCountryCode and ShipToCountrySubdivisionCode returns an error.   Values:   ShipToCountryCode values for North America:  * CA – Canada  * MX - Mexico  * US - United States  ShipToCountryCode values for MCI sellers in Europe:  * DE – Germany  * ES – Spain  * FR – France  * GB – United Kingdom  * IT – Italy  Default: The country code for the seller's home marketplace.
      *
      * @return self
      */
-    public function setShipToCountryCode($ship_to_country_code)
+    public function setShipToCountryCode($shipToCountryCode)
     {
-        $this->container['ship_to_country_code'] = $ship_to_country_code;
+        $this->container['shipToCountryCode'] = $shipToCountryCode;
 
         return $this;
     }
 
     /**
-     * Gets ship_to_country_subdivision_code
+     * Gets shipToCountrySubdivisionCode
      *
      * @return string|null
      */
     public function getShipToCountrySubdivisionCode()
     {
-        return $this->container['ship_to_country_subdivision_code'];
+        return $this->container['shipToCountrySubdivisionCode'];
     }
 
     /**
-     * Sets ship_to_country_subdivision_code
+     * Sets shipToCountrySubdivisionCode
      *
-     * @param string|null $ship_to_country_subdivision_code The two-character country code, followed by a dash and then up to three characters that represent the subdivision of the country where the inbound shipment is to be sent. For example, \"IN-MH\". In full ISO 3166-2 format.  Note: Not required. Specifying both ShipToCountryCode and ShipToCountrySubdivisionCode returns an error.
+     * @param string|null $shipToCountrySubdivisionCode The two-character country code, followed by a dash and then up to three characters that represent the subdivision of the country where the inbound shipment is to be sent. For example, \"IN-MH\". In full ISO 3166-2 format.  Note: Not required. Specifying both ShipToCountryCode and ShipToCountrySubdivisionCode returns an error.
      *
      * @return self
      */
-    public function setShipToCountrySubdivisionCode($ship_to_country_subdivision_code)
+    public function setShipToCountrySubdivisionCode($shipToCountrySubdivisionCode)
     {
-        $this->container['ship_to_country_subdivision_code'] = $ship_to_country_subdivision_code;
+        $this->container['shipToCountrySubdivisionCode'] = $shipToCountrySubdivisionCode;
 
         return $this;
     }
 
     /**
-     * Gets inbound_shipment_plan_request_items
+     * Gets inboundShipmentPlanRequestItems
      *
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanRequestItem[]
      */
     public function getInboundShipmentPlanRequestItems()
     {
-        return $this->container['inbound_shipment_plan_request_items'];
+        return $this->container['inboundShipmentPlanRequestItems'];
     }
 
     /**
-     * Sets inbound_shipment_plan_request_items
+     * Sets inboundShipmentPlanRequestItems
      *
-     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanRequestItem[] $inbound_shipment_plan_request_items inbound_shipment_plan_request_items
+     * @param \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\InboundShipmentPlanRequestItem[] $inboundShipmentPlanRequestItems inboundShipmentPlanRequestItems
      *
      * @return self
      */
-    public function setInboundShipmentPlanRequestItems($inbound_shipment_plan_request_items)
+    public function setInboundShipmentPlanRequestItems($inboundShipmentPlanRequestItems)
     {
-        $this->container['inbound_shipment_plan_request_items'] = $inbound_shipment_plan_request_items;
+        $this->container['inboundShipmentPlanRequestItems'] = $inboundShipmentPlanRequestItems;
 
         return $this;
     }

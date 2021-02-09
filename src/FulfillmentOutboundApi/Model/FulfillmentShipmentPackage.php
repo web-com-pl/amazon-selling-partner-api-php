@@ -62,10 +62,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'package_number' => 'int',
-        'carrier_code' => 'string',
-        'tracking_number' => 'string',
-        'estimated_arrival_date' => '\DateTime'
+        'packageNumber' => 'int',
+        'carrierCode' => 'string',
+        'trackingNumber' => 'string',
+        'estimatedArrivalDate' => '\DateTime'
     ];
 
     /**
@@ -76,10 +76,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'package_number' => 'int32',
-        'carrier_code' => null,
-        'tracking_number' => null,
-        'estimated_arrival_date' => 'date-time'
+        'packageNumber' => 'int32',
+        'carrierCode' => null,
+        'trackingNumber' => null,
+        'estimatedArrivalDate' => 'date-time'
     ];
 
     /**
@@ -109,10 +109,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'package_number' => 'packageNumber',
-        'carrier_code' => 'carrierCode',
-        'tracking_number' => 'trackingNumber',
-        'estimated_arrival_date' => 'estimatedArrivalDate'
+        'packageNumber' => 'packageNumber',
+        'carrierCode' => 'carrierCode',
+        'trackingNumber' => 'trackingNumber',
+        'estimatedArrivalDate' => 'estimatedArrivalDate'
     ];
 
     /**
@@ -121,10 +121,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'package_number' => 'setPackageNumber',
-        'carrier_code' => 'setCarrierCode',
-        'tracking_number' => 'setTrackingNumber',
-        'estimated_arrival_date' => 'setEstimatedArrivalDate'
+        'packageNumber' => 'setPackageNumber',
+        'carrierCode' => 'setCarrierCode',
+        'trackingNumber' => 'setTrackingNumber',
+        'estimatedArrivalDate' => 'setEstimatedArrivalDate'
     ];
 
     /**
@@ -133,10 +133,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'package_number' => 'getPackageNumber',
-        'carrier_code' => 'getCarrierCode',
-        'tracking_number' => 'getTrackingNumber',
-        'estimated_arrival_date' => 'getEstimatedArrivalDate'
+        'packageNumber' => 'getPackageNumber',
+        'carrierCode' => 'getCarrierCode',
+        'trackingNumber' => 'getTrackingNumber',
+        'estimatedArrivalDate' => 'getEstimatedArrivalDate'
     ];
 
     /**
@@ -199,10 +199,10 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['package_number'] = $data['package_number'] ?? null;
-        $this->container['carrier_code'] = $data['carrier_code'] ?? null;
-        $this->container['tracking_number'] = $data['tracking_number'] ?? null;
-        $this->container['estimated_arrival_date'] = $data['estimated_arrival_date'] ?? null;
+        $this->container['packageNumber'] = $data['packageNumber'] ?? null;
+        $this->container['carrierCode'] = $data['carrierCode'] ?? null;
+        $this->container['trackingNumber'] = $data['trackingNumber'] ?? null;
+        $this->container['estimatedArrivalDate'] = $data['estimatedArrivalDate'] ?? null;
     }
 
     /**
@@ -214,11 +214,11 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['package_number'] === null) {
-            $invalidProperties[] = "'package_number' can't be null";
+        if ($this->container['packageNumber'] === null) {
+            $invalidProperties[] = "'packageNumber' can't be null";
         }
-        if ($this->container['carrier_code'] === null) {
-            $invalidProperties[] = "'carrier_code' can't be null";
+        if ($this->container['carrierCode'] === null) {
+            $invalidProperties[] = "'carrierCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -236,97 +236,97 @@ class FulfillmentShipmentPackage implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets package_number
+     * Gets packageNumber
      *
      * @return int
      */
     public function getPackageNumber()
     {
-        return $this->container['package_number'];
+        return $this->container['packageNumber'];
     }
 
     /**
-     * Sets package_number
+     * Sets packageNumber
      *
-     * @param int $package_number Identifies a package in a shipment.
+     * @param int $packageNumber Identifies a package in a shipment.
      *
      * @return self
      */
-    public function setPackageNumber($package_number)
+    public function setPackageNumber($packageNumber)
     {
-        $this->container['package_number'] = $package_number;
+        $this->container['packageNumber'] = $packageNumber;
 
         return $this;
     }
 
     /**
-     * Gets carrier_code
+     * Gets carrierCode
      *
      * @return string
      */
     public function getCarrierCode()
     {
-        return $this->container['carrier_code'];
+        return $this->container['carrierCode'];
     }
 
     /**
-     * Sets carrier_code
+     * Sets carrierCode
      *
-     * @param string $carrier_code Identifies the carrier who will deliver the shipment to the recipient.
+     * @param string $carrierCode Identifies the carrier who will deliver the shipment to the recipient.
      *
      * @return self
      */
-    public function setCarrierCode($carrier_code)
+    public function setCarrierCode($carrierCode)
     {
-        $this->container['carrier_code'] = $carrier_code;
+        $this->container['carrierCode'] = $carrierCode;
 
         return $this;
     }
 
     /**
-     * Gets tracking_number
+     * Gets trackingNumber
      *
      * @return string|null
      */
     public function getTrackingNumber()
     {
-        return $this->container['tracking_number'];
+        return $this->container['trackingNumber'];
     }
 
     /**
-     * Sets tracking_number
+     * Sets trackingNumber
      *
-     * @param string|null $tracking_number The tracking number, if provided, can be used to obtain tracking and delivery information.
+     * @param string|null $trackingNumber The tracking number, if provided, can be used to obtain tracking and delivery information.
      *
      * @return self
      */
-    public function setTrackingNumber($tracking_number)
+    public function setTrackingNumber($trackingNumber)
     {
-        $this->container['tracking_number'] = $tracking_number;
+        $this->container['trackingNumber'] = $trackingNumber;
 
         return $this;
     }
 
     /**
-     * Gets estimated_arrival_date
+     * Gets estimatedArrivalDate
      *
      * @return \DateTime|null
      */
     public function getEstimatedArrivalDate()
     {
-        return $this->container['estimated_arrival_date'];
+        return $this->container['estimatedArrivalDate'];
     }
 
     /**
-     * Sets estimated_arrival_date
+     * Sets estimatedArrivalDate
      *
-     * @param \DateTime|null $estimated_arrival_date estimated_arrival_date
+     * @param \DateTime|null $estimatedArrivalDate estimatedArrivalDate
      *
      * @return self
      */
-    public function setEstimatedArrivalDate($estimated_arrival_date)
+    public function setEstimatedArrivalDate($estimatedArrivalDate)
     {
-        $this->container['estimated_arrival_date'] = $estimated_arrival_date;
+        $this->container['estimatedArrivalDate'] = $estimatedArrivalDate;
 
         return $this;
     }

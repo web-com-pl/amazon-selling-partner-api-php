@@ -62,12 +62,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_request_details' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails',
-        'shipping_service_id' => 'string',
-        'shipping_service_offer_id' => 'string',
-        'hazmat_type' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\HazmatType',
-        'label_format_option' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOptionRequest',
-        'shipment_level_seller_inputs_list' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]'
+        'shipmentRequestDetails' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails',
+        'shippingServiceId' => 'string',
+        'shippingServiceOfferId' => 'string',
+        'hazmatType' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\HazmatType',
+        'labelFormatOption' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOptionRequest',
+        'shipmentLevelSellerInputsList' => '\Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]'
     ];
 
     /**
@@ -78,12 +78,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'shipment_request_details' => null,
-        'shipping_service_id' => null,
-        'shipping_service_offer_id' => null,
-        'hazmat_type' => null,
-        'label_format_option' => null,
-        'shipment_level_seller_inputs_list' => null
+        'shipmentRequestDetails' => null,
+        'shippingServiceId' => null,
+        'shippingServiceOfferId' => null,
+        'hazmatType' => null,
+        'labelFormatOption' => null,
+        'shipmentLevelSellerInputsList' => null
     ];
 
     /**
@@ -113,12 +113,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'shipment_request_details' => 'ShipmentRequestDetails',
-        'shipping_service_id' => 'ShippingServiceId',
-        'shipping_service_offer_id' => 'ShippingServiceOfferId',
-        'hazmat_type' => 'HazmatType',
-        'label_format_option' => 'LabelFormatOption',
-        'shipment_level_seller_inputs_list' => 'ShipmentLevelSellerInputsList'
+        'shipmentRequestDetails' => 'ShipmentRequestDetails',
+        'shippingServiceId' => 'ShippingServiceId',
+        'shippingServiceOfferId' => 'ShippingServiceOfferId',
+        'hazmatType' => 'HazmatType',
+        'labelFormatOption' => 'LabelFormatOption',
+        'shipmentLevelSellerInputsList' => 'ShipmentLevelSellerInputsList'
     ];
 
     /**
@@ -127,12 +127,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'shipment_request_details' => 'setShipmentRequestDetails',
-        'shipping_service_id' => 'setShippingServiceId',
-        'shipping_service_offer_id' => 'setShippingServiceOfferId',
-        'hazmat_type' => 'setHazmatType',
-        'label_format_option' => 'setLabelFormatOption',
-        'shipment_level_seller_inputs_list' => 'setShipmentLevelSellerInputsList'
+        'shipmentRequestDetails' => 'setShipmentRequestDetails',
+        'shippingServiceId' => 'setShippingServiceId',
+        'shippingServiceOfferId' => 'setShippingServiceOfferId',
+        'hazmatType' => 'setHazmatType',
+        'labelFormatOption' => 'setLabelFormatOption',
+        'shipmentLevelSellerInputsList' => 'setShipmentLevelSellerInputsList'
     ];
 
     /**
@@ -141,12 +141,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'shipment_request_details' => 'getShipmentRequestDetails',
-        'shipping_service_id' => 'getShippingServiceId',
-        'shipping_service_offer_id' => 'getShippingServiceOfferId',
-        'hazmat_type' => 'getHazmatType',
-        'label_format_option' => 'getLabelFormatOption',
-        'shipment_level_seller_inputs_list' => 'getShipmentLevelSellerInputsList'
+        'shipmentRequestDetails' => 'getShipmentRequestDetails',
+        'shippingServiceId' => 'getShippingServiceId',
+        'shippingServiceOfferId' => 'getShippingServiceOfferId',
+        'hazmatType' => 'getHazmatType',
+        'labelFormatOption' => 'getLabelFormatOption',
+        'shipmentLevelSellerInputsList' => 'getShipmentLevelSellerInputsList'
     ];
 
     /**
@@ -209,12 +209,12 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['shipment_request_details'] = $data['shipment_request_details'] ?? null;
-        $this->container['shipping_service_id'] = $data['shipping_service_id'] ?? null;
-        $this->container['shipping_service_offer_id'] = $data['shipping_service_offer_id'] ?? null;
-        $this->container['hazmat_type'] = $data['hazmat_type'] ?? null;
-        $this->container['label_format_option'] = $data['label_format_option'] ?? null;
-        $this->container['shipment_level_seller_inputs_list'] = $data['shipment_level_seller_inputs_list'] ?? null;
+        $this->container['shipmentRequestDetails'] = $data['shipmentRequestDetails'] ?? null;
+        $this->container['shippingServiceId'] = $data['shippingServiceId'] ?? null;
+        $this->container['shippingServiceOfferId'] = $data['shippingServiceOfferId'] ?? null;
+        $this->container['hazmatType'] = $data['hazmatType'] ?? null;
+        $this->container['labelFormatOption'] = $data['labelFormatOption'] ?? null;
+        $this->container['shipmentLevelSellerInputsList'] = $data['shipmentLevelSellerInputsList'] ?? null;
     }
 
     /**
@@ -226,11 +226,11 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['shipment_request_details'] === null) {
-            $invalidProperties[] = "'shipment_request_details' can't be null";
+        if ($this->container['shipmentRequestDetails'] === null) {
+            $invalidProperties[] = "'shipmentRequestDetails' can't be null";
         }
-        if ($this->container['shipping_service_id'] === null) {
-            $invalidProperties[] = "'shipping_service_id' can't be null";
+        if ($this->container['shippingServiceId'] === null) {
+            $invalidProperties[] = "'shippingServiceId' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,145 +248,145 @@ class CreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets shipment_request_details
+     * Gets shipmentRequestDetails
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails
      */
     public function getShipmentRequestDetails()
     {
-        return $this->container['shipment_request_details'];
+        return $this->container['shipmentRequestDetails'];
     }
 
     /**
-     * Sets shipment_request_details
+     * Sets shipmentRequestDetails
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails $shipment_request_details shipment_request_details
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\ShipmentRequestDetails $shipmentRequestDetails shipmentRequestDetails
      *
      * @return self
      */
-    public function setShipmentRequestDetails($shipment_request_details)
+    public function setShipmentRequestDetails($shipmentRequestDetails)
     {
-        $this->container['shipment_request_details'] = $shipment_request_details;
+        $this->container['shipmentRequestDetails'] = $shipmentRequestDetails;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_id
+     * Gets shippingServiceId
      *
      * @return string
      */
     public function getShippingServiceId()
     {
-        return $this->container['shipping_service_id'];
+        return $this->container['shippingServiceId'];
     }
 
     /**
-     * Sets shipping_service_id
+     * Sets shippingServiceId
      *
-     * @param string $shipping_service_id An Amazon-defined shipping service identifier.
+     * @param string $shippingServiceId An Amazon-defined shipping service identifier.
      *
      * @return self
      */
-    public function setShippingServiceId($shipping_service_id)
+    public function setShippingServiceId($shippingServiceId)
     {
-        $this->container['shipping_service_id'] = $shipping_service_id;
+        $this->container['shippingServiceId'] = $shippingServiceId;
 
         return $this;
     }
 
     /**
-     * Gets shipping_service_offer_id
+     * Gets shippingServiceOfferId
      *
      * @return string|null
      */
     public function getShippingServiceOfferId()
     {
-        return $this->container['shipping_service_offer_id'];
+        return $this->container['shippingServiceOfferId'];
     }
 
     /**
-     * Sets shipping_service_offer_id
+     * Sets shippingServiceOfferId
      *
-     * @param string|null $shipping_service_offer_id Identifies a shipping service order made by a carrier.
+     * @param string|null $shippingServiceOfferId Identifies a shipping service order made by a carrier.
      *
      * @return self
      */
-    public function setShippingServiceOfferId($shipping_service_offer_id)
+    public function setShippingServiceOfferId($shippingServiceOfferId)
     {
-        $this->container['shipping_service_offer_id'] = $shipping_service_offer_id;
+        $this->container['shippingServiceOfferId'] = $shippingServiceOfferId;
 
         return $this;
     }
 
     /**
-     * Gets hazmat_type
+     * Gets hazmatType
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\HazmatType|null
      */
     public function getHazmatType()
     {
-        return $this->container['hazmat_type'];
+        return $this->container['hazmatType'];
     }
 
     /**
-     * Sets hazmat_type
+     * Sets hazmatType
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\HazmatType|null $hazmat_type hazmat_type
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\HazmatType|null $hazmatType hazmatType
      *
      * @return self
      */
-    public function setHazmatType($hazmat_type)
+    public function setHazmatType($hazmatType)
     {
-        $this->container['hazmat_type'] = $hazmat_type;
+        $this->container['hazmatType'] = $hazmatType;
 
         return $this;
     }
 
     /**
-     * Gets label_format_option
+     * Gets labelFormatOption
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOptionRequest|null
      */
     public function getLabelFormatOption()
     {
-        return $this->container['label_format_option'];
+        return $this->container['labelFormatOption'];
     }
 
     /**
-     * Sets label_format_option
+     * Sets labelFormatOption
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOptionRequest|null $label_format_option label_format_option
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\LabelFormatOptionRequest|null $labelFormatOption labelFormatOption
      *
      * @return self
      */
-    public function setLabelFormatOption($label_format_option)
+    public function setLabelFormatOption($labelFormatOption)
     {
-        $this->container['label_format_option'] = $label_format_option;
+        $this->container['labelFormatOption'] = $labelFormatOption;
 
         return $this;
     }
 
     /**
-     * Gets shipment_level_seller_inputs_list
+     * Gets shipmentLevelSellerInputsList
      *
      * @return \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null
      */
     public function getShipmentLevelSellerInputsList()
     {
-        return $this->container['shipment_level_seller_inputs_list'];
+        return $this->container['shipmentLevelSellerInputsList'];
     }
 
     /**
-     * Sets shipment_level_seller_inputs_list
+     * Sets shipmentLevelSellerInputsList
      *
-     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null $shipment_level_seller_inputs_list A list of additional seller input pairs required to purchase shipping.
+     * @param \Webcom\Amazon\Rest\MerchantFulfillmentApi\Model\AdditionalSellerInputs[]|null $shipmentLevelSellerInputsList A list of additional seller input pairs required to purchase shipping.
      *
      * @return self
      */
-    public function setShipmentLevelSellerInputsList($shipment_level_seller_inputs_list)
+    public function setShipmentLevelSellerInputsList($shipmentLevelSellerInputsList)
     {
-        $this->container['shipment_level_seller_inputs_list'] = $shipment_level_seller_inputs_list;
+        $this->container['shipmentLevelSellerInputsList'] = $shipmentLevelSellerInputsList;
 
         return $this;
     }

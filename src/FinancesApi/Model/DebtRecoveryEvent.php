@@ -62,11 +62,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'debt_recovery_type' => 'string',
-        'recovery_amount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'over_payment_credit' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
-        'debt_recovery_item_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryItem[]',
-        'charge_instrument_list' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeInstrument[]'
+        'debtRecoveryType' => 'string',
+        'recoveryAmount' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'overPaymentCredit' => '\Webcom\Amazon\Rest\FinancesApi\Model\Currency',
+        'debtRecoveryItemList' => '\Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryItem[]',
+        'chargeInstrumentList' => '\Webcom\Amazon\Rest\FinancesApi\Model\ChargeInstrument[]'
     ];
 
     /**
@@ -77,11 +77,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'debt_recovery_type' => null,
-        'recovery_amount' => null,
-        'over_payment_credit' => null,
-        'debt_recovery_item_list' => null,
-        'charge_instrument_list' => null
+        'debtRecoveryType' => null,
+        'recoveryAmount' => null,
+        'overPaymentCredit' => null,
+        'debtRecoveryItemList' => null,
+        'chargeInstrumentList' => null
     ];
 
     /**
@@ -111,11 +111,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'debt_recovery_type' => 'DebtRecoveryType',
-        'recovery_amount' => 'RecoveryAmount',
-        'over_payment_credit' => 'OverPaymentCredit',
-        'debt_recovery_item_list' => 'DebtRecoveryItemList',
-        'charge_instrument_list' => 'ChargeInstrumentList'
+        'debtRecoveryType' => 'DebtRecoveryType',
+        'recoveryAmount' => 'RecoveryAmount',
+        'overPaymentCredit' => 'OverPaymentCredit',
+        'debtRecoveryItemList' => 'DebtRecoveryItemList',
+        'chargeInstrumentList' => 'ChargeInstrumentList'
     ];
 
     /**
@@ -124,11 +124,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'debt_recovery_type' => 'setDebtRecoveryType',
-        'recovery_amount' => 'setRecoveryAmount',
-        'over_payment_credit' => 'setOverPaymentCredit',
-        'debt_recovery_item_list' => 'setDebtRecoveryItemList',
-        'charge_instrument_list' => 'setChargeInstrumentList'
+        'debtRecoveryType' => 'setDebtRecoveryType',
+        'recoveryAmount' => 'setRecoveryAmount',
+        'overPaymentCredit' => 'setOverPaymentCredit',
+        'debtRecoveryItemList' => 'setDebtRecoveryItemList',
+        'chargeInstrumentList' => 'setChargeInstrumentList'
     ];
 
     /**
@@ -137,11 +137,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'debt_recovery_type' => 'getDebtRecoveryType',
-        'recovery_amount' => 'getRecoveryAmount',
-        'over_payment_credit' => 'getOverPaymentCredit',
-        'debt_recovery_item_list' => 'getDebtRecoveryItemList',
-        'charge_instrument_list' => 'getChargeInstrumentList'
+        'debtRecoveryType' => 'getDebtRecoveryType',
+        'recoveryAmount' => 'getRecoveryAmount',
+        'overPaymentCredit' => 'getOverPaymentCredit',
+        'debtRecoveryItemList' => 'getDebtRecoveryItemList',
+        'chargeInstrumentList' => 'getChargeInstrumentList'
     ];
 
     /**
@@ -204,11 +204,11 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['debt_recovery_type'] = $data['debt_recovery_type'] ?? null;
-        $this->container['recovery_amount'] = $data['recovery_amount'] ?? null;
-        $this->container['over_payment_credit'] = $data['over_payment_credit'] ?? null;
-        $this->container['debt_recovery_item_list'] = $data['debt_recovery_item_list'] ?? null;
-        $this->container['charge_instrument_list'] = $data['charge_instrument_list'] ?? null;
+        $this->container['debtRecoveryType'] = $data['debtRecoveryType'] ?? null;
+        $this->container['recoveryAmount'] = $data['recoveryAmount'] ?? null;
+        $this->container['overPaymentCredit'] = $data['overPaymentCredit'] ?? null;
+        $this->container['debtRecoveryItemList'] = $data['debtRecoveryItemList'] ?? null;
+        $this->container['chargeInstrumentList'] = $data['chargeInstrumentList'] ?? null;
     }
 
     /**
@@ -236,121 +236,121 @@ class DebtRecoveryEvent implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets debt_recovery_type
+     * Gets debtRecoveryType
      *
      * @return string|null
      */
     public function getDebtRecoveryType()
     {
-        return $this->container['debt_recovery_type'];
+        return $this->container['debtRecoveryType'];
     }
 
     /**
-     * Sets debt_recovery_type
+     * Sets debtRecoveryType
      *
-     * @param string|null $debt_recovery_type The debt recovery type.  Possible values:  * DebtPayment  * DebtPaymentFailure  *DebtAdjustment
+     * @param string|null $debtRecoveryType The debt recovery type.  Possible values:  * DebtPayment  * DebtPaymentFailure  *DebtAdjustment
      *
      * @return self
      */
-    public function setDebtRecoveryType($debt_recovery_type)
+    public function setDebtRecoveryType($debtRecoveryType)
     {
-        $this->container['debt_recovery_type'] = $debt_recovery_type;
+        $this->container['debtRecoveryType'] = $debtRecoveryType;
 
         return $this;
     }
 
     /**
-     * Gets recovery_amount
+     * Gets recoveryAmount
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getRecoveryAmount()
     {
-        return $this->container['recovery_amount'];
+        return $this->container['recoveryAmount'];
     }
 
     /**
-     * Sets recovery_amount
+     * Sets recoveryAmount
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $recovery_amount recovery_amount
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $recoveryAmount recoveryAmount
      *
      * @return self
      */
-    public function setRecoveryAmount($recovery_amount)
+    public function setRecoveryAmount($recoveryAmount)
     {
-        $this->container['recovery_amount'] = $recovery_amount;
+        $this->container['recoveryAmount'] = $recoveryAmount;
 
         return $this;
     }
 
     /**
-     * Gets over_payment_credit
+     * Gets overPaymentCredit
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null
      */
     public function getOverPaymentCredit()
     {
-        return $this->container['over_payment_credit'];
+        return $this->container['overPaymentCredit'];
     }
 
     /**
-     * Sets over_payment_credit
+     * Sets overPaymentCredit
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $over_payment_credit over_payment_credit
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\Currency|null $overPaymentCredit overPaymentCredit
      *
      * @return self
      */
-    public function setOverPaymentCredit($over_payment_credit)
+    public function setOverPaymentCredit($overPaymentCredit)
     {
-        $this->container['over_payment_credit'] = $over_payment_credit;
+        $this->container['overPaymentCredit'] = $overPaymentCredit;
 
         return $this;
     }
 
     /**
-     * Gets debt_recovery_item_list
+     * Gets debtRecoveryItemList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryItem[]|null
      */
     public function getDebtRecoveryItemList()
     {
-        return $this->container['debt_recovery_item_list'];
+        return $this->container['debtRecoveryItemList'];
     }
 
     /**
-     * Sets debt_recovery_item_list
+     * Sets debtRecoveryItemList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryItem[]|null $debt_recovery_item_list A list of debt recovery item information.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\DebtRecoveryItem[]|null $debtRecoveryItemList A list of debt recovery item information.
      *
      * @return self
      */
-    public function setDebtRecoveryItemList($debt_recovery_item_list)
+    public function setDebtRecoveryItemList($debtRecoveryItemList)
     {
-        $this->container['debt_recovery_item_list'] = $debt_recovery_item_list;
+        $this->container['debtRecoveryItemList'] = $debtRecoveryItemList;
 
         return $this;
     }
 
     /**
-     * Gets charge_instrument_list
+     * Gets chargeInstrumentList
      *
      * @return \Webcom\Amazon\Rest\FinancesApi\Model\ChargeInstrument[]|null
      */
     public function getChargeInstrumentList()
     {
-        return $this->container['charge_instrument_list'];
+        return $this->container['chargeInstrumentList'];
     }
 
     /**
-     * Sets charge_instrument_list
+     * Sets chargeInstrumentList
      *
-     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeInstrument[]|null $charge_instrument_list A list of payment instruments.
+     * @param \Webcom\Amazon\Rest\FinancesApi\Model\ChargeInstrument[]|null $chargeInstrumentList A list of payment instruments.
      *
      * @return self
      */
-    public function setChargeInstrumentList($charge_instrument_list)
+    public function setChargeInstrumentList($chargeInstrumentList)
     {
-        $this->container['charge_instrument_list'] = $charge_instrument_list;
+        $this->container['chargeInstrumentList'] = $chargeInstrumentList;
 
         return $this;
     }
