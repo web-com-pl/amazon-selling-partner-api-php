@@ -73,12 +73,16 @@ class AESCryptoStreamFactory
      * - Key
      * @param string $iv [required]
      * - IV Key
+     * @param bool $addEndString
+     * - Add a end string character to the end of the string
      * @return string
      * - encrypted string
      */
-    public static function encrypt(string $plainText, string $key, string $iv): string
+    public static function encrypt(string $plainText, string $key, string $iv, bool $addEndString = true): string
     {
-        $plainText = static::getPaddedText($plainText);
+        if($addEndString) {
+            $plainText = static::getPaddedText($plainText);
+        }
         return openssl_encrypt($plainText, static::CIPHER, $key, OPENSSL_RAW_DATA, $iv);
     }
 
