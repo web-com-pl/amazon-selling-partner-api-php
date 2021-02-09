@@ -57,7 +57,7 @@ class ResourcesApi
             [
                 'Content-Type' => $contentType,
             ],
-            AESCryptoStreamFactory::encrypt($plainDocument, $key, $initializationVector)
+            AESCryptoStreamFactory::encrypt($plainDocument, $key, $initializationVector, false)
         );
 
         try {
@@ -84,7 +84,7 @@ class ResourcesApi
      */
     public function getReportDocument(ReportDocument $documentResponse)
     {
-        // let's decode document
+        // encryption key and iv
         $initializationVector = base64_decode($documentResponse->getEncryptionDetails()->getInitializationVector(), true);
         $key = base64_decode($documentResponse->getEncryptionDetails()->getKey(), true);
 
@@ -93,11 +93,9 @@ class ResourcesApi
             'GET',
             $documentResponse->getUrl()
         );
-        // send request and retrieve encoded document
-        $encodedDocument = $this->client->send($request)->getBody()->getContents();
-        // decryption stuff
+        // send request and retrieve encoded document, then decrypt
         $document = AESCryptoStreamFactory::decrypt(
-            $encodedDocument,
+            $this->client->send($request)->getBody()->getContents(),
             $key,
             $initializationVector
         );
