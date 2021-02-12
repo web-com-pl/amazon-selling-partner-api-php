@@ -1,6 +1,7 @@
 This is example of Amazon Selling Partner API for PHP
 ----------------------
 This example lets you deal with SP API OAuth2.0, signing requests, call swagger-based sources.
+Please check [examples](examples/) folder for code.
 
 Requirements
 ----------------------

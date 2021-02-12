@@ -7,12 +7,12 @@ use Webcom\Amazon\Rest\AuthorizationApi\Api\AuthorizationApi;
 use Webcom\Amazon\Rest\CredentialsContainer;
 use Webcom\Amazon\Rest\EndpointLocator;
 
-include_once __DIR__ . '/vendor/autoload.php';
+include_once __DIR__ . '/../vendor/autoload.php';
 session_start();
 
 try {
     // Your config stuff (get example from config-example.json)
-    $config = json_decode(file_get_contents(__DIR__ . '/config.json'), true);
+    $config = json_decode(file_get_contents(__DIR__ . '/../config.json'), true);
 
     $endpoint = EndpointLocator::resolveByMarketplaceId($config['marketplace']);
     $credentials = new CredentialsContainer($endpoint, true);

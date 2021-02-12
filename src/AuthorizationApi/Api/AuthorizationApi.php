@@ -22,6 +22,7 @@ class AuthorizationApi
 {
     public const HOST = 'https://api.amazon.com';
     public const OAUTH_URL = '/auth/o2/token';
+    public const AUTHORIZATION_EXCHANGE_URL = '/authorization/v1/authorizationCode';
     protected AmazonTransportClient $client;
     protected CredentialsContainer $credentials;
 
@@ -96,6 +97,24 @@ class AuthorizationApi
             ->setRefreshToken($responseData['refresh_token']);
 
         return (int) $responseData['expires_in'];
+    }
+
+    public function exchangeMwsAuthTokenForRefreshToken(string $developerId, string $sellingPartnerId, string $mwsAuthToken)
+    {
+        $query = [
+            'sellingPartnerId' => $sellingPartnerId,
+            'developerId' => $developerId,
+            'mwsAuthToken' => $mwsAuthToken,
+        ];
+
+        $response = $this->client->send(
+            new Request(
+                'GET',
+                self::HOST . self::AUTHORIZATION_EXCHANGE_URL . '?' . build_query($query)
+            )
+        );
+
+        dump($response);
     }
 
     /**

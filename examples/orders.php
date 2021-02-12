@@ -9,10 +9,10 @@ use Webcom\Amazon\Rest\OrdersApi\Api\OrdersV0Api;
 use Webcom\Amazon\Rest\RequestSigner;
 use Webcom\Amazon\Rest\EndpointLocator;
 
-include_once __DIR__ . '/vendor/autoload.php';
+include_once __DIR__ . '/../vendor/autoload.php';
 
 // Your config stuff (get example from config-example.json)
-$config = json_decode(file_get_contents(__DIR__ . '/config.json'), true);
+$config = json_decode(file_get_contents(__DIR__ . '/../config.json'), true);
 
 // resolve endpoint via marketplace ID
 $endpoint = EndpointLocator::resolveByMarketplaceId($config['marketplace']);
@@ -35,7 +35,7 @@ try {
         $config['expireAt'] = time() + $api->exchangeRefreshToken();
         $config['accessToken'] = $credentials->getAccessToken();
         $config['refreshToken'] = $credentials->getRefreshToken();
-        file_put_contents(__DIR__ . '/config.json', json_encode($config, JSON_PRETTY_PRINT));
+        file_put_contents(__DIR__ . '/../config.json', json_encode($config, JSON_PRETTY_PRINT));
     }
 
     $transportApi->setRequestSigner(new RequestSigner($credentials));
