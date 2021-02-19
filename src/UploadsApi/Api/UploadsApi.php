@@ -493,7 +493,7 @@ class UploadsApi
             );
         }
 
-        $resourcePath = '/uploads/2020-11-01/uploadDestinations/{resource}';
+        $resourcePath = '/uploads/v1/uploadDestinations/{resource}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

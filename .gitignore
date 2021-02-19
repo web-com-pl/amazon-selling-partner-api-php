@@ -1,6 +1,8 @@
 vendor
 resource
+output
 config.json
 generate.php
 openapitools.json
+composer.lock
 migrate.php

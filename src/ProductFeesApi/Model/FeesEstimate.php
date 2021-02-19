@@ -239,7 +239,7 @@ class FeesEstimate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timeOfFeesEstimation
      *
-     * @param \DateTime $timeOfFeesEstimation The time for which the fees were estimated. This defaults to the time the request is made.
+     * @param \DateTime $timeOfFeesEstimation The time at which the fees were estimated. This defaults to the time the request is made.
      *
      * @return self
      */
