@@ -12,6 +12,7 @@ use Webcom\Amazon\Rest\AESCryptoStreamFactory;
 use Webcom\Amazon\Rest\AmazonTransportClient;
 use Webcom\Amazon\Rest\CredentialsContainer;
 use Webcom\Amazon\Rest\FeedsApi\Model\CreateFeedDocumentResult;
+use Webcom\Amazon\Rest\FeedsApi\Model\FeedDocument;
 use Webcom\Amazon\Rest\ReportsApi\Model\ReportDocument;
 use Webcom\Amazon\Rest\ResourcesApi\ApiException;
 
@@ -83,6 +84,45 @@ class ResourcesApi
      * @throws ApiException
      */
     public function getReportDocument(ReportDocument $documentResponse)
+    {
+        // encryption key and iv
+        $initializationVector = base64_decode($documentResponse->getEncryptionDetails()->getInitializationVector(), true);
+        $key = base64_decode($documentResponse->getEncryptionDetails()->getKey(), true);
+
+        // firstly, let's download document
+        $request = new Request(
+            'GET',
+            $documentResponse->getUrl()
+        );
+        // send request and retrieve encoded document, then decrypt
+        $document = AESCryptoStreamFactory::decrypt(
+            $this->client->send($request)->getBody()->getContents(),
+            $key,
+            $initializationVector
+        );
+
+        // after decoding document check for compressionAlgorithm
+        if($documentResponse->getCompressionAlgorithm() === 'GZIP') {
+            return gzdecode($document);
+        } elseif(!$documentResponse->getCompressionAlgorithm()) {
+            // document is not compressed
+            return $document;
+        }
+
+        // in other cases, we do not have implementation of compression algorithm
+        throw new ApiException(
+            'Unrecognized compression algorithm "' . $documentResponse->getCompressionAlgorithm() . '"',
+            501// Not implemented
+        );
+    }
+
+    /**
+     * Returns decoded and decompressed document
+     * @param FeedDocument $documentResponse
+     * @return false|string
+     * @throws ApiException
+     */
+    public function getFeedDocument(FeedDocument $documentResponse)
     {
         // encryption key and iv
         $initializationVector = base64_decode($documentResponse->getEncryptionDetails()->getInitializationVector(), true);
