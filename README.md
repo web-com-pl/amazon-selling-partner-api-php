@@ -11,7 +11,7 @@ Requirements
 
 Sources
 ----------------------
-* [Selling Partner API Developer Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/developer-guide/SellingPartnerApiDeveloperGuide.md)
+* [Selling Partner API Developer Guide](https://github.com/amzn/selling-partner-api-docs/)
 * [selling-partner-api-models](https://github.com/amzn/selling-partner-api-models)
 * [Migrate an Amazon MWS authorization to a Selling Partner API application](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/use-case-guides/authorization-api-use-case-guide.md#Tutorial-Migrate-an-Amazon-MWS-authorization-to-a-Selling-Partner-API-application)
 * [LICENSE](LICENSE)
