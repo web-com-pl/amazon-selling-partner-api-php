@@ -145,7 +145,7 @@ class EndpointLocator
             "endpoint"                         => "amazon.pl",
             "mwsEndpoint"                      => "mws-eu.amazonservices.com",
             "imagesEndpoint"                   => "images-eu.ssl-images-amazon.com",
-            "sellerCentralEndpoint"            => "http://sell.amazon.pl",
+            "sellerCentralEndpoint"            => "https://sellercentral.amazon.pl",
             "sellingPartnerApiEndpoint"        => "https://sellingpartnerapi-eu.amazon.com",
             "sellingPartnerApiSandboxEndpoint" => "https://sandbox.sellingpartnerapi-eu.amazon.com",
         ],
