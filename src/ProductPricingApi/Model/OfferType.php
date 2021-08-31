@@ -61,8 +61,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'offerType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType',
         'buyingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType',
         'regularPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'businessPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'quantityDiscountPrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountPriceType[]',
         'fulfillmentChannel' => 'string',
         'itemCondition' => 'string',
         'itemSubCondition' => 'string',
@@ -77,8 +80,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'offerType' => null,
         'buyingPrice' => null,
         'regularPrice' => null,
+        'businessPrice' => null,
+        'quantityDiscountPrices' => null,
         'fulfillmentChannel' => null,
         'itemCondition' => null,
         'itemSubCondition' => null,
@@ -112,8 +118,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'offerType' => 'offerType',
         'buyingPrice' => 'BuyingPrice',
         'regularPrice' => 'RegularPrice',
+        'businessPrice' => 'businessPrice',
+        'quantityDiscountPrices' => 'quantityDiscountPrices',
         'fulfillmentChannel' => 'FulfillmentChannel',
         'itemCondition' => 'ItemCondition',
         'itemSubCondition' => 'ItemSubCondition',
@@ -126,8 +135,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'offerType' => 'setOfferType',
         'buyingPrice' => 'setBuyingPrice',
         'regularPrice' => 'setRegularPrice',
+        'businessPrice' => 'setBusinessPrice',
+        'quantityDiscountPrices' => 'setQuantityDiscountPrices',
         'fulfillmentChannel' => 'setFulfillmentChannel',
         'itemCondition' => 'setItemCondition',
         'itemSubCondition' => 'setItemSubCondition',
@@ -140,8 +152,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'offerType' => 'getOfferType',
         'buyingPrice' => 'getBuyingPrice',
         'regularPrice' => 'getRegularPrice',
+        'businessPrice' => 'getBusinessPrice',
+        'quantityDiscountPrices' => 'getQuantityDiscountPrices',
         'fulfillmentChannel' => 'getFulfillmentChannel',
         'itemCondition' => 'getItemCondition',
         'itemSubCondition' => 'getItemSubCondition',
@@ -208,8 +223,11 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['offerType'] = $data['offerType'] ?? null;
         $this->container['buyingPrice'] = $data['buyingPrice'] ?? null;
         $this->container['regularPrice'] = $data['regularPrice'] ?? null;
+        $this->container['businessPrice'] = $data['businessPrice'] ?? null;
+        $this->container['quantityDiscountPrices'] = $data['quantityDiscountPrices'] ?? null;
         $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
         $this->container['itemCondition'] = $data['itemCondition'] ?? null;
         $this->container['itemSubCondition'] = $data['itemSubCondition'] ?? null;
@@ -259,6 +277,30 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
+     * Gets offerType
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null
+     */
+    public function getOfferType()
+    {
+        return $this->container['offerType'];
+    }
+
+    /**
+     * Sets offerType
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null $offerType offerType
+     *
+     * @return self
+     */
+    public function setOfferType($offerType)
+    {
+        $this->container['offerType'] = $offerType;
+
+        return $this;
+    }
+
+    /**
      * Gets buyingPrice
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType
@@ -302,6 +344,54 @@ class OfferType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRegularPrice($regularPrice)
     {
         $this->container['regularPrice'] = $regularPrice;
+
+        return $this;
+    }
+
+    /**
+     * Gets businessPrice
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
+     */
+    public function getBusinessPrice()
+    {
+        return $this->container['businessPrice'];
+    }
+
+    /**
+     * Sets businessPrice
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $businessPrice businessPrice
+     *
+     * @return self
+     */
+    public function setBusinessPrice($businessPrice)
+    {
+        $this->container['businessPrice'] = $businessPrice;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantityDiscountPrices
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountPriceType[]|null
+     */
+    public function getQuantityDiscountPrices()
+    {
+        return $this->container['quantityDiscountPrices'];
+    }
+
+    /**
+     * Sets quantityDiscountPrices
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountPriceType[]|null $quantityDiscountPrices quantityDiscountPrices
+     *
+     * @return self
+     */
+    public function setQuantityDiscountPrices($quantityDiscountPrices)
+    {
+        $this->container['quantityDiscountPrices'] = $quantityDiscountPrices;
 
         return $this;
     }

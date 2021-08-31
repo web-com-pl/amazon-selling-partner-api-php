@@ -67,7 +67,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         'lowestPrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\LowestPriceType[]',
         'buyBoxPrices' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\BuyBoxPriceType[]',
         'listPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'competitivePriceThreshold' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'suggestedLowerPricePlusShipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
+        'salesRankings' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]',
         'buyBoxEligibleOffers' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCountType[]',
         'offersAvailableTime' => '\DateTime'
     ];
@@ -85,7 +87,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         'lowestPrices' => null,
         'buyBoxPrices' => null,
         'listPrice' => null,
+        'competitivePriceThreshold' => null,
         'suggestedLowerPricePlusShipping' => null,
+        'salesRankings' => null,
         'buyBoxEligibleOffers' => null,
         'offersAvailableTime' => 'date-time'
     ];
@@ -122,7 +126,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         'lowestPrices' => 'LowestPrices',
         'buyBoxPrices' => 'BuyBoxPrices',
         'listPrice' => 'ListPrice',
+        'competitivePriceThreshold' => 'CompetitivePriceThreshold',
         'suggestedLowerPricePlusShipping' => 'SuggestedLowerPricePlusShipping',
+        'salesRankings' => 'SalesRankings',
         'buyBoxEligibleOffers' => 'BuyBoxEligibleOffers',
         'offersAvailableTime' => 'OffersAvailableTime'
     ];
@@ -138,7 +144,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         'lowestPrices' => 'setLowestPrices',
         'buyBoxPrices' => 'setBuyBoxPrices',
         'listPrice' => 'setListPrice',
+        'competitivePriceThreshold' => 'setCompetitivePriceThreshold',
         'suggestedLowerPricePlusShipping' => 'setSuggestedLowerPricePlusShipping',
+        'salesRankings' => 'setSalesRankings',
         'buyBoxEligibleOffers' => 'setBuyBoxEligibleOffers',
         'offersAvailableTime' => 'setOffersAvailableTime'
     ];
@@ -154,7 +162,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         'lowestPrices' => 'getLowestPrices',
         'buyBoxPrices' => 'getBuyBoxPrices',
         'listPrice' => 'getListPrice',
+        'competitivePriceThreshold' => 'getCompetitivePriceThreshold',
         'suggestedLowerPricePlusShipping' => 'getSuggestedLowerPricePlusShipping',
+        'salesRankings' => 'getSalesRankings',
         'buyBoxEligibleOffers' => 'getBuyBoxEligibleOffers',
         'offersAvailableTime' => 'getOffersAvailableTime'
     ];
@@ -224,7 +234,9 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['lowestPrices'] = $data['lowestPrices'] ?? null;
         $this->container['buyBoxPrices'] = $data['buyBoxPrices'] ?? null;
         $this->container['listPrice'] = $data['listPrice'] ?? null;
+        $this->container['competitivePriceThreshold'] = $data['competitivePriceThreshold'] ?? null;
         $this->container['suggestedLowerPricePlusShipping'] = $data['suggestedLowerPricePlusShipping'] ?? null;
+        $this->container['salesRankings'] = $data['salesRankings'] ?? null;
         $this->container['buyBoxEligibleOffers'] = $data['buyBoxEligibleOffers'] ?? null;
         $this->container['offersAvailableTime'] = $data['offersAvailableTime'] ?? null;
     }
@@ -377,6 +389,30 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets competitivePriceThreshold
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
+     */
+    public function getCompetitivePriceThreshold()
+    {
+        return $this->container['competitivePriceThreshold'];
+    }
+
+    /**
+     * Sets competitivePriceThreshold
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null $competitivePriceThreshold competitivePriceThreshold
+     *
+     * @return self
+     */
+    public function setCompetitivePriceThreshold($competitivePriceThreshold)
+    {
+        $this->container['competitivePriceThreshold'] = $competitivePriceThreshold;
+
+        return $this;
+    }
+
+    /**
      * Gets suggestedLowerPricePlusShipping
      *
      * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType|null
@@ -396,6 +432,30 @@ class Summary implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setSuggestedLowerPricePlusShipping($suggestedLowerPricePlusShipping)
     {
         $this->container['suggestedLowerPricePlusShipping'] = $suggestedLowerPricePlusShipping;
+
+        return $this;
+    }
+
+    /**
+     * Gets salesRankings
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]|null
+     */
+    public function getSalesRankings()
+    {
+        return $this->container['salesRankings'];
+    }
+
+    /**
+     * Sets salesRankings
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\SalesRankType[]|null $salesRankings A list of sales rank information for the item, by category.
+     *
+     * @return self
+     */
+    public function setSalesRankings($salesRankings)
+    {
+        $this->container['salesRankings'] = $salesRankings;
 
         return $this;
     }

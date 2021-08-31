@@ -2071,14 +2071,17 @@ class OrdersV0Api
      * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
      * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string $actualFulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from. (optional)
+     * @param  bool $isISPU When true, this order is marked to be picked up from a store rather than delivered. (optional)
+     * @param  string $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse
      */
-    public function getOrders($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
+    public function getOrders($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null, $actualFulfillmentSupplySourceId = null, $isISPU = null, $storeChainStoreId = null)
     {
-        list($response) = $this->getOrdersWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
+        list($response) = $this->getOrdersWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds, $actualFulfillmentSupplySourceId, $isISPU, $storeChainStoreId);
         return $response;
     }
 
@@ -2099,14 +2102,17 @@ class OrdersV0Api
      * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
      * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string $actualFulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from. (optional)
+     * @param  bool $isISPU When true, this order is marked to be picked up from a store rather than delivered. (optional)
+     * @param  string $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain. (optional)
      *
      * @throws \Webcom\Amazon\Rest\OrdersApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse|\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrdersWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
+    public function getOrdersWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null, $actualFulfillmentSupplySourceId = null, $isISPU = null, $storeChainStoreId = null)
     {
-        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
+        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds, $actualFulfillmentSupplySourceId, $isISPU, $storeChainStoreId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2320,13 +2326,16 @@ class OrdersV0Api
      * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
      * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string $actualFulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from. (optional)
+     * @param  bool $isISPU When true, this order is marked to be picked up from a store rather than delivered. (optional)
+     * @param  string $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersAsync($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
+    public function getOrdersAsync($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null, $actualFulfillmentSupplySourceId = null, $isISPU = null, $storeChainStoreId = null)
     {
-        return $this->getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds)
+        return $this->getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds, $actualFulfillmentSupplySourceId, $isISPU, $storeChainStoreId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2353,14 +2362,17 @@ class OrdersV0Api
      * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
      * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string $actualFulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from. (optional)
+     * @param  bool $isISPU When true, this order is marked to be picked up from a store rather than delivered. (optional)
+     * @param  string $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
+    public function getOrdersAsyncWithHttpInfo($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null, $actualFulfillmentSupplySourceId = null, $isISPU = null, $storeChainStoreId = null)
     {
         $returnType = '\Webcom\Amazon\Rest\OrdersApi\Model\GetOrdersResponse';
-        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds);
+        $request = $this->getOrdersRequest($marketplaceIds, $createdAfter, $createdBefore, $lastUpdatedAfter, $lastUpdatedBefore, $orderStatuses, $fulfillmentChannels, $paymentMethods, $buyerEmail, $sellerOrderId, $maxResultsPerPage, $easyShipShipmentStatuses, $nextToken, $amazonOrderIds, $actualFulfillmentSupplySourceId, $isISPU, $storeChainStoreId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2413,11 +2425,14 @@ class OrdersV0Api
      * @param  string[] $easyShipShipmentStatuses A list of EasyShipShipmentStatus values. Used to select Easy Ship orders with statuses that match the specified  values. If EasyShipShipmentStatus is specified, only Amazon Easy Ship orders are returned.Possible values: PendingPickUp (Amazon has not yet picked up the package from the seller). LabelCanceled (The seller canceled the pickup). PickedUp (Amazon has picked up the package from the seller). AtOriginFC (The packaged is at the origin fulfillment center). AtDestinationFC (The package is at the destination fulfillment center). OutForDelivery (The package is out for delivery). Damaged (The package was damaged by the carrier). Delivered (The package has been delivered to the buyer). RejectedByBuyer (The package has been rejected by the buyer). Undeliverable (The package cannot be delivered). ReturnedToSeller (The package was not delivered to the buyer and was returned to the seller). ReturningToSeller (The package was not delivered to the buyer and is being returned to the seller). (optional)
      * @param  string $nextToken A string token returned in the response of your previous request. (optional)
      * @param  string[] $amazonOrderIds A list of AmazonOrderId values. An AmazonOrderId is an Amazon-defined order identifier, in 3-7-7 format. (optional)
+     * @param  string $actualFulfillmentSupplySourceId Denotes the recommended sourceId where the order should be fulfilled from. (optional)
+     * @param  bool $isISPU When true, this order is marked to be picked up from a store rather than delivered. (optional)
+     * @param  string $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrdersRequest($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null)
+    public function getOrdersRequest($marketplaceIds, $createdAfter = null, $createdBefore = null, $lastUpdatedAfter = null, $lastUpdatedBefore = null, $orderStatuses = null, $fulfillmentChannels = null, $paymentMethods = null, $buyerEmail = null, $sellerOrderId = null, $maxResultsPerPage = null, $easyShipShipmentStatuses = null, $nextToken = null, $amazonOrderIds = null, $actualFulfillmentSupplySourceId = null, $isISPU = null, $storeChainStoreId = null)
     {
         // verify the required parameter 'marketplaceIds' is set
         if ($marketplaceIds === null || (is_array($marketplaceIds) && count($marketplaceIds) === 0)) {
@@ -2538,6 +2553,27 @@ class OrdersV0Api
         }
         if ($amazonOrderIds !== null) {
             $queryParams['AmazonOrderIds'] = $amazonOrderIds;
+        }
+        // query params
+        if (is_array($actualFulfillmentSupplySourceId)) {
+            $actualFulfillmentSupplySourceId = ObjectSerializer::serializeCollection($actualFulfillmentSupplySourceId, '', true);
+        }
+        if ($actualFulfillmentSupplySourceId !== null) {
+            $queryParams['ActualFulfillmentSupplySourceId'] = $actualFulfillmentSupplySourceId;
+        }
+        // query params
+        if (is_array($isISPU)) {
+            $isISPU = ObjectSerializer::serializeCollection($isISPU, '', true);
+        }
+        if ($isISPU !== null) {
+            $queryParams['IsISPU'] = $isISPU;
+        }
+        // query params
+        if (is_array($storeChainStoreId)) {
+            $storeChainStoreId = ObjectSerializer::serializeCollection($storeChainStoreId, '', true);
+        }
+        if ($storeChainStoreId !== null) {
+            $queryParams['StoreChainStoreId'] = $storeChainStoreId;
         }
 
 

@@ -13,7 +13,7 @@
 /**
  * Selling Partner API for FBA Inventory
  *
- * The Selling Partner API for FBA Inventory lets you programmatically retrieve information about inventory in Amazon's fulfillment network.
+ * The Selling Partner API for FBA Inventory lets you programmatically retrieve information about inventory in Amazon's fulfillment network. Today this API is available only in the North America region. In 2021 we plan to release this API in the Europe and Far East regions.
  *
  * The version of the OpenAPI document: v1
  * 
@@ -170,21 +170,8 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    const GRANULARITY_TYPE_MARKETPLACE = 'Marketplace';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getGranularityTypeAllowableValues()
-    {
-        return [
-            self::GRANULARITY_TYPE_MARKETPLACE,
-        ];
-    }
     
 
     /**
@@ -214,15 +201,6 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getGranularityTypeAllowableValues();
-        if (!is_null($this->container['granularityType']) && !in_array($this->container['granularityType'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'granularityType', must be one of '%s'",
-                $this->container['granularityType'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -258,16 +236,6 @@ class Granularity implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setGranularityType($granularityType)
     {
-        $allowedValues = $this->getGranularityTypeAllowableValues();
-        if (!is_null($granularityType) && !in_array($granularityType, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'granularityType', must be one of '%s'",
-                    $granularityType,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['granularityType'] = $granularityType;
 
         return $this;

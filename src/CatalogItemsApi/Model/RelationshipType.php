@@ -62,6 +62,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'identifiers' => '\Webcom\Amazon\Rest\CatalogItemsApi\Model\IdentifierType',
         'color' => 'string',
         'edition' => 'string',
         'flavor' => 'string',
@@ -94,6 +95,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'identifiers' => null,
         'color' => null,
         'edition' => null,
         'flavor' => null,
@@ -145,6 +147,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'identifiers' => 'Identifiers',
         'color' => 'Color',
         'edition' => 'Edition',
         'flavor' => 'Flavor',
@@ -175,6 +178,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'identifiers' => 'setIdentifiers',
         'color' => 'setColor',
         'edition' => 'setEdition',
         'flavor' => 'setFlavor',
@@ -205,6 +209,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'identifiers' => 'getIdentifiers',
         'color' => 'getColor',
         'edition' => 'getEdition',
         'flavor' => 'getFlavor',
@@ -289,6 +294,7 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['identifiers'] = $data['identifiers'] ?? null;
         $this->container['color'] = $data['color'] ?? null;
         $this->container['edition'] = $data['edition'] ?? null;
         $this->container['flavor'] = $data['flavor'] ?? null;
@@ -336,6 +342,30 @@ class RelationshipType implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets identifiers
+     *
+     * @return \Webcom\Amazon\Rest\CatalogItemsApi\Model\IdentifierType|null
+     */
+    public function getIdentifiers()
+    {
+        return $this->container['identifiers'];
+    }
+
+    /**
+     * Sets identifiers
+     *
+     * @param \Webcom\Amazon\Rest\CatalogItemsApi\Model\IdentifierType|null $identifiers identifiers
+     *
+     * @return self
+     */
+    public function setIdentifiers($identifiers)
+    {
+        $this->container['identifiers'] = $identifiers;
+
+        return $this;
+    }
 
     /**
      * Gets color

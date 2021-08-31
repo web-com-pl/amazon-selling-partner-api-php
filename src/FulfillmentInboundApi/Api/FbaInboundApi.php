@@ -3027,14 +3027,16 @@ class FbaInboundApi
      * @param  int $numberOfPackages The number of packages in the shipment. (optional)
      * @param  string[] $packageLabelsToPrint A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
      * @param  int $numberOfPallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
+     * @param  int $pageSize The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
+     * @param  int $pageStartIndex The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentInboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse
      */
-    public function getLabels($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null)
+    public function getLabels($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null, $pageSize = null, $pageStartIndex = null)
     {
-        list($response) = $this->getLabelsWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets);
+        list($response) = $this->getLabelsWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets, $pageSize, $pageStartIndex);
         return $response;
     }
 
@@ -3047,14 +3049,16 @@ class FbaInboundApi
      * @param  int $numberOfPackages The number of packages in the shipment. (optional)
      * @param  string[] $packageLabelsToPrint A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
      * @param  int $numberOfPallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
+     * @param  int $pageSize The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
+     * @param  int $pageStartIndex The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
      *
      * @throws \Webcom\Amazon\Rest\FulfillmentInboundApi\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse|\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLabelsWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null)
+    public function getLabelsWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null, $pageSize = null, $pageStartIndex = null)
     {
-        $request = $this->getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets);
+        $request = $this->getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets, $pageSize, $pageStartIndex);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3280,13 +3284,15 @@ class FbaInboundApi
      * @param  int $numberOfPackages The number of packages in the shipment. (optional)
      * @param  string[] $packageLabelsToPrint A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
      * @param  int $numberOfPallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
+     * @param  int $pageSize The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
+     * @param  int $pageStartIndex The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLabelsAsync($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null)
+    public function getLabelsAsync($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null, $pageSize = null, $pageStartIndex = null)
     {
-        return $this->getLabelsAsyncWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets)
+        return $this->getLabelsAsyncWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets, $pageSize, $pageStartIndex)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3305,14 +3311,16 @@ class FbaInboundApi
      * @param  int $numberOfPackages The number of packages in the shipment. (optional)
      * @param  string[] $packageLabelsToPrint A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
      * @param  int $numberOfPallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
+     * @param  int $pageSize The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
+     * @param  int $pageStartIndex The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLabelsAsyncWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null)
+    public function getLabelsAsyncWithHttpInfo($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null, $pageSize = null, $pageStartIndex = null)
     {
         $returnType = '\Webcom\Amazon\Rest\FulfillmentInboundApi\Model\GetLabelsResponse';
-        $request = $this->getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets);
+        $request = $this->getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages, $packageLabelsToPrint, $numberOfPallets, $pageSize, $pageStartIndex);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3357,11 +3365,13 @@ class FbaInboundApi
      * @param  int $numberOfPackages The number of packages in the shipment. (optional)
      * @param  string[] $packageLabelsToPrint A list of identifiers that specify packages for which you want package labels printed.  Must match CartonId values previously passed using the FBA Inbound Shipment Carton Information Feed. If not, the operation returns the IncorrectPackageIdentifier error code. (optional)
      * @param  int $numberOfPallets The number of pallets in the shipment. This returns four identical labels for each pallet. (optional)
+     * @param  int $pageSize The page size for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. Max value:1000. (optional)
+     * @param  int $pageStartIndex The page start index for paginating through the total packages&#39; labels. This is a required parameter for Non-Partnered LTL Shipments. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null)
+    public function getLabelsRequest($shipmentId, $pageType, $labelType, $numberOfPackages = null, $packageLabelsToPrint = null, $numberOfPallets = null, $pageSize = null, $pageStartIndex = null)
     {
         // verify the required parameter 'shipmentId' is set
         if ($shipmentId === null || (is_array($shipmentId) && count($shipmentId) === 0)) {
@@ -3427,6 +3437,20 @@ class FbaInboundApi
         }
         if ($numberOfPallets !== null) {
             $queryParams['NumberOfPallets'] = $numberOfPallets;
+        }
+        // query params
+        if (is_array($pageSize)) {
+            $pageSize = ObjectSerializer::serializeCollection($pageSize, '', true);
+        }
+        if ($pageSize !== null) {
+            $queryParams['PageSize'] = $pageSize;
+        }
+        // query params
+        if (is_array($pageStartIndex)) {
+            $pageStartIndex = ObjectSerializer::serializeCollection($pageStartIndex, '', true);
+        }
+        if ($pageStartIndex !== null) {
+            $queryParams['PageStartIndex'] = $pageStartIndex;
         }
 
 

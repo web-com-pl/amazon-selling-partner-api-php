@@ -63,6 +63,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'condition' => 'string',
         'fulfillmentChannel' => 'string',
+        'offerType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType',
+        'quantityTier' => 'int',
+        'quantityDiscountType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType',
         'landedPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'listingPrice' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
         'shipping' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\MoneyType',
@@ -79,6 +82,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'condition' => null,
         'fulfillmentChannel' => null,
+        'offerType' => null,
+        'quantityTier' => 'int32',
+        'quantityDiscountType' => null,
         'landedPrice' => null,
         'listingPrice' => null,
         'shipping' => null,
@@ -114,6 +120,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'condition' => 'condition',
         'fulfillmentChannel' => 'fulfillmentChannel',
+        'offerType' => 'offerType',
+        'quantityTier' => 'quantityTier',
+        'quantityDiscountType' => 'quantityDiscountType',
         'landedPrice' => 'LandedPrice',
         'listingPrice' => 'ListingPrice',
         'shipping' => 'Shipping',
@@ -128,6 +137,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'condition' => 'setCondition',
         'fulfillmentChannel' => 'setFulfillmentChannel',
+        'offerType' => 'setOfferType',
+        'quantityTier' => 'setQuantityTier',
+        'quantityDiscountType' => 'setQuantityDiscountType',
         'landedPrice' => 'setLandedPrice',
         'listingPrice' => 'setListingPrice',
         'shipping' => 'setShipping',
@@ -142,6 +154,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'condition' => 'getCondition',
         'fulfillmentChannel' => 'getFulfillmentChannel',
+        'offerType' => 'getOfferType',
+        'quantityTier' => 'getQuantityTier',
+        'quantityDiscountType' => 'getQuantityDiscountType',
         'landedPrice' => 'getLandedPrice',
         'listingPrice' => 'getListingPrice',
         'shipping' => 'getShipping',
@@ -210,6 +225,9 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['fulfillmentChannel'] = $data['fulfillmentChannel'] ?? null;
+        $this->container['offerType'] = $data['offerType'] ?? null;
+        $this->container['quantityTier'] = $data['quantityTier'] ?? null;
+        $this->container['quantityDiscountType'] = $data['quantityDiscountType'] ?? null;
         $this->container['landedPrice'] = $data['landedPrice'] ?? null;
         $this->container['listingPrice'] = $data['listingPrice'] ?? null;
         $this->container['shipping'] = $data['shipping'] ?? null;
@@ -299,6 +317,78 @@ class LowestPriceType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFulfillmentChannel($fulfillmentChannel)
     {
         $this->container['fulfillmentChannel'] = $fulfillmentChannel;
+
+        return $this;
+    }
+
+    /**
+     * Gets offerType
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null
+     */
+    public function getOfferType()
+    {
+        return $this->container['offerType'];
+    }
+
+    /**
+     * Sets offerType
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null $offerType offerType
+     *
+     * @return self
+     */
+    public function setOfferType($offerType)
+    {
+        $this->container['offerType'] = $offerType;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantityTier
+     *
+     * @return int|null
+     */
+    public function getQuantityTier()
+    {
+        return $this->container['quantityTier'];
+    }
+
+    /**
+     * Sets quantityTier
+     *
+     * @param int|null $quantityTier Indicates at what quantity this price becomes active.
+     *
+     * @return self
+     */
+    public function setQuantityTier($quantityTier)
+    {
+        $this->container['quantityTier'] = $quantityTier;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantityDiscountType
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType|null
+     */
+    public function getQuantityDiscountType()
+    {
+        return $this->container['quantityDiscountType'];
+    }
+
+    /**
+     * Sets quantityDiscountType
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType|null $quantityDiscountType quantityDiscountType
+     *
+     * @return self
+     */
+    public function setQuantityDiscountType($quantityDiscountType)
+    {
+        $this->container['quantityDiscountType'] = $quantityDiscountType;
 
         return $this;
     }

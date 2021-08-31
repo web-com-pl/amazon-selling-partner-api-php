@@ -66,7 +66,7 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
         'price' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType',
         'feeBreakdown' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\FeeLineItem[]',
         'totalFees' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\MoneyType',
-        'errors' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\ErrorList'
+        'errors' => '\Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\Error[]'
     ];
 
     /**
@@ -334,7 +334,7 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets errors
      *
-     * @return \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\ErrorList|null
+     * @return \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\Error[]|null
      */
     public function getErrors()
     {
@@ -344,7 +344,7 @@ class FeePreview implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets errors
      *
-     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\ErrorList|null $errors errors
+     * @param \Webcom\Amazon\Rest\FbaSmallAndLightApi\Model\Error[]|null $errors One or more unexpected errors occurred during the getSmallAndLightFeePreview operation.
      *
      * @return self
      */

@@ -92,7 +92,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'serialNumberRequired' => 'bool',
         'isTransparency' => 'bool',
         'iossNumber' => 'string',
-        'deemedResellerCategory' => 'string'
+        'storeChainStoreId' => 'string',
+        'deemedResellerCategory' => 'string',
+        'buyerInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\ItemBuyerInfo'
     ];
 
     /**
@@ -133,7 +135,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'serialNumberRequired' => null,
         'isTransparency' => null,
         'iossNumber' => null,
-        'deemedResellerCategory' => null
+        'storeChainStoreId' => null,
+        'deemedResellerCategory' => null,
+        'buyerInfo' => null
     ];
 
     /**
@@ -193,7 +197,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'serialNumberRequired' => 'SerialNumberRequired',
         'isTransparency' => 'IsTransparency',
         'iossNumber' => 'IossNumber',
-        'deemedResellerCategory' => 'DeemedResellerCategory'
+        'storeChainStoreId' => 'StoreChainStoreId',
+        'deemedResellerCategory' => 'DeemedResellerCategory',
+        'buyerInfo' => 'BuyerInfo'
     ];
 
     /**
@@ -232,7 +238,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'serialNumberRequired' => 'setSerialNumberRequired',
         'isTransparency' => 'setIsTransparency',
         'iossNumber' => 'setIossNumber',
-        'deemedResellerCategory' => 'setDeemedResellerCategory'
+        'storeChainStoreId' => 'setStoreChainStoreId',
+        'deemedResellerCategory' => 'setDeemedResellerCategory',
+        'buyerInfo' => 'setBuyerInfo'
     ];
 
     /**
@@ -271,7 +279,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'serialNumberRequired' => 'getSerialNumberRequired',
         'isTransparency' => 'getIsTransparency',
         'iossNumber' => 'getIossNumber',
-        'deemedResellerCategory' => 'getDeemedResellerCategory'
+        'storeChainStoreId' => 'getStoreChainStoreId',
+        'deemedResellerCategory' => 'getDeemedResellerCategory',
+        'buyerInfo' => 'getBuyerInfo'
     ];
 
     /**
@@ -379,7 +389,9 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['serialNumberRequired'] = $data['serialNumberRequired'] ?? null;
         $this->container['isTransparency'] = $data['isTransparency'] ?? null;
         $this->container['iossNumber'] = $data['iossNumber'] ?? null;
+        $this->container['storeChainStoreId'] = $data['storeChainStoreId'] ?? null;
         $this->container['deemedResellerCategory'] = $data['deemedResellerCategory'] ?? null;
+        $this->container['buyerInfo'] = $data['buyerInfo'] ?? null;
     }
 
     /**
@@ -1133,13 +1145,37 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets iossNumber
      *
-     * @param string|null $iossNumber The IOSS number of the seller. Sellers selling in the EU will be assigned a unique IOSS number that must be listed on all packages sent to the EU.
+     * @param string|null $iossNumber The IOSS number for the marketplace. Sellers shipping to the European Union (EU) from outside of the EU must provide this IOSS number to their carrier when Amazon has collected the VAT on the sale.
      *
      * @return self
      */
     public function setIossNumber($iossNumber)
     {
         $this->container['iossNumber'] = $iossNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets storeChainStoreId
+     *
+     * @return string|null
+     */
+    public function getStoreChainStoreId()
+    {
+        return $this->container['storeChainStoreId'];
+    }
+
+    /**
+     * Sets storeChainStoreId
+     *
+     * @param string|null $storeChainStoreId The store chain store identifier. Linked to a specific store in a store chain.
+     *
+     * @return self
+     */
+    public function setStoreChainStoreId($storeChainStoreId)
+    {
+        $this->container['storeChainStoreId'] = $storeChainStoreId;
 
         return $this;
     }
@@ -1174,6 +1210,30 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
         $this->container['deemedResellerCategory'] = $deemedResellerCategory;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyerInfo
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\ItemBuyerInfo|null
+     */
+    public function getBuyerInfo()
+    {
+        return $this->container['buyerInfo'];
+    }
+
+    /**
+     * Sets buyerInfo
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\ItemBuyerInfo|null $buyerInfo buyerInfo
+     *
+     * @return self
+     */
+    public function setBuyerInfo($buyerInfo)
+    {
+        $this->container['buyerInfo'] = $buyerInfo;
 
         return $this;
     }

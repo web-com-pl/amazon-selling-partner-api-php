@@ -256,8 +256,8 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['addressLine1'] === null) {
             $invalidProperties[] = "'addressLine1' can't be null";
         }
-        if ($this->container['districtOrCounty'] === null) {
-            $invalidProperties[] = "'districtOrCounty' can't be null";
+        if ($this->container['stateOrRegion'] === null) {
+            $invalidProperties[] = "'stateOrRegion' can't be null";
         }
         if ($this->container['countryCode'] === null) {
             $invalidProperties[] = "'countryCode' can't be null";
@@ -400,7 +400,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets districtOrCounty
      *
-     * @return string
+     * @return string|null
      */
     public function getDistrictOrCounty()
     {
@@ -410,7 +410,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets districtOrCounty
      *
-     * @param string $districtOrCounty The district or county where the person, business, or institution is located.
+     * @param string|null $districtOrCounty The district or county where the person, business, or institution is located.
      *
      * @return self
      */
@@ -424,7 +424,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets stateOrRegion
      *
-     * @return string|null
+     * @return string
      */
     public function getStateOrRegion()
     {
@@ -434,7 +434,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stateOrRegion
      *
-     * @param string|null $stateOrRegion The state or region where the person, business or institution is located.
+     * @param string $stateOrRegion The state or region where the person, business or institution is located.
      *
      * @return self
      */

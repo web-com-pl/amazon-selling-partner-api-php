@@ -64,7 +64,7 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'minimumHours' => 'int',
         'maximumHours' => 'int',
-        'availableDate' => 'float',
+        'availableDate' => 'string',
         'availabilityType' => 'string'
     ];
 
@@ -306,7 +306,7 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets availableDate
      *
-     * @return float|null
+     * @return string|null
      */
     public function getAvailableDate()
     {
@@ -316,7 +316,7 @@ class DetailedShippingTimeType implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets availableDate
      *
-     * @param float|null $availableDate The date when the item will be available for shipping. Only displayed for items that are not currently available for shipping.
+     * @param string|null $availableDate The date when the item will be available for shipping. Only displayed for items that are not currently available for shipping.
      *
      * @return self
      */

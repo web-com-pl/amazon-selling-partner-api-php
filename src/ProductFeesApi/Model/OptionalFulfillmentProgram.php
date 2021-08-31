@@ -34,7 +34,7 @@ use \Webcom\Amazon\Rest\ObjectSerializer;
  * OptionalFulfillmentProgram Class Doc Comment
  *
  * @category Class
- * @description An optional enrollment program for which to return the estimated fees when the offer is fulfilled by Amazon (IsAmazonFulfilled is set to true).
+ * @description An optional enrollment program to return the estimated fees when the offer is fulfilled by Amazon (IsAmazonFulfilled is set to true).
  * @package  Webcom\Amazon\Rest\ProductFeesApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

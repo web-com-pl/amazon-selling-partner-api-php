@@ -95,8 +95,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'string',
         'isEstimatedShipDateSet' => 'bool',
         'isSoldByAB' => 'bool',
-        'assignedShipFromLocationAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
-        'fulfillmentInstruction' => '\Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction'
+        'defaultShipFromLocationAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
+        'fulfillmentInstruction' => '\Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction',
+        'isISPU' => 'bool',
+        'marketplaceTaxInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\MarketplaceTaxInfo',
+        'sellerDisplayName' => 'string',
+        'shippingAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
+        'buyerInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\BuyerInfo'
     ];
 
     /**
@@ -140,8 +145,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => null,
         'isEstimatedShipDateSet' => null,
         'isSoldByAB' => null,
-        'assignedShipFromLocationAddress' => null,
-        'fulfillmentInstruction' => null
+        'defaultShipFromLocationAddress' => null,
+        'fulfillmentInstruction' => null,
+        'isISPU' => null,
+        'marketplaceTaxInfo' => null,
+        'sellerDisplayName' => null,
+        'shippingAddress' => null,
+        'buyerInfo' => null
     ];
 
     /**
@@ -204,8 +214,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'PromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'IsEstimatedShipDateSet',
         'isSoldByAB' => 'IsSoldByAB',
-        'assignedShipFromLocationAddress' => 'AssignedShipFromLocationAddress',
-        'fulfillmentInstruction' => 'FulfillmentInstruction'
+        'defaultShipFromLocationAddress' => 'DefaultShipFromLocationAddress',
+        'fulfillmentInstruction' => 'FulfillmentInstruction',
+        'isISPU' => 'IsISPU',
+        'marketplaceTaxInfo' => 'MarketplaceTaxInfo',
+        'sellerDisplayName' => 'SellerDisplayName',
+        'shippingAddress' => 'ShippingAddress',
+        'buyerInfo' => 'BuyerInfo'
     ];
 
     /**
@@ -247,8 +262,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'setPromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'setIsEstimatedShipDateSet',
         'isSoldByAB' => 'setIsSoldByAB',
-        'assignedShipFromLocationAddress' => 'setAssignedShipFromLocationAddress',
-        'fulfillmentInstruction' => 'setFulfillmentInstruction'
+        'defaultShipFromLocationAddress' => 'setDefaultShipFromLocationAddress',
+        'fulfillmentInstruction' => 'setFulfillmentInstruction',
+        'isISPU' => 'setIsISPU',
+        'marketplaceTaxInfo' => 'setMarketplaceTaxInfo',
+        'sellerDisplayName' => 'setSellerDisplayName',
+        'shippingAddress' => 'setShippingAddress',
+        'buyerInfo' => 'setBuyerInfo'
     ];
 
     /**
@@ -290,8 +310,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'getPromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'getIsEstimatedShipDateSet',
         'isSoldByAB' => 'getIsSoldByAB',
-        'assignedShipFromLocationAddress' => 'getAssignedShipFromLocationAddress',
-        'fulfillmentInstruction' => 'getFulfillmentInstruction'
+        'defaultShipFromLocationAddress' => 'getDefaultShipFromLocationAddress',
+        'fulfillmentInstruction' => 'getFulfillmentInstruction',
+        'isISPU' => 'getIsISPU',
+        'marketplaceTaxInfo' => 'getMarketplaceTaxInfo',
+        'sellerDisplayName' => 'getSellerDisplayName',
+        'shippingAddress' => 'getShippingAddress',
+        'buyerInfo' => 'getBuyerInfo'
     ];
 
     /**
@@ -467,8 +492,13 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['promiseResponseDueDate'] = $data['promiseResponseDueDate'] ?? null;
         $this->container['isEstimatedShipDateSet'] = $data['isEstimatedShipDateSet'] ?? null;
         $this->container['isSoldByAB'] = $data['isSoldByAB'] ?? null;
-        $this->container['assignedShipFromLocationAddress'] = $data['assignedShipFromLocationAddress'] ?? null;
+        $this->container['defaultShipFromLocationAddress'] = $data['defaultShipFromLocationAddress'] ?? null;
         $this->container['fulfillmentInstruction'] = $data['fulfillmentInstruction'] ?? null;
+        $this->container['isISPU'] = $data['isISPU'] ?? null;
+        $this->container['marketplaceTaxInfo'] = $data['marketplaceTaxInfo'] ?? null;
+        $this->container['sellerDisplayName'] = $data['sellerDisplayName'] ?? null;
+        $this->container['shippingAddress'] = $data['shippingAddress'] ?? null;
+        $this->container['buyerInfo'] = $data['buyerInfo'] ?? null;
     }
 
     /**
@@ -1376,25 +1406,25 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets assignedShipFromLocationAddress
+     * Gets defaultShipFromLocationAddress
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\Address|null
      */
-    public function getAssignedShipFromLocationAddress()
+    public function getDefaultShipFromLocationAddress()
     {
-        return $this->container['assignedShipFromLocationAddress'];
+        return $this->container['defaultShipFromLocationAddress'];
     }
 
     /**
-     * Sets assignedShipFromLocationAddress
+     * Sets defaultShipFromLocationAddress
      *
-     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $assignedShipFromLocationAddress assignedShipFromLocationAddress
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $defaultShipFromLocationAddress defaultShipFromLocationAddress
      *
      * @return self
      */
-    public function setAssignedShipFromLocationAddress($assignedShipFromLocationAddress)
+    public function setDefaultShipFromLocationAddress($defaultShipFromLocationAddress)
     {
-        $this->container['assignedShipFromLocationAddress'] = $assignedShipFromLocationAddress;
+        $this->container['defaultShipFromLocationAddress'] = $defaultShipFromLocationAddress;
 
         return $this;
     }
@@ -1419,6 +1449,126 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFulfillmentInstruction($fulfillmentInstruction)
     {
         $this->container['fulfillmentInstruction'] = $fulfillmentInstruction;
+
+        return $this;
+    }
+
+    /**
+     * Gets isISPU
+     *
+     * @return bool|null
+     */
+    public function getIsISPU()
+    {
+        return $this->container['isISPU'];
+    }
+
+    /**
+     * Sets isISPU
+     *
+     * @param bool|null $isISPU When true, this order is marked to be picked up from a store rather than delivered.
+     *
+     * @return self
+     */
+    public function setIsISPU($isISPU)
+    {
+        $this->container['isISPU'] = $isISPU;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketplaceTaxInfo
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\MarketplaceTaxInfo|null
+     */
+    public function getMarketplaceTaxInfo()
+    {
+        return $this->container['marketplaceTaxInfo'];
+    }
+
+    /**
+     * Sets marketplaceTaxInfo
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\MarketplaceTaxInfo|null $marketplaceTaxInfo marketplaceTaxInfo
+     *
+     * @return self
+     */
+    public function setMarketplaceTaxInfo($marketplaceTaxInfo)
+    {
+        $this->container['marketplaceTaxInfo'] = $marketplaceTaxInfo;
+
+        return $this;
+    }
+
+    /**
+     * Gets sellerDisplayName
+     *
+     * @return string|null
+     */
+    public function getSellerDisplayName()
+    {
+        return $this->container['sellerDisplayName'];
+    }
+
+    /**
+     * Sets sellerDisplayName
+     *
+     * @param string|null $sellerDisplayName The seller’s friendly name registered in the marketplace.
+     *
+     * @return self
+     */
+    public function setSellerDisplayName($sellerDisplayName)
+    {
+        $this->container['sellerDisplayName'] = $sellerDisplayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets shippingAddress
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\Address|null
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shippingAddress'];
+    }
+
+    /**
+     * Sets shippingAddress
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\Address|null $shippingAddress shippingAddress
+     *
+     * @return self
+     */
+    public function setShippingAddress($shippingAddress)
+    {
+        $this->container['shippingAddress'] = $shippingAddress;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyerInfo
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\BuyerInfo|null
+     */
+    public function getBuyerInfo()
+    {
+        return $this->container['buyerInfo'];
+    }
+
+    /**
+     * Sets buyerInfo
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\BuyerInfo|null $buyerInfo buyerInfo
+     *
+     * @return self
+     */
+    public function setBuyerInfo($buyerInfo)
+    {
+        $this->container['buyerInfo'] = $buyerInfo;
 
         return $this;
     }

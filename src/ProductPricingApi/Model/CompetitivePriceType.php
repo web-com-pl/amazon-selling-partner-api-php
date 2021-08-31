@@ -65,6 +65,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         'price' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\PriceType',
         'condition' => 'string',
         'subcondition' => 'string',
+        'offerType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType',
+        'quantityTier' => 'int',
+        'quantityDiscountType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType',
+        'sellerId' => 'string',
         'belongsToRequester' => 'bool'
     ];
 
@@ -80,6 +84,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         'price' => null,
         'condition' => null,
         'subcondition' => null,
+        'offerType' => null,
+        'quantityTier' => 'int32',
+        'quantityDiscountType' => null,
+        'sellerId' => null,
         'belongsToRequester' => null
     ];
 
@@ -114,6 +122,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         'price' => 'Price',
         'condition' => 'condition',
         'subcondition' => 'subcondition',
+        'offerType' => 'offerType',
+        'quantityTier' => 'quantityTier',
+        'quantityDiscountType' => 'quantityDiscountType',
+        'sellerId' => 'sellerId',
         'belongsToRequester' => 'belongsToRequester'
     ];
 
@@ -127,6 +139,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         'price' => 'setPrice',
         'condition' => 'setCondition',
         'subcondition' => 'setSubcondition',
+        'offerType' => 'setOfferType',
+        'quantityTier' => 'setQuantityTier',
+        'quantityDiscountType' => 'setQuantityDiscountType',
+        'sellerId' => 'setSellerId',
         'belongsToRequester' => 'setBelongsToRequester'
     ];
 
@@ -140,6 +156,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         'price' => 'getPrice',
         'condition' => 'getCondition',
         'subcondition' => 'getSubcondition',
+        'offerType' => 'getOfferType',
+        'quantityTier' => 'getQuantityTier',
+        'quantityDiscountType' => 'getQuantityDiscountType',
+        'sellerId' => 'getSellerId',
         'belongsToRequester' => 'getBelongsToRequester'
     ];
 
@@ -207,6 +227,10 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->container['price'] = $data['price'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['subcondition'] = $data['subcondition'] ?? null;
+        $this->container['offerType'] = $data['offerType'] ?? null;
+        $this->container['quantityTier'] = $data['quantityTier'] ?? null;
+        $this->container['quantityDiscountType'] = $data['quantityDiscountType'] ?? null;
+        $this->container['sellerId'] = $data['sellerId'] ?? null;
         $this->container['belongsToRequester'] = $data['belongsToRequester'] ?? null;
     }
 
@@ -332,6 +356,102 @@ class CompetitivePriceType implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setSubcondition($subcondition)
     {
         $this->container['subcondition'] = $subcondition;
+
+        return $this;
+    }
+
+    /**
+     * Gets offerType
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null
+     */
+    public function getOfferType()
+    {
+        return $this->container['offerType'];
+    }
+
+    /**
+     * Sets offerType
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType|null $offerType offerType
+     *
+     * @return self
+     */
+    public function setOfferType($offerType)
+    {
+        $this->container['offerType'] = $offerType;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantityTier
+     *
+     * @return int|null
+     */
+    public function getQuantityTier()
+    {
+        return $this->container['quantityTier'];
+    }
+
+    /**
+     * Sets quantityTier
+     *
+     * @param int|null $quantityTier Indicates at what quantity this price becomes active.
+     *
+     * @return self
+     */
+    public function setQuantityTier($quantityTier)
+    {
+        $this->container['quantityTier'] = $quantityTier;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantityDiscountType
+     *
+     * @return \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType|null
+     */
+    public function getQuantityDiscountType()
+    {
+        return $this->container['quantityDiscountType'];
+    }
+
+    /**
+     * Sets quantityDiscountType
+     *
+     * @param \Webcom\Amazon\Rest\ProductPricingApi\Model\QuantityDiscountType|null $quantityDiscountType quantityDiscountType
+     *
+     * @return self
+     */
+    public function setQuantityDiscountType($quantityDiscountType)
+    {
+        $this->container['quantityDiscountType'] = $quantityDiscountType;
+
+        return $this;
+    }
+
+    /**
+     * Gets sellerId
+     *
+     * @return string|null
+     */
+    public function getSellerId()
+    {
+        return $this->container['sellerId'];
+    }
+
+    /**
+     * Sets sellerId
+     *
+     * @param string|null $sellerId The seller identifier for the offer.
+     *
+     * @return self
+     */
+    public function setSellerId($sellerId)
+    {
+        $this->container['sellerId'] = $sellerId;
 
         return $this;
     }
