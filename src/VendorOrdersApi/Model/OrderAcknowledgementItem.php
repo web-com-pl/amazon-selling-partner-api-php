@@ -241,9 +241,6 @@ class OrderAcknowledgementItem implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['orderedQuantity'] === null) {
             $invalidProperties[] = "'orderedQuantity' can't be null";
         }
-        if ($this->container['netCost'] === null) {
-            $invalidProperties[] = "'netCost' can't be null";
-        }
         if ($this->container['itemAcknowledgements'] === null) {
             $invalidProperties[] = "'itemAcknowledgements' can't be null";
         }
@@ -361,7 +358,7 @@ class OrderAcknowledgementItem implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets netCost
      *
-     * @return \Webcom\Amazon\Rest\VendorOrdersApi\Model\Money
+     * @return \Webcom\Amazon\Rest\VendorOrdersApi\Model\Money|null
      */
     public function getNetCost()
     {
@@ -371,7 +368,7 @@ class OrderAcknowledgementItem implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets netCost
      *
-     * @param \Webcom\Amazon\Rest\VendorOrdersApi\Model\Money $netCost netCost
+     * @param \Webcom\Amazon\Rest\VendorOrdersApi\Model\Money|null $netCost netCost
      *
      * @return self
      */

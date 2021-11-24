@@ -61,7 +61,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sellerId' => 'string',
         'myOffer' => 'bool',
         'offerType' => '\Webcom\Amazon\Rest\ProductPricingApi\Model\OfferCustomerType',
         'subCondition' => 'string',
@@ -88,7 +87,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'sellerId' => null,
         'myOffer' => null,
         'offerType' => null,
         'subCondition' => null,
@@ -134,7 +132,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'sellerId' => 'sellerId',
         'myOffer' => 'MyOffer',
         'offerType' => 'offerType',
         'subCondition' => 'SubCondition',
@@ -159,7 +156,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'sellerId' => 'setSellerId',
         'myOffer' => 'setMyOffer',
         'offerType' => 'setOfferType',
         'subCondition' => 'setSubCondition',
@@ -184,7 +180,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'sellerId' => 'getSellerId',
         'myOffer' => 'getMyOffer',
         'offerType' => 'getOfferType',
         'subCondition' => 'getSubCondition',
@@ -263,7 +258,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['sellerId'] = $data['sellerId'] ?? null;
         $this->container['myOffer'] = $data['myOffer'] ?? null;
         $this->container['offerType'] = $data['offerType'] ?? null;
         $this->container['subCondition'] = $data['subCondition'] ?? null;
@@ -320,30 +314,6 @@ class OfferDetail implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets sellerId
-     *
-     * @return string|null
-     */
-    public function getSellerId()
-    {
-        return $this->container['sellerId'];
-    }
-
-    /**
-     * Sets sellerId
-     *
-     * @param string|null $sellerId The seller identifier for the offer.
-     *
-     * @return self
-     */
-    public function setSellerId($sellerId)
-    {
-        $this->container['sellerId'] = $sellerId;
-
-        return $this;
-    }
 
     /**
      * Gets myOffer

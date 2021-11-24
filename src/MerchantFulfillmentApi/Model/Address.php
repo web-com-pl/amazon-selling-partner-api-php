@@ -525,7 +525,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets stateOrProvinceCode
      *
-     * @param string|null $stateOrProvinceCode The state or province code.
+     * @param string|null $stateOrProvinceCode The state or province code. **Note.** Required in the Canada, US, and UK marketplaces. Also required for shipments originating from China.
      *
      * @return self
      */

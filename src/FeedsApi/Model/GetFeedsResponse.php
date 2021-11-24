@@ -233,7 +233,7 @@ class GetFeedsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets feeds
      *
-     * @param \Webcom\Amazon\Rest\FeedsApi\Model\Feed[] $feeds feeds
+     * @param \Webcom\Amazon\Rest\FeedsApi\Model\Feed[] $feeds A list of feeds.
      *
      * @return self
      */

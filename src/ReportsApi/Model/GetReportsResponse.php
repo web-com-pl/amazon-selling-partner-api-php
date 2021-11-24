@@ -233,7 +233,7 @@ class GetReportsResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets reports
      *
-     * @param \Webcom\Amazon\Rest\ReportsApi\Model\Report[] $reports reports
+     * @param \Webcom\Amazon\Rest\ReportsApi\Model\Report[] $reports A list of reports.
      *
      * @return self
      */
