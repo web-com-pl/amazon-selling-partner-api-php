@@ -71,14 +71,23 @@ class AmazonTransportClient extends Client
     private function signRequest(RequestInterface $request, array $options, callable $handler)
     {
         if ($this->requestSigner) {
+            if($this->requestSigner->getCredentials()->getRestrictedDataToken()
+                && !$this->requestSigner->getCredentials()->getRestrictedDataToken()->isTokenExpired()
+                // prevent to get RDT token using RDT token
+                && strpos($request->getUri()->getPath(), '/restrictedDataToken') === false
+            ) {
+                $token = $this->requestSigner->getCredentials()->getRestrictedDataToken()->getToken();
+            } else {
+                $token = $this->requestSigner->getCredentials()->getAccessToken();
+            }
             $request = $request->withHeader('user-agent', $this->userAgent . ' (Language=PHP/' . PHP_VERSION . ')');
-            // if isn't authorization request, attach access token
-            if ($this->requestSigner->getCredentials()->getAccessToken() && $request->getUri()->getHost() !== 'api.amazon.com' && substr(
+            // if isn't authorization request, attach access/rdt token
+            if ($token && $request->getUri()->getHost() !== 'api.amazon.com' && substr(
                     $request->getUri()->getPath(),
                     0,
                     15
                 ) !== '/authorization/') {
-                $request = $request->withHeader('x-amz-access-token', [$this->requestSigner->getCredentials()->getAccessToken()]);
+                $request = $request->withHeader('x-amz-access-token', [$token]);
             }
             $request = $this->requestSigner->signRequest($request);
         }
