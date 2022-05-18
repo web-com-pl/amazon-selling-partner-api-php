@@ -13,8 +13,7 @@
 /**
  * Selling Partner API for Catalog Items
  *
- * The Selling Partner API for Catalog Items provides programmatic access to information about items in the Amazon catalog.  For more information, see the [Catalog Items API use Webcom\Amazon\Rest\ModelInterface;
-Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/catalog-items-api-use-case-guide/catalog-items-api-use-case-guide_2020-12-01.md).
+ * The Selling Partner API for Catalog Items provides programmatic access to information about items in the Amazon catalog.  For more information, see the [Catalog Items API Use Case Guide](doc:catalog-items-api-v2020-12-01-use-case-guide).
  *
  * The version of the OpenAPI document: 2020-12-01
  * 
@@ -30,6 +29,7 @@ Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guide
 
 namespace Webcom\Amazon\Rest\CatalogItemsApi\Model;
 
+use \Webcom\Amazon\Rest\ModelInterface;
 use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 

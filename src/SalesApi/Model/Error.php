@@ -29,7 +29,7 @@
 
 namespace Webcom\Amazon\Rest\SalesApi\Model;
 
-use Webcom\Amazon\Rest\ModelInterface;
+use \Webcom\Amazon\Rest\ModelInterface;
 use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 

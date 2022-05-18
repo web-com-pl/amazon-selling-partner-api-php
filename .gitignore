@@ -1,6 +1,7 @@
 vendor
 resource
 output
+.idea
 config.json
 generate.php
 openapitools.json

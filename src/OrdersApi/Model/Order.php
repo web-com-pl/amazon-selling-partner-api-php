@@ -29,7 +29,7 @@
 
 namespace Webcom\Amazon\Rest\OrdersApi\Model;
 
-use Webcom\Amazon\Rest\ModelInterface;
+use \Webcom\Amazon\Rest\ModelInterface;
 use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
@@ -95,13 +95,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'string',
         'isEstimatedShipDateSet' => 'bool',
         'isSoldByAB' => 'bool',
+        'isIBA' => 'bool',
         'defaultShipFromLocationAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
+        'buyerInvoicePreference' => 'string',
+        'buyerTaxInformation' => '\Webcom\Amazon\Rest\OrdersApi\Model\BuyerTaxInformation',
         'fulfillmentInstruction' => '\Webcom\Amazon\Rest\OrdersApi\Model\FulfillmentInstruction',
         'isISPU' => 'bool',
         'marketplaceTaxInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\MarketplaceTaxInfo',
         'sellerDisplayName' => 'string',
         'shippingAddress' => '\Webcom\Amazon\Rest\OrdersApi\Model\Address',
-        'buyerInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\BuyerInfo'
+        'buyerInfo' => '\Webcom\Amazon\Rest\OrdersApi\Model\BuyerInfo',
+        'automatedShippingSettings' => '\Webcom\Amazon\Rest\OrdersApi\Model\AutomatedShippingSettings',
+        'hasRegulatedItems' => 'bool'
     ];
 
     /**
@@ -145,13 +150,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => null,
         'isEstimatedShipDateSet' => null,
         'isSoldByAB' => null,
+        'isIBA' => null,
         'defaultShipFromLocationAddress' => null,
+        'buyerInvoicePreference' => null,
+        'buyerTaxInformation' => null,
         'fulfillmentInstruction' => null,
         'isISPU' => null,
         'marketplaceTaxInfo' => null,
         'sellerDisplayName' => null,
         'shippingAddress' => null,
-        'buyerInfo' => null
+        'buyerInfo' => null,
+        'automatedShippingSettings' => null,
+        'hasRegulatedItems' => null
     ];
 
     /**
@@ -214,13 +224,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'PromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'IsEstimatedShipDateSet',
         'isSoldByAB' => 'IsSoldByAB',
+        'isIBA' => 'IsIBA',
         'defaultShipFromLocationAddress' => 'DefaultShipFromLocationAddress',
+        'buyerInvoicePreference' => 'BuyerInvoicePreference',
+        'buyerTaxInformation' => 'BuyerTaxInformation',
         'fulfillmentInstruction' => 'FulfillmentInstruction',
         'isISPU' => 'IsISPU',
         'marketplaceTaxInfo' => 'MarketplaceTaxInfo',
         'sellerDisplayName' => 'SellerDisplayName',
         'shippingAddress' => 'ShippingAddress',
-        'buyerInfo' => 'BuyerInfo'
+        'buyerInfo' => 'BuyerInfo',
+        'automatedShippingSettings' => 'AutomatedShippingSettings',
+        'hasRegulatedItems' => 'HasRegulatedItems'
     ];
 
     /**
@@ -262,13 +277,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'setPromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'setIsEstimatedShipDateSet',
         'isSoldByAB' => 'setIsSoldByAB',
+        'isIBA' => 'setIsIBA',
         'defaultShipFromLocationAddress' => 'setDefaultShipFromLocationAddress',
+        'buyerInvoicePreference' => 'setBuyerInvoicePreference',
+        'buyerTaxInformation' => 'setBuyerTaxInformation',
         'fulfillmentInstruction' => 'setFulfillmentInstruction',
         'isISPU' => 'setIsISPU',
         'marketplaceTaxInfo' => 'setMarketplaceTaxInfo',
         'sellerDisplayName' => 'setSellerDisplayName',
         'shippingAddress' => 'setShippingAddress',
-        'buyerInfo' => 'setBuyerInfo'
+        'buyerInfo' => 'setBuyerInfo',
+        'automatedShippingSettings' => 'setAutomatedShippingSettings',
+        'hasRegulatedItems' => 'setHasRegulatedItems'
     ];
 
     /**
@@ -310,13 +330,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'promiseResponseDueDate' => 'getPromiseResponseDueDate',
         'isEstimatedShipDateSet' => 'getIsEstimatedShipDateSet',
         'isSoldByAB' => 'getIsSoldByAB',
+        'isIBA' => 'getIsIBA',
         'defaultShipFromLocationAddress' => 'getDefaultShipFromLocationAddress',
+        'buyerInvoicePreference' => 'getBuyerInvoicePreference',
+        'buyerTaxInformation' => 'getBuyerTaxInformation',
         'fulfillmentInstruction' => 'getFulfillmentInstruction',
         'isISPU' => 'getIsISPU',
         'marketplaceTaxInfo' => 'getMarketplaceTaxInfo',
         'sellerDisplayName' => 'getSellerDisplayName',
         'shippingAddress' => 'getShippingAddress',
-        'buyerInfo' => 'getBuyerInfo'
+        'buyerInfo' => 'getBuyerInfo',
+        'automatedShippingSettings' => 'getAutomatedShippingSettings',
+        'hasRegulatedItems' => 'getHasRegulatedItems'
     ];
 
     /**
@@ -378,6 +403,8 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     const ORDER_TYPE_PREORDER = 'Preorder';
     const ORDER_TYPE_BACK_ORDER = 'BackOrder';
     const ORDER_TYPE_SOURCING_ON_DEMAND_ORDER = 'SourcingOnDemandOrder';
+    const BUYER_INVOICE_PREFERENCE_INDIVIDUAL = 'INDIVIDUAL';
+    const BUYER_INVOICE_PREFERENCE_BUSINESS = 'BUSINESS';
     
 
     
@@ -443,6 +470,19 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getBuyerInvoicePreferenceAllowableValues()
+    {
+        return [
+            self::BUYER_INVOICE_PREFERENCE_INDIVIDUAL,
+            self::BUYER_INVOICE_PREFERENCE_BUSINESS,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -492,13 +532,18 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['promiseResponseDueDate'] = $data['promiseResponseDueDate'] ?? null;
         $this->container['isEstimatedShipDateSet'] = $data['isEstimatedShipDateSet'] ?? null;
         $this->container['isSoldByAB'] = $data['isSoldByAB'] ?? null;
+        $this->container['isIBA'] = $data['isIBA'] ?? null;
         $this->container['defaultShipFromLocationAddress'] = $data['defaultShipFromLocationAddress'] ?? null;
+        $this->container['buyerInvoicePreference'] = $data['buyerInvoicePreference'] ?? null;
+        $this->container['buyerTaxInformation'] = $data['buyerTaxInformation'] ?? null;
         $this->container['fulfillmentInstruction'] = $data['fulfillmentInstruction'] ?? null;
         $this->container['isISPU'] = $data['isISPU'] ?? null;
         $this->container['marketplaceTaxInfo'] = $data['marketplaceTaxInfo'] ?? null;
         $this->container['sellerDisplayName'] = $data['sellerDisplayName'] ?? null;
         $this->container['shippingAddress'] = $data['shippingAddress'] ?? null;
         $this->container['buyerInfo'] = $data['buyerInfo'] ?? null;
+        $this->container['automatedShippingSettings'] = $data['automatedShippingSettings'] ?? null;
+        $this->container['hasRegulatedItems'] = $data['hasRegulatedItems'] ?? null;
     }
 
     /**
@@ -554,6 +599,15 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'orderType', must be one of '%s'",
                 $this->container['orderType'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getBuyerInvoicePreferenceAllowableValues();
+        if (!is_null($this->container['buyerInvoicePreference']) && !in_array($this->container['buyerInvoicePreference'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'buyerInvoicePreference', must be one of '%s'",
+                $this->container['buyerInvoicePreference'],
                 implode("', '", $allowedValues)
             );
         }
@@ -1406,6 +1460,30 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets isIBA
+     *
+     * @return bool|null
+     */
+    public function getIsIBA()
+    {
+        return $this->container['isIBA'];
+    }
+
+    /**
+     * Sets isIBA
+     *
+     * @param bool|null $isIBA When true, the item within this order was bought and re-sold by Amazon Business EU SARL (ABEU). By buying and instantly re-selling your items, ABEU becomes the seller of record, making your inventory available for sale to customers who would not otherwise purchase from a third-party seller.
+     *
+     * @return self
+     */
+    public function setIsIBA($isIBA)
+    {
+        $this->container['isIBA'] = $isIBA;
+
+        return $this;
+    }
+
+    /**
      * Gets defaultShipFromLocationAddress
      *
      * @return \Webcom\Amazon\Rest\OrdersApi\Model\Address|null
@@ -1425,6 +1503,64 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDefaultShipFromLocationAddress($defaultShipFromLocationAddress)
     {
         $this->container['defaultShipFromLocationAddress'] = $defaultShipFromLocationAddress;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyerInvoicePreference
+     *
+     * @return string|null
+     */
+    public function getBuyerInvoicePreference()
+    {
+        return $this->container['buyerInvoicePreference'];
+    }
+
+    /**
+     * Sets buyerInvoicePreference
+     *
+     * @param string|null $buyerInvoicePreference The buyer's invoicing preference. Available only in the TR marketplace.
+     *
+     * @return self
+     */
+    public function setBuyerInvoicePreference($buyerInvoicePreference)
+    {
+        $allowedValues = $this->getBuyerInvoicePreferenceAllowableValues();
+        if (!is_null($buyerInvoicePreference) && !in_array($buyerInvoicePreference, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'buyerInvoicePreference', must be one of '%s'",
+                    $buyerInvoicePreference,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['buyerInvoicePreference'] = $buyerInvoicePreference;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyerTaxInformation
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\BuyerTaxInformation|null
+     */
+    public function getBuyerTaxInformation()
+    {
+        return $this->container['buyerTaxInformation'];
+    }
+
+    /**
+     * Sets buyerTaxInformation
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\BuyerTaxInformation|null $buyerTaxInformation buyerTaxInformation
+     *
+     * @return self
+     */
+    public function setBuyerTaxInformation($buyerTaxInformation)
+    {
+        $this->container['buyerTaxInformation'] = $buyerTaxInformation;
 
         return $this;
     }
@@ -1569,6 +1705,54 @@ class Order implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setBuyerInfo($buyerInfo)
     {
         $this->container['buyerInfo'] = $buyerInfo;
+
+        return $this;
+    }
+
+    /**
+     * Gets automatedShippingSettings
+     *
+     * @return \Webcom\Amazon\Rest\OrdersApi\Model\AutomatedShippingSettings|null
+     */
+    public function getAutomatedShippingSettings()
+    {
+        return $this->container['automatedShippingSettings'];
+    }
+
+    /**
+     * Sets automatedShippingSettings
+     *
+     * @param \Webcom\Amazon\Rest\OrdersApi\Model\AutomatedShippingSettings|null $automatedShippingSettings automatedShippingSettings
+     *
+     * @return self
+     */
+    public function setAutomatedShippingSettings($automatedShippingSettings)
+    {
+        $this->container['automatedShippingSettings'] = $automatedShippingSettings;
+
+        return $this;
+    }
+
+    /**
+     * Gets hasRegulatedItems
+     *
+     * @return bool|null
+     */
+    public function getHasRegulatedItems()
+    {
+        return $this->container['hasRegulatedItems'];
+    }
+
+    /**
+     * Sets hasRegulatedItems
+     *
+     * @param bool|null $hasRegulatedItems Whether the order contains regulated items which may require additional approval steps before being fulfilled.
+     *
+     * @return self
+     */
+    public function setHasRegulatedItems($hasRegulatedItems)
+    {
+        $this->container['hasRegulatedItems'] = $hasRegulatedItems;
 
         return $this;
     }
