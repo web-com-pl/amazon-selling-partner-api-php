@@ -24,6 +24,7 @@ class CredentialsContainer extends Configuration
     private ?string $refreshToken = null;
     private ?string $appId = null;
     private bool $sandbox = false;
+    private ?RestrictedDataToken $restrictedDataToken;
 
     /**
      * CredentialsContainer constructor.
@@ -208,6 +209,24 @@ class CredentialsContainer extends Configuration
     public function setAppId(?string $appId): self
     {
         $this->appId = $appId;
+        return $this;
+    }
+
+    /**
+     * @return RestrictedDataToken|null
+     */
+    public function getRestrictedDataToken(): ?RestrictedDataToken
+    {
+        return $this->restrictedDataToken;
+    }
+
+    /**
+     * @param RestrictedDataToken|null $restrictedDataToken
+     * @return self
+     */
+    public function setRestrictedDataToken(?RestrictedDataToken $restrictedDataToken): self
+    {
+        $this->restrictedDataToken = $restrictedDataToken;
         return $this;
     }
 }
