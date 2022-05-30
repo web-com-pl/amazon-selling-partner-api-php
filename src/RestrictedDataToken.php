@@ -2,6 +2,8 @@
 
 namespace Webcom\Amazon\Rest;
 
+use Webcom\Amazon\Rest\TokensApi20210301\Model\CreateRestrictedDataTokenResponse20210301;
+
 /**
  * Class RestrictedDataToken
  * @author Łukasz Wątor
@@ -36,6 +38,15 @@ class RestrictedDataToken
         $this->token = $token;
         $this->expiresIn = $expiresIn;
         $this->expiresTime = time() + $expiresIn;
+    }
+
+    /**
+     * @param CreateRestrictedDataTokenResponse20210301 $createRestrictedDataTokenResponse20210301
+     * @return RestrictedDataToken
+     */
+    public static function create(CreateRestrictedDataTokenResponse20210301 $createRestrictedDataTokenResponse20210301)
+    {
+        return new self($createRestrictedDataTokenResponse20210301->getRestrictedDataToken(), $createRestrictedDataTokenResponse20210301->getExpiresIn());
     }
 
     /**

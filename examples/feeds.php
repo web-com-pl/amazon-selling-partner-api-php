@@ -5,9 +5,9 @@ use Webcom\Amazon\Rest\AmazonTransportClient;
 use Webcom\Amazon\Rest\ApiException;
 use Webcom\Amazon\Rest\AuthorizationApi\Api\AuthorizationApi;
 use Webcom\Amazon\Rest\CredentialsContainer;
-use Webcom\Amazon\Rest\FeedsApi\Api\FeedsApi;
-use Webcom\Amazon\Rest\FeedsApi\Model\CreateFeedDocumentSpecification;
-use Webcom\Amazon\Rest\FeedsApi\Model\CreateFeedSpecification;
+use Webcom\Amazon\Rest\FeedsApi20200904\Api\FeedsApi;
+use Webcom\Amazon\Rest\FeedsApi20200904\Model\CreateFeedDocumentSpecification20200904;
+use Webcom\Amazon\Rest\FeedsApi20200904\Model\CreateFeedSpecification20200904;
 use Webcom\Amazon\Rest\RequestSigner;
 use Webcom\Amazon\Rest\EndpointLocator;
 use Webcom\Amazon\Rest\ResourcesApi\Api\ResourcesApi;
@@ -68,7 +68,7 @@ EOL;
     $feedType = 'POST_PRODUCT_DATA';// custom feed type
     $transportApi->setRequestSigner($requestSigner);
 
-    $specification = new CreateFeedDocumentSpecification();
+    $specification = new CreateFeedDocumentSpecification20200904();
     $specification->setContentType('application/xml');
     $feedResponse = $api->createFeedDocument($specification);
 
@@ -82,7 +82,7 @@ EOL;
         // but after that, we have to sign requests
         $transportApi->setRequestSigner($requestSigner);
 
-        $feedSpecification = new CreateFeedSpecification();
+        $feedSpecification = new CreateFeedSpecification20200904();
         $feedSpecification
             ->setInputFeedDocumentId($feedResponse->getPayload()->getFeedDocumentId())
             ->setFeedType($feedType)

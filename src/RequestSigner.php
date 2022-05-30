@@ -10,7 +10,6 @@ use Aws\Credentials\Credentials;
 use Aws\Signature\SignatureV4;
 use Aws\Sts\StsClient;
 use Psr\Http\Message\RequestInterface;
-use Webcom\Amazon\Rest\CredentialsContainer;
 
 /**
  * Class SignHandler

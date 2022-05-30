@@ -10,11 +10,12 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Webcom\Amazon\Rest\AESCryptoStreamFactory;
 use Webcom\Amazon\Rest\AmazonTransportClient;
-use Webcom\Amazon\Rest\CredentialsContainer;
-use Webcom\Amazon\Rest\FeedsApi\Model\CreateFeedDocumentResult;
-use Webcom\Amazon\Rest\FeedsApi\Model\FeedDocument;
-use Webcom\Amazon\Rest\ReportsApi\Model\ReportDocument;
+use Webcom\Amazon\Rest\FeedsApi20200904\Model\CreateFeedDocumentResult20200904;
+use Webcom\Amazon\Rest\FeedsApi20200904\Model\FeedDocument20200904;
+use Webcom\Amazon\Rest\FeedsApi20210630\Model\FeedDocument20210630;
+use Webcom\Amazon\Rest\ReportsApi20200904\Model\ReportDocument20200904;
 use Webcom\Amazon\Rest\ResourcesApi\ApiException;
+use Webcom\Amazon\Rest\ResourcesApi\Model\FeedDocumentInterface;
 
 /**
  * In this API we do not have to sign requests. In all cases we are using AES algorithm to encrypt and decrypt documents
@@ -24,29 +25,26 @@ use Webcom\Amazon\Rest\ResourcesApi\ApiException;
 class ResourcesApi
 {
     private AmazonTransportClient $client;
-    private CredentialsContainer $credentials;
 
     /**
      * AuthorizationClient constructor.
      * @param AmazonTransportClient $client
-     * @param CredentialsContainer $credentials
      */
-    public function __construct(AmazonTransportClient $client, CredentialsContainer $credentials)
+    public function __construct(AmazonTransportClient $client)
     {
         $this->client = $client;
-        $this->credentials = $credentials;
         // be sure we do not have RequestSigner
         $this->client->setRequestSigner(null);
     }
 
     /**
      * Upload document to CreateFeedDocumentResult resource URI
-     * @param CreateFeedDocumentResult $documentResult
+     * @param CreateFeedDocumentResult20200904 $documentResult
      * @param string $contentType
      * @param string $plainDocument
      * @throws ApiException
      */
-    public function putFeedDocument(CreateFeedDocumentResult $documentResult, string $contentType, string $plainDocument)
+    public function putFeedDocument(CreateFeedDocumentResult20200904 $documentResult, string $contentType, string $plainDocument)
     {
         // let's encode document
         $initializationVector = base64_decode($documentResult->getEncryptionDetails()->getInitializationVector(), true);
@@ -79,11 +77,11 @@ class ResourcesApi
 
     /**
      * Returns decoded and decompressed document
-     * @param ReportDocument $documentResponse
+     * @param ReportDocument20200904 $documentResponse
      * @return false|string
      * @throws ApiException
      */
-    public function getReportDocument(ReportDocument $documentResponse)
+    public function getReportDocument(ReportDocument20200904 $documentResponse)
     {
         // encryption key and iv
         $initializationVector = base64_decode($documentResponse->getEncryptionDetails()->getInitializationVector(), true);
@@ -118,11 +116,11 @@ class ResourcesApi
 
     /**
      * Returns decoded and decompressed document
-     * @param FeedDocument $documentResponse
+     * @param FeedDocumentInterface|FeedDocument20200904|FeedDocument20210630 $documentResponse
      * @return false|string
      * @throws ApiException
      */
-    public function getFeedDocument(FeedDocument $documentResponse)
+    public function getFeedDocument(FeedDocumentInterface $documentResponse)
     {
         // encryption key and iv
         $initializationVector = base64_decode($documentResponse->getEncryptionDetails()->getInitializationVector(), true);

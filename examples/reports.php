@@ -5,8 +5,8 @@ use Webcom\Amazon\Rest\AmazonTransportClient;
 use Webcom\Amazon\Rest\ApiException;
 use Webcom\Amazon\Rest\AuthorizationApi\Api\AuthorizationApi;
 use Webcom\Amazon\Rest\CredentialsContainer;
-use Webcom\Amazon\Rest\ReportsApi\Api\ReportsApi;
-use Webcom\Amazon\Rest\ReportsApi\Model\CreateReportSpecification;
+use Webcom\Amazon\Rest\ReportsApi20200904\Api\ReportsApi;
+use Webcom\Amazon\Rest\ReportsApi20200904\Model\CreateReportSpecification20200904;
 use Webcom\Amazon\Rest\RequestSigner;
 use Webcom\Amazon\Rest\EndpointLocator;
 use Webcom\Amazon\Rest\ResourcesApi\Api\ResourcesApi;
@@ -47,7 +47,7 @@ try {
     $reportType = 'GET_MERCHANT_LISTINGS_DATA';// custom report type
     $transportApi->setRequestSigner($requestSigner);
 
-    $specification = new CreateReportSpecification();
+    $specification = new CreateReportSpecification20200904();
     $specification
         ->setMarketplaceIds([$credentials->getEndpoint()->getId()])
         ->setReportType($reportType)
