@@ -30,7 +30,6 @@
 namespace Webcom\Amazon\Rest\FeedsApi20200904\Model;
 
 use \Webcom\Amazon\Rest\ModelInterface;
-use \Webcom\Amazon\Rest\ResourcesApi\Model\FeedDocumentInterface;
 use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
@@ -46,8 +45,7 @@ use \Webcom\Amazon\Rest\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class FeedDocumentEncryptionDetails20200904 implements ModelInterface, ArrayAccess, \JsonSerializable, FeedDocumentInterface
-
+class FeedDocumentEncryptionDetails20200904 implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
