@@ -1,4 +1,8 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2022 Apilo.com
+ */
 
 namespace Webcom\Amazon\Rest;
 

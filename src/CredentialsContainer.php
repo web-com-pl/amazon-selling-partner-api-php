@@ -1,7 +1,7 @@
 <?php
 /**
  * All Rights Reserved
- * @copyright Copyright (C) 2021 Web-Com Group
+ * @copyright Copyright (C) 2022 Apilo.com
  */
 
 namespace Webcom\Amazon\Rest;
@@ -14,9 +14,9 @@ use Aws\Credentials\Credentials;
  */
 class CredentialsContainer extends Configuration
 {
-    private Credentials $userCredentials;
+    private ?Credentials $userCredentials = null;
     private Endpoint $endpoint;
-    private string $role;
+    private string $role = "";
     private string $clientStsVersion;
     private string $signatureService = 'execute-api';
     private ?string $clientId = null;
@@ -89,9 +89,9 @@ class CredentialsContainer extends Configuration
     }
 
     /**
-     * @return Credentials
+     * @return Credentials|null
      */
-    public function getUserCredentials(): Credentials
+    public function getUserCredentials(): ?Credentials
     {
         return $this->userCredentials;
     }

@@ -1,4 +1,8 @@
 <?php
+/**
+ * All Rights Reserved
+ * @copyright Copyright (C) 2021 Apilo.com
+ */
 
 namespace Webcom\Amazon\Rest\ResourcesApi\Model;
 
