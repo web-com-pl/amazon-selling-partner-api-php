@@ -1,14 +1,13 @@
 {
     "name": "web-com-pl/amazon-selling-partner-api-php",
     "description": "Amazon Selling Partner API PHP Client",
-    "version": "1.3",
+    "version": "1.31",
     "autoload": {
         "psr-4": {
             "Webcom\\Amazon\\Rest\\": "src"
         }
     },
     "require": {
-        "aws/aws-sdk-php": "^3.171",
         "php": ">=7.4",
         "guzzlehttp/guzzle": "~6.5"
     },

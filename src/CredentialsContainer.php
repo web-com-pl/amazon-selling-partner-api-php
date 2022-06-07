@@ -24,7 +24,7 @@ class CredentialsContainer extends Configuration
     private ?string $refreshToken = null;
     private ?string $appId = null;
     private bool $sandbox = false;
-    private ?RestrictedDataToken $restrictedDataToken;
+    private ?RestrictedDataToken $restrictedDataToken = null;
 
     /**
      * CredentialsContainer constructor.
