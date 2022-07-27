@@ -332,6 +332,7 @@ class OrderItemV0 implements ModelInterface, ArrayAccess, \JsonSerializable
 
     const DEEMED_RESELLER_CATEGORY_IOSS = 'IOSS';
     const DEEMED_RESELLER_CATEGORY_UOSS = 'UOSS';
+    const DEEMED_RESELLER_CATEGORY_GB_VOEC = 'GB_VOEC';
     
 
     
@@ -345,6 +346,7 @@ class OrderItemV0 implements ModelInterface, ArrayAccess, \JsonSerializable
         return [
             self::DEEMED_RESELLER_CATEGORY_IOSS,
             self::DEEMED_RESELLER_CATEGORY_UOSS,
+            self::DEEMED_RESELLER_CATEGORY_GB_VOEC,
         ];
     }
     

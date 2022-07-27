@@ -4,6 +4,7 @@ output
 .idea
 config.json
 generate.php
+generate.sh
 openapitools.json
 composer.lock
 migrate.php
