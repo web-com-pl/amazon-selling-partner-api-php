@@ -41,6 +41,18 @@ class EndpointLocator
             "sellingPartnerApiEndpoint"        => "https://sellingpartnerapi-eu.amazon.com",
             "sellingPartnerApiSandboxEndpoint" => "https://sandbox.sellingpartnerapi-eu.amazon.com",
         ],
+        "BE" => [
+            "id"                               => "AMEN7PMS3EDWL",
+            "name"                             => "Belgium",
+            "countryCode"                      => "BE",
+            "region"                           => "eu-west-1",
+            "endpoint"                         => "amazon.com.be",
+            "mwsEndpoint"                      => "mws-eu.amazonservices.com",
+            "imagesEndpoint"                   => "images-eu.ssl-images-amazon.com",
+            "sellerCentralEndpoint"            => "https://sellercentral.amazon.com.be",
+            "sellingPartnerApiEndpoint"        => "https://sellingpartnerapi-eu.amazon.com",
+            "sellingPartnerApiSandboxEndpoint" => "https://sandbox.sellingpartnerapi-eu.amazon.com",
+        ],
         "FR" => [
             "id"                               => "A13V1IB3VIYZZH",
             "name"                             => "France",

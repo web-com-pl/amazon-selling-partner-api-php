@@ -24,6 +24,18 @@
         "sellingPartnerApiSandboxEndpoint": "https:\/\/sandbox.sellingpartnerapi-eu.amazon.com"
     },
     {
+        "countryCode": "BE",
+        "id": "AMEN7PMS3EDWL",
+        "name": "Belgium",
+        "region": "eu-west-1",
+        "domain": "amazon.com.be",
+        "mwsEndpoint": "mws-eu.amazonservices.com",
+        "imagesEndpoint": "images-eu.ssl-images-amazon.com",
+        "sellerCentralEndpoint": "https:\/\/sellercentral.amazon.com.be",
+        "sellingPartnerApiEndpoint": "https:\/\/sellingpartnerapi-eu.amazon.com",
+        "sellingPartnerApiSandboxEndpoint": "https:\/\/sandbox.sellingpartnerapi-eu.amazon.com"
+    },
+    {
         "countryCode": "FR",
         "id": "A13V1IB3VIYZZH",
         "name": "France",
