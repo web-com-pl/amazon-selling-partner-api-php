@@ -1,6 +1,6 @@
 <?php
 /**
- * Code20220323
+ * LabelFormat20220323
  *
  * PHP version 7.2
  *
@@ -31,30 +31,21 @@ namespace Webcom\Amazon\Rest\EasyShip20220323\Model;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
 /**
- * Code20220323 Class Doc Comment
+ * LabelFormat20220323 Class Doc Comment
  *
  * @category Class
- * @description An error code that identifies the type of error that occurred. The error codes listed below are specific to the Easy Ship section.
+ * @description The file format in which the shipping label will be created.
  * @package  Webcom\Amazon\Rest\EasyShip20220323
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class Code20220323
+class LabelFormat20220323
 {
     /**
      * Possible values of this enum
      */
-    const INVALID_INPUT = 'InvalidInput';
-    const INVALID_TIME_SLOT_ID = 'InvalidTimeSlotId';
-    const SCHEDULED_PACKAGE_ALREADY_EXISTS = 'ScheduledPackageAlreadyExists';
-    const SCHEDULE_WINDOW_EXPIRED = 'ScheduleWindowExpired';
-    const RETRYABLE_AFTER_GETTING_NEW_SLOTS = 'RetryableAfterGettingNewSlots';
-    const TIME_SLOT_NOT_AVAILABLE = 'TimeSlotNotAvailable';
-    const RESOURCE_NOT_FOUND = 'ResourceNotFound';
-    const INVALID_ORDER_STATE = 'InvalidOrderState';
-    const REGION_NOT_SUPPORTED = 'RegionNotSupported';
-    const ORDER_NOT_ELIGIBLE_FOR_RESCHEDULING = 'OrderNotEligibleForRescheduling';
-    const INTERNAL_SERVER_ERROR = 'InternalServerError';
+    const PDF = 'PDF';
+    const ZPL = 'ZPL';
     
     /**
      * Gets allowable values of the enum
@@ -63,17 +54,8 @@ class Code20220323
     public static function getAllowableEnumValues()
     {
         return [
-            self::INVALID_INPUT,
-            self::INVALID_TIME_SLOT_ID,
-            self::SCHEDULED_PACKAGE_ALREADY_EXISTS,
-            self::SCHEDULE_WINDOW_EXPIRED,
-            self::RETRYABLE_AFTER_GETTING_NEW_SLOTS,
-            self::TIME_SLOT_NOT_AVAILABLE,
-            self::RESOURCE_NOT_FOUND,
-            self::INVALID_ORDER_STATE,
-            self::REGION_NOT_SUPPORTED,
-            self::ORDER_NOT_ELIGIBLE_FOR_RESCHEDULING,
-            self::INTERNAL_SERVER_ERROR,
+            self::PDF,
+            self::ZPL,
         ];
     }
 }

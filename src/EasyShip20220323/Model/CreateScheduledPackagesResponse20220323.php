@@ -1,6 +1,6 @@
 <?php
 /**
- * Error20220323
+ * CreateScheduledPackagesResponse20220323
  *
  * PHP version 7.2
  *
@@ -34,10 +34,10 @@ use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
 /**
- * Error20220323 Class Doc Comment
+ * CreateScheduledPackagesResponse20220323 Class Doc Comment
  *
  * @category Class
- * @description Error response returned when the request is unsuccessful.
+ * @description The response schema for the bulk scheduling API. It returns by the bulk scheduling API containing an array of the scheduled packtages, an optional list of orders we couldn&#39;t schedule with the reason, and a pre-signed URL for a ZIP file containing the associated shipping labels plus the documents enabled for your marketplace.
  * @package  Webcom\Amazon\Rest\EasyShip20220323
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -45,7 +45,7 @@ use \Webcom\Amazon\Rest\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
+class CreateScheduledPackagesResponse20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -54,7 +54,7 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Error';
+    protected static $openAPIModelName = 'CreateScheduledPackagesResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,9 +62,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'code' => 'string',
-        'message' => 'string',
-        'details' => 'string'
+        'scheduledPackages' => '\Webcom\Amazon\Rest\EasyShip20220323\Model\Package20220323[]',
+        'rejectedOrders' => '\Webcom\Amazon\Rest\EasyShip20220323\Model\RejectedOrder20220323[]',
+        'printableDocumentsUrl' => 'string'
     ];
 
     /**
@@ -75,9 +75,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'code' => null,
-        'message' => null,
-        'details' => null
+        'scheduledPackages' => null,
+        'rejectedOrders' => null,
+        'printableDocumentsUrl' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'scheduledPackages' => 'scheduledPackages',
+        'rejectedOrders' => 'rejectedOrders',
+        'printableDocumentsUrl' => 'printableDocumentsUrl'
     ];
 
     /**
@@ -118,9 +118,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'scheduledPackages' => 'setScheduledPackages',
+        'rejectedOrders' => 'setRejectedOrders',
+        'printableDocumentsUrl' => 'setPrintableDocumentsUrl'
     ];
 
     /**
@@ -129,9 +129,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'scheduledPackages' => 'getScheduledPackages',
+        'rejectedOrders' => 'getRejectedOrders',
+        'printableDocumentsUrl' => 'getPrintableDocumentsUrl'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = $data['code'] ?? null;
-        $this->container['message'] = $data['message'] ?? null;
-        $this->container['details'] = $data['details'] ?? null;
+        $this->container['scheduledPackages'] = $data['scheduledPackages'] ?? null;
+        $this->container['rejectedOrders'] = $data['rejectedOrders'] ?? null;
+        $this->container['printableDocumentsUrl'] = $data['printableDocumentsUrl'] ?? null;
     }
 
     /**
@@ -208,12 +208,6 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['message'] === null) {
-            $invalidProperties[] = "'message' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -230,73 +224,73 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets code
+     * Gets scheduledPackages
      *
-     * @return string
+     * @return \Webcom\Amazon\Rest\EasyShip20220323\Model\Package20220323[]|null
      */
-    public function getCode()
+    public function getScheduledPackages()
     {
-        return $this->container['code'];
+        return $this->container['scheduledPackages'];
     }
 
     /**
-     * Sets code
+     * Sets scheduledPackages
      *
-     * @param string $code An error code that identifies the type of error that occurred.
+     * @param \Webcom\Amazon\Rest\EasyShip20220323\Model\Package20220323[]|null $scheduledPackages A list of packages. Refer to the `Package` object.
      *
      * @return self
      */
-    public function setCode($code)
+    public function setScheduledPackages($scheduledPackages)
     {
-        $this->container['code'] = $code;
+        $this->container['scheduledPackages'] = $scheduledPackages;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets rejectedOrders
      *
-     * @return string
+     * @return \Webcom\Amazon\Rest\EasyShip20220323\Model\RejectedOrder20220323[]|null
      */
-    public function getMessage()
+    public function getRejectedOrders()
     {
-        return $this->container['message'];
+        return $this->container['rejectedOrders'];
     }
 
     /**
-     * Sets message
+     * Sets rejectedOrders
      *
-     * @param string $message A message that describes the error condition.
+     * @param \Webcom\Amazon\Rest\EasyShip20220323\Model\RejectedOrder20220323[]|null $rejectedOrders A list of orders we couldn't scheduled on your behalf. Each element contains the reason and details on the error.
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setRejectedOrders($rejectedOrders)
     {
-        $this->container['message'] = $message;
+        $this->container['rejectedOrders'] = $rejectedOrders;
 
         return $this;
     }
 
     /**
-     * Gets details
+     * Gets printableDocumentsUrl
      *
      * @return string|null
      */
-    public function getDetails()
+    public function getPrintableDocumentsUrl()
     {
-        return $this->container['details'];
+        return $this->container['printableDocumentsUrl'];
     }
 
     /**
-     * Sets details
+     * Sets printableDocumentsUrl
      *
-     * @param string|null $details Additional details that can help the caller understand or fix the issue.
+     * @param string|null $printableDocumentsUrl A pre-signed URL for the zip document containing the shipping labels and the documents enabled for your marketplace.
      *
      * @return self
      */
-    public function setDetails($details)
+    public function setPrintableDocumentsUrl($printableDocumentsUrl)
     {
-        $this->container['details'] = $details;
+        $this->container['printableDocumentsUrl'] = $printableDocumentsUrl;
 
         return $this;
     }

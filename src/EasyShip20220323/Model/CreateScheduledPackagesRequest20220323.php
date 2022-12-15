@@ -1,6 +1,6 @@
 <?php
 /**
- * Error20220323
+ * CreateScheduledPackagesRequest20220323
  *
  * PHP version 7.2
  *
@@ -34,10 +34,10 @@ use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
 /**
- * Error20220323 Class Doc Comment
+ * CreateScheduledPackagesRequest20220323 Class Doc Comment
  *
  * @category Class
- * @description Error response returned when the request is unsuccessful.
+ * @description The request body for the POST /easyShip/2022-03-23/packages/bulk API.
  * @package  Webcom\Amazon\Rest\EasyShip20220323
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -45,7 +45,7 @@ use \Webcom\Amazon\Rest\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
+class CreateScheduledPackagesRequest20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -54,7 +54,7 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Error';
+    protected static $openAPIModelName = 'CreateScheduledPackagesRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,9 +62,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'code' => 'string',
-        'message' => 'string',
-        'details' => 'string'
+        'marketplaceId' => 'string',
+        'orderScheduleDetailsList' => '\Webcom\Amazon\Rest\EasyShip20220323\Model\OrderScheduleDetails20220323[]',
+        'labelFormat' => '\Webcom\Amazon\Rest\EasyShip20220323\Model\LabelFormat20220323'
     ];
 
     /**
@@ -75,9 +75,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'code' => null,
-        'message' => null,
-        'details' => null
+        'marketplaceId' => null,
+        'orderScheduleDetailsList' => null,
+        'labelFormat' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'marketplaceId' => 'marketplaceId',
+        'orderScheduleDetailsList' => 'orderScheduleDetailsList',
+        'labelFormat' => 'labelFormat'
     ];
 
     /**
@@ -118,9 +118,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'marketplaceId' => 'setMarketplaceId',
+        'orderScheduleDetailsList' => 'setOrderScheduleDetailsList',
+        'labelFormat' => 'setLabelFormat'
     ];
 
     /**
@@ -129,9 +129,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'marketplaceId' => 'getMarketplaceId',
+        'orderScheduleDetailsList' => 'getOrderScheduleDetailsList',
+        'labelFormat' => 'getLabelFormat'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = $data['code'] ?? null;
-        $this->container['message'] = $data['message'] ?? null;
-        $this->container['details'] = $data['details'] ?? null;
+        $this->container['marketplaceId'] = $data['marketplaceId'] ?? null;
+        $this->container['orderScheduleDetailsList'] = $data['orderScheduleDetailsList'] ?? null;
+        $this->container['labelFormat'] = $data['labelFormat'] ?? null;
     }
 
     /**
@@ -208,11 +208,22 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
+        if ($this->container['marketplaceId'] === null) {
+            $invalidProperties[] = "'marketplaceId' can't be null";
         }
-        if ($this->container['message'] === null) {
-            $invalidProperties[] = "'message' can't be null";
+        if ((mb_strlen($this->container['marketplaceId']) > 255)) {
+            $invalidProperties[] = "invalid value for 'marketplaceId', the character length must be smaller than or equal to 255.";
+        }
+
+        if ((mb_strlen($this->container['marketplaceId']) < 1)) {
+            $invalidProperties[] = "invalid value for 'marketplaceId', the character length must be bigger than or equal to 1.";
+        }
+
+        if ($this->container['orderScheduleDetailsList'] === null) {
+            $invalidProperties[] = "'orderScheduleDetailsList' can't be null";
+        }
+        if ($this->container['labelFormat'] === null) {
+            $invalidProperties[] = "'labelFormat' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +241,80 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets code
+     * Gets marketplaceId
      *
      * @return string
      */
-    public function getCode()
+    public function getMarketplaceId()
     {
-        return $this->container['code'];
+        return $this->container['marketplaceId'];
     }
 
     /**
-     * Sets code
+     * Sets marketplaceId
      *
-     * @param string $code An error code that identifies the type of error that occurred.
+     * @param string $marketplaceId A string of up to 255 characters.
      *
      * @return self
      */
-    public function setCode($code)
+    public function setMarketplaceId($marketplaceId)
     {
-        $this->container['code'] = $code;
+        if ((mb_strlen($marketplaceId) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $marketplaceId when calling CreateScheduledPackagesRequest20220323., must be smaller than or equal to 255.');
+        }
+        if ((mb_strlen($marketplaceId) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $marketplaceId when calling CreateScheduledPackagesRequest20220323., must be bigger than or equal to 1.');
+        }
+
+        $this->container['marketplaceId'] = $marketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets orderScheduleDetailsList
      *
-     * @return string
+     * @return \Webcom\Amazon\Rest\EasyShip20220323\Model\OrderScheduleDetails20220323[]
      */
-    public function getMessage()
+    public function getOrderScheduleDetailsList()
     {
-        return $this->container['message'];
+        return $this->container['orderScheduleDetailsList'];
     }
 
     /**
-     * Sets message
+     * Sets orderScheduleDetailsList
      *
-     * @param string $message A message that describes the error condition.
+     * @param \Webcom\Amazon\Rest\EasyShip20220323\Model\OrderScheduleDetails20220323[] $orderScheduleDetailsList An array allowing users to specify orders to be scheduled.
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setOrderScheduleDetailsList($orderScheduleDetailsList)
     {
-        $this->container['message'] = $message;
+        $this->container['orderScheduleDetailsList'] = $orderScheduleDetailsList;
 
         return $this;
     }
 
     /**
-     * Gets details
+     * Gets labelFormat
      *
-     * @return string|null
+     * @return \Webcom\Amazon\Rest\EasyShip20220323\Model\LabelFormat20220323
      */
-    public function getDetails()
+    public function getLabelFormat()
     {
-        return $this->container['details'];
+        return $this->container['labelFormat'];
     }
 
     /**
-     * Sets details
+     * Sets labelFormat
      *
-     * @param string|null $details Additional details that can help the caller understand or fix the issue.
+     * @param \Webcom\Amazon\Rest\EasyShip20220323\Model\LabelFormat20220323 $labelFormat labelFormat
      *
      * @return self
      */
-    public function setDetails($details)
+    public function setLabelFormat($labelFormat)
     {
-        $this->container['details'] = $details;
+        $this->container['labelFormat'] = $labelFormat;
 
         return $this;
     }

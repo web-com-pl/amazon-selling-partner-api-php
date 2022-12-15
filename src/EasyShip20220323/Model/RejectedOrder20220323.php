@@ -1,6 +1,6 @@
 <?php
 /**
- * Error20220323
+ * RejectedOrder20220323
  *
  * PHP version 7.2
  *
@@ -34,10 +34,10 @@ use \ArrayAccess;
 use \Webcom\Amazon\Rest\ObjectSerializer;
 
 /**
- * Error20220323 Class Doc Comment
+ * RejectedOrder20220323 Class Doc Comment
  *
  * @category Class
- * @description Error response returned when the request is unsuccessful.
+ * @description A order which we couldn&#39;t schedule on your behalf. It contains its id, and information on the error.
  * @package  Webcom\Amazon\Rest\EasyShip20220323
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -45,7 +45,7 @@ use \Webcom\Amazon\Rest\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
+class RejectedOrder20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -54,7 +54,7 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Error';
+    protected static $openAPIModelName = 'RejectedOrder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,9 +62,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'code' => 'string',
-        'message' => 'string',
-        'details' => 'string'
+        'amazonOrderId' => 'string',
+        'error' => '\Webcom\Amazon\Rest\EasyShip20220323\Model\Error20220323'
     ];
 
     /**
@@ -75,9 +74,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'code' => null,
-        'message' => null,
-        'details' => null
+        'amazonOrderId' => null,
+        'error' => null
     ];
 
     /**
@@ -107,9 +105,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'amazonOrderId' => 'amazonOrderId',
+        'error' => 'error'
     ];
 
     /**
@@ -118,9 +115,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'amazonOrderId' => 'setAmazonOrderId',
+        'error' => 'setError'
     ];
 
     /**
@@ -129,9 +125,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'amazonOrderId' => 'getAmazonOrderId',
+        'error' => 'getError'
     ];
 
     /**
@@ -194,9 +189,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = $data['code'] ?? null;
-        $this->container['message'] = $data['message'] ?? null;
-        $this->container['details'] = $data['details'] ?? null;
+        $this->container['amazonOrderId'] = $data['amazonOrderId'] ?? null;
+        $this->container['error'] = $data['error'] ?? null;
     }
 
     /**
@@ -208,11 +202,8 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['message'] === null) {
-            $invalidProperties[] = "'message' can't be null";
+        if ($this->container['amazonOrderId'] === null) {
+            $invalidProperties[] = "'amazonOrderId' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,73 +221,49 @@ class Error20220323 implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets code
+     * Gets amazonOrderId
      *
      * @return string
      */
-    public function getCode()
+    public function getAmazonOrderId()
     {
-        return $this->container['code'];
+        return $this->container['amazonOrderId'];
     }
 
     /**
-     * Sets code
+     * Sets amazonOrderId
      *
-     * @param string $code An error code that identifies the type of error that occurred.
+     * @param string $amazonOrderId An Amazon-defined order identifier. Identifies the order that the seller wants to deliver using Amazon Easy Ship.
      *
      * @return self
      */
-    public function setCode($code)
+    public function setAmazonOrderId($amazonOrderId)
     {
-        $this->container['code'] = $code;
+        $this->container['amazonOrderId'] = $amazonOrderId;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets error
      *
-     * @return string
+     * @return \Webcom\Amazon\Rest\EasyShip20220323\Model\Error20220323|null
      */
-    public function getMessage()
+    public function getError()
     {
-        return $this->container['message'];
+        return $this->container['error'];
     }
 
     /**
-     * Sets message
+     * Sets error
      *
-     * @param string $message A message that describes the error condition.
+     * @param \Webcom\Amazon\Rest\EasyShip20220323\Model\Error20220323|null $error error
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setError($error)
     {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets details
-     *
-     * @return string|null
-     */
-    public function getDetails()
-    {
-        return $this->container['details'];
-    }
-
-    /**
-     * Sets details
-     *
-     * @param string|null $details Additional details that can help the caller understand or fix the issue.
-     *
-     * @return self
-     */
-    public function setDetails($details)
-    {
-        $this->container['details'] = $details;
+        $this->container['error'] = $error;
 
         return $this;
     }
